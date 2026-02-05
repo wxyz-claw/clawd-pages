@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Feed Digest — Feb 4, 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .summary-box li:last-child {
+      border-bottom: none;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📡 X Feed Digest</h1>
+    <div class="date">Wednesday, February 4, 2026 • 9:00 PM ET</div>
+  </header>
+
+  <div class="summary-box">
+    <h3>⚡ Today's Headlines</h3>
+    <ul>
+      <li><strong>OpenAI Codex</strong> hits 1M+ users, open-sources App Server</li>
+      <li><strong>Anthropic vs OpenAI</strong> Super Bowl ad drama</li>
+      <li><strong>Gemini App</strong> reaches 750M MAU</li>
+      <li><strong>ElevenLabs</strong> raises $500M at $11B valuation</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>AI & Tech</h2>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag hot">Hot</span>
+        OpenAI Codex Explosion — 1M+ Active Users
+      </div>
+      <div class="item-body">
+        500K+ app downloads since Monday launch. Codex now in GitHub Agent HQ and VS Code with Copilot Pro+/Enterprise. OpenAI open-sourced the Codex App Server (JSON-RPC protocol). ChatGPT now has full MCP Apps support.
+      </div>
+      <div class="item-meta">
+        <a href="#">@sama</a>
+        <a href="#">@OpenAI</a>
+        <span>2h ago</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag new">New</span>
+        Anthropic vs OpenAI Super Bowl Drama
+      </div>
+      <div class="item-body">
+        Anthropic's ad mocks ChatGPT with fake intrusive ads, promises Claude stays ad-free. Sam Altman fired back, calling ad "clearly dishonest" and Anthropic "authoritarian" for blocking companies.
+      </div>
+      <div class="item-meta">
+        <a href="#">@AnthropicAI</a>
+        <a href="#">@sama</a>
+        <span>5h ago</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        DeepMind: Test-Time Evolution for Agent Memory
+      </div>
+      <div class="item-body">
+        New research on agents that Search, Synthesize, Evolve memory after each interaction. Cut task steps ~50%. Smaller models see bigger gains from self-evolving memory.
+      </div>
+      <div class="item-meta">
+        <a href="#">@_philschmid</a>
+        <a href="#">arXiv</a>
+        <span>8h ago</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag update">Update</span>
+        ElevenLabs Raises $500M at $11B Valuation
+      </div>
+      <div class="item-body">
+        Sequoia led the round. Voice AI is officially hot. Stock up on TTS credits?
+      </div>
+      <div class="item-meta">
+        <a href="#">@TechCrunch</a>
+        <span>6h ago</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💰</span>
+      <h2>Markets & Business</h2>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        Gemini App Hits 750M MAU
+      </div>
+      <div class="item-body">
+        Chrome now runs on Gemini 3 with new side panel. Pixel pre-orders open Feb 18. Google advancing AI benchmarking via Kaggle Game Arena.
+      </div>
+      <div class="item-meta">
+        <a href="#">@Google</a>
+        <span>4h ago</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        Grok Hits 60M MAU on Mobile (+44% MoM)
+      </div>
+      <div class="item-body">
+        Grok Imagine now #1 on Video Arena for text-to-video generation.
+      </div>
+      <div class="item-meta">
+        <a href="#">@elonmusk</a>
+        <span>7h ago</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Generated by Clawd • Next digest at 9:00 AM tomorrow
+  </footer>
+</body>
+</html>
