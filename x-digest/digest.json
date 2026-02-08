@@ -1,12 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Saturday, February 07, 2026",
+  "date": "Sunday, February 08, 2026",
   "summary": [
-    "<strong>Jensen Huang's Vision:</strong> NVIDIA CEO predicts AI will shift the economy from IT ($1T) to Digital Labor ($100T), making domain expertise more valuable than coding.",
-    "<strong>The AI Horse Race:</strong> Google leads in distribution (750M users), Anthropic dominates enterprise efficiency ($9B ARR on 30M users), and OpenAI wins on consumer engagement.",
-    "<strong>Crypto Flash Crash:</strong> A Hong Kong hedge fund's leveraged bet on IBIT options + Yen carry trade unwind triggered a Bitcoin flash crash to $60k.",
-    "<strong>Agentic Engineering:</strong> The industry is shifting from 'writing code' to 'managing agents' (OpenClaw, Claude Code), with Mac minis becoming the preferred home server for bots.",
-    "<strong>Walmart's Tech Pivot:</strong> Ad revenue and memberships now drive 50% of Walmart's profit growth, leading it to trade at tech-like multiples (44x P/E)."
+    "<strong>AI Agent Economy Explodes:</strong> Tools like Claude Code and OpenClaw are shifting to autonomous 'Subagents' that manage entire workflows, threatening traditional SaaS models.",
+    "<strong>Market Turmoil:</strong> A massive liquidation event saw whale 'Yi Lihua' exit with a ~$700M loss amidst an ETH crash, while markets jitter over Big Tech's AI capex.",
+    "<strong>Security Vulnerabilities:</strong> New 'supply chain' attacks targeting Agent Skills and 'universal jailbreaks' for Opus 4.6 have surfaced.",
+    "<strong>Future of Software:</strong> Growing consensus that SaaS valuations may collapse as AI agents begin to bypass UIs and perform tasks directly in the backend."
   ],
   "sections": [
     {
@@ -14,34 +13,39 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@kugo_A10: Jensen Huang's 5 AI Predictions",
-          "body": "Jensen Huang argues that coding is dead; AI is 'digital labor' that will expand the economy 100x. The future belongs to domain experts who can command AI, not just programmers.",
-          "url": "https://x.com/kugo_A10/status/2020077316735750450"
+          "title": "@bridgemindai: Cursor & Opus 4.6 Fast",
+          "body": "Cursor released 'Opus 4.6 Fast', claiming 2.5x speed of standard Opus with the same 1M context, using Anthropic's new fast mode.",
+          "url": "https://x.com/bridgemindai/status/2020292078949818522"
         },
         {
-          "tag": "update",
-          "title": "@aakashgupta: AI Economics & Jevons Paradox",
-          "body": "Naval Ravikant is right: a 98% collapse in intelligence costs leads to infinite demand. The value shifts from 'providing intelligence' to 'directing intelligence' (judgment).",
-          "url": "https://x.com/aakashgupta/status/2020201006123135103"
+          "title": "@abecky_jp: Claude Agent Teams",
+          "body": "A user reports Claude 4.6's 'Agent Team' feature autonomously completed a week's worth of dev tasks in just 2 hours by coordinating multiple sub-agents.",
+          "url": "https://x.com/abecky_jp/status/2020025563063394314"
         },
         {
-          "tag": "workflow",
-          "title": "@gkxspace: Claude Code + Obsidian Workflow",
-          "body": "A powerful 'vibe coding' setup: use Claude Code to write directly into Obsidian for articles, flowcharts, and layout, turning the user into a director rather than an editor.",
-          "url": "https://x.com/gkxspace/status/2020275631972577628"
+          "title": "@shao__meng: Agent Supply Chain Attacks",
+          "body": "1Password's VP warns of real-world 'Agent Skill' supply chain attacks, where malicious code is injected via popular skills (citing an OpenClaw vulnerability).",
+          "url": "https://x.com/shao__meng/status/2020406348069105991"
         },
         {
-          "tag": "tool",
-          "title": "@wquguru: OpenClaw Stability with Opus 4.5",
-          "body": "User 'Chiti' achieved stability by switching back to Opus 4.5 for coordination. They recommend a Mac mini for reliable iMessage integration, a key for personal bots.",
-          "url": "https://x.com/wquguru/status/2020140188458987881"
+          "title": "@AYi_AInotes: Managing AI as a Team",
+          "body": "Miles shares a 'textbook' prompt for Claude Code that treats the AI as an organization, spending 80% of the prompt 'teaching' context before coding.",
+          "url": "https://x.com/AYi_AInotes/status/2020345793098707305"
         },
         {
-          "tag": "new",
-          "title": "@ai_for_success: Kimi K2.5 as a Cheap Alternative",
-          "body": "Kimi K2.5 is now the most used model on OpenClaw, offering 8x cheaper rates than Claude while maintaining high performance for coding and reasoning.",
-          "url": "https://x.com/ai_for_success/status/2020081945137541237"
+          "title": "@ujjwalscript: AI Coded C Compiler",
+          "body": "Anthropic claims their AI agents successfully wrote a functional C compiler, demonstrating increasing capability in complex systems programming.",
+          "url": "https://x.com/ujjwalscript/status/2020367141145571511"
+        },
+        {
+          "title": "@LufzzLiz: OpenClaw Security Audit",
+          "body": "Advice to upgrade OpenClaw to v2.6+ immediately to use the new 'security audit --deep' feature, as older versions have unsafe plugin execution risks.",
+          "url": "https://x.com/LufzzLiz/status/2020309629012701252"
+        },
+        {
+          "title": "@iruletheworldmo: Recursive Self-Improvement",
+          "body": "Codex 5.3 is reportedly showing signs of 'recursive self-improvement', writing better code daily without explicit instruction.",
+          "url": "https://x.com/iruletheworldmo/status/2020226810546733464"
         }
       ]
     },
@@ -50,28 +54,29 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "news",
-          "title": "@KKaWSB: Anatomy of the BTC Flash Crash",
-          "body": "Bitcoin fell to $60k due to a HK hedge fund's failed leverage play on IBIT options and a simultaneous Yen carry trade unwind.",
-          "url": "https://x.com/KKaWSB/status/2020168402468487430"
+          "title": "@ai_9684xtpa: $700M ETH Capitulation",
+          "body": "Whale 'Yi Lihua' liquidated their massive ETH position, realizing a $688M loss after days of selling, marking a potential market bottom.",
+          "url": "https://x.com/ai_9684xtpa/status/2020344692831875371"
         },
         {
-          "tag": "analysis",
-          "title": "@aakashgupta: Walmart is a Tech Company Now",
-          "body": "Walmart trades at a 44x P/E because 50% of its profit growth comes from high-margin ad revenue and memberships, not just low-margin retail.",
-          "url": "https://x.com/aakashgupta/status/2019992360990765459"
+          "title": "@tig88411109: The End of SaaS?",
+          "body": "Deep commentary arguing that SaaS valuations will approach zero as AI agents backend-to-backend integration makes human-facing UIs obsolete.",
+          "url": "https://x.com/tig88411109/status/2020405105133285703"
         },
         {
-          "tag": "drama",
-          "title": "@ai_9684xtpa: Bithumb's 620k BTC Error",
-          "body": "A Korean exchange accidentally airdropped 2000 BTC to every user. Most was recovered, but 125 BTC remains lost in the chaos.",
-          "url": "https://x.com/ai_9684xtpa/status/2020066134096245236"
+          "title": "@maitian99: Big Tech Capex Panic",
+          "body": "Markets are punishing Mag7 stocks (except Apple) for massive AI spending without immediate returns, despite strong cloud growth.",
+          "url": "https://x.com/maitian99/status/2020290658183811352"
         },
         {
-          "tag": "update",
-          "title": "@skillz17q: Trump Accounts Details",
-          "body": "New details on the Trump Accounts program: $1,000 seed for newborns, $250 for kids 1-9. Registration via IRS form 4547 starting July 2026.",
-          "url": "https://x.com/skillz17q/status/2020159306650309019"
+          "title": "@giantcutie666: BTC Flash Crash Anatomy",
+          "body": "Analysis suggests the drop to $60k was driven by hedge funds unwinding high-leverage 'Yen carry trade' positions on Bitcoin ETFs.",
+          "url": "https://x.com/giantcutie666/status/2020146449866948864"
+        },
+        {
+          "title": "@tig88411109: Google's Cloud Margins",
+          "body": "Contrarian take: Google Cloud's operating margin surged to 30%, suggesting their heavy AI investment is paying off despite Wall Street fears.",
+          "url": "https://x.com/tig88411109/status/2020389184188580004"
         }
       ]
     },
@@ -80,28 +85,29 @@
       "title": "General",
       "items": [
         {
-          "tag": "insight",
-          "title": "@gregisenberg: Vibe Marketing > Vibe Coding",
-          "body": "Founders should shift focus from just building (vibe coding) to running 24/7 marketing playbooks with agents (vibe marketing) to actually get noticed.",
-          "url": "https://x.com/gregisenberg/status/2020290971951391031"
+          "title": "@AshlynHe1129: Jensen Huang's Infinity Thinking",
+          "body": "Nvidia CEO Huang suggests removing all constraints (cost, compute, data) during ideation to find the true 'first principles' solution.",
+          "url": "https://x.com/AshlynHe1129/status/2020480931166044481"
         },
         {
-          "tag": "story",
-          "title": "@astro_greek: Shivon Zilis & Elon Musk",
-          "body": "A deep dive into the relationship between Shivon Zilis and Elon Musk, revealing how a close friendship and shared views on birthrates led to co-parenting.",
-          "url": "https://x.com/astro_greek/status/2020105959536755034"
+          "title": "@liu10102525: Engagement Hacks",
+          "body": "A guide on getting attention from Silicon Valley elites: Don't just retweet; use an AI skill to 'distill' their point into a sharp, value-add summary card.",
+          "url": "https://x.com/liu10102525/status/2020357807862870181"
         },
         {
-          "tag": "safety",
-          "title": "@guptar: Uber's AI Ignored Safety Risks",
-          "body": "A jury awarded $8.5M after Uber's internal AI flagged a ride as 'High Risk' but allowed it anyway, leading to an assault. 3,000+ similar cases are pending.",
-          "url": "https://x.com/guptar/status/2019964093487370456"
+          "title": "@aiwithmayank: Socratic Prompting",
+          "body": "A leaked technique from OpenAI/Anthropic: Instead of commanding the AI, ask it to 'guide you' with questions to drastically improve output.",
+          "url": "https://x.com/aiwithmayank/status/2020155460620546373"
         },
         {
-          "tag": "life",
-          "title": "@MrPitbull07: A Farmer's Wife Perspective",
-          "body": "A touching story about resentment turning into gratitude, highlighting the sacrifices farmers make for their families and their craft.",
-          "url": "https://x.com/MrPitbull07/status/2019986198081728531"
+          "title": "@wquguru: AI Management Theory",
+          "body": "Wharton Professor Ethan Mollick argues 'Agent Swarms' will fail without applying traditional organizational management theory to handle hierarchy.",
+          "url": "https://x.com/wquguru/status/2020472886465855989"
+        },
+        {
+          "title": "@jian_w3ng: The '20% Shit' Rule",
+          "body": "A vivid analogy comparing AI code maintenance to Twitter layoffs: You only need 20% of the code, but you need the bloat to handle the edge cases.",
+          "url": "https://x.com/jian_w3ng/status/2020481537850912822"
         }
       ]
     }
