@@ -1,20 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Saturday, February 7th, 2026",
-  "summary_title": "High Signal Summary",
+  "date": "Saturday, February 07, 2026",
   "summary": [
-    {
-      "html": "<strong>AI's \"Vibe Coding\" Era:</strong> Jensen Huang declares \"coding is just typing\" as models like Claude Code (Opus 4.6) and GPT-5.3 shift software development from writing syntax to managing intent and verification."
-    },
-    {
-      "html": "<strong>Crypto Flash Crash:</strong> A massive liquidation event (rumored to involve traditional hedge funds and high-profile figures) crashed Bitcoin to $60k despite S&P 500 stability, highlighting a divergence in asset classes."
-    },
-    {
-      "html": "<strong>Agentic Workflow Reality:</strong> Users report AI agents completing weeks of work in hours (Anthropic), but also dangerous failures—one agent accidentally deleted 15 years of family photos."
-    },
-    {
-      "html": "<strong>Strategic Shifts:</strong> Meta is rumored to be closing its next frontier model \"Avocado\", while OpenAI and Anthropic are embedding engineers directly into enterprises like Goldman Sachs to build custom OS-level agents."
-    }
+    "<strong>Jensen Huang's Vision:</strong> NVIDIA CEO predicts AI will shift the economy from IT ($1T) to Digital Labor ($100T), making domain expertise more valuable than coding.",
+    "<strong>The AI Horse Race:</strong> Google leads in distribution (750M users), Anthropic dominates enterprise efficiency ($9B ARR on 30M users), and OpenAI wins on consumer engagement.",
+    "<strong>Crypto Flash Crash:</strong> A Hong Kong hedge fund's leveraged bet on IBIT options + Yen carry trade unwind triggered a Bitcoin flash crash to $60k.",
+    "<strong>Agentic Engineering:</strong> The industry is shifting from 'writing code' to 'managing agents' (OpenClaw, Claude Code), with Mac minis becoming the preferred home server for bots.",
+    "<strong>Walmart's Tech Pivot:</strong> Ad revenue and memberships now drive 50% of Walmart's profit growth, leading it to trade at tech-like multiples (44x P/E)."
   ],
   "sections": [
     {
@@ -22,106 +14,94 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "Insight",
-          "title": "@Astronaut_1216: Coding is Just Typing",
-          "body": "NVIDIA CEO Jensen Huang stated that programming is becoming 'just typing'—translating intent into computer language is now the AI's job. Humans must focus on clear thinking and communication.",
-          "url": "https://twitter.com/Astronaut_1216/status/2020090637245116457"
+          "tag": "hot",
+          "title": "@kugo_A10: Jensen Huang's 5 AI Predictions",
+          "body": "Jensen Huang argues that coding is dead; AI is 'digital labor' that will expand the economy 100x. The future belongs to domain experts who can command AI, not just programmers.",
+          "url": "https://x.com/kugo_A10/status/2020077316735750450"
         },
         {
-          "tag": "Update",
-          "title": "@victor_wu: GPT-5.3 vs 5.2",
-          "body": "GPT-5.3's 'Plan' mode is 5x stronger than 5.2, with massively improved reasoning and auto-debugging capabilities. The model proactively investigates bugs by tracing runtime logic.",
-          "url": "https://twitter.com/victor_wu/status/2020162148937433428"
+          "tag": "update",
+          "title": "@aakashgupta: AI Economics & Jevons Paradox",
+          "body": "Naval Ravikant is right: a 98% collapse in intelligence costs leads to infinite demand. The value shifts from 'providing intelligence' to 'directing intelligence' (judgment).",
+          "url": "https://x.com/aakashgupta/status/2020201006123135103"
         },
         {
-          "tag": "Warning",
-          "title": "@Nick_Davidov: Agent Danger",
-          "body": "A user asked Claude Cowork to organize files; it accidentally deleted 15 years of family photos (kids, weddings, travel) that weren't in trash or iCloud. A stark warning against giving AI unchecked file system access.",
-          "url": "https://twitter.com/Nick_Davidov/status/2019982510478995782"
+          "tag": "workflow",
+          "title": "@gkxspace: Claude Code + Obsidian Workflow",
+          "body": "A powerful 'vibe coding' setup: use Claude Code to write directly into Obsidian for articles, flowcharts, and layout, turning the user into a director rather than an editor.",
+          "url": "https://x.com/gkxspace/status/2020275631972577628"
         },
         {
-          "tag": "Strategy",
-          "title": "@wquguru: The Enterprise Agent War",
-          "body": "OpenAI and Anthropic are sending engineers directly into giants like Goldman Sachs to build custom agents. Anthropic's agents cut client review times by 30% by handling complex text/table workflows.",
-          "url": "https://twitter.com/wquguru/status/2020010195284553870"
+          "tag": "tool",
+          "title": "@wquguru: OpenClaw Stability with Opus 4.5",
+          "body": "User 'Chiti' achieved stability by switching back to Opus 4.5 for coordination. They recommend a Mac mini for reliable iMessage integration, a key for personal bots.",
+          "url": "https://x.com/wquguru/status/2020140188458987881"
         },
         {
-          "tag": "Rumor",
-          "title": "@Balder13946731: Meta's 'Avocado'",
-          "body": "Meta's new model 'Avocado' is rumored to be its strongest yet, potentially outperforming open-source baselines. Speculation suggests Meta may pivot to closed-source to compete directly with GPT/Gemini.",
-          "url": "https://twitter.com/Balder13946731/status/2020168113908768939"
+          "tag": "new",
+          "title": "@ai_for_success: Kimi K2.5 as a Cheap Alternative",
+          "body": "Kimi K2.5 is now the most used model on OpenClaw, offering 8x cheaper rates than Claude while maintaining high performance for coding and reasoning.",
+          "url": "https://x.com/ai_for_success/status/2020081945137541237"
         }
       ]
     },
     {
-      "emoji": "📉",
-      "title": "Finance & Crypto",
+      "emoji": "📈",
+      "title": "Markets & News",
       "items": [
         {
-          "tag": "Market",
-          "title": "@KKaWSB: Bitcoin Flash Crash",
-          "body": "Bitcoin flash-crashed to $60k. Analysis suggests Hong Kong hedge funds blew up on leveraged IBIT options and silver positions, triggering a liquidation cascade.",
-          "url": "https://twitter.com/KKaWSB/status/2020053399430221883"
+          "tag": "news",
+          "title": "@KKaWSB: Anatomy of the BTC Flash Crash",
+          "body": "Bitcoin fell to $60k due to a HK hedge fund's failed leverage play on IBIT options and a simultaneous Yen carry trade unwind.",
+          "url": "https://x.com/KKaWSB/status/2020168402468487430"
         },
         {
-          "tag": "Rumor",
-          "title": "@ai_9684xtpa: High Profile Liquidations",
-          "body": "Rumors circulate that Barron Trump lost $230M in a single day, and 'Easy' Li Hua lost $667M avoiding liquidation. Meanwhile, Bithumb accidentally airdropped 2000 BTC to users.",
-          "url": "https://twitter.com/ai_9684xtpa/status/2020053399430221883"
+          "tag": "analysis",
+          "title": "@aakashgupta: Walmart is a Tech Company Now",
+          "body": "Walmart trades at a 44x P/E because 50% of its profit growth comes from high-margin ad revenue and memberships, not just low-margin retail.",
+          "url": "https://x.com/aakashgupta/status/2019992360990765459"
         },
         {
-          "tag": "Wisdom",
-          "title": "@KKaWSB: The Risk of 'Average'",
-          "body": "A statistician drowned in a river with an 'average' depth of 1 meter. Risk management isn't about averages, but surviving the 5-meter deep holes (black swans).",
-          "url": "https://twitter.com/KKaWSB/status/2019988140023566417"
+          "tag": "drama",
+          "title": "@ai_9684xtpa: Bithumb's 620k BTC Error",
+          "body": "A Korean exchange accidentally airdropped 2000 BTC to every user. Most was recovered, but 125 BTC remains lost in the chaos.",
+          "url": "https://x.com/ai_9684xtpa/status/2020066134096245236"
+        },
+        {
+          "tag": "update",
+          "title": "@skillz17q: Trump Accounts Details",
+          "body": "New details on the Trump Accounts program: $1,000 seed for newborns, $250 for kids 1-9. Registration via IRS form 4547 starting July 2026.",
+          "url": "https://x.com/skillz17q/status/2020159306650309019"
         }
       ]
     },
     {
-      "emoji": "🚀",
-      "title": "Science & Future",
+      "emoji": "💡",
+      "title": "General",
       "items": [
         {
-          "tag": "Space",
-          "title": "@NASA: SpaceX Crew-12",
-          "body": "Crew-12 is targeting a Feb 11 liftoff to the ISS. Meanwhile, reports suggest SpaceX is delaying Mars plans to prioritize the 2027 Artemis moon landing.",
-          "url": "https://twitter.com/NASA/status/2019899767745077361"
+          "tag": "insight",
+          "title": "@gregisenberg: Vibe Marketing > Vibe Coding",
+          "body": "Founders should shift focus from just building (vibe coding) to running 24/7 marketing playbooks with agents (vibe marketing) to actually get noticed.",
+          "url": "https://x.com/gregisenberg/status/2020290971951391031"
         },
         {
-          "tag": "Life Saving",
-          "title": "@XieJackie: FSD Saves Life",
-          "body": "A son remotely redirected his father's Tesla FSD to a hospital when the father suffered a heart attack while driving. The car parked at the ER entrance, saving his life.",
-          "url": "https://twitter.com/XieJackie/status/2020033361134403636"
+          "tag": "story",
+          "title": "@astro_greek: Shivon Zilis & Elon Musk",
+          "body": "A deep dive into the relationship between Shivon Zilis and Elon Musk, revealing how a close friendship and shared views on birthrates led to co-parenting.",
+          "url": "https://x.com/astro_greek/status/2020105959536755034"
         },
         {
-          "tag": "Simulation",
-          "title": "@demishassabis: Genie 3",
-          "body": "Google DeepMind's Genie 3 simulations are powering Waymo's new World Model, allowing autonomous vehicles to train on 'impossible' edge cases like planes landing on freeways.",
-          "url": "https://twitter.com/demishassabis/status/2019827916385972517"
-        }
-      ]
-    },
-    {
-      "emoji": "🌏",
-      "title": "Society & Culture",
-      "items": [
-        {
-          "tag": "Story",
-          "title": "@pingzhang632: Bertrand Russell",
-          "body": "A poor student asked Bertrand Russell why he ate in a cheap, bad cafeteria. Russell replied: 'Because I never get interrupted.' Quiet and focus > comfort.",
-          "url": "https://twitter.com/pingzhang632/status/2020053399430221883"
+          "tag": "safety",
+          "title": "@guptar: Uber's AI Ignored Safety Risks",
+          "body": "A jury awarded $8.5M after Uber's internal AI flagged a ride as 'High Risk' but allowed it anyway, leading to an assault. 3,000+ similar cases are pending.",
+          "url": "https://x.com/guptar/status/2019964093487370456"
         },
         {
-          "tag": "Prediction",
-          "title": "@JacobKinge: The 4chan Prophet",
-          "body": "A 2023 4chan post correctly predicted the exact date of the Bitcoin top in Oct 2025. The same model predicts the next ATH in September 2027.",
-          "url": "https://twitter.com/JacobKinge/status/2020162072169087450"
-        },
-        {
-          "tag": "Safety",
-          "title": "@guptar: Uber AI Fail",
-          "body": "Uber's internal AI flagged a ride as 'High Risk' but allowed the match anyway. The passenger was assaulted, leading to an $8.5M jury award against Uber.",
-          "url": "https://twitter.com/guptar/status/2020053399430221883"
+          "tag": "life",
+          "title": "@MrPitbull07: A Farmer's Wife Perspective",
+          "body": "A touching story about resentment turning into gratitude, highlighting the sacrifices farmers make for their families and their craft.",
+          "url": "https://x.com/MrPitbull07/status/2019986198081728531"
         }
       ]
     }
