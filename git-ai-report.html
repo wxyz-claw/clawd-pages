@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Report: git-ai Implementation & Perforce Porting Feasibility</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  
+    /* Markdown Styles */
+    h2 { margin-top: 0; color: var(--accent); }
+    .section-header { margin-top: 40px; }
+    h3 { color: var(--text); font-size: 1.1rem; margin-top: 25px; margin-bottom: 10px; font-weight: 600; }
+    h4 { color: var(--text); font-size: 1rem; margin-top: 20px; margin-bottom: 8px; font-weight: 600; font-style: italic;}
+    p, li { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+    ul, ol { margin-bottom: 16px; padding-left: 24px; color: var(--text-muted); }
+    li { margin-bottom: 6px; }
+    
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.9rem; }
+    th, td { border: 1px solid var(--border); padding: 12px; text-align: left; }
+    th { background: var(--card-bg); color: var(--accent); font-weight: 600; }
+    tr:nth-child(even) { background: #1a1a1a55; }
+    
+    /* Code */
+    code { background: #2a2a2a; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 0.85em; color: #e5e5e5; }
+    
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Technical Report: git-ai Implementation & Perforce Porting Feasibility</h1>
+    <div class="date">2026-02-10</div>
+  </header>
+
+  
+
+  <div class="content">
+<br><br><div class="section-header"><h2>1. git-ai Technical Implementation</h2></div><br><br><h3>A. Interception Mechanism</h3>
+<code>git-ai</code> does not passively watch files. It uses a dual-layer interception strategy to capture the "intent" and "source" of code changes before they are committed.
+<ul>
+<li> <strong>Editor Integration (The Trigger):</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  <strong>Extensions:</strong> <code>git-ai</code> installs extensions for VS Code (<code>git-ai.git-ai-vscode</code>), Cursor, and others.</li>
+<li>  <strong>Checkpoints:</strong> These extensions explicitly trigger a <code>git-ai checkpoint</code> command when AI generation occurs. This snapshots the working directory state *before* the user manually commits.</li>
+<li>  <strong>Data Injection:</strong> The extensions pass metadata (Model ID, Prompt text, Transcript) to the checkpoint command, which stores it in a local <strong>Working Log</strong> (located in <code>.git/git-ai/working_log</code>).</li>
+</ul>
+</ul>
+<ul>
+<li> <strong>Git Shim (The Enforcer):</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  <strong>Path Manipulation:</strong> On installation, <code>git-ai</code> modifies the editor's configuration (e.g., <code>git.path</code> in VS Code) to point to a "shim" binary instead of the system <code>git</code>.</li>
+<li>  <strong>Command Interception:</strong> When the user runs <code>git commit</code>, the shim intercepts the command. It triggers the <code>post-commit</code> process, which finalizes the data collection.</li>
+</ul>
+</ul><br><br><h3>B. Metadata Storage (Schema & Location)</h3>
+The metadata is stored in two stages: transient (pre-commit) and persistent (post-commit).
+<ul>
+<li> <strong>Transient: Working Log</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  Stored in <code>.git/git-ai/working_log/</code>.</li>
+<li>  Contains a sequence of "Checkpoints" (snapshots of file states after each AI generation but before commit).</li>
+</ul>
+</ul>
+<ul>
+<li> <strong>Persistent: Git Notes</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  <strong>Ref:</strong> <code>refs/notes/ai</code> (not the default <code>refs/notes/commits</code>).</li>
+<li>  <strong>Format:</strong> The "Authorship Log" is serialized as a JSON blob and attached to the commit SHA using <code>git notes add</code>.</li>
+<li>  <strong>Schema:</strong> The JSON contains an <code>attestations</code> array mapping file paths to attribution data, including:</li>
+<li>  <code>messages</code>: The prompt/response transcript.</li>
+<li>  <code>agent_id</code>: Tool and model used (e.g., "cursor:claude-3.5-sonnet").</li>
+<li>  <code>attributions</code>: A list of character ranges (start/end) linked to specific authors.</li>
+</ul>
+</ul><br><br><h3>C. Line Mapping & Diffing</h3>
+<code>git-ai</code> uses a sophisticated custom tracking system, not standard <code>git blame</code>.
+<ul>
+<li> <strong>Attribution Tracker:</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  Implemented in <code>src/authorship/attribution_tracker.rs</code>.</li>
+<li>  It maintains a persistent mapping of line ownership across multiple checkpoints.</li>
+<li>  When a new checkpoint is created, it calculates the diff from the *previous checkpoint* (not just the HEAD).</li>
+</ul>
+</ul>
+<ul>
+<li> <strong>Algorithm:</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  It uses the <strong>Myers diff algorithm</strong> (via the <code>imara-diff</code> Rust crate) to compute line changes (<code>Insert</code>, <code>Delete</code>, <code>Equal</code>).</li>
+<li>  <strong>Logic:</strong></li>
+<li>  Lines unchanged from the previous state inherit their authorship.</li>
+<li>  New lines introduced in an AI checkpoint are attributed to the AI agent.</li>
+<li>  New lines introduced in a Human checkpoint are attributed to the user.</li>
+</ul>
+</ul><br><br>---<br><br><div class="section-header"><h2>2. Perforce (Helix Core) Porting Strategy</h2></div><br><br>Porting to Perforce is feasible but requires shifting from a "local repository" mindset to a "centralized server" mindset.<br><br><h3>A. Architectural Comparison</h3><br><br><table>
+<tr><th>Feature</th><th>Git Architecture</th><th>Perforce Equivalent</th></tr>
+<tr><td><strong>Storage</strong></td><td>Distributed <code>.git</code> folder</td><td>Centralized Server (Depot)</td></tr>
+<tr><td><strong>Metadata</strong></td><td><code>git notes</code> (attached to commit)</td><td><code>p4 attribute</code> (attached to file revision)</td></tr>
+<tr><td><strong>Staging</strong></td><td>Index / Staging Area</td><td>Pending Changelist</td></tr>
+<tr><td><strong>Checkpoints</strong></td><td>Local hidden commits</td><td><strong>Shelving</strong> (<code>p4 shelve</code>)</td></tr>
+<tr><td><strong>Blame</strong></td><td><code>git blame</code></td><td><code>p4 annotate</code></td></tr>
+</table><br><br><h3>B. Implementation Strategy: "p4-ai"</h3><br><br><h4>1. Storage: Attributes & Changelists</h4>
+Instead of <code>git notes</code>, we will use <strong>Perforce Attributes</strong> to store the JSON metadata.
+<ul>
+<ul>
+<li>  <strong>Command:</strong> <code>p4 attribute -n git-ai-data -v <JSON_BLOB> //depot/path/to/file@change</code></li>
+<li>  <strong>Why:</strong> Attributes are versioned per file. This allows <code>p4-ai</code> to fetch the exact metadata for <code>//depot/file.c#5</code>.</li>
+<li>  <strong>Fallback:</strong> If attributes are restricted, store the JSON in the <strong>Changelist Description</strong> (wrapped in a delimiter like <code>===GIT-AI-DATA===</code>).</li>
+</ul>
+</ul><br><br><h4>2. Interception: The "Shelve-point"</h4>
+Since Perforce has no local history, we must synthesize the "Checkpoint" concept using <strong>Shelving</strong>.
+<ul>
+<ul>
+<li>  <strong>Mechanism:</strong> When the editor triggers a checkpoint (e.g., after AI generation), <code>p4-ai</code> will:</li>
+</ul>
+</ul>
+<ul>
+<li> Create a hidden pending changelist.</li>
+<li> <code>p4 shelve</code> the current files into that changelist.</li>
+<li> Store the AI metadata (prompt, model) as an attribute on the shelved files or the changelist description.</li>
+</ul>
+<ul>
+<ul>
+<li>  <strong>Finalization:</strong> When the user submits the actual changelist, <code>p4-ai</code> (via a wrapper or trigger) will:</li>
+</ul>
+</ul>
+<ul>
+<li> Fetch the sequence of shelved "checkpoints".</li>
+<li> Compute the final attribution (collapsing the diffs).</li>
+<li> Write the final JSON attribute to the submitted file revisions.</li>
+</ul><br><br><h4>3. Line Mapping: Client-Side Calculation</h4>
+Perforce's server-side logic is too rigid for this. The logic must remain client-side (in Rust).
+<ul>
+<ul>
+<li>  <strong>Fetch:</strong> <code>p4 print</code> to get file content of previous revisions.</li>
+<li>  <strong>Diff:</strong> Reuse the Rust <code>imara-diff</code> logic to compare the local file against the shelved checkpoints.</li>
+<li>  <strong>Blame:</strong> <code>p4-ai annotate <file></code> will run <code>p4 annotate -q <file></code>, parse the output to get revision numbers for each line, and then look up the <code>git-ai-data</code> attribute for those revisions to overlay the AI authorship.</li>
+</ul>
+</ul><br><br><h3>C. Migration Path</h3>
+<ul>
+<li> <strong>Build the CLI (<code>p4-ai</code>):</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  Implement <code>p4-ai checkpoint</code>: Wraps <code>p4 shelve</code>.</li>
+<li>  Implement <code>p4-ai submit</code>: Wraps <code>p4 submit</code> to inject attributes.</li>
+</ul>
+</ul>
+<ul>
+<li> <strong>Update Editor Extensions:</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  Modify <code>git-ai-vscode</code> to detect a Perforce workspace (presence of <code>P4PORT</code>/<code>P4CLIENT</code>).</li>
+<li>  Switch command calls from <code>git-ai checkpoint</code> to <code>p4-ai checkpoint</code>.</li>
+</ul>
+</ul>
+<ul>
+<li> <strong>Server Config:</strong></li>
+</ul>
+<ul>
+<ul>
+<li>  Ensure <code>p4 attribute</code> permission is enabled for developers.</li>
+</ul>
+</ul><br><br><h3>Summary</h3>
+The core logic of <code>git-ai</code> (diffing, attribution tracking, and schema) can be reused almost entirely. The primary effort is replacing the <code>git</code> plumbing (notes/commits) with <code>p4</code> plumbing (attributes/shelves). The "Shelve as Checkpoint" strategy provides a robust equivalent to Git's local object storage.
+
+</div>
+
+</body>
+</html>
