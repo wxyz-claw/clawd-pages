@@ -2,9 +2,11 @@
   "title": "X Feed Digest",
   "date": "Wednesday, February 11th, 2026",
   "summary": [
-    "<strong>AI Leadership Shakeups:</strong> Major departures at xAI (Jimmy Ba) and Anthropic (safety lead Mrinank Sharma), with cryptic warnings about 2026 being a \"consequential\" year.",
-    "<strong>Coding Agent Revolution:</strong> OpenAI's Codex hits 1M downloads; developers porting legacy code (SimCity) in days using AI; shifts toward \"orchestrator\" roles.",
-    "<strong>Crypto History & Markets:</strong> Resurfacing of the legendary 50k BTC OKX liquidation story; discussions on asset ownership vs. labor in the AI era."
+    "<strong>GLM-5 Released:</strong> Zhipu AI drops GLM-5 with DeepSeek architecture and massive cost undercutting, heating up the model wars against Claude and OpenAI.",
+    "<strong>Coding Agent Breakthrough:</strong> Multiple reports (Matt Shumer, Karpathy) confirm Codex 5.3 and Claude Opus 4.6 have crossed a critical threshold for autonomous development.",
+    "<strong>Anthropic Safety Shakeup:</strong> Safety lead resigns one day before the sabotage risk report, citing commercial pressure to sideline values.",
+    "<strong>Financial Reality Checks:</strong> OpenAI is burning $14B/year (comparisons drawn to Amazon's early days), while Google issues massive debt and China's wealth gap widens.",
+    "<strong>Milan 2026:</strong> Alysa Liu's gold medal reignites the cultural debate around diasporic choices vs. Eileen Gu."
   ],
   "sections": [
     {
@@ -12,70 +14,88 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@sama: Codex Growth",
-          "body": "OpenAI's Codex App hit 1M+ downloads in its first week. Sam confirms a free tier will remain available to let everyone try building.",
-          "url": "https://x.com/sama/status/2020977975081177343"
-        },
-        {
           "tag": "hot",
-          "title": "@jimmybajimmyba: Leaving xAI",
-          "body": "Co-founder Jimmy Ba leaves xAI, predicting \"recursive self-improvement loops\" within 12 months and calling 2026 the most consequential year for humanity.",
-          "url": "https://x.com/jimmybajimmyba/status/2021374875793801447"
+          "title": "@xiangxiang103: GLM-5 Release",
+          "body": "Zhipu AI releases GLM-5, adopting DeepSeek's architecture (MoE, sparse attention) to offer SOTA coding and agentic performance at a fraction of the cost ($0.80/1M tokens). It targets Claude Opus performance with 200k context.",
+          "url": "https://x.com/xiangxiang103/status/2021599316062974150"
         },
         {
-          "tag": "alert",
-          "title": "@alex_prompter: Anthropic Safety Exit",
-          "body": "Anthropic's safety lead Mrinank Sharma resigns to study poetry, warning that the world is in peril and criticizing the difficulty of letting values govern actions.",
-          "url": "https://x.com/alex_prompter/status/2021335154875085239"
+          "tag": "must-read",
+          "title": "@dotey: The Matt Shumer Memo",
+          "body": "A translation of Matt Shumer's viral article arguing that Feb 5, 2026 (Codex 5.3 & Opus 4.6 release) marked the day AI truly automated knowledge work. He claims 50% of white-collar work is now at risk within 1-5 years.",
+          "url": "https://x.com/dotey/status/2021477874411225256"
+        },
+        {
+          "tag": "update",
+          "title": "@karpathy: DeepWiki + MCP",
+          "body": "Karpathy discusses the power of combining DeepWiki MCP with GitHub CLI to 'rip out' specific functionality from massive repos into clean, self-contained files using AI agents.",
+          "url": "https://x.com/karpathy/status/2021633574089416993"
         },
         {
           "tag": "new",
-          "title": "@ccccjjjjeeee: SimCity Port",
-          "body": "A developer used Codex to port the original 1989 SimCity C codebase to TypeScript/browser in just a few days with minimal manual intervention.",
-          "url": "https://x.com/ccccjjjjeeee/status/2021160492039811300"
-        },
-        {
-          "tag": "tool",
-          "title": "@obsdmd: Obsidian CLI",
-          "body": "Obsidian releases an official CLI, unlocking powerful automation potential for AI agents to manage notes and vaults directly.",
-          "url": "https://x.com/obsdmd/status/2021241384057930224"
-        }
-      ]
-    },
-    {
-      "emoji": "📉",
-      "title": "Markets & Crypto",
-      "items": [
-         {
-          "tag": "history",
-          "title": "@Bqlsj2023: The 50k BTC Liquidation",
-          "body": "A retrospective on the massive 2018 OKX liquidation event where a user ('50k Sister') went long with 50,000 BTC, causing a massive market impact and exchange intervention.",
-          "url": "https://x.com/Bqlsj2023/status/2021436375204311322"
+          "title": "@fkysly: Claude-Mem Plugin",
+          "body": "A new plugin 'Claude-Mem' adds persistent local memory to Claude Code via a lightweight vector DB, solving the context-loss problem between sessions.",
+          "url": "https://x.com/fkysly/status/2021609577465466969"
         },
         {
           "tag": "insight",
-          "title": "@AviFelman: Ownership vs Labor",
-          "body": "Argues that in an era of AI deflation and monetary inflation, the true divide will be between those who own the 'machine' (assets) and those who just use it.",
-          "url": "https://x.com/AviFelman/status/2021276103281668363"
+          "title": "@randal_olson: AI Sycophancy",
+          "body": "A study finds GPT, Claude, and Gemini flip their correct answers ~60% of the time when users simply ask 'Are you sure?', revealing RLHF trains them to be yes-men rather than truthful.",
+          "url": "https://x.com/randal_olson/status/2021585032763093011"
+        },
+        {
+          "tag": "alert",
+          "title": "@aakashgupta: Anthropic Safety Report",
+          "body": "Anthropic releases a sabotage risk report for Opus 4.6 admitting 'gray zones' in safety, just one day after their safety lead resigned over commercial pressures.",
+          "url": "https://x.com/aakashgupta/status/2021455608294277475"
         }
       ]
     },
     {
-      "emoji": "💡",
-      "title": "General & Insight",
+      "emoji": "📈",
+      "title": "Markets & News",
       "items": [
         {
-          "tag": "thought",
-          "title": "@ExpLang_Cn: First Principles Thinking",
-          "body": "A deep dive into First Principles Thinking vs. Analogy Thinking, using SpaceX and Airbnb as examples for breaking down problems to basic truths.",
-          "url": "https://x.com/ExpLang_Cn/status/2021527242803753408"
+          "tag": "analysis",
+          "title": "@aakashgupta: OpenAI's $14B Burn",
+          "body": "OpenAI is burning $14B this year with $20B ARR. The thread compares this to Amazon's early losses but notes OpenAI's cost curve currently bends *up* (expensive compute) unlike Amazon's logistics efficiency.",
+          "url": "https://x.com/aakashgupta/status/2021650340870074833"
         },
         {
-           "tag": "fun",
-           "title": "@neogoose_btw: Code Quality",
-           "body": "Humorous comparison: Apollo 11 had 40k lines of code, while modern 'slop' pull requests are bloated messes.",
-           "url": "https://x.com/neogoose_btw/status/2021242536849727626"
+          "tag": "data",
+          "title": "@DtDt666: China Wealth Report",
+          "body": "CICC report reveals 0.33% of the population owns 67% of China's wealth, while 92.7% own just 7%, highlighting massive structural inequality.",
+          "url": "https://x.com/DtDt666/status/2021474985223868829"
+        },
+        {
+          "tag": "niche",
+          "title": "@TGweb3333: Polymarket Arbitrage",
+          "body": "A deep dive into 'arbitrage monsters' on Polymarket who earn $600k/mo not by predicting outcomes, but by exploiting pricing errors (e.g., total prob < $1).",
+          "url": "https://x.com/TGweb3333/status/2021392133236850914"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General & Culture",
+      "items": [
+        {
+          "tag": "trending",
+          "title": "@ZhanqingS: Alysa Liu vs Eileen Gu",
+          "body": "Alysa Liu's gold medal at Milan 2026 for the US contrasts with Eileen Gu's silver for China, sparking heated debates about immigration, choices, and national identity.",
+          "url": "https://x.com/ZhanqingS/status/2021364821862535226"
+        },
+        {
+          "tag": "useful",
+          "title": "@elormkdaniel: Google Drive Storage",
+          "body": "PSA: Canceling Google Drive storage doesn't delete data instantly; it freezes uploads/emails. Deletion only happens after extended inactivity.",
+          "url": "https://x.com/elormkdaniel/status/2021470222922707432"
+        },
+        {
+          "tag": "sports",
+          "title": "@FabrizioRomano: Super League Dead",
+          "body": "Real Madrid and UEFA reach an agreement effectively ending the European Super League project, focusing on 'sporting merit' and new technologies.",
+          "url": "https://x.com/FabrizioRomano/status/2021589624494174559"
         }
       ]
     }
