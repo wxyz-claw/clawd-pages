@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Thursday, February 12th, 2026",
   "summary": [
-    "GPT-5.2 updates are rolling into ChatGPT and now power Deep Research, signaling steady model improvements in core workflows.",
-    "Claude broadened access to workflow features (files, connectors, skills) while the MCP ecosystem gains new integrations like Excalidraw.",
-    "Enterprise AI coding adoption is scaling fast—Codex is rolling out across NVIDIA—while compute investment accelerates with xAI’s giant GPU buildout.",
-    "Open-weight models are closing the gap (GLM-5 leads benchmarks), and AI business momentum shows up in revenues like Databricks’ $5.4B run rate."
+    "Model upgrades and releases dominated the feed: Gemini 3 Deep Think hits Olympiad-level results while OpenAI ships GPT-5.3 Codex-Spark for low-latency coding and MiniMax M2.5 narrows the gap at far lower cost.",
+    "Agentic workflows are maturing: Claude Code customization + skills playbooks emphasize preconfigured agents and hooks, and Stripe’s x402 enables autonomous API payments.",
+    "AI infra economics stay front-and-center: Nebius shows demand outrunning GPU supply, while Goldman flags data-center power demand pushing electricity prices and inflation.",
+    "Usage scale keeps exploding, with OpenRouter reporting ~12T tokens/week—roughly Azure-scale inference."
   ],
   "sections": [
     {
@@ -13,94 +13,82 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@OpenAI: Deep Research now on GPT-5.2",
-          "body": "OpenAI says ChatGPT’s Deep Research mode is now powered by GPT‑5.2 and is rolling out with more improvements to come. It’s a signal that model upgrades are landing first in research workflows.",
-          "url": "https://x.com/OpenAI/status/2021299935678026168"
+          "tag": "hot",
+          "title": "@aakashgupta: Claude Code customization playbook",
+          "body": "A detailed checklist of Claude Code knobs—model effort, permissions, hooks, and custom agents—with the key takeaway that preconfigured agents + lifecycle hooks unlock near-autonomous workflows.",
+          "url": "https://x.com/aakashgupta/status/2021740317272355225"
         },
         {
           "tag": "update",
-          "title": "@claudeai: Free plan gets files + connectors",
-          "body": "Anthropic is expanding Claude’s free tier to include file creation, connectors, and skills—features that previously required a subscription. This widens access to practical workflow tools.",
-          "url": "https://x.com/claudeai/status/2021630343372259759"
+          "title": "@JeffDean: Gemini 3 Deep Think upgrade",
+          "body": "Google says Gemini 3 Deep Think now hits Olympiad-level performance in physics/chemistry and posts SOTA results on ARC-AGI-2/MMMU-Pro/HLE, positioning it as a true research partner.",
+          "url": "https://x.com/JeffDean/status/2021989820604539250"
         },
         {
           "tag": "new",
-          "title": "@OpenAIDevs: Codex rolling out at NVIDIA",
-          "body": "OpenAI says Codex is being deployed company‑wide at NVIDIA to roughly 30k engineers, with enterprise controls like US‑only processing and admin guardrails. A strong signal of large‑scale agent adoption.",
-          "url": "https://x.com/OpenAIDevs/status/2021742142838993059"
+          "title": "@dotey: GPT-5.3 Codex-Spark realtime model",
+          "body": "OpenAI launched the low-latency Codex-Spark (Cerebras-backed) for interactive coding, highlighting faster response times and strong SWE/terminal benchmarks versus prior small models.",
+          "url": "https://x.com/dotey/status/2022016248360710502"
         },
         {
           "tag": "new",
-          "title": "@excalidraw: Official MCP for Claude",
-          "body": "Excalidraw announced an official MCP integration with Claude, available via Connectors and Claude Code. This makes diagram creation and editing a first‑class tool inside Claude workflows.",
-          "url": "https://x.com/excalidraw/status/2021284377506742331"
+          "title": "@runes_leo: Stripe adds x402 for agent payments",
+          "body": "Stripe integrated x402 so agents can pay APIs in USDC when servers return HTTP 402, enabling autonomous pay-per-call without human checkout flows.",
+          "url": "https://x.com/runes_leo/status/2021795355902308492"
         },
         {
-          "tag": "update",
-          "title": "@demishassabis: Isomorphic drug design SOTA",
-          "body": "Demis Hassabis reports Isomorphic Labs’ drug‑design engine is pushing state‑of‑the‑art accuracy on key benchmarks for in‑silico discovery. It’s another signal of AI’s growing impact in biotech.",
-          "url": "https://x.com/demishassabis/status/2021223548744822972"
+          "tag": "new",
+          "title": "@bridgemindai: MiniMax M2.5 price/perf leap",
+          "body": "BridgeBench shows MiniMax M2.5 within 0.4 points of Opus 4.6 but ~8× cheaper, suggesting Chinese labs are winning on price-performance.",
+          "url": "https://x.com/bridgemindai/status/2021995659935494167"
         },
         {
           "tag": "hot",
-          "title": "@ArtificialAnlys: GLM‑5 leads open‑weights",
-          "body": "Artificial Analysis says Z.ai’s GLM‑5 now tops their open‑weights Intelligence Index, with big gains in agentic tasks and reduced hallucination. The report positions it closer to proprietary frontier models.",
-          "url": "https://x.com/ArtificialAnlys/status/2021678229418066004"
+          "title": "@deedydas: OpenRouter usage scale",
+          "body": "OpenRouter token consumption reportedly jumped 12.7× YoY to ~12.1T tokens/week—about as much inference as all of Azure, signaling massive demand growth.",
+          "url": "https://x.com/deedydas/status/2021829721957482995"
         }
       ]
     },
     {
-      "emoji": "💹",
+      "emoji": "📈",
       "title": "Markets & News",
       "items": [
         {
           "tag": "hot",
-          "title": "@thenextweb: Databricks at $5.4B run rate",
-          "body": "Databricks reportedly reached a $5.4B revenue run rate and a $134B valuation, with about $1.4B tied to AI products. The update suggests real enterprise AI spend is materializing in revenue.",
-          "url": "https://x.com/thenextweb/status/2021353307386642766"
-        },
-        {
-          "tag": "hot",
-          "title": "@SawyerMerritt: xAI’s giant GPU buildout",
-          "body": "A summary of xAI’s new supercomputer claims 330k+ GPUs and over 1GW of power in phase one, with another 220k GPUs planned. If accurate, it highlights the accelerating scale of AI compute capex.",
-          "url": "https://x.com/SawyerMerritt/status/2021677234470478027"
+          "title": "@ReyezAriel: Nebius earnings highlight AI cloud demand",
+          "body": "Nebius posted Q4 revenue of $228M (+547%) and ARR of $1.2B, with capacity sold out into 2026; guidance and capex point to demand far outpacing GPU supply despite near-term revenue timing issues.",
+          "url": "https://x.com/ReyezAriel/status/2022005724138942931"
         },
         {
           "tag": "update",
-          "title": "@ivalong_com: AI video shocks Unity",
-          "body": "Commentary notes Unity’s shares fell sharply after a surge of AI‑generated content (“即梦”), arguing the market is repricing traditional content tools. It’s a reminder of how quickly AI‑native workflows can pressure incumbents.",
-          "url": "https://x.com/ivalong_com/status/2021755460798300523"
+          "title": "@fxtrader: Datacenter power demand pressure",
+          "body": "Goldman says data-center electricity demand is driving power prices up ~6.9% YoY and could add ~0.2/0.15 pts to PCE inflation in 2026/2027, with heavier impact on low-income households.",
+          "url": "https://x.com/fxtrader/status/2021853225058808201"
         },
         {
-          "tag": "update",
-          "title": "@tesla_na: Model 3/Y under $40k",
-          "body": "Tesla‑focused account says Model 3 and Model Y now start below $40k and include supervised self‑driving. Pricing moves like this continue to shape EV demand and margins.",
-          "url": "https://x.com/tesla_na/status/2021405542762352992"
+          "tag": "new",
+          "title": "@KKaWSB: ByteDance Seedance 2.0 market shock",
+          "body": "Commentary notes Seedance 2.0’s viral launch rattled markets (Kuaishou down, HSTECH volatility) and argues ByteDance’s full-stack AI push is rewriting competitive moats across ads, ecommerce, and content.",
+          "url": "https://x.com/KKaWSB/status/2021975821964226994"
         }
       ]
     },
     {
-      "emoji": "🧠",
+      "emoji": "🧭",
       "title": "General",
       "items": [
         {
           "tag": "new",
           "title": "@immersivetran: The productivity power of “No”",
-          "body": "A recap of James Clear’s point that real productivity comes from saying no up front, not optimizing endless commitments. The framing: “No” preserves time for the few things that truly matter.",
+          "body": "A summary of James Clear’s essay arguing the highest-leverage productivity move is refusing commitments early, preserving time for the few things that matter most.",
           "url": "https://x.com/immersivetran/status/2021866301086740483"
         },
         {
-          "tag": "new",
-          "title": "@immersivetran: Digital minimalism toolkit",
-          "body": "A curated “digital minimalism” toolkit suggests using tech to fight attention‑draining apps—grayscale launchers, feed blockers, forced breaks, and RSS cleanup. The idea is to engineer the environment, not rely on willpower.",
-          "url": "https://x.com/immersivetran/status/2021596794581639206"
-        },
-        {
           "tag": "hot",
-          "title": "@aakashgupta: Leverage beats raw talent",
-          "body": "This thread argues outcomes hinge on leverage and distribution more than raw intelligence—smart people without reach stay capped, while platforms scale impact exponentially. It’s a useful lens for career and product strategy.",
-          "url": "https://x.com/aakashgupta/status/2021847381151821913"
+          "title": "@waitbutwhy: X’s fake-news phase shift",
+          "body": "Argues X has moved into an era where fabricated stories dominate; calls for algorithmic penalties for scammers because Community Notes/Grok lag behind viral spread.",
+          "url": "https://x.com/waitbutwhy/status/2022003882079985818"
         }
       ]
     }
