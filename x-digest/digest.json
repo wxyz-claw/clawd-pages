@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Wednesday, February 11th, 2026",
+  "date": "Thursday, February 12th, 2026",
   "summary": [
-    "<strong>AI Talent Exodus:</strong> Major departures at xAI (Co-founders Jimmy Ba, Tony Wu) and Anthropic (Safety Lead) signal growing internal tensions over safety vs. speed.",
-    "<strong>Model Wars Heating Up:</strong> Karpathy drops a 243-line GPT \"art project\", while China's GLM-5 enters the arena with aggressive pricing, and Anthropic aggressively expands its free tier.",
-    "<strong>The \"Intelligence Explosion\":</strong> Viral discussions (Matt Shumer) suggest we've crossed a critical threshold where AI is now effectively building the next generation of AI.",
-    "<strong>Infrastructure Shifts:</strong> AI companies are pledging to fund power grid upgrades to stave off regulation, while edge computing (Fastly/Cloudflare) becomes the new battleground."
+    "GPT-5.2 updates are rolling into ChatGPT and now power Deep Research, signaling steady model improvements in core workflows.",
+    "Claude broadened access to workflow features (files, connectors, skills) while the MCP ecosystem gains new integrations like Excalidraw.",
+    "Enterprise AI coding adoption is scaling fast—Codex is rolling out across NVIDIA—while compute investment accelerates with xAI’s giant GPU buildout.",
+    "Open-weight models are closing the gap (GLM-5 leads benchmarks), and AI business momentum shows up in revenues like Databricks’ $5.4B run rate."
   ],
   "sections": [
     {
@@ -13,82 +13,94 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@karpathy: GPT in 243 Lines",
-          "body": "Andrej Karpathy released a \"new art project\": a full GPT training and inference implementation in just 243 lines of dependency-free Python.",
-          "url": "https://x.com/karpathy/status/2021694437152157847"
+          "tag": "update",
+          "title": "@OpenAI: Deep Research now on GPT-5.2",
+          "body": "OpenAI says ChatGPT’s Deep Research mode is now powered by GPT‑5.2 and is rolling out with more improvements to come. It’s a signal that model upgrades are landing first in research workflows.",
+          "url": "https://x.com/OpenAI/status/2021299935678026168"
         },
         {
           "tag": "update",
-          "title": "@SawyerMerritt: xAI Shakeup",
-          "body": "Elon Musk announced a new organizational structure for xAI, confirming the departure of key figures like Jimmy Ba and Tony Wu as the company moves from \"early stage\" research to execution.",
-          "url": "https://x.com/SawyerMerritt/status/2021669137894801826"
-        },
-        {
-          "tag": "insight",
-          "title": "@dotey: The Intelligence Explosion",
-          "body": "A deep dive into Matt Shumer's viral essay arguing that with GPT-5.3 and Opus 4.6, we have crossed a threshold where AI is now capable of independent, high-level knowledge work.",
-          "url": "https://x.com/dotey/status/2021477874411225256"
+          "title": "@claudeai: Free plan gets files + connectors",
+          "body": "Anthropic is expanding Claude’s free tier to include file creation, connectors, and skills—features that previously required a subscription. This widens access to practical workflow tools.",
+          "url": "https://x.com/claudeai/status/2021630343372259759"
         },
         {
           "tag": "new",
-          "title": "@bridgemindai: GLM-5 Drops",
-          "body": "China's Zhipu AI released GLM-5, a massive context model that significantly undercuts OpenAI and Anthropic on price ($0.80/1M input tokens).",
-          "url": "https://x.com/bridgemindai/status/2021631358078955619"
+          "title": "@OpenAIDevs: Codex rolling out at NVIDIA",
+          "body": "OpenAI says Codex is being deployed company‑wide at NVIDIA to roughly 30k engineers, with enterprise controls like US‑only processing and admin guardrails. A strong signal of large‑scale agent adoption.",
+          "url": "https://x.com/OpenAIDevs/status/2021742142838993059"
         },
         {
-          "tag": "strategy",
-          "title": "@aakashgupta: Anthropic's Free Tier Play",
-          "body": "Anthropic is aggressively adding features (file creation, skills) to its free tier to capture users just as OpenAI introduces ads to ChatGPT.",
-          "url": "https://x.com/aakashgupta/status/2021691688247603276"
+          "tag": "new",
+          "title": "@excalidraw: Official MCP for Claude",
+          "body": "Excalidraw announced an official MCP integration with Claude, available via Connectors and Claude Code. This makes diagram creation and editing a first‑class tool inside Claude workflows.",
+          "url": "https://x.com/excalidraw/status/2021284377506742331"
         },
         {
-          "tag": "guide",
-          "title": "@Hartdrawss: Building Claude Skills",
-          "body": "A breakdown of Anthropic's new 32-page guide on creating \"Skills\" for Claude to automate recurring workflows.",
-          "url": "https://x.com/Hartdrawss/status/2021517290320130103"
+          "tag": "update",
+          "title": "@demishassabis: Isomorphic drug design SOTA",
+          "body": "Demis Hassabis reports Isomorphic Labs’ drug‑design engine is pushing state‑of‑the‑art accuracy on key benchmarks for in‑silico discovery. It’s another signal of AI’s growing impact in biotech.",
+          "url": "https://x.com/demishassabis/status/2021223548744822972"
+        },
+        {
+          "tag": "hot",
+          "title": "@ArtificialAnlys: GLM‑5 leads open‑weights",
+          "body": "Artificial Analysis says Z.ai’s GLM‑5 now tops their open‑weights Intelligence Index, with big gains in agentic tasks and reduced hallucination. The report positions it closer to proprietary frontier models.",
+          "url": "https://x.com/ArtificialAnlys/status/2021678229418066004"
         }
       ]
     },
     {
-      "emoji": "📉",
+      "emoji": "💹",
       "title": "Markets & News",
       "items": [
         {
-          "tag": "security",
-          "title": "@ModernDad: AI Voice Scams",
-          "body": "A chilling personal account of an AI voice spoofing scam mimicking a spouse in an emergency. Advice: establish a family \"safe word\".",
-          "url": "https://x.com/ModernDad/status/2021675945581486309"
+          "tag": "hot",
+          "title": "@thenextweb: Databricks at $5.4B run rate",
+          "body": "Databricks reportedly reached a $5.4B revenue run rate and a $134B valuation, with about $1.4B tied to AI products. The update suggests real enterprise AI spend is materializing in revenue.",
+          "url": "https://x.com/thenextweb/status/2021353307386642766"
         },
         {
-          "tag": "energy",
-          "title": "@aakashgupta: AI & Power Grid",
-          "body": "Major AI companies (Microsoft, OpenAI, Anthropic) are pledging to pay 100% of new power generation costs, likely a preemptive move to avoid strict government regulation.",
-          "url": "https://x.com/aakashgupta/status/2021722923636289565"
+          "tag": "hot",
+          "title": "@SawyerMerritt: xAI’s giant GPU buildout",
+          "body": "A summary of xAI’s new supercomputer claims 330k+ GPUs and over 1GW of power in phase one, with another 220k GPUs planned. If accurate, it highlights the accelerating scale of AI compute capex.",
+          "url": "https://x.com/SawyerMerritt/status/2021677234470478027"
         },
         {
-          "tag": "finance",
-          "title": "@ReyezAriel: Fastly & Edge Cloud",
-          "body": "Fastly's earnings beat signals a structural shift from traditional CDNs to \"Edge Cloud\" compute, driven by AI inference needs.",
-          "url": "https://x.com/ReyezAriel/status/2021713626621784146"
+          "tag": "update",
+          "title": "@ivalong_com: AI video shocks Unity",
+          "body": "Commentary notes Unity’s shares fell sharply after a surge of AI‑generated content (“即梦”), arguing the market is repricing traditional content tools. It’s a reminder of how quickly AI‑native workflows can pressure incumbents.",
+          "url": "https://x.com/ivalong_com/status/2021755460798300523"
+        },
+        {
+          "tag": "update",
+          "title": "@tesla_na: Model 3/Y under $40k",
+          "body": "Tesla‑focused account says Model 3 and Model Y now start below $40k and include supervised self‑driving. Pricing moves like this continue to shape EV demand and margins.",
+          "url": "https://x.com/tesla_na/status/2021405542762352992"
         }
       ]
     },
     {
-      "emoji": "☕",
+      "emoji": "🧠",
       "title": "General",
       "items": [
         {
-          "tag": "life",
-          "title": "@yvessirae: The Strawberry Test",
-          "body": "A viral, wholesome story about a husband who pretended to hate strawberries for years just so his wife could have his share.",
-          "url": "https://x.com/yvessirae/status/2021464271453036603"
+          "tag": "new",
+          "title": "@immersivetran: The productivity power of “No”",
+          "body": "A recap of James Clear’s point that real productivity comes from saying no up front, not optimizing endless commitments. The framing: “No” preserves time for the few things that truly matter.",
+          "url": "https://x.com/immersivetran/status/2021866301086740483"
         },
         {
-          "tag": "humor",
-          "title": "@HannahIamthest1: Engineer in Hell",
-          "body": "A classic joke about an engineer fixing up Hell's infrastructure, much to the Devil's delight and God's annoyance.",
-          "url": "https://x.com/HannahIamthest1/status/2021557470754169100"
+          "tag": "new",
+          "title": "@immersivetran: Digital minimalism toolkit",
+          "body": "A curated “digital minimalism” toolkit suggests using tech to fight attention‑draining apps—grayscale launchers, feed blockers, forced breaks, and RSS cleanup. The idea is to engineer the environment, not rely on willpower.",
+          "url": "https://x.com/immersivetran/status/2021596794581639206"
+        },
+        {
+          "tag": "hot",
+          "title": "@aakashgupta: Leverage beats raw talent",
+          "body": "This thread argues outcomes hinge on leverage and distribution more than raw intelligence—smart people without reach stay capped, while platforms scale impact exponentially. It’s a useful lens for career and product strategy.",
+          "url": "https://x.com/aakashgupta/status/2021847381151821913"
         }
       ]
     }
