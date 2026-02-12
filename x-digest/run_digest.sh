@@ -11,9 +11,9 @@ python3 process_digest.py
 echo "Step 2: Rendering latest digest to index.html..."
 python3 render.py --input digest.json --output index.html
 
-# Get today's date in YYYY-MM-DD format
-TODAY=$(date +%Y-%m-%d)
-FILENAME="${TODAY}.html"
+# Timestamped archive filename (YYYY-MM-DD-HHMM)
+STAMP=$(date +%Y-%m-%d-%H%M)
+FILENAME="digest-${STAMP}.html"
 
 echo "Step 3: Archiving to ${FILENAME}..."
 cp index.html "$FILENAME"

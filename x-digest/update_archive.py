@@ -1,19 +1,60 @@
 #!/usr/bin/env python3
 """
-Scans the current directory for YYYY-MM-DD.html files and generates an archive.html index.
+Scans the current directory for digest-YYYY-MM-DD-HHMM.html files and generates an
+archive.html index. Falls back to YYYY-MM-DD.html if no timestamped digests exist.
 """
 import glob
 import os
+import re
 from datetime import datetime
 
-def main():
-    # Find all dated html files
-    files = glob.glob("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].html")
-    files.sort(reverse=True)  # Newest first
+DIGEST_RE = re.compile(r"^digest-(\d{4}-\d{2}-\d{2})-(\d{4})\.html$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}\.html$")
 
-    if not files:
-        print("No dated HTML files found.")
+
+def _load_timestamped_digests():
+    entries = []
+    for path in glob.glob("digest-*.html"):
+        filename = os.path.basename(path)
+        match = DIGEST_RE.match(filename)
+        if not match:
+            continue
+        date_part, time_part = match.groups()
+        try:
+            dt = datetime.strptime(f"{date_part} {time_part}", "%Y-%m-%d %H%M")
+        except ValueError:
+            continue
+        display_date = dt.strftime("%A, %B %d, %Y %H:%M")
+        entries.append((dt, filename, display_date))
+    return entries
+
+
+def _load_date_only_digests():
+    entries = []
+    for path in glob.glob("[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].html"):
+        filename = os.path.basename(path)
+        if not DATE_RE.match(filename):
+            continue
+        try:
+            dt = datetime.strptime(filename.replace(".html", ""), "%Y-%m-%d")
+        except ValueError:
+            continue
+        display_date = dt.strftime("%A, %B %d, %Y")
+        entries.append((dt, filename, display_date))
+    return entries
+
+
+def main():
+    # Prefer timestamped digest files; fallback to date-only if none exist.
+    entries = _load_timestamped_digests()
+    if not entries:
+        entries = _load_date_only_digests()
+
+    if not entries:
+        print("No digest HTML files found.")
         return
+
+    entries.sort(key=lambda x: x[0], reverse=True)  # Newest first
 
     html_content = [
         "<!DOCTYPE html>",
@@ -38,19 +79,11 @@ def main():
         "    <a href='index.html'>&larr; Latest Digest</a>",
         "  </div>",
         "  <h1>Digest Archive</h1>",
-        "  <ul>"
+        "  <ul>",
     ]
 
-    for f in files:
-        # Parse date from filename
-        try:
-            date_str = f.replace(".html", "")
-            date_obj = datetime.strptime(date_str, "%Y-%m-%d")
-            display_date = date_obj.strftime("%A, %B %d, %Y")
-            html_content.append(f"    <li><a href='{f}'>{display_date}</a></li>")
-        except ValueError:
-            # Skip if format doesn't match perfectly (though glob restricts this)
-            continue
+    for _, filename, display_date in entries:
+        html_content.append(f"    <li><a href='{filename}'>{display_date}</a></li>")
 
     html_content.append("  </ul>")
     html_content.append("</body>")
@@ -59,7 +92,8 @@ def main():
     with open("archive.html", "w") as f:
         f.write("\n".join(html_content))
 
-    print(f"Generated archive.html with {len(files)} entries.")
+    print(f"Generated archive.html with {len(entries)} entries.")
+
 
 if __name__ == "__main__":
     main()
