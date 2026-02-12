@@ -48,6 +48,12 @@ from typing import Any, Dict, List
 
 DEFAULT_LINK_LABEL = "View Tweet"
 
+_HTML_TAG_RE = re.compile(r"<[a-zA-Z][^>]*>")
+
+
+def _looks_like_html(value: str) -> bool:
+    return bool(_HTML_TAG_RE.search(value or ""))
+
 
 def _safe_class(value: str) -> str:
     return re.sub(r"[^a-zA-Z0-9_-]", "", value or "")
@@ -82,7 +88,10 @@ def _render_summary(data: Dict[str, Any]) -> str:
             else:
                 content = _esc(item.get("text", ""))
         else:
-            content = _esc(item)
+            if isinstance(item, str) and _looks_like_html(item):
+                content = item
+            else:
+                content = _esc(item)
         items_html.append(f"      <li>{content}</li>")
 
     summary_title = _esc(data.get("summary_title", "High Signal Summary"))
