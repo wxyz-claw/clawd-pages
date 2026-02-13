@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Thursday, February 12th, 2026",
   "summary": [
-    "Model upgrades and releases dominated the feed: Gemini 3 Deep Think hits Olympiad-level results while OpenAI ships GPT-5.3 Codex-Spark for low-latency coding and MiniMax M2.5 narrows the gap at far lower cost.",
-    "Agentic workflows are maturing: Claude Code customization + skills playbooks emphasize preconfigured agents and hooks, and Stripe’s x402 enables autonomous API payments.",
-    "AI infra economics stay front-and-center: Nebius shows demand outrunning GPU supply, while Goldman flags data-center power demand pushing electricity prices and inflation.",
-    "Usage scale keeps exploding, with OpenRouter reporting ~12T tokens/week—roughly Azure-scale inference."
+    "Gemini 3 Deep Think received a major upgrade, pushing new reasoning benchmarks and signaling Google’s focus on science-grade model performance.",
+    "OpenAI’s real-time coding push continues with GPT‑5.3‑Codex‑Spark, while open-source challengers like MiniMax M2.5 claim frontier-level productivity at lower cost.",
+    "Research is shifting from bigger context windows to smarter retrieval: DeepMind’s Recursive Language Models propose code-driven navigation to avoid context rot.",
+    "AI capital and infrastructure bets are intensifying (Alphabet’s long-dated debt, Anthropic’s oversized raise) amid broader market volatility and policy shakeups."
   ],
   "sections": [
     {
@@ -13,40 +13,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@aakashgupta: Claude Code customization playbook",
-          "body": "A detailed checklist of Claude Code knobs—model effort, permissions, hooks, and custom agents—with the key takeaway that preconfigured agents + lifecycle hooks unlock near-autonomous workflows.",
-          "url": "https://x.com/aakashgupta/status/2021740317272355225"
-        },
-        {
           "tag": "update",
-          "title": "@JeffDean: Gemini 3 Deep Think upgrade",
-          "body": "Google says Gemini 3 Deep Think now hits Olympiad-level performance in physics/chemistry and posts SOTA results on ARC-AGI-2/MMMU-Pro/HLE, positioning it as a true research partner.",
-          "url": "https://x.com/JeffDean/status/2021989820604539250"
+          "title": "@Google: Gemini 3 Deep Think upgrade",
+          "body": "Google says Gemini 3 Deep Think was upgraded for science, research, and engineering, hitting 84.6% on ARC‑AGI‑2 and setting a new bar on Humanity’s Last Exam. It’s framed as a specialized reasoning mode for R&D-grade work.",
+          "url": "https://x.com/Google/status/2021982003818823944"
         },
         {
           "tag": "new",
-          "title": "@dotey: GPT-5.3 Codex-Spark realtime model",
-          "body": "OpenAI launched the low-latency Codex-Spark (Cerebras-backed) for interactive coding, highlighting faster response times and strong SWE/terminal benchmarks versus prior small models.",
-          "url": "https://x.com/dotey/status/2022016248360710502"
+          "title": "@OpenAIDevs: GPT‑5.3‑Codex‑Spark",
+          "body": "OpenAI introduced GPT‑5.3‑Codex‑Spark, a real‑time coding model rolling out as a research preview for ChatGPT Pro via the Codex app, CLI, and IDE extension.",
+          "url": "https://x.com/OpenAIDevs/status/2022009906329739681"
         },
         {
           "tag": "new",
-          "title": "@runes_leo: Stripe adds x402 for agent payments",
-          "body": "Stripe integrated x402 so agents can pay APIs in USDC when servers return HTTP 402, enabling autonomous pay-per-call without human checkout flows.",
-          "url": "https://x.com/runes_leo/status/2021795355902308492"
+          "title": "@MiniMax_AI: M2.5 open‑source model",
+          "body": "MiniMax launched M2.5, an open‑source frontier model claiming strong coding/search/tool‑calling benchmarks and faster execution aimed at long‑horizon agent workflows.",
+          "url": "https://x.com/MiniMax_AI/status/2021980761210134808"
         },
         {
           "tag": "new",
-          "title": "@bridgemindai: MiniMax M2.5 price/perf leap",
-          "body": "BridgeBench shows MiniMax M2.5 within 0.4 points of Opus 4.6 but ~8× cheaper, suggesting Chinese labs are winning on price-performance.",
-          "url": "https://x.com/bridgemindai/status/2021995659935494167"
+          "title": "@simplifyinAI: Recursive Language Models",
+          "body": "DeepMind’s RLM paper proposes navigation‑based memory: models write code to search and slice data instead of loading huge windows, sharply improving multi‑document research scores and reducing context rot.",
+          "url": "https://x.com/simplifyinAI/status/2021974486682329315"
         },
         {
-          "tag": "hot",
-          "title": "@deedydas: OpenRouter usage scale",
-          "body": "OpenRouter token consumption reportedly jumped 12.7× YoY to ~12.1T tokens/week—about as much inference as all of Azure, signaling massive demand growth.",
-          "url": "https://x.com/deedydas/status/2021829721957482995"
+          "tag": "new",
+          "title": "@ai: Karpathy’s microGPT",
+          "body": "Andrej Karpathy released microGPT—an end‑to‑end GPT implementation in 243 lines of pure Python—meant as a readable reference for how LLMs actually work.",
+          "url": "https://x.com/ai/status/2021777084377395426"
         }
       ]
     },
@@ -56,39 +50,57 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ReyezAriel: Nebius earnings highlight AI cloud demand",
-          "body": "Nebius posted Q4 revenue of $228M (+547%) and ARR of $1.2B, with capacity sold out into 2026; guidance and capex point to demand far outpacing GPU supply despite near-term revenue timing issues.",
-          "url": "https://x.com/ReyezAriel/status/2022005724138942931"
+          "title": "@WatcherGuru: $1T market cap wipeout",
+          "body": "WatcherGuru reports roughly $1T was wiped from the U.S. stock market in a single day, highlighting the sharp volatility in recent sessions.",
+          "url": "https://x.com/WatcherGuru/status/2022053407994130893"
         },
         {
           "tag": "update",
-          "title": "@fxtrader: Datacenter power demand pressure",
-          "body": "Goldman says data-center electricity demand is driving power prices up ~6.9% YoY and could add ~0.2/0.15 pts to PCE inflation in 2026/2027, with heavier impact on low-income households.",
-          "url": "https://x.com/fxtrader/status/2021853225058808201"
+          "title": "@BarackObama: Endangerment finding repeal",
+          "body": "Obama says the administration repealed the EPA endangerment finding—the legal basis for emissions limits—warning it weakens climate protections and public health safeguards.",
+          "url": "https://x.com/BarackObama/status/2022034471336521953"
         },
         {
           "tag": "new",
-          "title": "@KKaWSB: ByteDance Seedance 2.0 market shock",
-          "body": "Commentary notes Seedance 2.0’s viral launch rattled markets (Kuaishou down, HSTECH volatility) and argues ByteDance’s full-stack AI push is rewriting competitive moats across ads, ecommerce, and content.",
-          "url": "https://x.com/KKaWSB/status/2021975821964226994"
+          "title": "@KKaWSB: Alphabet issues ultra‑long debt",
+          "body": "Alphabet reportedly issued Swiss‑franc bonds and a rare 100‑year GBP bond after a $20B U.S. debt sale, aiming to fund up to $185B in long‑term AI infrastructure.",
+          "url": "https://x.com/KKaWSB/status/2021796435612905866"
+        },
+        {
+          "tag": "hot",
+          "title": "@techeconomyana: Anthropic’s $30B raise",
+          "body": "A report claims Anthropic’s funding round swelled to $30B (from an initial $10B plan) with ARR around $14B, signaling huge investor appetite for leading AI labs.",
+          "url": "https://x.com/techeconomyana/status/2022086985742266449"
+        },
+        {
+          "tag": "update",
+          "title": "@fxtrader: OpenAI vs. DeepSeek",
+          "body": "OpenAI told a U.S. House committee it observed DeepSeek‑linked accounts attempting to bypass access limits and distill outputs from U.S. models, per a reported memo.",
+          "url": "https://x.com/fxtrader/status/2022105392487313794"
         }
       ]
     },
     {
-      "emoji": "🧭",
+      "emoji": "🧠",
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@immersivetran: The productivity power of “No”",
-          "body": "A summary of James Clear’s essay arguing the highest-leverage productivity move is refusing commitments early, preserving time for the few things that matter most.",
-          "url": "https://x.com/immersivetran/status/2021866301086740483"
+          "tag": "update",
+          "title": "@KKaWSB: The Cantillon effect",
+          "body": "A concise primer on the Cantillon effect: inflation redistributes wealth toward those who receive new money first, while late recipients bear higher prices.",
+          "url": "https://x.com/KKaWSB/status/2021958695752527888"
         },
         {
-          "tag": "hot",
-          "title": "@waitbutwhy: X’s fake-news phase shift",
-          "body": "Argues X has moved into an era where fabricated stories dominate; calls for algorithmic penalties for scammers because Community Notes/Grok lag behind viral spread.",
-          "url": "https://x.com/waitbutwhy/status/2022003882079985818"
+          "tag": "update",
+          "title": "@lxjost: ROAS can mislead",
+          "body": "A short warning for ecommerce teams: a rising ROAS can mask deteriorating customer quality, making the headline metric more dangerous than it looks.",
+          "url": "https://x.com/lxjost/status/2018323068326670446"
+        },
+        {
+          "tag": "update",
+          "title": "@pingzhang632: Tracked iPhone to Senegal",
+          "body": "A German blogger used Find My to trace a stolen iPhone to Senegal, then traveled there and—with local help—eventually recovered it from a shop.",
+          "url": "https://x.com/pingzhang632/status/2022072318118527164"
         }
       ]
     }
