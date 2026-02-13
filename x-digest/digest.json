@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Thursday, February 12th, 2026",
+  "date": "Friday, February 13th, 2026",
   "summary": [
-    "Gemini 3 Deep Think received a major upgrade, pushing new reasoning benchmarks and signaling Google’s focus on science-grade model performance.",
-    "OpenAI’s real-time coding push continues with GPT‑5.3‑Codex‑Spark, while open-source challengers like MiniMax M2.5 claim frontier-level productivity at lower cost.",
-    "Research is shifting from bigger context windows to smarter retrieval: DeepMind’s Recursive Language Models propose code-driven navigation to avoid context rot.",
-    "AI capital and infrastructure bets are intensifying (Alphabet’s long-dated debt, Anthropic’s oversized raise) amid broader market volatility and policy shakeups."
+    "Gemini 3 Deep Think received a major upgrade (ARC‑AGI‑2 84.6%, HLE 48.4%), while MiniMax M2.5 claims near‑Opus SWE‑Bench performance at much lower cost.",
+    "AI builder tooling kept improving: Claude Code’s web upgrade, Subframe’s Design Canvas for UI iteration, and Cloudflare’s markdown response trick to make agent scraping cheaper.",
+    "Macro data was mostly calm: January CPI met expectations, but big jobs revisions raised reliability concerns and nudged FedWatch toward a June rate hold; AI hardware is being treated as a safer pocket.",
+    "Outside tech, a self‑replicating RNA finding drew attention alongside a feature‑rich open‑source clipboard manager (PasteBar) and the SpaceX Crew‑12 launch to the ISS."
   ],
   "sections": [
     {
@@ -14,33 +14,33 @@
       "items": [
         {
           "tag": "update",
-          "title": "@Google: Gemini 3 Deep Think upgrade",
-          "body": "Google says Gemini 3 Deep Think was upgraded for science, research, and engineering, hitting 84.6% on ARC‑AGI‑2 and setting a new bar on Humanity’s Last Exam. It’s framed as a specialized reasoning mode for R&D-grade work.",
-          "url": "https://x.com/Google/status/2021982003818823944"
+          "title": "@Google: Gemini 3 Deep Think benchmarks",
+          "body": "Google says Gemini 3 Deep Think now hits 84.6% on ARC‑AGI‑2, 48.4% on Humanity’s Last Exam (no tools), and a 3455 Codeforces Elo — a broad benchmark jump.",
+          "url": "https://x.com/Google/status/2021982006821658661"
         },
         {
           "tag": "new",
-          "title": "@OpenAIDevs: GPT‑5.3‑Codex‑Spark",
-          "body": "OpenAI introduced GPT‑5.3‑Codex‑Spark, a real‑time coding model rolling out as a research preview for ChatGPT Pro via the Codex app, CLI, and IDE extension.",
-          "url": "https://x.com/OpenAIDevs/status/2022009906329739681"
+          "title": "@cgtwts: MiniMax M2.5 release",
+          "body": "MiniMax’s new M2.5 model reportedly scores 80.2% on SWE‑Bench Verified, runs 37% faster than M2.1, and costs about $1/hr at 100 tokens/sec while staying open‑source.",
+          "url": "https://x.com/cgtwts/status/2021992721108676992"
+        },
+        {
+          "tag": "update",
+          "title": "@bcherny: Claude Code web upgrade",
+          "body": "Boris Cherny notes that Claude Code on the web just got a major capability boost, strengthening browser‑based coding workflows.",
+          "url": "https://x.com/bcherny/status/2022084433189495016"
         },
         {
           "tag": "new",
-          "title": "@MiniMax_AI: M2.5 open‑source model",
-          "body": "MiniMax launched M2.5, an open‑source frontier model claiming strong coding/search/tool‑calling benchmarks and faster execution aimed at long‑horizon agent workflows.",
-          "url": "https://x.com/MiniMax_AI/status/2021980761210134808"
+          "title": "@IrvinZhan: Design Canvas for agents",
+          "body": "Subframe launched a drag‑and‑drop “Design Canvas” that lets you iterate UI visually while using Claude Code, Cursor, or Codex — aiming to reduce prompt churn for design tweaks.",
+          "url": "https://x.com/IrvinZhan/status/2022038492575154555"
         },
         {
-          "tag": "new",
-          "title": "@simplifyinAI: Recursive Language Models",
-          "body": "DeepMind’s RLM paper proposes navigation‑based memory: models write code to search and slice data instead of loading huge windows, sharply improving multi‑document research scores and reducing context rot.",
-          "url": "https://x.com/simplifyinAI/status/2021974486682329315"
-        },
-        {
-          "tag": "new",
-          "title": "@ai: Karpathy’s microGPT",
-          "body": "Andrej Karpathy released microGPT—an end‑to‑end GPT implementation in 243 lines of pure Python—meant as a readable reference for how LLMs actually work.",
-          "url": "https://x.com/ai/status/2021777084377395426"
+          "tag": "update",
+          "title": "@vikingmute: Cloudflare Markdown response",
+          "body": "Tip: sending `Accept: text/markdown` can trigger Cloudflare to auto‑convert pages to Markdown at the edge (with token counts in response headers), making agent scraping cheaper and cleaner.",
+          "url": "https://x.com/vikingmute/status/2022240431459954855"
         }
       ]
     },
@@ -49,34 +49,22 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "hot",
-          "title": "@WatcherGuru: $1T market cap wipeout",
-          "body": "WatcherGuru reports roughly $1T was wiped from the U.S. stock market in a single day, highlighting the sharp volatility in recent sessions.",
-          "url": "https://x.com/WatcherGuru/status/2022053407994130893"
+          "tag": "update",
+          "title": "@amitisinvesting: January CPI in line",
+          "body": "US January CPI printed 2.4% YoY vs 2.5% expected; core CPI was 2.5% vs 2.5% expected — a calmer‑than‑feared read after the prior day’s volatility.",
+          "url": "https://x.com/amitisinvesting/status/2022302756959056254"
         },
         {
           "tag": "update",
-          "title": "@BarackObama: Endangerment finding repeal",
-          "body": "Obama says the administration repealed the EPA endangerment finding—the legal basis for emissions limits—warning it weakens climate protections and public health safeguards.",
-          "url": "https://x.com/BarackObama/status/2022034471336521953"
-        },
-        {
-          "tag": "new",
-          "title": "@KKaWSB: Alphabet issues ultra‑long debt",
-          "body": "Alphabet reportedly issued Swiss‑franc bonds and a rare 100‑year GBP bond after a $20B U.S. debt sale, aiming to fund up to $185B in long‑term AI infrastructure.",
-          "url": "https://x.com/KKaWSB/status/2021796435612905866"
-        },
-        {
-          "tag": "hot",
-          "title": "@techeconomyana: Anthropic’s $30B raise",
-          "body": "A report claims Anthropic’s funding round swelled to $30B (from an initial $10B plan) with ARR around $14B, signaling huge investor appetite for leading AI labs.",
-          "url": "https://x.com/techeconomyana/status/2022086985742266449"
+          "title": "@Stocktwits: Jobs revision + FedWatch shift",
+          "body": "Stocktwits highlights that big 2025 jobs revisions raised data‑quality questions and FedWatch odds moved toward a June rate hold; they also noted an AI rotation where software is punished while hardware is treated as a “store of value.”",
+          "url": "https://x.com/Stocktwits/status/2022027625330282863"
         },
         {
           "tag": "update",
-          "title": "@fxtrader: OpenAI vs. DeepSeek",
-          "body": "OpenAI told a U.S. House committee it observed DeepSeek‑linked accounts attempting to bypass access limits and distill outputs from U.S. models, per a reported memo.",
-          "url": "https://x.com/fxtrader/status/2022105392487313794"
+          "title": "@Stocktwits: 2x ETF drawdown example",
+          "body": "A reminder on leverage math: when $U fell ~30.4%, its 2x long ETF $UNX dropped ~60.8% the same day — amplified downside in action.",
+          "url": "https://x.com/Stocktwits/status/2021614431499690113"
         }
       ]
     },
@@ -85,22 +73,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@KKaWSB: The Cantillon effect",
-          "body": "A concise primer on the Cantillon effect: inflation redistributes wealth toward those who receive new money first, while late recipients bear higher prices.",
-          "url": "https://x.com/KKaWSB/status/2021958695752527888"
+          "tag": "new",
+          "title": "@JSheltzer: Origin‑of‑life paper",
+          "body": "A new Science paper reports a 45‑nucleotide RNA molecule that can copy itself — a potential step toward explaining how life could originate.",
+          "url": "https://x.com/JSheltzer/status/2022104604868309053"
+        },
+        {
+          "tag": "new",
+          "title": "@GitHub_Daily: PasteBar clipboard manager",
+          "body": "PasteBar is an open‑source clipboard manager with unlimited history, tagging/boards, syntax‑aware snippets, and local storage/backup; supports Windows and macOS.",
+          "url": "https://x.com/GitHub_Daily/status/2022294786401841580"
         },
         {
           "tag": "update",
-          "title": "@lxjost: ROAS can mislead",
-          "body": "A short warning for ecommerce teams: a rising ROAS can mask deteriorating customer quality, making the headline metric more dangerous than it looks.",
-          "url": "https://x.com/lxjost/status/2018323068326670446"
-        },
-        {
-          "tag": "update",
-          "title": "@pingzhang632: Tracked iPhone to Senegal",
-          "body": "A German blogger used Find My to trace a stolen iPhone to Senegal, then traveled there and—with local help—eventually recovered it from a shop.",
-          "url": "https://x.com/pingzhang632/status/2022072318118527164"
+          "title": "@NASA: Crew‑12 launch to ISS",
+          "body": "NASA went live for the SpaceX Crew‑12 launch carrying Jessica Meir, Jack Hathaway, ESA’s Sophie Adenot, and cosmonaut Andrey Fedyaev to the ISS.",
+          "url": "https://x.com/NASA/status/2022223125656600931"
         }
       ]
     }
