@@ -1,12 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Friday, February 13th, 2026",
+  "date": "Saturday, February 14th, 2026",
   "summary": [
-    "Gemini 3 Deep Think got a major upgrade (sketch→3D workflows) and posted a huge Codeforces jump, underscoring rapid reasoning gains.",
-    "Agent tooling matured: Anthropic’s Skills guide plus new memory systems (Context Repositories) and data/doc tools (Reader, DeepWiki) push practical automation.",
-    "Semiconductor signals strengthened as Applied Materials guided well above expectations, a leading indicator for the AI hardware cycle.",
-    "AI infrastructure is colliding with energy policy: Anthropic will cover grid‑upgrade costs tied to its data centers to avoid shifting burdens to ratepayers.",
-    "Geopolitical and industry tensions rose with Musk/OpenAI/Anthropic public clashes and Taiwan pressing a $40B defense bill."
+    "Major model updates continue: Gemini 3 Deep Think rolled out new reasoning capabilities while ByteDance’s Seed 2 Pro is being positioned as a frontier‑level multimodal contender with aggressive pricing.",
+    "Developer tooling is accelerating toward agent‑first workflows, with Claude Code shipping meaningful CLI fixes and big performance gains, and OpenAI documenting a Codex‑driven, zero‑hand‑code product build.",
+    "The WebMCP spec from Google/Microsoft could turn websites into structured agent APIs, shifting optimization from SEO to agent‑experience design.",
+    "Markets are in focus with a heavy earnings week, a slightly softer‑than‑expected CPI print, and fresh debate on Microsoft’s OpenAI exposure plus rising AMC short interest."
   ],
   "sections": [
     {
@@ -16,68 +15,38 @@
         {
           "tag": "update",
           "title": "@GeminiApp: Gemini 3 Deep Think upgrade",
-          "body": "Google released a major upgrade to Gemini 3 Deep Think, targeting practical research/engineering workflows. It can interpret sketches and output 3D‑printable models; rollout is live for AI Ultra subscribers.",
-          "url": "https://x.com/GeminiApp/status/2021985731577852282",
-          "links": [
-            {
-              "label": "Learn more",
-              "url": "https://t.co/MMGMgDtoK8"
-            }
-          ]
+          "body": "Google rolled out a major upgrade to Gemini 3 Deep Think, positioning it for practical reasoning workflows like modeling physical systems. The demo highlights turning a sketch into a 3D‑printable model, now rolling out to AI Ultra subscribers.",
+          "url": "https://x.com/GeminiApp/status/2021985731577852282"
+        },
+        {
+          "tag": "update",
+          "title": "@ClaudeCodeLog: Claude Code 2.1.41",
+          "body": "The CLI update adds explicit auth login/status/logout commands, Windows ARM64 native builds, and a timeout to prevent AWS auth refresh hangs. It also improves /rename auto‑naming and fixes multiple UI/IO bugs.",
+          "url": "https://x.com/ClaudeCodeLog/status/2022191647996416304"
+        },
+        {
+          "tag": "update",
+          "title": "@jarredsumner: Claude Code Bash speedup",
+          "body": "An upcoming Claude Code release makes the Bash tool dramatically faster and lighter—benchmark drops from 115s to 15s when streaming 10GB to stdout (~7× faster). That’s a big win for heavy shell output workloads.",
+          "url": "https://x.com/jarredsumner/status/2022537655339397133"
         },
         {
           "tag": "hot",
-          "title": "@deedydas: Gemini 3 Deep Think Codeforces jump",
-          "body": "A benchmark report claims Gemini 3 Deep Think hit 3455 on Codeforces (~#8 human), far above the prior AI best (OpenAI o3 at 2727), signaling a big leap in competitive‑programming reasoning.",
-          "url": "https://x.com/deedydas/status/2022021396768133336",
-          "links": [
-            {
-              "label": "Benchmark",
-              "url": "https://t.co/9VS3sBIOlR"
-            }
-          ]
+          "title": "@aakashgupta: WebMCP turns sites into agent APIs",
+          "body": "Google and Microsoft co‑authored WebMCP, a browser API (navigator.modelContext) that lets sites expose structured tools directly to agents. Early claims suggest ~67% less compute with ~98% task accuracy, pushing optimization toward agent‑experience design.",
+          "url": "https://x.com/aakashgupta/status/2022539848301842630"
         },
         {
           "tag": "new",
-          "title": "@akshay_pachaar: Anthropic Skills guide",
-          "body": "Anthropic published a 33‑page guide to building Skills—packaged, repeatable workflows for Claude/agents—with concrete patterns (orchestration, tool selection, refinement) and common pitfalls.",
-          "url": "https://x.com/akshay_pachaar/status/2022220152910352763"
-        },
-        {
-          "tag": "tool",
-          "title": "@GitHub_Daily: Reader LLM web‑scraping engine",
-          "body": "Highlights Reader, an open‑source web‑scraping engine built for LLM pipelines that handles anti‑bot hurdles and outputs clean Markdown; ships with CLI/API and Docker‑ready deployment.",
-          "url": "https://x.com/GitHub_Daily/status/2022249686418206730",
-          "links": [
-            {
-              "label": "GitHub",
-              "url": "https://t.co/b7VIK9uLi5"
-            }
-          ]
-        },
-        {
-          "tag": "tool",
-          "title": "@wang_xiaolou: DeepWiki turns repos into docs",
-          "body": "DeepWiki auto‑generates a wiki for any GitHub repo by swapping .com → .pm, producing architecture diagrams, module analysis, and AI Q&A to speed up codebase understanding.",
-          "url": "https://x.com/wang_xiaolou/status/2022321257879126031",
-          "links": [
-            {
-              "label": "Try it",
-              "url": "https://t.co/p1DC0xR3Yb"
-            }
-          ]
+          "title": "@shao__meng: OpenAI’s agent‑first engineering",
+          "body": "OpenAI’s engineering blog describes a Codex‑driven workflow where 3 engineers produced ~1M lines and ~1,500 PRs in five months with zero hand‑written code. The emphasis is on environment design, strict repo structure, and feedback loops as the real leverage.",
+          "url": "https://x.com/shao__meng/status/2022576768775868506"
         },
         {
           "tag": "new",
-          "title": "@shao__meng: Letta Context Repositories",
-          "body": "Letta announced “Context Repositories” that store agent memory as local files with Git versioning, enabling auditability, branching/merging, and multi‑agent memory workflows.",
-          "url": "https://x.com/shao__meng/status/2022196641936331096",
-          "links": [
-            {
-              "label": "Announcement",
-              "url": "https://t.co/AFnM0vibLF"
-            }
-          ]
+          "title": "@deedydas: ByteDance Seed 2 Pro",
+          "body": "ByteDance’s Seed 2 Pro is framed as a breakthrough multimodal model, claiming top‑tier image/video understanding and near‑frontier general performance. Pricing is highlighted as lower than Gemini Flash ($0.47/M input, $2.37/M output), signaling aggressive competition.",
+          "url": "https://x.com/deedydas/status/2022579925400850591"
         }
       ]
     },
@@ -87,45 +56,27 @@
       "items": [
         {
           "tag": "update",
-          "title": "@ReyezAriel: AMAT guidance beats",
-          "body": "Applied Materials guided next‑quarter revenue to ~$7.65B and EPS ~$2.64, both well above expectations; the post argues AMAT orders lead the AI‑semiconductor cycle and signal HBM capacity expansion in 6–12 months.",
-          "url": "https://x.com/ReyezAriel/status/2022069218947236114"
+          "title": "@Stocktwits: Earnings‑heavy week",
+          "body": "A packed earnings calendar lands Tuesday–Friday with major names like PANW, CDNS, WMT, BABA, BKNG, and others; Monday is a market holiday. Useful for planning event‑driven moves.",
+          "url": "https://x.com/Stocktwits/status/2022374252180111795"
         },
         {
-          "tag": "policy",
-          "title": "@AnthropicAI: Data‑center grid costs",
-          "body": "Anthropic says it will cover 100% of grid‑upgrade costs and power‑price increases tied to its data centers, aiming to avoid shifting costs to ratepayers and reduce grid strain.",
-          "url": "https://x.com/AnthropicAI/status/2021694494215901314",
-          "links": [
-            {
-              "label": "Details",
-              "url": "https://t.co/avOFlvRNpa"
-            }
-          ]
+          "tag": "update",
+          "title": "@Scswga: CPI slightly below expectations",
+          "body": "A reposted CPI update reports headline CPI at 2.4% vs 2.5% expected, while core CPI matched expectations at 2.5%. The read adds a modestly dovish note to near‑term Fed narratives.",
+          "url": "https://x.com/Scswga/status/2022477421606511047"
         },
         {
-          "tag": "news",
-          "title": "@KKaWSB: AI giants clash publicly",
-          "body": "Notes an escalating public dispute: Musk suing OpenAI and calling out Anthropic, with Anthropic responding—framing a shift from product competition to open positioning and narrative battles.",
-          "url": "https://x.com/KKaWSB/status/2022236103378624563",
-          "links": [
-            {
-              "label": "Source",
-              "url": "https://t.co/3C9OzJgUw8"
-            }
-          ]
+          "tag": "hot",
+          "title": "@aakashgupta: Microsoft underperformance vs peers",
+          "body": "Commentary flags MSFT down ~27% from its October high while the S&P hits new highs, tying the gap to OpenAI concentration risk (45% of remaining obligations). It also highlights heavy capex and margin pressure as investor concerns.",
+          "url": "https://x.com/aakashgupta/status/2022417670386389297"
         },
         {
-          "tag": "news",
-          "title": "@DominoTheoryMag: Taiwan $40B defense bill",
-          "body": "Reports Taiwan’s President Lai urging opposition lawmakers to pass a $40B defense bill immediately, warning delays could weaken security and global confidence.",
-          "url": "https://x.com/DominoTheoryMag/status/2021881184956068328",
-          "links": [
-            {
-              "label": "Source",
-              "url": "https://t.co/I1PmmOBTLz"
-            }
-          ]
+          "tag": "update",
+          "title": "@S3Partners: AMC short interest spikes",
+          "body": "Short sellers re‑engaged AMC after dilution approval, pushing short interest to multi‑year highs. Borrow tightening and high utilization suggest higher volatility and potential recall/covering risk.",
+          "url": "https://x.com/S3Partners/status/2018704782232318047"
         }
       ]
     },
@@ -134,22 +85,16 @@
       "title": "General",
       "items": [
         {
-          "tag": "insight",
-          "title": "@adxtyahq: NASA’s C coding rules",
-          "body": "JPL’s mission‑critical C rules ban recursion and post‑init allocations, require bounded loops and assertions, and enforce zero warnings with daily static analysis—showing how extreme reliability constraints shape code style.",
-          "url": "https://x.com/adxtyahq/status/2021974597256843341"
+          "tag": "new",
+          "title": "@runes_leo: Old PC → TikTok AI agent",
+          "body": "A longform case study shows an unused gaming PC turned into an AI agent that auto‑produces TikTok content—scaling from sub‑1k views to 500k in five days. The author documents each iteration and fix, making it a practical playbook.",
+          "url": "https://x.com/runes_leo/status/2022558455727358204"
         },
         {
-          "tag": "insight",
-          "title": "@pangyusio: Project‑driven learning",
-          "body": "Argues that focused, project‑driven learning can make someone job‑ready in ~6–12 months in the AI era, while long traditional pipelines waste time and miss the opportunity window.",
-          "url": "https://x.com/pangyusio/status/2022283757412348163"
-        },
-        {
-          "tag": "tip",
-          "title": "@plantegg: Let AI write your README",
-          "body": "Tip: after finishing a task, ask AI to summarize steps and pitfalls into a README so future you (or another model) can pick up the work quickly—lightweight long‑term memory across tools.",
-          "url": "https://x.com/plantegg/status/2022259706115637683"
+          "tag": "new",
+          "title": "@scaling_shields: Quiet $2.8k/mo phone‑answering biz",
+          "body": "A solo operator reportedly built a $1.9M/year service answering calls for storage facilities at $2.8k/month. The insight: boring, recurring problems with high LTV and low churn can beat flashy, visible products.",
+          "url": "https://x.com/scaling_shields/status/2022400896324506045"
         }
       ]
     }
