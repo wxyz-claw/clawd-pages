@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Saturday, February 14th, 2026",
   "summary": [
-    "Major model updates continue: Gemini 3 Deep Think rolled out new reasoning capabilities while ByteDance’s Seed 2 Pro is being positioned as a frontier‑level multimodal contender with aggressive pricing.",
-    "Developer tooling is accelerating toward agent‑first workflows, with Claude Code shipping meaningful CLI fixes and big performance gains, and OpenAI documenting a Codex‑driven, zero‑hand‑code product build.",
-    "The WebMCP spec from Google/Microsoft could turn websites into structured agent APIs, shifting optimization from SEO to agent‑experience design.",
-    "Markets are in focus with a heavy earnings week, a slightly softer‑than‑expected CPI print, and fresh debate on Microsoft’s OpenAI exposure plus rising AMC short interest."
+    "Google shipped a major Gemini 3 Deep Think upgrade while OpenAI published a GPT‑5.2 physics preprint—labs are emphasizing research‑grade reasoning and scientific impact.",
+    "Agent/coding tooling advanced: Anthropic released a Skills‑for‑Claude playbook, Claude Code’s Bash tool got ~7× faster, and gogcli v0.10.0 added deeper Docs/Slides support.",
+    "Benchmarks and workflows are maturing—SWE‑rebench now shows Opus 4.6 and Codex 5.3 leading, and real‑world NotebookLM grading workflows surfaced.",
+    "Markets chatter was light but included an upcoming earnings-heavy week and on‑chain buzz around a 10k BTC transfer; a viral thread debated a Dutch unrealized‑gains tax proposal."
   ],
   "sections": [
     {
@@ -15,38 +15,44 @@
         {
           "tag": "update",
           "title": "@GeminiApp: Gemini 3 Deep Think upgrade",
-          "body": "Google rolled out a major upgrade to Gemini 3 Deep Think, positioning it for practical reasoning workflows like modeling physical systems. The demo highlights turning a sketch into a 3D‑printable model, now rolling out to AI Ultra subscribers.",
+          "body": "Google rolled out a major upgrade to Gemini 3’s Deep Think reasoning mode, positioning it for practical engineering and research tasks. The demo highlights sketch‑to‑3D workflows that generate printable files from drawings.",
           "url": "https://x.com/GeminiApp/status/2021985731577852282"
         },
         {
-          "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.41",
-          "body": "The CLI update adds explicit auth login/status/logout commands, Windows ARM64 native builds, and a timeout to prevent AWS auth refresh hangs. It also improves /rename auto‑naming and fixes multiple UI/IO bugs.",
-          "url": "https://x.com/ClaudeCodeLog/status/2022191647996416304"
+          "tag": "new",
+          "title": "@OpenAI: GPT‑5.2 physics preprint",
+          "body": "OpenAI announced a theoretical physics preprint where GPT‑5.2 helped derive a new result on gluon interactions. The work claims a previously‑assumed zero‑amplitude interaction can occur under specific alignment conditions.",
+          "url": "https://x.com/OpenAI/status/2022390096625078389"
+        },
+        {
+          "tag": "new",
+          "title": "@aiwithmayank: Skills playbook for Claude",
+          "body": "Anthropic released a 30+ page guide on designing reusable “Skills” for Claude, shifting focus from prompt tweaks to structured execution layers. The guide emphasizes progressive disclosure, testing, and workflow patterns for reliable agents.",
+          "url": "https://x.com/aiwithmayank/status/2022646689648251382"
         },
         {
           "tag": "update",
           "title": "@jarredsumner: Claude Code Bash speedup",
-          "body": "An upcoming Claude Code release makes the Bash tool dramatically faster and lighter—benchmark drops from 115s to 15s when streaming 10GB to stdout (~7× faster). That’s a big win for heavy shell output workloads.",
+          "body": "Claude Code’s Bash tool is getting a big performance boost in the next version. The author reports a 7× speedup and lower memory use when streaming large stdout workloads.",
           "url": "https://x.com/jarredsumner/status/2022537655339397133"
         },
         {
+          "tag": "update",
+          "title": "@steipete: gogcli v0.10.0",
+          "body": "gogcli shipped a major release with deeper Docs/Slides support (markdown tables, tab‑aware editing, template slides) plus Drive and Gmail improvements. It’s a notable upgrade for Google‑Workspace automation from the terminal.",
+          "url": "https://x.com/steipete/status/2022516951809945850"
+        },
+        {
+          "tag": "update",
+          "title": "@andrew_n_carr: SWE‑rebench results",
+          "body": "SWE‑rebench published its Jan–Feb results: Opus 4.6 and Codex 5.3 top the chart at ~51.7% resolve rate. The update also highlights strong showings from newer Chinese models like Qwen.",
+          "url": "https://x.com/andrew_n_carr/status/2022528052132229161"
+        },
+        {
           "tag": "hot",
-          "title": "@aakashgupta: WebMCP turns sites into agent APIs",
-          "body": "Google and Microsoft co‑authored WebMCP, a browser API (navigator.modelContext) that lets sites expose structured tools directly to agents. Early claims suggest ~67% less compute with ~98% task accuracy, pushing optimization toward agent‑experience design.",
-          "url": "https://x.com/aakashgupta/status/2022539848301842630"
-        },
-        {
-          "tag": "new",
-          "title": "@shao__meng: OpenAI’s agent‑first engineering",
-          "body": "OpenAI’s engineering blog describes a Codex‑driven workflow where 3 engineers produced ~1M lines and ~1,500 PRs in five months with zero hand‑written code. The emphasis is on environment design, strict repo structure, and feedback loops as the real leverage.",
-          "url": "https://x.com/shao__meng/status/2022576768775868506"
-        },
-        {
-          "tag": "new",
-          "title": "@deedydas: ByteDance Seed 2 Pro",
-          "body": "ByteDance’s Seed 2 Pro is framed as a breakthrough multimodal model, claiming top‑tier image/video understanding and near‑frontier general performance. Pricing is highlighted as lower than Gemini Flash ($0.47/M input, $2.37/M output), signaling aggressive competition.",
-          "url": "https://x.com/deedydas/status/2022579925400850591"
+          "title": "@ihtesham2005: NotebookLM grading workflow",
+          "body": "A viral story described a professor using NotebookLM to grade essays at scale with rubrics, style‑shift checks, and personalized feedback. It’s a compelling example of AI workflows reducing grading time while improving response quality.",
+          "url": "https://x.com/ihtesham2005/status/2022610362793603537"
         }
       ]
     },
@@ -56,27 +62,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@Stocktwits: Earnings‑heavy week",
-          "body": "A packed earnings calendar lands Tuesday–Friday with major names like PANW, CDNS, WMT, BABA, BKNG, and others; Monday is a market holiday. Useful for planning event‑driven moves.",
+          "title": "@Stocktwits: Earnings calendar",
+          "body": "A heavy earnings week is coming up, with names like PANW, CDNS, WMT, BABA, ETSY, DE, and BKNG on deck. Useful quick scan for anyone planning trades or news monitoring.",
           "url": "https://x.com/Stocktwits/status/2022374252180111795"
         },
         {
-          "tag": "update",
-          "title": "@Scswga: CPI slightly below expectations",
-          "body": "A reposted CPI update reports headline CPI at 2.4% vs 2.5% expected, while core CPI matched expectations at 2.5%. The read adds a modestly dovish note to near‑term Fed narratives.",
-          "url": "https://x.com/Scswga/status/2022477421606511047"
-        },
-        {
           "tag": "hot",
-          "title": "@aakashgupta: Microsoft underperformance vs peers",
-          "body": "Commentary flags MSFT down ~27% from its October high while the S&P hits new highs, tying the gap to OpenAI concentration risk (45% of remaining obligations). It also highlights heavy capex and margin pressure as investor concerns.",
-          "url": "https://x.com/aakashgupta/status/2022417670386389297"
+          "title": "@Tradewith_kd: 10k BTC transfer",
+          "body": "On‑chain chatter highlighted a 10,000 BTC transfer from an early‑era wallet—about a $1B move at today’s prices. The event underscores how early holdings still swing sentiment when they move.",
+          "url": "https://x.com/Tradewith_kd/status/2022594244951912595"
         },
         {
-          "tag": "update",
-          "title": "@S3Partners: AMC short interest spikes",
-          "body": "Short sellers re‑engaged AMC after dilution approval, pushing short interest to multi‑year highs. Borrow tightening and high utilization suggest higher volatility and potential recall/covering risk.",
-          "url": "https://x.com/S3Partners/status/2018704782232318047"
+          "tag": "new",
+          "title": "@XFreeze: Dutch unrealized‑gains tax thread",
+          "body": "A viral thread claimed the Netherlands approved a 36% tax on unrealized gains, sparking debate about forced selling and market impact. Treat as a discussion thread, not a verified policy summary.",
+          "url": "https://x.com/XFreeze/status/2022622737886278107"
         }
       ]
     },
@@ -86,15 +86,21 @@
       "items": [
         {
           "tag": "new",
-          "title": "@runes_leo: Old PC → TikTok AI agent",
-          "body": "A longform case study shows an unused gaming PC turned into an AI agent that auto‑produces TikTok content—scaling from sub‑1k views to 500k in five days. The author documents each iteration and fix, making it a practical playbook.",
-          "url": "https://x.com/runes_leo/status/2022558455727358204"
+          "title": "@om_patel5: App Store approval checklist",
+          "body": "A concise checklist for avoiding App Store rejections—privacy policy, account deletion, test credentials, clear pricing, and no “coming soon” features. A good pre‑submit sanity pass for indie devs.",
+          "url": "https://x.com/om_patel5/status/2022743847827103780"
+        },
+        {
+          "tag": "update",
+          "title": "@_FORAB: X to crack down on spam accounts",
+          "body": "X’s product lead reportedly said the platform will step up enforcement against AI/spam accounts, including bans on associated accounts. The announcement sparked debate in replies about creator payouts and spam signals.",
+          "url": "https://x.com/_FORAB/status/2022541025940799704"
         },
         {
           "tag": "new",
-          "title": "@scaling_shields: Quiet $2.8k/mo phone‑answering biz",
-          "body": "A solo operator reportedly built a $1.9M/year service answering calls for storage facilities at $2.8k/month. The insight: boring, recurring problems with high LTV and low churn can beat flashy, visible products.",
-          "url": "https://x.com/scaling_shields/status/2022400896324506045"
+          "title": "@shiri_shh: Local‑biz site automation idea",
+          "body": "A founder pitched an OpenClaw‑powered workflow to scrape local business data, auto‑generate websites, and sell activation via email. It’s a simple SMB lead‑gen idea with a numbers‑driven revenue model.",
+          "url": "https://x.com/shiri_shh/status/2022344874499223884"
         }
       ]
     }
