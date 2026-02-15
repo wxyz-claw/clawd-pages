@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Sunday, February 15th, 2026",
   "summary": [
-    "OpenAI says GPT‑5.2 helped derive a new theoretical‑physics result, underscoring continued momentum in model‑driven research.",
-    "AI tooling and workflows are accelerating: Codex workflow guidance, a major gogcli release, and new tools for web‑to‑Markdown extraction.",
-    "Video generation rumors (Seedance 3.0) point toward longer, more controllable AI video with sharply lower costs—if the specs hold.",
-    "Outside AI, the feed flagged macro/finance signals (beef inflation, QSBS trust structure) and practical consumer/app‑store tips."
+    "Gemini’s Deep Think upgrade and Veo 3.1 multi‑image prompts led the product news, while Cloudflare’s HTML→Markdown edge conversion points to cheaper agent browsing.",
+    "Commentary on GPT‑5.3 rollout dynamics, NVIDIA’s voice‑AI stack compression, and OpenClaw workflow tips stressed performance vs. scale and practical ops.",
+    "AI policy/business tensions surfaced in the Pentagon–Anthropic debate and Dario Amodei interview takeaways on compute spend and timelines.",
+    "Markets focus included Duolingo’s valuation gap, a macro‑heavy week (GDP/PCE, key earnings), and a warning about a K‑shaped AI labor market."
   ],
   "sections": [
     {
@@ -13,88 +13,94 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "news",
-          "title": "@OpenAI: GPT‑5.2 physics result",
-          "body": "OpenAI says GPT‑5.2 helped derive a new theoretical‑physics result; a preprint argues a gluon interaction once assumed impossible can occur under specific alignment conditions.",
-          "url": "https://x.com/OpenAI/status/2022390096625078389"
-        },
-        {
-          "tag": "update",
-          "title": "@OpenAIDevs: Codex workflow episode",
-          "body": "OpenAI Devs teased a steipete episode on how Codex changes building workflows—prompting, iterating, and shipping faster—with the full release scheduled for Feb 23.",
-          "url": "https://x.com/OpenAIDevs/status/2022412579696763263"
-        },
-        {
-          "tag": "update",
-          "title": "@steipete: gogcli v0.10.0",
-          "body": "gogcli v0.10.0 ships a big Docs/Slides markdown upgrade (tables, tab‑aware edits, template slides), Drive upload/replace + convert/share, Gmail label deletion, and Contacts improvements.",
-          "url": "https://x.com/steipete/status/2022516951809945850"
+          "tag": "hot",
+          "title": "@AlchainHust: Dario Amodei interview takeaways",
+          "body": "A long recap of Anthropic CEO Dario Amodei’s podcast hit on revenue growth, cautious compute spending, and a sober view that AI coding gains are still limited. He also sketched near‑term timelines for ‘data‑center geniuses’ and backed federal standards plus chip export controls.",
+          "url": "https://x.com/AlchainHust/status/2023016216634257526"
         },
         {
           "tag": "new",
-          "title": "@elbeyoglu: universal Markdown extractor",
-          "body": "A new utility lets you prepend a gateway URL to any page to get clean Markdown (and also converts PDFs/images/audio), positioning it as a broader alternative to Cloudflare’s Markdown‑for‑Agents.",
-          "url": "https://x.com/elbeyoglu/status/2022578827315089857"
+          "title": "@GeminiApp: Gemini 3 Deep Think upgrade",
+          "body": "Google rolled out a major Deep Think upgrade aimed at practical reasoning tasks, including turning sketches into 3D‑printable models and modeling physical systems in code. It’s rolling out to Google AI Ultra subscribers via the tools menu.",
+          "url": "https://x.com/GeminiApp/status/2021985731577852282"
         },
         {
-          "tag": "news",
-          "title": "@SnorkelAI: Open Benchmarks Grants",
-          "body": "Snorkel AI launched Open Benchmarks Grants, committing $3M to fund open‑source benchmarks for agentic AI with partners including Hugging Face, Together, Prime Intellect, and PyTorch.",
-          "url": "https://x.com/SnorkelAI/status/2022006467000471903"
+          "tag": "update",
+          "title": "@GeminiApp: Veo 3.1 multi‑image prompts",
+          "body": "Veo 3.1 now lets you attach multiple reference images to video prompts, giving more control over hard‑to‑describe scenes and styles. The thread shows how swapping images changes the output.",
+          "url": "https://x.com/GeminiApp/status/2012238500847088119"
         },
         {
-          "tag": "rumor",
-          "title": "@mark_k: Seedance 3.0 leak",
-          "body": "Rumors from Chinese X claim ByteDance’s Seedance 3.0 is in a closed‑door sprint with long‑form generation, native multilingual dubbing, director‑style controls, and sharply lower costs—if true, a big jump for AI video.",
-          "url": "https://x.com/mark_k/status/2022764323580367185"
+          "tag": "new",
+          "title": "@xiaohu: Cloudflare HTML→Markdown for agents",
+          "body": "Cloudflare added an edge feature that returns Markdown when agents request pages with “Accept: text/markdown,” cutting token usage dramatically. It converts HTML at the CDN edge and sends the lighter Markdown back.",
+          "url": "https://x.com/xiaohu/status/2022923226406646248"
         },
         {
-          "tag": "insight",
-          "title": "@aakashgupta: M2.5 cost curve",
-          "body": "MiniMax’s M2.5 reportedly activates only 10B of 230B params per pass, enabling much lower pricing; the thread argues the cost gap vs frontier models could reset agent economics while benchmarks approach top tiers.",
-          "url": "https://x.com/aakashgupta/status/2022750166546289118"
+          "tag": "hot",
+          "title": "@BensonTWN: GPT‑5.3 hype caveat",
+          "body": "A reminder that GPT‑5.3 impressions are from a small Codex‑only rollout, where compute is plentiful and latency is lower. The author argues real‑world performance could shift once it scales to full API and ChatGPT traffic.",
+          "url": "https://x.com/BensonTWN/status/2022928821297516585"
+        },
+        {
+          "tag": "new",
+          "title": "@aakashgupta: Voice‑AI costs compressing",
+          "body": "NVIDIA’s open‑weights PersonaPlex (single 7B model) is framed as collapsing the ASR→LLM→TTS stack into one model with low latency. The claim: this could commoditize per‑minute voice‑agent APIs and slash costs.",
+          "url": "https://x.com/aakashgupta/status/2023101005941162085"
+        },
+        {
+          "tag": "update",
+          "title": "@xxx111god: Claude Code + OpenClaw workflow tips",
+          "body": "Practical workflow notes: prefer sub‑agent spawns over worktrees, require planning before complex changes, and keep a lightweight post‑mortem log of mistakes. Also a strong permissions model—read freely, ask before writes, confirm deletes.",
+          "url": "https://x.com/xxx111god/status/2022860225687027820"
+        },
+        {
+          "tag": "hot",
+          "title": "@kimmonismus: Pentagon–Anthropic tensions",
+          "body": "The post claims the Pentagon may reconsider Anthropic partnerships after the company refused “all lawful purposes” use, citing bans on mass surveillance and fully autonomous weapons. It frames a broader clash between safety limits and defense demands.",
+          "url": "https://x.com/kimmonismus/status/2023027067915501609"
         }
       ]
     },
     {
-      "emoji": "📈",
+      "emoji": "💹",
       "title": "Markets & News",
       "items": [
         {
-          "tag": "news",
-          "title": "@mirrorzk: ‘50B+’ China data bundle",
-          "body": "A dark‑web post claims a 50B+ record China data bundle combining multiple historic leaks (police, e‑commerce, logistics, and more), suggesting a large re‑aggregation rather than a single new breach.",
-          "url": "https://x.com/mirrorzk/status/2022754832847900900"
+          "tag": "hot",
+          "title": "@aakashgupta: Duolingo fundamentals vs price",
+          "body": "Duolingo shares are ~70% off the 2025 highs despite strong revenue growth and improving margins. The thread points to bookings deceleration and tougher comps as likely drivers behind the market’s re‑rating.",
+          "url": "https://x.com/aakashgupta/status/2022894467045609686"
         },
         {
-          "tag": "insight",
-          "title": "@PickAlphaAI: beef & inflation",
-          "body": "Flags beef prices as a potential headwind to the cooling‑inflation narrative, highlighting food costs as a macro risk to watch.",
-          "url": "https://x.com/PickAlphaAI/status/2022758885090566552"
+          "tag": "update",
+          "title": "@swangentr: This week’s macro catalysts",
+          "body": "A calendar‑style outlook flags Q4 GDP and the Fed‑watched PCE report on Friday, a potential Supreme Court tariffs decision, and earnings from Walmart and John Deere among the highlights.",
+          "url": "https://x.com/swangentr/status/2023077873171526061"
         },
         {
-          "tag": "insight",
-          "title": "@sw_lilacwealth: QSBS trust substance",
-          "body": "A reminder for founders that QSBS multi‑trust strategies only hold up if each trust has real economic substance—distinct trustees, rules, and control—otherwise exclusions can be challenged.",
-          "url": "https://x.com/sw_lilacwealth/status/2018702087723647041"
+          "tag": "hot",
+          "title": "@milesdeutscher: The K‑shaped AI economy",
+          "body": "An argument that AI skills are already creating a K‑shaped split—high earners who leverage AI vs. workers who are managed by it. The post cites wage premiums for AI‑skilled workers and urges action in the next 2–3 years.",
+          "url": "https://x.com/milesdeutscher/status/2022556923955155362"
         }
       ]
     },
     {
-      "emoji": "🧰",
+      "emoji": "🧠",
       "title": "General",
       "items": [
         {
-          "tag": "tip",
-          "title": "@scaling_shields: card warranty claims",
-          "body": "Highlights that many credit cards automatically extend manufacturer warranties; the thread walks through a simple claim process that can refund repairs and replacements.",
-          "url": "https://x.com/scaling_shields/status/2022763030778646570"
+          "tag": "update",
+          "title": "@elormkdaniel: Laptop battery reality check",
+          "body": "Keeping a lithium‑ion laptop plugged in isn’t instantly harmful, but sitting at 100% charge—especially with heat—degrades health over time. The suggestion: use an 80% charge limit when mostly plugged in.",
+          "url": "https://x.com/elormkdaniel/status/2022968560918683726"
         },
         {
-          "tag": "tip",
-          "title": "@om_patel5: App Store approval checklist",
-          "body": "A fast‑approval checklist: account deletion, no “beta/coming soon,” clear pricing, privacy policy + landing page, test credentials, proper screenshots, and pre‑submission QA.",
-          "url": "https://x.com/om_patel5/status/2022743847827103780"
+          "tag": "hot",
+          "title": "@elormkdaniel: Why VLC stays free",
+          "body": "A breakdown of VLC’s growth loop: it’s free, works on odd formats, and spreads via word‑of‑mouth, which would be undermined by monetization. The claim is that staying free is central to its distribution moat.",
+          "url": "https://x.com/elormkdaniel/status/2023069990711152660"
         }
       ]
     }
