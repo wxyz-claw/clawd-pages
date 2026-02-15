@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Saturday, February 14th, 2026",
+  "date": "Sunday, February 15th, 2026",
   "summary": [
-    "Google shipped a major Gemini 3 Deep Think upgrade while OpenAI published a GPT‑5.2 physics preprint—labs are emphasizing research‑grade reasoning and scientific impact.",
-    "Agent/coding tooling advanced: Anthropic released a Skills‑for‑Claude playbook, Claude Code’s Bash tool got ~7× faster, and gogcli v0.10.0 added deeper Docs/Slides support.",
-    "Benchmarks and workflows are maturing—SWE‑rebench now shows Opus 4.6 and Codex 5.3 leading, and real‑world NotebookLM grading workflows surfaced.",
-    "Markets chatter was light but included an upcoming earnings-heavy week and on‑chain buzz around a 10k BTC transfer; a viral thread debated a Dutch unrealized‑gains tax proposal."
+    "OpenAI says GPT‑5.2 helped derive a new theoretical‑physics result, underscoring continued momentum in model‑driven research.",
+    "AI tooling and workflows are accelerating: Codex workflow guidance, a major gogcli release, and new tools for web‑to‑Markdown extraction.",
+    "Video generation rumors (Seedance 3.0) point toward longer, more controllable AI video with sharply lower costs—if the specs hold.",
+    "Outside AI, the feed flagged macro/finance signals (beef inflation, QSBS trust structure) and practical consumer/app‑store tips."
   ],
   "sections": [
     {
@@ -13,46 +13,46 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@GeminiApp: Gemini 3 Deep Think upgrade",
-          "body": "Google rolled out a major upgrade to Gemini 3’s Deep Think reasoning mode, positioning it for practical engineering and research tasks. The demo highlights sketch‑to‑3D workflows that generate printable files from drawings.",
-          "url": "https://x.com/GeminiApp/status/2021985731577852282"
-        },
-        {
-          "tag": "new",
-          "title": "@OpenAI: GPT‑5.2 physics preprint",
-          "body": "OpenAI announced a theoretical physics preprint where GPT‑5.2 helped derive a new result on gluon interactions. The work claims a previously‑assumed zero‑amplitude interaction can occur under specific alignment conditions.",
+          "tag": "news",
+          "title": "@OpenAI: GPT‑5.2 physics result",
+          "body": "OpenAI says GPT‑5.2 helped derive a new theoretical‑physics result; a preprint argues a gluon interaction once assumed impossible can occur under specific alignment conditions.",
           "url": "https://x.com/OpenAI/status/2022390096625078389"
         },
         {
-          "tag": "new",
-          "title": "@aiwithmayank: Skills playbook for Claude",
-          "body": "Anthropic released a 30+ page guide on designing reusable “Skills” for Claude, shifting focus from prompt tweaks to structured execution layers. The guide emphasizes progressive disclosure, testing, and workflow patterns for reliable agents.",
-          "url": "https://x.com/aiwithmayank/status/2022646689648251382"
-        },
-        {
           "tag": "update",
-          "title": "@jarredsumner: Claude Code Bash speedup",
-          "body": "Claude Code’s Bash tool is getting a big performance boost in the next version. The author reports a 7× speedup and lower memory use when streaming large stdout workloads.",
-          "url": "https://x.com/jarredsumner/status/2022537655339397133"
+          "title": "@OpenAIDevs: Codex workflow episode",
+          "body": "OpenAI Devs teased a steipete episode on how Codex changes building workflows—prompting, iterating, and shipping faster—with the full release scheduled for Feb 23.",
+          "url": "https://x.com/OpenAIDevs/status/2022412579696763263"
         },
         {
           "tag": "update",
           "title": "@steipete: gogcli v0.10.0",
-          "body": "gogcli shipped a major release with deeper Docs/Slides support (markdown tables, tab‑aware editing, template slides) plus Drive and Gmail improvements. It’s a notable upgrade for Google‑Workspace automation from the terminal.",
+          "body": "gogcli v0.10.0 ships a big Docs/Slides markdown upgrade (tables, tab‑aware edits, template slides), Drive upload/replace + convert/share, Gmail label deletion, and Contacts improvements.",
           "url": "https://x.com/steipete/status/2022516951809945850"
         },
         {
-          "tag": "update",
-          "title": "@andrew_n_carr: SWE‑rebench results",
-          "body": "SWE‑rebench published its Jan–Feb results: Opus 4.6 and Codex 5.3 top the chart at ~51.7% resolve rate. The update also highlights strong showings from newer Chinese models like Qwen.",
-          "url": "https://x.com/andrew_n_carr/status/2022528052132229161"
+          "tag": "new",
+          "title": "@elbeyoglu: universal Markdown extractor",
+          "body": "A new utility lets you prepend a gateway URL to any page to get clean Markdown (and also converts PDFs/images/audio), positioning it as a broader alternative to Cloudflare’s Markdown‑for‑Agents.",
+          "url": "https://x.com/elbeyoglu/status/2022578827315089857"
         },
         {
-          "tag": "hot",
-          "title": "@ihtesham2005: NotebookLM grading workflow",
-          "body": "A viral story described a professor using NotebookLM to grade essays at scale with rubrics, style‑shift checks, and personalized feedback. It’s a compelling example of AI workflows reducing grading time while improving response quality.",
-          "url": "https://x.com/ihtesham2005/status/2022610362793603537"
+          "tag": "news",
+          "title": "@SnorkelAI: Open Benchmarks Grants",
+          "body": "Snorkel AI launched Open Benchmarks Grants, committing $3M to fund open‑source benchmarks for agentic AI with partners including Hugging Face, Together, Prime Intellect, and PyTorch.",
+          "url": "https://x.com/SnorkelAI/status/2022006467000471903"
+        },
+        {
+          "tag": "rumor",
+          "title": "@mark_k: Seedance 3.0 leak",
+          "body": "Rumors from Chinese X claim ByteDance’s Seedance 3.0 is in a closed‑door sprint with long‑form generation, native multilingual dubbing, director‑style controls, and sharply lower costs—if true, a big jump for AI video.",
+          "url": "https://x.com/mark_k/status/2022764323580367185"
+        },
+        {
+          "tag": "insight",
+          "title": "@aakashgupta: M2.5 cost curve",
+          "body": "MiniMax’s M2.5 reportedly activates only 10B of 230B params per pass, enabling much lower pricing; the thread argues the cost gap vs frontier models could reset agent economics while benchmarks approach top tiers.",
+          "url": "https://x.com/aakashgupta/status/2022750166546289118"
         }
       ]
     },
@@ -61,46 +61,40 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "update",
-          "title": "@Stocktwits: Earnings calendar",
-          "body": "A heavy earnings week is coming up, with names like PANW, CDNS, WMT, BABA, ETSY, DE, and BKNG on deck. Useful quick scan for anyone planning trades or news monitoring.",
-          "url": "https://x.com/Stocktwits/status/2022374252180111795"
+          "tag": "news",
+          "title": "@mirrorzk: ‘50B+’ China data bundle",
+          "body": "A dark‑web post claims a 50B+ record China data bundle combining multiple historic leaks (police, e‑commerce, logistics, and more), suggesting a large re‑aggregation rather than a single new breach.",
+          "url": "https://x.com/mirrorzk/status/2022754832847900900"
         },
         {
-          "tag": "hot",
-          "title": "@Tradewith_kd: 10k BTC transfer",
-          "body": "On‑chain chatter highlighted a 10,000 BTC transfer from an early‑era wallet—about a $1B move at today’s prices. The event underscores how early holdings still swing sentiment when they move.",
-          "url": "https://x.com/Tradewith_kd/status/2022594244951912595"
+          "tag": "insight",
+          "title": "@PickAlphaAI: beef & inflation",
+          "body": "Flags beef prices as a potential headwind to the cooling‑inflation narrative, highlighting food costs as a macro risk to watch.",
+          "url": "https://x.com/PickAlphaAI/status/2022758885090566552"
         },
         {
-          "tag": "new",
-          "title": "@XFreeze: Dutch unrealized‑gains tax thread",
-          "body": "A viral thread claimed the Netherlands approved a 36% tax on unrealized gains, sparking debate about forced selling and market impact. Treat as a discussion thread, not a verified policy summary.",
-          "url": "https://x.com/XFreeze/status/2022622737886278107"
+          "tag": "insight",
+          "title": "@sw_lilacwealth: QSBS trust substance",
+          "body": "A reminder for founders that QSBS multi‑trust strategies only hold up if each trust has real economic substance—distinct trustees, rules, and control—otherwise exclusions can be challenged.",
+          "url": "https://x.com/sw_lilacwealth/status/2018702087723647041"
         }
       ]
     },
     {
-      "emoji": "🧠",
+      "emoji": "🧰",
       "title": "General",
       "items": [
         {
-          "tag": "new",
+          "tag": "tip",
+          "title": "@scaling_shields: card warranty claims",
+          "body": "Highlights that many credit cards automatically extend manufacturer warranties; the thread walks through a simple claim process that can refund repairs and replacements.",
+          "url": "https://x.com/scaling_shields/status/2022763030778646570"
+        },
+        {
+          "tag": "tip",
           "title": "@om_patel5: App Store approval checklist",
-          "body": "A concise checklist for avoiding App Store rejections—privacy policy, account deletion, test credentials, clear pricing, and no “coming soon” features. A good pre‑submit sanity pass for indie devs.",
+          "body": "A fast‑approval checklist: account deletion, no “beta/coming soon,” clear pricing, privacy policy + landing page, test credentials, proper screenshots, and pre‑submission QA.",
           "url": "https://x.com/om_patel5/status/2022743847827103780"
-        },
-        {
-          "tag": "update",
-          "title": "@_FORAB: X to crack down on spam accounts",
-          "body": "X’s product lead reportedly said the platform will step up enforcement against AI/spam accounts, including bans on associated accounts. The announcement sparked debate in replies about creator payouts and spam signals.",
-          "url": "https://x.com/_FORAB/status/2022541025940799704"
-        },
-        {
-          "tag": "new",
-          "title": "@shiri_shh: Local‑biz site automation idea",
-          "body": "A founder pitched an OpenClaw‑powered workflow to scrape local business data, auto‑generate websites, and sell activation via email. It’s a simple SMB lead‑gen idea with a numbers‑driven revenue model.",
-          "url": "https://x.com/shiri_shh/status/2022344874499223884"
         }
       ]
     }
