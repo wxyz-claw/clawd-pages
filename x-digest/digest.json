@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Tuesday, February 24th, 2026",
+  "date": "Wednesday, February 25th, 2026",
   "summary": [
-    "OpenAI shipped major platform upgrades: GPT‑5.3‑Codex for all developers, broader file ingestion in the Responses API, and gpt‑realtime‑1.5 for voice apps.",
-    "Claude/Anthropic updates emphasize tooling governance: Claude Code 2.1.53 changes tool orchestration and Anthropic released Responsible Scaling Policy v3.",
-    "AI funding stayed hot with big rounds for MatX ($500M AI chips) and Wayve ($1.8B autonomy), plus a free compressed model from Multiverse Computing.",
-    "Fintech and policy headlines centered on Stripe (PayPal acquisition talks + valuation jump) and post‑tariff refund uncertainty, with cyber/geopolitics adding risk signals."
+    "Model and research momentum: Gemini 3.1 Pro, Mercury 2 (reasoning‑diffusion LLM), and DeepMind’s AlphaEvolve highlight rapid progress in reasoning and algorithm design.",
+    "Agentic tooling is maturing across the stack, from university curricula on AI‑first development to new CLI/workflow automation for builders.",
+    "Security/data governance concerns surfaced with a DJI robot‑vacuum permissions flaw and renewed scrutiny of LLM message scraping and data releases.",
+    "Markets/news threads focused on retirement‑savings policy, enterprise software resilience to AI disruption, and the Premier League’s DTC streaming ambitions."
   ],
   "sections": [
     {
@@ -13,58 +13,52 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "new",
-          "title": "@OpenAIDevs: GPT‑5.3‑Codex in Responses API",
-          "body": "GPT‑5.3‑Codex is now available to all developers via the Responses API, expanding access to OpenAI’s coding‑focused model for agent and app builds.",
-          "url": "https://x.com/OpenAIDevs/status/2026379092661289260"
-        },
-        {
           "tag": "update",
-          "title": "@OpenAIDevs: Responses API file inputs expanded",
-          "body": "Responses API now accepts common office formats (docx, pptx, csv, xlsx, and more), allowing agents to ingest real‑world documents without manual conversion.",
-          "url": "https://x.com/OpenAIDevs/status/2026420817568084436"
-        },
-        {
-          "tag": "update",
-          "title": "@OpenAIDevs: gpt‑realtime‑1.5 for voice apps",
-          "body": "The Realtime API gained gpt‑realtime‑1.5 with improved instruction‑following, tool calling, and multilingual accuracy for voice workflows.",
-          "url": "https://x.com/OpenAIDevs/status/2026014334787461508"
-        },
-        {
-          "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.53",
-          "body": "Claude Code 2.1.53 prioritizes dedicated tools for orchestration and removes the built‑in Bash runner; new system rules add permissions, tagging, and output compression.",
-          "url": "https://x.com/ClaudeCodeLog/status/2026433895919419721"
-        },
-        {
-          "tag": "update",
-          "title": "@AnthropicAI: Responsible Scaling Policy v3",
-          "body": "Anthropic published version 3 of its Responsible Scaling Policy, aiming for stronger transparency and refined safeguards as model capabilities scale.",
-          "url": "https://x.com/AnthropicAI/status/2026393790500540566"
-        },
-        {
-          "tag": "hot",
-          "title": "@TechCrunch: MatX raises $500M for AI chips",
-          "body": "AI‑chip startup MatX raised $500M to build Nvidia‑challenging hardware, underscoring investor appetite for alternative AI compute.",
-          "url": "https://x.com/TechCrunch/status/2026459786263539936"
-        },
-        {
-          "tag": "hot",
-          "title": "@TechCrunch: Wayve closes $1.8B round",
-          "body": "Autonomous‑driving startup Wayve secured a $1.8B round backed by Nvidia, Uber, and automakers, one of the largest recent AV raises.",
-          "url": "https://x.com/TechCrunch/status/2026457517069570233"
+          "title": "@GeminiApp: Gemini 3.1 Pro launch",
+          "body": "Google announced Gemini 3.1 Pro, positioning it as a higher‑reasoning model for complex tasks beyond simple Q&A.",
+          "url": "https://x.com/GeminiApp/status/2024516490431738353"
         },
         {
           "tag": "new",
-          "title": "@TechCrunch: Multiverse releases free compressed model",
-          "body": "Multiverse Computing launched a free compressed AI model, highlighting continued pushes toward efficient inference and lower compute cost.",
-          "url": "https://x.com/TechCrunch/status/2026440568944148616"
+          "title": "@StefanoErmon: Mercury 2 reasoning diffusion LLM",
+          "body": "Mercury 2 is billed as the first reasoning‑diffusion LLM, claiming ~5× faster performance than leading speed‑optimized models.",
+          "url": "https://x.com/StefanoErmon/status/2026340720064520670"
+        },
+        {
+          "tag": "new",
+          "title": "@hasantoxr: DeepMind AlphaEvolve",
+          "body": "Thread claims AlphaEvolve uses LLMs to mutate and evaluate algorithm code, discovering non‑intuitive improvements that beat multiple baselines on game benchmarks.",
+          "url": "https://x.com/hasantoxr/status/2026371848217456738"
+        },
+        {
+          "tag": "hot",
+          "title": "@whyyoutouzhele: DJI Romo vacuum vulnerability",
+          "body": "Report says reverse‑engineering DJI Romo communications (via Claude Code) exposed a server‑side permissions flaw that allowed access to ~6,700 devices’ data and camera feeds; DJI says it has since patched it.",
+          "url": "https://x.com/whyyoutouzhele/status/2026492346624520365"
         },
         {
           "tag": "update",
-          "title": "@TechCrunch: Opal gets automated workflows",
-          "body": "Google added automated workflow creation to Opal, its no‑code AI workflow builder, expanding automation options for visual pipelines.",
-          "url": "https://x.com/TechCrunch/status/2026372649224716597"
+          "title": "@peteromallet: Claude Code logs released",
+          "body": "After reports that DeepSeek scraped 150k Claude messages, the author released 155k of their own Claude Code logs plus open‑source tools to export/redact data for public sharing.",
+          "url": "https://x.com/peteromallet/status/2026401030066549049"
+        },
+        {
+          "tag": "new",
+          "title": "@dotey: Stanford CS146S on AI‑era dev",
+          "body": "Highlights a Stanford course on modern software development that emphasizes planning→LLM generation→editing loops, agentic tooling, code review, and automated testing with industry guest speakers.",
+          "url": "https://x.com/dotey/status/2026438910151152007"
+        },
+        {
+          "tag": "new",
+          "title": "@runes_leo: Polymarket Rust CLI for agents",
+          "body": "Polymarket reportedly shipped an official Rust CLI aimed at AI agents; the author notes strategy and risk control are the real challenges beyond API access.",
+          "url": "https://x.com/runes_leo/status/2026450619180122343"
+        },
+        {
+          "tag": "update",
+          "title": "@karpathy: LLM memory+compute bottleneck",
+          "body": "Karpathy argues token‑scale demand makes SRAM vs DRAM orchestration the key hardware constraint, with big gains possible from better training/inference pipelines.",
+          "url": "https://x.com/karpathy/status/2026452488434651264"
         }
       ]
     },
@@ -73,58 +67,40 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "hot",
-          "title": "@TechCrunch: Stripe eyes PayPal deal",
-          "body": "TechCrunch reports Stripe is exploring a deal to buy some or all of PayPal, a potential reshaping of the payments landscape if talks progress.",
-          "url": "https://x.com/TechCrunch/status/2026426974001107454"
+          "tag": "new",
+          "title": "@BillAckman: Trump Savings Plan proposal",
+          "body": "Ackman amplifies a State‑of‑the‑Union proposal for a TSP‑style retirement plan with a federal match for workers without 401(k)s.",
+          "url": "https://x.com/BillAckman/status/2026518070039068926"
         },
         {
           "tag": "update",
-          "title": "@TechCrunch: Stripe valuation jumps to $159B",
-          "body": "Stripe’s valuation reportedly surged 74% to $159B, marking a major private‑market repricing for the fintech leader.",
-          "url": "https://x.com/TechCrunch/status/2026348803054559409"
+          "title": "@BrianSozzi: Workday CEO on AI impact",
+          "body": "Workday’s CEO says HR/ERP systems are complex systems of record and unlikely to be displaced by AI or “vibe coding” anytime soon.",
+          "url": "https://x.com/BrianSozzi/status/2026439879798730846"
         },
         {
-          "tag": "update",
-          "title": "@TheEconomist: Tariff refunds could be messy",
-          "body": "After the Supreme Court struck down some Trump‑era tariffs, businesses want refunds, but The Economist notes the claims process will be slow and politically fraught.",
-          "url": "https://x.com/TheEconomist/status/2026386756350668840"
-        },
-        {
-          "tag": "update",
-          "title": "@TechCrunch: U.S. sanctions Russian zero‑day broker",
-          "body": "The Treasury sanctioned a Russian zero‑day broker accused of buying stolen exploits from a U.S. defense contractor, escalating cyber enforcement pressure.",
-          "url": "https://x.com/TechCrunch/status/2026373209952760144"
-        },
-        {
-          "tag": "hot",
-          "title": "@_The_Prophet__: Iran escalation choreography",
-          "body": "A Reuters‑sourced thread argues Trump will use the State of the Union to build a public case on Iran, framing it as escalation signaling that could ripple into oil and risk assets.",
-          "url": "https://x.com/_The_Prophet__/status/2026386777431486841"
+          "tag": "new",
+          "title": "@MatchDCentral: Premier League streaming plan",
+          "body": "Report claims the Premier League is considering a direct Netflix‑style service (~£10/month, global access, and an archive of past matches).",
+          "url": "https://x.com/MatchDCentral/status/2026555938644111594"
         }
       ]
     },
     {
-      "emoji": "💡",
+      "emoji": "🧭",
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@_philschmid: How to write AGENTS.md",
-          "body": "Research‑backed guidance says AGENTS.md files should be short and human‑written; auto‑generated or overly detailed context hurts success rates and cost. It recommends focusing on WHAT/WHY/HOW and linking out for details.",
-          "url": "https://x.com/_philschmid/status/2026354033418547444"
-        },
-        {
-          "tag": "new",
-          "title": "@sc102704: Prediction markets are underused",
-          "body": "Prediction markets processed $44B last year with strong calibration, but the post argues businesses still ignore them. The opportunity is tooling that makes market probabilities decision‑ready.",
-          "url": "https://x.com/sc102704/status/2026332903471505771"
-        },
-        {
           "tag": "update",
-          "title": "@RayDalio: Investing in the Big Cycle",
-          "body": "Ray Dalio shared a new chapter on “Investing in Light of the Big Cycle,” outlining how to position portfolios amid shifting geopolitical order.",
-          "url": "https://x.com/RayDalio/status/2026343721894137904"
+          "title": "@hxxntrr: Itemized hospital bill playbook",
+          "body": "Advises requesting a fully itemized statement with CPT codes to surface duplicate/overpriced charges and negotiate reductions.",
+          "url": "https://x.com/hxxntrr/status/2026424413940494362"
+        },
+        {
+          "tag": "new",
+          "title": "@geekbb: 1Password price hike",
+          "body": "Says 1Password will raise annual pricing on Mar 27, 2026 (personal +33%, family +20%), suggesting self‑hosting Vaultwarden as an alternative.",
+          "url": "https://x.com/geekbb/status/2026540886113558847"
         }
       ]
     }
