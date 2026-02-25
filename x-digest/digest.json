@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Sunday, February 15th, 2026",
+  "date": "Tuesday, February 24th, 2026",
   "summary": [
-    "Gemini’s Deep Think upgrade and Veo 3.1 multi‑image prompts led the product news, while Cloudflare’s HTML→Markdown edge conversion points to cheaper agent browsing.",
-    "Commentary on GPT‑5.3 rollout dynamics, NVIDIA’s voice‑AI stack compression, and OpenClaw workflow tips stressed performance vs. scale and practical ops.",
-    "AI policy/business tensions surfaced in the Pentagon–Anthropic debate and Dario Amodei interview takeaways on compute spend and timelines.",
-    "Markets focus included Duolingo’s valuation gap, a macro‑heavy week (GDP/PCE, key earnings), and a warning about a K‑shaped AI labor market."
+    "OpenAI shipped major platform upgrades: GPT‑5.3‑Codex for all developers, broader file ingestion in the Responses API, and gpt‑realtime‑1.5 for voice apps.",
+    "Claude/Anthropic updates emphasize tooling governance: Claude Code 2.1.53 changes tool orchestration and Anthropic released Responsible Scaling Policy v3.",
+    "AI funding stayed hot with big rounds for MatX ($500M AI chips) and Wayve ($1.8B autonomy), plus a free compressed model from Multiverse Computing.",
+    "Fintech and policy headlines centered on Stripe (PayPal acquisition talks + valuation jump) and post‑tariff refund uncertainty, with cyber/geopolitics adding risk signals."
   ],
   "sections": [
     {
@@ -13,94 +13,118 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@AlchainHust: Dario Amodei interview takeaways",
-          "body": "A long recap of Anthropic CEO Dario Amodei’s podcast hit on revenue growth, cautious compute spending, and a sober view that AI coding gains are still limited. He also sketched near‑term timelines for ‘data‑center geniuses’ and backed federal standards plus chip export controls.",
-          "url": "https://x.com/AlchainHust/status/2023016216634257526"
-        },
-        {
           "tag": "new",
-          "title": "@GeminiApp: Gemini 3 Deep Think upgrade",
-          "body": "Google rolled out a major Deep Think upgrade aimed at practical reasoning tasks, including turning sketches into 3D‑printable models and modeling physical systems in code. It’s rolling out to Google AI Ultra subscribers via the tools menu.",
-          "url": "https://x.com/GeminiApp/status/2021985731577852282"
+          "title": "@OpenAIDevs: GPT‑5.3‑Codex in Responses API",
+          "body": "GPT‑5.3‑Codex is now available to all developers via the Responses API, expanding access to OpenAI’s coding‑focused model for agent and app builds.",
+          "url": "https://x.com/OpenAIDevs/status/2026379092661289260"
         },
         {
           "tag": "update",
-          "title": "@GeminiApp: Veo 3.1 multi‑image prompts",
-          "body": "Veo 3.1 now lets you attach multiple reference images to video prompts, giving more control over hard‑to‑describe scenes and styles. The thread shows how swapping images changes the output.",
-          "url": "https://x.com/GeminiApp/status/2012238500847088119"
-        },
-        {
-          "tag": "new",
-          "title": "@xiaohu: Cloudflare HTML→Markdown for agents",
-          "body": "Cloudflare added an edge feature that returns Markdown when agents request pages with “Accept: text/markdown,” cutting token usage dramatically. It converts HTML at the CDN edge and sends the lighter Markdown back.",
-          "url": "https://x.com/xiaohu/status/2022923226406646248"
-        },
-        {
-          "tag": "hot",
-          "title": "@BensonTWN: GPT‑5.3 hype caveat",
-          "body": "A reminder that GPT‑5.3 impressions are from a small Codex‑only rollout, where compute is plentiful and latency is lower. The author argues real‑world performance could shift once it scales to full API and ChatGPT traffic.",
-          "url": "https://x.com/BensonTWN/status/2022928821297516585"
-        },
-        {
-          "tag": "new",
-          "title": "@aakashgupta: Voice‑AI costs compressing",
-          "body": "NVIDIA’s open‑weights PersonaPlex (single 7B model) is framed as collapsing the ASR→LLM→TTS stack into one model with low latency. The claim: this could commoditize per‑minute voice‑agent APIs and slash costs.",
-          "url": "https://x.com/aakashgupta/status/2023101005941162085"
+          "title": "@OpenAIDevs: Responses API file inputs expanded",
+          "body": "Responses API now accepts common office formats (docx, pptx, csv, xlsx, and more), allowing agents to ingest real‑world documents without manual conversion.",
+          "url": "https://x.com/OpenAIDevs/status/2026420817568084436"
         },
         {
           "tag": "update",
-          "title": "@xxx111god: Claude Code + OpenClaw workflow tips",
-          "body": "Practical workflow notes: prefer sub‑agent spawns over worktrees, require planning before complex changes, and keep a lightweight post‑mortem log of mistakes. Also a strong permissions model—read freely, ask before writes, confirm deletes.",
-          "url": "https://x.com/xxx111god/status/2022860225687027820"
+          "title": "@OpenAIDevs: gpt‑realtime‑1.5 for voice apps",
+          "body": "The Realtime API gained gpt‑realtime‑1.5 with improved instruction‑following, tool calling, and multilingual accuracy for voice workflows.",
+          "url": "https://x.com/OpenAIDevs/status/2026014334787461508"
+        },
+        {
+          "tag": "update",
+          "title": "@ClaudeCodeLog: Claude Code 2.1.53",
+          "body": "Claude Code 2.1.53 prioritizes dedicated tools for orchestration and removes the built‑in Bash runner; new system rules add permissions, tagging, and output compression.",
+          "url": "https://x.com/ClaudeCodeLog/status/2026433895919419721"
+        },
+        {
+          "tag": "update",
+          "title": "@AnthropicAI: Responsible Scaling Policy v3",
+          "body": "Anthropic published version 3 of its Responsible Scaling Policy, aiming for stronger transparency and refined safeguards as model capabilities scale.",
+          "url": "https://x.com/AnthropicAI/status/2026393790500540566"
         },
         {
           "tag": "hot",
-          "title": "@kimmonismus: Pentagon–Anthropic tensions",
-          "body": "The post claims the Pentagon may reconsider Anthropic partnerships after the company refused “all lawful purposes” use, citing bans on mass surveillance and fully autonomous weapons. It frames a broader clash between safety limits and defense demands.",
-          "url": "https://x.com/kimmonismus/status/2023027067915501609"
+          "title": "@TechCrunch: MatX raises $500M for AI chips",
+          "body": "AI‑chip startup MatX raised $500M to build Nvidia‑challenging hardware, underscoring investor appetite for alternative AI compute.",
+          "url": "https://x.com/TechCrunch/status/2026459786263539936"
+        },
+        {
+          "tag": "hot",
+          "title": "@TechCrunch: Wayve closes $1.8B round",
+          "body": "Autonomous‑driving startup Wayve secured a $1.8B round backed by Nvidia, Uber, and automakers, one of the largest recent AV raises.",
+          "url": "https://x.com/TechCrunch/status/2026457517069570233"
+        },
+        {
+          "tag": "new",
+          "title": "@TechCrunch: Multiverse releases free compressed model",
+          "body": "Multiverse Computing launched a free compressed AI model, highlighting continued pushes toward efficient inference and lower compute cost.",
+          "url": "https://x.com/TechCrunch/status/2026440568944148616"
+        },
+        {
+          "tag": "update",
+          "title": "@TechCrunch: Opal gets automated workflows",
+          "body": "Google added automated workflow creation to Opal, its no‑code AI workflow builder, expanding automation options for visual pipelines.",
+          "url": "https://x.com/TechCrunch/status/2026372649224716597"
         }
       ]
     },
     {
-      "emoji": "💹",
+      "emoji": "📈",
       "title": "Markets & News",
       "items": [
         {
           "tag": "hot",
-          "title": "@aakashgupta: Duolingo fundamentals vs price",
-          "body": "Duolingo shares are ~70% off the 2025 highs despite strong revenue growth and improving margins. The thread points to bookings deceleration and tougher comps as likely drivers behind the market’s re‑rating.",
-          "url": "https://x.com/aakashgupta/status/2022894467045609686"
+          "title": "@TechCrunch: Stripe eyes PayPal deal",
+          "body": "TechCrunch reports Stripe is exploring a deal to buy some or all of PayPal, a potential reshaping of the payments landscape if talks progress.",
+          "url": "https://x.com/TechCrunch/status/2026426974001107454"
         },
         {
           "tag": "update",
-          "title": "@swangentr: This week’s macro catalysts",
-          "body": "A calendar‑style outlook flags Q4 GDP and the Fed‑watched PCE report on Friday, a potential Supreme Court tariffs decision, and earnings from Walmart and John Deere among the highlights.",
-          "url": "https://x.com/swangentr/status/2023077873171526061"
+          "title": "@TechCrunch: Stripe valuation jumps to $159B",
+          "body": "Stripe’s valuation reportedly surged 74% to $159B, marking a major private‑market repricing for the fintech leader.",
+          "url": "https://x.com/TechCrunch/status/2026348803054559409"
+        },
+        {
+          "tag": "update",
+          "title": "@TheEconomist: Tariff refunds could be messy",
+          "body": "After the Supreme Court struck down some Trump‑era tariffs, businesses want refunds, but The Economist notes the claims process will be slow and politically fraught.",
+          "url": "https://x.com/TheEconomist/status/2026386756350668840"
+        },
+        {
+          "tag": "update",
+          "title": "@TechCrunch: U.S. sanctions Russian zero‑day broker",
+          "body": "The Treasury sanctioned a Russian zero‑day broker accused of buying stolen exploits from a U.S. defense contractor, escalating cyber enforcement pressure.",
+          "url": "https://x.com/TechCrunch/status/2026373209952760144"
         },
         {
           "tag": "hot",
-          "title": "@milesdeutscher: The K‑shaped AI economy",
-          "body": "An argument that AI skills are already creating a K‑shaped split—high earners who leverage AI vs. workers who are managed by it. The post cites wage premiums for AI‑skilled workers and urges action in the next 2–3 years.",
-          "url": "https://x.com/milesdeutscher/status/2022556923955155362"
+          "title": "@_The_Prophet__: Iran escalation choreography",
+          "body": "A Reuters‑sourced thread argues Trump will use the State of the Union to build a public case on Iran, framing it as escalation signaling that could ripple into oil and risk assets.",
+          "url": "https://x.com/_The_Prophet__/status/2026386777431486841"
         }
       ]
     },
     {
-      "emoji": "🧠",
+      "emoji": "💡",
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@elormkdaniel: Laptop battery reality check",
-          "body": "Keeping a lithium‑ion laptop plugged in isn’t instantly harmful, but sitting at 100% charge—especially with heat—degrades health over time. The suggestion: use an 80% charge limit when mostly plugged in.",
-          "url": "https://x.com/elormkdaniel/status/2022968560918683726"
+          "tag": "new",
+          "title": "@_philschmid: How to write AGENTS.md",
+          "body": "Research‑backed guidance says AGENTS.md files should be short and human‑written; auto‑generated or overly detailed context hurts success rates and cost. It recommends focusing on WHAT/WHY/HOW and linking out for details.",
+          "url": "https://x.com/_philschmid/status/2026354033418547444"
         },
         {
-          "tag": "hot",
-          "title": "@elormkdaniel: Why VLC stays free",
-          "body": "A breakdown of VLC’s growth loop: it’s free, works on odd formats, and spreads via word‑of‑mouth, which would be undermined by monetization. The claim is that staying free is central to its distribution moat.",
-          "url": "https://x.com/elormkdaniel/status/2023069990711152660"
+          "tag": "new",
+          "title": "@sc102704: Prediction markets are underused",
+          "body": "Prediction markets processed $44B last year with strong calibration, but the post argues businesses still ignore them. The opportunity is tooling that makes market probabilities decision‑ready.",
+          "url": "https://x.com/sc102704/status/2026332903471505771"
+        },
+        {
+          "tag": "update",
+          "title": "@RayDalio: Investing in the Big Cycle",
+          "body": "Ray Dalio shared a new chapter on “Investing in Light of the Big Cycle,” outlining how to position portfolios amid shifting geopolitical order.",
+          "url": "https://x.com/RayDalio/status/2026343721894137904"
         }
       ]
     }
