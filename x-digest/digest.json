@@ -1,106 +1,101 @@
 {
   "title": "X Feed Digest",
-  "date": "Wednesday, February 25th, 2026",
+  "date": "Thursday, February 26th, 2026",
   "summary": [
-    "Agentic tooling keeps accelerating: Perplexity Computer, Cursor\u2019s demo-first workflow, and Devin 2.2 push end-to-end build/test loops.",
-    "Model and API updates land across the stack with Qwen 3.5 Medium and OpenAI\u2019s gpt-realtime-1.5 for stronger real-time voice workflows.",
-    "Enterprise automation moves forward via Claude Cowork\u2019s scheduled tasks and Cloudflare\u2019s edge-first Next.js rebuild on Workers.",
-    "Markets focus on media M&A and AI funding: WBD is evaluating Paramount\u2019s $31/share offer while Fundamental raises $255M for tabular-data AI."
+    "Agentic tooling keeps accelerating: Anthropic bought Vercept.ai to push Claude’s computer-use stack, Vercel shipped an agent-browser CLI, and OpenFang open-sourced a security-first agent OS.",
+    "Claude’s ecosystem saw meaningful upgrades—Cowork added scheduled tasks and Claude Code 2.1.59 introduced persistent memory rules plus a model change.",
+    "Model chatter continues with reports of DeepSeek V4 Lite testing a 1M-token, multimodal variant.",
+    "Markets focus on AI-driven momentum: Nvidia posted blowout Q4 growth, while Coinbase expands into stock/ETF trading and investors debate SDGR’s AI drug-discovery upside.",
+    "Notable science/health: Perseverance now self-localizes on Mars in minutes, and a small iScience study highlights a simple seated calf exercise for glucose control."
   ],
   "sections": [
     {
-      "emoji": "\ud83e\udd16",
+      "emoji": "🤖",
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "launch",
-          "title": "@perplexity_ai: Perplexity Computer",
-          "body": "Perplexity introduced a unified system that can research, design, code, deploy, and manage projects end-to-end in one workflow.",
-          "url": "https://x.com/perplexity_ai/status/2026695550771540489"
+          "tag": "hot",
+          "title": "@AnthropicAI: Acquires Vercept.ai",
+          "body": "Anthropic announced it acquired Vercept.ai to accelerate Claude’s computer-use capabilities, signaling a bigger push into agents that can operate real GUIs and workflows.",
+          "url": "https://x.com/AnthropicAI/status/2026705792033026465"
         },
         {
-          "tag": "model",
-          "title": "@Alibaba_Qwen: Qwen 3.5 Medium series",
-          "body": "Qwen released multiple medium-size models (including Flash, 35B-A3B, 122B-A10B) claiming better intelligence-per-compute and stronger agentic performance.",
-          "url": "https://x.com/Alibaba_Qwen/status/2026339351530188939"
-        },
-        {
-          "tag": "api",
-          "title": "@OpenAIDevs: gpt-realtime-1.5",
-          "body": "OpenAI\u2019s Realtime API now supports gpt-realtime-1.5 with improved instruction following, tool calling, and multilingual voice accuracy.",
-          "url": "https://x.com/OpenAIDevs/status/2026014334787461508"
-        },
-        {
-          "tag": "update",
-          "title": "@claudeai: Cowork scheduled tasks",
-          "body": "Claude Cowork adds scheduled tasks so teams can automate recurring briefs, spreadsheet updates, and weekly presentations.",
+          "tag": "new",
+          "title": "@claudeai: Cowork Scheduled Tasks",
+          "body": "Claude Cowork now supports scheduled tasks, letting teams run recurring automations (daily briefs, weekly spreadsheet updates, Friday decks) on a timer instead of manual prompts.",
           "url": "https://x.com/claudeai/status/2026720870631354429"
         },
         {
-          "tag": "product",
-          "title": "@cursor_ai: demos over diffs",
-          "body": "Cursor now returns demo videos of agent-built software instead of just diff outputs, giving faster proof of results.",
-          "url": "https://x.com/cursor_ai/status/2026369873321013568"
+          "tag": "new",
+          "title": "@_vmlops: Vercel Agent-Browser CLI",
+          "body": "Vercel released agent-browser, a CLI that lets AI agents navigate sites, click/type, persist sessions, and run full workflows—making browser automation a first-class agent tool.",
+          "url": "https://x.com/_vmlops/status/2026906044568584694"
         },
         {
-          "tag": "agent",
-          "title": "@cognition: Devin 2.2",
-          "body": "Devin 2.2 adds computer-use testing, self-verification, and auto-fix capabilities plus faster startup and a redesigned interface.",
-          "url": "https://x.com/cognition/status/2026343816521994339"
+          "tag": "update",
+          "title": "@ClaudeCodeLog: Claude Code 2.1.59",
+          "body": "Claude Code 2.1.59 adds auto memory rules for cross-session persistence, switches the underlying model, and tightens approvals for session IDs and tool access.",
+          "url": "https://x.com/ClaudeCodeLog/status/2026808562421293424"
         },
         {
-          "tag": "engineering",
-          "title": "@Cloudflare: Next.js on Workers",
-          "body": "Cloudflare rebuilt Next.js to run natively on Workers, removing Node dependencies to prove edge-first performance gains.",
-          "url": "https://x.com/Cloudflare/status/2026415441149571095"
+          "tag": "new",
+          "title": "@Akashi203: OpenFang Agent OS",
+          "body": "OpenFang open-sourced a Rust-based “agent OS” with WASM sandboxes, multi-layer security, and scheduled “Hands” that run continuously without babysitting.",
+          "url": "https://x.com/Akashi203/status/2026817793165779387"
+        },
+        {
+          "tag": "new",
+          "title": "@legit_api: DeepSeek V4 Lite Rumor",
+          "body": "Reports claim DeepSeek V4 Lite is in testing with at least one inference provider, featuring a 1M-token context window and native multimodality—still unconfirmed but notable.",
+          "url": "https://x.com/legit_api/status/2026718853275800019"
+        },
+        {
+          "tag": "update",
+          "title": "@jasonboshi: AI Learning Study",
+          "body": "A randomized study on developers found AI-assisted learners scored 17% lower on skill mastery on average, but outcomes varied—conceptual questioning preserved learning while copy‑paste use degraded it.",
+          "url": "https://x.com/jasonboshi/status/2026945965089788222"
         }
       ]
     },
     {
-      "emoji": "\ud83d\udcc8",
+      "emoji": "📈",
       "title": "Markets & News",
       "items": [
         {
-          "tag": "m&a",
-          "title": "@amitisinvesting: WBD evaluates Paramount offer",
-          "body": "Warner Bros. Discovery says it\u2019s reviewing Paramount\u2019s new $31/share buyout offer, which would cover a $2.8B termination fee tied to Netflix.",
-          "url": "https://x.com/amitisinvesting/status/2026409919914668104"
+          "tag": "hot",
+          "title": "@KKaWSB: Nvidia Q4 FY2026",
+          "body": "Nvidia’s FY2026 Q4 results showed 73% revenue growth and 65% margins, with data center up 75% and EPS nearly doubling—reinforcing the AI demand thesis.",
+          "url": "https://x.com/KKaWSB/status/2026909655440707634"
         },
         {
-          "tag": "funding",
-          "title": "@LTMpredict: Fundamental raises $255M",
-          "body": "Fundamental launched NEXUS, a foundation model for tabular data, alongside a $255M raise to expand predictive intelligence efforts.",
-          "url": "https://x.com/LTMpredict/status/2021722918334738808"
+          "tag": "new",
+          "title": "@LunarCrush: Coinbase Stock/ETF Trading",
+          "body": "Coinbase launched stock and ETF trading to compete more directly with Robinhood, signaling a push beyond crypto into full-service retail brokerage.",
+          "url": "https://x.com/LunarCrush/status/2026605352079470973"
         },
         {
-          "tag": "tooling",
-          "title": "@finviz_com: New market news tools",
-          "body": "Finviz rolled out a real-time Market Pulse feed, hover news cards, and expanded WIIM summaries to speed up trade context.",
-          "url": "https://x.com/finviz_com/status/2026342519374487916"
+          "tag": "update",
+          "title": "@AviatoResearch: SDGR Thesis",
+          "body": "A thread argues Schrodinger ($SDGR) looks undervalued if AI-driven drug discovery re-rates, citing its physics+AI platform, pharma software revenue, and upcoming catalysts.",
+          "url": "https://x.com/AviatoResearch/status/2018523688199462994"
         }
       ]
     },
     {
-      "emoji": "\ud83c\udf0d",
+      "emoji": "💡",
       "title": "General",
       "items": [
         {
-          "tag": "security",
-          "title": "@markgadala: DJI vacuum API flaw",
-          "body": "A story about a researcher using Claude to access a DJI robot vacuum API suggests weak device-ownership checks that briefly exposed global camera and map data.",
-          "url": "https://x.com/markgadala/status/2026078762862006747"
+          "tag": "new",
+          "title": "@KKaWSB: Perseverance Self-Navigation",
+          "body": "NASA says Perseverance can now self-localize on Mars using the retired Ingenuity helicopter processor, cutting localization time from a day to ~2 minutes with ~25 cm accuracy.",
+          "url": "https://x.com/KKaWSB/status/2026911678823301456"
         },
         {
-          "tag": "tip",
-          "title": "@hxxntrr: Itemized hospital bill",
-          "body": "A detailed tip urges requesting an itemized statement to spot duplicate or inflated charges and negotiate medical bills down.",
-          "url": "https://x.com/hxxntrr/status/2026424413940494362"
-        },
-        {
-          "tag": "health",
-          "title": "@Handrev: LASIK vs MRI pricing",
-          "body": "The post contrasts falling LASIK prices with rising MRI costs to argue that transparent, direct-pay markets drive lower prices and innovation.",
-          "url": "https://x.com/Handrev/status/2026380787134734353"
+          "tag": "update",
+          "title": "@iPaulCanada: Soleus Push-Up Study",
+          "body": "A small iScience study reports that seated soleus push-ups after a glucose drink improved blood-sugar metabolism; the takeaway is a simple, low-effort post‑meal movement (still early evidence).",
+          "url": "https://x.com/iPaulCanada/status/2026425701897760954"
         }
       ]
     }
