@@ -1,0 +1,116 @@
+{
+  "title": "X Feed Digest",
+  "date": "Friday, February 27th, 2026",
+  "summary": [
+    {
+      "html": "<strong>Block Cuts 40% of Workforce:</strong> Jack Dorsey's company lays off 4,000 employees following successful integration of internal AI agent Goose, explicitly citing AI productivity gains."
+    },
+    {
+      "html": "<strong>Anthropic Rejects Pentagon:</strong> Dario Amodei turns down a $200M contract, enforcing Claude's safeguards and refusing unrestricted use for national security systems."
+    },
+    {
+      "html": "<strong>OpenClaw Ecosystem Booms:</strong> The OpenClaw repo surpasses Linux in GitHub stars, while launching new features like ACP thread-bound agents, external secrets management, and OpenClaw-RL."
+    },
+    {
+      "html": "<strong>Gold Surges & Economy:</strong> Gold reclaims $5,250/oz amid continued uncertainty, while analysts fact-check Trump's claims of $18 trillion in new foreign investments."
+    }
+  ],
+  "sections": [
+    {
+      "emoji": "\ud83e\udd16",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "news",
+          "title": "Anish Moonka: Block's AI Layoffs",
+          "body": "Block laid off 4,000 people (40% of workforce) after deploying an internal AI agent called Goose, which reportedly saves employees 8-10 hours a week.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "news",
+          "title": "The Kobeissi Letter: Anthropic vs. Pentagon",
+          "body": "Anthropic rejected US Defense Secretary's 'final offer' for a $200M contract, refusing to allow their platform to be used for mass surveillance and autonomous weapons.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "update",
+          "title": "JUMPERZ: OpenClaw Update",
+          "body": "OpenClaw shipped major updates including ACP thread-bound agents, external secrets management, and a new agent routing CLI for easier swarm management.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "new",
+          "title": "Ling Yang: OpenClaw-RL",
+          "body": "Introduced OpenClaw-RL, a fully async reinforcement learning framework that allows local AI agents to continuously learn from user preferences and conversational feedback.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "update",
+          "title": "Bo Wang: DeepSeek DualPath",
+          "body": "DeepSeek published a paper on DualPath, fixing the KV-Cache storage bandwidth bottleneck and nearly doubling throughput for multi-turn agentic inference using RDMA.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "new",
+          "title": "John McBride: stereOS",
+          "body": "Introduced stereOS: a NixOS-based operating system hardened and purpose-built for AI agents with gVisor sub-virtualization for secure sandboxing.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "milestone",
+          "title": "\u210f\u03b5sam: OpenClaw Stars",
+          "body": "The OpenClaw repository has now surpassed Linux in GitHub stars.",
+          "url": "https://x.com/unknown"
+        }
+      ]
+    },
+    {
+      "emoji": "\ud83d\udcc8",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "markets",
+          "title": "Watcher.Guru: Gold Reclaims $5,250",
+          "body": "Gold has reclaimed the $5,250 mark, driven by continued uncertainty and on-again, off-again tariffs.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "news",
+          "title": "Alan Reynolds: Fact-Checking the $18 Trillion Claim",
+          "body": "Analysis reveals President Trump's claim of $18 trillion in new investments is largely exaggerated, with actual verifiable pledges closer to $5-9.7 trillion.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "markets",
+          "title": "Imran Lakha: S&P 500 Volatility",
+          "body": "While the S&P 500 realized volatility is at 11, the options market is pricing in maximum fear, signaling that market makers are anticipating a major risk-clearing event.",
+          "url": "https://x.com/unknown"
+        }
+      ]
+    },
+    {
+      "emoji": "\ud83d\udca1",
+      "title": "General Insight",
+      "items": [
+        {
+          "tag": "insight",
+          "title": "Aakash Gupta: Anthropic's Strategy",
+          "body": "Anthropic's entire competitive moat relies on 'worrying out loud'\u2014growing 14x annually while raising $30B by marketing fear as a responsible feature.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "insight",
+          "title": "Balaji: The First AI Cut",
+          "body": "Jack Dorsey's 40% headcount reduction at Block sends shockwaves through tech: adapt to AI agentic workflows or get disrupted.",
+          "url": "https://x.com/unknown"
+        },
+        {
+          "tag": "insight",
+          "title": "Taelin: AI 24/7 Experiment",
+          "body": "Leaving an AI to code 24/7 hit hard walls: results exploded in complexity and expense, proving AI is currently better at building known things rather than creating truly new concepts.",
+          "url": "https://x.com/unknown"
+        }
+      ]
+    }
+  ]
+}
