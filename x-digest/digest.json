@@ -1,12 +1,10 @@
 {
   "title": "X Feed Digest",
-  "date": "Thursday, February 26th, 2026",
+  "date": "Saturday, February 28th, 2026",
   "summary": [
-    "Agentic tooling keeps accelerating: Anthropic bought Vercept.ai to push Claude’s computer-use stack, Vercel shipped an agent-browser CLI, and OpenFang open-sourced a security-first agent OS.",
-    "Claude’s ecosystem saw meaningful upgrades—Cowork added scheduled tasks and Claude Code 2.1.59 introduced persistent memory rules plus a model change.",
-    "Model chatter continues with reports of DeepSeek V4 Lite testing a 1M-token, multimodal variant.",
-    "Markets focus on AI-driven momentum: Nvidia posted blowout Q4 growth, while Coinbase expands into stock/ETF trading and investors debate SDGR’s AI drug-discovery upside.",
-    "Notable science/health: Perseverance now self-localizes on Mars in minutes, and a small iScience study highlights a simple seated calf exercise for glucose control."
+    {"html": "<strong>Massive Strikes on Iran:</strong> US and Israeli forces have reportedly conducted massive, synchronized strikes in Iran, explicitly targeting Supreme Leader Khamenei and top IRGC leadership. Reports indicate Khamenei and numerous top officials have been killed, leading to widespread celebration among Iranian citizens both domestically and abroad."},
+    {"html": "<strong>Anthropic Banned by Federal Agencies:</strong> Following a dispute with the Department of War, the Trump administration has banned all federal agencies from using Anthropic’s models and labeled the company a supply-chain risk. OpenAI has publicly backed its own safety measures in comparison."},
+    {"html": "<strong>Bayern Munich Wins Der Klassiker:</strong> Bayern Munich secured a 3-2 victory over Borussia Dortmund, moving 11 points clear at the top of the Bundesliga table. Harry Kane scored his 30th league goal of the season."}
   ],
   "sections": [
     {
@@ -14,46 +12,28 @@
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "update",
+          "title": "Sam Altman (@sama)",
+          "body": "Sam Altman addressed questions regarding OpenAI's work with the Department of War, noting that he believes in a close partnership between governments and AI companies, and that people take national security for granted.",
+          "url": "https://x.com/sama/status/2027921762319827330"
+        },
+        {
+          "tag": "news",
+          "title": "The Economist (@TheEconomist)",
+          "body": "In an unprecedented move against an American firm, the Trump administration banned all federal agencies from using Anthropic’s technology, designating the AI lab a 'supply-chain risk.'",
+          "url": "https://x.com/TheEconomist/status/2027866433540010333"
+        },
+        {
+          "tag": "announcement",
+          "title": "OpenAI (@OpenAI)",
+          "body": "OpenAI announced an agreement with the Department of War for deploying advanced AI in classified environments, claiming their deployment has more expansive, multi-layered guardrails than competitors.",
+          "url": "https://x.com/OpenAI/status/2027846012107456943"
+        },
+        {
           "tag": "hot",
-          "title": "@AnthropicAI: Acquires Vercept.ai",
-          "body": "Anthropic announced it acquired Vercept.ai to accelerate Claude’s computer-use capabilities, signaling a bigger push into agents that can operate real GUIs and workflows.",
-          "url": "https://x.com/AnthropicAI/status/2026705792033026465"
-        },
-        {
-          "tag": "new",
-          "title": "@claudeai: Cowork Scheduled Tasks",
-          "body": "Claude Cowork now supports scheduled tasks, letting teams run recurring automations (daily briefs, weekly spreadsheet updates, Friday decks) on a timer instead of manual prompts.",
-          "url": "https://x.com/claudeai/status/2026720870631354429"
-        },
-        {
-          "tag": "new",
-          "title": "@_vmlops: Vercel Agent-Browser CLI",
-          "body": "Vercel released agent-browser, a CLI that lets AI agents navigate sites, click/type, persist sessions, and run full workflows—making browser automation a first-class agent tool.",
-          "url": "https://x.com/_vmlops/status/2026906044568584694"
-        },
-        {
-          "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.59",
-          "body": "Claude Code 2.1.59 adds auto memory rules for cross-session persistence, switches the underlying model, and tightens approvals for session IDs and tool access.",
-          "url": "https://x.com/ClaudeCodeLog/status/2026808562421293424"
-        },
-        {
-          "tag": "new",
-          "title": "@Akashi203: OpenFang Agent OS",
-          "body": "OpenFang open-sourced a Rust-based “agent OS” with WASM sandboxes, multi-layer security, and scheduled “Hands” that run continuously without babysitting.",
-          "url": "https://x.com/Akashi203/status/2026817793165779387"
-        },
-        {
-          "tag": "new",
-          "title": "@legit_api: DeepSeek V4 Lite Rumor",
-          "body": "Reports claim DeepSeek V4 Lite is in testing with at least one inference provider, featuring a 1M-token context window and native multimodality—still unconfirmed but notable.",
-          "url": "https://x.com/legit_api/status/2026718853275800019"
-        },
-        {
-          "tag": "update",
-          "title": "@jasonboshi: AI Learning Study",
-          "body": "A randomized study on developers found AI-assisted learners scored 17% lower on skill mastery on average, but outcomes varied—conceptual questioning preserved learning while copy‑paste use degraded it.",
-          "url": "https://x.com/jasonboshi/status/2026945965089788222"
+          "title": "Elon Musk (@elonmusk)",
+          "body": "Elon Musk praised Grok, claiming that 'prediction of the future is the best measure of intelligence,' after the AI purportedly accurately predicted the exact date of the US/Israel strike on Iran.",
+          "url": "https://x.com/elonmusk/status/2027836581038465028"
         }
       ]
     },
@@ -63,21 +43,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@KKaWSB: Nvidia Q4 FY2026",
-          "body": "Nvidia’s FY2026 Q4 results showed 73% revenue growth and 65% margins, with data center up 75% and EPS nearly doubling—reinforcing the AI demand thesis.",
-          "url": "https://x.com/KKaWSB/status/2026909655440707634"
+          "title": "SightBringer (@_The_Prophet__)",
+          "body": "Analysis on President Trump confirming the death of Iran's Supreme Leader, Khamenei. The move is viewed as a psychological operation aimed at triggering a defection cascade and fracturing the regime's command structure.",
+          "url": "https://x.com/_The_Prophet__/status/2027866531821183476"
         },
         {
-          "tag": "new",
-          "title": "@LunarCrush: Coinbase Stock/ETF Trading",
-          "body": "Coinbase launched stock and ETF trading to compete more directly with Robinhood, signaling a push beyond crypto into full-service retail brokerage.",
-          "url": "https://x.com/LunarCrush/status/2026605352079470973"
+          "tag": "markets",
+          "title": "FactSet (@FactSet)",
+          "body": "73% of S&P 500 companies have beaten EPS estimates for Q4, though this remains slightly below the 5-year average of 78%. All 11 sectors are reporting year-over-year earnings growth, led by IT and Industrials.",
+          "url": "https://x.com/FactSet/status/2027829936401027134"
         },
         {
-          "tag": "update",
-          "title": "@AviatoResearch: SDGR Thesis",
-          "body": "A thread argues Schrodinger ($SDGR) looks undervalued if AI-driven drug discovery re-rates, citing its physics+AI platform, pharma software revenue, and upcoming catalysts.",
-          "url": "https://x.com/AviatoResearch/status/2018523688199462994"
+          "tag": "markets",
+          "title": "麦田 Rye 🇺🇦 (@maitian99)",
+          "body": "A trader notes shorting energy stocks ($XLE) ahead of the weekend in anticipation of a 'sell the news' reaction to potential strikes on Iran, utilizing a left-side trading strategy.",
+          "url": "https://x.com/maitian99/status/2027745671999328441"
+        },
+        {
+          "tag": "news",
+          "title": "孤军未死 (@Scswga)",
+          "body": "Reports suggest the IRGC is broadcasting VHF warnings that the Strait of Hormuz is closed to shipping. With 20% of global oil relying on the strait, this escalation could cause massive volatility in energy markets.",
+          "url": "https://x.com/Scswga/status/2027840719688524193"
         }
       ]
     },
@@ -86,16 +72,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@KKaWSB: Perseverance Self-Navigation",
-          "body": "NASA says Perseverance can now self-localize on Mars using the retired Ingenuity helicopter processor, cutting localization time from a day to ~2 minutes with ~25 cm accuracy.",
-          "url": "https://x.com/KKaWSB/status/2026911678823301456"
+          "tag": "sports",
+          "title": "Harry Kane (@HKane)",
+          "body": "Bayern Munich secured a 3-2 comeback victory over Borussia Dortmund in Der Klassiker. Harry Kane praised the team's mentality as they extended their Bundesliga lead to 11 points.",
+          "url": "https://x.com/HKane/status/2027842944632246556"
         },
         {
-          "tag": "update",
-          "title": "@iPaulCanada: Soleus Push-Up Study",
-          "body": "A small iScience study reports that seated soleus push-ups after a glucose drink improved blood-sugar metabolism; the takeaway is a simple, low-effort post‑meal movement (still early evidence).",
-          "url": "https://x.com/iPaulCanada/status/2026425701897760954"
+          "tag": "insight",
+          "title": "The Economist (@TheEconomist)",
+          "body": "European economists often look enviously at the economic dynamism across the Atlantic, suggesting that US states should also be more attuned to the sources of their own competitive advantages.",
+          "url": "https://x.com/TheEconomist/status/2027836235935367408"
+        },
+        {
+          "tag": "news",
+          "title": "The Economist (@TheEconomist)",
+          "body": "Highlighting the growing power of Brazil's Supreme Court amid government scandals, warning that its immense authority risks curdling without public trust and good faith.",
+          "url": "https://x.com/TheEconomist/status/2027911763107160174"
         }
       ]
     }
