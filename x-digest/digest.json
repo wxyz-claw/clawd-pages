@@ -2,13 +2,10 @@
   "title": "X Feed Digest",
   "date": "Wednesday, March 4th, 2026",
   "summary": [
-    "The AI model race is shifting from benchmark theater to price/latency warfare: Gemini 3.1 Flash-Lite and GPT-5.3 Instant both emphasize faster, cheaper everyday usage.",
-    "Product reliability is now a frontline concern: multiple posts focused on real-world agent failures, guardrails, and security practices rather than raw capability hype.",
-    "OpenAI's strategy and governance dominated discussion, from DoW contract language updates to senior-researcher movement toward Anthropic.",
-    "Operator workflows are maturing around context engineering (progressive disclosure, memory layering, selective loading) to reduce token waste and brittle behavior.",
-    {
-      "html": "<strong>Macro watch:</strong> Korea's back-to-back circuit-breaker days were framed as a leverage + energy-shock stress test with potential spillover into global tech sentiment."
-    }
+    "AI cost/performance competition is accelerating: Gemini 3.1 Flash-Lite’s release and pricing chatter reinforced a clear stack split—heavy models for decisions, lighter models for high-volume pipeline work.",
+    "Agentic coding workflows are getting more disciplined: multiple high-signal posts converged on plan-first execution, better context compaction, and incremental Claude Code release improvements.",
+    "Reliability is now the key bottleneck: real incidents and debugging threads showed that agent hallucinations, tool-schema mismatches, and weak observability can still create production risk.",
+    "Market conversation centered on risk regime changes (Korea equity stress) and crypto market structure (prediction markets maturing under regulatory pressure)."
   ],
   "sections": [
     {
@@ -16,34 +13,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "release",
-          "title": "@JeffDean: Gemini 3.1 Flash-Lite Launch",
-          "body": "Google announced Gemini 3.1 Flash-Lite as a speed-and-cost optimized model, highlighting 2.5x faster time-to-first-token and $0.25 per million input tokens. The post reinforces that high-volume inference economics are becoming the main battleground.",
-          "url": "https://x.com/JeffDean/status/2028876962580816143"
+          "tag": "new",
+          "title": "@_philschmid: Gemini 3.1 Flash-Lite Launch",
+          "body": "Flash-Lite was presented as Google’s fastest, most cost-efficient Gemini tier for high-throughput workloads, with explicit pricing and speed claims. The practical takeaway is clearer model tiering: reserve premium models for reasoning, and offload repetitive extraction/classification steps to cheaper inference.",
+          "url": "https://x.com/_philschmid/status/2028873233978528090"
         },
         {
           "tag": "update",
-          "title": "@nickaturley: GPT-5.3 Instant Rollout",
-          "body": "OpenAI said GPT-5.3 Instant is rolling out in ChatGPT with fewer unnecessary refusals and fewer defensive caveats. The practical signal is a push toward smoother default chat behavior over caution-heavy UX.",
-          "url": "https://x.com/nickaturley/status/2028894581191000404"
+          "title": "@ClaudeCodeLog: Claude Code 2.1.66 Changes",
+          "body": "This release highlights quieter but high-impact quality-of-life improvements: less noisy error logging, tighter output-efficiency guidance, and more detailed task-failure messages. For daily agent use, these are the kinds of changes that improve trust and reduce cleanup overhead.",
+          "url": "https://x.com/ClaudeCodeLog/status/2029021937641373794"
         },
         {
-          "tag": "talent",
-          "title": "@max_a_schwarzer: OpenAI -> Anthropic Move",
-          "body": "A key OpenAI post-training leader announced he is leaving to join Anthropic and return to hands-on RL research. This is a notable leadership-level talent signal in the frontier-lab race.",
-          "url": "https://x.com/max_a_schwarzer/status/2028939154944585989"
+          "tag": "update",
+          "title": "@nityeshaga: /compact Now References Full Chat JSON",
+          "body": "A notable /compact behavior change now points Claude back to the full chat JSON path when more detail is needed. That pattern can improve long-session continuity while keeping working context small.",
+          "url": "https://x.com/nityeshaga/status/2028948852473209228"
         },
         {
-          "tag": "security",
-          "title": "@rauchg: Hallucinated Repo ID Caused Rogue Deploy Attempt",
-          "body": "Vercel investigated a report where an agent fabricated a GitHub repo ID and attempted deployment through API. The incident is a clear reminder that powerful automation paths need strict guardrails even with top-tier models.",
-          "url": "https://x.com/rauchg/status/2028920268119523788"
+          "tag": "hot",
+          "title": "@runes_leo: Practical AI Coding Adoption Path",
+          "body": "A concise six-step adoption playbook (attributed to HashiCorp’s founder) argued for ‘doing the same task twice’—once manually, once with an agent—to calibrate trust boundaries. It also pushed against over-automation by sharing low but intentional agent utilization as a feature, not a bug.",
+          "url": "https://x.com/runes_leo/status/2029184248184205431"
         },
         {
-          "tag": "tooling",
-          "title": "@gvanrossum: typeagent Memory Library Update",
-          "body": "Guido van Rossum released an updated version of typeagent, a Python library for adding memory to agents. The takeaway is continued momentum toward practical, reusable memory infrastructure in agent stacks.",
-          "url": "https://x.com/gvanrossum/status/2029021031219052768"
+          "tag": "hot",
+          "title": "@shao__meng: Plan/Execute Separation Workflow",
+          "body": "A long-form workflow breakdown emphasized strict separation of planning from implementation, with iterative annotation loops before allowing code generation. This is one of the strongest anti-slop patterns in the batch for teams using coding agents in real repos.",
+          "url": "https://x.com/shao__meng/status/2028998826699415561"
         }
       ]
     },
@@ -52,28 +49,22 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "policy",
-          "title": "@sama: OpenAI-DoW Guardrails Clarified",
-          "body": "Sam Altman said OpenAI and the DoW added explicit language against intentional domestic surveillance of U.S. persons and clarified agency-use boundaries. This is a high-signal governance update for public-sector frontier-model deployment.",
-          "url": "https://x.com/sama/status/2028640354912923739"
-        },
-        {
-          "tag": "macro",
-          "title": "@amitisinvesting: Korea Circuit-Breaker Selloff Thread",
-          "body": "Amit argued South Korea's sharp two-day drawdown reflects a mix of leverage unwind, heavy index concentration in memory names, and LNG-price stress. If sustained, he suggests second-order pressure could spill into U.S. tech risk appetite.",
+          "tag": "hot",
+          "title": "@amitisinvesting: South Korea Selloff & Leverage Risk",
+          "body": "A detailed thread dissected Korea’s back-to-back circuit-breaker sessions and framed them as leverage unwind dynamics rather than a simple fundamentals break. The actionable lens was cross-market spillover watch: semis, risk assets, and U.S. sentiment linkage.",
           "url": "https://x.com/amitisinvesting/status/2029026069534142674"
         },
         {
-          "tag": "commentary",
-          "title": "@JoshKale: Apple Capex vs Hyperscaler Arms Race",
-          "body": "This widely shared chart-thread contrasts falling Apple capex with accelerating hyperscaler data-center spend, arguing Apple may still benefit disproportionately via local AI hardware demand. It's commentary, but a useful framing for infra-allocation debates.",
-          "url": "https://x.com/JoshKale/status/2028889347794047071"
+          "tag": "new",
+          "title": "@CTracy0803: Polymarket’s Long PMF Arc",
+          "body": "This thread mapped Polymarket’s six-year trajectory through regulatory setbacks, offshore focus, and eventual U.S. re-entry tailwinds. Useful context for anyone tracking prediction markets as an emerging information/price-discovery layer.",
+          "url": "https://x.com/CTracy0803/status/2029054910730518799"
         },
         {
-          "tag": "research",
-          "title": "@METR_Evals: Benchmark Horizon Correction",
-          "body": "METR announced a modeling correction that had overstated recent 50% time-horizon estimates by roughly 10-20%. This is an important measurement update for anyone using capability trendlines in strategy or policy work.",
-          "url": "https://x.com/METR_Evals/status/2028948235486937098"
+          "tag": "update",
+          "title": "@JoshKale: AI Infra Capex Divergence",
+          "body": "A provocative capex narrative contrasted hyperscaler data-center spending against Apple’s lighter spend while local AI hardware demand rises. Even if debated, it’s a signal that ‘where inference runs’ is becoming a core market thesis.",
+          "url": "https://x.com/JoshKale/status/2028889347794047071"
         }
       ]
     },
@@ -82,28 +73,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "workflow",
-          "title": "@zarazhangrui: Progressive Disclosure for Agent Skills",
-          "body": "A practical skill-design pattern cut always-loaded instruction context from 1,625 lines to 183 while preserving functionality. The key tactic: keep rules concise up front, and load reference material only when needed.",
-          "url": "https://x.com/zarazhangrui/status/2029092514435932647"
+          "tag": "hot",
+          "title": "@rauchg: Agent Hallucination Caused Rogue Deployment",
+          "body": "Vercel shared a concrete incident where an agent hallucinated a GitHub repo ID and attempted deployment through API calls. The important operational lesson is to require deterministic ID validation and stricter guardrails before execution.",
+          "url": "https://x.com/rauchg/status/2028920268119523788"
         },
         {
-          "tag": "insight",
-          "title": "@runes_leo: 'Everything Is Context' Applied",
-          "body": "This post maps real Claude Code folder practices to formal concepts like scratchpads, fact memory, and bounded reasoning capacity. It's a useful bridge between day-to-day prompting pain and a cleaner context architecture.",
-          "url": "https://x.com/runes_leo/status/2028990557331112363"
-        },
-        {
-          "tag": "ops",
-          "title": "@hwchase17: AI-Native Agent Debugging Example",
-          "body": "A LangSmith debugging walkthrough shows how trace-level monitoring surfaced a subtle tool-parameter mismatch (file_path vs path) causing intermittent failures. The broader lesson is that observability quality now directly controls agent reliability.",
+          "tag": "new",
+          "title": "@hwchase17: AI-Native Debugging in LangSmith",
+          "body": "A real trace-debugging example showed how an in-product assistant found a subtle tool-schema inconsistency (`file_path` vs `path`) behind intermittent failures. It’s a strong pattern for using LLMs on observability artifacts, not just chat Q&A.",
           "url": "https://x.com/hwchase17/status/2028883290959299002"
         },
         {
-          "tag": "release",
-          "title": "@steipete: OpenClaw Beta Update",
-          "body": "Steipete announced a major OpenClaw beta release and shared upgrade instructions. For active users, this is a direct signal to test new capabilities and integration changes quickly.",
-          "url": "https://x.com/steipete/status/2028682449853567048"
+          "tag": "update",
+          "title": "@arena: Document Arena Leaderboard Live",
+          "body": "Document Arena published side-by-side leaderboard results for PDF-heavy reasoning tasks, with Opus 4.6 leading this snapshot. Useful benchmark signal for teams evaluating document-centric model performance instead of general chat impressions.",
+          "url": "https://x.com/arena/status/2028915403704156581"
+        },
+        {
+          "tag": "hot",
+          "title": "@bearliu: Open File Systems Beat Closed Workspaces",
+          "body": "A practical comparison argued that open, local markdown workflows (e.g., Obsidian-style) compound better with LLM tooling than closed app silos. The key insight: data portability and model access often matter more than UI polish.",
+          "url": "https://x.com/bearliu/status/2029167482733253091"
         }
       ]
     }
