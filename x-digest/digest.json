@@ -1,13 +1,13 @@
 {
   "title": "X Feed Digest",
-  "date": "Tuesday, March 3rd, 2026",
+  "date": "Wednesday, March 4th, 2026",
   "summary": [
-    "Frontier-model release cadence stayed intense: OpenAI broadened GPT-5.3 Instant, teased 5.4, Alibaba shipped a full Qwen 3.5 small-model ladder, and Google positioned Gemini 3.1 Flash-Lite as a speed/cost play.",
-    "Execution risk is now as important as raw model quality: a real Vercel incident showed an agent hallucinating a repository ID and attempting deployment through APIs.",
-    "Geopolitics drove market chatter, especially US-Iran escalation and US-Spain trade threats, with repeated focus on shipping insurance and Hormuz mechanics rather than just military headlines.",
-    "AI governance and labor dynamics are becoming first-order signals: Anthropic/OpenAI policy constraints and senior researcher movement were discussed as strategy-level developments, not HR noise.",
+    "The AI model race is shifting from benchmark theater to price/latency warfare: Gemini 3.1 Flash-Lite and GPT-5.3 Instant both emphasize faster, cheaper everyday usage.",
+    "Product reliability is now a frontline concern: multiple posts focused on real-world agent failures, guardrails, and security practices rather than raw capability hype.",
+    "OpenAI's strategy and governance dominated discussion, from DoW contract language updates to senior-researcher movement toward Anthropic.",
+    "Operator workflows are maturing around context engineering (progressive disclosure, memory layering, selective loading) to reduce token waste and brittle behavior.",
     {
-      "html": "<strong>Practical operator signal:</strong> the best workflow posts emphasized persistent memory, browser-control primitives, and tighter review discipline for agentic coding."
+      "html": "<strong>Macro watch:</strong> Korea's back-to-back circuit-breaker days were framed as a leverage + energy-shock stress test with potential spillover into global tech sentiment."
     }
   ],
   "sections": [
@@ -16,34 +16,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@OpenAI: GPT-5.3 Instant Broad Rollout",
-          "body": "OpenAI announced GPT-5.3 Instant is rolling out to all ChatGPT users, framing it as more accurate and more natural in day-to-day conversations. The practical takeaway is improved default model quality without workflow changes.",
-          "url": "https://x.com/OpenAI/status/2028893701427302559"
-        },
-        {
-          "tag": "new",
-          "title": "@OpenAI: GPT-5.4 Teaser",
-          "body": "OpenAI posted a short teaser signaling GPT-5.4 is imminent. Even without details, this reinforces that release windows are compressing and teams should expect another benchmarking cycle soon.",
-          "url": "https://x.com/OpenAI/status/2028909019977703752"
-        },
-        {
           "tag": "release",
-          "title": "@Alibaba_Qwen: Qwen 3.5 Small Series",
-          "body": "Alibaba introduced Qwen3.5 models from 0.8B to 9B, highlighting stronger efficiency, multimodal capability, and edge-friendly deployment. This is a meaningful open-model signal for on-device and cost-sensitive production workloads.",
-          "url": "https://x.com/Alibaba_Qwen/status/2028460046510965160"
-        },
-        {
-          "tag": "pricing",
-          "title": "@JeffDean: Gemini 3.1 Flash-Lite",
-          "body": "Jeff Dean announced Gemini 3.1 Flash-Lite with a speed-first and low-cost positioning for high-volume inference, plus optional deeper reasoning on harder prompts. The post emphasized economics and latency as the main differentiators for developer adoption.",
+          "title": "@JeffDean: Gemini 3.1 Flash-Lite Launch",
+          "body": "Google announced Gemini 3.1 Flash-Lite as a speed-and-cost optimized model, highlighting 2.5x faster time-to-first-token and $0.25 per million input tokens. The post reinforces that high-volume inference economics are becoming the main battleground.",
           "url": "https://x.com/JeffDean/status/2028876962580816143"
         },
         {
+          "tag": "update",
+          "title": "@nickaturley: GPT-5.3 Instant Rollout",
+          "body": "OpenAI said GPT-5.3 Instant is rolling out in ChatGPT with fewer unnecessary refusals and fewer defensive caveats. The practical signal is a push toward smoother default chat behavior over caution-heavy UX.",
+          "url": "https://x.com/nickaturley/status/2028894581191000404"
+        },
+        {
+          "tag": "talent",
+          "title": "@max_a_schwarzer: OpenAI -> Anthropic Move",
+          "body": "A key OpenAI post-training leader announced he is leaving to join Anthropic and return to hands-on RL research. This is a notable leadership-level talent signal in the frontier-lab race.",
+          "url": "https://x.com/max_a_schwarzer/status/2028939154944585989"
+        },
+        {
           "tag": "security",
-          "title": "@rauchg: Agent Hallucination Caused Rogue Deployment Attempt",
-          "body": "Guillermo Rauch described a real incident where an agent fabricated a GitHub repo ID and attempted deployment via API, prompting an internal security investigation. The key lesson is that stronger model capability does not remove the need for guardrails around high-privilege automation.",
+          "title": "@rauchg: Hallucinated Repo ID Caused Rogue Deploy Attempt",
+          "body": "Vercel investigated a report where an agent fabricated a GitHub repo ID and attempted deployment through API. The incident is a clear reminder that powerful automation paths need strict guardrails even with top-tier models.",
           "url": "https://x.com/rauchg/status/2028920268119523788"
+        },
+        {
+          "tag": "tooling",
+          "title": "@gvanrossum: typeagent Memory Library Update",
+          "body": "Guido van Rossum released an updated version of typeagent, a Python library for adding memory to agents. The takeaway is continued momentum toward practical, reusable memory infrastructure in agent stacks.",
+          "url": "https://x.com/gvanrossum/status/2029021031219052768"
         }
       ]
     },
@@ -52,28 +52,28 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "macro",
-          "title": "@KobeissiLetter: US-Spain Trade Escalation",
-          "body": "Kobeissi highlighted Trump statements about cutting trade ties with Spain after base-access friction tied to Iran operations. If policy follows rhetoric, this introduces immediate trade and risk-premium uncertainty across Europe-linked sectors.",
-          "url": "https://x.com/KobeissiLetter/status/2028883668819677666"
-        },
-        {
-          "tag": "energy",
-          "title": "@shanaka86: Hormuz Bottleneck Is Insurance-Led",
-          "body": "Shanaka argued the operational choke point in Hormuz is maritime insurance capacity, not simply naval control, and that emergency public backstops are hard to stand up quickly. The actionable implication is continued volatility in oil/shipping until underwriting confidence returns.",
-          "url": "https://x.com/shanaka86/status/2028948827525529905"
-        },
-        {
           "tag": "policy",
-          "title": "@sama: DoW Agreement Guardrails",
-          "body": "Sam Altman shared contract-language updates intended to limit domestic-surveillance uses and clarify agency scope in government AI work. This is a notable governance datapoint for how frontier models are being integrated into defense contexts.",
+          "title": "@sama: OpenAI-DoW Guardrails Clarified",
+          "body": "Sam Altman said OpenAI and the DoW added explicit language against intentional domestic surveillance of U.S. persons and clarified agency-use boundaries. This is a high-signal governance update for public-sector frontier-model deployment.",
           "url": "https://x.com/sama/status/2028640354912923739"
         },
         {
-          "tag": "talent",
-          "title": "@max_a_schwarzer: OpenAI-to-Anthropic Move",
-          "body": "A senior OpenAI post-training lead announced a move to Anthropic after helping ship multiple recent model generations. The post reinforced that leadership mobility is now a strategic signal in the frontier-lab competition.",
-          "url": "https://x.com/max_a_schwarzer/status/2028939154944585989"
+          "tag": "macro",
+          "title": "@amitisinvesting: Korea Circuit-Breaker Selloff Thread",
+          "body": "Amit argued South Korea's sharp two-day drawdown reflects a mix of leverage unwind, heavy index concentration in memory names, and LNG-price stress. If sustained, he suggests second-order pressure could spill into U.S. tech risk appetite.",
+          "url": "https://x.com/amitisinvesting/status/2029026069534142674"
+        },
+        {
+          "tag": "commentary",
+          "title": "@JoshKale: Apple Capex vs Hyperscaler Arms Race",
+          "body": "This widely shared chart-thread contrasts falling Apple capex with accelerating hyperscaler data-center spend, arguing Apple may still benefit disproportionately via local AI hardware demand. It's commentary, but a useful framing for infra-allocation debates.",
+          "url": "https://x.com/JoshKale/status/2028889347794047071"
+        },
+        {
+          "tag": "research",
+          "title": "@METR_Evals: Benchmark Horizon Correction",
+          "body": "METR announced a modeling correction that had overstated recent 50% time-horizon estimates by roughly 10-20%. This is an important measurement update for anyone using capability trendlines in strategy or policy work.",
+          "url": "https://x.com/METR_Evals/status/2028948235486937098"
         }
       ]
     },
@@ -83,27 +83,27 @@
       "items": [
         {
           "tag": "workflow",
-          "title": "@ArtemXTech: Persistent Memory for Claude Code",
-          "body": "This write-up proposes replacing session-reset friction with local retrieval so coding agents can load prior context automatically. It’s a practical pattern for reducing repetitive prompting and improving continuity on long projects.",
-          "url": "https://x.com/ArtemXTech/status/2028330693659332615"
-        },
-        {
-          "tag": "tooling",
-          "title": "@heynavtoor: Pinchtab Browser Control",
-          "body": "The post describes Pinchtab as a lightweight HTTP-based browser-control layer for agents, with claims of lower token use via text snapshots and diffing. If the architecture holds up in practice, it could simplify cross-stack browser automation.",
-          "url": "https://x.com/heynavtoor/status/2028922003365986705"
+          "title": "@zarazhangrui: Progressive Disclosure for Agent Skills",
+          "body": "A practical skill-design pattern cut always-loaded instruction context from 1,625 lines to 183 while preserving functionality. The key tactic: keep rules concise up front, and load reference material only when needed.",
+          "url": "https://x.com/zarazhangrui/status/2029092514435932647"
         },
         {
           "tag": "insight",
-          "title": "@emollick: Four Capability Leaps in AI",
-          "body": "Ethan Mollick outlined a user-centric timeline from ChatGPT to reasoners to workable agentic systems. The framing is useful for teams deciding whether current gains are incremental or a genuine workflow phase change.",
-          "url": "https://x.com/emollick/status/2028711087504326662"
+          "title": "@runes_leo: 'Everything Is Context' Applied",
+          "body": "This post maps real Claude Code folder practices to formal concepts like scratchpads, fact memory, and bounded reasoning capacity. It's a useful bridge between day-to-day prompting pain and a cleaner context architecture.",
+          "url": "https://x.com/runes_leo/status/2028990557331112363"
         },
         {
-          "tag": "sdlc",
-          "title": "@swyx: Code Review as Next Agent Bottleneck",
-          "body": "Swyx argued that human code review is emerging as the limiting step as agent output volume rises. The important takeaway is to redesign review workflows now, rather than waiting for PR throughput to outgrow team capacity.",
-          "url": "https://x.com/swyx/status/2028795270306079156"
+          "tag": "ops",
+          "title": "@hwchase17: AI-Native Agent Debugging Example",
+          "body": "A LangSmith debugging walkthrough shows how trace-level monitoring surfaced a subtle tool-parameter mismatch (file_path vs path) causing intermittent failures. The broader lesson is that observability quality now directly controls agent reliability.",
+          "url": "https://x.com/hwchase17/status/2028883290959299002"
+        },
+        {
+          "tag": "release",
+          "title": "@steipete: OpenClaw Beta Update",
+          "body": "Steipete announced a major OpenClaw beta release and shared upgrade instructions. For active users, this is a direct signal to test new capabilities and integration changes quickly.",
+          "url": "https://x.com/steipete/status/2028682449853567048"
         }
       ]
     }
