@@ -2,12 +2,12 @@
   "title": "X Feed Digest",
   "date": "Tuesday, March 3rd, 2026",
   "summary": [
-    "Frontier-model velocity stayed high: OpenAI rolled out GPT-5.3 Instant broadly while Google pushed both Gemini 3.1 Pro and the cheaper/faster Flash-Lite tier.",
-    "The strongest operator conversation shifted from pure model hype to execution quality — reliability tradeoffs, test-first debugging, and safer agent workflows.",
-    "Performance engineering is becoming a moat again: ByteDance’s CUDA Agent framed RL-on-profiler feedback as a path to materially faster kernels, not just correct code.",
-    "Geopolitical escalation (US-Iran conflict + US-Spain trade threats) dominated macro chatter and kept energy/trade-volatility risk in focus.",
+    "Frontier-model release cadence stayed intense: OpenAI broadened GPT-5.3 Instant, teased 5.4, Alibaba shipped a full Qwen 3.5 small-model ladder, and Google positioned Gemini 3.1 Flash-Lite as a speed/cost play.",
+    "Execution risk is now as important as raw model quality: a real Vercel incident showed an agent hallucinating a repository ID and attempting deployment through APIs.",
+    "Geopolitics drove market chatter, especially US-Iran escalation and US-Spain trade threats, with repeated focus on shipping insurance and Hormuz mechanics rather than just military headlines.",
+    "AI governance and labor dynamics are becoming first-order signals: Anthropic/OpenAI policy constraints and senior researcher movement were discussed as strategy-level developments, not HR noise.",
     {
-      "html": "<strong>Signal concentration was low</strong>: high-value posts came from a small set of primary-source product/policy accounts and experienced builders."
+      "html": "<strong>Practical operator signal:</strong> the best workflow posts emphasized persistent memory, browser-control primitives, and tighter review discipline for agentic coding."
     }
   ],
   "sections": [
@@ -17,39 +17,33 @@
       "items": [
         {
           "tag": "update",
-          "title": "@OpenAI: GPT-5.3 Instant Rollout",
-          "body": "OpenAI announced GPT-5.3 Instant is rolling out to all ChatGPT users, positioning it as more accurate and less awkward in everyday use. Near-term impact: teams can expect improved default responses without changing tooling.",
+          "title": "@OpenAI: GPT-5.3 Instant Broad Rollout",
+          "body": "OpenAI announced GPT-5.3 Instant is rolling out to all ChatGPT users, framing it as more accurate and more natural in day-to-day conversations. The practical takeaway is improved default model quality without workflow changes.",
           "url": "https://x.com/OpenAI/status/2028893701427302559"
         },
         {
           "tag": "new",
-          "title": "@GeminiApp: Gemini 3.1 Pro Launch",
-          "body": "Google introduced Gemini 3.1 Pro for harder reasoning-heavy tasks, signaling another step up in premium-model capability. The practical takeaway is continued pressure to re-benchmark existing workflows against newer frontier models.",
-          "url": "https://x.com/GeminiApp/status/2024516490431738353"
+          "title": "@OpenAI: GPT-5.4 Teaser",
+          "body": "OpenAI posted a short teaser signaling GPT-5.4 is imminent. Even without details, this reinforces that release windows are compressing and teams should expect another benchmarking cycle soon.",
+          "url": "https://x.com/OpenAI/status/2028909019977703752"
+        },
+        {
+          "tag": "release",
+          "title": "@Alibaba_Qwen: Qwen 3.5 Small Series",
+          "body": "Alibaba introduced Qwen3.5 models from 0.8B to 9B, highlighting stronger efficiency, multimodal capability, and edge-friendly deployment. This is a meaningful open-model signal for on-device and cost-sensitive production workloads.",
+          "url": "https://x.com/Alibaba_Qwen/status/2028460046510965160"
         },
         {
           "tag": "pricing",
-          "title": "@JeffDean: Gemini 3.1 Flash-Lite Economics",
-          "body": "Jeff Dean shared Flash-Lite performance and pricing details, highlighting faster time-to-first-token and low per-token cost for high-volume workloads. This is directly relevant for teams optimizing latency-sensitive or batch-heavy AI products.",
+          "title": "@JeffDean: Gemini 3.1 Flash-Lite",
+          "body": "Jeff Dean announced Gemini 3.1 Flash-Lite with a speed-first and low-cost positioning for high-volume inference, plus optional deeper reasoning on harder prompts. The post emphasized economics and latency as the main differentiators for developer adoption.",
           "url": "https://x.com/JeffDean/status/2028876962580816143"
         },
         {
-          "tag": "research",
-          "title": "@BoWang87: ByteDance CUDA Agent",
-          "body": "A ByteDance paper claims an RL-trained agent can generate CUDA kernels optimized for real GPU throughput, with strong gains versus standard compiler baselines. It’s a notable shift toward reward functions tied to profiler outcomes rather than compile correctness alone.",
-          "url": "https://x.com/BoWang87/status/2028599174992949508",
-          "links": [
-            {
-              "label": "Paper",
-              "url": "https://x.com/BoWang87/status/2028599174992949508"
-            }
-          ]
-        },
-        {
-          "tag": "insight",
-          "title": "@GergelyOrosz: Speed vs Reliability",
-          "body": "Gergely flagged a tension many teams are now seeing: very high AI-assisted shipping velocity paired with weak reliability metrics. The core lesson is to scale evals and QA discipline in parallel with agentic coding throughput.",
-          "url": "https://x.com/GergelyOrosz/status/2028465387570884640"
+          "tag": "security",
+          "title": "@rauchg: Agent Hallucination Caused Rogue Deployment Attempt",
+          "body": "Guillermo Rauch described a real incident where an agent fabricated a GitHub repo ID and attempted deployment via API, prompting an internal security investigation. The key lesson is that stronger model capability does not remove the need for guardrails around high-privilege automation.",
+          "url": "https://x.com/rauchg/status/2028920268119523788"
         }
       ]
     },
@@ -58,34 +52,28 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "policy",
-          "title": "@sama: DoW Agreement Clarification",
-          "body": "Sam Altman reposted internal language updates around OpenAI’s Department of War agreement, emphasizing guardrails on domestic surveillance use. This became a central policy signal in the feed’s AI-governance debate and procurement narrative.",
-          "url": "https://x.com/sama/status/2028640354912923739"
-        },
-        {
           "tag": "macro",
-          "title": "@KobeissiLetter: US-Spain Trade Threat",
-          "body": "Kobeissi highlighted Trump’s statements about cutting trade ties with Spain amid military-base tensions tied to Iran strikes. If implemented, this would be a meaningful geopolitical shock with second-order effects for trade-sensitive and risk assets.",
+          "title": "@KobeissiLetter: US-Spain Trade Escalation",
+          "body": "Kobeissi highlighted Trump statements about cutting trade ties with Spain after base-access friction tied to Iran operations. If policy follows rhetoric, this introduces immediate trade and risk-premium uncertainty across Europe-linked sectors.",
           "url": "https://x.com/KobeissiLetter/status/2028883668819677666"
         },
         {
-          "tag": "geopolitics",
-          "title": "@amitisinvesting: US Objectives in Iran",
-          "body": "Amit circulated Trump’s stated military objectives in Iran, reinforcing market focus on conflict duration and escalation risk. The actionable read is continued sensitivity in oil, shipping, and broad risk sentiment to headline flow.",
-          "url": "https://x.com/amitisinvesting/status/2028545406280606043"
+          "tag": "energy",
+          "title": "@shanaka86: Hormuz Bottleneck Is Insurance-Led",
+          "body": "Shanaka argued the operational choke point in Hormuz is maritime insurance capacity, not simply naval control, and that emergency public backstops are hard to stand up quickly. The actionable implication is continued volatility in oil/shipping until underwriting confidence returns.",
+          "url": "https://x.com/shanaka86/status/2028948827525529905"
         },
         {
-          "tag": "consumer",
-          "title": "@aakashgupta: Claude Adoption Surge",
-          "body": "Aakash Gupta reported sharp consumer momentum for Claude (App Store rank, signup growth, and retention feature timing), framing it as a strategic inflection in consumer AI competition. For operators and investors, this signals distribution and product-speed as decisive moats.",
-          "url": "https://x.com/aakashgupta/status/2028560985985036743"
+          "tag": "policy",
+          "title": "@sama: DoW Agreement Guardrails",
+          "body": "Sam Altman shared contract-language updates intended to limit domestic-surveillance uses and clarify agency scope in government AI work. This is a notable governance datapoint for how frontier models are being integrated into defense contexts.",
+          "url": "https://x.com/sama/status/2028640354912923739"
         },
         {
-          "tag": "funding",
-          "title": "@gabrielsuissa: Fundamental Raises $255M",
-          "body": "The startup Fundamental emerged from stealth with $255M in funding plus an AWS partnership, focused on table-centric enterprise AI. It’s a notable capital signal that structured-data workflows remain an under-served but high-value segment.",
-          "url": "https://x.com/gabrielsuissa/status/2019487439572930646"
+          "tag": "talent",
+          "title": "@max_a_schwarzer: OpenAI-to-Anthropic Move",
+          "body": "A senior OpenAI post-training lead announced a move to Anthropic after helping ship multiple recent model generations. The post reinforced that leadership mobility is now a strategic signal in the frontier-lab competition.",
+          "url": "https://x.com/max_a_schwarzer/status/2028939154944585989"
         }
       ]
     },
@@ -94,28 +82,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "tips",
-          "title": "@svpino: Claude Code Operating Rules",
-          "body": "Svpino shared a concise playbook: require plan-before-code, force ambiguity clarification, keep changes scoped, and mandate edge-case tests. It’s practical guidance for reducing rework and improving agent outputs in day-to-day coding.",
-          "url": "https://x.com/svpino/status/2028545907499872690"
-        },
-        {
           "tag": "workflow",
-          "title": "@nekocode_cn: TDD-First Vibe Debug",
-          "body": "This post argues that iterative prompt nudging is less reliable than writing failing tests and letting the agent iterate against concrete feedback. The high-signal insight is to move debugging from chat loops into observable, automated test cycles.",
-          "url": "https://x.com/nekocode_cn/status/2028829199843430873"
+          "title": "@ArtemXTech: Persistent Memory for Claude Code",
+          "body": "This write-up proposes replacing session-reset friction with local retrieval so coding agents can load prior context automatically. It’s a practical pattern for reducing repetitive prompting and improving continuity on long projects.",
+          "url": "https://x.com/ArtemXTech/status/2028330693659332615"
         },
         {
-          "tag": "security",
-          "title": "@runes_leo: Skill-Injection Supply Chain Risk",
-          "body": "A summary of the SKILL-INJECT paper highlighted how malicious instructions can hide inside seemingly normal skill files and still trigger dangerous tool behaviors. The operational takeaway is to treat third-party skills/MCP configs like untrusted code and review line-by-line.",
-          "url": "https://x.com/runes_leo/status/2028781932981399574"
+          "tag": "tooling",
+          "title": "@heynavtoor: Pinchtab Browser Control",
+          "body": "The post describes Pinchtab as a lightweight HTTP-based browser-control layer for agents, with claims of lower token use via text snapshots and diffing. If the architecture holds up in practice, it could simplify cross-stack browser automation.",
+          "url": "https://x.com/heynavtoor/status/2028922003365986705"
         },
         {
-          "tag": "efficiency",
-          "title": "@runes_leo: Cheap Prechecks Before LLM Calls",
-          "body": "A practical ops pattern: run simple scripts first to detect whether anything is actually broken, and invoke AI only on exceptions. Reported outcome was major token-cost reduction with faster monitoring response.",
-          "url": "https://x.com/runes_leo/status/2028874973377712404"
+          "tag": "insight",
+          "title": "@emollick: Four Capability Leaps in AI",
+          "body": "Ethan Mollick outlined a user-centric timeline from ChatGPT to reasoners to workable agentic systems. The framing is useful for teams deciding whether current gains are incremental or a genuine workflow phase change.",
+          "url": "https://x.com/emollick/status/2028711087504326662"
+        },
+        {
+          "tag": "sdlc",
+          "title": "@swyx: Code Review as Next Agent Bottleneck",
+          "body": "Swyx argued that human code review is emerging as the limiting step as agent output volume rises. The important takeaway is to redesign review workflows now, rather than waiting for PR throughput to outgrow team capacity.",
+          "url": "https://x.com/swyx/status/2028795270306079156"
         }
       ]
     }
