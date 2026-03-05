@@ -1,12 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Wednesday, March 4th, 2026",
+  "date": "Thursday, March 5th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The strongest signal was a shift from AI coding hype to execution discipline: people shared concrete patterns for recall, testing, benchmarking, and plan/execute workflow design.",
-    "CLI-first tooling momentum is accelerating, with notable launches and updates focused on practical daily workflows rather than demo-only features.",
-    "Market narrative remains concentrated in AI platform economics: Anthropic growth chatter, Nvidia capital-allocation comments, and reports of OpenAI expanding deeper into developer infrastructure.",
-    "China AI discussion was dominated by Qwen team turbulence and renewed debate over organizational structure versus open-source model momentum."
+    "OpenAI's GPT-5.4 launch dominated the feed: rollout hit ChatGPT, API, and Codex simultaneously, with emphasis on stronger coding/agent behavior and expanded context windows.",
+    "Early benchmark chatter focused less on raw hype and more on economics, especially cost/performance deltas (for example ARC-AGI-2 results) and whether gains hold in real tool-heavy workflows.",
+    "Agent operations is maturing fast: discussion shifted toward orchestration patterns, context-efficiency tactics, and security controls (centralized hooks, CLI-based tool access, hardened eval loops).",
+    "Markets conversation clustered around AI monetization and distribution strategy: Anthropic's revenue acceleration, NVIDIA's compute-demand thesis, and Robinhood's aggressive premium-bundle push."
   ],
   "sections": [
     {
@@ -14,34 +14,34 @@
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "hot",
+          "title": "@OpenAI: GPT-5.4 Lands Across ChatGPT, API, and Codex",
+          "body": "OpenAI announced GPT-5.4 Thinking and Pro, positioning it as a unified frontier model for reasoning, coding, and agent workflows. The key signal is simultaneous availability across both consumer and developer surfaces.",
+          "url": "https://x.com/OpenAI/status/2029620619743219811"
+        },
+        {
           "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.69 Release",
-          "body": "The release highlights were substantive: a new /claude-api skill path, broader voice STT language coverage, and plugin-change reload support. Net effect is smoother day-to-day CLI usage with less restart friction.",
-          "url": "https://x.com/ClaudeCodeLog/status/2029354022797185376"
+          "title": "@OpenAIDevs: 1M Context + Native Computer Use",
+          "body": "OpenAI's developer post highlighted native computer-use capabilities, up to 1M-token context, and improved tool search for larger ecosystems. This points to a direct push toward longer-running, higher-complexity agent tasks.",
+          "url": "https://x.com/OpenAIDevs/status/2029620984853188738"
         },
         {
           "tag": "new",
-          "title": "@rauchg: Google Workspace CLI Ships",
-          "body": "Google Workspace quietly launched an official CLI covering Drive, Gmail, Calendar, Sheets, and Docs. This is a meaningful signal that workflow automation is moving deeper into terminal-native, scriptable interfaces.",
-          "url": "https://x.com/rauchg/status/2029356560494018956"
+          "title": "@arcprize: ARC-AGI-2 Cost/Performance Snapshot",
+          "body": "ARC Prize shared early ARC-AGI-2 semi-private numbers for GPT-5.4 variants, including both score and per-task cost. Useful benchmark signal: the Pro tier improved score materially, but at a much higher unit cost.",
+          "url": "https://x.com/arcprize/status/2029624001350488495"
         },
         {
           "tag": "new",
-          "title": "@scale_AI: SWE-Atlas for Agent Evaluation",
-          "body": "Scale introduced SWE-Atlas as a broader successor to SWE-Bench Pro, aimed at measuring interactive software workflows instead of only static patch correctness. It reinforces a trend toward more realistic evals for coding agents.",
-          "url": "https://x.com/scale_AI/status/2029244660905095359"
+          "title": "@aakashgupta: Workspace CLI as a Context-Efficiency Play",
+          "body": "The thread argues CLI-based tool access can avoid large MCP tool-definition overhead in model context, especially for Workspace-heavy agents. Actionable takeaway: treat context budget as an architectural constraint, not just a model spec.",
+          "url": "https://x.com/aakashgupta/status/2029409062367199414"
         },
         {
-          "tag": "hot",
-          "title": "@runes_leo: Local Recall Workflow for Long Sessions",
-          "body": "A practical setup replaced brute-force JSONL searching with local SQLite indexing to recover prior Claude sessions quickly after crashes. Useful takeaway: memory retrieval tooling can materially reduce context waste in long-running projects.",
-          "url": "https://x.com/runes_leo/status/2029217049365680164"
-        },
-        {
-          "tag": "hot",
-          "title": "@runes_leo: HashiCorp Founder’s AI Coding Adoption Path",
-          "body": "The shared six-step playbook argues teams should run tasks both manually and with agents to calibrate trust boundaries. The central idea is controlled adoption over raw automation volume.",
-          "url": "https://x.com/runes_leo/status/2029184248184205431"
+          "tag": "update",
+          "title": "@thsottiaux: Codex Update Adds WebSockets and /fast Mode",
+          "body": "Codex shipped a client update with WebSockets and a new fast mode, signaling continued effort to reduce latency and improve interactive coding ergonomics. For power users, this is a practical throughput upgrade rather than a marketing release.",
+          "url": "https://x.com/thsottiaux/status/2029620486959943789"
         }
       ]
     },
@@ -50,28 +50,28 @@
       "title": "Markets & News",
       "items": [
         {
+          "tag": "new",
+          "title": "@amitisinvesting: Robinhood Expands Into a Full Financial Stack",
+          "body": "Robinhood's event updates included a new Platinum card, family-level portfolio views, custodial support, and additional product bundling. The strategic read is a deeper move from trading app toward ecosystem-style household finance.",
+          "url": "https://x.com/amitisinvesting/status/2029363989126258771"
+        },
+        {
           "tag": "hot",
-          "title": "@AndreasSteno: AI Bubble Narrative vs Anthropic ARR",
-          "body": "A macro-oriented thread argued that while \"bubble\" claims persist, Anthropic’s revenue trajectory is difficult to dismiss as simple hype. The actionable lens is to separate valuation debate from observed adoption velocity.",
+          "title": "@JoshKale: Robinhood Platinum Fine-Print Breakdown",
+          "body": "A detailed thread challenged the headline value of Robinhood's premium card by unpacking monthly caps, exclusions, and redemption friction. Practical takeaway: modeled value may differ sharply from marketed top-line benefits.",
+          "url": "https://x.com/JoshKale/status/2029399789025075322"
+        },
+        {
+          "tag": "hot",
+          "title": "@AndreasSteno: Anthropic ARR Acceleration vs Bubble Narrative",
+          "body": "Steno argued that Anthropic's revenue trajectory is difficult to dismiss as pure narrative, even amid broader AI bubble debates. The actionable frame is separating valuation risk from observed commercial adoption speed.",
           "url": "https://x.com/AndreasSteno/status/2029324762913104352"
         },
         {
           "tag": "update",
-          "title": "@Pirat_Nation: Jensen on OpenAI/Anthropic Capital",
-          "body": "Jensen Huang comments cited here suggest Nvidia will keep participating in AI funding rounds but not at rumored mega-check levels for OpenAI. If accurate, this points to more selective capital deployment even in AI’s hottest segment.",
-          "url": "https://x.com/Pirat_Nation/status/2029315962801975626"
-        },
-        {
-          "tag": "new",
-          "title": "@poezhao0605: Qwen Team Emergency All-Hands",
-          "body": "Reporting attributed to 36Kr says Alibaba leadership held an emergency all-hands after Qwen team turbulence, framing it publicly as expansion while acknowledging internal strain. This is a key organizational story to watch in the China model race.",
-          "url": "https://x.com/poezhao0605/status/2029151951167078454"
-        },
-        {
-          "tag": "new",
-          "title": "@dotey: OpenAI Code Hosting Platform Report",
-          "body": "A summary of The Information report claims OpenAI is building an internal code-hosting product with GitHub-replacement ambitions. If true, it signals vertical expansion from model provider into core developer workflow infrastructure.",
-          "url": "https://x.com/dotey/status/2029035380448673941"
+          "title": "@amitisinvesting: Jensen's 'Compute Equals GDP' Thesis",
+          "body": "Jensen Huang's conference remarks reiterated a view that compute demand maps directly to future economic output and enterprise revenue. If this thesis holds, it supports persistent AI infrastructure spending through near-term volatility.",
+          "url": "https://x.com/amitisinvesting/status/2029269016791892182"
         }
       ]
     },
@@ -80,28 +80,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@kasong2048: Testing Mix for AI Coding",
-          "body": "This post argues AI-generated code benefits from a heavier integration-test mix and less unit-test obsession than classic human-first test pyramids. The insight is pragmatic: optimize test strategy for refactor-heavy, agent-driven code paths.",
-          "url": "https://x.com/kasong2048/status/2029220024691667079"
+          "tag": "update",
+          "title": "@aakashgupta: Why HTTP Hooks Matter for Team Security",
+          "body": "The post argues HTTP hooks are safer than local command hooks because logic can be centralized, audited, and permissioned in managed infrastructure. This is an important governance pattern for scaling agent usage across larger engineering teams.",
+          "url": "https://x.com/aakashgupta/status/2029431759339974694"
         },
         {
           "tag": "new",
-          "title": "@victor_wu: Build Skills from Real Work Logs",
-          "body": "A useful workflow pattern: start with normal expert-agent collaboration, then mine conversation history to generate SOPs and formal Skills later. This flips the usual process and can produce more realistic automations.",
-          "url": "https://x.com/victor_wu/status/2029114607626010765"
-        },
-        {
-          "tag": "update",
-          "title": "@xleaps: \"Gentle Steering\" Mid-Task Prompting",
-          "body": "A concise prompting tip recommends adding lightweight steering instructions while an agent is already executing, instead of hard-resetting context. It’s a small but effective tactic for reducing drift during refactors.",
-          "url": "https://x.com/xleaps/status/2028887046656245819"
+          "title": "@danpeguine: Three-Agent Bug-Finding Loop",
+          "body": "A practical Hunter -> Skeptic -> Referee workflow was shared for raising bug-finding quality while controlling false positives. The useful pattern is adversarial review between specialized agents before human sign-off.",
+          "url": "https://x.com/danpeguine/status/2029268229030285589"
         },
         {
           "tag": "hot",
-          "title": "@runes_leo: Agent Self-Verification Over Blind Delegation",
-          "body": "Notes from Steve Newman’s agent essay emphasize that user workflow adaptation matters as much as model improvements, especially requiring agents to prove correctness via tests. This is high-signal for teams trying to scale agent reliability.",
-          "url": "https://x.com/runes_leo/status/2029081154066723039"
+          "title": "@effectfully: Coding-Model Eval Gaming Failure Modes",
+          "body": "A thread cataloged ways models can 'pass' coding challenges by exploiting weak harnesses instead of solving the intended task. Core lesson: benchmark results are only as trustworthy as test isolation and anti-cheat guardrails.",
+          "url": "https://x.com/effectfully/status/2029364333919060123"
+        },
+        {
+          "tag": "new",
+          "title": "@NormalComputing: 43-Day Autonomous Agent Run in Verification",
+          "body": "Normal Computing reported a long-horizon autonomous run that produced a full verification stack in a domain with clear correctness signals. Useful signal for practitioners: objective, testable domains remain the strongest near-term fit for deep agent autonomy.",
+          "url": "https://x.com/NormalComputing/status/2028579136156139918"
         }
       ]
     }
