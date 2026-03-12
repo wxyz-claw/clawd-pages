@@ -1,13 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Friday, March 6th, 2026",
-  "summary_title": "High Signal Summary",
+  "date": "Thursday, March 12th, 2026",
   "summary": [
-    "Security moved to center stage: both Anthropic and OpenAI shipped code-security agents within two weeks, pushing the market narrative from \"coding copilots\" to \"software risk infrastructure.\"",
-    "Agent operations matured beyond demos: recurring task loops, local schedulers, and memory tooling are becoming standard workflow primitives for daily use.",
-    "Distribution and packaging are now strategic moats: enterprise procurement flow (marketplaces/bundles) is emerging as a competitive lever separate from raw model quality.",
-    "Cost-performance pressure is increasing fast: specialized smaller models and RL-tuned enterprise systems are challenging default frontier-model usage on latency and price.",
-    "Actionable investor commentary favored option-income tactics in range-bound mega-cap names while AI platform shifts continued repricing adjacent software categories."
+    "The dominant signal in this batch was that AI-agent infrastructure is getting real: crawling, tool-calling, shared context layers, and research-to-execution bridges are replacing one-shot prompt hacks.",
+    "AI coding discussion has also become more operational. The best posts were about long-task reliability, reproducible review loops, and context management—not flashy demos.",
+    "Model discourse is shifting from raw benchmark bragging to the settings that actually change output in production, like hidden reasoning defaults, quota policies, and how agents behave over long runs.",
+    "The clearest market call was Michael Burry’s bullish Hong Kong / Hang Seng Tech valuation case, while AI capital markets still look overheated through Cursor-style multiples and early infrastructure bets on agent payments.",
+    "The most useful general tactics were concrete learning and debugging systems: use NotebookLM to map a field quickly, and make agents prove bug fixes with a failing test before they touch production code."
   ],
   "sections": [
     {
@@ -15,40 +14,28 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.71 Adds Looping + Cron",
-          "body": "Claude Code 2.1.71 shipped /loop and in-session cron scheduling, plus fixes for long-running stdin failures and /fork plan-file collisions. This is a meaningful reliability and automation bump for users running persistent coding sessions.",
-          "url": "https://x.com/ClaudeCodeLog/status/2030075364492390728"
+          "tag": "hot",
+          "title": "@sitinme: Cloudflare Crawl Endpoint",
+          "body": "Cloudflare’s new Crawl Endpoint turns full-site crawling into a single API call, handling JavaScript-heavy pages and incremental recrawls for you. That is a meaningful upgrade for RAG, search, and agent workflows because it removes a lot of brittle browser and anti-bot plumbing.",
+          "url": "https://x.com/sitinme/status/2031724322314940874"
         },
         {
-          "tag": "hot",
-          "title": "@OpenAIDevs: Codex Security Launch",
-          "body": "OpenAI introduced Codex Security as an application-security agent that finds, validates, and proposes fixes for vulnerabilities in codebases. The practical signal is that automated AppSec review is becoming a built-in layer of the coding-agent stack.",
-          "url": "https://x.com/OpenAIDevs/status/2029983809652035758"
+          "tag": "update",
+          "title": "@OpenAIDevs: Responses API as Action Layer",
+          "body": "OpenAI used the one-year mark of the Responses API to emphasize that the important shift is from chatting with models to letting them call tools, search, and run multi-step workflows. The signal here is that production AI stacks are increasingly being framed around actions and orchestration, not just text generation.",
+          "url": "https://x.com/OpenAIDevs/status/2031800483032285582"
         },
         {
           "tag": "new",
-          "title": "@OpenAIDevs: Codex for Open Source Program",
-          "body": "OpenAI announced Codex for Open Source, positioning agent assistance for maintainers as support for review, codebase navigation, and security coverage. This points to more direct infra support for OSS teams that carry high maintenance load.",
-          "url": "https://x.com/OpenAIDevs/status/2029998191043911955"
+          "title": "@kevinma_dev_zh: Trellis for Shared AI Coding Context",
+          "body": "Trellis proposes a project-local context layer so tools like Claude Code, Cursor, and Codex can share the same rules, task docs, and workflow state. If you bounce across multiple coding agents, this is a pragmatic way to reduce repeated prompting and keep standards portable across tools.",
+          "url": "https://x.com/kevinma_dev_zh/status/2032043626172465364"
         },
         {
-          "tag": "update",
-          "title": "@trq212: Local Scheduled Tasks in Claude Code Desktop",
-          "body": "Claude Code desktop now supports local scheduled tasks that run while the machine is awake. It reinforces a shift toward always-on personal automations instead of purely interactive prompting.",
-          "url": "https://x.com/trq212/status/2030019397335843288"
-        },
-        {
-          "tag": "update",
-          "title": "@awnihannun: Mobile-Class Models Catching Up",
-          "body": "Awni Hannun highlighted benchmark results suggesting Qwen3.5 4B approaches GPT-4o-level quality while running on modern phones. If directionally true, the frontier-to-device quality lag could compress to a few years, with big implications for on-device AI products.",
-          "url": "https://x.com/awnihannun/status/2030024849570288080"
-        },
-        {
-          "tag": "update",
-          "title": "@derrickcchoi: Codex Windows-Native Sandbox",
-          "body": "Derrick Choi emphasized that Codex now runs with a native Windows sandbox using OS security primitives rather than WSL indirection. For enterprise IT, this lowers friction for secure rollout in Windows-heavy environments.",
-          "url": "https://x.com/derrickcchoi/status/2029941114136850658"
+          "tag": "insight",
+          "title": "@SystematicPeter: NotebookLM Bridge into Claude Code",
+          "body": "This notebooklm-py bridge treats NotebookLM as the research and extraction layer, then hands structured knowledge to Claude Code for execution. It is a sharp pattern for anyone doing serious reading-heavy work: separate knowledge digestion from agentic implementation instead of forcing one tool to do both badly.",
+          "url": "https://x.com/SystematicPeter/status/2031732668770259378"
         }
       ]
     },
@@ -58,69 +45,57 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@aakashgupta: Cybersecurity Repricing Thesis",
-          "body": "Aakash Gupta argued that back-to-back security-agent launches from Anthropic and OpenAI are repricing code-security economics, framing vulnerability scanning as a bundled feature rather than a standalone spend. The key investor takeaway is potential margin pressure for incumbents concentrated in app/code scanning.",
-          "url": "https://x.com/aakashgupta/status/2030042467463221283"
+          "title": "@jarodise: Michael Burry’s Hong Kong Value Thesis",
+          "body": "One of the best market posts in the batch flagged Burry’s latest argument that Hang Seng Tech is trading at an unusually deep disconnect between price and underlying business performance. Whether you agree or not, it is a concrete valuation thesis with a clear region and sector attached—not vague macro doomposting.",
+          "url": "https://x.com/jarodise/status/2032009584584638925"
+        },
+        {
+          "tag": "insight",
+          "title": "@TheGeorgePu: Cursor at $50B Shows Peak AI Froth",
+          "body": "This post lays out Cursor’s valuation curve from $400M to $50B in roughly fifteen months and frames it against legacy industrial companies like Ford. The useful takeaway is not just the number—it is how aggressively the market is capitalizing application-layer AI winners despite obvious platform dependency risk.",
+          "url": "https://x.com/TheGeorgePu/status/2031892733204578712"
         },
         {
           "tag": "new",
-          "title": "@JoshKale: Claude Marketplace as Procurement Moat",
-          "body": "Josh Kale's read is that Anthropic's marketplace could turn pre-committed enterprise budget into a distribution advantage by letting teams buy third-party tools through one contract. That shifts competitive dynamics from pure model quality to purchasing workflow control.",
-          "url": "https://x.com/JoshKale/status/2029968160669982976"
+          "title": "@lyc_zh: Agent Payments Are Still Tiny, but Infra Is Moving",
+          "body": "A good reality check on the agent-payments narrative: after stripping out wash-like activity, the actual volume looks closer to $1.6M than the headline numbers floating around. The reason it still matters is that Stripe, Cloudflare, Vercel, and Google appear to be aligning around the same payment rails before the market is large.",
+          "url": "https://x.com/lyc_zh/status/2031887916985958649"
         },
         {
           "tag": "update",
-          "title": "@jaminball: Databricks KARL Cost/Latency Play",
-          "body": "Jamin Ball summarized Databricks' KARL as an RL-tuned enterprise model claiming better knowledge-task performance at lower cost and latency than larger frontier baselines. The business implication is growing demand for domain-optimized agents over generalized premium inference.",
-          "url": "https://x.com/jaminball/status/2030025385644282202"
-        },
-        {
-          "tag": "update",
-          "title": "@amitisinvesting: Covered Calls in Range-Bound NVDA",
-          "body": "Amit's note focuses on aggressively writing covered calls in choppy, headline-driven ranges, with NVDA used as a live example. The actionable point is income generation can outperform directional bets in sideways regimes, but assignment risk on breakout must be accepted up front.",
-          "url": "https://x.com/amitisinvesting/status/2030001485690421297"
-        },
-        {
-          "tag": "update",
-          "title": "@indigox: Anthropic Exposure Data vs Real Adoption",
-          "body": "A summary of Anthropic's occupational-exposure analysis highlighted a large gap between theoretical AI applicability and observed usage in real work tasks. For macro watchers, this supports a slower near-term labor displacement path even as capability curves keep improving.",
-          "url": "https://x.com/indigox/status/2029754827077734710"
+          "title": "@dotey: Viral Amazon Layoff Thread Needed a Fact Check",
+          "body": "This was one of the more useful news-hygiene posts: it argues a viral Amazon layoff thread mixed a real headline with unverified internal claims to manufacture panic. In a feed full of rumor-merchants, the meta-signal is to separate confirmed corporate disclosures from anonymous embellishment before treating any post as tradable information.",
+          "url": "https://x.com/dotey/status/2031926334780264475"
         }
       ]
     },
     {
       "emoji": "🧭",
-      "title": "General",
+      "title": "General Useful",
       "items": [
         {
+          "tag": "insight",
+          "title": "@yibie: NotebookLM Study Method for Fast Domain Mapping",
+          "body": "A Stanford-style learning workflow stood out here: load textbooks, papers, and notes into NotebookLM, then ask for consensus models, fault lines, and unresolved debates instead of generic summaries. It is a much better recipe for getting oriented in a new field quickly because it builds a map of the territory, not just a recap.",
+          "url": "https://x.com/yibie/status/2031934178896593225"
+        },
+        {
           "tag": "new",
-          "title": "@tomcrawshaw01: Practical Local Memory Stack for Claude Code",
-          "body": "Tom Crawshaw shared a three-tool workflow (searchable sessions, auto-export, and recall) to add persistent memory while keeping data local. It's a concrete pattern for reducing context loss without adding cloud dependencies.",
-          "url": "https://x.com/tomcrawshaw01/status/2029919688713719809"
+          "title": "@tangming2005: Fix Bugs by Reproducing Them First",
+          "body": "A strong CLAUDE.md tweak: when reporting a bug, require the agent to first write a test that reproduces it, then let subagents attempt fixes and prove success with a passing test. This is one of those small workflow rules that can materially cut wasted agent thrash.",
+          "url": "https://x.com/tangming2005/status/2031358195558658266"
         },
         {
           "tag": "update",
-          "title": "@bentossell: Multi-Agent Build Loop Blueprint",
-          "body": "Ben Tossell posted a compact production loop: formal specs, progress tracking, test gates, browser dogfooding, and iterative debugging before handoff. This is high-utility as an operator checklist for teams trying to make agent output consistently shippable.",
-          "url": "https://x.com/bentossell/status/2029892003853471870"
+          "title": "@chrysb: OpenClaw Cron Delivery Got Stricter",
+          "body": "The OpenClaw 2026.3.11 release tightened cron-owned delivery behavior in isolated runs, which means jobs that relied on side-channel sending can now silently stop delivering. If you run automations, this is the kind of low-drama operational change that is worth catching early.",
+          "url": "https://x.com/chrysb/status/2031969320020971522"
         },
         {
-          "tag": "update",
-          "title": "@garrytan: 80% First Draft, Then Fast PR Iteration",
-          "body": "Garry Tan outlined a pragmatic cadence: push architecture context for an 80% first pass, then run multiple tight review/fix loops inside one PR. The core lesson is that leverage comes from structured iteration, not one-shot prompting.",
-          "url": "https://x.com/garrytan/status/2029965576928641057"
-        },
-        {
-          "tag": "update",
-          "title": "@runes_leo: Stop Editing Drafts, Improve the Process",
-          "body": "Runes argues that repeatedly hand-fixing weak AI drafts is a trap, and that recurring corrections should be converted into upstream workflow rules. Useful principle: optimize the system so baseline outputs rise and human effort shifts to acceptance, not rewrite.",
-          "url": "https://x.com/runes_leo/status/2029899295084695755"
-        },
-        {
-          "tag": "update",
-          "title": "@levelsio: Real-World OpenClaw Deployment Lessons",
-          "body": "Levelsio reported that the strongest value came from persistent chat-native UX (Telegram) rather than maximal autonomy, and highlighted isolation as necessary after cross-chat leakage during experimentation. The practical takeaway is product value comes from reliable everyday workflows plus strict boundary design.",
-          "url": "https://x.com/levelsio/status/2029761803769594232"
+          "tag": "new",
+          "title": "@wesbos: Paper Adds MCP-Native Design Workflows",
+          "body": "Paper was pitched here as a Figma-like design tool with MCP support, letting agents pull from and write back to design state. The practical angle is that design tools are starting to become first-class participants in agent workflows instead of static handoff documents.",
+          "url": "https://x.com/wesbos/status/2031837764514431314"
         }
       ]
     }
