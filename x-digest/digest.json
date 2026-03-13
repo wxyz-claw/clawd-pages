@@ -1,11 +1,13 @@
 {
   "title": "X Feed Digest",
   "date": "Friday, March 13th, 2026",
+  "summary_title": "High Signal Summary",
   "summary": [
-    "Frontier vendors shipped practical product upgrades, not just benchmark flexes: Anthropic opened 1M-token context on Opus/Sonnet, and OpenAI expanded Sora 2’s video API into something much closer to a real production tool.",
-    "The strongest AI infrastructure signal was operational: developers are converging on lighter browser stacks, tighter deployment rails, and explicit context-management rules to make agents more reliable in real workflows.",
-    "AI capital spend is still running hot and geopolitical. The most notable feed report claimed ByteDance is building major Blackwell capacity in Malaysia, while Canada’s weak jobs print was the clearest macro datapoint in the batch.",
-    "A recurring theme across the commentary: AI is already excellent for prototypes and acceleration, but the hard part still lives in reliability, memory, infrastructure, and clear human objective-setting."
+    "Frontier AI vendors mostly shipped practical upgrades, not flashy demos: Anthropic made Opus 4.6 with 1M context the default in Claude Code for higher-tier users, while OpenAI quietly patched GPT-5.4 image handling rather than announcing a whole new product cycle.",
+    "Developer tooling is moving up the stack. Vite’s fuller app platform push, lighter browser ideas, and agent-specific infra all point to a market that now cares more about shipping and orchestration than about raw benchmark screenshots.",
+    "The strongest workflow theme was structure over prompting: better repo memory, clearer operating rules, and external state for agents kept showing up as the real unlocks for reliable AI coding.",
+    "Open-model and local-serving economics keep getting better. Qwen3.5 quantization results plus home-inference cost anecdotes suggest serious local setups are inching closer to being a default option instead of a hobbyist project.",
+    "The biggest business signals were capex and risk: a report of ByteDance building Blackwell capacity in Malaysia suggests AI spending is routing around export constraints, while McKinsey’s Lilli exposure was a blunt reminder that enterprise AI still fails at boring security basics."
   ],
   "sections": [
     {
@@ -13,34 +15,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@claudeai: 1M Context Goes GA",
-          "body": "Anthropic made a 1 million token context window generally available for Claude Opus 4.6 and Sonnet 4.6. That is a meaningful quality-of-life upgrade for long codebase work, document-heavy research, and multi-file reasoning without as much manual chunking.",
-          "url": "https://x.com/claudeai/status/2032509548297343196"
-        },
-        {
-          "tag": "update",
-          "title": "@OpenAIDevs: Sora 2 Video API Expands",
-          "body": "OpenAI added custom characters and objects, 16:9 and 9:16 exports, 20-second clips, continuation, and batch jobs to the Sora 2 video API. The bigger takeaway is that video generation is becoming a programmable workflow rather than a one-off demo surface.",
-          "url": "https://x.com/OpenAIDevs/status/2032142448970121468"
+          "tag": "hot",
+          "title": "@alexalbert__: Opus 4.6 1M Becomes the Default",
+          "body": "Anthropic pushed several practical upgrades at once: Opus 4.6 with 1M context is now the default in Claude Code for Max, Team, and Enterprise users, the long-context surcharge is gone, the beta header is no longer required, and requests can include up to 600 images. The important signal is that giant context windows are being normalized into the product rather than sold as a niche extra.",
+          "url": "https://x.com/alexalbert__/status/2032522722551689363"
         },
         {
           "tag": "new",
-          "title": "@youyuxi: Void Deployment Platform",
-          "body": "Evan You introduced Void, a Vite-native deployment platform that bundles a full-stack SDK, auto-provisioned infra, typed workflows, and built-in AI, cron, and queue primitives. It looks like an attempt to collapse app scaffolding, infrastructure, and deploy into one cleaner lane for modern web teams.",
-          "url": "https://x.com/youyuxi/status/2032385324572180575"
+          "title": "@wesbos: Vite Pushes Toward a Full App Platform",
+          "body": "Wes Bos highlighted Vite’s move toward a more batteries-included stack with DB, auth, KV, queues, storage, AI, and a framework layer on top. It reads like another attempt to collapse frontend tooling, backend primitives, and deployment into a narrower default path for web teams.",
+          "url": "https://x.com/wesbos/status/2032431920299045337"
         },
         {
-          "tag": "new",
-          "title": "@GoJun315: Lightpanda for Agent Browsing",
-          "body": "A newly open-sourced project called Lightpanda is positioning itself as a headless browser built specifically for AI agents and automation, not for human browsing. The tweet’s headline claims—11× Chrome speed and 9× lower memory use—make it worth watching for scraping, testing, and large-scale browser-agent workloads.",
-          "url": "https://x.com/GoJun315/status/2032381157271343546"
+          "tag": "update",
+          "title": "@bnjmn_marie: Qwen3.5 Quantization Has Real Practical Edge",
+          "body": "The most useful takeaway from this benchmarking thread is that a good 4-bit Qwen3.5 27B can stay much stronger than a 9B model while fitting into a similar memory budget. The nuance matters too: many so-called INT4 builds are not equally compact, and keeping sensitive layers at higher precision can materially improve results.",
+          "url": "https://x.com/bnjmn_marie/status/2032350411646992894"
         },
         {
-          "tag": "insight",
-          "title": "@runes_leo: Compress Context at Task Boundaries",
-          "body": "This workflow tip targets a real agent failure mode: important decisions disappear when forced context compression happens in the middle of a refactor. The fix is simple and useful—make the agent decide when to compress after each task boundary instead of waiting until the context window is already full.",
-          "url": "https://x.com/runes_leo/status/2032300114744918087"
+          "tag": "update",
+          "title": "@TeksEdge: Local Inference Cost Gap Keeps Widening",
+          "body": "This anecdotal comparison put 2.6 million locally served Qwen3.5 27B tokens at roughly $0.30 of electricity versus about $39 of hosted Sonnet usage. The exact numbers will vary by setup, but the directional takeaway is clear: for heavy users, local inference economics are becoming hard to ignore.",
+          "url": "https://x.com/TeksEdge/status/2032487917378228281"
+        },
+        {
+          "tag": "update",
+          "title": "@vishisinghal_: Repo Structure Beats Better Prompting",
+          "body": "The thread’s core point is solid: Claude Code works better when the repository gives it a map, rules, workflows, and a short memory file instead of forcing it to infer everything from scratch. That is a more durable workflow tip than prompt tweaking because it improves the environment every future task runs in.",
+          "url": "https://x.com/vishisinghal_/status/2032368817981305196"
         }
       ]
     },
@@ -50,51 +52,57 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Canada Jobs Miss",
-          "body": "WatcherGuru flagged a sharp labor-market miss: Canada’s economy reportedly lost 83,900 jobs in February. If the print holds, it is a meaningful sign that North American macro softness may be showing up faster in employment than risk markets are pricing.",
-          "url": "https://x.com/WatcherGuru/status/2032474801202151640"
-        },
-        {
-          "tag": "hot",
-          "title": "@linwanwan823: ByteDance’s Offshore Blackwell Buildout",
-          "body": "A widely shared China-language post claimed ByteDance is building major AI capacity in Malaysia through Aolani Cloud, with roughly 500 Nvidia Blackwell systems and 36,000 B200 chips. Even if some specifics change, the important signal is that Chinese AI capex appears to be moving offshore rather than disappearing under export controls.",
+          "title": "@linwanwan823: ByteDance’s Malaysia Blackwell Buildout",
+          "body": "A widely shared report claimed ByteDance is building major Nvidia Blackwell capacity in Malaysia via Aolani Cloud, including roughly 500 systems and 36,000 B200 chips. If directionally right, it suggests Chinese AI capex is being routed offshore rather than truly stopped by export controls, which matters for both geopolitics and Nvidia demand.",
           "url": "https://x.com/linwanwan823/status/2032316425247871282"
         },
         {
-          "tag": "insight",
-          "title": "@varun_mathur: Agents Turned Loose on Quant Research",
-          "body": "Varun described 135 agents evolving multi-factor trading strategies across a decade of market data, converging on factor pruning and risk-parity sizing with better Sharpe and drawdown characteristics. Take the exact performance claims cautiously, but it was one of the few finance posts in the batch that offered actual process detail instead of empty AI-hedge-fund hype.",
-          "url": "https://x.com/varun_mathur/status/2032330665081839791"
+          "tag": "hot",
+          "title": "@TrungTPhan: McKinsey’s Lilli Exposure Is a Major Enterprise AI Warning",
+          "body": "McKinsey’s internal AI assistant was described as having been exposed through unauthenticated endpoints and SQL injection, reportedly putting plain-text chats, client material, and system prompts at risk before the issue was patched. It is one of the clearest reminders in the batch that enterprise AI upside can be canceled out by ordinary application-security failures.",
+          "url": "https://x.com/TrungTPhan/status/2032224185335103686"
+        },
+        {
+          "tag": "update",
+          "title": "@toddsaunders: Token Costs Are Now Changing Org Economics",
+          "body": "Saunders’ argument is that building a production feature with models can now be cheaper than the meeting required to discuss whether to build it. Even if you discount the rhetoric, the organizational implication is real: low-stakes software work is shifting from planning-heavy processes toward faster build-measure loops.",
+          "url": "https://x.com/toddsaunders/status/2032067592652013947"
         }
       ]
     },
     {
-      "emoji": "🧭",
-      "title": "General Useful",
+      "emoji": "🌍",
+      "title": "General",
       "items": [
         {
-          "tag": "insight",
-          "title": "@CtrlAltDwayne: Rust as an AI-Friendly Language",
-          "body": "Dwayne’s point was not about Rust purity; it was about feedback loops. Rust’s compiler gives models immediate, high-quality correction signals, which may make it a better fit than C++ for AI-assisted engineering even when raw performance is not the deciding factor.",
-          "url": "https://x.com/CtrlAltDwayne/status/2032388050584736157"
-        },
-        {
-          "tag": "insight",
-          "title": "@paoloanzn: Prototype ≠ Product",
-          "body": "This was the cleanest anti-hype post in the batch: getting AI to one-shot a localhost prototype is not remotely the same as solving replication, ordering, latency, reliability, storage, and scale. Good reminder that the hard part of software still starts after the first 200 lines work.",
-          "url": "https://x.com/paoloanzn/status/2032388364025118757"
+          "tag": "update",
+          "title": "@runes_leo: Automate the Boring API Signup Loop",
+          "body": "A practical workflow hack: borrow browser login state from Chrome cookies, then use Playwright plus Gmail API access to finish signups and fetch verification codes automatically. If you touch lots of SaaS vendors, this kind of glue automation saves more time than yet another benchmark comparison.",
+          "url": "https://x.com/runes_leo/status/2032267147481665772"
         },
         {
           "tag": "update",
-          "title": "@_catwu: Three Claude Code Shortcuts",
-          "body": "A compact but genuinely useful ergonomics tip: `!` runs bash inline and keeps the output in context, `ctrl+s` stashes a draft, and `ctrl+g` opens the prompt or plan in your editor. Small tricks, but exactly the sort of workflow improvements that compound if you live in Claude Code every day.",
-          "url": "https://x.com/_catwu/status/2032499411230785661"
+          "title": "@daniel_mac8: Why CLI-Native Agents Often Feel Better",
+          "body": "The claim here is that text-based CLIs outperform rigid structured tool menus because command-line patterns are deeply represented in model training data. That lines up with what many builders are discovering in practice: unified command surfaces are often more natural for agents than sprawling tool schemas.",
+          "url": "https://x.com/daniel_mac8/status/2032282196673708042"
         },
         {
-          "tag": "insight",
-          "title": "@lifesinger: MBO Over OKR for Agent Teams",
-          "body": "Frank Wang argued that in an agent-heavy organization, humans should focus on setting objectives while AI handles decomposition, experimentation, and replanning. Whether or not one-person teams arrive that quickly, the management point is sharp: execution frameworks may simplify as AI makes iteration cheaper.",
-          "url": "https://x.com/lifesinger/status/2032433389224284614"
+          "tag": "update",
+          "title": "@gukevinr: Give Agents a Database, Not Just Files",
+          "body": "The tweet is short, but the point is right: persistent state and retrieval matter more than dumping everything into a filesystem and hoping context windows save you. It fits the day’s bigger pattern that agent reliability increasingly comes from memory architecture, not just model quality.",
+          "url": "https://x.com/gukevinr/status/2031939561803432235"
+        },
+        {
+          "tag": "update",
+          "title": "@denisyarats: A Useful Clarification on Computer-Use Security",
+          "body": "Perplexity’s CTO said the exposed credential people were discussing was a short-lived, per-session proxy token inside the sandbox rather than a reusable API key, and that the session was revoked immediately. That does not make computer-use surfaces risk free, but it is a useful distinction for judging how serious a leaked token really is.",
+          "url": "https://x.com/denisyarats/status/2032355725620756486"
+        },
+        {
+          "tag": "update",
+          "title": "@aakashgupta: Apple’s Cheap Laptop Got More Repairable",
+          "body": "A teardown thread argued that Apple’s lower-cost MacBook Neo is surprisingly modular, with screw-mounted battery and replaceable ports, speakers, and jack rather than the old glue-and-solder routine. If that design direction sticks, it is one of the more consumer-friendly hardware shifts Apple has made in years.",
+          "url": "https://x.com/aakashgupta/status/2032324651859525879"
         }
       ]
     }
