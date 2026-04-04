@@ -1,12 +1,20 @@
 {
   "title": "X Feed Digest",
-  "date": "Monday, March 16th, 2026",
+  "date": "Saturday, April 4th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The dominant theme was AI agent infrastructure maturing from hacks into systems: direct web affordances instead of brittle DOM clicking, output-compression layers to cut token burn, and more deliberate coordination patterns for multi-agent work.",
-    "Model and platform news clustered around efficiency and deployment economics: pre-GTC Nvidia chatter centered on cheaper inference, while Chinese labs pushed agent-tuned releases and architectural tweaks rather than just larger chat models.",
-    "The cleanest market signal in the batch was structural, not directional: several posts warned that benchmark-level calm can hide brutal drawdowns underneath, especially in AI-adjacent small caps and speculative pockets.",
-    "Outside AI, the most useful signal was risk awareness: a prediction-market story showed how financial incentives can distort reporting, and a security thread highlighted how one sloppy installer decision can undermine an entire product."
+    {
+      "html": "<strong>Agent workflows are getting more operational and less magical:</strong> the best AI posts were about turning messy one-shot prompting into durable systems—knowledge bases, hooks, design artifacts, and repeatable automation loops."
+    },
+    {
+      "html": "<strong>Open and local AI keep getting more practical:</strong> Qwen is signaling more deployable open weights, and hobbyist-grade hardware is now flirting with genuinely usable 26B-class local agent setups if you lean on MoE models and shared-memory tricks."
+    },
+    {
+      "html": "<strong>Model governance and AI geopolitics both showed up in force:</strong> Anthropic’s model-diffing research points to better behavioral auditing, while DeepSeek-on-Huawei signals China’s stack is being rebuilt around domestic chips rather than waiting on Nvidia."
+    },
+    {
+      "html": "<strong>Markets were about structure, not excitement:</strong> rising Japan yields, new crypto wrappers like a staking-enabled Solana ETF, and Saylor’s anti-cycle talk all fit the same theme—liquidity regime changes matter more than old narratives right now."
+    }
   ],
   "sections": [
     {
@@ -15,33 +23,79 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@linwanwan823: Nvidia GTC Preview Points to a Cheaper Inference Era",
-          "body": "A pre-GTC roundup argued that Nvidia's next wave is less about flashy demos and more about collapsing inference cost, with Vera Rubin, Groq integration, and enterprise agent tooling all framed as pieces of one deployment story. Even if some details are still speculative, the important signal is that AI infra discussion has shifted from raw capability to cost-per-task.",
-          "url": "https://x.com/linwanwan823/status/2033425129791709285"
+          "title": "@karpathy: Self-Updating LLM Knowledge Bases",
+          "body": "Karpathy’s workflow treats research like a living wiki: dump source material into a raw folder, have the model organize it into markdown, then improve the knowledge base every time you query it. The useful idea is not just retrieval, but a compounding loop where asking questions makes the system smarter over time.",
+          "url": "https://x.com/karpathy/status/2039805659525644595",
+          "links": [
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/karpathy/status/2039805659525644595"
+            },
+            {
+              "label": "Feed Commentary",
+              "url": "https://x.com/jumperz/status/2039826228224430323"
+            }
+          ]
         },
         {
           "tag": "new",
-          "title": "@Compute_King: GLM-5-Turbo Is Tuned for Agent Workloads",
-          "body": "Zhipu's GLM-5-Turbo launch was pitched as an agent-native model that emphasizes tool use, instruction following, and execution reliability rather than just chat fluency. The simultaneous API price increase is a useful tell: vendors think task-oriented models can command a premium if they actually close more loops.",
-          "url": "https://x.com/Compute_King/status/2033389965992968681"
+          "title": "@AnthropicAI: Model Diffing for Hidden Behaviors",
+          "body": "Anthropic says it can compare open models the way engineers diff code, surfacing behavioral features that appear or disappear across versions. That matters less as a culture-war curiosity than as a scalable way to catch regressions, bias shifts, or newly emergent failure modes before release.",
+          "url": "https://x.com/AnthropicAI/status/2040179539738030182",
+          "links": [
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/AnthropicAI/status/2040179539738030182"
+            },
+            {
+              "label": "Feed Commentary",
+              "url": "https://x.com/KKaWSB/status/2040227142211141648"
+            }
+          ]
         },
         {
           "tag": "update",
-          "title": "@Yuchenj_UW: Kimi Claims Better Efficiency Through Cross-Layer Attention",
-          "body": "This post highlighted a Kimi architectural tweak that reportedly adds attention across layers, yielding higher compute efficiency with modest training overhead. The broader takeaway is that model labs are still finding non-scaling-law wins in architecture and systems, not just by buying more GPUs.",
-          "url": "https://x.com/Yuchenj_UW/status/2033404695880896804"
+          "title": "@zodchiii: Claude Code Hooks Remove Daily Babysitting",
+          "body": "A lot of agent pain is still post-processing: checking output, fixing routine mistakes, and enforcing format. This thread’s takeaway was that a small amount of hook setup can automate much of that glue work and make coding agents feel noticeably more reliable in daily use.",
+          "url": "https://x.com/zodchiii/status/2040000216456143002",
+          "links": [
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/zodchiii/status/2040000216456143002"
+            },
+            {
+              "label": "Feed Reaction",
+              "url": "https://x.com/zodchiii/status/2040053353967747440"
+            }
+          ]
         },
         {
           "tag": "new",
-          "title": "@runes_leo: WebMCP Reframes Browser Automation",
-          "body": "The useful idea here is flipping browser automation from imitation to cooperation: instead of making agents hunt buttons and DOM nodes, websites can expose explicit capabilities for agents to call directly. That matters because it promises workflows that are both cheaper and far less fragile when the UI changes.",
-          "url": "https://x.com/runes_leo/status/2033479932601565464"
+          "title": "@ChujieZheng: Qwen3.6 Open-Source Plans Favor Local Builders",
+          "body": "Qwen signaled that medium-size Qwen3.6 models are likely headed for open source, explicitly framing them around local deployment and customization. That is a meaningful competitive move because the practical sweet spot for many developers is not the biggest frontier model, but the best model they can actually run and tune.",
+          "url": "https://x.com/ChujieZheng/status/2039909486153089250"
         },
         {
           "tag": "update",
-          "title": "@seekjourney: Compressing Shell Output Is Becoming a Real Workflow Edge",
-          "body": "A CLI-layer tool was highlighted for shrinking noisy command output before it ever reaches the model, with claimed token savings of 60-90% on trees, file reads, and test logs. The core point is solid even if the exact numbers vary: smart preprocessing is increasingly as valuable as model choice in agent workflows.",
-          "url": "https://x.com/seekjourney/status/2033431865877831737"
+          "title": "@PrajwalTomar_: Stitch 2.0 Turns UI Design into an Artifact",
+          "body": "The interesting part here is not just prettier UI output, but a tighter workflow between Google Stitch and Claude Code where design intent becomes a reusable artifact instead of a slow handoff. That pushes design systems closer to markdown-and-prompt territory, which is exactly where coding agents are strongest.",
+          "url": "https://x.com/PrajwalTomar_/status/2037104246647382058",
+          "links": [
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/PrajwalTomar_/status/2037104246647382058"
+            },
+            {
+              "label": "Feed Commentary",
+              "url": "https://x.com/0xKingsKuan/status/2040357839714275647"
+            }
+          ]
+        },
+        {
+          "tag": "hot",
+          "title": "@basecampbernie: A $300 Mini PC Can Run 26B-Class Local Models",
+          "body": "This setup showed consumer-grade hardware hitting usable speeds on MoE models by exploiting shared memory rather than expensive dedicated VRAM. The bigger signal is economic: local agent rigs are inching out of enthusiast fantasy and into plausible hobbyist territory, provided you pick the right model architecture.",
+          "url": "https://x.com/basecampbernie/status/2040326984446935059"
         }
       ]
     },
@@ -51,21 +105,37 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RJDAIGOGO: Polymarket Incentives Spill Into Real-World Threats",
-          "body": "A report about bettors allegedly threatening a journalist over missile-strike coverage was the strongest non-price-market signal in the batch. It is a sharp reminder that prediction markets do not just reflect information; when stakes get large enough, they can also create pressure to manipulate the information supply itself.",
-          "url": "https://x.com/RJDAIGOGO/status/2033517384083153251"
+          "title": "@theinformation: DeepSeek V4 Is Being Built for Huawei Chips",
+          "body": "The headline matters because it points to more than one model launch: Chinese cloud giants are reportedly ordering Huawei accelerators ahead of DeepSeek V4, suggesting a serious push to localize the full inference stack. For markets, that is a reminder that export controls are not freezing China’s AI build-out—they are reshaping who captures the upside.",
+          "url": "https://x.com/theinformation/status/2040086334283321810",
+          "links": [
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/theinformation/status/2040086334283321810"
+            },
+            {
+              "label": "Feed Commentary",
+              "url": "https://x.com/0xLogicrw/status/2040229907431846071"
+            }
+          ]
         },
         {
           "tag": "update",
-          "title": "@williamlong: A Flat China Index Could Still Mask a 30% Loss",
-          "body": "This market commentary argued that investors can lose badly even if the headline A-share index looks stable, because benchmark weights are dominated by old-economy sectors while AI-linked small caps may be the real source of pain. Useful framing if you care about breadth, factor exposure, or benchmark illusion rather than just index headlines.",
-          "url": "https://x.com/williamlong/status/2033363022375420280"
+          "title": "@TedPillows: Japan Yields Are Back on the Risk Radar",
+          "body": "The post itself was brief, but the macro point is real: rising Japanese bond yields can tighten global liquidity and unsettle risk assets if funding conditions change quickly. It is a better watch item than a stand-alone trade idea, especially for anyone still assuming the carry backdrop stays easy by default.",
+          "url": "https://x.com/TedPillows/status/2040369033460191326"
         },
         {
           "tag": "new",
-          "title": "@MaxForAI: Alibaba Reorganizes Around Token Production and Distribution",
-          "body": "An internal Alibaba announcement described a new Token Hub unit meant to connect model creation, token supply, and application deployment under one roof. Whether or not the branding sticks, the strategic signal is clear: major platforms increasingly want to own the full AI stack from model output to end-user workflow.",
-          "url": "https://x.com/MaxForAI/status/2033497671684747591"
+          "title": "@REXShares: First U.S. Spot Solana ETF With Staking Rewards",
+          "body": "SSK packages spot Solana exposure and staking yield into a listed product, which is notable even if you never touch it. The important signal is structural: crypto exposure is being wrapped into increasingly familiar brokerage formats, bringing yield mechanics closer to mainstream capital flows.",
+          "url": "https://x.com/REXShares/status/1970619183466463334"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: Saylor Says the Four-Year Bitcoin Cycle Is Dead",
+          "body": "This was just a headline post, but it captures a broader shift in crypto thinking: ETF demand, treasury buying, and institutional balance-sheet behavior may now matter more than the old halving-only narrative. Even if the claim is too neat, it is useful as a sentiment marker for how the market wants to frame bitcoin now.",
+          "url": "https://x.com/WatcherGuru/status/2040469967133384926"
         }
       ]
     },
@@ -75,21 +145,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@lukOlejnik: Qihoo 360 Allegedly Embedded a Private Key in an Installer",
-          "body": "A security researcher flagged an AI-assistant installer from Qihoo 360 that reportedly contained its own SSL private key. If accurate, it is the kind of basic operational failure that turns a product launch into a trust problem overnight, especially for a security vendor.",
-          "url": "https://x.com/lukOlejnik/status/2033499904710979861"
+          "title": "@vikhyatk: Check Refund Tools Before Writing Off a Flight",
+          "body": "The anecdote was funny, but the practical takeaway is solid: if a trip falls apart at the last minute, check your card app and fare rules before assuming the ticket is gone. Consumer travel edges often come from knowing the refund machinery, not from finding a better price upfront.",
+          "url": "https://x.com/vikhyatk/status/2040458138512671043"
         },
         {
           "tag": "update",
-          "title": "@Techbruneth: Better Writing Workflow—Use AI to Attack Your Argument",
-          "body": "The post's most useful idea was treating AI as an adversarial reviewer instead of a ghostwriter: feed it your draft and ask where the logic is weakest or how a hostile examiner would attack it. That is a much better workflow than having the model write first, because it strengthens reasoning without outsourcing authorship.",
-          "url": "https://x.com/Techbruneth/status/2033364889868304484"
+          "title": "@Simon_Ingari: A Good Job Is More Than Compensation",
+          "body": "This was a simple checklist, but a useful one: trust from your manager, flexibility, time off, room to grow, and a sane culture are rarer than people admit. It is a good reminder to evaluate roles by how livable they are, not just by title or headline pay.",
+          "url": "https://x.com/Simon_Ingari/status/2040323961427501540"
         },
         {
-          "tag": "update",
-          "title": "@Tz_2022: Memory Is Reconstruction, Not Replay",
-          "body": "This thread revisited classic Loftus-style findings to make a point people still underestimate: memory is not a clean recording but a reconstruction that is vulnerable to framing and suggestion. Practical takeaway—be cautious with confidence, especially when wording, stress, or repeated retelling may have reshaped the memory itself.",
-          "url": "https://x.com/Tz_2022/status/2033210705617322021"
+          "tag": "new",
+          "title": "@DLKFZWilliam2: Niche Products Compound Better Than Creator Treadmills",
+          "body": "This post argued that self-media income is much less passive than it looks because attention has to be re-earned every day. The sharper insight is that in a cheaper-to-build world, a small product solving a narrow problem can be a more durable path than trying to monetize constant content output.",
+          "url": "https://x.com/DLKFZWilliam2/status/2040340921628459259"
         }
       ]
     }
