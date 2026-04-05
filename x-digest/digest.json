@@ -1,19 +1,19 @@
 {
   "title": "X Feed Digest",
-  "date": "Saturday, April 4th, 2026",
+  "date": "Sunday, April 5th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
     {
-      "html": "<strong>Agent workflows are getting more operational and less magical:</strong> the best AI posts were about turning messy one-shot prompting into durable systems—knowledge bases, hooks, design artifacts, and repeatable automation loops."
+      "html": "<strong>Agent reliability is becoming an engineering problem, not a prompting problem:</strong> the strongest AI posts were about verification loops, synthetic QA channels, and vendor constraints that push teams toward explicit tooling and billing."
     },
     {
-      "html": "<strong>Open and local AI keep getting more practical:</strong> Qwen is signaling more deployable open weights, and hobbyist-grade hardware is now flirting with genuinely usable 26B-class local agent setups if you lean on MoE models and shared-memory tricks."
+      "html": "<strong>Open models keep gaining practical momentum:</strong> Gemma 4 drew attention as both a teachable multimodal architecture and a deployable local model, while open-training efforts kept attracting serious talent."
     },
     {
-      "html": "<strong>Model governance and AI geopolitics both showed up in force:</strong> Anthropic’s model-diffing research points to better behavioral auditing, while DeepSeek-on-Huawei signals China’s stack is being rebuilt around domestic chips rather than waiting on Nvidia."
+      "html": "<strong>The macro tape was dominated by Iran-war spillovers:</strong> the feed kept circling back to Hormuz, oil-sensitive inflation, and bond-market whipsaws as the real channels through which geopolitics can hit portfolios."
     },
     {
-      "html": "<strong>Markets were about structure, not excitement:</strong> rising Japan yields, new crypto wrappers like a staking-enabled Solana ETF, and Saylor’s anti-cycle talk all fit the same theme—liquidity regime changes matter more than old narratives right now."
+      "html": "<strong>Outside pure finance, the useful signal came from physical systems and privacy:</strong> Japan is deploying robots into understaffed roles, Artemis II is nearing its lunar flyby, and browser fingerprinting stories are a reminder that mainstream platforms still collect more than most users assume."
     }
   ],
   "sections": [
@@ -23,79 +23,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@karpathy: Self-Updating LLM Knowledge Bases",
-          "body": "Karpathy’s workflow treats research like a living wiki: dump source material into a raw folder, have the model organize it into markdown, then improve the knowledge base every time you query it. The useful idea is not just retrieval, but a compounding loop where asking questions makes the system smarter over time.",
-          "url": "https://x.com/karpathy/status/2039805659525644595",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/karpathy/status/2039805659525644595"
-            },
-            {
-              "label": "Feed Commentary",
-              "url": "https://x.com/jumperz/status/2039826228224430323"
-            }
-          ]
-        },
-        {
-          "tag": "new",
-          "title": "@AnthropicAI: Model Diffing for Hidden Behaviors",
-          "body": "Anthropic says it can compare open models the way engineers diff code, surfacing behavioral features that appear or disappear across versions. That matters less as a culture-war curiosity than as a scalable way to catch regressions, bias shifts, or newly emergent failure modes before release.",
-          "url": "https://x.com/AnthropicAI/status/2040179539738030182",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/AnthropicAI/status/2040179539738030182"
-            },
-            {
-              "label": "Feed Commentary",
-              "url": "https://x.com/KKaWSB/status/2040227142211141648"
-            }
-          ]
+          "title": "@steipete: Anthropic Harness Access Tightens",
+          "body": "Peter Steinberger flagged that Anthropic appears to be tightening access for first-party harness workflows, returning a billing-related error on a CLI harness call. The practical takeaway is to expect bring-your-own-credits economics and avoid depending on a single vendor path for agent tooling.",
+          "url": "https://x.com/steipete/status/2040811558427648357"
         },
         {
           "tag": "update",
-          "title": "@zodchiii: Claude Code Hooks Remove Daily Babysitting",
-          "body": "A lot of agent pain is still post-processing: checking output, fixing routine mistakes, and enforcing format. This thread’s takeaway was that a small amount of hook setup can automate much of that glue work and make coding agents feel noticeably more reliable in daily use.",
-          "url": "https://x.com/zodchiii/status/2040000216456143002",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/zodchiii/status/2040000216456143002"
-            },
-            {
-              "label": "Feed Reaction",
-              "url": "https://x.com/zodchiii/status/2040053353967747440"
-            }
-          ]
+          "title": "@steipete: Synthetic QA for Agents",
+          "body": "This was one of the strongest workflow posts in the batch: use an orchestrator to assign real tasks, verify the result, and automatically spawn a fixer agent when checks fail. It points toward agent systems that look more like CI pipelines than chat sessions.",
+          "url": "https://x.com/steipete/status/2040894021036384502"
         },
         {
           "tag": "new",
-          "title": "@ChujieZheng: Qwen3.6 Open-Source Plans Favor Local Builders",
-          "body": "Qwen signaled that medium-size Qwen3.6 models are likely headed for open source, explicitly framing them around local deployment and customization. That is a meaningful competitive move because the practical sweet spot for many developers is not the biggest frontier model, but the best model they can actually run and tune.",
-          "url": "https://x.com/ChujieZheng/status/2039909486153089250"
-        },
-        {
-          "tag": "update",
-          "title": "@PrajwalTomar_: Stitch 2.0 Turns UI Design into an Artifact",
-          "body": "The interesting part here is not just prettier UI output, but a tighter workflow between Google Stitch and Claude Code where design intent becomes a reusable artifact instead of a slow handoff. That pushes design systems closer to markdown-and-prompt territory, which is exactly where coding agents are strongest.",
-          "url": "https://x.com/PrajwalTomar_/status/2037104246647382058",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/PrajwalTomar_/status/2037104246647382058"
-            },
-            {
-              "label": "Feed Commentary",
-              "url": "https://x.com/0xKingsKuan/status/2040357839714275647"
-            }
-          ]
+          "title": "@_philschmid: Gemma 4 Visual Guide",
+          "body": "Philipp Schmid recommended a diagram-heavy guide that explains Gemma 4's multimodal stack, MoE inference, and phone-friendly 2B deployment tricks. Useful because it translates open-model hype into concrete architectural ideas builders can actually reason about.",
+          "url": "https://x.com/_philschmid/status/2040768380563505345"
         },
         {
           "tag": "hot",
-          "title": "@basecampbernie: A $300 Mini PC Can Run 26B-Class Local Models",
-          "body": "This setup showed consumer-grade hardware hitting usable speeds on MoE models by exploiting shared memory rather than expensive dedicated VRAM. The bigger signal is economic: local agent rigs are inching out of enthusiast fantasy and into plausible hobbyist territory, provided you pick the right model architecture.",
-          "url": "https://x.com/basecampbernie/status/2040326984446935059"
+          "title": "@TechCrunch: Copilot's Legal Warning Label",
+          "body": "TechCrunch highlighted that Microsoft's own terms frame Copilot outputs as something users should not treat as authoritative. That is less a gotcha than a reminder that legal disclaimers are still lagging far behind the way people want to use AI at work.",
+          "url": "https://x.com/TechCrunch/status/2040865597098176690"
+        },
+        {
+          "tag": "new",
+          "title": "@eliebakouch: Prime Intellect Adds Open-Training Talent",
+          "body": "Elie Bakouch said he is joining Prime Intellect to work on pre- and mid-training for open models. The signal is that frontier-level talent is still flowing toward smaller open efforts that think focused teams can push training research forward.",
+          "url": "https://x.com/eliebakouch/status/2040826076528562550"
         }
       ]
     },
@@ -105,37 +59,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@theinformation: DeepSeek V4 Is Being Built for Huawei Chips",
-          "body": "The headline matters because it points to more than one model launch: Chinese cloud giants are reportedly ordering Huawei accelerators ahead of DeepSeek V4, suggesting a serious push to localize the full inference stack. For markets, that is a reminder that export controls are not freezing China’s AI build-out—they are reshaping who captures the upside.",
-          "url": "https://x.com/theinformation/status/2040086334283321810",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/theinformation/status/2040086334283321810"
-            },
-            {
-              "label": "Feed Commentary",
-              "url": "https://x.com/0xLogicrw/status/2040229907431846071"
-            }
-          ]
+          "title": "@TheEconomist: Bond Markets in a Tug of War",
+          "body": "The Economist framed sovereign debt markets as a tug-of-war between inflation risk and recession risk as the Iran war ripples outward. For investors, that means rate signals may stay noisy even when the geopolitical story feels directionally obvious.",
+          "url": "https://x.com/TheEconomist/status/2040846964716188084"
+        },
+        {
+          "tag": "hot",
+          "title": "@TheEconomist: Hormuz Is the Market Chokepoint",
+          "body": "The sharp point here is not just military escalation, but the market plumbing: a Hormuz disruption would hit a meaningful chunk of global oil flow and keep energy prices elevated. The post also argued that reopening the strait would be operationally hard even for the U.S.",
+          "url": "https://x.com/TheEconomist/status/2040852068512972836"
         },
         {
           "tag": "update",
-          "title": "@TedPillows: Japan Yields Are Back on the Risk Radar",
-          "body": "The post itself was brief, but the macro point is real: rising Japanese bond yields can tighten global liquidity and unsettle risk assets if funding conditions change quickly. It is a better watch item than a stand-alone trade idea, especially for anyone still assuming the carry backdrop stays easy by default.",
-          "url": "https://x.com/TedPillows/status/2040369033460191326"
-        },
-        {
-          "tag": "new",
-          "title": "@REXShares: First U.S. Spot Solana ETF With Staking Rewards",
-          "body": "SSK packages spot Solana exposure and staking yield into a listed product, which is notable even if you never touch it. The important signal is structural: crypto exposure is being wrapped into increasingly familiar brokerage formats, bringing yield mechanics closer to mainstream capital flows.",
-          "url": "https://x.com/REXShares/status/1970619183466463334"
+          "title": "@TheEconomist: Inflation Is Becoming Political Again",
+          "body": "The Economist tied Trump's approval weakness to inflation sensitivity, arguing that a costly war matters politically when voters are already primed to punish price pressure. It is a useful reminder that macro and politics are feeding each other, not moving independently.",
+          "url": "https://x.com/TheEconomist/status/2040877166775140728"
         },
         {
           "tag": "update",
-          "title": "@WatcherGuru: Saylor Says the Four-Year Bitcoin Cycle Is Dead",
-          "body": "This was just a headline post, but it captures a broader shift in crypto thinking: ETF demand, treasury buying, and institutional balance-sheet behavior may now matter more than the old halving-only narrative. Even if the claim is too neat, it is useful as a sentiment marker for how the market wants to frame bitcoin now.",
-          "url": "https://x.com/WatcherGuru/status/2040469967133384926"
+          "title": "@FactSet: S&P Valuation Still Not Cheap",
+          "body": "FactSet's latest snapshot puts the S&P 500's forward P/E roughly in line with its 5-year average but still above its 10-year norm. In plain English, the market is no longer screamingly stretched, but it still is not cheap on a longer historical view.",
+          "url": "https://x.com/FactSet/status/2040877156964700329"
         }
       ]
     },
@@ -145,21 +89,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@vikhyatk: Check Refund Tools Before Writing Off a Flight",
-          "body": "The anecdote was funny, but the practical takeaway is solid: if a trip falls apart at the last minute, check your card app and fare rules before assuming the ticket is gone. Consumer travel edges often come from knowing the refund machinery, not from finding a better price upfront.",
-          "url": "https://x.com/vikhyatk/status/2040458138512671043"
-        },
-        {
-          "tag": "update",
-          "title": "@Simon_Ingari: A Good Job Is More Than Compensation",
-          "body": "This was a simple checklist, but a useful one: trust from your manager, flexibility, time off, room to grow, and a sane culture are rarer than people admit. It is a good reminder to evaluate roles by how livable they are, not just by title or headline pay.",
-          "url": "https://x.com/Simon_Ingari/status/2040323961427501540"
+          "title": "@NASA: Artemis II Nears Lunar Flyby",
+          "body": "NASA posted Orion's last look at Earth before Artemis II's closest lunar approach, a reminder that the mission is now in the operational phase rather than launch-pageantry mode. Beyond the visuals, it marks the most tangible step toward a sustained crewed return to the Moon in years.",
+          "url": "https://x.com/NASA/status/2040899704293052514"
         },
         {
           "tag": "new",
-          "title": "@DLKFZWilliam2: Niche Products Compound Better Than Creator Treadmills",
-          "body": "This post argued that self-media income is much less passive than it looks because attention has to be re-earned every day. The sharper insight is that in a cheaper-to-build world, a small product solving a narrow problem can be a more durable path than trying to monetize constant content output.",
-          "url": "https://x.com/DLKFZWilliam2/status/2040340921628459259"
+          "title": "@TechCrunch: Japan's Robots Fill Labor Gaps",
+          "body": "TechCrunch's point was that Japan's robotics push is being driven less by sci-fi ambition than by labor shortages in jobs people do not want. That is a cleaner mental model for near-term physical AI adoption: fill gaps first, replace broad labor later.",
+          "url": "https://x.com/TechCrunch/status/2040791867303026942"
+        },
+        {
+          "tag": "hot",
+          "title": "@thenextweb: LinkedIn Fingerprinting Warning",
+          "body": "TNW reported that LinkedIn runs a hidden script that probes thousands of Chrome extensions and collects device signals without clearly disclosing it in the privacy policy. If accurate, it is one more reason to treat mainstream web platforms as aggressive telemetry systems by default.",
+          "url": "https://x.com/thenextweb/status/2040886161112006667"
         }
       ]
     }
