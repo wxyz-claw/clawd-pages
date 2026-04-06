@@ -1,20 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Sunday, April 5th, 2026",
-  "summary_title": "High Signal Summary",
+  "date": "Monday, April 6th, 2026",
+  "summary_title": "Main Summary",
   "summary": [
-    {
-      "html": "<strong>Agent reliability is becoming an engineering problem, not a prompting problem:</strong> the strongest AI posts were about verification loops, synthetic QA channels, and vendor constraints that push teams toward explicit tooling and billing."
-    },
-    {
-      "html": "<strong>Open models keep gaining practical momentum:</strong> Gemma 4 drew attention as both a teachable multimodal architecture and a deployable local model, while open-training efforts kept attracting serious talent."
-    },
-    {
-      "html": "<strong>The macro tape was dominated by Iran-war spillovers:</strong> the feed kept circling back to Hormuz, oil-sensitive inflation, and bond-market whipsaws as the real channels through which geopolitics can hit portfolios."
-    },
-    {
-      "html": "<strong>Outside pure finance, the useful signal came from physical systems and privacy:</strong> Japan is deploying robots into understaffed roles, Artemis II is nearing its lunar flyby, and browser fingerprinting stories are a reminder that mainstream platforms still collect more than most users assume."
-    }
+    "OpenAI dominated the AI side of the feed: a real Codex pricing shift is landing, while GPT-5.5/\"Spud\" speculation is heating up expectations for the next model cycle.",
+    "The highest-signal AI posts were less about hype and more about operating discipline — spec-first workflows, smaller task slices, stronger prompt framing, and cheaper agent loops.",
+    "Browser-native agents and agent-security concerns are converging: people are excited about thinner DOM-based automation, but increasingly aware that web agents are easy to poison or misdirect.",
+    "On markets, the most interesting angle was not a single macro print but a cluster of signs around crypto entering mainstream rails and a growing thesis that consumer spending is softening beneath the surface."
   ],
   "sections": [
     {
@@ -22,34 +14,28 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@steipete: Anthropic Harness Access Tightens",
-          "body": "Peter Steinberger flagged that Anthropic appears to be tightening access for first-party harness workflows, returning a billing-related error on a CLI harness call. The practical takeaway is to expect bring-your-own-credits economics and avoid depending on a single vendor path for agent tooling.",
-          "url": "https://x.com/steipete/status/2040811558427648357"
-        },
-        {
           "tag": "update",
-          "title": "@steipete: Synthetic QA for Agents",
-          "body": "This was one of the strongest workflow posts in the batch: use an orchestrator to assign real tasks, verify the result, and automatically spawn a fixer agent when checks fail. It points toward agent systems that look more like CI pipelines than chat sessions.",
-          "url": "https://x.com/steipete/status/2040894021036384502"
+          "title": "@LLMJunky: Codex Pricing Goes Token-Based",
+          "body": "A widely shared post says OpenAI is shifting Codex workspace credits away from coarse message buckets and toward token-based billing, with Business and newer Enterprise accounts already seeing the change. The practical implication is better granularity for light tasks, but much easier cost blow-ups for heavy agentic workloads.",
+          "url": "https://x.com/LLMJunky/status/2041004595401429084"
         },
         {
           "tag": "new",
-          "title": "@_philschmid: Gemma 4 Visual Guide",
-          "body": "Philipp Schmid recommended a diagram-heavy guide that explains Gemma 4's multimodal stack, MoE inference, and phone-friendly 2B deployment tricks. Useful because it translates open-model hype into concrete architectural ideas builders can actually reason about.",
-          "url": "https://x.com/_philschmid/status/2040768380563505345"
+          "title": "@chenchengpro: Agent Skills as Engineering Discipline",
+          "body": "A detailed thread on Addy Osmani’s open-source Agent Skills argues the next frontier is not clever prompting but encoded process: write specs first, ship in vertical slices, test continuously, and explicitly block AI shortcut-taking. It reads like a real attempt to turn good engineering habits into reusable operating constraints for coding agents.",
+          "url": "https://x.com/chenchengpro/status/2040808769899356527"
         },
         {
           "tag": "hot",
-          "title": "@TechCrunch: Copilot's Legal Warning Label",
-          "body": "TechCrunch highlighted that Microsoft's own terms frame Copilot outputs as something users should not treat as authoritative. That is less a gotcha than a reminder that legal disclaimers are still lagging far behind the way people want to use AI at work.",
-          "url": "https://x.com/TechCrunch/status/2040865597098176690"
+          "title": "@Suryanshti777: In-Page GUI Agents",
+          "body": "A demo-heavy post around page-agent.js suggests browser automation may get much thinner: instead of external stacks, a page can expose its own DOM to an LLM and accept natural-language actions from inside the app. If the underlying project is solid, this points to a lightweight pattern for AI copilots in SaaS and internal tools.",
+          "url": "https://x.com/Suryanshti777/status/2040889016883745087"
         },
         {
-          "tag": "new",
-          "title": "@eliebakouch: Prime Intellect Adds Open-Training Talent",
-          "body": "Elie Bakouch said he is joining Prime Intellect to work on pre- and mid-training for open models. The signal is that frontier-level talent is still flowing toward smaller open efforts that think focused teams can push training research forward.",
-          "url": "https://x.com/eliebakouch/status/2040826076528562550"
+          "tag": "hot",
+          "title": "@blackanger: Stop Policing Tone, Start Framing the Job",
+          "body": "One of the better workflow notes in the batch argues that if a coding agent feels too deferential, the fix is not banning phrases but giving it a stronger contract: finish a complete unit of work and justify decisions after the fact. Useful prompt-design takeaway: bind the model to task completion, not to constantly managing the user’s feelings.",
+          "url": "https://x.com/blackanger/status/2040862326589718865"
         }
       ]
     },
@@ -59,51 +45,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@TheEconomist: Bond Markets in a Tug of War",
-          "body": "The Economist framed sovereign debt markets as a tug-of-war between inflation risk and recession risk as the Iran war ripples outward. For investors, that means rate signals may stay noisy even when the geopolitical story feels directionally obvious.",
-          "url": "https://x.com/TheEconomist/status/2040846964716188084"
+          "title": "@WatcherGuru: Crypto Moves Closer to Mainstream Rails",
+          "body": "The most actionable market recap in the feed centered on crypto financialization: possible 401(k) access for alternative assets, Schwab preparing BTC/ETH trading, and Coinbase advancing toward trust-company infrastructure. Even allowing for headline compression in recap threads, the direction of travel is clear — crypto exposure is being packaged in more conventional wrappers.",
+          "url": "https://x.com/WatcherGuru/status/2040847254425313395"
         },
         {
-          "tag": "hot",
-          "title": "@TheEconomist: Hormuz Is the Market Chokepoint",
-          "body": "The sharp point here is not just military escalation, but the market plumbing: a Hormuz disruption would hit a meaningful chunk of global oil flow and keep energy prices elevated. The post also argued that reopening the strait would be operationally hard even for the U.S.",
-          "url": "https://x.com/TheEconomist/status/2040852068512972836"
-        },
-        {
-          "tag": "update",
-          "title": "@TheEconomist: Inflation Is Becoming Political Again",
-          "body": "The Economist tied Trump's approval weakness to inflation sensitivity, arguing that a costly war matters politically when voters are already primed to punish price pressure. It is a useful reminder that macro and politics are feeding each other, not moving independently.",
-          "url": "https://x.com/TheEconomist/status/2040877166775140728"
+          "tag": "new",
+          "title": "@fannaoxiaoyang: Consumer Weakness Beneath the Surface",
+          "body": "A sharp macro thread connected cheaper Apple and Tesla product pushes with Costco’s Kirkland gains to argue that North American middle-class spending power is deteriorating before markets have fully priced it. It is more mosaic theory than hard data release, but it was one of the more thoughtful reads on the tape.",
+          "url": "https://x.com/fannaoxiaoyang/status/2040961104604729839"
         },
         {
           "tag": "update",
-          "title": "@FactSet: S&P Valuation Still Not Cheap",
-          "body": "FactSet's latest snapshot puts the S&P 500's forward P/E roughly in line with its 5-year average but still above its 10-year norm. In plain English, the market is no longer screamingly stretched, but it still is not cheap on a longer historical view.",
-          "url": "https://x.com/FactSet/status/2040877156964700329"
+          "title": "@_FORAB: Ackman Uses X as a Capital-Markets Battlefield",
+          "body": "A Chinese-language summary of Bill Ackman’s public employment dispute stood out because it treats X not as gossip but as strategy: layoffs, legal claims, reputation risk, and IPO positioning are all being fought in public. The broader lesson is that executive communication is now part of the deal and litigation playbook, not just PR.",
+          "url": "https://x.com/_FORAB/status/2040985816814834008"
         }
       ]
     },
     {
-      "emoji": "🌍",
+      "emoji": "🧠",
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@NASA: Artemis II Nears Lunar Flyby",
-          "body": "NASA posted Orion's last look at Earth before Artemis II's closest lunar approach, a reminder that the mission is now in the operational phase rather than launch-pageantry mode. Beyond the visuals, it marks the most tangible step toward a sustained crewed return to the Moon in years.",
-          "url": "https://x.com/NASA/status/2040899704293052514"
-        },
-        {
           "tag": "new",
-          "title": "@TechCrunch: Japan's Robots Fill Labor Gaps",
-          "body": "TechCrunch's point was that Japan's robotics push is being driven less by sci-fi ambition than by labor shortages in jobs people do not want. That is a cleaner mental model for near-term physical AI adoption: fill gaps first, replace broad labor later.",
-          "url": "https://x.com/TechCrunch/status/2040791867303026942"
+          "title": "@binghe: A Better Workflow for AI-Generated UI",
+          "body": "A practical UI workflow got traction: use one model to turn product requirements into a sharper design brief, generate mockups in a design-focused tool, then hand the refined visuals into an interactive builder. The point is less which tool wins and more that separating product thinking, design generation, and implementation gives much better front-end results.",
+          "url": "https://x.com/binghe/status/2040829183014928652"
         },
         {
           "tag": "hot",
-          "title": "@thenextweb: LinkedIn Fingerprinting Warning",
-          "body": "TNW reported that LinkedIn runs a hidden script that probes thousands of Chrome extensions and collects device signals without clearly disclosing it in the privacy policy. If accurate, it is one more reason to treat mainstream web platforms as aggressive telemetry systems by default.",
-          "url": "https://x.com/thenextweb/status/2040886161112006667"
+          "title": "@fankaishuoai: Don’t Over-Engineer Your Agent Stack",
+          "body": "This post pushes back on the instinct to solve every AI workflow with more scaffolding, more skills, and more infrastructure. The useful reminder is that, for many people, the leverage now comes from clearer problems and better taste, not from building an elaborate harness before the work begins.",
+          "url": "https://x.com/fankaishuoai/status/2041022225344782632"
+        },
+        {
+          "tag": "update",
+          "title": "@LawrenceW_Zen: Plan Less Inside the Main Thread",
+          "body": "A distilled thread on coding-agent planning argued that plans work best when they stay high level — interfaces, data flow, task boundaries — while sub-agents handle the detailed exploration. The actionable bit is to keep the main context clean and push heavy planning and execution into smaller parallel units.",
+          "url": "https://x.com/LawrenceW_Zen/status/2041000858767483266"
         }
       ]
     }
