@@ -1,12 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Monday, April 6th, 2026",
-  "summary_title": "Main Summary",
+  "header_title": "High-Signal X Feed Digest",
+  "date": "Wednesday, April 8th, 2026 — 9:00 AM ET",
   "summary": [
-    "OpenAI dominated the AI side of the feed: a real Codex pricing shift is landing, while GPT-5.5/\"Spud\" speculation is heating up expectations for the next model cycle.",
-    "The highest-signal AI posts were less about hype and more about operating discipline — spec-first workflows, smaller task slices, stronger prompt framing, and cheaper agent loops.",
-    "Browser-native agents and agent-security concerns are converging: people are excited about thinner DOM-based automation, but increasingly aware that web agents are easy to poison or misdirect.",
-    "On markets, the most interesting angle was not a single macro print but a cluster of signs around crypto entering mainstream rails and a growing thesis that consumer spending is softening beneath the surface."
+    "Anthropic dominated the batch: Project Glasswing and Claude Mythos Preview pushed frontier AI out of the usual benchmark discourse and into real cybersecurity and infrastructure risk management.",
+    "The coding-agent race is now clearly two-sided: closed products are scaling hard in usage, while open models like GLM-5.1 keep narrowing the capability gap on longer-horizon work.",
+    "Compute is increasingly an industrial story, not just a model story — posts from xAI and Intel pointed to a race defined by training scale, fabs, packaging, and power-hungry buildouts.",
+    "Outside AI, the cleanest market signals were geopolitical and supply-chain driven: Iran deadline risk, energy-cost pressure, and mineral dependence all remained live constraints beneath the tape."
   ],
   "sections": [
     {
@@ -14,28 +14,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@LLMJunky: Codex Pricing Goes Token-Based",
-          "body": "A widely shared post says OpenAI is shifting Codex workspace credits away from coarse message buckets and toward token-based billing, with Business and newer Enterprise accounts already seeing the change. The practical implication is better granularity for light tasks, but much easier cost blow-ups for heavy agentic workloads.",
-          "url": "https://x.com/LLMJunky/status/2041004595401429084"
+          "tag": "hot",
+          "title": "@AnthropicAI: Glasswing Restricts Mythos",
+          "body": "Anthropic unveiled Project Glasswing around Claude Mythos Preview, saying the model is powerful enough at vulnerability discovery that it will be limited to a small set of major infrastructure partners instead of released broadly. The real signal is that top-tier model progress is no longer just benchmark theater; labs are starting to treat some capability jumps as cyber-risk management problems.",
+          "url": "https://x.com/AnthropicAI/status/2041578392852517128"
         },
         {
           "tag": "new",
-          "title": "@chenchengpro: Agent Skills as Engineering Discipline",
-          "body": "A detailed thread on Addy Osmani’s open-source Agent Skills argues the next frontier is not clever prompting but encoded process: write specs first, ship in vertical slices, test continuously, and explicitly block AI shortcut-taking. It reads like a real attempt to turn good engineering habits into reusable operating constraints for coding agents.",
-          "url": "https://x.com/chenchengpro/status/2040808769899356527"
+          "title": "@Zai_org: GLM-5.1 Raises the Open-Source Ceiling",
+          "body": "Z.ai launched GLM-5.1 with claims of top open-source results on SWE-Bench Pro, Terminal-Bench, and NL2Repo plus up to eight-hour autonomous runs. Even if the numbers need independent vetting, the clear takeaway is that open agentic coding models are pushing into much longer-horizon tasks.",
+          "url": "https://x.com/Zai_org/status/2041550153354519022"
         },
         {
           "tag": "hot",
-          "title": "@Suryanshti777: In-Page GUI Agents",
-          "body": "A demo-heavy post around page-agent.js suggests browser automation may get much thinner: instead of external stacks, a page can expose its own DOM to an LLM and accept natural-language actions from inside the app. If the underlying project is solid, this points to a lightweight pattern for AI copilots in SaaS and internal tools.",
-          "url": "https://x.com/Suryanshti777/status/2040889016883745087"
+          "title": "@sama: Codex Hits 3M Weekly Users",
+          "body": "Sam Altman said Codex passed 3 million weekly users and that OpenAI is resetting usage limits at each additional million up to 10 million. That is a strong adoption signal for AI coding tools, and it suggests OpenAI is willing to spend compute aggressively to keep momentum high.",
+          "url": "https://x.com/sama/status/2041658719839383945"
         },
         {
-          "tag": "hot",
-          "title": "@blackanger: Stop Policing Tone, Start Framing the Job",
-          "body": "One of the better workflow notes in the batch argues that if a coding agent feels too deferential, the fix is not banning phrases but giving it a stronger contract: finish a complete unit of work and justify decisions after the fact. Useful prompt-design takeaway: bind the model to task completion, not to constantly managing the user’s feelings.",
-          "url": "https://x.com/blackanger/status/2040862326589718865"
+          "tag": "update",
+          "title": "@ClaudeCodeLog: Claude Code Defaults Get More Serious",
+          "body": "Claude Code 2.1.94 quietly moved default effort from medium to high for several paid setups and improved memory handling so MEMORY.md is no longer treated as empty. The practical takeaway is that wrapper behavior and defaults are still changing materially, so tool updates can alter results even when the underlying model name stays the same.",
+          "url": "https://x.com/ClaudeCodeLog/status/2041633784836038757"
+        },
+        {
+          "tag": "update",
+          "title": "@elonmusk: Colossus 2 Training Lineup Expands",
+          "body": "Musk said Colossus 2 now has seven models in training, including 1T, 1.5T, 6T, and 10T variants plus Imagine V2. Whether or not every name matters, the broader message is obvious: the frontier race is now being signaled through sheer training scale and parallel model bets.",
+          "url": "https://x.com/elonmusk/status/2041754402239975479"
         }
       ]
     },
@@ -44,46 +50,46 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "hot",
-          "title": "@WatcherGuru: Crypto Moves Closer to Mainstream Rails",
-          "body": "The most actionable market recap in the feed centered on crypto financialization: possible 401(k) access for alternative assets, Schwab preparing BTC/ETH trading, and Coinbase advancing toward trust-company infrastructure. Even allowing for headline compression in recap threads, the direction of travel is clear — crypto exposure is being packaged in more conventional wrappers.",
-          "url": "https://x.com/WatcherGuru/status/2040847254425313395"
-        },
-        {
           "tag": "new",
-          "title": "@fannaoxiaoyang: Consumer Weakness Beneath the Surface",
-          "body": "A sharp macro thread connected cheaper Apple and Tesla product pushes with Costco’s Kirkland gains to argue that North American middle-class spending power is deteriorating before markets have fully priced it. It is more mosaic theory than hard data release, but it was one of the more thoughtful reads on the tape.",
-          "url": "https://x.com/fannaoxiaoyang/status/2040961104604729839"
+          "title": "@intel: Terafab Turns Compute Demand Into Factory Demand",
+          "body": "Intel said it is joining the Terafab project alongside SpaceX, xAI, and Tesla to help build toward 1 TW/year of compute capacity. The investable read-through is that AI demand is still cascading down into fabs, packaging, and energy-hungry physical infrastructure.",
+          "url": "https://x.com/intel/status/2041501301318766866"
         },
         {
           "tag": "update",
-          "title": "@_FORAB: Ackman Uses X as a Capital-Markets Battlefield",
-          "body": "A Chinese-language summary of Bill Ackman’s public employment dispute stood out because it treats X not as gossip but as strategy: layoffs, legal claims, reputation risk, and IPO positioning are all being fought in public. The broader lesson is that executive communication is now part of the deal and litigation playbook, not just PR.",
-          "url": "https://x.com/_FORAB/status/2040985816814834008"
+          "title": "@FactSet: Iran Deadline Keeps Event Risk Elevated",
+          "body": "FactSet’s StreetAccount note said traders were watching whether Trump strikes a deal, delays, or escalates ahead of an Iran deadline, with uncertainty still high. For markets, it’s a reminder that geopolitics remains the fastest path to a fresh volatility spike even when underlying positioning looks steadier.",
+          "url": "https://x.com/FactSet/status/2041511716555485526"
+        },
+        {
+          "tag": "update",
+          "title": "@kiteandkeymedia: Critical Minerals Still Underwrite the Whole Stack",
+          "body": "Kite & Key’s video thread argued that American economic, military, and tech capacity all depend on imported minerals that are often controlled by geopolitical rivals. It’s a useful framing device for why supply-chain security remains a first-order constraint on everything from semis to defense.",
+          "url": "https://x.com/kiteandkeymedia/status/1991008785301930240"
         }
       ]
     },
     {
-      "emoji": "🧠",
+      "emoji": "🌍",
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@binghe: A Better Workflow for AI-Generated UI",
-          "body": "A practical UI workflow got traction: use one model to turn product requirements into a sharper design brief, generate mockups in a design-focused tool, then hand the refined visuals into an interactive builder. The point is less which tool wins and more that separating product thinking, design generation, and implementation gives much better front-end results.",
-          "url": "https://x.com/binghe/status/2040829183014928652"
+          "tag": "update",
+          "title": "@chenchengpro: A Hidden Tailscale DERP Trap in China",
+          "body": "A concrete ops post: after self-hosting a Tailscale DERP relay in mainland China, the author found Alibaba Cloud will reset 80/443 traffic for domains without ICP filing even when localhost checks look fine. The useful trick is to move the relay off standard ports like 8443 if you want a no-surprises setup.",
+          "url": "https://x.com/chenchengpro/status/2041753163175490044"
         },
         {
-          "tag": "hot",
-          "title": "@fankaishuoai: Don’t Over-Engineer Your Agent Stack",
-          "body": "This post pushes back on the instinct to solve every AI workflow with more scaffolding, more skills, and more infrastructure. The useful reminder is that, for many people, the leverage now comes from clearer problems and better taste, not from building an elaborate harness before the work begins.",
-          "url": "https://x.com/fankaishuoai/status/2041022225344782632"
+          "tag": "new",
+          "title": "@PawelHuryn: Local Logs Can Expose Claude Code Spend",
+          "body": "Pawel Huryn shared a dashboard that reads Claude Code’s local JSONL logs to break down sessions, tokens, and cache usage by project. The broader tip is simple: a lot of agent tooling already writes the telemetry you wish the UI exposed, so local introspection can recover it.",
+          "url": "https://x.com/PawelHuryn/status/2041595776074236328"
         },
         {
           "tag": "update",
-          "title": "@LawrenceW_Zen: Plan Less Inside the Main Thread",
-          "body": "A distilled thread on coding-agent planning argued that plans work best when they stay high level — interfaces, data flow, task boundaries — while sub-agents handle the detailed exploration. The actionable bit is to keep the main context clean and push heavy planning and execution into smaller parallel units.",
-          "url": "https://x.com/LawrenceW_Zen/status/2041000858767483266"
+          "title": "@dotey: LLM Wiki Beats More Bookmarks",
+          "body": "Dotey’s thread argued that the real leap in personal knowledge tools is not raw collection but having an agent turn scattered clips into structured wiki pages you can actually revisit. That’s a good mental model for anyone drowning in bookmarks, highlights, and read-later debt.",
+          "url": "https://x.com/dotey/status/2041509264221483449"
         }
       ]
     }
