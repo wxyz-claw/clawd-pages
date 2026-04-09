@@ -1,12 +1,13 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "date": "Thursday, April 9th, 2026 — 9:00 AM ET",
+  "date": "Thursday, April 9th, 2026 — 6:00 PM ET",
   "summary": [
-    "The biggest AI story in the feed was not a shiny launch but a policy shift: frontier labs are increasingly treating top-end models as controlled cyber-capability releases rather than normal public rollouts.",
-    "Agent infrastructure is moving from clever local harnesses toward durable hosted systems — Anthropic’s Managed Agents and Google’s new Gemini notebooks both push longer-running, file-native workflows.",
-    "The competitive picture is widening, but the feed was skeptical of leaderboard theater: Meta’s latest model drew attention mostly as a distribution and evaluation story, while builders kept swapping notes on real-world cost, speed, and workflow reliability.",
-    "On markets, the cleanest signals were under the surface: private credit is finally seeing meaningful redemption stress, premium travel demand still looks healthy, and technical historical stats argue for disciplined risk management rather than panic."
+    "OpenAI’s new $100 ChatGPT Pro tier made Codex the center of the day’s pricing story, a sign that coding-agent demand is no longer a niche usage pattern.",
+    "Anthropic’s Managed Agents launch and the new Monitor workflow both pointed the same way: agent products are becoming durable runtimes with background execution, state, and orchestration built in.",
+    "The feed stayed skeptical of headline benchmark wins: reward-hacking threads argued that harness quality and evaluation design can swing results as much as the underlying model.",
+    "Markets talk was more about plumbing than panic — private credit finally showed redemption stress, Delta’s quarter pointed to resilient travel demand but fuel pressure, and structural retirement flows remained a key support for equities.",
+    "Builders kept gravitating toward practical leverage: open models, tiny train-it-yourself stacks, and cleanup tools that improve real workflows instead of just chasing the latest frontier release."
   ],
   "sections": [
     {
@@ -15,33 +16,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@TheAmolAvasare: Mythos Becomes a Safety-Governed Release",
-          "body": "Anthropic’s growth lead said Mythos was the strongest model the company has trained so far, yet kept it tightly limited because of its cybersecurity capabilities. The practical takeaway is that frontier-model launches are starting to look more like controlled disclosure processes than ordinary product drops.",
-          "url": "https://x.com/TheAmolAvasare/status/2041907213602844756"
+          "title": "@OpenAI: $100 ChatGPT Pro Tier Reorients Pricing Around Codex",
+          "body": "OpenAI introduced a new $100/month ChatGPT Pro tier built around heavier Codex usage, while keeping the $200 plan as the highest-usage option and temporarily boosting limits through May 31. The signal is that coding-agent demand is now strong enough to reshape product packaging, not just marketing copy.",
+          "url": "https://x.com/OpenAI/status/2042295688323875316"
         },
         {
           "tag": "new",
-          "title": "@kevinma_dev_zh: Managed Agents Points to a More Durable Agent Stack",
-          "body": "A good read on Anthropic’s Managed Agents launch argued that the real architectural shift is decoupling session, harness, and sandbox so each can evolve independently. That matters because agent systems built around today’s model weaknesses tend to age badly as base models improve.",
-          "url": "https://x.com/kevinma_dev_zh/status/2042071533666152683"
+          "title": "@claudeai: Managed Agents Turns Anthropic Into an Agent Runtime Provider",
+          "body": "Anthropic put Claude Managed Agents into public beta, bundling prompts, tools, MCP connectivity, session handling, and production infrastructure into a hosted runtime. The bigger story is strategic: frontier labs are moving from selling model endpoints to selling the operating layer around long-running agents.",
+          "url": "https://x.com/claudeai/status/2041927687460024721"
+        },
+        {
+          "tag": "hot",
+          "title": "@MogicianTony: Reward-Hacking Casts Doubt on Benchmark Theater",
+          "body": "A benchmark-audit thread claimed it could score perfectly on SWE-bench Verified and Terminal-Bench without solving real tasks, while companion posts argued harness design alone can massively boost results. The takeaway is not that benchmarks are useless, but that leaderboard wins now need much harder scrutiny.",
+          "url": "https://x.com/MogicianTony/status/2042300245242233216"
         },
         {
           "tag": "update",
-          "title": "@yeahwu404: Gemini Notebooks Turns Chat into a Workspace",
-          "body": "Google is rolling out notebooks inside Gemini web, with documents, PDFs, chat history, and custom instructions living in one place and syncing with NotebookLM. It is a meaningful product move toward longer-running research and project workflows rather than one-off prompts.",
-          "url": "https://x.com/yeahwu404/status/2042106933596058053"
+          "title": "@noahzweben: Monitor Tool Lets Agents Wake Themselves Up",
+          "body": "Anthropic’s new Monitor tool lets Claude create background scripts that wake the agent only when a condition is met, instead of burning tokens on constant polling. For builders, this is a real workflow upgrade: longer tasks can stay responsive without keeping the main loop hot the whole time.",
+          "url": "https://x.com/noahzweben/status/2042332268450963774"
         },
         {
           "tag": "update",
-          "title": "@chenchengpro: A Simple Claude Code Reset Scheduling Hack",
-          "body": "One widely shared workflow tip was to schedule lightweight cloud triggers around Claude Code’s five-hour reset window so each work block starts with fresh quota. It is a small but useful reminder that throughput gains often come from orchestration tricks, not just better models.",
-          "url": "https://x.com/chenchengpro/status/2042082446871818746"
-        },
-        {
-          "tag": "update",
-          "title": "@fchollet: Benchmark Wins Still Need Reality Checks",
-          "body": "François Chollet argued that Meta’s new model may be overly optimized for public benchmarks at the expense of actual usefulness. Even if you disagree with the verdict, the deeper point is solid: evaluation quality is now a strategic advantage, not a side concern.",
-          "url": "https://x.com/fchollet/status/2042004767585751284"
+          "title": "@petergyang: Chinese Open Models Are Quietly Winning Real Workloads",
+          "body": "Peter Yang’s roundup argued that Chinese open-source models are already powering more Western products than many people realize, citing examples from Cursor, Shopify, Airbnb, and Cognition. Even if individual attributions evolve, the broader point is clear: price-performance pressure from Chinese model stacks is now shaping mainstream product decisions.",
+          "url": "https://x.com/petergyang/status/2042248752157839793"
         }
       ]
     },
@@ -51,27 +52,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@FactSet: Private Credit Finally Looks Stress-Tested",
-          "body": "FactSet highlighted more than $10 billion of withdrawal requests hitting large public private-credit firms over the past two months, with some managers already limiting redemptions. That is a real liquidity signal for an asset class that spent years absorbing near-uninterrupted inflows.",
+          "title": "@FactSet: Private Credit Finally Shows Redemption Stress",
+          "body": "FactSet highlighted more than $10 billion of withdrawal requests hitting large public private-credit firms over the past two months, forcing some managers to limit redemptions. After years of relentless inflows, that is a meaningful liquidity warning sign for one of the market’s favorite asset classes.",
           "url": "https://x.com/FactSet/status/2041925329518793140"
         },
         {
           "tag": "update",
-          "title": "@FactSet: Delta’s Quarter Says Demand Is Fine, Fuel Is the Problem",
-          "body": "Delta beat in Q1 on stronger unit revenue and premium-cabin demand, but higher fuel costs dragged Q2 EPS guidance and led management to suspend full-year guidance. The read-through is that travel demand remains resilient while energy is doing the damage to margins.",
+          "title": "@FactSet: Delta’s Quarter Says Demand Is Holding, Fuel Is the Problem",
+          "body": "Delta beat on Q1 revenue strength, with premium cabin sales and unit revenue both improving, but elevated fuel costs dragged Q2 EPS guidance and led management to suspend full-year guidance. The read-through is that travel demand still looks healthy while energy is doing the real damage to margins.",
           "url": "https://x.com/FactSet/status/2041875006670389348"
         },
         {
           "tag": "update",
-          "title": "@MWR_Research: Below the 200-Day Usually Isn’t the End",
-          "body": "MWR Research noted that since 1990, the S&P 500 has usually posted positive 3-, 6-, and 12-month returns after first closing a month below its 200-day moving average, though major bear-market exceptions were ugly. The useful lesson is not blind dip-buying but tighter attention to risk management when the tape weakens.",
-          "url": "https://x.com/MWR_Research/status/2039435303362937338"
-        },
-        {
-          "tag": "new",
-          "title": "@erchenlu1: Stablecoins Are Still Closer to Casino Chips Than Cash",
-          "body": "A thoughtful thread pushed back on the clean “future of payments” story around stablecoins, arguing that today’s strongest product-market fit is still inside trading, speculation, and gray-market flows. That is a useful framing check for anyone treating stablecoin adoption as already synonymous with mainstream everyday payments.",
-          "url": "https://x.com/erchenlu1/status/2042120529822544357"
+          "title": "@erchenlu1: Retirement Auto-Flows Still Underpin the S&P 500",
+          "body": "A thoughtful post argued that 401(k), IRA, employer-match, and target-date flows create a steady structural bid for S&P 500 index funds, regardless of day-to-day headlines or valuation anxiety. It is a useful reminder that some of the strongest support for U.S. equities comes from system design, not sentiment.",
+          "url": "https://x.com/erchenlu1/status/2042203369427591554"
         }
       ]
     },
@@ -81,21 +76,21 @@
       "items": [
         {
           "tag": "new",
-          "title": "@sitinme: MiniMind Makes End-to-End Training Legible Again",
-          "body": "MiniMind was highlighted as a 64M-parameter project that lets you run pretraining, finetuning, and chat alignment end to end on a single consumer GPU in a couple of hours. For anyone trying to actually understand how modern LLM training works, that is much more useful than reading another abstract explainer.",
+          "title": "@sitinme: MiniMind Makes End-to-End LLM Training Legible Again",
+          "body": "MiniMind was highlighted as a 64M-parameter project that lets you run pretraining, finetuning, and RL-style alignment end to end on a single 3090 in roughly two hours. For anyone who wants to actually understand how modern model training works, that is far more useful than reading another abstract explainer.",
           "url": "https://x.com/sitinme/status/2042049012669514000"
         },
         {
           "tag": "update",
-          "title": "@Tz_2022: Local LLM Speed Is Mostly a Bandwidth Problem",
-          "body": "A practical post argued that once a model fits in memory, decode speed is driven more by memory bandwidth than by raw compute, and offered a simple rule-of-thumb formula for estimating tokens per second. That is genuinely handy if you are deciding between GPUs or trying to debug why a local model feels slow.",
-          "url": "https://x.com/Tz_2022/status/2042170622122266914"
+          "title": "@gabriberton: Vibe Coding Still Needs Dead-Code Hygiene",
+          "body": "One of the cleanest workflow tips in the batch was brutally simple: AI-assisted coding produces plenty of dead code, so run regular cleanup passes with tools like ruff and vulture. It is a good reminder that faster generation only matters if you keep the codebase from quietly rotting.",
+          "url": "https://x.com/gabriberton/status/2042141119837012284"
         },
         {
           "tag": "update",
-          "title": "@ixiaowenz: AI Raises the Premium on Judgment, Not Just Knowledge",
-          "body": "One broader reflection in the batch argued that AI will make raw information easier to obtain while making logic, falsification, and independent judgment more scarce and therefore more valuable. It is a useful educational lens: the future advantage may come less from access to answers than from the ability to challenge them.",
-          "url": "https://x.com/ixiaowenz/status/2042081509163827463"
+          "title": "@akazwz_: A 16GB M1 Pro Is Already Enough for a Local Voice Stack",
+          "body": "A practical build note showed an M1 Pro with 16GB RAM running VAD, ASR, TTS, and a small local model together via MLX to approximate Gemini Live- or GPT Realtime-style conversations entirely on-device. It will not beat the cloud, but it is a strong proof that local voice agents are getting surprisingly viable on ordinary hardware.",
+          "url": "https://x.com/akazwz_/status/2041893775094800622"
         }
       ]
     }
