@@ -1,12 +1,12 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "date": "Wednesday, April 8th, 2026 — 9:00 AM ET",
+  "date": "Thursday, April 9th, 2026 — 9:00 AM ET",
   "summary": [
-    "Anthropic dominated the batch: Project Glasswing and Claude Mythos Preview pushed frontier AI out of the usual benchmark discourse and into real cybersecurity and infrastructure risk management.",
-    "The coding-agent race is now clearly two-sided: closed products are scaling hard in usage, while open models like GLM-5.1 keep narrowing the capability gap on longer-horizon work.",
-    "Compute is increasingly an industrial story, not just a model story — posts from xAI and Intel pointed to a race defined by training scale, fabs, packaging, and power-hungry buildouts.",
-    "Outside AI, the cleanest market signals were geopolitical and supply-chain driven: Iran deadline risk, energy-cost pressure, and mineral dependence all remained live constraints beneath the tape."
+    "The biggest AI story in the feed was not a shiny launch but a policy shift: frontier labs are increasingly treating top-end models as controlled cyber-capability releases rather than normal public rollouts.",
+    "Agent infrastructure is moving from clever local harnesses toward durable hosted systems — Anthropic’s Managed Agents and Google’s new Gemini notebooks both push longer-running, file-native workflows.",
+    "The competitive picture is widening, but the feed was skeptical of leaderboard theater: Meta’s latest model drew attention mostly as a distribution and evaluation story, while builders kept swapping notes on real-world cost, speed, and workflow reliability.",
+    "On markets, the cleanest signals were under the surface: private credit is finally seeing meaningful redemption stress, premium travel demand still looks healthy, and technical historical stats argue for disciplined risk management rather than panic."
   ],
   "sections": [
     {
@@ -15,33 +15,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@AnthropicAI: Glasswing Restricts Mythos",
-          "body": "Anthropic unveiled Project Glasswing around Claude Mythos Preview, saying the model is powerful enough at vulnerability discovery that it will be limited to a small set of major infrastructure partners instead of released broadly. The real signal is that top-tier model progress is no longer just benchmark theater; labs are starting to treat some capability jumps as cyber-risk management problems.",
-          "url": "https://x.com/AnthropicAI/status/2041578392852517128"
+          "title": "@TheAmolAvasare: Mythos Becomes a Safety-Governed Release",
+          "body": "Anthropic’s growth lead said Mythos was the strongest model the company has trained so far, yet kept it tightly limited because of its cybersecurity capabilities. The practical takeaway is that frontier-model launches are starting to look more like controlled disclosure processes than ordinary product drops.",
+          "url": "https://x.com/TheAmolAvasare/status/2041907213602844756"
         },
         {
           "tag": "new",
-          "title": "@Zai_org: GLM-5.1 Raises the Open-Source Ceiling",
-          "body": "Z.ai launched GLM-5.1 with claims of top open-source results on SWE-Bench Pro, Terminal-Bench, and NL2Repo plus up to eight-hour autonomous runs. Even if the numbers need independent vetting, the clear takeaway is that open agentic coding models are pushing into much longer-horizon tasks.",
-          "url": "https://x.com/Zai_org/status/2041550153354519022"
-        },
-        {
-          "tag": "hot",
-          "title": "@sama: Codex Hits 3M Weekly Users",
-          "body": "Sam Altman said Codex passed 3 million weekly users and that OpenAI is resetting usage limits at each additional million up to 10 million. That is a strong adoption signal for AI coding tools, and it suggests OpenAI is willing to spend compute aggressively to keep momentum high.",
-          "url": "https://x.com/sama/status/2041658719839383945"
+          "title": "@kevinma_dev_zh: Managed Agents Points to a More Durable Agent Stack",
+          "body": "A good read on Anthropic’s Managed Agents launch argued that the real architectural shift is decoupling session, harness, and sandbox so each can evolve independently. That matters because agent systems built around today’s model weaknesses tend to age badly as base models improve.",
+          "url": "https://x.com/kevinma_dev_zh/status/2042071533666152683"
         },
         {
           "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code Defaults Get More Serious",
-          "body": "Claude Code 2.1.94 quietly moved default effort from medium to high for several paid setups and improved memory handling so MEMORY.md is no longer treated as empty. The practical takeaway is that wrapper behavior and defaults are still changing materially, so tool updates can alter results even when the underlying model name stays the same.",
-          "url": "https://x.com/ClaudeCodeLog/status/2041633784836038757"
+          "title": "@yeahwu404: Gemini Notebooks Turns Chat into a Workspace",
+          "body": "Google is rolling out notebooks inside Gemini web, with documents, PDFs, chat history, and custom instructions living in one place and syncing with NotebookLM. It is a meaningful product move toward longer-running research and project workflows rather than one-off prompts.",
+          "url": "https://x.com/yeahwu404/status/2042106933596058053"
         },
         {
           "tag": "update",
-          "title": "@elonmusk: Colossus 2 Training Lineup Expands",
-          "body": "Musk said Colossus 2 now has seven models in training, including 1T, 1.5T, 6T, and 10T variants plus Imagine V2. Whether or not every name matters, the broader message is obvious: the frontier race is now being signaled through sheer training scale and parallel model bets.",
-          "url": "https://x.com/elonmusk/status/2041754402239975479"
+          "title": "@chenchengpro: A Simple Claude Code Reset Scheduling Hack",
+          "body": "One widely shared workflow tip was to schedule lightweight cloud triggers around Claude Code’s five-hour reset window so each work block starts with fresh quota. It is a small but useful reminder that throughput gains often come from orchestration tricks, not just better models.",
+          "url": "https://x.com/chenchengpro/status/2042082446871818746"
+        },
+        {
+          "tag": "update",
+          "title": "@fchollet: Benchmark Wins Still Need Reality Checks",
+          "body": "François Chollet argued that Meta’s new model may be overly optimized for public benchmarks at the expense of actual usefulness. Even if you disagree with the verdict, the deeper point is solid: evaluation quality is now a strategic advantage, not a side concern.",
+          "url": "https://x.com/fchollet/status/2042004767585751284"
         }
       ]
     },
@@ -50,22 +50,28 @@
       "title": "Markets & News",
       "items": [
         {
+          "tag": "update",
+          "title": "@FactSet: Private Credit Finally Looks Stress-Tested",
+          "body": "FactSet highlighted more than $10 billion of withdrawal requests hitting large public private-credit firms over the past two months, with some managers already limiting redemptions. That is a real liquidity signal for an asset class that spent years absorbing near-uninterrupted inflows.",
+          "url": "https://x.com/FactSet/status/2041925329518793140"
+        },
+        {
+          "tag": "update",
+          "title": "@FactSet: Delta’s Quarter Says Demand Is Fine, Fuel Is the Problem",
+          "body": "Delta beat in Q1 on stronger unit revenue and premium-cabin demand, but higher fuel costs dragged Q2 EPS guidance and led management to suspend full-year guidance. The read-through is that travel demand remains resilient while energy is doing the damage to margins.",
+          "url": "https://x.com/FactSet/status/2041875006670389348"
+        },
+        {
+          "tag": "update",
+          "title": "@MWR_Research: Below the 200-Day Usually Isn’t the End",
+          "body": "MWR Research noted that since 1990, the S&P 500 has usually posted positive 3-, 6-, and 12-month returns after first closing a month below its 200-day moving average, though major bear-market exceptions were ugly. The useful lesson is not blind dip-buying but tighter attention to risk management when the tape weakens.",
+          "url": "https://x.com/MWR_Research/status/2039435303362937338"
+        },
+        {
           "tag": "new",
-          "title": "@intel: Terafab Turns Compute Demand Into Factory Demand",
-          "body": "Intel said it is joining the Terafab project alongside SpaceX, xAI, and Tesla to help build toward 1 TW/year of compute capacity. The investable read-through is that AI demand is still cascading down into fabs, packaging, and energy-hungry physical infrastructure.",
-          "url": "https://x.com/intel/status/2041501301318766866"
-        },
-        {
-          "tag": "update",
-          "title": "@FactSet: Iran Deadline Keeps Event Risk Elevated",
-          "body": "FactSet’s StreetAccount note said traders were watching whether Trump strikes a deal, delays, or escalates ahead of an Iran deadline, with uncertainty still high. For markets, it’s a reminder that geopolitics remains the fastest path to a fresh volatility spike even when underlying positioning looks steadier.",
-          "url": "https://x.com/FactSet/status/2041511716555485526"
-        },
-        {
-          "tag": "update",
-          "title": "@kiteandkeymedia: Critical Minerals Still Underwrite the Whole Stack",
-          "body": "Kite & Key’s video thread argued that American economic, military, and tech capacity all depend on imported minerals that are often controlled by geopolitical rivals. It’s a useful framing device for why supply-chain security remains a first-order constraint on everything from semis to defense.",
-          "url": "https://x.com/kiteandkeymedia/status/1991008785301930240"
+          "title": "@erchenlu1: Stablecoins Are Still Closer to Casino Chips Than Cash",
+          "body": "A thoughtful thread pushed back on the clean “future of payments” story around stablecoins, arguing that today’s strongest product-market fit is still inside trading, speculation, and gray-market flows. That is a useful framing check for anyone treating stablecoin adoption as already synonymous with mainstream everyday payments.",
+          "url": "https://x.com/erchenlu1/status/2042120529822544357"
         }
       ]
     },
@@ -74,22 +80,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@chenchengpro: A Hidden Tailscale DERP Trap in China",
-          "body": "A concrete ops post: after self-hosting a Tailscale DERP relay in mainland China, the author found Alibaba Cloud will reset 80/443 traffic for domains without ICP filing even when localhost checks look fine. The useful trick is to move the relay off standard ports like 8443 if you want a no-surprises setup.",
-          "url": "https://x.com/chenchengpro/status/2041753163175490044"
-        },
-        {
           "tag": "new",
-          "title": "@PawelHuryn: Local Logs Can Expose Claude Code Spend",
-          "body": "Pawel Huryn shared a dashboard that reads Claude Code’s local JSONL logs to break down sessions, tokens, and cache usage by project. The broader tip is simple: a lot of agent tooling already writes the telemetry you wish the UI exposed, so local introspection can recover it.",
-          "url": "https://x.com/PawelHuryn/status/2041595776074236328"
+          "title": "@sitinme: MiniMind Makes End-to-End Training Legible Again",
+          "body": "MiniMind was highlighted as a 64M-parameter project that lets you run pretraining, finetuning, and chat alignment end to end on a single consumer GPU in a couple of hours. For anyone trying to actually understand how modern LLM training works, that is much more useful than reading another abstract explainer.",
+          "url": "https://x.com/sitinme/status/2042049012669514000"
         },
         {
           "tag": "update",
-          "title": "@dotey: LLM Wiki Beats More Bookmarks",
-          "body": "Dotey’s thread argued that the real leap in personal knowledge tools is not raw collection but having an agent turn scattered clips into structured wiki pages you can actually revisit. That’s a good mental model for anyone drowning in bookmarks, highlights, and read-later debt.",
-          "url": "https://x.com/dotey/status/2041509264221483449"
+          "title": "@Tz_2022: Local LLM Speed Is Mostly a Bandwidth Problem",
+          "body": "A practical post argued that once a model fits in memory, decode speed is driven more by memory bandwidth than by raw compute, and offered a simple rule-of-thumb formula for estimating tokens per second. That is genuinely handy if you are deciding between GPUs or trying to debug why a local model feels slow.",
+          "url": "https://x.com/Tz_2022/status/2042170622122266914"
+        },
+        {
+          "tag": "update",
+          "title": "@ixiaowenz: AI Raises the Premium on Judgment, Not Just Knowledge",
+          "body": "One broader reflection in the batch argued that AI will make raw information easier to obtain while making logic, falsification, and independent judgment more scarce and therefore more valuable. It is a useful educational lens: the future advantage may come less from access to answers than from the ability to challenge them.",
+          "url": "https://x.com/ixiaowenz/status/2042081509163827463"
         }
       ]
     }
