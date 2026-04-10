@@ -1,13 +1,15 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "date": "Thursday, April 9th, 2026 — 6:00 PM ET",
+  "page_title": "X Feed Digest — Friday, April 10th, 2026 — 6:00 PM ET",
+  "date": "Friday, April 10th, 2026 — 6:00 PM ET",
+  "summary_title": "High Signal Summary",
   "summary": [
-    "OpenAI’s new $100 ChatGPT Pro tier made Codex the center of the day’s pricing story, a sign that coding-agent demand is no longer a niche usage pattern.",
-    "Anthropic’s Managed Agents launch and the new Monitor workflow both pointed the same way: agent products are becoming durable runtimes with background execution, state, and orchestration built in.",
-    "The feed stayed skeptical of headline benchmark wins: reward-hacking threads argued that harness quality and evaluation design can swing results as much as the underlying model.",
-    "Markets talk was more about plumbing than panic — private credit finally showed redemption stress, Delta’s quarter pointed to resilient travel demand but fuel pressure, and structural retirement flows remained a key support for equities.",
-    "Builders kept gravitating toward practical leverage: open models, tiny train-it-yourself stacks, and cleanup tools that improve real workflows instead of just chasing the latest frontier release."
+    "Claude Code dominated the practical workflow news: Anthropic rolled out browser-reviewed planning via /ultraplan, followed by a dense 2.1.101 release focused on team onboarding, enterprise TLS compatibility, and security/runtime fixes.",
+    "The strongest AI-building theme was infrastructure over model mystique: memory layers, harness design, and reusable skills kept showing up as the real reason agents are becoming more useful in production.",
+    "Open-weight competition is getting harder to dismiss. The feed repeatedly pointed to Chinese models inside mainstream Western products and to fresh efficiency gains that make strong local inference cheaper and more portable.",
+    "The Mythos cycle is already entering backlash mode: several posts pushed back on Anthropic’s framing while newer eval commentary focused on bounded, measurable task horizons instead of apocalypse theater.",
+    "Outside AI, the most actionable macro signal was energy and input-cost stress. Strait of Hormuz toll politics plus rising commodity prices both point toward renewed pressure on transport, manufacturing margins, and inflation-sensitive trades."
   ],
   "sections": [
     {
@@ -16,33 +18,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: $100 ChatGPT Pro Tier Reorients Pricing Around Codex",
-          "body": "OpenAI introduced a new $100/month ChatGPT Pro tier built around heavier Codex usage, while keeping the $200 plan as the highest-usage option and temporarily boosting limits through May 31. The signal is that coding-agent demand is now strong enough to reshape product packaging, not just marketing copy.",
-          "url": "https://x.com/OpenAI/status/2042295688323875316"
+          "title": "@trq212: Claude Code Adds Web-Based /ultraplan",
+          "body": "Anthropic previewed /ultraplan, which moves implementation planning into the browser so you can review, annotate, and revise a plan before executing it on the web or back in the terminal. That is a real workflow upgrade for complex coding tasks because planning no longer has to happen inside a cramped terminal scrollback.",
+          "url": "https://x.com/trq212/status/2042671370186973589"
+        },
+        {
+          "tag": "update",
+          "title": "@ClaudeCodeLog: Claude Code 2.1.101 Hardens the Runtime",
+          "body": "The 2.1.101 release bundled a surprisingly meaningful set of practical changes: a new /team-onboarding command, enterprise TLS proxy support via the OS certificate store, a command-injection fix, and a memory-leak fix for long sessions. In plain English, Claude Code got easier to deploy in real organizations and safer to run for long-lived work.",
+          "url": "https://x.com/ClaudeCodeLog/status/2042685443934756906"
         },
         {
           "tag": "new",
-          "title": "@claudeai: Managed Agents Turns Anthropic Into an Agent Runtime Provider",
-          "body": "Anthropic put Claude Managed Agents into public beta, bundling prompts, tools, MCP connectivity, session handling, and production infrastructure into a hosted runtime. The bigger story is strategic: frontier labs are moving from selling model endpoints to selling the operating layer around long-running agents.",
-          "url": "https://x.com/claudeai/status/2041927687460024721"
-        },
-        {
-          "tag": "hot",
-          "title": "@MogicianTony: Reward-Hacking Casts Doubt on Benchmark Theater",
-          "body": "A benchmark-audit thread claimed it could score perfectly on SWE-bench Verified and Terminal-Bench without solving real tasks, while companion posts argued harness design alone can massively boost results. The takeaway is not that benchmarks are useless, but that leaderboard wins now need much harder scrutiny.",
-          "url": "https://x.com/MogicianTony/status/2042300245242233216"
+          "title": "@garrytan: GBrain Open-Sources a Production Memory Stack",
+          "body": "Garry Tan open-sourced GBrain, a memory system meant to give agents reliable recall across large personal knowledge bases. The interesting part is the shift in emphasis: production agent builders are spending as much energy on memory plumbing as on the base model itself.",
+          "url": "https://x.com/garrytan/status/2042497872114090069"
         },
         {
           "tag": "update",
-          "title": "@noahzweben: Monitor Tool Lets Agents Wake Themselves Up",
-          "body": "Anthropic’s new Monitor tool lets Claude create background scripts that wake the agent only when a condition is met, instead of burning tokens on constant polling. For builders, this is a real workflow upgrade: longer tasks can stay responsive without keeping the main loop hot the whole time.",
-          "url": "https://x.com/noahzweben/status/2042332268450963774"
-        },
-        {
-          "tag": "update",
-          "title": "@petergyang: Chinese Open Models Are Quietly Winning Real Workloads",
-          "body": "Peter Yang’s roundup argued that Chinese open-source models are already powering more Western products than many people realize, citing examples from Cursor, Shopify, Airbnb, and Cognition. Even if individual attributions evolve, the broader point is clear: price-performance pressure from Chinese model stacks is now shaping mainstream product decisions.",
+          "title": "@petergyang: Chinese Open Models Are Quietly in Production",
+          "body": "Peter Yang stitched together evidence that Kimi, Qwen, and GLM-family models are already showing up inside products from firms like Cursor, Shopify, and Airbnb. The takeaway is bigger than one thread: Chinese open-source AI is no longer a side story, it is shaping real product and cost decisions across the industry.",
           "url": "https://x.com/petergyang/status/2042248752157839793"
+        },
+        {
+          "tag": "update",
+          "title": "@METR_Evals: GPT-5.4 Time Horizon Looks Measurable, Not Magical",
+          "body": "METR shared a more grounded capability datapoint for GPT-5.4, estimating task time horizons in the single-digit-to-low-double-digit hour range depending on how reward hacks are treated. That matters because it replaces vague frontier hype with a more useful question: how long can a model stay productive on real work before supervision breaks down?",
+          "url": "https://x.com/METR_Evals/status/2042640545126965441"
+        },
+        {
+          "tag": "new",
+          "title": "@outsource_: Gemma 4 31B Turbo Pushes Local Inference Downmarket",
+          "body": "A new Gemma 4 31B turbo variant was pitched as fitting on a single RTX 5090 with materially lower VRAM needs and much higher throughput. Even allowing for launch-thread optimism, the broader signal is solid: local-model economics keep improving fast enough to matter for serious hobbyist and workstation use.",
+          "url": "https://x.com/outsource_/status/2042323470428537121"
         }
       ]
     },
@@ -51,22 +59,22 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "update",
-          "title": "@FactSet: Private Credit Finally Shows Redemption Stress",
-          "body": "FactSet highlighted more than $10 billion of withdrawal requests hitting large public private-credit firms over the past two months, forcing some managers to limit redemptions. After years of relentless inflows, that is a meaningful liquidity warning sign for one of the market’s favorite asset classes.",
-          "url": "https://x.com/FactSet/status/2041925329518793140"
+          "tag": "hot",
+          "title": "@WatcherGuru: Hormuz Toll Risk Is Back on the Tape",
+          "body": "WatcherGuru surfaced a Politico report saying oil executives are pressuring the Trump administration not to allow Iran to charge tolls in the Strait of Hormuz. The actionable read-through is straightforward: any sign that shipping costs or passage risk are being repriced should keep energy, inflation, and transport-sensitive names on alert.",
+          "url": "https://x.com/WatcherGuru/status/2042005069759955377"
         },
         {
           "tag": "update",
-          "title": "@FactSet: Delta’s Quarter Says Demand Is Holding, Fuel Is the Problem",
-          "body": "Delta beat on Q1 revenue strength, with premium cabin sales and unit revenue both improving, but elevated fuel costs dragged Q2 EPS guidance and led management to suspend full-year guidance. The read-through is that travel demand still looks healthy while energy is doing the real damage to margins.",
-          "url": "https://x.com/FactSet/status/2041875006670389348"
+          "title": "@lidangzzz: Commodity Inflation Is Hurting Alt-China Manufacturing",
+          "body": "One of the better macro threads argued that rising oil, gas, silver, and copper prices are making non-China manufacturing diversification much less attractive than it looked when input costs were low. If that view is right, supply-chain ‘de-risking’ becomes harder to fund just as inflation pressure is returning.",
+          "url": "https://x.com/lidangzzz/status/2042595452764185021"
         },
         {
           "tag": "update",
-          "title": "@erchenlu1: Retirement Auto-Flows Still Underpin the S&P 500",
-          "body": "A thoughtful post argued that 401(k), IRA, employer-match, and target-date flows create a steady structural bid for S&P 500 index funds, regardless of day-to-day headlines or valuation anxiety. It is a useful reminder that some of the strongest support for U.S. equities comes from system design, not sentiment.",
-          "url": "https://x.com/erchenlu1/status/2042203369427591554"
+          "title": "@leifuchen: A Better Way to Think About Drawdown Risk",
+          "body": "A retirement-survival thread used a ruin-probability framework to compare conservative portfolios against all-Bitcoin concentration, rather than just comparing headline returns. That is useful because it frames portfolio choices around staying solvent over time instead of chasing maximum upside in isolation.",
+          "url": "https://x.com/leifuchen/status/2042182393293906267"
         }
       ]
     },
@@ -75,22 +83,22 @@
       "title": "General",
       "items": [
         {
+          "tag": "update",
+          "title": "@lijigang: Agents Improved Because the Stack Improved",
+          "body": "A paper-reading thread made the clearest conceptual point in the batch: agents got more useful not because models suddenly became huge again, but because builders layered in memory, tools, protocols, and execution sandboxes. If you are deciding where to invest time, that is a far better heuristic than waiting for one mythical next model.",
+          "url": "https://x.com/lijigang/status/2042442044594139491"
+        },
+        {
+          "tag": "update",
+          "title": "@ChrisJBakke: Startup Life Has Been a Six-Year Stress Test",
+          "body": "Chris Bakke’s year-by-year sketch of company-building since 2020 landed because it compressed six different macro shocks into one grimly accurate operating timeline. It is useful perspective for founders: a lot of what feels like personal failure has actually been stacked regime change.",
+          "url": "https://x.com/ChrisJBakke/status/2042601895097962948"
+        },
+        {
           "tag": "new",
-          "title": "@sitinme: MiniMind Makes End-to-End LLM Training Legible Again",
-          "body": "MiniMind was highlighted as a 64M-parameter project that lets you run pretraining, finetuning, and RL-style alignment end to end on a single 3090 in roughly two hours. For anyone who wants to actually understand how modern model training works, that is far more useful than reading another abstract explainer.",
-          "url": "https://x.com/sitinme/status/2042049012669514000"
-        },
-        {
-          "tag": "update",
-          "title": "@gabriberton: Vibe Coding Still Needs Dead-Code Hygiene",
-          "body": "One of the cleanest workflow tips in the batch was brutally simple: AI-assisted coding produces plenty of dead code, so run regular cleanup passes with tools like ruff and vulture. It is a good reminder that faster generation only matters if you keep the codebase from quietly rotting.",
-          "url": "https://x.com/gabriberton/status/2042141119837012284"
-        },
-        {
-          "tag": "update",
-          "title": "@akazwz_: A 16GB M1 Pro Is Already Enough for a Local Voice Stack",
-          "body": "A practical build note showed an M1 Pro with 16GB RAM running VAD, ASR, TTS, and a small local model together via MLX to approximate Gemini Live- or GPT Realtime-style conversations entirely on-device. It will not beat the cloud, but it is a strong proof that local voice agents are getting surprisingly viable on ordinary hardware.",
-          "url": "https://x.com/akazwz_/status/2041893775094800622"
+          "title": "@KKaWSB: Urban Design May Explain More Loneliness Than Personality Does",
+          "body": "A strong urbanism thread argued that Paris feels more social partly because small apartments and street-level cafes push people into shared public living rooms, whereas car-centric layouts isolate people by default. Whether or not you buy every historical detail, the core insight is useful: social life is often an infrastructure problem, not just an individual one.",
+          "url": "https://x.com/KKaWSB/status/2042521386393194632"
         }
       ]
     }
