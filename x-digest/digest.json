@@ -1,15 +1,15 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest — Friday, April 10th, 2026 — 6:00 PM ET",
-  "date": "Friday, April 10th, 2026 — 6:00 PM ET",
+  "page_title": "X Feed Digest — Saturday, April 11th, 2026 — 9:00 AM ET",
+  "date": "Saturday, April 11th, 2026 — 9:00 AM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Claude Code dominated the practical workflow news: Anthropic rolled out browser-reviewed planning via /ultraplan, followed by a dense 2.1.101 release focused on team onboarding, enterprise TLS compatibility, and security/runtime fixes.",
-    "The strongest AI-building theme was infrastructure over model mystique: memory layers, harness design, and reusable skills kept showing up as the real reason agents are becoming more useful in production.",
-    "Open-weight competition is getting harder to dismiss. The feed repeatedly pointed to Chinese models inside mainstream Western products and to fresh efficiency gains that make strong local inference cheaper and more portable.",
-    "The Mythos cycle is already entering backlash mode: several posts pushed back on Anthropic’s framing while newer eval commentary focused on bounded, measurable task horizons instead of apocalypse theater.",
-    "Outside AI, the most actionable macro signal was energy and input-cost stress. Strait of Hormuz toll politics plus rising commodity prices both point toward renewed pressure on transport, manufacturing margins, and inflation-sensitive trades."
+    "Agent tooling—not raw model hype—dominated the batch: OpenAI repriced Codex-heavy usage, Codex itself shipped a meaningful runtime update, and Anthropic kept moving agent infrastructure deeper into the platform.",
+    "Memory and context management look increasingly like the real leverage point for useful agents, with GBrain pushing a full personal-memory stack while smaller tools focused on shrinking token waste from noisy command output.",
+    "The strongest AI adoption signal was organizational rather than technical: the best thread argued companies win by making AI usage socially normal and expected, not by forcing top-down training theater.",
+    "Macro discussion leaned toward tighter-money realism. Bank earnings start next week, Jamie Dimon’s “cheap money is over” thesis is still echoing through the feed, and Japan’s housing-market dysfunction got reframed as tax distortion rather than hidden bargain inventory.",
+    "Outside pure AI and markets, the most useful posts were operator-level: better remote setups for supervising agents, a clear founder-era timeline for the last six years of startup whiplash, and a reminder that privacy abuses can still unwind years later in court."
   ],
   "sections": [
     {
@@ -18,39 +18,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@trq212: Claude Code Adds Web-Based /ultraplan",
-          "body": "Anthropic previewed /ultraplan, which moves implementation planning into the browser so you can review, annotate, and revise a plan before executing it on the web or back in the terminal. That is a real workflow upgrade for complex coding tasks because planning no longer has to happen inside a cramped terminal scrollback.",
-          "url": "https://x.com/trq212/status/2042671370186973589"
+          "title": "@OpenAI: New $100 Codex-Focused Tier",
+          "body": "OpenAI said it is adding a new $100/month Pro tier with materially more Codex usage than Plus, while keeping the $200 plan as the highest-usage option and extending a temporary 2x Codex promo for existing top-tier users. The real signal is that heavy coding-agent demand is now strong enough to force explicit product segmentation instead of one-size-fits-all subscriptions.",
+          "url": "https://x.com/OpenAI/status/2042296046009626989"
         },
         {
           "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.101 Hardens the Runtime",
-          "body": "The 2.1.101 release bundled a surprisingly meaningful set of practical changes: a new /team-onboarding command, enterprise TLS proxy support via the OS certificate store, a command-injection fix, and a memory-leak fix for long sessions. In plain English, Claude Code got easier to deploy in real organizations and safer to run for long-lived work.",
-          "url": "https://x.com/ClaudeCodeLog/status/2042685443934756906"
+          "title": "@Codex_Changelog: Codex 0.120.0 Improves Agent Ops",
+          "body": "Codex 0.120.0 adds live progress streaming for running agents, cleaner separation between live and completed hooks in the TUI, thread titles in custom status lines, and typed outputSchema support for MCP tools. It is a practical release rather than a flashy one, but exactly the kind of runtime polish that makes agent sessions easier to supervise and integrate.",
+          "url": "https://x.com/Codex_Changelog/status/2042801634435084335"
         },
         {
           "tag": "new",
-          "title": "@garrytan: GBrain Open-Sources a Production Memory Stack",
-          "body": "Garry Tan open-sourced GBrain, a memory system meant to give agents reliable recall across large personal knowledge bases. The interesting part is the shift in emphasis: production agent builders are spending as much energy on memory plumbing as on the base model itself.",
+          "title": "@dotey: Anthropic Managed Agents Get Safer Credential Handling",
+          "body": "A strong explainer on Anthropic’s new Vaults model said per-user credentials can be injected for agent tool use without ever appearing inside the model context window. That matters because it is the right architectural answer to prompt-injection risk: the model can use secrets without being able to casually read or leak them.",
+          "url": "https://x.com/dotey/status/2042805474681118988"
+        },
+        {
+          "tag": "new",
+          "title": "@garrytan: GBrain Open-Sources a Personal Memory Stack",
+          "body": "Garry Tan open-sourced the markdown-heavy memory system behind his own agent workflow, built to recall thousands of notes, people files, meetings, and calendar entries. The broader takeaway is that production-grade agent usefulness is being won through memory architecture and retrieval discipline, not just better base models.",
           "url": "https://x.com/garrytan/status/2042497872114090069"
         },
         {
           "tag": "update",
-          "title": "@petergyang: Chinese Open Models Are Quietly in Production",
-          "body": "Peter Yang stitched together evidence that Kimi, Qwen, and GLM-family models are already showing up inside products from firms like Cursor, Shopify, and Airbnb. The takeaway is bigger than one thread: Chinese open-source AI is no longer a side story, it is shaping real product and cost decisions across the industry.",
-          "url": "https://x.com/petergyang/status/2042248752157839793"
-        },
-        {
-          "tag": "update",
-          "title": "@METR_Evals: GPT-5.4 Time Horizon Looks Measurable, Not Magical",
-          "body": "METR shared a more grounded capability datapoint for GPT-5.4, estimating task time horizons in the single-digit-to-low-double-digit hour range depending on how reward hacks are treated. That matters because it replaces vague frontier hype with a more useful question: how long can a model stay productive on real work before supervision breaks down?",
-          "url": "https://x.com/METR_Evals/status/2042640545126965441"
+          "title": "@AYi_AInotes: Ramp’s AI Adoption Playbook Is Mostly Culture",
+          "body": "The best enterprise-AI thread in the batch argued that Ramp drove adoption by making AI use visible, expected, and socially reinforced across the company rather than burying employees in mandatory training. If true, that is a useful correction for teams still treating AI rollout as a procurement problem instead of a behavior-design problem.",
+          "url": "https://x.com/AYi_AInotes/status/2042609191765131353"
         },
         {
           "tag": "new",
-          "title": "@outsource_: Gemma 4 31B Turbo Pushes Local Inference Downmarket",
-          "body": "A new Gemma 4 31B turbo variant was pitched as fitting on a single RTX 5090 with materially lower VRAM needs and much higher throughput. Even allowing for launch-thread optimism, the broader signal is solid: local-model economics keep improving fast enough to matter for serious hobbyist and workstation use.",
-          "url": "https://x.com/outsource_/status/2042323470428537121"
+          "title": "@GitHub_Daily: RTK Cuts Context Waste for Coding Agents",
+          "body": "One practical tool recommendation highlighted RTK, which filters and compresses noisy terminal output before it gets stuffed into Claude Code, Codex, or similar workflows. The pitch is simple but credible: if your agent keeps burning tokens on repetitive git status and test logs, better output shaping may buy more value than switching models again.",
+          "url": "https://x.com/GitHub_Daily/status/2042885064917422318"
         }
       ]
     },
@@ -60,21 +60,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Hormuz Toll Risk Is Back on the Tape",
-          "body": "WatcherGuru surfaced a Politico report saying oil executives are pressuring the Trump administration not to allow Iran to charge tolls in the Strait of Hormuz. The actionable read-through is straightforward: any sign that shipping costs or passage risk are being repriced should keep energy, inflation, and transport-sensitive names on alert.",
-          "url": "https://x.com/WatcherGuru/status/2042005069759955377"
+          "title": "@FactSet: Bank Earnings Start Next Week",
+          "body": "FactSet’s preview laid out a dense bank-earnings calendar starting April 13, with big U.S. names reporting through midweek and analysts looking for better year-over-year results on loan growth and asset repricing. For anyone watching macro tone, this is one of the next clean checkpoints for how much higher-rate pressure is still helping versus hurting the sector.",
+          "url": "https://x.com/FactSet/status/2042614332937077069"
         },
         {
           "tag": "update",
-          "title": "@lidangzzz: Commodity Inflation Is Hurting Alt-China Manufacturing",
-          "body": "One of the better macro threads argued that rising oil, gas, silver, and copper prices are making non-China manufacturing diversification much less attractive than it looked when input costs were low. If that view is right, supply-chain ‘de-risking’ becomes harder to fund just as inflation pressure is returning.",
-          "url": "https://x.com/lidangzzz/status/2042595452764185021"
+          "title": "@RockportAI: Dimon’s “Cheap Money Is Over” View Is Spreading",
+          "body": "A digest of Jamie Dimon’s latest letter pushed the idea that the era of easy money is not just paused but structurally gone. Even secondhand, it is a useful framing device for markets: if that regime view is right, investors should be slower to assume old valuation shortcuts and fast rebounds will keep working.",
+          "url": "https://x.com/RockportAI/status/2041252661282938962"
         },
         {
-          "tag": "update",
-          "title": "@leifuchen: A Better Way to Think About Drawdown Risk",
-          "body": "A retirement-survival thread used a ruin-probability framework to compare conservative portfolios against all-Bitcoin concentration, rather than just comparing headline returns. That is useful because it frames portfolio choices around staying solvent over time instead of chasing maximum upside in isolation.",
-          "url": "https://x.com/leifuchen/status/2042182393293906267"
+          "tag": "new",
+          "title": "@aakashgupta: Japan’s Empty Homes Are a Tax Story, Not a Value Story",
+          "body": "Aakash Gupta’s thread argued that Japan’s millions of abandoned homes are largely the product of tax incentives that punish demolition and reward leaving decaying structures standing, rather than evidence of some giant overlooked real-estate bargain. That is a sharp, useful reminder that market weirdness often comes from policy plumbing before it comes from investor neglect.",
+          "url": "https://x.com/aakashgupta/status/2042697384401277309"
         }
       ]
     },
@@ -84,21 +84,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@lijigang: Agents Improved Because the Stack Improved",
-          "body": "A paper-reading thread made the clearest conceptual point in the batch: agents got more useful not because models suddenly became huge again, but because builders layered in memory, tools, protocols, and execution sandboxes. If you are deciding where to invest time, that is a far better heuristic than waiting for one mythical next model.",
-          "url": "https://x.com/lijigang/status/2042442044594139491"
+          "title": "@mronge: Headless Mac mini + iPad Is a Strong Agent Console",
+          "body": "A short demo made the case for using a headless Mac mini as the always-on agent box and an iPad as the mobile control surface for monitoring, taking over, and steering work remotely. It is a niche setup, but a very sensible one if your agents increasingly live in long-running terminal sessions.",
+          "url": "https://x.com/mronge/status/2041973730063348067"
         },
         {
           "tag": "update",
-          "title": "@ChrisJBakke: Startup Life Has Been a Six-Year Stress Test",
-          "body": "Chris Bakke’s year-by-year sketch of company-building since 2020 landed because it compressed six different macro shocks into one grimly accurate operating timeline. It is useful perspective for founders: a lot of what feels like personal failure has actually been stacked regime change.",
+          "title": "@ChrisJBakke: The Last Six Years Were a Founder Stress Test",
+          "body": "Chris Bakke compressed the startup environment from 2020 through 2026 into one brutal sequence of regime shifts: pandemic chaos, easy-money excess, talent inflation, bank instability, and then the AI/crypto/defense narrative carousel. It landed because it explains why many operators feel exhausted even when execution has been decent.",
           "url": "https://x.com/ChrisJBakke/status/2042601895097962948"
         },
         {
-          "tag": "new",
-          "title": "@KKaWSB: Urban Design May Explain More Loneliness Than Personality Does",
-          "body": "A strong urbanism thread argued that Paris feels more social partly because small apartments and street-level cafes push people into shared public living rooms, whereas car-centric layouts isolate people by default. Whether or not you buy every historical detail, the core insight is useful: social life is often an infrastructure problem, not just an individual one.",
-          "url": "https://x.com/KKaWSB/status/2042521386393194632"
+          "tag": "hot",
+          "title": "@NCLAlegal: Massachusetts Settles Over Silent Covid Tracking App Install",
+          "body": "One of the more consequential non-AI posts surfaced a settlement over a Massachusetts program that allegedly auto-installed a Covid tracking app on more than a million phones without meaningful consent. It is a useful reminder that privacy violations disguised as public-interest tech can take years to unwind, but they do not disappear just because the news cycle moved on.",
+          "url": "https://x.com/NCLAlegal/status/2042046615427400081"
         }
       ]
     }
