@@ -1,15 +1,15 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest — Saturday, April 11th, 2026 — 9:00 AM ET",
-  "date": "Saturday, April 11th, 2026 — 9:00 AM ET",
+  "page_title": "X Feed Digest — Sunday, April 12th, 2026 — 6:00 PM ET",
+  "date": "Sunday, April 12th, 2026 — 6:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Agent tooling—not raw model hype—dominated the batch: OpenAI repriced Codex-heavy usage, Codex itself shipped a meaningful runtime update, and Anthropic kept moving agent infrastructure deeper into the platform.",
-    "Memory and context management look increasingly like the real leverage point for useful agents, with GBrain pushing a full personal-memory stack while smaller tools focused on shrinking token waste from noisy command output.",
-    "The strongest AI adoption signal was organizational rather than technical: the best thread argued companies win by making AI usage socially normal and expected, not by forcing top-down training theater.",
-    "Macro discussion leaned toward tighter-money realism. Bank earnings start next week, Jamie Dimon’s “cheap money is over” thesis is still echoing through the feed, and Japan’s housing-market dysfunction got reframed as tax distortion rather than hidden bargain inventory.",
-    "Outside pure AI and markets, the most useful posts were operator-level: better remote setups for supervising agents, a clear founder-era timeline for the last six years of startup whiplash, and a reminder that privacy abuses can still unwind years later in court."
+    "The dominant AI story in this batch was trust erosion around Anthropic and Claude Code: people were comparing notes on possible silent model downgrades, billing-side surprises, and policy changes that directly affect day-to-day engineering work.",
+    "The most useful workflow posts were about harness design rather than raw model rankings. Stricter execution contracts, lightweight Git-and-lockfile coordination, and repo-level instruction files/skills all showed up as practical ways to get better agent behavior.",
+    "Open and low-cost alternatives kept gaining momentum. Free NVIDIA-hosted endpoints, Anthropic's open Agent Skills spec, and strong new open-source audio/model tooling all pointed to a cheaper and more modular stack for builders.",
+    "On the macro side, the clearest actionable news item was Trump's move toward a Strait of Hormuz blockade after failed Iran talks, pushing energy logistics and oil-price risk back to the center of the feed.",
+    "A broader lesson cut across the good posts: AI still does not replace domain knowledge or strategy. The highest-signal takes emphasized that clear problem definition and real operating constraints matter more than magical prompting."
   ],
   "sections": [
     {
@@ -18,39 +18,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: New $100 Codex-Focused Tier",
-          "body": "OpenAI said it is adding a new $100/month Pro tier with materially more Codex usage than Plus, while keeping the $200 plan as the highest-usage option and extending a temporary 2x Codex promo for existing top-tier users. The real signal is that heavy coding-agent demand is now strong enough to force explicit product segmentation instead of one-size-fits-all subscriptions.",
-          "url": "https://x.com/OpenAI/status/2042296046009626989"
+          "title": "@steipete: Strict-Agentic Execution Contracts",
+          "body": "Stefan highlighted a new OpenClaw runtime setting that explicitly tells GPT-5.x to keep reading code, calling tools, and making edits until the task is actually done or a real blocker appears. The practical takeaway is that a tighter execution contract may fix a lot of perceived agent laziness without changing models.",
+          "url": "https://x.com/steipete/status/2043136615640694797"
         },
         {
           "tag": "update",
-          "title": "@Codex_Changelog: Codex 0.120.0 Improves Agent Ops",
-          "body": "Codex 0.120.0 adds live progress streaming for running agents, cleaner separation between live and completed hooks in the TUI, thread titles in custom status lines, and typed outputSchema support for MCP tools. It is a practical release rather than a flashy one, but exactly the kind of runtime polish that makes agent sessions easier to supervise and integrate.",
-          "url": "https://x.com/Codex_Changelog/status/2042801634435084335"
+          "title": "@timyangnet: Bash Loops Over Heavy Orchestration",
+          "body": "A useful thread unpacked Anthropic's long-running multi-agent compiler work and argued that the surprising part was how little orchestration it needed: shared task folders, lock files, Git, and agents resolving their own conflicts. For people building long-lived agent workflows, it is a strong case for starting with simple coordination primitives before inventing a control plane.",
+          "url": "https://x.com/timyangnet/status/2043086842762014744"
         },
         {
           "tag": "new",
-          "title": "@dotey: Anthropic Managed Agents Get Safer Credential Handling",
-          "body": "A strong explainer on Anthropic’s new Vaults model said per-user credentials can be injected for agent tool use without ever appearing inside the model context window. That matters because it is the right architectural answer to prompt-injection risk: the model can use secrets without being able to casually read or leak them.",
-          "url": "https://x.com/dotey/status/2042805474681118988"
+          "title": "@NFTCPS: Agent Skills Becoming a Real Primitive",
+          "body": "This post framed Anthropic's open-sourced Agent Skills format as a bigger deal than a normal feature launch: structured markdown + scripts + references are being treated as portable building blocks for domain expertise. If that standard sticks, the ecosystem may increasingly compete on reusable skills and workflow packaging, not just model weights.",
+          "url": "https://x.com/NFTCPS/status/2043174437810573522"
         },
         {
           "tag": "new",
-          "title": "@garrytan: GBrain Open-Sources a Personal Memory Stack",
-          "body": "Garry Tan open-sourced the markdown-heavy memory system behind his own agent workflow, built to recall thousands of notes, people files, meetings, and calendar entries. The broader takeaway is that production-grade agent usefulness is being won through memory architecture and retrieval discipline, not just better base models.",
-          "url": "https://x.com/garrytan/status/2042497872114090069"
+          "title": "@AdolfoUsier: Free NVIDIA Endpoints for Builder Stacks",
+          "body": "One of the more practical operator notes in the batch pointed out that NVIDIA is exposing some hosted models, including MiniMax M2.7, through free API endpoints that can be dropped into agent configs as fallback providers. That matters if you want cheaper redundancy or a wider model bench without adding immediate inference cost.",
+          "url": "https://x.com/AdolfoUsier/status/2043195754425028961"
         },
         {
           "tag": "update",
-          "title": "@AYi_AInotes: Ramp’s AI Adoption Playbook Is Mostly Culture",
-          "body": "The best enterprise-AI thread in the batch argued that Ramp drove adoption by making AI use visible, expected, and socially reinforced across the company rather than burying employees in mandatory training. If true, that is a useful correction for teams still treating AI rollout as a procurement problem instead of a behavior-design problem.",
-          "url": "https://x.com/AYi_AInotes/status/2042609191765131353"
-        },
-        {
-          "tag": "new",
-          "title": "@GitHub_Daily: RTK Cuts Context Waste for Coding Agents",
-          "body": "One practical tool recommendation highlighted RTK, which filters and compresses noisy terminal output before it gets stuffed into Claude Code, Codex, or similar workflows. The pitch is simple but credible: if your agent keeps burning tokens on repetitive git status and test logs, better output shaping may buy more value than switching models again.",
-          "url": "https://x.com/GitHub_Daily/status/2042885064917422318"
+          "title": "@HuaxiuYaoML: Shared Payment Cards May Trigger Claude Bans",
+          "body": "A lab reported that multiple Claude Code Max subscriptions were instantly suspended after being paid with the same university card, even though the charges went through. Treat it as an operational warning: billing and account-policy edge cases are now a real reliability risk for teams standardizing on coding agents.",
+          "url": "https://x.com/HuaxiuYaoML/status/2043190739908137238"
         }
       ]
     },
@@ -60,21 +54,19 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FactSet: Bank Earnings Start Next Week",
-          "body": "FactSet’s preview laid out a dense bank-earnings calendar starting April 13, with big U.S. names reporting through midweek and analysts looking for better year-over-year results on loan growth and asset repricing. For anyone watching macro tone, this is one of the next clean checkpoints for how much higher-rate pressure is still helping versus hurting the sector.",
-          "url": "https://x.com/FactSet/status/2042614332937077069"
-        },
-        {
-          "tag": "update",
-          "title": "@RockportAI: Dimon’s “Cheap Money Is Over” View Is Spreading",
-          "body": "A digest of Jamie Dimon’s latest letter pushed the idea that the era of easy money is not just paused but structurally gone. Even secondhand, it is a useful framing device for markets: if that regime view is right, investors should be slower to assume old valuation shortcuts and fast rebounds will keep working.",
-          "url": "https://x.com/RockportAI/status/2041252661282938962"
-        },
-        {
-          "tag": "new",
-          "title": "@aakashgupta: Japan’s Empty Homes Are a Tax Story, Not a Value Story",
-          "body": "Aakash Gupta’s thread argued that Japan’s millions of abandoned homes are largely the product of tax incentives that punish demolition and reward leaving decaying structures standing, rather than evidence of some giant overlooked real-estate bargain. That is a sharp, useful reminder that market weirdness often comes from policy plumbing before it comes from investor neglect.",
-          "url": "https://x.com/aakashgupta/status/2042697384401277309"
+          "title": "@WatcherGuru: Trump Moves Toward a Hormuz Blockade",
+          "body": "The clearest market-moving news item in the batch was the report that Trump ordered the U.S. Navy to begin blockading ships entering or leaving the Strait of Hormuz after talks with Iran broke down. The immediate implication is renewed risk around oil flows, shipping insurance, and energy-price volatility even before you get to second-order geopolitical effects.",
+          "url": "https://x.com/WatcherGuru/status/2043312717860069701",
+          "links": [
+            {
+              "label": "Reuters coverage",
+              "url": "https://www.reuters.com/world/asia-pacific/trump-says-us-start-blockading-strait-hormuz-2026-04-12/"
+            },
+            {
+              "label": "CNBC coverage",
+              "url": "https://www.cnbc.com/2026/04/12/trump-iran-war-strait-of-hormuz.html"
+            }
+          ]
         }
       ]
     },
@@ -83,22 +75,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@mronge: Headless Mac mini + iPad Is a Strong Agent Console",
-          "body": "A short demo made the case for using a headless Mac mini as the always-on agent box and an iPad as the mobile control surface for monitoring, taking over, and steering work remotely. It is a niche setup, but a very sensible one if your agents increasingly live in long-running terminal sessions.",
-          "url": "https://x.com/mronge/status/2041973730063348067"
-        },
-        {
-          "tag": "update",
-          "title": "@ChrisJBakke: The Last Six Years Were a Founder Stress Test",
-          "body": "Chris Bakke compressed the startup environment from 2020 through 2026 into one brutal sequence of regime shifts: pandemic chaos, easy-money excess, talent inflation, bank instability, and then the AI/crypto/defense narrative carousel. It landed because it explains why many operators feel exhausted even when execution has been decent.",
-          "url": "https://x.com/ChrisJBakke/status/2042601895097962948"
-        },
-        {
           "tag": "hot",
-          "title": "@NCLAlegal: Massachusetts Settles Over Silent Covid Tracking App Install",
-          "body": "One of the more consequential non-AI posts surfaced a settlement over a Massachusetts program that allegedly auto-installed a Covid tracking app on more than a million phones without meaningful consent. It is a useful reminder that privacy violations disguised as public-interest tech can take years to unwind, but they do not disappear just because the news cycle moved on.",
-          "url": "https://x.com/NCLAlegal/status/2042046615427400081"
+          "title": "@lidangzzz: AI Still Doesn't Replace Domain Expertise",
+          "body": "A sharp post pushed back on the idea that coding agents can magically replace deep engineering experience by asking a simple question: if AI can build any SaaS, why not just ship Zoom from scratch? The useful reminder is that problem definition, system design, and edge-case knowledge are still the real bottlenecks.",
+          "url": "https://x.com/lidangzzz/status/2043179464700420451"
+        },
+        {
+          "tag": "update",
+          "title": "@CyberKanjousen: Shell-Company Shortcuts Backfire",
+          "body": "A blunt warning post argued that spinning up a cheap Wyoming shell company just to buy AI subscriptions can quickly turn into tax penalties, KYC trouble, banking friction, and provider blacklists. The practical takeaway is that compliance hacks stop being cheap once payment rails and risk systems start comparing notes.",
+          "url": "https://x.com/CyberKanjousen/status/2043195208033280133"
+        },
+        {
+          "tag": "new",
+          "title": "@Tz_2022: Mixed-Language Prompts as a Creativity Hack",
+          "body": "One of the better prompting takes in the feed argued that mixing Chinese and English can force models off their most overtrained response paths and into more interesting associative territory. Whether or not you buy the full theory, the usable idea is simple: deliberate language-mixing can be a practical way to shake better creative outputs loose.",
+          "url": "https://x.com/Tz_2022/status/2043219786591596944"
         }
       ]
     }
