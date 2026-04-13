@@ -1,15 +1,14 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest — Monday, April 13th, 2026 — 9:00 AM ET",
-  "date": "Monday, April 13th, 2026 — 9:00 AM ET",
+  "page_title": "X Feed Digest — Monday, April 13th, 2026 — 6:00 PM ET",
+  "date": "Monday, April 13th, 2026 — 6:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The big AI theme was trust and control, not raw model rankings: multiple posts flagged hidden Claude Code cost/context changes while others argued the real edge now comes from better orchestration and clearer task routing.",
-    "The coding-agent stack keeps looking more modular and more interchangeable. Cursor's latest controversy reinforced the idea that wrappers, proxies, skills, and workflow design may matter as much as the underlying model vendor.",
-    "Open and local deployment got another boost: MiniMax M2.7 was framed as a serious new open-source contender, and Apple Silicon inference got a practical speed boost via MLX speculative decoding.",
-    "Markets commentary in this batch leaned cautious. The strongest takes focused on leverage risk in MicroStrategy's preferred-stock machine, China's new QDII quota as routine rather than regime-changing, and still-firm S&P revenue expectations into earnings.",
-    "Outside pure markets, the most useful general posts were about operating discipline: reduce decision fatigue, show business impact in hiring, and pay attention when ordinary consumers start challenging entrenched fee structures."
+    "The clearest AI story in this 300-post batch was trust erosion in coding tools: multiple posts claimed Claude Code quietly became more expensive and less transparent through hidden billed context and shorter cache windows.",
+    "The next-order question was organizational, not model-centric. Several strong posts argued that the real bottleneck is still review, routing, and adoption discipline — most teams are nowhere near true AI-first execution yet.",
+    "Useful builder-side tooling still broke through the noise: Google’s Magika file-identification release stood out as a practical security tool, and local/infra economics kept surfacing as a better lens than raw plan pricing.",
+    "Markets and strategy commentary skewed toward monetization and focus: Meta’s ad machine was framed as a major AI winner, private AI deals looked increasingly crowded, and crypto commentary kept circling back to trading as the only clearly proven use case."
   ],
   "sections": [
     {
@@ -18,33 +17,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@om_patel5: Claude Code Hidden-Token Cost Inflation",
-          "body": "A widely shared teardown claimed Claude Code v2.1.100 began injecting roughly 20,000 server-side tokens into each request, inflating billed usage and eating into effective context. If accurate, the practical implication is not just higher cost but worse instruction retention in long sessions.",
+          "title": "@om_patel5: Claude Code Hidden-Token Inflation",
+          "body": "A teardown of recent Claude Code versions claimed v2.1.100 now injects roughly 20,000 server-side tokens per request, raising billed usage while also consuming context the user cannot inspect. If the measurements hold up, the practical risk is not just higher cost but weaker instruction fidelity in long coding sessions.",
           "url": "https://x.com/om_patel5/status/2043524173016727639"
         },
         {
-          "tag": "hot",
-          "title": "@jasonkneen: Cursor Agent Looked Like a Claude Wrapper",
-          "body": "A reverse-engineering post argued that Cursor Agent 3.0 was, at least in one test path, effectively Claude Code behind a local proxy with branding substitutions and Anthropic packages bundled underneath. The broader takeaway is that agent products are increasingly competing on packaging, UX, and orchestration rather than purely proprietary cores.",
-          "url": "https://x.com/jasonkneen/status/2043435856849940818"
+          "tag": "update",
+          "title": "@daniel_nguyenx: Claude Code Cache TTL Quietly Shrunk",
+          "body": "A separate post flagged that Anthropic appears to have shortened Claude Code’s cache TTL from one hour to five minutes, materially increasing quota burn and repeat-token costs. The useful takeaway is to recheck assumptions about plan economics if your workflows depend on long-lived cached context.",
+          "url": "https://x.com/daniel_nguyenx/status/2043531051138703450"
+        },
+        {
+          "tag": "new",
+          "title": "@_vmlops: Google Open-Sourced Magika",
+          "body": "One of the most concrete utility posts in the batch highlighted Magika, Google’s file-type detection tool that classifies files by content instead of trusting extensions. For security-minded workflows, that is a genuinely practical release rather than another benchmark thread.",
+          "url": "https://x.com/_vmlops/status/2043624154646409708"
         },
         {
           "tag": "update",
-          "title": "@jpschroeder: Route Long Tasks to Codex, UI Work to Claude",
-          "body": "One of the better workflow posts in the batch argued for explicit model routing instead of one-model-for-everything habits: use Codex for long-running, multi-step execution and Claude for UI, spacing, and design-sensitive work. It was a useful reminder that the highest-leverage productivity gains now come from assigning the right model to the right job.",
-          "url": "https://x.com/jpschroeder/status/2043386940775391561"
+          "title": "@Steve_Yegge: Google’s AI Adoption Still Looks Average",
+          "body": "Steve Yegge argued that even inside Google, adoption still resembles the broader industry: a small set of power users, a block of refusers, and a large middle still treating AI as a chat wrapper. The signal here is that organizational learning and workflow design remain more constrained than raw model availability.",
+          "url": "https://x.com/Steve_Yegge/status/2043747998740689171"
         },
         {
-          "tag": "new",
-          "title": "@NFTCPS: MiniMax M2.7 Raises the Open-Model Ceiling",
-          "body": "This post highlighted MiniMax M2.7 as a newly open-sourced 229B-parameter model with local deployment support and competitive coding/office benchmarks. Even allowing for launch-day optimism, it points to a continued shift toward serious open models that can be slotted into real builder stacks instead of used as demos only.",
-          "url": "https://x.com/NFTCPS/status/2043506928584991139"
-        },
-        {
-          "tag": "new",
-          "title": "@berryxia: MLX DFlash Makes Apple Silicon More Practical",
-          "body": "A sharp local-inference note reported that DFlash was ported to MLX, pushing Qwen3-4B to around 186 tokens per second on a MacBook while preserving output fidelity. For people building on Apple Silicon, that is the kind of real-world speedup that changes what feels usable day to day.",
-          "url": "https://x.com/berryxia/status/2043554774839386405"
+          "tag": "update",
+          "title": "@tison1096: Review Bandwidth Is the Real Agent Bottleneck",
+          "body": "A thoughtful coding-workflow post argued that the hardest problem in agentic development is not prompting but unknown unknowns: models make silent assumptions, so every important output still needs human review. That reframes productivity gains around better exploration and scaffolding, not blind end-to-end delegation.",
+          "url": "https://x.com/tison1096/status/2043689470592156021"
         }
       ]
     },
@@ -54,27 +53,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@rektmando: MicroStrategy's Preferred-Stock Math Is Getting Dangerous",
-          "body": "A pointed thread argued that Saylor's growing stack of 10–11.5% preferred stock is turning into a structural cash-flow problem, with dividend obligations that eventually force dilution, dividend cuts, or BTC sales. Whether or not you buy the most bearish version, it was one of the clearer risk posts in the batch because it focused on capital-structure mechanics instead of Bitcoin evangelism.",
-          "url": "https://x.com/rektmando/status/2043450404680225245"
+          "title": "@ns123abc: Meta’s Ad Engine May Have Passed Google",
+          "body": "This post argued Meta has overtaken Google in annual ad revenue, with AI recommendation and advertiser tooling translating directly into monetization. Even if the exact framing gets debated, the important signal is that AI is already showing up as revenue leverage inside incumbent consumer platforms, not just lab demos.",
+          "url": "https://x.com/ns123abc/status/2043666219538993619"
         },
         {
           "tag": "update",
-          "title": "@tychozzz: New QDII Quota Is Not a China Policy Pivot",
-          "body": "A useful macro note argued that China's fresh $5B+ QDII quota should be read as routine flow management, not a real opening of the capital account or a major policy turn. The actionable point is to avoid over-interpreting small administrative easing as a durable regime change.",
-          "url": "https://x.com/tychozzz/status/2043612907947389209"
+          "title": "@0xSunNFT: Private AI Deals Are Repricing Fast",
+          "body": "A detailed investor thread described how exposure to private AI names like Anthropic and prediction-market leaders became much harder once valuations moved and access bottlenecks kicked in. The practical market lesson is that in hot private rounds, operational access and timing matter almost as much as the thesis itself.",
+          "url": "https://x.com/0xSunNFT/status/2043626350398017675"
         },
         {
           "tag": "update",
-          "title": "@FactSet: S&P Revenue Expectations Stayed Firm Into Earnings",
-          "body": "FactSet noted that expected S&P 500 revenue growth for Q1 2026 held at 9.8% year over year, still above where estimates stood at the end of last year. It is not dramatic by itself, but it does suggest analysts have not materially backed off topline expectations heading into reporting season.",
-          "url": "https://x.com/FactSet/status/2043113893996708012"
-        },
-        {
-          "tag": "update",
-          "title": "@blapta: Crypto's Real Product-Market Fit Is Still Trading",
-          "body": "One of the better deep-commentary posts argued that crypto keeps rewarding systems optimized for the one thing the market has clearly validated: trading. The frame is useful because it cuts through world-computer rhetoric and explains why purpose-built winners like Hyperliquid keep outperforming more universal infrastructure narratives.",
+          "title": "@blapta: Crypto’s Only Proven PMF Is Still Trading",
+          "body": "One of the sharper commentary posts argued that crypto keeps producing winners when teams optimize around the one use case the market has indisputably validated: trading. That frame makes products like Hyperliquid look less like anomalies and more like the logical outcome of focusing on real demand instead of generic infra dreams.",
           "url": "https://x.com/blapta/status/2043570157440950657"
+        },
+        {
+          "tag": "update",
+          "title": "@ekzhang1: H100 Pricing Reframes $200 AI Plans",
+          "body": "A concise cost benchmark noted that $200 a month buys roughly six hours of H100 time per workday, which is a useful way to sanity-check whether premium AI subscriptions are expensive or surprisingly cheap. It is a better mental model than staring at plan stickers in isolation.",
+          "url": "https://x.com/ekzhang1/status/2043562453452128359"
         }
       ]
     },
@@ -84,21 +83,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@xqt1688: A WeChat Withdrawal-Fee Challenge Reached Court",
-          "body": "A post amplified a Chinese law student's lawsuit over WeChat's withdrawal fees after a 50 yuan charge on a 50,000 yuan cash-out. The useful signal here is not just the specific case, but that platform fee structures people long treated as untouchable are increasingly being challenged in formal channels.",
+          "title": "@xqt1688: WeChat Withdrawal Fees Finally Reached Court",
+          "body": "A widely shared Chinese post highlighted a law student’s lawsuit challenging WeChat’s withdrawal fees after a 50 yuan charge on a 50,000 yuan cash-out. The broader signal is that platform fee structures people treat as untouchable can still be contested when someone is willing to make the costs legible.",
           "url": "https://x.com/xqt1688/status/2043340826307411978"
         },
         {
           "tag": "update",
-          "title": "@ujjwalscript: The Hiring Market Wants Business Value, Not Keyword Soup",
-          "body": "A hiring-side thread argued that strong engineering candidates now differentiate themselves less through long tool lists and more through proof that they improved revenue, efficiency, or operational reliability. In an AI-saturated market, that is a useful framing shift: show outcomes, not just stack familiarity.",
-          "url": "https://x.com/ujjwalscript/status/2043591033162965085"
+          "title": "@KKaWSB: A Better Rule for Student Parents",
+          "body": "This post resurfaced the image of a professor calmly taking a student’s crying baby and continuing class, anchored by a simple rule: mothers should not be forced to choose between education and childcare. It landed because it models institutional flexibility in a way most policy talk never does.",
+          "url": "https://x.com/KKaWSB/status/2043130110061264944"
         },
         {
           "tag": "update",
-          "title": "@yaohui12138: Treat Decision Bandwidth Like System Design",
-          "body": "A thoughtful productivity post reframed burnout as a decision-architecture problem rather than a willpower problem. The practical advice was to convert routine choices into SOPs, isolate high-focus work blocks, and spend cognitive effort only on decisions that actually matter.",
-          "url": "https://x.com/yaohui12138/status/2043511945635184705"
+          "title": "@KKaWSB: The Space-Pen Story Is More Interesting Than the Myth",
+          "body": "A useful myth-busting thread explained that NASA did not frivolously waste millions on a pen while the Soviets used pencils; pencils were genuinely dangerous in spacecraft, and a private company solved the problem with a pressurized pen sold cheaply. It is a small reminder that good innovation stories are often about constraints, not punchlines.",
+          "url": "https://x.com/KKaWSB/status/2043607623837310976"
         }
       ]
     }
