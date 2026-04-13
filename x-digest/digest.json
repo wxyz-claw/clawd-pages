@@ -1,15 +1,15 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest — Sunday, April 12th, 2026 — 6:00 PM ET",
-  "date": "Sunday, April 12th, 2026 — 6:00 PM ET",
+  "page_title": "X Feed Digest — Monday, April 13th, 2026 — 9:00 AM ET",
+  "date": "Monday, April 13th, 2026 — 9:00 AM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The dominant AI story in this batch was trust erosion around Anthropic and Claude Code: people were comparing notes on possible silent model downgrades, billing-side surprises, and policy changes that directly affect day-to-day engineering work.",
-    "The most useful workflow posts were about harness design rather than raw model rankings. Stricter execution contracts, lightweight Git-and-lockfile coordination, and repo-level instruction files/skills all showed up as practical ways to get better agent behavior.",
-    "Open and low-cost alternatives kept gaining momentum. Free NVIDIA-hosted endpoints, Anthropic's open Agent Skills spec, and strong new open-source audio/model tooling all pointed to a cheaper and more modular stack for builders.",
-    "On the macro side, the clearest actionable news item was Trump's move toward a Strait of Hormuz blockade after failed Iran talks, pushing energy logistics and oil-price risk back to the center of the feed.",
-    "A broader lesson cut across the good posts: AI still does not replace domain knowledge or strategy. The highest-signal takes emphasized that clear problem definition and real operating constraints matter more than magical prompting."
+    "The big AI theme was trust and control, not raw model rankings: multiple posts flagged hidden Claude Code cost/context changes while others argued the real edge now comes from better orchestration and clearer task routing.",
+    "The coding-agent stack keeps looking more modular and more interchangeable. Cursor's latest controversy reinforced the idea that wrappers, proxies, skills, and workflow design may matter as much as the underlying model vendor.",
+    "Open and local deployment got another boost: MiniMax M2.7 was framed as a serious new open-source contender, and Apple Silicon inference got a practical speed boost via MLX speculative decoding.",
+    "Markets commentary in this batch leaned cautious. The strongest takes focused on leverage risk in MicroStrategy's preferred-stock machine, China's new QDII quota as routine rather than regime-changing, and still-firm S&P revenue expectations into earnings.",
+    "Outside pure markets, the most useful general posts were about operating discipline: reduce decision fatigue, show business impact in hiring, and pay attention when ordinary consumers start challenging entrenched fee structures."
   ],
   "sections": [
     {
@@ -18,33 +18,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@steipete: Strict-Agentic Execution Contracts",
-          "body": "Stefan highlighted a new OpenClaw runtime setting that explicitly tells GPT-5.x to keep reading code, calling tools, and making edits until the task is actually done or a real blocker appears. The practical takeaway is that a tighter execution contract may fix a lot of perceived agent laziness without changing models.",
-          "url": "https://x.com/steipete/status/2043136615640694797"
+          "title": "@om_patel5: Claude Code Hidden-Token Cost Inflation",
+          "body": "A widely shared teardown claimed Claude Code v2.1.100 began injecting roughly 20,000 server-side tokens into each request, inflating billed usage and eating into effective context. If accurate, the practical implication is not just higher cost but worse instruction retention in long sessions.",
+          "url": "https://x.com/om_patel5/status/2043524173016727639"
+        },
+        {
+          "tag": "hot",
+          "title": "@jasonkneen: Cursor Agent Looked Like a Claude Wrapper",
+          "body": "A reverse-engineering post argued that Cursor Agent 3.0 was, at least in one test path, effectively Claude Code behind a local proxy with branding substitutions and Anthropic packages bundled underneath. The broader takeaway is that agent products are increasingly competing on packaging, UX, and orchestration rather than purely proprietary cores.",
+          "url": "https://x.com/jasonkneen/status/2043435856849940818"
         },
         {
           "tag": "update",
-          "title": "@timyangnet: Bash Loops Over Heavy Orchestration",
-          "body": "A useful thread unpacked Anthropic's long-running multi-agent compiler work and argued that the surprising part was how little orchestration it needed: shared task folders, lock files, Git, and agents resolving their own conflicts. For people building long-lived agent workflows, it is a strong case for starting with simple coordination primitives before inventing a control plane.",
-          "url": "https://x.com/timyangnet/status/2043086842762014744"
+          "title": "@jpschroeder: Route Long Tasks to Codex, UI Work to Claude",
+          "body": "One of the better workflow posts in the batch argued for explicit model routing instead of one-model-for-everything habits: use Codex for long-running, multi-step execution and Claude for UI, spacing, and design-sensitive work. It was a useful reminder that the highest-leverage productivity gains now come from assigning the right model to the right job.",
+          "url": "https://x.com/jpschroeder/status/2043386940775391561"
         },
         {
           "tag": "new",
-          "title": "@NFTCPS: Agent Skills Becoming a Real Primitive",
-          "body": "This post framed Anthropic's open-sourced Agent Skills format as a bigger deal than a normal feature launch: structured markdown + scripts + references are being treated as portable building blocks for domain expertise. If that standard sticks, the ecosystem may increasingly compete on reusable skills and workflow packaging, not just model weights.",
-          "url": "https://x.com/NFTCPS/status/2043174437810573522"
+          "title": "@NFTCPS: MiniMax M2.7 Raises the Open-Model Ceiling",
+          "body": "This post highlighted MiniMax M2.7 as a newly open-sourced 229B-parameter model with local deployment support and competitive coding/office benchmarks. Even allowing for launch-day optimism, it points to a continued shift toward serious open models that can be slotted into real builder stacks instead of used as demos only.",
+          "url": "https://x.com/NFTCPS/status/2043506928584991139"
         },
         {
           "tag": "new",
-          "title": "@AdolfoUsier: Free NVIDIA Endpoints for Builder Stacks",
-          "body": "One of the more practical operator notes in the batch pointed out that NVIDIA is exposing some hosted models, including MiniMax M2.7, through free API endpoints that can be dropped into agent configs as fallback providers. That matters if you want cheaper redundancy or a wider model bench without adding immediate inference cost.",
-          "url": "https://x.com/AdolfoUsier/status/2043195754425028961"
-        },
-        {
-          "tag": "update",
-          "title": "@HuaxiuYaoML: Shared Payment Cards May Trigger Claude Bans",
-          "body": "A lab reported that multiple Claude Code Max subscriptions were instantly suspended after being paid with the same university card, even though the charges went through. Treat it as an operational warning: billing and account-policy edge cases are now a real reliability risk for teams standardizing on coding agents.",
-          "url": "https://x.com/HuaxiuYaoML/status/2043190739908137238"
+          "title": "@berryxia: MLX DFlash Makes Apple Silicon More Practical",
+          "body": "A sharp local-inference note reported that DFlash was ported to MLX, pushing Qwen3-4B to around 186 tokens per second on a MacBook while preserving output fidelity. For people building on Apple Silicon, that is the kind of real-world speedup that changes what feels usable day to day.",
+          "url": "https://x.com/berryxia/status/2043554774839386405"
         }
       ]
     },
@@ -54,19 +54,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Trump Moves Toward a Hormuz Blockade",
-          "body": "The clearest market-moving news item in the batch was the report that Trump ordered the U.S. Navy to begin blockading ships entering or leaving the Strait of Hormuz after talks with Iran broke down. The immediate implication is renewed risk around oil flows, shipping insurance, and energy-price volatility even before you get to second-order geopolitical effects.",
-          "url": "https://x.com/WatcherGuru/status/2043312717860069701",
-          "links": [
-            {
-              "label": "Reuters coverage",
-              "url": "https://www.reuters.com/world/asia-pacific/trump-says-us-start-blockading-strait-hormuz-2026-04-12/"
-            },
-            {
-              "label": "CNBC coverage",
-              "url": "https://www.cnbc.com/2026/04/12/trump-iran-war-strait-of-hormuz.html"
-            }
-          ]
+          "title": "@rektmando: MicroStrategy's Preferred-Stock Math Is Getting Dangerous",
+          "body": "A pointed thread argued that Saylor's growing stack of 10–11.5% preferred stock is turning into a structural cash-flow problem, with dividend obligations that eventually force dilution, dividend cuts, or BTC sales. Whether or not you buy the most bearish version, it was one of the clearer risk posts in the batch because it focused on capital-structure mechanics instead of Bitcoin evangelism.",
+          "url": "https://x.com/rektmando/status/2043450404680225245"
+        },
+        {
+          "tag": "update",
+          "title": "@tychozzz: New QDII Quota Is Not a China Policy Pivot",
+          "body": "A useful macro note argued that China's fresh $5B+ QDII quota should be read as routine flow management, not a real opening of the capital account or a major policy turn. The actionable point is to avoid over-interpreting small administrative easing as a durable regime change.",
+          "url": "https://x.com/tychozzz/status/2043612907947389209"
+        },
+        {
+          "tag": "update",
+          "title": "@FactSet: S&P Revenue Expectations Stayed Firm Into Earnings",
+          "body": "FactSet noted that expected S&P 500 revenue growth for Q1 2026 held at 9.8% year over year, still above where estimates stood at the end of last year. It is not dramatic by itself, but it does suggest analysts have not materially backed off topline expectations heading into reporting season.",
+          "url": "https://x.com/FactSet/status/2043113893996708012"
+        },
+        {
+          "tag": "update",
+          "title": "@blapta: Crypto's Real Product-Market Fit Is Still Trading",
+          "body": "One of the better deep-commentary posts argued that crypto keeps rewarding systems optimized for the one thing the market has clearly validated: trading. The frame is useful because it cuts through world-computer rhetoric and explains why purpose-built winners like Hyperliquid keep outperforming more universal infrastructure narratives.",
+          "url": "https://x.com/blapta/status/2043570157440950657"
         }
       ]
     },
@@ -76,21 +84,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@lidangzzz: AI Still Doesn't Replace Domain Expertise",
-          "body": "A sharp post pushed back on the idea that coding agents can magically replace deep engineering experience by asking a simple question: if AI can build any SaaS, why not just ship Zoom from scratch? The useful reminder is that problem definition, system design, and edge-case knowledge are still the real bottlenecks.",
-          "url": "https://x.com/lidangzzz/status/2043179464700420451"
+          "title": "@xqt1688: A WeChat Withdrawal-Fee Challenge Reached Court",
+          "body": "A post amplified a Chinese law student's lawsuit over WeChat's withdrawal fees after a 50 yuan charge on a 50,000 yuan cash-out. The useful signal here is not just the specific case, but that platform fee structures people long treated as untouchable are increasingly being challenged in formal channels.",
+          "url": "https://x.com/xqt1688/status/2043340826307411978"
         },
         {
           "tag": "update",
-          "title": "@CyberKanjousen: Shell-Company Shortcuts Backfire",
-          "body": "A blunt warning post argued that spinning up a cheap Wyoming shell company just to buy AI subscriptions can quickly turn into tax penalties, KYC trouble, banking friction, and provider blacklists. The practical takeaway is that compliance hacks stop being cheap once payment rails and risk systems start comparing notes.",
-          "url": "https://x.com/CyberKanjousen/status/2043195208033280133"
+          "title": "@ujjwalscript: The Hiring Market Wants Business Value, Not Keyword Soup",
+          "body": "A hiring-side thread argued that strong engineering candidates now differentiate themselves less through long tool lists and more through proof that they improved revenue, efficiency, or operational reliability. In an AI-saturated market, that is a useful framing shift: show outcomes, not just stack familiarity.",
+          "url": "https://x.com/ujjwalscript/status/2043591033162965085"
         },
         {
-          "tag": "new",
-          "title": "@Tz_2022: Mixed-Language Prompts as a Creativity Hack",
-          "body": "One of the better prompting takes in the feed argued that mixing Chinese and English can force models off their most overtrained response paths and into more interesting associative territory. Whether or not you buy the full theory, the usable idea is simple: deliberate language-mixing can be a practical way to shake better creative outputs loose.",
-          "url": "https://x.com/Tz_2022/status/2043219786591596944"
+          "tag": "update",
+          "title": "@yaohui12138: Treat Decision Bandwidth Like System Design",
+          "body": "A thoughtful productivity post reframed burnout as a decision-architecture problem rather than a willpower problem. The practical advice was to convert routine choices into SOPs, isolate high-focus work blocks, and spend cognitive effort only on decisions that actually matter.",
+          "url": "https://x.com/yaohui12138/status/2043511945635184705"
         }
       ]
     }
