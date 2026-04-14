@@ -1,14 +1,14 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest — Monday, April 13th, 2026 — 6:00 PM ET",
-  "date": "Monday, April 13th, 2026 — 6:00 PM ET",
+  "page_title": "X Feed Digest — Tuesday, April 14th, 2026 — 9:00 AM ET",
+  "date": "Tuesday, April 14th, 2026 — 9:00 AM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The clearest AI story in this 300-post batch was trust erosion in coding tools: multiple posts claimed Claude Code quietly became more expensive and less transparent through hidden billed context and shorter cache windows.",
-    "The next-order question was organizational, not model-centric. Several strong posts argued that the real bottleneck is still review, routing, and adoption discipline — most teams are nowhere near true AI-first execution yet.",
-    "Useful builder-side tooling still broke through the noise: Google’s Magika file-identification release stood out as a practical security tool, and local/infra economics kept surfacing as a better lens than raw plan pricing.",
-    "Markets and strategy commentary skewed toward monetization and focus: Meta’s ad machine was framed as a major AI winner, private AI deals looked increasingly crowded, and crypto commentary kept circling back to trading as the only clearly proven use case."
+    "The dominant AI story was not a flashy model launch, but growing scrutiny of coding-agent economics and trust: cache behavior, telemetry tradeoffs, and whether Claude Code or Codex produces cleaner long-run output.",
+    "Several of the best workflow posts converged on the same point: agentic software teams still need tight decomposition, explicit review loops, and governance scripts, with humans moving up the stack into architecture and judgment.",
+    "On the market side, sentiment looked less one-way than usual. Posts highlighted OpenAI facing sharper investor skepticism while compute scarcity, not demand, increasingly looked like the real limiter on AI growth.",
+    "Outside the labs, the most useful signals came from concrete operating models: Bhutan treating bitcoin like a quiet treasury asset, Hyperliquid proving small teams can monetize 24/7 trading, and agents beginning to handle real outbound sales work."
   ],
   "sections": [
     {
@@ -17,33 +17,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@om_patel5: Claude Code Hidden-Token Inflation",
-          "body": "A teardown of recent Claude Code versions claimed v2.1.100 now injects roughly 20,000 server-side tokens per request, raising billed usage while also consuming context the user cannot inspect. If the measurements hold up, the practical risk is not just higher cost but weaker instruction fidelity in long coding sessions.",
-          "url": "https://x.com/om_patel5/status/2043524173016727639"
+          "title": "@icanvardar: Claude Code Telemetry Penalty",
+          "body": "A widely shared complaint said disabling telemetry in Claude Code shrinks cache lifetime from one hour to five minutes, effectively turning privacy into a pricing and performance tradeoff. The useful takeaway is to re-audit your assumptions about cache behavior and cost before standardizing on a coding-agent workflow.",
+          "url": "https://x.com/icanvardar/status/2043652025339023845"
         },
         {
-          "tag": "update",
-          "title": "@daniel_nguyenx: Claude Code Cache TTL Quietly Shrunk",
-          "body": "A separate post flagged that Anthropic appears to have shortened Claude Code’s cache TTL from one hour to five minutes, materially increasing quota burn and repeat-token costs. The useful takeaway is to recheck assumptions about plan economics if your workflows depend on long-lived cached context.",
-          "url": "https://x.com/daniel_nguyenx/status/2043531051138703450"
+          "tag": "hot",
+          "title": "@om_patel5: Codex vs Claude Code in Real Work",
+          "body": "One engineer’s 120-hour comparison argued Codex is slower but more autonomous and architecturally disciplined, while Claude Code moves faster but needs tighter supervision and more cleanup. It was one of the clearest practical posts in the batch on when each tool actually fits.",
+          "url": "https://x.com/om_patel5/status/2043900852126068870"
         },
         {
           "tag": "new",
-          "title": "@_vmlops: Google Open-Sourced Magika",
-          "body": "One of the most concrete utility posts in the batch highlighted Magika, Google’s file-type detection tool that classifies files by content instead of trusting extensions. For security-minded workflows, that is a genuinely practical release rather than another benchmark thread.",
-          "url": "https://x.com/_vmlops/status/2043624154646409708"
+          "title": "@DtDt666: Google Open-Sourced Magika",
+          "body": "Google’s internally used Magika file-identification system is now open source, classifying files by contents instead of trusting extensions. That makes it a genuinely practical security tool for catching disguised malware and mislabeled uploads.",
+          "url": "https://x.com/DtDt666/status/2043723915781161182"
         },
         {
           "tag": "update",
-          "title": "@Steve_Yegge: Google’s AI Adoption Still Looks Average",
-          "body": "Steve Yegge argued that even inside Google, adoption still resembles the broader industry: a small set of power users, a block of refusers, and a large middle still treating AI as a chat wrapper. The signal here is that organizational learning and workflow design remain more constrained than raw model availability.",
-          "url": "https://x.com/Steve_Yegge/status/2043747998740689171"
+          "title": "@Barret_China: Review Loops Beat Plain Spec-Driven Dev",
+          "body": "A strong workflow thread argued plain spec-driven development is not enough for long-running agents, because models under-decompose work and skip review. The proposed fix was small task breakdowns, clean execution environments, and repeated review, feedback, and modify loops backed by scripts and guardrails.",
+          "url": "https://x.com/Barret_China/status/2043892840963682369"
         },
         {
           "tag": "update",
-          "title": "@tison1096: Review Bandwidth Is the Real Agent Bottleneck",
-          "body": "A thoughtful coding-workflow post argued that the hardest problem in agentic development is not prompting but unknown unknowns: models make silent assumptions, so every important output still needs human review. That reframes productivity gains around better exploration and scaffolding, not blind end-to-end delegation.",
-          "url": "https://x.com/tison1096/status/2043689470592156021"
+          "title": "@aakashgupta: AI Changes the Engineer Role, Not the Need",
+          "body": "This post argued AI coding tools are pushing engineers toward editing, reviewing, and architecture rather than eliminating them outright. The central claim was that cheaper software creation expands the number of worthwhile projects faster than it shrinks headcount per project.",
+          "url": "https://x.com/aakashgupta/status/2043956944776597701"
         }
       ]
     },
@@ -53,27 +53,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ns123abc: Meta’s Ad Engine May Have Passed Google",
-          "body": "This post argued Meta has overtaken Google in annual ad revenue, with AI recommendation and advertiser tooling translating directly into monetization. Even if the exact framing gets debated, the important signal is that AI is already showing up as revenue leverage inside incumbent consumer platforms, not just lab demos.",
-          "url": "https://x.com/ns123abc/status/2043666219538993619"
+          "title": "@ns123abc: Investors Are Harsher on OpenAI",
+          "body": "A quote-heavy summary of Financial Times reporting said several OpenAI backers are now openly questioning the company’s focus and valuation, while Anthropic is being marked up more aggressively in secondary markets. Even if the exact pricing moves, the broader signal is that investor sentiment is no longer uniformly behind OpenAI.",
+          "url": "https://x.com/ns123abc/status/2043988547468673222"
+        },
+        {
+          "tag": "hot",
+          "title": "@qinbafrank: Compute Scarcity Is Becoming the Constraint",
+          "body": "A compute-scarcity thread tied OpenAI’s surging API throughput to tighter quotas, outages, GPU rental inflation, and product reprioritization across the industry. The actionable read is that infrastructure, power, and delivery lead times are becoming first-order constraints on AI growth.",
+          "url": "https://x.com/qinbafrank/status/2043910896351883636"
         },
         {
           "tag": "update",
-          "title": "@0xSunNFT: Private AI Deals Are Repricing Fast",
-          "body": "A detailed investor thread described how exposure to private AI names like Anthropic and prediction-market leaders became much harder once valuations moved and access bottlenecks kicked in. The practical market lesson is that in hot private rounds, operational access and timing matter almost as much as the thesis itself.",
-          "url": "https://x.com/0xSunNFT/status/2043626350398017675"
+          "title": "@van00sa: Bhutan Quietly Sold Down Its BTC Stack",
+          "body": "A fascinating treasury post claimed Bhutan built a large sovereign bitcoin position by mining with surplus hydropower, then quietly sold most of it in controlled batches. The larger lesson is that state crypto exposure can now look like pragmatic reserve management rather than ideological signaling.",
+          "url": "https://x.com/van00sa/status/2043909741207007667"
         },
         {
           "tag": "update",
-          "title": "@blapta: Crypto’s Only Proven PMF Is Still Trading",
-          "body": "One of the sharper commentary posts argued that crypto keeps producing winners when teams optimize around the one use case the market has indisputably validated: trading. That frame makes products like Hyperliquid look less like anomalies and more like the logical outcome of focusing on real demand instead of generic infra dreams.",
-          "url": "https://x.com/blapta/status/2043570157440950657"
-        },
-        {
-          "tag": "update",
-          "title": "@ekzhang1: H100 Pricing Reframes $200 AI Plans",
-          "body": "A concise cost benchmark noted that $200 a month buys roughly six hours of H100 time per workday, which is a useful way to sanity-check whether premium AI subscriptions are expensive or surprisingly cheap. It is a better mental model than staring at plan stickers in isolation.",
-          "url": "https://x.com/ekzhang1/status/2043562453452128359"
+          "title": "@_FORAB: Hyperliquid’s Tiny-Team Economics",
+          "body": "A profile of Hyperliquid argued an 11-person team scaled to outsized revenue after rejecting VC money, leaning into community distribution and nonstop trading demand. It stood out as a reminder that crypto’s clearest monetization still comes from products serving real market activity, not abstract infra narratives.",
+          "url": "https://x.com/_FORAB/status/2043899040199520631"
         }
       ]
     },
@@ -83,21 +83,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@xqt1688: WeChat Withdrawal Fees Finally Reached Court",
-          "body": "A widely shared Chinese post highlighted a law student’s lawsuit challenging WeChat’s withdrawal fees after a 50 yuan charge on a 50,000 yuan cash-out. The broader signal is that platform fee structures people treat as untouchable can still be contested when someone is willing to make the costs legible.",
+          "title": "@shiri_shh: An Agent Doing Real Lead Generation",
+          "body": "A striking OpenClaw example showed an agent pipeline that identifies affluent homes without pools, renders a customized backyard mockup, and mails a postcard automatically. It is one of the cleanest examples in the feed of an AI agent doing real outbound sales work instead of just generating content.",
+          "url": "https://x.com/shiri_shh/status/2043327023511179335"
+        },
+        {
+          "tag": "update",
+          "title": "@davidsenra: Tobi Lütke on High-Agency Building",
+          "body": "David Senra’s Tobi Lütke interview outline surfaced a dense set of founder topics, from rebuilding Shopify’s executive team after IPO to hiring high-agency people and running the company from first principles. Not breaking news, but exactly the kind of long-form management material worth saving for later.",
+          "url": "https://x.com/davidsenra/status/2012902807590822209"
+        },
+        {
+          "tag": "update",
+          "title": "@xqt1688: WeChat Withdrawal Fees Reached Court",
+          "body": "A Chinese law student’s challenge to WeChat’s withdrawal fees has now reached court, turning a small consumer annoyance into a visible platform-accountability test. The reason it resonated is simple: fee structures that feel untouchable can still be contested once somebody makes the economics legible.",
           "url": "https://x.com/xqt1688/status/2043340826307411978"
-        },
-        {
-          "tag": "update",
-          "title": "@KKaWSB: A Better Rule for Student Parents",
-          "body": "This post resurfaced the image of a professor calmly taking a student’s crying baby and continuing class, anchored by a simple rule: mothers should not be forced to choose between education and childcare. It landed because it models institutional flexibility in a way most policy talk never does.",
-          "url": "https://x.com/KKaWSB/status/2043130110061264944"
-        },
-        {
-          "tag": "update",
-          "title": "@KKaWSB: The Space-Pen Story Is More Interesting Than the Myth",
-          "body": "A useful myth-busting thread explained that NASA did not frivolously waste millions on a pen while the Soviets used pencils; pencils were genuinely dangerous in spacecraft, and a private company solved the problem with a pressurized pen sold cheaply. It is a small reminder that good innovation stories are often about constraints, not punchlines.",
-          "url": "https://x.com/KKaWSB/status/2043607623837310976"
         }
       ]
     }
