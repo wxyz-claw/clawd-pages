@@ -1,14 +1,14 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest — Tuesday, April 14th, 2026 — 9:00 AM ET",
-  "date": "Tuesday, April 14th, 2026 — 9:00 AM ET",
+  "page_title": "X Feed Digest - Wednesday, April 15th, 2026 - 9:00 AM ET",
+  "date": "Wednesday, April 15th, 2026 - 9:00 AM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The dominant AI story was not a flashy model launch, but growing scrutiny of coding-agent economics and trust: cache behavior, telemetry tradeoffs, and whether Claude Code or Codex produces cleaner long-run output.",
-    "Several of the best workflow posts converged on the same point: agentic software teams still need tight decomposition, explicit review loops, and governance scripts, with humans moving up the stack into architecture and judgment.",
-    "On the market side, sentiment looked less one-way than usual. Posts highlighted OpenAI facing sharper investor skepticism while compute scarcity, not demand, increasingly looked like the real limiter on AI growth.",
-    "Outside the labs, the most useful signals came from concrete operating models: Bhutan treating bitcoin like a quiet treasury asset, Hyperliquid proving small teams can monetize 24/7 trading, and agents beginning to handle real outbound sales work."
+    "Coding-with-agents discussion kept converging on the same point: better results now come more from modularity, tests, written context, and review loops than from chasing one more model bump.",
+    "The biggest product move in the batch was Gemini adding interactive visualizations inside chat, while the biggest workflow risk discussion was Anthropic's new identity-verification friction and the need for backup providers.",
+    "On the market side, AI infrastructure still looks like the real bottleneck trade: custom chips, power generation, photonics, and datacenter capacity kept showing up more often than end-user app novelty.",
+    "Macro tone was mixed but actionable, with Morgan Stanley calling this the late phase of a correction and tariff-refund headlines showing how quickly policy narratives can reverse."
   ],
   "sections": [
     {
@@ -16,34 +16,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@icanvardar: Claude Code Telemetry Penalty",
-          "body": "A widely shared complaint said disabling telemetry in Claude Code shrinks cache lifetime from one hour to five minutes, effectively turning privacy into a pricing and performance tradeoff. The useful takeaway is to re-audit your assumptions about cache behavior and cost before standardizing on a coding-agent workflow.",
-          "url": "https://x.com/icanvardar/status/2043652025339023845"
-        },
-        {
-          "tag": "hot",
-          "title": "@om_patel5: Codex vs Claude Code in Real Work",
-          "body": "One engineer’s 120-hour comparison argued Codex is slower but more autonomous and architecturally disciplined, while Claude Code moves faster but needs tighter supervision and more cleanup. It was one of the clearest practical posts in the batch on when each tool actually fits.",
-          "url": "https://x.com/om_patel5/status/2043900852126068870"
-        },
-        {
           "tag": "new",
-          "title": "@DtDt666: Google Open-Sourced Magika",
-          "body": "Google’s internally used Magika file-identification system is now open source, classifying files by contents instead of trusting extensions. That makes it a genuinely practical security tool for catching disguised malware and mislabeled uploads.",
-          "url": "https://x.com/DtDt666/status/2043723915781161182"
+          "title": "@GeminiApp: Interactive Visualizations in Chat",
+          "body": "Google Gemini now turns questions into manipulable visualizations directly inside chat, including adjustable variables and 3D views. That is a real product upgrade because it makes the model useful for exploration, not just explanation.",
+          "url": "https://x.com/GeminiApp/status/2042272415951253932"
+        },
+        {
+          "tag": "hot",
+          "title": "@shawmakesmagic: Split Cleanup Into 8 Subagents",
+          "body": "A widely shared workflow prompt proposed assigning separate subagents to dedupe code, tighten types, remove dead code, untangle dependencies, and strip AI-generated cruft. The durable idea is that post-vibe-code cleanup should be parallelized into concrete, reviewable workstreams instead of left as one vague refactor pass.",
+          "url": "https://x.com/shawmakesmagic/status/2044269097647779990"
         },
         {
           "tag": "update",
-          "title": "@Barret_China: Review Loops Beat Plain Spec-Driven Dev",
-          "body": "A strong workflow thread argued plain spec-driven development is not enough for long-running agents, because models under-decompose work and skip review. The proposed fix was small task breakdowns, clean execution environments, and repeated review, feedback, and modify loops backed by scripts and guardrails.",
-          "url": "https://x.com/Barret_China/status/2043892840963682369"
+          "title": "@ShenHuang_: Agent Gains Depend on Management, Not Magic",
+          "body": "One practitioner argued that Claude Code often increases review time, and that only a small minority of engineers get true 2x gains. His claim is that the winners manage AI like junior engineers, with explicit hypotheses, persistent notes, and forced strategy changes after repeated failures.",
+          "url": "https://x.com/ShenHuang_/status/2044313515117425009"
         },
         {
           "tag": "update",
-          "title": "@aakashgupta: AI Changes the Engineer Role, Not the Need",
-          "body": "This post argued AI coding tools are pushing engineers toward editing, reviewing, and architecture rather than eliminating them outright. The central claim was that cheaper software creation expands the number of worthwhile projects faster than it shrinks headcount per project.",
-          "url": "https://x.com/aakashgupta/status/2043956944776597701"
+          "title": "@dotey: Harness Engineering Means Better Software Hygiene",
+          "body": "A commentary thread framed harness engineering as a rediscovery of boring but essential practice: modular architecture, strong tests, and tight verification loops. The warning was that companies layering agents onto messy legacy stacks may create an even bigger maintenance problem if they skip that groundwork.",
+          "url": "https://x.com/dotey/status/2044107506679447688"
+        },
+        {
+          "tag": "hot",
+          "title": "@yangyi: Claude Verification Raises Workflow Concentration Risk",
+          "body": "Anthropic's reported passport-and-selfie verification for some features sparked concern that users in unsupported regions could lose access with little notice. The practical takeaway was simple: do not build a critical workflow that depends on a single model vendor staying frictionless forever.",
+          "url": "https://x.com/yangyi/status/2044299899777495249"
         }
       ]
     },
@@ -53,27 +53,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ns123abc: Investors Are Harsher on OpenAI",
-          "body": "A quote-heavy summary of Financial Times reporting said several OpenAI backers are now openly questioning the company’s focus and valuation, while Anthropic is being marked up more aggressively in secondary markets. Even if the exact pricing moves, the broader signal is that investor sentiment is no longer uniformly behind OpenAI.",
-          "url": "https://x.com/ns123abc/status/2043988547468673222"
+          "title": "@elonmusk: Tesla AI5 Taped Out",
+          "body": "Musk said Tesla's AI5 chip has taped out, with AI6 and Dojo3 already in the pipeline. Even with the usual Tesla hype discount, the signal is that major AI players are still leaning harder into vertically integrated silicon roadmaps, not easing up on infrastructure spend.",
+          "url": "https://x.com/elonmusk/status/2044315118583066738"
+        },
+        {
+          "tag": "update",
+          "title": "@billtheinvestor: Power Is Becoming the Real AI Constraint",
+          "body": "A power-focused investing thread argued that electricity, interconnects, and on-site generation may matter more than the next incremental model release, using Bloom Energy as the example trade. The underlying point is that AI demand growth is now big enough to run into grid, transformer, and datacenter bottlenecks.",
+          "url": "https://x.com/billtheinvestor/status/2044125668024430628"
         },
         {
           "tag": "hot",
-          "title": "@qinbafrank: Compute Scarcity Is Becoming the Constraint",
-          "body": "A compute-scarcity thread tied OpenAI’s surging API throughput to tighter quotas, outages, GPU rental inflation, and product reprioritization across the industry. The actionable read is that infrastructure, power, and delivery lead times are becoming first-order constraints on AI growth.",
-          "url": "https://x.com/qinbafrank/status/2043910896351883636"
+          "title": "@WatcherGuru: Morgan Stanley Sees Late-Stage Correction",
+          "body": "Watcher.Guru highlighted Morgan Stanley's view that stocks are in the final phase of a correction. It was a sparse headline, but it fit the broader tone in the feed: investors are still leaning into AI winners while staying unsure how durable the wider rebound really is.",
+          "url": "https://x.com/WatcherGuru/status/2043701741065994486"
         },
         {
           "tag": "update",
-          "title": "@van00sa: Bhutan Quietly Sold Down Its BTC Stack",
-          "body": "A fascinating treasury post claimed Bhutan built a large sovereign bitcoin position by mining with surplus hydropower, then quietly sold most of it in controlled batches. The larger lesson is that state crypto exposure can now look like pragmatic reserve management rather than ideological signaling.",
-          "url": "https://x.com/van00sa/status/2043909741207007667"
-        },
-        {
-          "tag": "update",
-          "title": "@_FORAB: Hyperliquid’s Tiny-Team Economics",
-          "body": "A profile of Hyperliquid argued an 11-person team scaled to outsized revenue after rejecting VC money, leaning into community distribution and nonstop trading demand. It stood out as a reminder that crypto’s clearest monetization still comes from products serving real market activity, not abstract infra narratives.",
-          "url": "https://x.com/_FORAB/status/2043899040199520631"
+          "title": "@laozhouhengmei: Tariff Refunds Underscore Policy Whiplash",
+          "body": "A Reuters-linked post said the administration will begin refunding $166 billion of tariffs that were previously ruled illegal. The market lesson is less about one policy line item and more about how quickly trade headline risk can reverse once courts and implementation details catch up.",
+          "url": "https://x.com/laozhouhengmei/status/2044372847179755703"
         }
       ]
     },
@@ -83,21 +83,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@shiri_shh: An Agent Doing Real Lead Generation",
-          "body": "A striking OpenClaw example showed an agent pipeline that identifies affluent homes without pools, renders a customized backyard mockup, and mails a postcard automatically. It is one of the cleanest examples in the feed of an AI agent doing real outbound sales work instead of just generating content.",
-          "url": "https://x.com/shiri_shh/status/2043327023511179335"
+          "title": "@lidangzzz: Cross-Border AI Trust Keeps Eroding",
+          "body": "Using Cisco's failed Huawei lawsuit as context, this post argued foreign AI companies cannot rely on consistent IP enforcement in China, which helps explain tougher access controls and anti-distillation measures. Whether or not you buy every step of the argument, it is a sharp lens on why platform trust is deteriorating across borders.",
+          "url": "https://x.com/lidangzzz/status/2044338761996071214"
         },
         {
           "tag": "update",
-          "title": "@davidsenra: Tobi Lütke on High-Agency Building",
-          "body": "David Senra’s Tobi Lütke interview outline surfaced a dense set of founder topics, from rebuilding Shopify’s executive team after IPO to hiring high-agency people and running the company from first principles. Not breaking news, but exactly the kind of long-form management material worth saving for later.",
-          "url": "https://x.com/davidsenra/status/2012902807590822209"
+          "title": "@mubeitech: Better Tech Can Collapse an Industry Fast",
+          "body": "A historical thread compared the fall of whaling and horse transport with modern AI disruption, arguing that once a clearly superior technology lands, taxes and policy friction rarely stop the transition. It is a useful reminder to think in second-order winners and losers, not just today's incumbents.",
+          "url": "https://x.com/mubeitech/status/2044148845735518594"
         },
         {
           "tag": "update",
-          "title": "@xqt1688: WeChat Withdrawal Fees Reached Court",
-          "body": "A Chinese law student’s challenge to WeChat’s withdrawal fees has now reached court, turning a small consumer annoyance into a visible platform-accountability test. The reason it resonated is simple: fee structures that feel untouchable can still be contested once somebody makes the economics legible.",
-          "url": "https://x.com/xqt1688/status/2043340826307411978"
+          "title": "@CMhOeNnExY: Enterprise Agent Adoption Is Still Early",
+          "body": "A developer relayed that a fairly large traditional software team still treats AI coding as little more than an old autocomplete plugin. That is a good corrective to X hype, because it suggests real agent adoption across mainstream companies is still much patchier than the online discourse implies.",
+          "url": "https://x.com/CMhOeNnExY/status/2044265760093315157"
         }
       ]
     }
