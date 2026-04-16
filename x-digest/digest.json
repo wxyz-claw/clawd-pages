@@ -1,14 +1,14 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest - Wednesday, April 15th, 2026 - 6:00 PM ET",
-  "date": "Wednesday, April 15th, 2026 - 6:00 PM ET",
+  "page_title": "X Feed Digest - Thursday, April 16th, 2026 - 6:00 PM ET",
+  "date": "Thursday, April 16th, 2026 - 6:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The feed’s strongest AI theme was the shift from novelty to leverage: Gemini expanded personal context globally, GPT-5.4 kept drawing serious attention for hard reasoning, and practical Codex workflows focused on wrapping recurring work in tooling rather than one-off prompts.",
-    "Infra and execution mattered more than demo hype this batch, with Meta reportedly pulling Zuckerberg directly into its AI lab, Tesla pushing Semi production deliveries, and multiple operators talking about cost control through simpler stacks and better automation design.",
-    "Macro tone stayed geopolitical and energy-heavy: Ray Dalio framed the current U.S.-China contest as an interlinked, mostly non-kinetic world-order conflict, while U.S. oil exports hitting a fresh record reinforced how central energy flows remain.",
-    "The most useful cross-cutting workflow lesson was to automate later than you think: first delete bad requirements, then modularize, verify, and turn repeated AI tasks into reusable pipelines or CLIs."
+    "AI coding products are shifting from chat helpers into operating surfaces: Anthropic emphasized longer autonomous runs and self-verification in Opus 4.7, while OpenAI expanded Codex with browser, computer use, memory, and workflow integrations.",
+    "The strongest workflow theme was infrastructure realism, not hype: new agent SDKs now assume durable harnesses and sandboxes, long-horizon benchmarks still show agents failing hard tasks, and contribution workflows are starting to adapt to agent-generated code.",
+    "Compute and cost pressure showed up everywhere in the batch, from xAI leasing idle GPU capacity to Cursor, to renewed talk that agentic workloads make CPUs and orchestration bottlenecks matter again, to enterprise pushback on uncapped AI-tool spend.",
+    "Macro commentary stayed centered on U.S.-China competition, with Ray Dalio framing the fight as trade, capital, technology, and alliance pressure rather than imminent war, while chip commentary argued export controls may be accelerating China’s own AI stack." 
   ],
   "sections": [
     {
@@ -16,34 +16,28 @@
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "hot",
+          "title": "@dotey: Claude Opus 4.7 Lands",
+          "body": "A widely shared summary of Anthropic’s release says Opus 4.7 materially improves autonomous coding, better self-checks its work, and meaningfully upgrades vision resolution for screen-heavy agent tasks. The practical takeaway is that Anthropic is still pushing hardest on reliability for long, unsupervised software workflows rather than just headline benchmark wins.",
+          "url": "https://x.com/dotey/status/2044792782842122412"
+        },
+        {
           "tag": "new",
-          "title": "@GeminiApp: Personal Intelligence Goes Global",
-          "body": "Google said Gemini’s Personal Intelligence feature is expanding internationally across paid tiers, with free-user rollout coming later. The real signal is that major model products are leaning harder into personal context and app-connected memory as a competitive layer.",
-          "url": "https://x.com/GeminiApp/status/2044430579996020815"
+          "title": "@Gorden_Sun: OpenAI Agents SDK Gets Durable",
+          "body": "This post highlighted OpenAI’s newer Agents SDK as a shift from chat-style agents toward persistent task execution with a real harness layer and pluggable sandboxes. That matters because it makes production agent systems look more like deployable infrastructure and less like demo wrappers around a model.",
+          "url": "https://x.com/Gorden_Sun/status/2044618245098070312"
         },
         {
           "tag": "hot",
-          "title": "@kimmonismus: GPT-5.4 Pro Draws More Serious Math Attention",
-          "body": "A widely shared thread claimed GPT-5.4 Pro solved Erdős Problem #1196 and highlighted expert reactions that the result may expose a genuinely new line of reasoning, not just a brute-force literature remix. Even allowing for hype, the notable part is that frontier-model discussion is moving deeper into expert-validated research territory.",
-          "url": "https://x.com/kimmonismus/status/2044323747461529980"
+          "title": "@kimmonismus: Codex Becomes a Workbench",
+          "body": "The most interesting OpenAI product signal in the feed was Codex adding background computer use on macOS, an in-app browser, memory, image generation, and a larger plugin surface. The bigger story is positioning: Codex is being framed less as a coding assistant and more as a general work agent that sits across the whole workflow.",
+          "url": "https://x.com/kimmonismus/status/2044832303075995994"
         },
         {
           "tag": "update",
-          "title": "@derrickcchoi: Give Codex Its Own CLI",
-          "body": "One practical workflow tip stood out: if an agent keeps repeating the same API, log, or team-script task, package that task behind a small CLI and teach the model to use it. That turns fragile prompt choreography into something composable, auditable, and easier to reuse.",
-          "url": "https://x.com/derrickcchoi/status/2044433095009673719"
-        },
-        {
-          "tag": "update",
-          "title": "@grapeot: Why VLA Can Beat Hand-Built Physics",
-          "body": "A thoughtful robotics thread argued that Vision-Language-Action systems win in complex domains because they skip human-designed compression and learn the mapping directly from data. The useful takeaway is a framework for deciding when explicit modeling still wins and when scale-driven end-to-end learning likely takes over.",
-          "url": "https://x.com/grapeot/status/2043942605084610733"
-        },
-        {
-          "tag": "update",
-          "title": "@dotey: Agent Success Still Depends on Software Hygiene",
-          "body": "A translated commentary on harness engineering made the boring but important point that agent-heavy development only gets better when the codebase is modular and the verification loop is tight. In other words, stronger agents do not erase the need for tests, architecture, and review discipline.",
-          "url": "https://x.com/dotey/status/2044107506679447688"
+          "title": "@MatternJustus: FrontierSWE Is a Reality Check",
+          "body": "FrontierSWE introduced an ultra-long-horizon benchmark built around genuinely difficult engineering tasks, and the punchline was that agents still rarely finish them even with twenty hours to work. It is a useful antidote to the current wave of overconfident coding-agent marketing.",
+          "url": "https://x.com/MatternJustus/status/2044876224896565679"
         }
       ]
     },
@@ -53,27 +47,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RayDalio: The U.S.-China Conflict Is Economic First",
-          "body": "Dalio clarified that his recent 'world war' language was about an interlinked cycle of trade, capital, technology, cyber, and geopolitical conflict rather than an imminent direct shooting war between major powers. For markets, the actionable point is that energy chokepoints, debt flows, and alliance credibility remain central macro variables.",
+          "title": "@RayDalio: The Conflict Is Economic First",
+          "body": "Dalio clarified that his recent ‘world war’ framing was not a call on imminent U.S.-China shooting conflict, but a description of linked trade, capital, technology, cyber, and alliance struggles already reshaping the global order. For markets, the point is that shipping routes, debt demand, and bloc alignment still matter more than one dramatic headline.",
           "url": "https://x.com/RayDalio/status/2044502140337426894"
         },
         {
-          "tag": "hot",
-          "title": "@WatcherGuru: U.S. Oil Exports Hit a Fresh Record",
-          "body": "Watcher.Guru flagged weekly U.S. oil exports at 5.2 million barrels per day, a new record. It is a compact but meaningful data point for anyone watching energy balances, shipping risk, and how resilient U.S. supply remains amid wider geopolitical stress.",
-          "url": "https://x.com/WatcherGuru/status/2044528825636118806"
+          "tag": "update",
+          "title": "@linwanwan823: Jensen’s Huawei Warning",
+          "body": "This recap of Jensen Huang’s latest comments argued that export controls may be strengthening China’s domestic AI stack by forcing deeper optimization around Huawei chips and local software ecosystems. Even if the exact numbers are debatable, the strategic signal is clear: ecosystem lock-in matters as much as any single chip generation.",
+          "url": "https://x.com/linwanwan823/status/2044691358217326817"
         },
         {
           "tag": "new",
-          "title": "@elonmusk: Tesla Semi Production Deliveries This Year",
-          "body": "Musk amplified details that the production Tesla Semi is set to begin deliveries this year, with the quoted specs emphasizing 500-mile range at full payload and unusually strong efficiency. If those numbers hold in real deployment, it strengthens the case that electrification is creeping into heavier commercial transport, not just passenger vehicles.",
-          "url": "https://x.com/elonmusk/status/2044336454206431450"
+          "title": "@fi56622380: Nuvacore Bets on CPU Demand",
+          "body": "Gerard Williams’ new ARM server startup, Nuvacore, was framed here as a bet that agentic workloads make CPUs, routing, and orchestration bottlenecks important again. If that thesis is right, the next AI infrastructure trade is not just more GPUs, but far more compute devoted to the layers coordinating them.",
+          "url": "https://x.com/fi56622380/status/2044677478627868786"
         },
         {
           "tag": "update",
-          "title": "@StockMKTNewz: Zuckerberg Reportedly Camps in Meta’s AI Lab",
-          "body": "Reuters-via-StockMKTNewz said Mark Zuckerberg moved his desk into Meta’s AI lab and is working directly with Alexandr Wang and Nat Friedman. The signal for investors is not the desk itself, but how visibly Meta is concentrating leadership attention around the AI buildout.",
-          "url": "https://x.com/StockMKTNewz/status/2044044406601245071"
+          "title": "@dotey: xAI Reportedly Leases GPUs to Cursor",
+          "body": "Business Insider reporting, summarized here, says Cursor plans to use xAI GPU capacity to train Composer 2.5, turning xAI into a compute vendor as well as a model company. The signal is that competitive advantage in coding models is increasingly about who can source and efficiently use infrastructure, not just who ships the smartest demo.",
+          "url": "https://x.com/dotey/status/2044818533440205116"
         }
       ]
     },
@@ -82,28 +76,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@dhh: Leaving AWS Can Still Pay Off",
-          "body": "DHH shared that 37signals cut annual hosting and support costs from roughly $3.9 million to about $1 million after its cloud exit, with multi-million-dollar savings already realized even after hardware purchases. The broader lesson is that infrastructure simplification can still produce very real economic gains for software companies with enough scale and operational tolerance.",
+          "tag": "update",
+          "title": "@dhh: Cloud Exit Savings Stay Very Real",
+          "body": "37signals says its hosting and support bill fell from about $3.9 million in 2023 to roughly $1 million in 2026 after exiting the cloud, with around $4 million already saved even after hardware purchases. It is a strong reminder that repatriation is still a live operating-leverage move, not just an ideological flex.",
           "url": "https://x.com/dhh/status/2044441858063941980"
         },
         {
-          "tag": "update",
-          "title": "@anothercohen: Slack’s AI Bundling Is Becoming a Tax",
-          "body": "A founder complained that Slack’s quoted jump from about $6,000 to $21,000 per year for a 40-person team came bundled with features they did not really want, especially AI upsells. Useful signal if you manage SaaS spend: vendors are still trying to turn AI into ARPU expansion whether customers asked for it or not.",
-          "url": "https://x.com/anothercohen/status/2044255819290525739"
+          "tag": "hot",
+          "title": "@GergelyOrosz: AI Tool Budgets Are Tightening",
+          "body": "Gergely’s point was simple and useful: as subsidies disappear, enterprises may stop treating AI coding tools as unlimited-use productivity magic and start managing them like any other software budget. That shift would force teams to think much harder about where models produce real ROI versus casual convenience.",
+          "url": "https://x.com/GergelyOrosz/status/2044701560576381316"
         },
         {
           "tag": "update",
-          "title": "@mubeitech: Delete the Requirement Before You Optimize It",
-          "body": "A post retelling one of Musk’s manufacturing heuristics argued that teams often waste the most time perfecting steps that never should have existed. The memorable principle is solid even outside factories: challenge the requirement first, then simplify, then speed it up, and only then automate.",
-          "url": "https://x.com/mubeitech/status/2044310045542760920"
+          "title": "@Dott_Chen: One Agent, Shared Context",
+          "body": "This workflow thread argued that teams should stop fragmenting agents by business function and instead give one shared agent broad tool access, unified memory, and role-based information exposure. It is a useful design principle if you think the real moat is accumulated context rather than a pile of isolated chatbots.",
+          "url": "https://x.com/Dott_Chen/status/2044622087495790765"
         },
         {
           "tag": "update",
-          "title": "@ianneo_ai: Build the Full Content Pipeline",
-          "body": "A short-video workflow thread highlighted an open source stack that automates download, highlight detection, clipping, compilation, and publishing instead of just accelerating one editing step. That is a good pattern for AI work in general, because the real leverage often comes from pipeline design, not isolated model usage.",
-          "url": "https://x.com/ianneo_ai/status/2044229325176893578"
+          "title": "@yangyi: Prompt Requests After Pull Requests",
+          "body": "One of the sharper workflow takes in the feed was that open-source contribution flows may tilt from reviewing raw code toward reviewing prompts, intent, and trust systems as agent-written code becomes more common. Even if that future arrives unevenly, it is a good framing for how tooling and governance may split apart.",
+          "url": "https://x.com/yangyi/status/2044691769347162364"
         }
       ]
     }
