@@ -1,14 +1,14 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest - Thursday, April 16th, 2026 - 6:00 PM ET",
-  "date": "Thursday, April 16th, 2026 - 6:00 PM ET",
+  "page_title": "X Feed Digest - Friday, April 17th, 2026 - 9:00 AM ET",
+  "date": "Friday, April 17th, 2026 - 9:00 AM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "AI coding products are shifting from chat helpers into operating surfaces: Anthropic emphasized longer autonomous runs and self-verification in Opus 4.7, while OpenAI expanded Codex with browser, computer use, memory, and workflow integrations.",
-    "The strongest workflow theme was infrastructure realism, not hype: new agent SDKs now assume durable harnesses and sandboxes, long-horizon benchmarks still show agents failing hard tasks, and contribution workflows are starting to adapt to agent-generated code.",
-    "Compute and cost pressure showed up everywhere in the batch, from xAI leasing idle GPU capacity to Cursor, to renewed talk that agentic workloads make CPUs and orchestration bottlenecks matter again, to enterprise pushback on uncapped AI-tool spend.",
-    "Macro commentary stayed centered on U.S.-China competition, with Ray Dalio framing the fight as trade, capital, technology, and alliance pressure rather than imminent war, while chip commentary argued export controls may be accelerating China’s own AI stack." 
+    "Computer-use agents crossed from demos into real workflow surfaces: Codex’s background Mac automation and Salesforce’s new Headless 360 push both point to agents acting directly inside operating systems and enterprise stacks, not just chat windows.",
+    "Anthropic’s Opus 4.7 dominated the AI conversation, but the signal was mixed: some power users and benchmarks praised better large-codebase and document handling, while others reported higher token burn, shakier instruction-following, and lower trust than 4.6.",
+    "AI infrastructure is becoming a capital-markets story: OpenAI is reportedly preparing a massive Cerebras compute deal, while xAI appears to be monetizing underused GPU capacity by leasing it to Cursor for model training.",
+    "Macro risk stayed centered on the Strait of Hormuz and the broader U.S.-China contest, with Dalio arguing the real war is already playing out through trade, capital, technology, and alliance pressure rather than imminent direct military conflict."
   ],
   "sections": [
     {
@@ -17,27 +17,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@dotey: Claude Opus 4.7 Lands",
-          "body": "A widely shared summary of Anthropic’s release says Opus 4.7 materially improves autonomous coding, better self-checks its work, and meaningfully upgrades vision resolution for screen-heavy agent tasks. The practical takeaway is that Anthropic is still pushing hardest on reliability for long, unsupervised software workflows rather than just headline benchmark wins.",
-          "url": "https://x.com/dotey/status/2044792782842122412"
+          "title": "@aakashgupta: Codex Solves the Cursor War",
+          "body": "Gupta argues OpenAI’s real breakthrough was background computer use on macOS, where multiple agents can operate without hijacking the user’s cursor. If that holds up in practice, computer-use agents become additive workflow tools instead of 'go get coffee' demos.",
+          "url": "https://x.com/aakashgupta/status/2044951991475195932"
         },
         {
           "tag": "new",
-          "title": "@Gorden_Sun: OpenAI Agents SDK Gets Durable",
-          "body": "This post highlighted OpenAI’s newer Agents SDK as a shift from chat-style agents toward persistent task execution with a real harness layer and pluggable sandboxes. That matters because it makes production agent systems look more like deployable infrastructure and less like demo wrappers around a model.",
-          "url": "https://x.com/Gorden_Sun/status/2044618245098070312"
-        },
-        {
-          "tag": "hot",
-          "title": "@kimmonismus: Codex Becomes a Workbench",
-          "body": "The most interesting OpenAI product signal in the feed was Codex adding background computer use on macOS, an in-app browser, memory, image generation, and a larger plugin surface. The bigger story is positioning: Codex is being framed less as a coding assistant and more as a general work agent that sits across the whole workflow.",
-          "url": "https://x.com/kimmonismus/status/2044832303075995994"
+          "title": "@Benioff: Salesforce Goes Headless",
+          "body": "Benioff announced Headless 360, exposing Salesforce, Agentforce, and Slack through APIs, MCP, and CLI so agents can act directly on business systems. It is a strong signal that enterprise software is being repackaged as agent-ready infrastructure, not just GUI-first SaaS.",
+          "url": "https://x.com/Benioff/status/2044981547267395620"
         },
         {
           "tag": "update",
-          "title": "@MatternJustus: FrontierSWE Is a Reality Check",
-          "body": "FrontierSWE introduced an ultra-long-horizon benchmark built around genuinely difficult engineering tasks, and the punchline was that agents still rarely finish them even with twenty hours to work. It is a useful antidote to the current wave of overconfident coding-agent marketing.",
-          "url": "https://x.com/MatternJustus/status/2044876224896565679"
+          "title": "@jerryjliu0: Opus 4.7 Improves Documents, Not Costs",
+          "body": "LlamaIndex’s ParseBench results say Opus 4.7 improves on charts and overall faithfulness for OCR-style document tasks, even if Gemini still edges it on some table work. The catch is economics: at roughly 7 cents per page, the model looks powerful but expensive for production document pipelines.",
+          "url": "https://x.com/jerryjliu0/status/2044902620746363016"
+        },
+        {
+          "tag": "hot",
+          "title": "@kimmonismus: Opus 4.7 Hits a Trust Wall",
+          "body": "Kimmonismus captured the bearish side of the feed’s Opus 4.7 reaction: higher token usage, tighter prompting requirements, and lower confidence that the output is actually dependable. The real signal is that benchmark gains and day-to-day trust are diverging again for frontier models.",
+          "url": "https://x.com/kimmonismus/status/2045063637639762056"
         }
       ]
     },
@@ -47,27 +47,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RayDalio: The Conflict Is Economic First",
-          "body": "Dalio clarified that his recent ‘world war’ framing was not a call on imminent U.S.-China shooting conflict, but a description of linked trade, capital, technology, cyber, and alliance struggles already reshaping the global order. For markets, the point is that shipping routes, debt demand, and bloc alignment still matter more than one dramatic headline.",
+          "title": "@anissagardizy8: OpenAI’s Reported Cerebras Bet",
+          "body": "A scoop from The Information reporters says OpenAI agreed to spend more than $20 billion on Cerebras chips over three years, with the total potentially rising toward $30 billion plus equity rights. If it shows up in Cerebras’s IPO filing, it will underline how quickly frontier-model capex is becoming balance-sheet scale.",
+          "url": "https://x.com/anissagardizy8/status/2044949727549268454"
+        },
+        {
+          "tag": "hot",
+          "title": "@dotey: xAI Turns Spare GPUs Into Revenue",
+          "body": "This Business Insider-backed summary says Cursor will train Composer 2.5 on xAI capacity, effectively turning xAI into a compute landlord while it is also competing as a model company. The notable financial angle is the rationale: reportedly weak internal GPU utilization means idle clusters are starting to get monetized instead of simply hoarded.",
+          "url": "https://x.com/dotey/status/2044818533440205116"
+        },
+        {
+          "tag": "hot",
+          "title": "@RayDalio: 'World War' Means Economic War",
+          "body": "Dalio clarified that his recent 'world war' framing refers to interlocking trade, capital, technology, cyber, and alliance conflict, not an immediate U.S.-China shooting war. For markets, his point is that shipping security, debt demand, and bloc alignment are the transmission channels to watch.",
           "url": "https://x.com/RayDalio/status/2044502140337426894"
         },
         {
           "tag": "update",
-          "title": "@linwanwan823: Jensen’s Huawei Warning",
-          "body": "This recap of Jensen Huang’s latest comments argued that export controls may be strengthening China’s domestic AI stack by forcing deeper optimization around Huawei chips and local software ecosystems. Even if the exact numbers are debatable, the strategic signal is clear: ecosystem lock-in matters as much as any single chip generation.",
-          "url": "https://x.com/linwanwan823/status/2044691358217326817"
-        },
-        {
-          "tag": "new",
-          "title": "@fi56622380: Nuvacore Bets on CPU Demand",
-          "body": "Gerard Williams’ new ARM server startup, Nuvacore, was framed here as a bet that agentic workloads make CPUs, routing, and orchestration bottlenecks important again. If that thesis is right, the next AI infrastructure trade is not just more GPUs, but far more compute devoted to the layers coordinating them.",
-          "url": "https://x.com/fi56622380/status/2044677478627868786"
-        },
-        {
-          "tag": "update",
-          "title": "@dotey: xAI Reportedly Leases GPUs to Cursor",
-          "body": "Business Insider reporting, summarized here, says Cursor plans to use xAI GPU capacity to train Composer 2.5, turning xAI into a compute vendor as well as a model company. The signal is that competitive advantage in coding models is increasingly about who can source and efficiently use infrastructure, not just who ships the smartest demo.",
-          "url": "https://x.com/dotey/status/2044818533440205116"
+          "title": "@8teAPi: Export Controls Could Backfire on Nvidia",
+          "body": "This thread offered a clean strategic argument for why export controls may ultimately weaken Nvidia’s long-term moat: cutting China off now can accelerate Huawei’s domestic chip ecosystem while closing off a market that helped fund Nvidia’s lead. You do not have to buy every premise to see the takeaway, semiconductor policy is now inseparable from valuation.",
+          "url": "https://x.com/8teAPi/status/2044893367822397888"
         }
       ]
     },
@@ -77,27 +77,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@dhh: Cloud Exit Savings Stay Very Real",
-          "body": "37signals says its hosting and support bill fell from about $3.9 million in 2023 to roughly $1 million in 2026 after exiting the cloud, with around $4 million already saved even after hardware purchases. It is a strong reminder that repatriation is still a live operating-leverage move, not just an ideological flex.",
-          "url": "https://x.com/dhh/status/2044441858063941980"
-        },
-        {
-          "tag": "hot",
-          "title": "@GergelyOrosz: AI Tool Budgets Are Tightening",
-          "body": "Gergely’s point was simple and useful: as subsidies disappear, enterprises may stop treating AI coding tools as unlimited-use productivity magic and start managing them like any other software budget. That shift would force teams to think much harder about where models produce real ROI versus casual convenience.",
-          "url": "https://x.com/GergelyOrosz/status/2044701560576381316"
+          "title": "@AYi_AInotes: Agents Should Ask at Expensive Branches",
+          "body": "This workflow post made a practical point: the right agent is not the one that asks for approval at every step, but the one that pauses only when uncertainty could trigger costly rework. That is a useful design principle for coding agents, ops automations, and any human-in-the-loop review flow.",
+          "url": "https://x.com/AYi_AInotes/status/2045075148131193160"
         },
         {
           "tag": "update",
-          "title": "@Dott_Chen: One Agent, Shared Context",
-          "body": "This workflow thread argued that teams should stop fragmenting agents by business function and instead give one shared agent broad tool access, unified memory, and role-based information exposure. It is a useful design principle if you think the real moat is accumulated context rather than a pile of isolated chatbots.",
-          "url": "https://x.com/Dott_Chen/status/2044622087495790765"
+          "title": "@aakashgupta: Scale Math Beats DIY",
+          "body": "Gupta’s Panda Express breakdown was really a compact lesson in operating leverage: wholesale inputs, short marginal labor, and standardized throughput can make 'homemade' the more expensive option even before you price your own time. It is a good mental model for build-versus-buy decisions far beyond food.",
+          "url": "https://x.com/aakashgupta/status/2045050139245760753"
         },
         {
-          "tag": "update",
-          "title": "@yangyi: Prompt Requests After Pull Requests",
-          "body": "One of the sharper workflow takes in the feed was that open-source contribution flows may tilt from reviewing raw code toward reviewing prompts, intent, and trust systems as agent-written code becomes more common. Even if that future arrives unevenly, it is a good framing for how tooling and governance may split apart.",
-          "url": "https://x.com/yangyi/status/2044691769347162364"
+          "tag": "new",
+          "title": "@lauriewired: Space Datacenters Are Mostly a Physics Meme",
+          "body": "Laurie’s post is a fun but useful sanity check on the 'compute in space' narrative: relativity does produce extra clock cycles, just not enough to matter unless you wander absurdly close to black holes. It is a neat theory rabbit hole, not a near-term datacenter investment thesis.",
+          "url": "https://x.com/lauriewired/status/2044856026403606677"
         }
       ]
     }
