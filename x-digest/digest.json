@@ -1,14 +1,14 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest - Friday, April 17th, 2026 - 9:00 AM ET",
-  "date": "Friday, April 17th, 2026 - 9:00 AM ET",
+  "page_title": "X Feed Digest - Friday, April 17th, 2026 - 6:00 PM ET",
+  "date": "Friday, April 17th, 2026 - 6:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Computer-use agents crossed from demos into real workflow surfaces: Codex’s background Mac automation and Salesforce’s new Headless 360 push both point to agents acting directly inside operating systems and enterprise stacks, not just chat windows.",
-    "Anthropic’s Opus 4.7 dominated the AI conversation, but the signal was mixed: some power users and benchmarks praised better large-codebase and document handling, while others reported higher token burn, shakier instruction-following, and lower trust than 4.6.",
-    "AI infrastructure is becoming a capital-markets story: OpenAI is reportedly preparing a massive Cerebras compute deal, while xAI appears to be monetizing underused GPU capacity by leasing it to Cursor for model training.",
-    "Macro risk stayed centered on the Strait of Hormuz and the broader U.S.-China contest, with Dalio arguing the real war is already playing out through trade, capital, technology, and alliance pressure rather than imminent direct military conflict."
+    "Anthropic owned the feed again, but the conversation shifted from model benchmarks to product surface area: Claude Design made the strongest splash, with users immediately framing it as pressure on Figma, Lovable, and other app-layer tools.",
+    "The agent stack is getting more operational and less demo-driven. Salesforce pushed an API-first, MCP-ready enterprise surface, while creators shared more disciplined workflows like spec-first coding and agents that pause only at high-cost uncertainty.",
+    "AI is increasingly a markets story, not just a product story. The feed tied model launches directly to stock reactions, board-level conflict, and infrastructure monetization, especially around Anthropic, Figma, xAI, and Cursor.",
+    "The most useful practical signal from the batch was not another benchmark chart, but workflow hygiene: structure requirements before coding, keep model context lean, and design approval points where mistakes are expensive."
   ],
   "sections": [
     {
@@ -17,27 +17,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@aakashgupta: Codex Solves the Cursor War",
-          "body": "Gupta argues OpenAI’s real breakthrough was background computer use on macOS, where multiple agents can operate without hijacking the user’s cursor. If that holds up in practice, computer-use agents become additive workflow tools instead of 'go get coffee' demos.",
-          "url": "https://x.com/aakashgupta/status/2044951991475195932"
+          "title": "@claudeai: Claude Design Launches",
+          "body": "Anthropic introduced Claude Design, a research-preview tool for turning chat prompts into prototypes, slides, and one-pagers. The important signal is strategic, not cosmetic: frontier labs are moving further up the stack into actual software workflows, not just model APIs.",
+          "url": "https://x.com/claudeai/status/2045156267690213649"
         },
         {
           "tag": "new",
           "title": "@Benioff: Salesforce Goes Headless",
-          "body": "Benioff announced Headless 360, exposing Salesforce, Agentforce, and Slack through APIs, MCP, and CLI so agents can act directly on business systems. It is a strong signal that enterprise software is being repackaged as agent-ready infrastructure, not just GUI-first SaaS.",
+          "body": "Benioff announced Headless 360, exposing Salesforce, Agentforce, and Slack through APIs, MCP, and CLI instead of forcing agents through the browser. That is a meaningful enterprise shift toward agent-native software surfaces.",
           "url": "https://x.com/Benioff/status/2044981547267395620"
         },
         {
           "tag": "update",
-          "title": "@jerryjliu0: Opus 4.7 Improves Documents, Not Costs",
-          "body": "LlamaIndex’s ParseBench results say Opus 4.7 improves on charts and overall faithfulness for OCR-style document tasks, even if Gemini still edges it on some table work. The catch is economics: at roughly 7 cents per page, the model looks powerful but expensive for production document pipelines.",
-          "url": "https://x.com/jerryjliu0/status/2044902620746363016"
+          "title": "@wsl8297: GitHub Spec Kit for AI Coding",
+          "body": "This post highlighted GitHub's Spec Kit as a way to tame vibe coding by separating what to build, why it matters, and only then how to implement it. The takeaway is practical: spec-first collaboration makes AI-generated code more controllable and easier to review.",
+          "url": "https://x.com/wsl8297/status/2045095017937859064"
         },
         {
-          "tag": "hot",
-          "title": "@kimmonismus: Opus 4.7 Hits a Trust Wall",
-          "body": "Kimmonismus captured the bearish side of the feed’s Opus 4.7 reaction: higher token usage, tighter prompting requirements, and lower confidence that the output is actually dependable. The real signal is that benchmark gains and day-to-day trust are diverging again for frontier models.",
-          "url": "https://x.com/kimmonismus/status/2045063637639762056"
+          "tag": "update",
+          "title": "@sitinme: Hidden Claude Code Plugins",
+          "body": "A useful workflow thread surfaced a quiet set of official Claude Code plugins, including multi-agent PR review, hook generation, iterative task runners, and security guidance. If you are already using Claude Code, it is a good reminder to mine the repo for built-in leverage before inventing your own tooling.",
+          "url": "https://x.com/sitinme/status/2045127135195439279"
         }
       ]
     },
@@ -47,27 +47,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@anissagardizy8: OpenAI’s Reported Cerebras Bet",
-          "body": "A scoop from The Information reporters says OpenAI agreed to spend more than $20 billion on Cerebras chips over three years, with the total potentially rising toward $30 billion plus equity rights. If it shows up in Cerebras’s IPO filing, it will underline how quickly frontier-model capex is becoming balance-sheet scale.",
-          "url": "https://x.com/anissagardizy8/status/2044949727549268454"
+          "title": "@xDaily: xAI Supplies GPUs to Cursor",
+          "body": "The Business Insider-backed item says xAI plans to provide large GPU capacity to Cursor for training Composer 2.5. The notable business angle is that AI labs are starting to monetize spare compute like cloud vendors, even while competing on models.",
+          "url": "https://x.com/xDaily/status/2044756242287976923"
         },
         {
           "tag": "hot",
-          "title": "@dotey: xAI Turns Spare GPUs Into Revenue",
-          "body": "This Business Insider-backed summary says Cursor will train Composer 2.5 on xAI capacity, effectively turning xAI into a compute landlord while it is also competing as a model company. The notable financial angle is the rationale: reportedly weak internal GPU utilization means idle clusters are starting to get monetized instead of simply hoarded.",
-          "url": "https://x.com/dotey/status/2044818533440205116"
-        },
-        {
-          "tag": "hot",
-          "title": "@RayDalio: 'World War' Means Economic War",
-          "body": "Dalio clarified that his recent 'world war' framing refers to interlocking trade, capital, technology, cyber, and alliance conflict, not an immediate U.S.-China shooting war. For markets, his point is that shipping security, debt demand, and bloc alignment are the transmission channels to watch.",
-          "url": "https://x.com/RayDalio/status/2044502140337426894"
+          "title": "@Yuchenj_UW: Figma Sells Off on Claude Design",
+          "body": "This screenshot post captured how quickly public markets mapped Claude Design to competitive pressure on Figma. Whether the move sticks or not, the immediate reaction shows investors are repricing application software whenever model labs ship workflow-native products.",
+          "url": "https://x.com/Yuchenj_UW/status/2045161719547445426"
         },
         {
           "tag": "update",
-          "title": "@8teAPi: Export Controls Could Backfire on Nvidia",
-          "body": "This thread offered a clean strategic argument for why export controls may ultimately weaken Nvidia’s long-term moat: cutting China off now can accelerate Huawei’s domestic chip ecosystem while closing off a market that helped fund Nvidia’s lead. You do not have to buy every premise to see the takeaway, semiconductor policy is now inseparable from valuation.",
-          "url": "https://x.com/8teAPi/status/2044893367822397888"
+          "title": "@TechCrunch: Anthropic-Figma Conflict Sharpens",
+          "body": "TechCrunch flagged that Anthropic's CPO left Figma's board after reports he may offer a competing product. That makes the Claude Design launch look less like a side experiment and more like a direct move into an adjacent SaaS category.",
+          "url": "https://x.com/TechCrunch/status/2044846603329233198"
         }
       ]
     },
@@ -77,21 +71,27 @@
       "items": [
         {
           "tag": "update",
-          "title": "@AYi_AInotes: Agents Should Ask at Expensive Branches",
-          "body": "This workflow post made a practical point: the right agent is not the one that asks for approval at every step, but the one that pauses only when uncertainty could trigger costly rework. That is a useful design principle for coding agents, ops automations, and any human-in-the-loop review flow.",
+          "title": "@AYi_AInotes: Ask at Expensive Branch Points",
+          "body": "This workflow post argued that agents should not interrupt constantly, but they should stop when uncertainty could trigger costly rework. That is a strong general rule for coding agents, ops bots, and any human-in-the-loop automation.",
           "url": "https://x.com/AYi_AInotes/status/2045075148131193160"
         },
         {
           "tag": "update",
-          "title": "@aakashgupta: Scale Math Beats DIY",
-          "body": "Gupta’s Panda Express breakdown was really a compact lesson in operating leverage: wholesale inputs, short marginal labor, and standardized throughput can make 'homemade' the more expensive option even before you price your own time. It is a good mental model for build-versus-buy decisions far beyond food.",
-          "url": "https://x.com/aakashgupta/status/2045050139245760753"
+          "title": "@aakashgupta: Sample Reality, Not Dashboards",
+          "body": "Gupta retold the Bezos anecdote where internal support metrics looked great until Bezos simply called the line and waited ten minutes. It is a sharp reminder that aggregate dashboards can hide broken user experience unless leaders regularly test the product directly.",
+          "url": "https://x.com/aakashgupta/status/2045125486653972677"
         },
         {
           "tag": "new",
           "title": "@lauriewired: Space Datacenters Are Mostly a Physics Meme",
-          "body": "Laurie’s post is a fun but useful sanity check on the 'compute in space' narrative: relativity does produce extra clock cycles, just not enough to matter unless you wander absurdly close to black holes. It is a neat theory rabbit hole, not a near-term datacenter investment thesis.",
+          "body": "Laurie offered a fun but clarifying sanity check on the idea that putting compute in space creates meaningful extra clock cycles through time dilation. The concept is technically real, but not remotely large enough to matter for practical datacenter planning.",
           "url": "https://x.com/lauriewired/status/2044856026403606677"
+        },
+        {
+          "tag": "update",
+          "title": "@rubenhassid: Cheap Claude Use Comes From Context Hygiene",
+          "body": "One of the more practical posts in the batch argued that most people waste model budget by uploading bloated files and keeping messy context around. Even if you ignore the listicle framing, the core lesson is solid: cleaner inputs usually beat buying a bigger plan.",
+          "url": "https://x.com/rubenhassid/status/2045004326502871429"
         }
       ]
     }
