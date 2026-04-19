@@ -1,14 +1,25 @@
 {
   "title": "X Feed Digest",
   "header_title": "High-Signal X Feed Digest",
-  "page_title": "X Feed Digest - Friday, April 17th, 2026 - 6:00 PM ET",
-  "date": "Friday, April 17th, 2026 - 6:00 PM ET",
+  "page_title": "X Feed Digest - Sunday, April 19th, 2026 - 6:00 PM ET",
+  "date": "Sunday, April 19th, 2026 - 6:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Anthropic owned the feed again, but the conversation shifted from model benchmarks to product surface area: Claude Design made the strongest splash, with users immediately framing it as pressure on Figma, Lovable, and other app-layer tools.",
-    "The agent stack is getting more operational and less demo-driven. Salesforce pushed an API-first, MCP-ready enterprise surface, while creators shared more disciplined workflows like spec-first coding and agents that pause only at high-cost uncertainty.",
-    "AI is increasingly a markets story, not just a product story. The feed tied model launches directly to stock reactions, board-level conflict, and infrastructure monetization, especially around Anthropic, Figma, xAI, and Cursor.",
-    "The most useful practical signal from the batch was not another benchmark chart, but workflow hygiene: structure requirements before coding, keep model context lean, and design approval points where mistakes are expensive."
+    {
+      "html": "<strong>AI signal was more about workflow reality than flashy launches:</strong> the best post in the batch showed hybrid code review still beats pure-AI guessing, while other useful commentary focused on token-streaming latency and rapidly compressing coding-tool pricing."
+    },
+    {
+      "html": "<strong>Geopolitical market risk centered on Iran again:</strong> the strongest news cluster was about a possible internal power struggle in Tehran and the legal, escalatory implications of America’s blockade of Iranian ports."
+    },
+    {
+      "html": "<strong>Crypto remained reflexive to familiar catalysts:</strong> Michael Saylor’s latest ‘buy more Bitcoin’ hint was still one of the most market-moving posts in the whole batch."
+    },
+    {
+      "html": "<strong>Equity valuation context stayed rich:</strong> FactSet put the S&amp;P 500 forward P/E at 20.9, still above both its 5-year and 10-year averages going into earnings."
+    },
+    {
+      "html": "<strong>The most genuinely useful non-market posts were practical:</strong> New York long-term care’s dependence on Medicaid, the logic behind deliberately bad scam replies, and a real Lower Hudson cleanup milestone all stood out."
+    }
   ],
   "sections": [
     {
@@ -17,27 +28,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@claudeai: Claude Design Launches",
-          "body": "Anthropic introduced Claude Design, a research-preview tool for turning chat prompts into prototypes, slides, and one-pagers. The important signal is strategic, not cosmetic: frontier labs are moving further up the stack into actual software workflows, not just model APIs.",
-          "url": "https://x.com/claudeai/status/2045156267690213649"
+          "title": "@deepsource: AI Code Review Needs Structure",
+          "body": "A benchmark against more than 165 real CVEs found the strongest results came from a hybrid stack, where static analyzers do the structural triage before AI reviews the flagged context. The practical takeaway is that AI code review still works best as a second layer on top of deterministic analysis, not as a standalone judge.",
+          "url": "https://x.com/deepsource/status/2037675178998792618"
         },
         {
           "tag": "new",
-          "title": "@Benioff: Salesforce Goes Headless",
-          "body": "Benioff announced Headless 360, exposing Salesforce, Agentforce, and Slack through APIs, MCP, and CLI instead of forcing agents through the browser. That is a meaningful enterprise shift toward agent-native software surfaces.",
-          "url": "https://x.com/Benioff/status/2044981547267395620"
+          "title": "@mranti: Coding Tool Prices Keep Compressing",
+          "body": "A China-side pricing datapoint: iFlytek launched a 39 RMB usage-based Coding Plan that includes top models such as Kimi 2.5, roughly in line with the now-gone 40 RMB Bailian tier. It is another sign coding-agent access is being commoditized quickly on price.",
+          "url": "https://x.com/mranti/status/2045846425570021833"
         },
         {
           "tag": "update",
-          "title": "@wsl8297: GitHub Spec Kit for AI Coding",
-          "body": "This post highlighted GitHub's Spec Kit as a way to tame vibe coding by separating what to build, why it matters, and only then how to implement it. The takeaway is practical: spec-first collaboration makes AI-generated code more controllable and easier to review.",
-          "url": "https://x.com/wsl8297/status/2045095017937859064"
+          "title": "@lidangzzz: Agent Latency Is Still Mostly I/O",
+          "body": "He argued the real bottleneck for agents is still token emission speed, so teams often waste time optimizing process spawning while ignoring output volume and prompt design. In practice, slimming responses and avoiding unnecessary bash fan-out may buy more speed than extra orchestration.",
+          "url": "https://x.com/lidangzzz/status/2045886133549076753"
         },
         {
           "tag": "update",
-          "title": "@sitinme: Hidden Claude Code Plugins",
-          "body": "A useful workflow thread surfaced a quiet set of official Claude Code plugins, including multi-agent PR review, hook generation, iterative task runners, and security guidance. If you are already using Claude Code, it is a good reminder to mine the repo for built-in leverage before inventing your own tooling.",
-          "url": "https://x.com/sitinme/status/2045127135195439279"
+          "title": "@lidangzzz: EDA Agents May Be Overrated",
+          "body": "He pushed back on the idea that EDA and CAD agents will capture huge semiconductor value, arguing most cost pressure and operational leverage still sit in fabs, not design surfaces. Even if agentic design improves, the industry’s economic bottlenecks may remain downstream in manufacturing.",
+          "url": "https://x.com/lidangzzz/status/2045915306653061449"
         }
       ]
     },
@@ -47,21 +58,31 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@xDaily: xAI Supplies GPUs to Cursor",
-          "body": "The Business Insider-backed item says xAI plans to provide large GPU capacity to Cursor for training Composer 2.5. The notable business angle is that AI labs are starting to monetize spare compute like cloud vendors, even while competing on models.",
-          "url": "https://x.com/xDaily/status/2044756242287976923"
-        },
-        {
-          "tag": "hot",
-          "title": "@Yuchenj_UW: Figma Sells Off on Claude Design",
-          "body": "This screenshot post captured how quickly public markets mapped Claude Design to competitive pressure on Figma. Whether the move sticks or not, the immediate reaction shows investors are repricing application software whenever model labs ship workflow-native products.",
-          "url": "https://x.com/Yuchenj_UW/status/2045161719547445426"
+          "title": "@WatcherGuru: Saylor Hint Keeps BTC Reflexivity Alive",
+          "body": "Michael Saylor posted another not-so-subtle hint that Strategy may add to its Bitcoin position, keeping the usual BTC and MSTR reflexivity trade alive ahead of any formal filing. If you track crypto sentiment, this remains one of the market’s most reliable rumor catalysts.",
+          "url": "https://x.com/WatcherGuru/status/2045849075459735824"
         },
         {
           "tag": "update",
-          "title": "@TechCrunch: Anthropic-Figma Conflict Sharpens",
-          "body": "TechCrunch flagged that Anthropic's CPO left Figma's board after reports he may offer a competing product. That makes the Claude Design launch look less like a side experiment and more like a direct move into an adjacent SaaS category.",
-          "url": "https://x.com/TechCrunch/status/2044846603329233198"
+          "title": "@FactSet: S&P 500 Still Trading Rich",
+          "body": "FactSet put the S&P 500’s forward 12-month P/E at 20.9, above both its 5-year and 10-year averages. That does not time a pullback by itself, but it is a clean reminder that equities still carry a full multiple into earnings.",
+          "url": "https://x.com/FactSet/status/2045947566110482521"
+        },
+        {
+          "tag": "hot",
+          "title": "@TheEconomist: Iran Risk Is Political and Escalatory",
+          "body": "The strongest geopolitical cluster in the batch was Iran: one Economist post pointed to an internal power struggle, while another framed the U.S. blockade of Iranian ports as legally defensible but highly escalatory around oil infrastructure. Together they suggest Gulf headline risk is still more likely to hit oil and shipping through politics than through clean macro data.",
+          "url": "https://x.com/TheEconomist/status/2045926725301699014",
+          "links": [
+            {
+              "label": "Iran power struggle",
+              "url": "https://x.com/TheEconomist/status/2045926725301699014"
+            },
+            {
+              "label": "Blockade legal risk",
+              "url": "https://x.com/TheEconomist/status/2045935472531198027"
+            }
+          ]
         }
       ]
     },
@@ -71,27 +92,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@AYi_AInotes: Ask at Expensive Branch Points",
-          "body": "This workflow post argued that agents should not interrupt constantly, but they should stop when uncertainty could trigger costly rework. That is a strong general rule for coding agents, ops bots, and any human-in-the-loop automation.",
-          "url": "https://x.com/AYi_AInotes/status/2045075148131193160"
-        },
-        {
-          "tag": "update",
-          "title": "@aakashgupta: Sample Reality, Not Dashboards",
-          "body": "Gupta retold the Bezos anecdote where internal support metrics looked great until Bezos simply called the line and waited ten minutes. It is a sharp reminder that aggregate dashboards can hide broken user experience unless leaders regularly test the product directly.",
-          "url": "https://x.com/aakashgupta/status/2045125486653972677"
+          "title": "@newyorkcda: Medicaid Quietly Carries Long-Term Care",
+          "body": "This was an important policy reality check: in New York, long-term care is largely funded by Medicaid, including for many middle-class families. Budget decisions in Albany therefore matter directly for access, not just for the poorest households.",
+          "url": "https://x.com/newyorkcda/status/2034717970698502494"
         },
         {
           "tag": "new",
-          "title": "@lauriewired: Space Datacenters Are Mostly a Physics Meme",
-          "body": "Laurie offered a fun but clarifying sanity check on the idea that putting compute in space creates meaningful extra clock cycles through time dilation. The concept is technically real, but not remotely large enough to matter for practical datacenter planning.",
-          "url": "https://x.com/lauriewired/status/2044856026403606677"
+          "title": "@williamlong: Why Scam Replies Look So Dumb",
+          "body": "He made the classic fraud-filter point: scam replies often look intentionally stupid because that screens out skeptical people and concentrates effort on the easiest marks. It is a useful reminder that low-quality spam is often optimized, not accidental.",
+          "url": "https://x.com/williamlong/status/2045903301707972978"
         },
         {
           "tag": "update",
-          "title": "@rubenhassid: Cheap Claude Use Comes From Context Hygiene",
-          "body": "One of the more practical posts in the batch argued that most people waste model budget by uploading bloated files and keeping messy context around. Even if you ignore the listicle framing, the core lesson is solid: cleaner inputs usually beat buying a bigger plan.",
-          "url": "https://x.com/rubenhassid/status/2045004326502871429"
+          "title": "@TheEconomist: Lower Hudson Cleanup Actually Shows Up",
+          "body": "After decades of contamination, some fish from the Lower Hudson are reportedly safe for everyone to eat for the first time in 50 years. It is a small but concrete environmental recovery story, especially meaningful for New York locals.",
+          "url": "https://x.com/TheEconomist/status/2045970729443774470"
         }
       ]
     }
