@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Monday, April 20th, 2026",
   "summary": [
-    "AI power users are increasingly treating the stack as modular: the edge was better routing across agents, cache layers, long-context tools, and cheaper infra, not blind loyalty to one model.",
-    "Developer chatter skewed toward operational discipline, with stricter Apple review requirements, repeated warnings about unreviewed AI-generated code, and more attention on persistent context systems.",
-    "The business conversation was about margins and monetization, not just benchmarks, especially around Nvidia's pricing power, ByteDance's AI-heavy spend narrative, and skepticism toward OpenAI's ad ambitions.",
-    "A quieter but important theme was that agent UX is maturing from prompt tricks to intent design, context recovery, and workflows that preserve user control."
+    "The strongest theme in the batch was agent workflow maturity: people were optimizing around subagents, long-lived threads, fresh-session execution, and external context stores, not just raw model IQ.",
+    "Open model pressure kept rising, especially around Kimi K2.6, with the conversation shifting from benchmarks to practical advantages like long-horizon coding, cheaper inference, and broader distribution.",
+    "AI infrastructure looked like a capital and supply-chain story as much as a model story, with Anthropic’s massive AWS compute deal and growing concern that CPUs could become the next bottleneck after GPUs.",
+    "The sober counterweight was reliability: developers kept warning that AI-written code still needs human review, while product thinkers argued that agent UX should help users clarify intent and stay in control."
   ],
   "sections": [
     {
@@ -14,33 +14,33 @@
       "items": [
         {
           "tag": "new",
-          "title": "@windsurf: Windsurf 2.0 Agent Control",
-          "body": "Windsurf introduced a control plane for managing multiple agents and delegating work to cloud-based Devin, a sign that agent orchestration is becoming its own product category. The interesting shift is from single-chat assistants toward persistent systems that keep shipping after you close the laptop.",
-          "url": "https://x.com/windsurf/status/2044513219730186732"
+          "title": "@Kimi_Moonshot: Kimi K2.6 Raises the Open-Model Bar",
+          "body": "Moonshot framed Kimi K2.6 as a long-horizon coding model with 4,000-plus tool calls, 12-hour runs, and much larger agent swarms. The bigger signal is that open models are now competing on endurance and orchestration, not just benchmark screenshots.",
+          "url": "https://x.com/Kimi_Moonshot/status/2046249571882500354"
         },
         {
           "tag": "update",
-          "title": "@anulagarwal: Apple Tightens App Review Inputs",
-          "body": "A widely shared developer note says Apple now wants a physical-device screen recording plus a structured explanation of purpose, feature access, and external services for new app submissions. If true at scale, this raises the cost of low-effort AI app spam and makes submission packaging part of the build process.",
-          "url": "https://x.com/anulagarwal/status/2046092716153709039"
+          "title": "@GeminiApp: Interactive Visualizations in Chat",
+          "body": "Google Gemini can now turn questions into adjustable visualizations directly inside the conversation, including rotatable 3D views. It is a meaningful UX step because model output is becoming something you can inspect and manipulate, not just read.",
+          "url": "https://x.com/GeminiApp/status/2042272415951253932"
         },
         {
           "tag": "update",
-          "title": "@sagacity: Opus 4.7 Token Costs Bite",
-          "body": "The useful takeaway from this thread was not model drama, but economics: Opus 4.7's tokenizer change can inflate effective usage enough to make real-world costs feel materially higher even at unchanged list prices. Power users were already talking about downgrading models or tightening prompts to stay inside limits.",
-          "url": "https://x.com/sagacity/status/2046081131477688609"
+          "title": "@fcoury: Plan in One Session, Execute in Another",
+          "body": "Codex CLI 0.122.0 added a workflow where you plan a feature in one session, clear context, then execute in a fresh one. That is a small but high-leverage improvement for people who want deliberate planning without carrying stale context into the build step.",
+          "url": "https://x.com/fcoury/status/2046297561523478610"
         },
         {
           "tag": "hot",
-          "title": "@chuhaiqu: Claude Code as a Second Brain",
-          "body": "One standout workflow example fed years of work docs into Claude Code, then used lightweight profile files and hooks to pull the right long-term context back in before each task. The broader idea is more important than the exact stack: persistent context retrieval is starting to look like a serious productivity moat.",
-          "url": "https://x.com/chuhaiqu/status/2046171777399959801"
+          "title": "@embirico: Subagents and Long-Lived Threads",
+          "body": "This post highlighted a pattern that is becoming standard among heavy agent users: keep a thread alive, then spin up subagents in parallel when new work appears. The payoff is continuity plus burst capacity, instead of restarting from zero on every task.",
+          "url": "https://x.com/embirico/status/2046033614106931414"
         },
         {
           "tag": "hot",
-          "title": "@servasyy_ai: Cache Static Context First",
-          "body": "A thread on agent economics argued that one of the fastest cost wins is caching stable system and tool context instead of paying to resend it every turn. That's a good lens for any agent stack, because repeated context often burns more budget than the actual task.",
-          "url": "https://x.com/servasyy_ai/status/2046035525237383539"
+          "title": "@alin_zone: Use NotebookLM as a Context Layer",
+          "body": "A clever setup routes research material through NotebookLM so Claude only sees cited conclusions instead of every raw source. The practical takeaway is that externalizing retrieval and context storage can slash token spend while keeping research workflows usable.",
+          "url": "https://x.com/alin_zone/status/2046133743400976558"
         }
       ]
     },
@@ -49,22 +49,22 @@
       "title": "Markets & News",
       "items": [
         {
+          "tag": "hot",
+          "title": "@kimmonismus: Anthropic Locks In Massive AWS Compute",
+          "body": "The important part of this thread was not the hype number, but the strategic meaning: Anthropic appears to be securing enough AWS capacity to ease current serving pressure and support another growth wave. Compute access is hardening into a moat, not a background infrastructure detail.",
+          "url": "https://x.com/kimmonismus/status/2046328535573475779"
+        },
+        {
           "tag": "update",
-          "title": "@ChinaMacroFacts: ByteDance Margin Story Needs Nuance",
-          "body": "Follow-up commentary on ByteDance's reported profit drop argued the headline overstates the operational damage because accounting treatment, preferred shares, and options muddy the picture. The more actionable read is that AI investment is pressuring margins, but not wiping out the underlying growth story.",
-          "url": "https://x.com/ChinaMacroFacts/status/2046162751886696736"
+          "title": "@jukan05: CPUs May Be the Next AI Bottleneck",
+          "body": "Industry checks cited here suggest some next-generation deployments may run into CPU shortages before GPU shortages, because the supporting ratio around dense GPU clusters keeps rising. If that holds, the next AI hardware squeeze could hit an overlooked part of the supply chain.",
+          "url": "https://x.com/jukan05/status/2046122267743240505"
         },
         {
           "tag": "hot",
-          "title": "@wadezone: Nvidia Sells Flexibility, Not Just Compute",
-          "body": "This thread framed Nvidia's premium pricing as insurance against fast-changing model architectures, not just a markup on FLOPS. If the stack keeps moving between dense models, MoE, diffusion-style systems, and test-time compute, buyers will keep paying up for general-purpose hardware.",
-          "url": "https://x.com/wadezone/status/2046066323386765612"
-        },
-        {
-          "tag": "hot",
-          "title": "@TheGeorgePu: OpenAI Ad Hype Meets Market Reality",
-          "body": "A skeptical read on OpenAI's $102B ad-revenue projection pointed to rapidly falling CPMs and lower minimum spends as signals that demand may be softer than the headline implies. The smart thing to watch is pricing behavior, because ad markets usually reveal truth faster than product narratives do.",
-          "url": "https://x.com/TheGeorgePu/status/2045961155768615295"
+          "title": "@UnicornBitcoin: Aave Liquidity Stress Is the Real Risk",
+          "body": "This thread argued that several Aave markets were effectively jammed at full utilization, trapping some lenders and raising bad-debt contagion fears after earlier collateral problems. Even if the framing is dramatic, the actionable point is solid: in DeFi, liquidity plumbing breaks before narratives do.",
+          "url": "https://x.com/UnicornBitcoin/status/2046100496742834595"
         }
       ]
     },
@@ -75,20 +75,20 @@
         {
           "tag": "hot",
           "title": "@skywind3000: Review AI Code Before You Merge",
-          "body": "A concrete concurrency bug story made the case that passing tests is not enough to trust AI-written code, especially in multi-threaded or stateful paths. The practical takeaway is simple: keep human review in the loop for anything subtle, parallel, or hard to reproduce.",
+          "body": "A concurrency bug made it through tests and repeated model self-checks, then was caught only during human review. That is the exact class of failure that makes blind trust dangerous, especially in multi-threaded, stateful, or low-frequency code paths.",
           "url": "https://x.com/skywind3000/status/2046138108371157453"
         },
         {
           "tag": "hot",
-          "title": "@bearliu: Intent Design Is the New UX",
-          "body": "Drawing on Jakob Nielsen, this post argued AI products should focus less on shaving clicks and more on helping users clarify intent while preserving control. That feels directionally right for agents, because long-running delegated work fails less from UI friction than from fuzzy instructions and opaque decisions.",
+          "title": "@bearliu: Intent Design Beats Click Reduction",
+          "body": "Borrowing from Jakob Nielsen, this post argued that agent products should help users clarify intent and preserve control rather than merely reduce friction on screens. That feels directionally right, because delegation usually fails from vague instructions and opaque decisions, not from too many clicks.",
           "url": "https://x.com/bearliu/status/2046127982045954160"
         },
         {
-          "tag": "hot",
-          "title": "@aakashgupta: Read the Exemptions, Not the Headline",
-          "body": "A detailed battery-policy thread argued Apple quietly improved iPhone cycle-life targets early so it could qualify for an EU exemption and keep sealed designs. Useful reminder: with tech regulation, the thresholds and carve-outs often matter more than the headline rule itself.",
-          "url": "https://x.com/aakashgupta/status/2046098292472422785"
+          "tag": "update",
+          "title": "@txyyss: Turn Legacy Code into Modern Tools Fast",
+          "body": "One developer fed Codex an old Mathematica framework and got a working Blender plugin after a short analysis-and-build cycle. The useful pattern here is not the demo itself, but the way agent coding can translate niche personal codebases into new environments quickly.",
+          "url": "https://x.com/txyyss/status/2046094391883006363"
         }
       ]
     }
