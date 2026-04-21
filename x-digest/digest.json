@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Monday, April 20th, 2026",
+  "date": "Tuesday, April 21st, 2026",
   "summary": [
-    "The strongest theme in the batch was agent workflow maturity: people were optimizing around subagents, long-lived threads, fresh-session execution, and external context stores, not just raw model IQ.",
-    "Open model pressure kept rising, especially around Kimi K2.6, with the conversation shifting from benchmarks to practical advantages like long-horizon coding, cheaper inference, and broader distribution.",
-    "AI infrastructure looked like a capital and supply-chain story as much as a model story, with Anthropic’s massive AWS compute deal and growing concern that CPUs could become the next bottleneck after GPUs.",
-    "The sober counterweight was reliability: developers kept warning that AI-written code still needs human review, while product thinkers argued that agent UX should help users clarify intent and stay in control."
+    "OpenAI and Codex dominated the batch, with reports of a formal Codex sales push, new GPT-5.5 Pro and GPT-Image-2 availability, and rapid Codex usage growth tied to aggressive product updates.",
+    "The feed kept circling back to AI economics: token scarcity, subscription-to-metered pricing pressure, and compute abundance becoming a real competitive moat in the coding-assistant wars.",
+    "Enterprise software looks increasingly vulnerable as model vendors move up the stack, especially in BI, internal tools, and scheduled agent workflows with connectors, memory, and Slack integrations.",
+    "The most practical builder advice was operational: standardize AI coding workflows, deploy fast with Cloudflare, offload heavy research work to cheaper tools, and reduce cloud lock-in where possible."
   ],
   "sections": [
     {
@@ -13,82 +13,88 @@
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "hot",
+          "title": "@R2Cdev_: GPT-5.5 Pro and GPT-Image-2 Go Live",
+          "body": "A fast-moving launch note saying GPT-5.5 Pro and GPT-Image-2 are already available for Pro users. The signal is less the rumor itself than the pace of OpenAI’s current release cadence, which looks much more aggressive than a few weeks ago.",
+          "url": "https://x.com/R2Cdev_/status/2046559572513751316"
+        },
+        {
+          "tag": "update",
+          "title": "@LLMJunky: Codex 0.122 Adds Side Quests",
+          "body": "Codex 0.122 introduces side-thread workflows, fresh-context plan execution, default image generation, and better plugin marketplace behavior. This is a meaningful UX update for people running long coding sessions and trying to keep main-task context clean.",
+          "url": "https://x.com/LLMJunky/status/2046350440875364564"
+        },
+        {
           "tag": "new",
-          "title": "@Kimi_Moonshot: Kimi K2.6 Raises the Open-Model Bar",
-          "body": "Moonshot framed Kimi K2.6 as a long-horizon coding model with 4,000-plus tool calls, 12-hour runs, and much larger agent swarms. The bigger signal is that open models are now competing on endurance and orchestration, not just benchmark screenshots.",
-          "url": "https://x.com/Kimi_Moonshot/status/2046249571882500354"
+          "title": "@AYi_AInotes: LeCun Team’s JEPA Work Matters More Than the Hype",
+          "body": "A strong technical read argues the real takeaway from the latest JEPA paper is not that generative AI is dead, but that compact world models may become much better at physical reasoning. If true, it points toward agent stacks that pair small embodied models with large language interfaces rather than one giant model doing everything.",
+          "url": "https://x.com/AYi_AInotes/status/2046456965904146536"
         },
         {
-          "tag": "update",
-          "title": "@GeminiApp: Interactive Visualizations in Chat",
-          "body": "Google Gemini can now turn questions into adjustable visualizations directly inside the conversation, including rotatable 3D views. It is a meaningful UX step because model output is becoming something you can inspect and manipulate, not just read.",
-          "url": "https://x.com/GeminiApp/status/2042272415951253932"
-        },
-        {
-          "tag": "update",
-          "title": "@fcoury: Plan in One Session, Execute in Another",
-          "body": "Codex CLI 0.122.0 added a workflow where you plan a feature in one session, clear context, then execute in a fresh one. That is a small but high-leverage improvement for people who want deliberate planning without carrying stale context into the build step.",
-          "url": "https://x.com/fcoury/status/2046297561523478610"
-        },
-        {
-          "tag": "hot",
-          "title": "@embirico: Subagents and Long-Lived Threads",
-          "body": "This post highlighted a pattern that is becoming standard among heavy agent users: keep a thread alive, then spin up subagents in parallel when new work appears. The payoff is continuity plus burst capacity, instead of restarting from zero on every task.",
-          "url": "https://x.com/embirico/status/2046033614106931414"
-        },
-        {
-          "tag": "hot",
-          "title": "@alin_zone: Use NotebookLM as a Context Layer",
-          "body": "A clever setup routes research material through NotebookLM so Claude only sees cited conclusions instead of every raw source. The practical takeaway is that externalizing retrieval and context storage can slash token spend while keeping research workflows usable.",
-          "url": "https://x.com/alin_zone/status/2046133743400976558"
+          "tag": "new",
+          "title": "@OpenAIDevs: Euphony for Browsing Codex Logs",
+          "body": "OpenAI released an open-source tool for visualizing chat data and Codex session logs, with filtering, translation, and editing support. It looks useful for anyone auditing agent runs or trying to make sense of long terminal-based workflows after the fact.",
+          "url": "https://x.com/OpenAIDevs/status/2046620363568890230"
         }
       ]
     },
     {
-      "emoji": "📈",
+      "emoji": "💹",
       "title": "Markets & News",
       "items": [
         {
           "tag": "hot",
-          "title": "@kimmonismus: Anthropic Locks In Massive AWS Compute",
-          "body": "The important part of this thread was not the hype number, but the strategic meaning: Anthropic appears to be securing enough AWS capacity to ease current serving pressure and support another growth wave. Compute access is hardening into a moat, not a background infrastructure detail.",
-          "url": "https://x.com/kimmonismus/status/2046328535573475779"
+          "title": "@FirstSquawk: WSJ Says OpenAI Is Selling Codex",
+          "body": "The headline claim is that OpenAI is working with consultants to sell Codex, which would mark a more explicit enterprise go-to-market motion around coding agents. If that holds, Codex is shifting from a product feature into a serious sales-led business line.",
+          "url": "https://x.com/FirstSquawk/status/2046552508051628432"
         },
         {
           "tag": "update",
-          "title": "@jukan05: CPUs May Be the Next AI Bottleneck",
-          "body": "Industry checks cited here suggest some next-generation deployments may run into CPU shortages before GPU shortages, because the supporting ratio around dense GPU clusters keeps rising. If that holds, the next AI hardware squeeze could hit an overlooked part of the supply chain.",
-          "url": "https://x.com/jukan05/status/2046122267743240505"
+          "title": "@aakashgupta: Rate-Limit Resets Signal a Compute Moat",
+          "body": "The useful insight here is strategic: OpenAI resetting Codex limits may be less generosity than customer acquisition, because spare compute can be converted directly into share gains against Anthropic. It is one of the cleaner explanations in the feed for why infra scale is starting to matter as much as raw model quality.",
+          "url": "https://x.com/aakashgupta/status/2046614703288578555"
         },
         {
           "tag": "hot",
-          "title": "@UnicornBitcoin: Aave Liquidity Stress Is the Real Risk",
-          "body": "This thread argued that several Aave markets were effectively jammed at full utilization, trapping some lenders and raising bad-debt contagion fears after earlier collateral problems. Even if the framing is dramatic, the actionable point is solid: in DeFi, liquidity plumbing breaks before narratives do.",
-          "url": "https://x.com/UnicornBitcoin/status/2046100496742834595"
+          "title": "@PMbackttfuture: Flat-Rate Coding Plans May Be Breaking",
+          "body": "This post argues that all-you-can-eat coding plans are economically unsustainable and that token prices will keep rising. Even if the framing is dramatic, it matches the broader theme in the feed: AI coding is moving from giveaway-era pricing toward tighter metering and more explicit cost control.",
+          "url": "https://x.com/PMbackttfuture/status/2046500619813552450"
+        },
+        {
+          "tag": "new",
+          "title": "@AYi_AInotes: Claude’s BI Push Threatens Seat-Based SaaS",
+          "body": "The core argument is that once models can generate dashboards, refresh data, and plug into business systems directly, a lot of mid-layer BI tooling becomes vulnerable. The actionable read is not that Tableau-class products disappear overnight, but that teams should re-check which paid seats still earn their keep.",
+          "url": "https://x.com/AYi_AInotes/status/2046451720952180911"
         }
       ]
     },
     {
-      "emoji": "💡",
+      "emoji": "🧠",
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@skywind3000: Review AI Code Before You Merge",
-          "body": "A concurrency bug made it through tests and repeated model self-checks, then was caught only during human review. That is the exact class of failure that makes blind trust dangerous, especially in multi-threaded, stateful, or low-frequency code paths.",
-          "url": "https://x.com/skywind3000/status/2046138108371157453"
-        },
-        {
-          "tag": "hot",
-          "title": "@bearliu: Intent Design Beats Click Reduction",
-          "body": "Borrowing from Jakob Nielsen, this post argued that agent products should help users clarify intent and preserve control rather than merely reduce friction on screens. That feels directionally right, because delegation usually fails from vague instructions and opaque decisions, not from too many clicks.",
-          "url": "https://x.com/bearliu/status/2046127982045954160"
+          "tag": "new",
+          "title": "@KengGuangLong: Agent Skills as a Standard Workflow Layer",
+          "body": "This highlights Google’s Agent Skills project, which packages senior-engineering workflows into reusable commands like spec, plan, build, test, and ship. The useful part is the framing: quality gains may come less from a better base model and more from better process scaffolding around the same model.",
+          "url": "https://x.com/KengGuangLong/status/2046454424806343139"
         },
         {
           "tag": "update",
-          "title": "@txyyss: Turn Legacy Code into Modern Tools Fast",
-          "body": "One developer fed Codex an old Mathematica framework and got a working Blender plugin after a short analysis-and-build cycle. The useful pattern here is not the demo itself, but the way agent coding can translate niche personal codebases into new environments quickly.",
-          "url": "https://x.com/txyyss/status/2046094391883006363"
+          "title": "@tychozzz: Cloudflare Is the Easy Path From Vibe Code to Live Site",
+          "body": "A pragmatic deployment recommendation: use GitHub plus Cloudflare to get AI-built projects online without becoming your own ops team. For small products and experiments, the argument is that zero-to-live speed matters more than owning every infrastructure detail from day one.",
+          "url": "https://x.com/tychozzz/status/2046464610052817325"
+        },
+        {
+          "tag": "new",
+          "title": "@aehyok: Use NotebookLM to Offload Heavy Reading",
+          "body": "A clever workflow tip: route large-paper or filing analysis through NotebookLM from within a coding-agent setup so you do not burn premium model context on raw ingestion. That kind of tool-routing is becoming an important skill as token costs rise.",
+          "url": "https://x.com/aehyok/status/2046410878296498597"
+        },
+        {
+          "tag": "update",
+          "title": "@CoderDaMing: Syncthing Over Cloud Storage",
+          "body": "A reminder that if you care about privacy and recurring SaaS creep, peer-to-peer sync is still a viable default for many personal workflows. Syncthing is not new, but the post is a good nudge to reconsider whether every file needs to live on someone else’s server.",
+          "url": "https://x.com/CoderDaMing/status/2046423184057241781"
         }
       ]
     }
