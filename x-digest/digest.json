@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Tuesday, April 21st, 2026",
+  "date": "Wednesday, April 22nd, 2026",
   "summary": [
-    "OpenAI and Codex dominated the batch, with reports of a formal Codex sales push, new GPT-5.5 Pro and GPT-Image-2 availability, and rapid Codex usage growth tied to aggressive product updates.",
-    "The feed kept circling back to AI economics: token scarcity, subscription-to-metered pricing pressure, and compute abundance becoming a real competitive moat in the coding-assistant wars.",
-    "Enterprise software looks increasingly vulnerable as model vendors move up the stack, especially in BI, internal tools, and scheduled agent workflows with connectors, memory, and Slack integrations.",
-    "The most practical builder advice was operational: standardize AI coding workflows, deploy fast with Cloudflare, offload heavy research work to cheaper tools, and reduce cloud lock-in where possible."
+    "AI workflow conversation kept moving up the stack: the biggest practical wins in this batch were reusable agent skills, cheap/free model access, and better prompt patterns rather than one single frontier-model drop.",
+    "Model economics were a major theme. Several posts argued that price/perf gaps are compressing, while inference-heavy agent workloads are making bandwidth, SRAM, and GPU access the real bottlenecks.",
+    "The strongest business signal was distribution pressure: Nvidia, Google, and the coding-tool vendors all seem willing to subsidize usage or package workflow scaffolding to capture developer habits early.",
+    "Outside pure AI, the most useful posts were about execution discipline and real-world friction: Tim Cook-style operational rigor, the rising value of human QA/localization, and the still-scary cost of U.S. healthcare for travelers."
   ],
   "sections": [
     {
@@ -14,27 +14,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@R2Cdev_: GPT-5.5 Pro and GPT-Image-2 Go Live",
-          "body": "A fast-moving launch note saying GPT-5.5 Pro and GPT-Image-2 are already available for Pro users. The signal is less the rumor itself than the pace of OpenAI’s current release cadence, which looks much more aggressive than a few weeks ago.",
-          "url": "https://x.com/R2Cdev_/status/2046559572513751316"
+          "title": "@dhruvtwt_: Nvidia’s Free Hosted Model APIs",
+          "body": "This post says Nvidia is exposing roughly 80 hosted AI models for free and that the endpoint already plugs into tools like Cursor, Zed, and agent frameworks. If true at the advertised scale, it is a genuinely useful prototyping shortcut and another sign that distribution is becoming as important as model quality.",
+          "url": "https://x.com/dhruvtwt_/status/2047006444701274380"
+        },
+        {
+          "tag": "new",
+          "title": "@KengGuangLong: Agent Skills for Coding Workflows",
+          "body": "A widely shared thread highlights Addy Osmani’s open-source Agent Skills project, which packages seasoned engineering workflows into slash-style commands like /spec, /plan, /build, /test, and /ship. The important idea is not the commands themselves but the attempt to standardize good developer habits across Codex, Claude Code, Cursor, and Gemini CLI.",
+          "url": "https://x.com/KengGuangLong/status/2046454424806343139"
         },
         {
           "tag": "update",
-          "title": "@LLMJunky: Codex 0.122 Adds Side Quests",
-          "body": "Codex 0.122 introduces side-thread workflows, fresh-context plan execution, default image generation, and better plugin marketplace behavior. This is a meaningful UX update for people running long coding sessions and trying to keep main-task context clean.",
-          "url": "https://x.com/LLMJunky/status/2046350440875364564"
+          "title": "@LinQingV: Inference Chips Are Becoming SRAM Stories",
+          "body": "This is one of the best deep-commentary posts in the batch: it argues that agentic AI is exploding decode-heavy inference demand, so chip designers are cramming in more SRAM to escape bandwidth limits. The investment implication is that inference economics may hinge less on raw model headlines and more on memory architecture, yield, and foundry capacity.",
+          "url": "https://x.com/LinQingV/status/2046984318271328573"
+        },
+        {
+          "tag": "update",
+          "title": "@ohxiyu: Cheap Local Models Are Losing Their Pricing Edge",
+          "body": "This thread argues that some domestic model vendors keep raising prices faster than they improve quality, eroding the old rationale of tolerating weaker output because it was dramatically cheaper. The takeaway for buyers is simple: once price gaps shrink, model selection snaps back to reliability and workflow fit.",
+          "url": "https://x.com/ohxiyu/status/2046784066184466888"
         },
         {
           "tag": "new",
-          "title": "@AYi_AInotes: LeCun Team’s JEPA Work Matters More Than the Hype",
-          "body": "A strong technical read argues the real takeaway from the latest JEPA paper is not that generative AI is dead, but that compact world models may become much better at physical reasoning. If true, it points toward agent stacks that pair small embodied models with large language interfaces rather than one giant model doing everything.",
-          "url": "https://x.com/AYi_AInotes/status/2046456965904146536"
-        },
-        {
-          "tag": "new",
-          "title": "@OpenAIDevs: Euphony for Browsing Codex Logs",
-          "body": "OpenAI released an open-source tool for visualizing chat data and Codex session logs, with filtering, translation, and editing support. It looks useful for anyone auditing agent runs or trying to make sense of long terminal-based workflows after the fact.",
-          "url": "https://x.com/OpenAIDevs/status/2046620363568890230"
+          "title": "@threeaus: Amanda Askell’s Allegory Prompt",
+          "body": "A concise workflow tip worth stealing: ask a model to teach a graduate-level concept indirectly through a fable, then explain the concept plainly at the end. It is a clever way to force depth without getting the usual dry, textbook-shaped answer.",
+          "url": "https://x.com/threeaus/status/2046916469578158576"
         }
       ]
     },
@@ -44,27 +50,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FirstSquawk: WSJ Says OpenAI Is Selling Codex",
-          "body": "The headline claim is that OpenAI is working with consultants to sell Codex, which would mark a more explicit enterprise go-to-market motion around coding agents. If that holds, Codex is shifting from a product feature into a serious sales-led business line.",
-          "url": "https://x.com/FirstSquawk/status/2046552508051628432"
+          "title": "@KKaWSB: SpaceX Filing Shows a Moonshot Pay Package",
+          "body": "This post spotlights the reported SpaceX IPO filing detail that Elon Musk can earn 60 million extra shares if the company reaches a $6.6 trillion valuation and hits related milestones. Even by Musk standards, it is a striking compensation structure and a reminder of how concentrated control and upside remain inside private mega-tech companies.",
+          "url": "https://x.com/KKaWSB/status/2046732551881117921"
         },
         {
           "tag": "update",
-          "title": "@aakashgupta: Rate-Limit Resets Signal a Compute Moat",
-          "body": "The useful insight here is strategic: OpenAI resetting Codex limits may be less generosity than customer acquisition, because spare compute can be converted directly into share gains against Anthropic. It is one of the cleaner explanations in the feed for why infra scale is starting to matter as much as raw model quality.",
-          "url": "https://x.com/aakashgupta/status/2046614703288578555"
-        },
-        {
-          "tag": "hot",
-          "title": "@PMbackttfuture: Flat-Rate Coding Plans May Be Breaking",
-          "body": "This post argues that all-you-can-eat coding plans are economically unsustainable and that token prices will keep rising. Even if the framing is dramatic, it matches the broader theme in the feed: AI coding is moving from giveaway-era pricing toward tighter metering and more explicit cost control.",
-          "url": "https://x.com/PMbackttfuture/status/2046500619813552450"
+          "title": "@axios: Healthcare-Cost Reform Finally Has Momentum",
+          "body": "Axios frames Washington as finally taking rising healthcare costs seriously, while warning that every serious reform effort runs straight into politically powerful incumbents. For investors and operators, the useful signal is that cost pressure is no longer a niche policy topic even if actual reform still looks messy.",
+          "url": "https://x.com/axios/status/2045179193743257757"
         },
         {
           "tag": "new",
-          "title": "@AYi_AInotes: Claude’s BI Push Threatens Seat-Based SaaS",
-          "body": "The core argument is that once models can generate dashboards, refresh data, and plug into business systems directly, a lot of mid-layer BI tooling becomes vulnerable. The actionable read is not that Tableau-class products disappear overnight, but that teams should re-check which paid seats still earn their keep.",
-          "url": "https://x.com/AYi_AInotes/status/2046451720952180911"
+          "title": "@Royinthecar: AI Is Raising the Value of Human Localization QA",
+          "body": "This labor-market thread argues that AI translation is not killing premium language work so much as shifting it toward QA, compliance, and culture-sensitive review. That is a meaningful business read for cross-border companies: the last 10% of localization is where brand risk and regulatory risk still concentrate.",
+          "url": "https://x.com/Royinthecar/status/2046916240434938294"
         }
       ]
     },
@@ -73,28 +73,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@KengGuangLong: Agent Skills as a Standard Workflow Layer",
-          "body": "This highlights Google’s Agent Skills project, which packages senior-engineering workflows into reusable commands like spec, plan, build, test, and ship. The useful part is the framing: quality gains may come less from a better base model and more from better process scaffolding around the same model.",
-          "url": "https://x.com/KengGuangLong/status/2046454424806343139"
-        },
-        {
           "tag": "update",
-          "title": "@tychozzz: Cloudflare Is the Easy Path From Vibe Code to Live Site",
-          "body": "A pragmatic deployment recommendation: use GitHub plus Cloudflare to get AI-built projects online without becoming your own ops team. For small products and experiments, the argument is that zero-to-live speed matters more than owning every infrastructure detail from day one.",
-          "url": "https://x.com/tychozzz/status/2046464610052817325"
+          "title": "@safaricheung: Tim Cook’s Operating System Was Detail",
+          "body": "Pulled from Patrick McGee’s Apple reporting, this thread is basically a case study in Cook’s style: brutal preparation, exact numbers, and review cadences that force accountability. The broader lesson is that elite execution often looks less glamorous than vision and much more like relentless operational follow-through.",
+          "url": "https://x.com/safaricheung/status/2046567826207682894"
         },
         {
           "tag": "new",
-          "title": "@aehyok: Use NotebookLM to Offload Heavy Reading",
-          "body": "A clever workflow tip: route large-paper or filing analysis through NotebookLM from within a coding-agent setup so you do not burn premium model context on raw ingestion. That kind of tool-routing is becoming an important skill as token costs rise.",
-          "url": "https://x.com/aehyok/status/2046410878296498597"
+          "title": "@grapeot: GPT-Image-2 Changes Workflow More Than Job Titles",
+          "body": "A thoughtful post argues that the real question is not whether AI replaces designers outright, but which parts of the design handoff loop get cheaper or faster when image generation improves. That is a more useful lens than the usual replacement discourse because it focuses on process bottlenecks instead of headline anxiety.",
+          "url": "https://x.com/grapeot/status/2046773239758897364"
+        },
+        {
+          "tag": "hot",
+          "title": "@eurofounder: Check Your U.S. Medical Coverage Before Traveling",
+          "body": "This viral thread about a medical emergency in New York is dramatic, but the underlying point is practical: fear of U.S. hospital bills can shape decisions immediately in a crisis. If you travel often, it is a good reminder to check coverage and emergency options before you need them.",
+          "url": "https://x.com/eurofounder/status/2046875404628119976"
         },
         {
           "tag": "update",
-          "title": "@CoderDaMing: Syncthing Over Cloud Storage",
-          "body": "A reminder that if you care about privacy and recurring SaaS creep, peer-to-peer sync is still a viable default for many personal workflows. Syncthing is not new, but the post is a good nudge to reconsider whether every file needs to live on someone else’s server.",
-          "url": "https://x.com/CoderDaMing/status/2046423184057241781"
+          "title": "@anorth_chen: The Market Forgives Bugs Faster Than Staleness",
+          "body": "This post makes a sharp product point for the AI era: users will tolerate some messiness, but they will not reward a product that already feels outdated. The operational implication is to bias harder toward shipping relevant things now, even if the codebase is less elegant than old engineering instincts would prefer.",
+          "url": "https://x.com/anorth_chen/status/2046874106122182679"
         }
       ]
     }
