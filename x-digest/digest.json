@@ -1,13 +1,14 @@
 {
   "title": "X Feed Digest",
-  "date": "Thursday, April 23rd, 2026",
+  "date": "Friday, April 24th, 2026",
+  "summary_title": "High Signal Summary",
   "summary": [
     {
-      "html": "<strong>Practical agent design beat swarm hype:</strong> the strongest posts converged on single-writer systems, reviewer loops, and bounded automation around Claude, Codex, and Copilot."
+      "html": "<strong>DeepSeek V4 completely dominated this batch</strong>: the big story was not just a new open model, but 1M context becoming a default product feature, paired with aggressive cost/performance claims and a lot of debate about how much real frontier gap remains."
     },
-    "AI is moving from chat windows into operating surfaces: Office documents, clinician workflows, and even machine provisioning were all framed as places where the model should act inside the workspace, not just answer questions beside it.",
-    "Compute and economics were the real constraint story in this batch. Posts about SRAM, packaging, HBM capacity, pricing workarounds, and model-access friction felt more actionable than benchmark chest-thumping.",
-    "The organizational bottleneck is still human: multiple posts argued that AI rollouts fail on incentives, review burden, and governance long before they fail on raw model capability."
+    "GPT-5.5 and Codex were the second major thread, but the most interesting discussion was about workflow fit rather than raw benchmarks: users highlighted better multi-file debugging, while others pushed back on price, reliability, and suspicious benchmark swings.",
+    "The most useful workflow posts were infrastructure-level: Claude Desktop can now be pointed at third-party inference, Google-style DESIGN.md files are becoming agent-readable interface contracts, and local-first AI tools are getting much better.",
+    "Markets-wise, compute is still the choke point. DeepSeek explicitly flagged capacity limits on Pro, Intel earnings were read as evidence that AI inference is lifting CPU demand, and Chegg remained the cleanest example of an AI-vulnerable consumer information business getting wiped out."
   ],
   "sections": [
     {
@@ -16,33 +17,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@walden_yan: Single-Writer Multi-Agent Systems",
-          "body": "Cognition's new post was the cleanest anti-hype take in the batch: multi-agent coding works when only one agent writes while reviewers, managers, or “smart friends” contribute intelligence around it. The notable detail is that fresh-context review agents reportedly outperform shared-context setups, which is a useful design rule for anyone building agent loops.",
-          "url": "https://x.com/walden_yan/status/2047054401341370639"
-        },
-        {
-          "tag": "new",
-          "title": "@lidangzzz: Headless Claude Code as the Default Stack",
-          "body": "A blunt but practical workflow recipe: stop hand-rolling fragile agent frameworks for ordinary tasks and instead feed a temporary working folder into Claude Code headless mode, then treat its JSON or log output as the interface. The broader lesson is to bias toward boring orchestration around a strong model rather than overengineering your own control plane.",
-          "url": "https://x.com/lidangzzz/status/2047247649456152790"
-        },
-        {
-          "tag": "hot",
-          "title": "@satyanadella: Copilot Agent Mode Goes Default",
-          "body": "Microsoft is making agent mode the default experience in Word, Excel, and PowerPoint, which matters because it shifts Copilot from chatty assistant to in-document operator. The key product signal is that the agent now acts on the canvas itself while still exposing preview and rollback controls.",
-          "url": "https://x.com/satyanadella/status/2047105085172511013"
+          "title": "@deepseek_ai: DeepSeek-V4 Preview Goes Live",
+          "body": "DeepSeek officially launched and open-sourced V4, splitting the lineup into a stronger Pro model and a cheaper Flash tier while making 1M context a default service-level feature. The high-signal takeaway is that long-context, agent-friendly capability is being productized as a baseline rather than sold as a luxury add-on.",
+          "url": "https://x.com/deepseek_ai/status/2047516922263285776"
         },
         {
           "tag": "update",
-          "title": "@cccchuizi: Claude Desktop Third-Party Inference Hook",
-          "body": "One widely shared tip says Claude Desktop can be pointed at third-party inference endpoints via developer mode, letting users swap in a custom base URL and API key. Even if niche, it is a meaningful workflow and cost hack because it turns the desktop client into a more flexible front end.",
+          "title": "@haider1: GPT-5.5 Codex Handles Messy Production Logic",
+          "body": "One of the sharper hands-on tests in the batch said GPT-5.5 could trace a tangled payment workflow across multiple files, fix the leak points, and avoid introducing new breakage. That matters more than leaderboard talk because it speaks directly to whether the model can survive real engineering mess.",
+          "url": "https://x.com/haider1/status/2047578803795345716"
+        },
+        {
+          "tag": "update",
+          "title": "@cccchuizi: Claude Desktop Accepts Third-Party Inference",
+          "body": "A practical tip spreading through the feed showed that Claude Desktop can be configured in developer mode to hit a custom base URL with your own API key. In plain terms, the desktop app can now double as a front end for alternate Claude-compatible backends instead of only burning Anthropic subscription quota.",
           "url": "https://x.com/cccchuizi/status/2047181650996678820"
         },
         {
-          "tag": "update",
-          "title": "@DimitrisPapail: CLI Model Gaps Keep Compressing",
-          "body": "This was one of the better practitioner checkpoints in the batch: Codex CLI impressed on first use, GPT-5.4 felt much less “ChatGPT-shaped,” and Opus 4.7 reportedly fixed much of 4.6's long-context decay. The useful read is that model taste still matters in chat, but in CLI workflows speed and reliability are compressing the gap.",
-          "url": "https://x.com/DimitrisPapail/status/2047009283389149285"
+          "tag": "new",
+          "title": "@grapeot: DESIGN.md Is Becoming An Agent Contract",
+          "body": "A useful post argued that Google-style DESIGN.md files are less about designers and more about giving AI agents a structured, lintable description of a product system. The real idea is to treat design guidance like AGENTS.md for UI work so humans and agents can share the same interface rules.",
+          "url": "https://x.com/grapeot/status/2047351048822784419"
+        },
+        {
+          "tag": "new",
+          "title": "@laogui: Tolaria Is A Local-First AI Notes App",
+          "body": "Tolaria stood out as one of the more genuinely useful new tools in the feed: a lightweight macOS notes app built on local Markdown, Git-native history, and direct Claude Code or Codex integration. It looks like a credible attempt to make AI-native personal knowledge work feel fast and native instead of heavy and cloud-bound.",
+          "url": "https://x.com/laogui/status/2047314453402984525"
         }
       ]
     },
@@ -52,27 +53,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@gdb: ChatGPT for Clinicians",
-          "body": "Greg Brockman announced ChatGPT for Clinicians plus HealthBench, pushing OpenAI further into real medical workflows rather than consumer novelty. The strategic importance is distribution: if doctors adopt it for admin and research tasks, OpenAI gains habit, trust, and a benchmark it helped define.",
-          "url": "https://x.com/gdb/status/2047145125604995280"
+          "title": "@chenreason: Intel Earnings Read As An AI CPU Signal",
+          "body": "A widely shared read on Intel's quarter highlighted a large EPS and gross-margin beat, with the bullish interpretation centering on AI inference workloads pulling through more CPU demand alongside GPUs. The post also noted the cleaner caveat: foundry losses and one-off charges still matter, so the market is pricing the forward AI demand story more than a fully healed business today.",
+          "url": "https://x.com/chenreason/status/2047448770439438815"
         },
         {
           "tag": "update",
-          "title": "@LinQingV: SRAM Becomes the Inference Bottleneck",
-          "body": "This was the strongest hardware post in the batch: as agentic inference explodes, chip designers are stuffing more SRAM onto inference parts to escape memory-bandwidth limits. The investment takeaway is that TSMC node capacity, packaging, and memory architecture may matter more than another round of model leaderboard churn.",
-          "url": "https://x.com/LinQingV/status/2046984318271328573"
+          "title": "@jukan05: DeepSeek Says Pro Capacity Is Constrained",
+          "body": "One of the most important footnotes around V4 was DeepSeek's warning that Pro capacity is currently limited by access to high-end compute, with meaningful price cuts expected only after more supernodes come online later this year. That is a strong reminder that the real bottleneck in AI is still infrastructure, not just model science.",
+          "url": "https://x.com/jukan05/status/2047516566149816627"
+        },
+        {
+          "tag": "update",
+          "title": "@tychozzz: Mag 7 Enter Earnings With Expectations Reset",
+          "body": "A solid market thread argued that large-cap tech has looked surprisingly soft even as the broader market stays near highs, leaving next week's earnings as the obvious catalyst. The actionable framing was simple: lower expectations can create upside if results are merely good, but it is a setup to manage rather than chase.",
+          "url": "https://x.com/tychozzz/status/2047502596546707465"
         },
         {
           "tag": "new",
-          "title": "@darrencao2024: Micron as an HBM Levered Bet",
-          "body": "This bullish Micron thread ties the stock's move to bank upgrades and to the harder-to-ignore fact that 2026 HBM capacity is already sold through. Even if you discount the target-price optimism, the core point is solid: AI's picks-and-shovels winners are increasingly memory and packaging names, not just model vendors.",
-          "url": "https://x.com/darrencao2024/status/2046965949572800794"
-        },
-        {
-          "tag": "update",
-          "title": "@raysp500: SpaceX IPO, Public Capital Without Control",
-          "body": "A concise take on the reported SpaceX filing: Musk would keep outsized voting control through dual-class shares even after listing. For retail investors, that makes the trade less about governance upside and more about whether you are comfortable owning a tightly controlled Musk vehicle.",
-          "url": "https://x.com/raysp500/status/2046992820867932524"
+          "title": "@mubeitech: Chegg Becomes A Brutal AI Disruption Case",
+          "body": "Chegg's collapse was framed as the first clean example of a listed company being functionally zeroed out by generative AI, with homework help replaced by free and instant model output. Even if the rhetoric is sharp, the strategic lesson is real: consumer businesses built on thin information asymmetries are very exposed when general-purpose models get good enough.",
+          "url": "https://x.com/mubeitech/status/2047433027576291691"
         }
       ]
     },
@@ -82,27 +83,27 @@
       "items": [
         {
           "tag": "update",
-          "title": "@anorth_chen: AI Rollouts Fail on Incentives",
-          "body": "This thread argues that many internal AI transformation efforts stall because workers do not trust that higher output will translate into higher reward or autonomy. The useful management read is that deployment problems are often compensation and org-design problems disguised as tooling problems.",
-          "url": "https://x.com/anorth_chen/status/2047226768625701165"
-        },
-        {
-          "tag": "hot",
-          "title": "@ebenezerDN: The Phantom Savings of Replacing Juniors",
-          "body": "A sharp cautionary story: cutting a junior developer for an AI tool can look efficient on paper while silently shifting review, debugging, and documentation costs onto expensive senior staff. Whether or not you buy the exact numbers, the structural warning is real.",
-          "url": "https://x.com/ebenezerDN/status/2046953121461551220"
+          "title": "@chenchengpro: Anthropic's Speed Comes From Product Structure",
+          "body": "A strong recap of Cat Wu's podcast explained that Claude Code's pace is driven less by magic and more by a system of low-approval launches, research-preview defaults, and constant removal of outdated prompt scaffolding as models improve. The useful operating idea is to prototype ahead of the models and let product judgment shift from process control toward taste and timing.",
+          "url": "https://x.com/chenchengpro/status/2047480549636472832"
         },
         {
           "tag": "new",
-          "title": "@threeaus: Ask for an Allegory, Not a Lecture",
-          "body": "Amanda Askell's prompt pattern was one of the nicest immediately usable tips in the feed: ask the model to teach a graduate-level concept through a fable, then reveal and explain it at the end. It is a clever way to force richer explanations and avoid the usual flat textbook tone.",
-          "url": "https://x.com/threeaus/status/2046916469578158576"
+          "title": "@jakevin7: DeepSeek V4's Agent Training Ideas Are Worth Studying",
+          "body": "One of the best technical threads in the batch unpacked how V4 appears to build agent skill through domain-specific expert training, custom tool-call schemas, interleaved reasoning, and on-policy distillation into a unified model. Even if you never use DeepSeek directly, it is a useful map of where serious agent-training design is heading.",
+          "url": "https://x.com/jakevin7/status/2047578619946664413"
         },
         {
           "tag": "update",
-          "title": "@sitinme: AI-Run Machine Provisioning",
-          "body": "A concrete “humans set bounds, agents do the toil” example: this setup story claims just five minutes of manual bootstrap, then Claude Code handled installs, model pulls, logs, and commits until it reached the tasks that truly required a person. As a workflow pattern, it is much more interesting than the specific hardware.",
-          "url": "https://x.com/sitinme/status/2047200009406619879"
+          "title": "@wquguru: Route Models By Task Instead Of Picking One Winner",
+          "body": "A practical architecture take argued that V4's real impact is to make tiered model routing more attractive: cheap models for high-volume agent loops, pricier ones for critical reasoning steps, and frontier models reserved for genuine choke points. That is a more mature operating model than treating one flagship model as the answer to every workload.",
+          "url": "https://x.com/wquguru/status/2047532107338252455"
+        },
+        {
+          "tag": "update",
+          "title": "@0xEvieYang: The Last 20% Of Product Quality Still Hurts",
+          "body": "A concise but accurate product lesson in the feed: vibe coding can get you a decent demo in a few hours, but closing the gap from promising prototype to real product still takes far more time, judgment, and data. It is a good reminder that AI compresses the first mile much more than the last mile.",
+          "url": "https://x.com/0xEvieYang/status/2047390229821354117"
         }
       ]
     }
