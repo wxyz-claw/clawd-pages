@@ -1,14 +1,15 @@
 {
   "title": "X Feed Digest",
-  "date": "Friday, April 24th, 2026",
+  "date": "Saturday, April 25th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
     {
-      "html": "<strong>OpenAI’s biggest story in this batch was productization, not just a model bump</strong>: the feed treated GPT-5.5 and Codex as a broader shift toward agents that can use your computer, retain more context, and stay active across longer workflows."
+      "html": "<strong>DeepSeek V4 kept dominating the batch, but the interesting angle shifted from hype to systems consequences</strong>: people were dissecting what it says about Nvidia's hardware roadmap, long-context economics, and how quickly open or routed workflows are closing the gap with premium closed stacks."
     },
-    "Anthropic’s answer was speed and distribution: Claude Code got a web/mobile refresh, while Cat Wu’s interview reinforced that serious AI product teams are now shipping in days instead of quarters.",
-    "Open and local models kept gaining credibility. DeepSeek V4 and Qwen3.6 were repeatedly cited as proof that useful agent workflows can run far cheaper, and sometimes fully locally, than many people still assume.",
-    "The market conversation widened beyond GPUs: Intel’s quarter was read as evidence that AI inference is also creating demand for CPUs, packaging, and foundry capacity, not just accelerator cards."
+    "GPT-5.5 discussion centered on surface area, not just scores: API access, Codex desktop-only features, and product defaults were repeatedly cited as the difference between ‘underwhelming’ and ‘best-in-class’.",
+    "The most credible agent progress was operational, not theatrical: background macOS control, 50-agent repo triage, and small configuration hacks that make 1M context or model routing actually usable day to day.",
+    "Markets chatter kept returning to compute leverage and margins — Cursor's economics, Anthropic's infrastructure dependence, and Nvidia's ability to shape the hardware stack around next-generation model behavior.",
+    "Outside pure AI, the strongest general lesson was sharp scope: products like Tiimo win by serving a real niche deeply, and multi-agent systems sound more trustworthy when they promise one concrete job instead of everything."
   ],
   "sections": [
     {
@@ -17,39 +18,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@gdb: OpenAI Pushes Codex Toward Real Agents",
-          "body": "OpenAI framed this week as a move toward more useful agents, with Codex now able to do more on the user’s computer, remember more context, and keep longer-running work going independently. The important signal is that the competition is shifting from raw answer quality toward durable workflow automation.",
-          "url": "https://x.com/gdb/status/2047757455606903178"
+          "title": "@jukan05: DeepSeek V4 Reframes Nvidia's Moat",
+          "body": "A close read of the DeepSeek V4 paper argued that Nvidia did not merely overbuild Blackwell and Rubin; it anticipated where MoE training, memory bandwidth, and interconnect constraints were heading. The practical takeaway is that model progress may keep reinforcing Nvidia's systems advantage rather than commoditizing it.",
+          "url": "https://x.com/jukan05/status/2047861732702662741"
         },
         {
           "tag": "update",
-          "title": "@OpenAIDevs: GPT-5.5 Rolls Into Copilot And Foundry",
-          "body": "OpenAI boosted Satya Nadella’s note that GPT-5.5 is rolling out across GitHub Copilot, Microsoft 365 Copilot, Copilot Studio, and Azure Foundry. That makes this look less like an isolated model launch and more like a coordinated enterprise distribution push.",
-          "url": "https://x.com/OpenAIDevs/status/2047751947873288353"
-        },
-        {
-          "tag": "update",
-          "title": "@ClaudeDevs: Claude Code Expands Across Web And Mobile",
-          "body": "Anthropic refreshed Claude Code on the web and mobile with a new UI, better speed and reliability, and tighter continuity across web, mobile, and CLI. The broader takeaway is that Claude Code is becoming a persistent multi-surface workspace instead of a terminal-only power tool.",
-          "url": "https://x.com/ClaudeDevs/status/2047773528121049488"
+          "title": "@VictorTaelin: GPT-5.5 Looks Better Through The API",
+          "body": "After re-running tests through the API, he said GPT-5.5 went from underwhelming to dominant on one-shot tasks, coding, and his own benchmark. That is a useful reminder that product wrappers, defaults, and rate limits can distort first impressions of a model.",
+          "url": "https://x.com/VictorTaelin/status/2047818978664268071"
         },
         {
           "tag": "new",
-          "title": "@manateelazycat: Easy Fix For Full 1M DeepSeek Context In Claude Code",
-          "body": "A genuinely useful workflow tip: when routing DeepSeek V4 Flash through Claude Code, appending `[1M]` to the model name exposes the full 1M context window instead of only showing 200K. Small config details like this can materially change whether long-context agent workflows feel practical.",
+          "title": "@manateelazycat: Unlock DeepSeek's 1M Context In Claude Code",
+          "body": "A small config trick matters here: appending [1M] to deepseek-v4-flash exposes the full 1M context instead of the default-looking 200K window. For anyone routing third-party models through Claude Code, this is exactly the kind of detail that changes whether long-context workflows are viable.",
           "url": "https://x.com/manateelazycat/status/2047605655239016618"
         },
         {
           "tag": "new",
-          "title": "@julien_c: Local Qwen On A MacBook Pro Feels Much Closer Than Expected",
-          "body": "One of the stronger hands-on posts showed Qwen3.6 27B running locally via llama.cpp inside Pi Coding Agent on a MacBook Pro, with performance described as surprisingly close to recent frontier coding models on real Hugging Face work. If that generalizes, local/private agent stacks are getting serious fast.",
-          "url": "https://x.com/julien_c/status/2047647522173104145"
+          "title": "@0xLogicrw: Open-Source Background Mac Control For Agents",
+          "body": "The new cua-driver was highlighted as a macOS-native computer-use layer that lets agents click, type, and inspect apps in the background without stealing focus or moving the cursor. If it matures, it could become important shared infrastructure for desktop agents rather than a proprietary feature inside one product.",
+          "url": "https://x.com/0xLogicrw/status/2047616125643678066"
+        },
+        {
+          "tag": "hot",
+          "title": "@steipete: 50 Codex Agents Tackle Repo Backlog",
+          "body": "Clawsweeper was presented as a maintenance agent that runs 50 Codex workers in parallel to inspect issues and PRs, then closes items with strong evidence they are already resolved or not actionable. The larger signal is that repo hygiene and triage are becoming one of the first believable always-on agent jobs.",
+          "url": "https://x.com/steipete/status/2047982647264059734"
         },
         {
           "tag": "update",
-          "title": "@0xSero: DeepSeek V4 Flash Looks Viable As A Local Frontier Model",
-          "body": "A concrete benchmark post claimed DeepSeek V4 Flash can run uncompressed on four RTX 6000s with sub-second first-token latency, 400K context, and enough throughput for multiple concurrent sessions. The bigger point is that ‘local frontier’ is becoming a realistic category for well-equipped workstations.",
-          "url": "https://x.com/0xSero/status/2047693187968307532"
+          "title": "@grapeot: Model Selection Got Harder, Not Easier",
+          "body": "One of the better model-selection notes warned that Opus 4.7 regressed badly on long-document retrieval while GPT-5.5's advertised computer-use score is not fully available through the API. The useful lesson is to choose models by task and surface constraints, not by benchmark headlines alone.",
+          "url": "https://x.com/grapeot/status/2047889596357488862"
         }
       ]
     },
@@ -59,21 +60,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@chenreason: Intel’s Quarter Reframed The AI Bottleneck",
-          "body": "The sharpest market read on the batch argued Intel’s surprise was really about margin and CPU scarcity, not just EPS, with AI inference and agent workloads pulling through more host compute demand alongside GPUs. If that read holds, the AI trade is broadening from accelerators into CPUs, packaging, and foundry capacity.",
-          "url": "https://x.com/chenreason/status/2047448770439438815"
+          "title": "@aakashgupta: Cursor's Growth Still Looks Compute-Constrained",
+          "body": "The sharp business read in the batch argued that Cursor's explosive ARR came with brutal model costs, illustrating how vulnerable application-layer winners remain when OpenAI and Anthropic both supply and compete with them. Even if you discount some deal speculation, the core signal is clear: margin structure and compute access are now strategic risks, not back-office details.",
+          "url": "https://x.com/aakashgupta/status/2047860705228165367"
         },
         {
           "tag": "update",
-          "title": "@BTCdayu: Value Intel As Two Different Businesses",
-          "body": "A longer deep-dive argued that Intel should be split mentally into a mature CPU cash-flow machine and a strategically protected U.S. foundry option, because those two pieces have very different economics and risk profiles. The useful framing is not just whether Intel is cheap, but which side of the story you are actually underwriting.",
-          "url": "https://x.com/BTCdayu/status/2047552911270654138"
+          "title": "@jukan05: Anthropic May Need Google-Scale Dependence",
+          "body": "A recurring market interpretation was that Anthropic's odd positioning around GPT-5.5 makes more sense if the company is optimizing for guaranteed infrastructure, even at the cost of deeper dependence on Google. The investment takeaway is that frontier-model competition is increasingly shaped by who can lock in power, chips, and cloud capacity.",
+          "url": "https://x.com/jukan05/status/2047974859125465105"
         },
         {
           "tag": "new",
-          "title": "@APompliano: AI Still Looks Expansionary For Jobs",
-          "body": "Pompliano reversed his earlier view that AI would first wipe out junior jobs, pointing instead to stronger hiring data, lower college-grad unemployment, and LinkedIn job-post growth tied to AI roles. Whether or not you buy the full bull case, the labor-market evidence in the feed still looked more additive than purely replacement-driven.",
-          "url": "https://x.com/APompliano/status/2047675737663033683"
+          "title": "@wquguru: AI Isn't The Only High-Margin Game",
+          "body": "This post pointed out that while AI commands attention, companies like Hyperliquid and Jane Street still rank higher on profit per employee than many headline AI names. It is a useful counterweight to the consensus trade: capital efficiency may be hiding in the businesses everyone stopped looking at.",
+          "url": "https://x.com/wquguru/status/2047951559787770054"
         }
       ]
     },
@@ -83,21 +84,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@lennysan: Cat Wu’s Playbook For Shipping AI Products Faster",
-          "body": "The strongest product thread in the batch argued that Anthropic’s speed comes from small teams shipping research previews, minimizing approvals, and treating product taste as more valuable than rigid role boundaries. It is a useful blueprint for builders: prototype ahead of the models, learn quickly, and remove old scaffolding as capabilities improve.",
-          "url": "https://x.com/lennysan/status/2047669259380383955"
+          "title": "@chuhaiqu: Tiimo Shows Niche Focus Beats Generic To-Do Apps",
+          "body": "The best product teardown in the batch explained Tiimo's growth as the result of starting with a sharply defined ADHD use case, letting users shape the roadmap, and building pricing plus community around retention instead of ad arbitrage. It is a strong reminder that boring categories still work when the product feels deeply native to a specific user group.",
+          "url": "https://x.com/chuhaiqu/status/2047888610251391085"
         },
         {
           "tag": "update",
-          "title": "@0xEvieYang: Vibe Coding Gets You The Demo, Not The Product",
-          "body": "A concise but accurate reminder from the feed: AI can get you to a 70-point demo in a few hours, but the last 20 points needed to make something feel like a real product still demand much more judgment, domain knowledge, and data. That is the cleanest correction to the current overhyped vibe-coding narrative.",
-          "url": "https://x.com/0xEvieYang/status/2047390229821354117"
+          "title": "@lidangzzz: Multi-Agent Products Need A Clear Boundary",
+          "body": "A concise product lesson: telling users a multi-agent system can do anything usually destroys trust, while narrowly defining the job makes the capability believable. The post also argued that structured data and domain workflows may matter more than yet another generic coding demo.",
+          "url": "https://x.com/lidangzzz/status/2047874601145745656"
         },
         {
           "tag": "new",
-          "title": "@Yuchenj_UW: Model Progress Still Comes From Systems Ingenuity",
-          "body": "A smart observation from the DeepSeek discourse was that DeepSeek, Kimi, and Qwen keep finding ways to train strong models under tighter compute constraints by improving architecture and efficiency instead of only spending more GPUs. The strategic implication is that model progress is still being driven by systems creativity, not just capex.",
-          "url": "https://x.com/Yuchenj_UW/status/2047534197993316738"
+          "title": "@HiTw93: AI Tool Access Is Becoming An Education Gap",
+          "body": "An interviewer said the strongest students now often separate themselves not just by talent but by early access to top AI coding tools and the budget to use them heavily. The most useful part was the proposed response: treat model access like a real educational resource worth subsidizing for promising students.",
+          "url": "https://x.com/HiTw93/status/2048011261473128477"
         }
       ]
     }
