@@ -1,14 +1,14 @@
 {
   "title": "X Feed Digest",
-  "date": "Saturday, April 25th, 2026",
+  "date": "Sunday, April 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
     {
-      "html": "<strong>Model quality was not the main story — deployment economics were</strong>: DeepSeek's discounting, GPT-5.5's effective coding cost, and Codex quota complaints kept turning model choice into a budgeting decision."
+      "html": "<strong>GPT-5.5 dominated the batch</strong>: people kept returning to the same tradeoff — a smarter base model with rougher post-training, plus costs and quotas that now materially shape workflow choices."
     },
-    "Agent infrastructure kept moving downstack: Google launched a managed enterprise agent platform, Cua shipped background macOS control, and acpx continued tightening the control plane around coding-agent sessions.",
-    "The most useful workflow ideas were practical rather than flashy: separate human-to-human from AI-to-AI communication, treat queue triage as the first believable always-on agent job, and design internal tools that computer-use agents can actually navigate.",
-    "Research chatter also pushed against brute-force scaling as the only path forward, with MIT's recursive long-context approach drawing attention as an alternative to endlessly larger context windows."
+    "Agent infrastructure kept moving downstack: the most useful posts were about orchestration, memory architecture, and isolation patterns that make coding agents less brittle in production.",
+    "The next market checkpoint is Big Tech earnings, with cloud growth, backlog quality, and revenue-versus-capex efficiency framed as the real test of whether the AI buildout is starting to monetize.",
+    "More vertical agent workflows are emerging, especially in health, but the human bottleneck is still real: better automation is increasing judgment load, and frontier access remains expensive outside the US."
   ],
   "sections": [
     {
@@ -17,33 +17,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@berryxia: MIT's RLM Attacks Context Rot",
-          "body": "A thread on MIT CSAIL's Recursive Language Models argued that long-context work may be better handled by external state, selective retrieval, and recursive sub-agents than by endlessly expanding native windows. If the implementation holds up, it's a real challenge to the idea that bigger context windows are the only path to stronger long-horizon agents.",
-          "url": "https://x.com/berryxia/status/2047816489617813652"
-        },
-        {
-          "tag": "new",
-          "title": "@googlecloud: Gemini Enterprise Agent Platform",
-          "body": "Google launched Gemini Enterprise Agent Platform as a managed layer to build, govern, optimize, and scale agents inside enterprise workflows. The bigger signal is that agent orchestration and governance are becoming a first-class platform category, not just a feature bolted onto models.",
-          "url": "https://x.com/googlecloud/status/2046984873441681556"
-        },
-        {
-          "tag": "new",
-          "title": "@0xLogicrw: Background Mac Control For Agents",
-          "body": "Cua's new macOS-native driver lets agents click, type, inspect UI, and capture context in the background without stealing focus or moving the user's cursor. That's meaningful infrastructure for desktop agents because it makes computer use less of a demo and more compatible with normal daily work.",
-          "url": "https://x.com/0xLogicrw/status/2047616125643678066"
+          "title": "@sdmat123: GPT-5.5 Is Stronger But Less Polished",
+          "body": "After a few days of use, he argues GPT-5.5 is a real base-model leap with better common sense and instruction following, but weaker autopilot-style polish than 5.4 Pro. The practical takeaway is that explicit process prompts and scoped subagents matter more again.",
+          "url": "https://x.com/sdmat123/status/2048247373193785386"
         },
         {
           "tag": "update",
-          "title": "@steipete: acpx 0.6.0 Tightens Agent Control",
-          "body": "acpx 0.6.0 shipped better session pruning, queue hardening, persistent-session fixes, and improved controls for running Codex and Claude through agents. For anyone turning coding agents into real tooling, this kind of orchestration plumbing matters more than another benchmark screenshot.",
-          "url": "https://x.com/steipete/status/2047978882100334612"
+          "title": "@steipete: acpx 0.6.0 Hardens Agent Control",
+          "body": "acpx 0.6.0 adds system-prompt controls, pruning, better persistent-session handling, and queue hardening for Codex/Claude orchestration. It is a good example of agent reliability shifting from model hype to control-plane plumbing.",
+          "url": "https://x.com/steipete/status/2047978882100334612",
+          "links": [
+            {
+              "label": "Release Notes",
+              "url": "https://github.com/openclaw/acpx/releases/tag/v0.6.0"
+            }
+          ]
+        },
+        {
+          "tag": "new",
+          "title": "@nash_su: OpenAI Open-Sourced A Privacy Filter",
+          "body": "A small Apache-2.0 privacy-filter model appears to have been released for lightweight commercial use. That could be genuinely useful as a cheap pre/post-processing layer for agent, logging, or data-handling pipelines.",
+          "url": "https://x.com/nash_su/status/2048224975749030021"
+        },
+        {
+          "tag": "hot",
+          "title": "@AYi_AInotes: Markdown Logs Are Not Agent Memory",
+          "body": "The post argues that dumping history into Markdown creates contradiction, stale context, and no real ranking or decay, so it behaves more like RAM than memory. The stronger pattern is graph-based state plus targeted retrieval instead of stuffing ever more context into the prompt.",
+          "url": "https://x.com/AYi_AInotes/status/2048278717793722747"
         },
         {
           "tag": "update",
-          "title": "@fkysly: Codex Can Import Claude Code Setup",
-          "body": "Starting a project in Codex now offers a one-click migration path for Claude Code settings, skills, and Claude.md content into Agents.md. That meaningfully lowers switching friction for teams that want to test GPT-5.5 and Codex without rebuilding their whole environment from scratch.",
-          "url": "https://x.com/fkysly/status/2047896576333602878"
+          "title": "@BTCqzy1: Multi-Agent Codex Needs DAGs",
+          "body": "This walkthrough says the failure mode in multi-agent coding is not parallelism but control: runaway tokens, conflicting state, and merge chaos. The useful pattern is manager/subagent/harness separation, git worktree isolation, and conservative concurrency.",
+          "url": "https://x.com/BTCqzy1/status/2048268332902895661"
         }
       ]
     },
@@ -53,27 +59,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@xiaohu: DeepSeek V4 Slashes Output Pricing",
-          "body": "A temporary DeepSeek V4 promotion cut output pricing by roughly 75% to about RMB 6 per million tokens, underscoring how quickly open-model competition is turning into a pricing war. If you're routing workloads across models, this is the kind of change that can justify revisiting defaults immediately.",
-          "url": "https://x.com/xiaohu/status/2048049943869583718"
+          "title": "@qinbafrank: Big Tech Earnings Test AI Monetization",
+          "body": "Wednesday's Google, Microsoft, Amazon, and Meta results were framed as the real proof point for whether AI capex is turning into cloud and ad revenue, not just infrastructure excitement. The key watch items are cloud growth, remaining performance obligations, and revenue-to-capex efficiency rather than headline beats alone.",
+          "url": "https://x.com/qinbafrank/status/2048260457996358038"
         },
         {
           "tag": "update",
-          "title": "@xiongchun007: GPT-5.5's Real Coding Cost Looks Higher",
-          "body": "One useful pricing read argued that GPT-5.5's headline API rate understates what coding-agent usage can feel like once hidden reasoning and worst-case paths are included. The practical takeaway is to budget around effective cost, not just the clean price card.",
+          "title": "@xiaochuan8688: Nvidia's Moat Is Narrowing",
+          "body": "The commentary argues Nvidia still wins near term on exploding inference demand, but custom chips, AMD pressure, and China restrictions are starting to erode its margin of safety. The investing takeaway is to treat NVDA more like a cyclical growth leader than a perpetual-motion monopoly.",
+          "url": "https://x.com/xiaochuan8688/status/2048266068833993067"
+        },
+        {
+          "tag": "update",
+          "title": "@xiongchun007: GPT-5.5 Coding Costs Look Higher In Practice",
+          "body": "One useful pricing warning is that coding-agent usage may get billed closer to worst-case reasoning paths than the clean API card suggests, making GPT-5.5 feel materially more expensive in real workflows. If you are routing agent tasks, effective cost matters more than the advertised output-token line.",
           "url": "https://x.com/xiongchun007/status/2048084476517810240"
         },
         {
-          "tag": "update",
-          "title": "@Sauers_: Codex Can Burn Through Weekly Quota Fast",
-          "body": "A heavy user said Codex consumed an entire ChatGPT Pro weekly allowance in one day and still ran into shorter-term rate limits and errors. Even when model quality is strong, quota ceilings are becoming part of the real economics of agent-heavy workflows.",
-          "url": "https://x.com/Sauers_/status/2047873723722514680"
-        },
-        {
-          "tag": "new",
-          "title": "@FranWalsh73: Gifted Stock vs Inheritance Tax Gap",
-          "body": "The post resurfaced a classic estate-planning lesson: gifting appreciated stock during life can create a large capital-gains bill, while passing the same asset through inheritance may receive a step-up in basis. It's a useful reminder that tax treatment can matter more than the size of the gift itself.",
-          "url": "https://x.com/FranWalsh73/status/2048009182381523082"
+          "tag": "hot",
+          "title": "@TheGeorgePu: Frontier AI's Affordability Gap",
+          "body": "The post puts $20 and $200 AI plans in income context, arguing frontier access is getting much less affordable outside the US and that self-hosting is not a realistic escape hatch for many users. That is a good lens for thinking about global adoption, monetization, and the ceiling on premium AI products.",
+          "url": "https://x.com/TheGeorgePu/status/2048193879459950996"
         }
       ]
     },
@@ -82,28 +88,34 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@jiayq: Keep Human Thinking Separate From AI Output",
-          "body": "A clean collaboration rule: don't forward AI-written prose as if it were your own thinking — send the prompt or your raw reasoning instead, and keep human-to-human versus AI-to-AI channels distinct. That's one of the sharper norms in the batch for keeping team communication useful.",
-          "url": "https://x.com/jiayq/status/2047986960849850372"
+          "tag": "hot",
+          "title": "@frxiaobei: Health AI Is Moving From Answers To Action",
+          "body": "The strongest insight here is that medical AI gets more valuable when it starts from longitudinal data and drives follow-up actions, instead of waiting for the user to ask the right question. That points toward agents as coordinators of closed loops, not just explanation engines.",
+          "url": "https://x.com/frxiaobei/status/2048280586318672269"
         },
         {
           "tag": "hot",
-          "title": "@Voxyz_ai: 50-Agent Triage Is A Reusable Pattern",
-          "body": "The '50 agents cleaning 4,000 stale issues' story was framed less as a flex and more as a queue-triage pattern for resumes, support, sales leads, inboxes, and moderation. The important insight is that always-on agents look most believable when they are screening queues, not pretending to be autonomous geniuses.",
-          "url": "https://x.com/Voxyz_ai/status/2048077474056073241"
+          "title": "@tengyanAI: Agents Shift Burnout To Judgment",
+          "body": "A sharp warning that agents do not remove human workload so much as compress it into faster review, verification, and decision cycles. The result can be fewer productive hours that are much more cognitively intense.",
+          "url": "https://x.com/tengyanAI/status/2048219244471652393"
         },
         {
           "tag": "update",
-          "title": "@tualatrix: Build Internal Tools For Computer Use",
-          "body": "After watching Codex's computer-use agent struggle with a private admin tool, the author concluded the bigger problem was the UI rather than the model. It's a sharp reminder that agents expose interfaces that only make sense to their creators, which is now a real product-design concern.",
-          "url": "https://x.com/tualatrix/status/2047870752255553675"
+          "title": "@vikingmute: Study Real Skills, Not Perfect Demos",
+          "body": "Rather than collecting polished prompt packs, this post recommends reading Matt Pocock's personal skills repository to see how a strong engineer actually structures planning, setup, writing, and critique. That is a good workflow tip if you want reusable taste, not just reusable text.",
+          "url": "https://x.com/vikingmute/status/2048301287545184658",
+          "links": [
+            {
+              "label": "Matt Pocock Skills",
+              "url": "https://github.com/mattpocock/skills/"
+            }
+          ]
         },
         {
           "tag": "update",
-          "title": "@bearliu: Stop Using Humans As Glue",
-          "body": "Reflecting on Notion CEO Ivan Zhao's recent essay, this post argued that the biggest productivity gain comes when teams stop using humans as glue between systems and redesign workflows around agents. The useful lesson is less 'use more AI' and more 'change the operating model AI is sitting inside.'",
-          "url": "https://x.com/bearliu/status/2047909727191875736"
+          "title": "@banteg: Re-Test Stalled Work On New Models",
+          "body": "A reverse-engineering project that stalled on 5.3, moved on 5.4, and sped up again on 5.5 is a concrete reminder that capability jumps show up as hard thresholds on messy real work, not just benchmark deltas. If a task previously hit a wall, a model upgrade may be worth retrying sooner than you think.",
+          "url": "https://x.com/banteg/status/2048332329135780160"
         }
       ]
     }
