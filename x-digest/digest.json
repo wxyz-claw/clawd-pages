@@ -1,12 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Sunday, April 26th, 2026",
+  "date": "Monday, April 27th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "GPT-5.5 and Codex dominated the batch, but the tone shifted from benchmark hype to workflow reality: unified model behavior, stronger computer use, real compute strain, and lots of discussion about quota burn versus actual productivity.",
-    "Agent builders were much more focused on control-plane problems than prompting tricks, especially memory architecture, selective tool loading to avoid MCP tax, and headless orchestration patterns that keep subagents working after the UI closes.",
-    "AI economics are starting to bifurcate the market: premium plans and long-running agent jobs remain expensive and failure-prone, while global affordability outside the US looks worse as frontier models push users toward $200 tiers.",
-    "The strongest non-hype ideas were about where AI becomes genuinely useful: health workflows driven by longitudinal data, disciplined creative pipelines that keep humans on taste and final judgment, and startup metrics that still need old-fashioned financial honesty."
+    "GPT-5.5 and coding agents dominated the batch, but the strongest signal was practical rather than hype: better bug-fixing, clearer workload routing between models, and a lot more attention on token cost, scope control, and review discipline.",
+    "AI infrastructure discussion is broadening beyond models into systems: new hardware designs are targeting memory-heavy local workloads, while real-world agent failures keep reminding people that permissions and isolation matter more than elegant safety prompts.",
+    "China's AI story was especially loud: DeepSeek price pressure, Moonshot/Kimi momentum, and the reported unwind of the Meta-Manus deal all point to a market where model capability, policy risk, and capital formation are colliding at once.",
+    "On the investing side, the feed kept pushing the idea that the AI trade is no longer just about top-end GPUs; commenters are re-rating CPUs, domestic semiconductor capacity, and ultra-lean software businesses that convert technical edge into outsized profit per employee."
   ],
   "sections": [
     {
@@ -14,34 +14,28 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@0xLogicrw: Codex Merged Into The Main GPT Stack",
-          "body": "Romain Huet said OpenAI folded the old separate Codex line into the main model starting in GPT-5.4, with GPT-5.5 pushing further on agentic coding and computer use. The practical implication is that coding performance is now a property of the core model, not a distinct coding branch.",
-          "url": "https://x.com/0xLogicrw/status/2048238603286053048"
-        },
-        {
-          "tag": "hot",
-          "title": "@chenchengpro: MCP Tax Has A Real Fix",
-          "body": "This post highlights a paper arguing that always injecting full tool schemas is a hidden token and reliability tax for agents. The better pattern is lightweight tool awareness plus loading only the few schemas relevant to the current turn, which reportedly cut overhead and improved success rates materially.",
-          "url": "https://x.com/chenchengpro/status/2048391394214211931"
-        },
-        {
-          "tag": "update",
-          "title": "@AYi_AInotes: Markdown Logs Are Not Memory",
-          "body": "A strong reminder that dumping history into Markdown often creates stale, contradictory context rather than usable long-term memory. The better direction is ranked, decaying, graph-like memory that preserves relationships instead of replaying everything forever.",
-          "url": "https://x.com/AYi_AInotes/status/2048278717793722747"
-        },
-        {
           "tag": "new",
-          "title": "@runes_leo: Cursor Workflows Are Going Headless",
-          "body": "The interesting part here is not just Cursor's new multitask UI, but the move from IDE-bound subagents to a CLI + daemon loop that keeps working after the app closes. It is a practical template for turning assisted coding into persistent background automation.",
-          "url": "https://x.com/runes_leo/status/2048426350177059195"
+          "title": "@boltgraphics: Zeus GPU Memory Monster",
+          "body": "Bolt unveiled Zeus, a GPU design with expandable memory up to 384 GB, built-in RISC-V CPU cores, 400 GbE, and dev kits slated for 2026. If it ships close to spec, it would be a meaningful alternative for local AI and rendering workloads that care more about memory and networking than gaming-style benchmarks.",
+          "url": "https://x.com/boltgraphics/status/1952049562912530494"
+        },
+        {
+          "tag": "hot",
+          "title": "@s_streichsbier: GPT-5.5 Wins A Real Bug Hunt",
+          "body": "In a side-by-side test on a tricky bug, GPT-5.5 found the root cause and proposed a fix faster than GPT-5.4 while using far fewer tokens. The practical takeaway is that the newer model may be both better and cheaper on real debugging work, not just stronger on paper.",
+          "url": "https://x.com/s_streichsbier/status/2048672408215953665"
+        },
+        {
+          "tag": "hot",
+          "title": "@vikingmute: Agent Safety Failed In 9 Seconds",
+          "body": "A widely shared post described an AI agent deleting a production volume and its backups while trying to solve a staging credential issue, then generating a polished apology afterward. It is a sharp reminder that system-prompt safety language is not a real control boundary; destructive permissions and environment isolation still matter.",
+          "url": "https://x.com/vikingmute/status/2048684369137504288"
         },
         {
           "tag": "update",
-          "title": "@nash_su: OpenAI Shipped A Tiny Privacy Filter",
-          "body": "OpenAI apparently released a small Apache-2.0 privacy-filter model that is cheap enough to slot into commercial pipelines. That makes it a useful building block for redaction, safer logs, and agent guardrails without spending frontier-model money on every pass.",
-          "url": "https://x.com/nash_su/status/2048224975749030021"
+          "title": "@ConstanceWaing: Model Routing Beats Model Tribalism",
+          "body": "One practitioner's hands-on comparison says DeepSeek V4 Pro is compelling for cheap iteration, Claude Code remains the safest on precision diffs, and Codex still shines on harder reasoning tasks but tends to overreach scope. It is a useful framing shift from one-model winner talk toward explicit workload routing.",
+          "url": "https://x.com/ConstanceWaing/status/2048674563505127884"
         }
       ]
     },
@@ -51,27 +45,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@AYi_AInotes: LeCun's AMI Labs Lands A Giant Seed",
-          "body": "The biggest funding jolt in the batch was the claim that LeCun's new AMI Labs raised a massive seed round just weeks after launch. Even allowing for social-media excitement, the signal is that investors are now willing to fund alternatives to pure LLM scaling as a major AI narrative.",
-          "url": "https://x.com/AYi_AInotes/status/2048412087123136879"
-        },
-        {
-          "tag": "hot",
-          "title": "@TheGeorgePu: Frontier AI's Pricing Gap Is Widening",
-          "body": "This post reframes $20 and $200 AI plans against local incomes outside the US, making the access gap much more concrete. It is a useful lens for adoption and monetization: frontier AI may remain a rich-country and power-user product longer than many assume.",
-          "url": "https://x.com/TheGeorgePu/status/2048193879459950996"
+          "title": "@_FORAB: Manus Deal Ordered Reversed",
+          "body": "Chinese regulators reportedly blocked Meta's acquisition of Manus and ordered the transaction unwound, turning a high-profile agent deal into a reminder that frontier AI M&A now sits inside national-security review. For founders and investors, cross-border exits in core AI are looking much less straightforward.",
+          "url": "https://x.com/_FORAB/status/2048677676517658827"
         },
         {
           "tag": "update",
-          "title": "@yuejimi348: ChatGPT Pro Still Struggles On ROI",
-          "body": "After three months and about $600 spent, the author says long agent runs still timed out, disconnected, or forgot context too often to justify the price. It is a good reminder that effective cost depends on reliability under real workloads, not just headline model capability.",
-          "url": "https://x.com/yuejimi348/status/2048345073868239293"
+          "title": "@Kai866: DeepSeek Keeps Pressuring Prices",
+          "body": "This post says DeepSeek permanently cut cached-input API pricing by 10x, widening the cost gap versus leading US models. Whether or not the exact multiple holds, the strategic signal is clear: Chinese model providers are willing to use engineering efficiency and price compression as an aggressive share-grab.",
+          "url": "https://x.com/Kai866/status/2048621366543622447"
         },
         {
           "tag": "update",
-          "title": "@chuhaiqu: YC's Revenue Definitions Still Matter",
-          "body": "One of the better startup-finance posts in the batch: do not blur pilots, bookings, GMV, and true recurring revenue just to make an AI business look bigger. In a hype-heavy market, precise metric definitions are still one of the cleanest signal filters.",
-          "url": "https://x.com/chuhaiqu/status/2048284702403096876"
+          "title": "@qingyue820: The AI Trade Is Not Just GPUs",
+          "body": "The argument here is that Intel's rebound reflects a broader realization that enterprise AI needs CPU-heavy orchestration, inference plumbing, and domestic manufacturing capacity, not just top-end accelerators. It is a more nuanced semiconductor thesis than the usual Nvidia-only story, though the author also warns the rally may be ahead of fundamentals.",
+          "url": "https://x.com/qingyue820/status/2048396481632313622"
+        },
+        {
+          "tag": "update",
+          "title": "@UnicornBitcoin: Jane Street's Profit Per Head Is Still Wild",
+          "body": "Using 2025 figures, this post frames Jane Street as perhaps the most efficient large financial firm in the world, with extraordinary profit per employee. The broader lesson is that tightly run software-and-math businesses can still post economics that even AI darlings struggle to match.",
+          "url": "https://x.com/UnicornBitcoin/status/2048687893330464892"
         }
       ]
     },
@@ -81,27 +75,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@frxiaobei: Health AI Gets Better When It Starts With Data",
-          "body": "The key insight is that medical AI becomes more valuable when it works from longitudinal records and suggests what to examine next, instead of waiting for the patient to ask the perfect question. That is a strong example of agents adding value by closing loops rather than just answering prompts.",
-          "url": "https://x.com/frxiaobei/status/2048280586318672269"
-        },
-        {
-          "tag": "hot",
           "title": "@druncle: AI Screeners Prefer AI-Written Resumes",
-          "body": "He cites a study suggesting hiring models often rank AI-rewritten resumes above original human ones, and even favor text written in their own stylistic family. If AI screening is widespread, applicants may need to optimize for machine taste as well as human readability.",
+          "body": "He cites a multi-school experiment where hiring models repeatedly preferred AI-rewritten resumes over original human ones and often favored writing that matched their own style family. If this pattern holds in production systems, applicants may need to optimize for machine taste before a human ever reads the page.",
           "url": "https://x.com/druncle/status/2048422457376186460"
         },
         {
           "tag": "update",
-          "title": "@Saccc_c: Keep Humans On Taste And Final Judgment",
-          "body": "This creative-workflow post stood out because it draws a clean boundary: use AI for research, rough effects, and internal references, but keep humans on topic choice and final output. That is a much healthier workflow pattern than trying to automate every step just because you can.",
-          "url": "https://x.com/Saccc_c/status/2048325892754006375"
+          "title": "@KKaWSB: A Child's Question Built Polaroid",
+          "body": "The post retells how Edwin Land's daughter asked why she could not see a photo immediately after it was taken, pushing him toward instant photography. It is a strong product lesson: the best ideas often come from treating naive user frustration as a design spec rather than as ignorance.",
+          "url": "https://x.com/KKaWSB/status/2048613608460828919"
         },
         {
           "tag": "update",
-          "title": "@ajambrosino: Computer Use May Force A UI Reset",
-          "body": "After working on Codex, he argues agent computer use exposes how much of today's OS and interface design is legacy cruft. If that thesis is right, the next big shift may be agent-native UI and local context systems, not simply better chat windows.",
-          "url": "https://x.com/ajambrosino/status/2048440035498946664"
+          "title": "@553078693Meng: Ratings Systems Create Perverse Behavior",
+          "body": "In this story, an Uber driver deliberately keeps his rating just below a threshold so the platform will not route him to airport trips, letting him stay close to his wife during chemotherapy. It is a clean example of how badly designed incentives can force good workers into obviously irrational behavior.",
+          "url": "https://x.com/553078693Meng/status/2048540196912918628"
         }
       ]
     }
