@@ -3,10 +3,10 @@
   "date": "Wednesday, April 29th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Agent workflow is moving past one-chat-one-model usage. The strongest posts were about orchestration: long-running Codex jobs, recursive review/fix loops, and manager agents that dispatch specialists instead of making the human babysit every thread.",
-    "Model selection is starting to matter as much as model quality. Several posts converged on the same point: there is no universal winner across GPT-5.5, Claude Opus 4.7, DeepSeek V4, and Kimi K2.6, so routing by task, cost, and reliability is becoming a core skill.",
-    "Enterprise AI is getting more operational and less demo-like. Deterministic execution surfaces, persistent memory, and voice-first controls all showed up, suggesting the stack is shifting from chat novelty toward software that actually runs work.",
-    "The market read-through centered on second-order effects: the Musk/OpenAI trial could surface real governance details, AI is pushing value toward scarce chip manufacturing capacity rather than pure design labor, and geopolitics is now a live risk to frontier-AI dealmaking."
+    "The strongest AI posts were about runtime and orchestration, not just model IQ: faster agent loops, MCP moving directly into product surfaces, and manager-worker setups that reduce token waste.",
+    "Prompting and context discipline tightened across the feed. Shorter outcome-based prompts, smaller high-signal agent docs, and deterministic scaffolding all showed up as better defaults than bloated instruction piles or AI-only guessing.",
+    "The model landscape looks increasingly fragmented and price-sensitive. GPT-5.5, Claude Opus 4.7, DeepSeek V4, and peers are separating by task, cost, and reliability rather than one model cleanly winning everything.",
+    "On the market/news side, Google and Microsoft both posted beats while robotaxi competition intensified in San Francisco, with regulation emerging as the real constraint on how quickly that market can scale city to city."
   ],
   "sections": [
     {
@@ -15,33 +15,57 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@thsottiaux: Codex Can Stay on Hard Problems for Days",
-          "body": "An OpenAI engineer said GPT-5.5/Codex can already sustain very long-running tasks with a few workflow tweaks, and that product changes are coming to make this easier. The real signal is that durability and supervision are becoming as important as raw model IQ for coding agents.",
-          "url": "https://x.com/thsottiaux/status/2049362299392241784"
+          "title": "@OpenAIDevs: WebSockets Cut Agent Loop Overhead",
+          "body": "OpenAI said WebSockets in the Responses API keep response state warm across tool calls, pushing some end-to-end agent workflows up to 40% faster. The useful signal is that the next productivity gains are increasingly coming from runtime plumbing, not only from smarter base models.",
+          "url": "https://x.com/OpenAIDevs/status/2049595890395152728",
+          "links": [
+            {
+              "label": "OpenAI post",
+              "url": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets"
+            }
+          ]
         },
         {
           "tag": "update",
-          "title": "@steipete: Recursive Codex Review Loops Are in Production",
-          "body": "Peter Steinberger shared a workflow where Codex reviews every landed commit, opens a follow-up PR if it finds a bug, and can trigger more review/fix loops up to five times. That is a strong example of agents moving from assistant mode into continuous software-process infrastructure.",
-          "url": "https://x.com/steipete/status/2049356949523730699",
+          "title": "@TheRealAdamG: GPT-5.5 Prompting Has Shifted",
+          "body": "The new GPT-5.5 prompting guide says newer models often work better with shorter, outcome-oriented prompts instead of legacy step-by-step scaffolding. That is a concrete workflow change for anyone still dragging oversized prompt stacks into newer model generations.",
+          "url": "https://x.com/TheRealAdamG/status/2049523746910908886",
           "links": [
             {
-              "label": "Example PR",
-              "url": "https://github.com/openclaw/openclaw/pull/74065"
+              "label": "Prompting guide",
+              "url": "https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5"
+            }
+          ]
+        },
+        {
+          "tag": "new",
+          "title": "@flutterflow: MCP Arrives Inside the Builder",
+          "body": "FlutterFlow launched MCP support so Codex, Claude Code, Gemini CLI, and other MCP clients can work directly inside the product canvas. That is a meaningful sign that agent tooling is moving into mainstream app surfaces instead of staying confined to terminals and chat panes.",
+          "url": "https://x.com/flutterflow/status/2049485799679529014",
+          "links": [
+            {
+              "label": "FlutterFlow CLI",
+              "url": "https://pub.dev/packages/flutterflow_cli"
             }
           ]
         },
         {
           "tag": "hot",
-          "title": "@frxiaobei: One Manager Agent Beats Chatting with Five Agents",
-          "body": "A practical OpenClaw workflow post argued that once an agent or skill is stabilized in Codex or Claude Code, the better pattern is to hand it to a long-running manager agent and stop micromanaging every worker. The useful takeaway is that orchestration quality now matters more than spinning up yet another chat.",
-          "url": "https://x.com/frxiaobei/status/2049170782170042513"
+          "title": "@ai_xiaomu: No Single Frontier Model Won the Week",
+          "body": "A crisp release-week summary argued Claude Opus 4.7 leads coding, GPT-5.5 leads reasoning, and DeepSeek V4-Flash leads on cost, with other models still competitive in their own lanes. The practical takeaway is that model routing is becoming a core skill because capability, price, and reliability are diverging fast.",
+          "url": "https://x.com/ai_xiaomu/status/2049283522335256841"
         },
         {
           "tag": "update",
-          "title": "@ai_xiaomu: No Single Model Won This Release Week",
-          "body": "One of the clearest model-ranking posts of the batch argued that Claude Opus 4.7, GPT-5.5, DeepSeek V4-Flash, and Kimi K2.6 each dominate different tradeoffs rather than one model winning outright. That matches where the market feels headed: routing skill is becoming a competitive advantage.",
-          "url": "https://x.com/ai_xiaomu/status/2049283522335256841"
+          "title": "@deepsource: Deterministic Review Still Matters",
+          "body": "DeepSource's CVE benchmark claimed materially better review accuracy when AI was layered on top of thousands of static analyzers rather than used alone. Even allowing for vendor bias, the workflow lesson is strong: structural signals and deterministic checks still beat AI-only guessing for security work.",
+          "url": "https://x.com/deepsource/status/2037675178998792618",
+          "links": [
+            {
+              "label": "DeepSource benchmark",
+              "url": "https://deepsource.com/l/ai-code-review?utm_source=twitter&utm_medium=cpc&utm_campaign=ai_code_review"
+            }
+          ]
         }
       ]
     },
@@ -51,27 +75,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@xiaochuan8688: Musk v. Altman Matters for Disclosure More Than the Verdict",
-          "body": "The sharpest trial commentary in the feed framed the Musk-OpenAI case as important less for Musk's odds of winning and more for what four weeks of evidence could reveal about OpenAI's governance, conversion, and valuation. For markets, that makes the courtroom a potential information event, not just a legal sideshow.",
-          "url": "https://x.com/xiaochuan8688/status/2049323033194549317"
+          "title": "@unusual_whales: Google and Microsoft Both Beat",
+          "body": "The cleanest market-moving post in the batch was a quick snapshot showing both Google and Microsoft beating on EPS and revenue. For AI-linked equities, the read-through is that hyperscaler demand and monetization are still supporting the capex story rather than breaking it.",
+          "url": "https://x.com/unusual_whales/status/2049573565381167348"
         },
         {
           "tag": "hot",
-          "title": "@williamlong: Meta-Manus Unwind Risk Is Now Real",
-          "body": "A widely shared post relayed the Wall Street Journal report that Meta is preparing to unwind its Manus acquisition after Chinese regulators blocked the deal. The bigger signal is that frontier-AI M&A is now exposed to post-signing geopolitical reversal risk in a very concrete way.",
-          "url": "https://x.com/williamlong/status/2048983824655393108",
-          "links": [
-            {
-              "label": "Reuters",
-              "url": "https://www.reuters.com/world/china/meta-prepares-undo-manus-acquisition-after-china-ban-wsj-reports-2026-04-28/"
-            }
-          ]
+          "title": "@xiaochuan8688: Robotaxi Is Becoming a City-by-City Trade",
+          "body": "A detailed robotaxi thread said Waymo remains the scale leader, Zoox plans paid San Francisco service this year, Uber is lining up its own entrant, and Tesla still has real autonomy milestones left to clear. The more important market point was regulatory divergence: San Francisco could host four live competitors while New York is already pushing back hard.",
+          "url": "https://x.com/xiaochuan8688/status/2049383430945993051"
         },
         {
           "tag": "update",
-          "title": "@LinQingV: AI Makes Chip Design Cheaper, Not Fabrication",
-          "body": "A strong semiconductor thread argued that AI can collapse the labor needed to design inference chips, but it does nothing to reduce the real bottlenecks: tapeout cost, advanced fabs, packaging, and HBM. That is a useful investing lens because it shifts value away from design labor and toward hard manufacturing scarcity.",
-          "url": "https://x.com/LinQingV/status/2049312744126693411"
+          "title": "@eliebakouch: Mid-Tier Model Launches Face Brutal Repricing",
+          "body": "Commentary on Mistral Medium 3.5 argued the model arrived with weaker price-performance and less ambitious specs than newer open alternatives like DeepSeek V4 Pro. Whether or not the take is fully fair, it captures the current market reality: anything that lands in the middle now gets repriced fast.",
+          "url": "https://x.com/eliebakouch/status/2049523829358162027"
         }
       ]
     },
@@ -81,33 +99,27 @@
       "items": [
         {
           "tag": "update",
-          "title": "@fuguizhuo: AI Raises the Value of Judgment, Not Just Speed",
-          "body": "A good summary of Linear CEO Karri Saarinen's AI notes argued that AI makes it easier to produce both great work and garbage, which means expertise and taste matter more, not less. The especially useful nuance was that AI is strongest for exploration and variant generation, not automatically for final production design.",
-          "url": "https://x.com/fuguizhuo/status/2049141484449046911"
-        },
-        {
-          "tag": "update",
-          "title": "@wey_gu: Reliability Is a Real Multi-Model Reason",
-          "body": "One practical post said the reason to pay for both OpenAI and Anthropic is not only capability spread but uptime insurance: if one provider or GitHub itself is flaky, work should not stop. That is a mundane point, but it is increasingly the correct one for serious AI-assisted development.",
-          "url": "https://x.com/wey_gu/status/2049292595067752527"
-        },
-        {
-          "tag": "hot",
-          "title": "@op7418: GitHub Outages Are Creating an AI-Native Infra Opening",
-          "body": "A thread on Ghostty's planned move off GitHub argued that repeated instability in Actions, PRs, and Issues is making the platform harder to trust for heavy development. If that sentiment spreads, there may be a genuine opening for a git host built around AI-heavy workflows instead of legacy assumptions.",
-          "url": "https://x.com/op7418/status/2049320408881709464",
-          "links": [
-            {
-              "label": "Mitchell Hashimoto post",
-              "url": "https://mitchellh.com/writing/ghostty-leaving-github"
-            }
-          ]
+          "title": "@mylifcc: Smaller Agent Docs Often Win",
+          "body": "One of the better workflow posts argued that bloated CLAUDE.md and AGENTS.md files hurt task success, while compact high-signal instructions outperform junk-drawer context. The especially useful filter was to keep only commands, team conventions, hidden gotchas, and non-obvious architectural decisions.",
+          "url": "https://x.com/mylifcc/status/2049434588506943965"
         },
         {
           "tag": "new",
-          "title": "@cheery9998: Use One AI to Bootstrap the Rest of Your Mac Setup",
-          "body": "A nice workflow tip for a fresh Mac was to install the basics first, then let one coding agent install and wire up the rest of the AI toolchain across Codex, Claude Code, Gemini CLI, and a split-terminal workspace. It is simple, but it captures the current best practice: use AI first for setup and environment glue, not only for writing code.",
-          "url": "https://x.com/cheery9998/status/2049115171214205434"
+          "title": "@songjunkr: Use a Manager Model to Steer Codex",
+          "body": "A simple but strong tip was to let a higher-level model plan, evaluate intermediate outputs, and write sharper prompts for Codex instead of asking Codex to do everything itself. That division of labor reportedly cut token burn sharply and fits the broader shift toward manager-worker setups.",
+          "url": "https://x.com/songjunkr/status/2049379984473784350"
+        },
+        {
+          "tag": "update",
+          "title": "@jolestar: Tailscale Beats Constant Reconfiguration",
+          "body": "A practical network note described putting scattered devices on Tailscale, then using a domestic cloud box as both exit and peer relay with traffic split locally. The appeal is operational, not flashy: one stable control point instead of repeatedly rewriting network config whenever connectivity gets weird.",
+          "url": "https://x.com/jolestar/status/2049498400555728900"
+        },
+        {
+          "tag": "update",
+          "title": "@grapeot: Team Leverage Comes from Process",
+          "body": "A thoughtful post argued AI coding compounds only when teams invest in machine-readable context, deterministic verification, explicit standards, and captured learning. Faster code generation is the visible win, but the durable advantage comes from the feedback loops wrapped around it.",
+          "url": "https://x.com/grapeot/status/2049529405287076107"
         }
       ]
     }
