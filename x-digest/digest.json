@@ -1,12 +1,13 @@
 {
   "title": "X Feed Digest",
-  "date": "Thursday, April 30th, 2026",
+  "date": "Friday, May 1st, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Agent products are moving from one-off chat turns to persistent execution loops: Codex shipped /goal, the app got faster at computer/browser work, and passive-memory ideas kept surfacing across the feed.",
-    "Context management is still the practical bottleneck. The strongest workflow posts focused on repeated re-explanation, weak session carryover, and the need for better memory instead of bigger prompt dumps.",
-    "Security and enterprise deployment both advanced: GPT-5.5-Cyber is rolling out to trusted defenders, while tools like FlutterFlow are embedding MCP directly into mainstream product surfaces.",
-    "On the market side, the highest-signal read-through favored incumbents with cash and infrastructure. Google was framed as hard to catch on both balance-sheet strength and TPU workflow fit, while the OpenAI v. Musk trial sharpened how normalized cross-model distillation may already be."
+    "Codex dominated the batch: the big theme was a shift from chatty coding assistant to goal-driven desktop operator, with persistent objectives, faster browser/computer control, and smoother multimodal workflows.",
+    "Prompting is getting less theatrical and more operational. The strongest posts emphasized outcome-first specs, explicit stopping conditions, evaluation loops, and repository structure over giant handcrafted prompts.",
+    "Anthropic’s subliminal-learning result was the sharpest technical warning: hidden model traits may transfer through synthetic data even when obvious content is stripped away, which makes distillation risk feel more architectural than cosmetic.",
+    "On the market side, the useful commentary focused on economics and bottlenecks rather than raw model hype — especially inference cost spreads, hardware/data-movement constraints, and supplier leverage around the AI stack.",
+    "A quieter but important theme: AI leverage is rising faster than human process maturity, so workflow hygiene, review habits, and realistic rollout expectations are becoming competitive advantages."
   ],
   "sections": [
     {
@@ -15,39 +16,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@fcoury: Codex CLI Gets /goal",
-          "body": "Codex CLI 0.128.0 now includes an experimental /goal feature that keeps an objective alive across turns instead of ending after a single pass. The useful signal is that long-running agent loops are becoming a first-class product primitive rather than a hack layered on top.",
-          "url": "https://x.com/fcoury/status/2049917871799636201"
+          "title": "@mattlam_: Codex Gets a Persistent `/goal` Loop",
+          "body": "Codex 0.128.0 adds an experimental `/goal` mode that keeps nudging the model toward the next concrete action and ties completion to evidence like files or test results. The bigger signal is that agent workflows are becoming stateful and objective-driven instead of purely turn-by-turn.",
+          "url": "https://x.com/mattlam_/status/2049907603829121354"
         },
         {
           "tag": "update",
-          "title": "@testingcatalog: Codex App Pushes Further Into Computer Use",
-          "body": "A fresh Codex app build reportedly adds 20% faster computer and browser actions, better slides and sheets support, and hidden settings for remote control and connections. That points to the product expanding from code generation into a broader operating layer for desktop work.",
-          "url": "https://x.com/testingcatalog/status/2049954012800106705"
-        },
-        {
-          "tag": "new",
-          "title": "@flutterflow: MCP Lands Inside FlutterFlow",
-          "body": "FlutterFlow launched MCP support so tools like Claude Code, Gemini CLI, and Codex can work directly inside the builder canvas. It is a strong sign that agent tooling is moving into mainstream app surfaces instead of staying trapped in chat windows and terminals.",
-          "url": "https://x.com/flutterflow/status/2049485799679529014",
-          "links": [
-            {
-              "label": "FlutterFlow CLI",
-              "url": "https://pub.dev/packages/flutterflow_cli"
-            }
-          ]
+          "title": "@ajambrosino: Codex Expands Beyond Coding",
+          "body": "A broader Codex update highlights faster browser/computer actions, dynamic task UIs, better slides and sheets support, in-place annotation, and cleaner handoffs. It reads less like a coding tweak and more like OpenAI turning Codex into a general desktop operating layer.",
+          "url": "https://x.com/ajambrosino/status/2049928915872075984"
         },
         {
           "tag": "hot",
-          "title": "@sama: GPT-5.5-Cyber Starts Rolling Out",
-          "body": "OpenAI said GPT-5.5-Cyber will start reaching critical cyber defenders within days, with access shaped alongside the broader security ecosystem and government. The high-signal takeaway is that frontier cyber capability is being productized through controlled deployment channels, not just benchmark demos.",
-          "url": "https://x.com/sama/status/2049712078836170843"
+          "title": "@servasyy_ai: Distillation May Carry Hidden Traits",
+          "body": "A summary of Anthropic’s new research argues that one model can pass hidden preferences or behaviors to another through synthetic numeric data alone, even after content filtering. If that result holds up, distillation pipelines may need architectural safeguards, not just cleaner datasets.",
+          "url": "https://x.com/servasyy_ai/status/2050089969159406051"
         },
         {
-          "tag": "new",
-          "title": "@gdb: Chronicle Adds Passive Memory to Codex",
-          "body": "A short but notable workflow post said Chronicle can give Codex passive memory over what you've been doing on your computer. If that pattern sticks, it could become a practical bridge between stateless chat sessions and genuinely durable agent context.",
-          "url": "https://x.com/gdb/status/2049844703793688991"
+          "tag": "update",
+          "title": "@Pluvio9yte: GPT-5.5 Prompting Shifts to Harness Design",
+          "body": "OpenAI’s GPT-5.5 guidance reportedly favors outcome-first specs, explicit stopping conditions, self-checks, and bounded search budgets over long step-by-step prompts. The practical takeaway is that strong agent performance now looks more like harness engineering than prompt poetry.",
+          "url": "https://x.com/Pluvio9yte/status/2050118179062743418"
+        },
+        {
+          "tag": "update",
+          "title": "@grapeot: Evaluation Is Becoming the Real Agent Moat",
+          "body": "A thoughtful read on Cursor’s agent-harness post argued the important part is putting evaluation inside the product loop for model swaps, guardrails, and summarizer costs. Teams shipping agents increasingly need a measurable definition of ‘good’ before they iterate.",
+          "url": "https://x.com/grapeot/status/2050037750351757526"
         }
       ]
     },
@@ -57,21 +52,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@MTSlive: Musk Concedes Distillation Is Common",
-          "body": "In the OpenAI trial, Musk was asked whether xAI had ever distilled technology from OpenAI and answered, in part, yes after saying AI companies generally distill from one another. That is a meaningful legal and industry signal because it frames distillation less as an edge case and more as a normalized competitive behavior.",
-          "url": "https://x.com/MTSlive/status/2049886679876632724"
+          "title": "@SaitoWu: Infrastructure Bottlenecks Still Rule AI",
+          "body": "A high-signal recap of a Reiner Pope talk focused on how transformers actually run in clusters: batching, KV cache, memory-vs-compute limits, MoE efficiency, and API pricing mechanics. The investing implication is that hardware plumbing and data movement still matter as much as model headlines.",
+          "url": "https://x.com/SaitoWu/status/2049801283067109587"
         },
         {
           "tag": "hot",
-          "title": "@xiaomustock: Google’s AI Moat May Be Cash Flow",
-          "body": "One of the sharper market takes argued that Google can pour roughly $60B a quarter into AI and still remain strongly profitable, while frontier challengers cannot match that financial self-funding. The investment takeaway is that distribution and balance-sheet strength may matter as much as model quality in the next phase of the race.",
-          "url": "https://x.com/xiaomustock/status/2049707179561676821"
+          "title": "@RnaudBertrand: Model Economics Can Dwarf Capability Gaps",
+          "body": "Back-of-the-envelope math on an 832M-token coding run suggested Anthropic Opus 4.7 could cost thousands of dollars where a DeepSeek run cost about $10. The exact number is debatable, but the message is clear: pricing structure can swamp benchmark-level capability differences.",
+          "url": "https://x.com/RnaudBertrand/status/2050168120728510623"
         },
         {
           "tag": "update",
-          "title": "@iamai_omni: TPU 8i Framed as an Agent-Workflow Edge",
-          "body": "A thoughtful post argued Google’s post-earnings strength is not just about spending more, but about TPUs fitting branching, tool-heavy agent workloads better than pure high-throughput GPU setups. If true, that would make inference orchestration and system design a real competitive wedge, not just a hardware footnote.",
-          "url": "https://x.com/iamai_omni/status/2049860253584670990"
+          "title": "@techeconomyana: The Microsoft Bull Case on Weakness",
+          "body": "One concise thesis argued Microsoft selloffs are buyable because Copilot margin leakage from pricing abuse is fixable with token-based billing, while GPT-5.5 strengthens the broader AI narrative that benefits Microsoft as a key supplier. It’s opinionated, but at least grounded in margin mechanics rather than pure cheerleading.",
+          "url": "https://x.com/techeconomyana/status/2049991164519223383"
+        },
+        {
+          "tag": "update",
+          "title": "@erchenlu1: Bitcoin’s Software-Governance Risk Is Underpriced",
+          "body": "A sharp contrarian post argued that valuing BTC like static digital gold ignores the fact that it is still a maintained software protocol with developers, miners, upgrades, and governance fault lines. Even if you stay bullish, it’s a useful reminder that software risk scales with asset size.",
+          "url": "https://x.com/erchenlu1/status/2050132245332332633"
+        },
+        {
+          "tag": "new",
+          "title": "@kevndriscoll: Connecticut’s AI Bill Clears the House",
+          "body": "Connecticut’s AI bill passed the House 131-17 after a similar effort died last year, and the governor is expected to sign it. The main signal is that state-level AI governance is starting to move from debate into actual law.",
+          "url": "https://x.com/kevndriscoll/status/2050306682568180099"
         }
       ]
     },
@@ -81,21 +88,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@VictorTaelin: Re-Explaining Context Is Still the Pain",
-          "body": "A widely resonant complaint argued that the worst part of working with AI is having to restate the same domain knowledge again and again, because long docs, RAG, and coarse skills all miss unknown-unknown context. It was one of the cleanest statements in the batch of why memory remains the core usability problem.",
-          "url": "https://x.com/VictorTaelin/status/2049838637983162711"
+          "title": "@CodeByNZ: Apple Accidentally Shipped `Claude.md` Files",
+          "body": "Apple reportedly left Claude.md files inside a new Apple Support app update, which is funny on the surface but revealing underneath. It’s a small leak that suggests internal AI-agent instructions are now embedded deeply enough in mainstream software orgs to show up in release artifacts.",
+          "url": "https://x.com/CodeByNZ/status/2050123209698066789"
         },
         {
           "tag": "update",
-          "title": "@HiTw93: Nontechnical AI Coders Still Need Basics",
-          "body": "A practical reminder: people using AI for coding do not need to become engineers, but they do benefit a lot from understanding fundamentals like Git, terminals, DevTools, components, and state. The deeper point is that better AI collaboration often comes from a small amount of systems literacy, not from better prompting alone.",
-          "url": "https://x.com/HiTw93/status/2049436090885357819"
+          "title": "@vikingmute: Don’t Let Coding Agents Turn Into Slot Machines",
+          "body": "A thoughtful response to ‘Claude Code is melting my brain’ argued for fewer parallel sessions, active review, deliberate learning, and time away from the screen instead of passive accept-clicking. Useful reminder that agent productivity can become cognitively flattening if you stop steering it.",
+          "url": "https://x.com/vikingmute/status/2050212242130657506"
         },
         {
           "tag": "update",
-          "title": "@randyloop: Paid App Launches Need Admin Prep",
-          "body": "A useful operational thread argued that Chinese developers should line up a company entity, an ICP-filed domain, and a D-U-N-S number before they need them, because distribution bottlenecks often show up late and cost weeks. It is a mundane but high-value reminder that paperwork and platform access are often the real launch critical path.",
-          "url": "https://x.com/randyloop/status/2049782377908732409"
+          "title": "@Yonah_x: What Strong AI-Era Talent Looks Like",
+          "body": "One practical framework for standout AI-era builders emphasized curiosity, agency, and a growth mindset over formal technical pedigree. That feels directionally right: the best operators may increasingly be the people who learn and adapt fastest, not just the ones with the cleanest resume.",
+          "url": "https://x.com/Yonah_x/status/2050112040706973944"
         }
       ]
     }
