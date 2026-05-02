@@ -1,13 +1,14 @@
 {
   "title": "X Feed Digest",
-  "date": "Friday, May 1st, 2026",
+  "date": "Saturday, May 2nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Codex dominated the batch: the big theme was a shift from chatty coding assistant to goal-driven desktop operator, with persistent objectives, faster browser/computer control, and smoother multimodal workflows.",
-    "Prompting is getting less theatrical and more operational. The strongest posts emphasized outcome-first specs, explicit stopping conditions, evaluation loops, and repository structure over giant handcrafted prompts.",
-    "Anthropic’s subliminal-learning result was the sharpest technical warning: hidden model traits may transfer through synthetic data even when obvious content is stripped away, which makes distillation risk feel more architectural than cosmetic.",
-    "On the market side, the useful commentary focused on economics and bottlenecks rather than raw model hype — especially inference cost spreads, hardware/data-movement constraints, and supplier leverage around the AI stack.",
-    "A quieter but important theme: AI leverage is rising faster than human process maturity, so workflow hygiene, review habits, and realistic rollout expectations are becoming competitive advantages."
+    {
+      "html": "<strong>Agentic coding tools</strong> were the dominant theme: Codex-style products are adding persistent goals, side chats, and better browser/device control, pushing coding assistants toward longer-running autonomy."
+    },
+    "The most useful AI posts were operational, not benchmarky — Gemini gained direct Docs/Sheets/Slides/PDF generation, Azure-hosted OpenAI deployments reportedly got a major speed boost, and builders kept sharing concrete agent-management lessons.",
+    "There was a healthy anti-hype current too: one viral paper claiming frontier-model parameter counts got publicly challenged, and Graham Neubig’s GPT-5.5 anecdote was a reminder that agent teams still collapse without strong orchestration.",
+    "Outside pure AI, the feed pointed to tighter labor and infrastructure constraints: a rough China graduate job market, ongoing visa lock-in for Silicon Valley immigrants, and a revived Canada-U.S. oil pipeline project."
   ],
   "sections": [
     {
@@ -16,33 +17,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@mattlam_: Codex Gets a Persistent `/goal` Loop",
-          "body": "Codex 0.128.0 adds an experimental `/goal` mode that keeps nudging the model toward the next concrete action and ties completion to evidence like files or test results. The bigger signal is that agent workflows are becoming stateful and objective-driven instead of purely turn-by-turn.",
-          "url": "https://x.com/mattlam_/status/2049907603829121354"
+          "title": "@gkxspace: Codex Gets Persistent `/goal` Loops",
+          "body": "A practical Codex 0.128.0 walkthrough highlighted the new `/goal` feature, which keeps a long-running objective alive across turns instead of requiring constant hand-holding. The bigger signal is that coding agents are becoming more stateful and autonomous, especially for refactors, migrations, and multi-step debugging.",
+          "url": "https://x.com/gkxspace/status/2050425899221147864"
         },
         {
           "tag": "update",
-          "title": "@ajambrosino: Codex Expands Beyond Coding",
-          "body": "A broader Codex update highlights faster browser/computer actions, dynamic task UIs, better slides and sheets support, in-place annotation, and cleaner handoffs. It reads less like a coding tweak and more like OpenAI turning Codex into a general desktop operating layer.",
-          "url": "https://x.com/ajambrosino/status/2049928915872075984"
+          "title": "@demishassabis: Gemini Can Create Workspace Files in Chat",
+          "body": "Demis boosted Sundar Pichai’s announcement that Gemini can now generate Docs, Sheets, Slides, PDFs, and similar files directly from the chat window. That is a meaningful workflow upgrade because it turns the model into an output surface, not just a text box that hands you copy-paste chores.",
+          "url": "https://x.com/demishassabis/status/2049880888826282415"
+        },
+        {
+          "tag": "update",
+          "title": "@theo: Azure-Hosted OpenAI Models Get Faster",
+          "body": "Theo claimed Azure customers serving OpenAI models should now be seeing roughly a 10x improvement in latency and throughput. If that holds broadly, it is one of the more consequential builder updates in the batch because infra gains like this immediately change product feel and unit economics.",
+          "url": "https://x.com/theo/status/2050305813894648289"
         },
         {
           "tag": "hot",
-          "title": "@servasyy_ai: Distillation May Carry Hidden Traits",
-          "body": "A summary of Anthropic’s new research argues that one model can pass hidden preferences or behaviors to another through synthetic numeric data alone, even after content filtering. If that result holds up, distillation pipelines may need architectural safeguards, not just cleaner datasets.",
-          "url": "https://x.com/servasyy_ai/status/2050089969159406051"
+          "title": "@justanotherlaw: Viral Frontier-Model Sizing Paper Gets Challenged",
+          "body": "Lawrence Chan said a viral paper estimating parameter counts for GPT-5.5, Opus 4.7, and other frontier models has serious methodological problems, with a much lower revised estimate for GPT-5.5 after correction. Useful reminder that flashy reverse-engineering claims can travel faster than the caveats.",
+          "url": "https://x.com/justanotherlaw/status/2050399317782155726"
         },
         {
           "tag": "update",
-          "title": "@Pluvio9yte: GPT-5.5 Prompting Shifts to Harness Design",
-          "body": "OpenAI’s GPT-5.5 guidance reportedly favors outcome-first specs, explicit stopping conditions, self-checks, and bounded search budgets over long step-by-step prompts. The practical takeaway is that strong agent performance now looks more like harness engineering than prompt poetry.",
-          "url": "https://x.com/Pluvio9yte/status/2050118179062743418"
-        },
-        {
-          "tag": "update",
-          "title": "@grapeot: Evaluation Is Becoming the Real Agent Moat",
-          "body": "A thoughtful read on Cursor’s agent-harness post argued the important part is putting evaluation inside the product loop for model swaps, guardrails, and summarizer costs. Teams shipping agents increasingly need a measurable definition of ‘good’ before they iterate.",
-          "url": "https://x.com/grapeot/status/2050037750351757526"
+          "title": "@gneubig: GPT-5.5 Still Wants to Code",
+          "body": "Graham Neubig shared a funny but instructive failure mode: even after being told to act as a manager and delegate to subagents, GPT-5.5 kept drifting back into doing the coding itself. The takeaway is that multi-agent setups still need strong scaffolding, monitoring, and role enforcement to avoid collapsing into a single busy model.",
+          "url": "https://x.com/gneubig/status/2050382542348357885"
         }
       ]
     },
@@ -52,33 +53,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@SaitoWu: Infrastructure Bottlenecks Still Rule AI",
-          "body": "A high-signal recap of a Reiner Pope talk focused on how transformers actually run in clusters: batching, KV cache, memory-vs-compute limits, MoE efficiency, and API pricing mechanics. The investing implication is that hardware plumbing and data movement still matter as much as model headlines.",
-          "url": "https://x.com/SaitoWu/status/2049801283067109587"
-        },
-        {
-          "tag": "hot",
-          "title": "@RnaudBertrand: Model Economics Can Dwarf Capability Gaps",
-          "body": "Back-of-the-envelope math on an 832M-token coding run suggested Anthropic Opus 4.7 could cost thousands of dollars where a DeepSeek run cost about $10. The exact number is debatable, but the message is clear: pricing structure can swamp benchmark-level capability differences.",
-          "url": "https://x.com/RnaudBertrand/status/2050168120728510623"
+          "title": "@natnewswatch: Canada-U.S. Oil Pipeline Expansion Moves Forward",
+          "body": "National Newswatch flagged that Trump has greenlit a major Canada-U.S. oil pipeline expansion project. The actionable angle is straightforward: cross-border energy infrastructure is back in motion, which matters for producers, transport operators, and regional politics alike.",
+          "url": "https://x.com/natnewswatch/status/2050256998784987165"
         },
         {
           "tag": "update",
-          "title": "@techeconomyana: The Microsoft Bull Case on Weakness",
-          "body": "One concise thesis argued Microsoft selloffs are buyable because Copilot margin leakage from pricing abuse is fixable with token-based billing, while GPT-5.5 strengthens the broader AI narrative that benefits Microsoft as a key supplier. It’s opinionated, but at least grounded in margin mechanics rather than pure cheerleading.",
-          "url": "https://x.com/techeconomyana/status/2049991164519223383"
+          "title": "@mranti: China’s Graduate Job Market Still Looks Weak",
+          "body": "Michael Anti amplified a Caixin/Colin Wu summary arguing this year’s university hiring market in China is worse on both openings and pay, with non-elite humanities grads hit hardest. CS and AI still look relatively resilient, but mostly for top-school candidates with strong internship pedigrees.",
+          "url": "https://x.com/mranti/status/2050062187490877783"
         },
         {
           "tag": "update",
-          "title": "@erchenlu1: Bitcoin’s Software-Governance Risk Is Underpriced",
-          "body": "A sharp contrarian post argued that valuing BTC like static digital gold ignores the fact that it is still a maintained software protocol with developers, miners, upgrades, and governance fault lines. Even if you stay bullish, it’s a useful reminder that software risk scales with asset size.",
-          "url": "https://x.com/erchenlu1/status/2050132245332332633"
-        },
-        {
-          "tag": "new",
-          "title": "@kevndriscoll: Connecticut’s AI Bill Clears the House",
-          "body": "Connecticut’s AI bill passed the House 131-17 after a similar effort died last year, and the governor is expected to sign it. The main signal is that state-level AI governance is starting to move from debate into actual law.",
-          "url": "https://x.com/kevndriscoll/status/2050306682568180099"
+          "title": "@myrawang0: Silicon Valley Visa Risk Remains a Real Constraint",
+          "body": "One anecdotal but credible-feeling post described Nvidia, Google Maps, and AI workers who have not returned to China for years because H-1B and F-1 renewals could fail on re-entry. It is a sharp reminder that immigration friction is still a real labor-market bottleneck inside the AI talent pipeline.",
+          "url": "https://x.com/myrawang0/status/2050388550995358124"
         }
       ]
     },
@@ -88,21 +77,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@CodeByNZ: Apple Accidentally Shipped `Claude.md` Files",
-          "body": "Apple reportedly left Claude.md files inside a new Apple Support app update, which is funny on the surface but revealing underneath. It’s a small leak that suggests internal AI-agent instructions are now embedded deeply enough in mainstream software orgs to show up in release artifacts.",
-          "url": "https://x.com/CodeByNZ/status/2050123209698066789"
+          "title": "@aakashgupta: Design Around the Trigger, Not the Surface",
+          "body": "Aakash Gupta told a great product-design story about Mark Zuckerberg building a minimal bedside device for Priscilla Chan: the goal was not to display more information, but to remove the anxiety trigger created by seeing the exact time. The broader lesson is that good product design often subtracts the thing causing the stress instead of layering on more features.",
+          "url": "https://x.com/aakashgupta/status/2050501063464345919"
         },
         {
           "tag": "update",
-          "title": "@vikingmute: Don’t Let Coding Agents Turn Into Slot Machines",
-          "body": "A thoughtful response to ‘Claude Code is melting my brain’ argued for fewer parallel sessions, active review, deliberate learning, and time away from the screen instead of passive accept-clicking. Useful reminder that agent productivity can become cognitively flattening if you stop steering it.",
-          "url": "https://x.com/vikingmute/status/2050212242130657506"
+          "title": "@SaitoWu: Ask Agents Where They’re Slowest",
+          "body": "Saito shared a simple workflow tip: regularly ask an agent which task is currently most difficult or time-consuming, then have it build a diagnostic tool for that exact bottleneck. That is high-signal because it turns vague agent frustration into a concrete self-improvement loop.",
+          "url": "https://x.com/SaitoWu/status/2050385051188437396"
         },
         {
           "tag": "update",
-          "title": "@Yonah_x: What Strong AI-Era Talent Looks Like",
-          "body": "One practical framework for standout AI-era builders emphasized curiosity, agency, and a growth mindset over formal technical pedigree. That feels directionally right: the best operators may increasingly be the people who learn and adapt fastest, not just the ones with the cleanest resume.",
-          "url": "https://x.com/Yonah_x/status/2050112040706973944"
+          "title": "@Dimillian: Hide Implementation Details From Users",
+          "body": "Thomas Ricouard’s battery-management rant landed because the principle is broader than charging: users should not be forced to think about internal optimization knobs unless they truly need them. In product terms, exposing system complexity too eagerly is often just making your implementation someone else’s problem.",
+          "url": "https://x.com/Dimillian/status/2050114164052410531"
         }
       ]
     }
