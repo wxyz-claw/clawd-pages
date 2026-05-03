@@ -1,0 +1,401 @@
+[
+  {
+    "id": "2032519515817599047",
+    "text": "GPT-5.4 loses 54% of its retrieval accuracy going from 256K to 1M tokens. Opus 4.6 loses 15%.\n\nEvery major AI lab now claims a 1 million token context window. GPT-5.4 launched eight days ago with 1M. Gemini 3.1 Pro has had it. But the number on the spec sheet and the number that actually works are two very different things.\n\nThis chart uses MRCR v2, OpenAI’s own benchmark. It hides 8 identical pieces of information across a massive conversation and asks the model to find a specific one. Basically a stress test for “can you actually find what you need in 750,000 words of text.”\n\nAt 256K tokens, the models are close enough. Opus 4.6 scores 91.9%, Sonnet 4.6 hits 90.6%, GPT-5.4 sits at 79.3% (averaged across 128K to 256K, per the chart footnote). Scale to 1M and the curves blow apart. GPT-5.4 drops to 36.6%, finding the right answer about one in three times. Gemini 3.1 Pro falls to 25.9%. Opus 4.6 holds at 78.3%.\n\nResearchers call this “context rot.” Chroma tested 18 frontier models in 2025 and found every single one got worse as input length increased. Most models decay exponentially. Opus barely bends.\n\nThen there’s the pricing. Today’s announcement removes the long-context premium entirely. A 900K-token Opus 4.6 request now costs the same per-token rate as a 9K request, $5/$25 per million tokens. GPT-5.4 still charges 2x input and 1.5x output for anything over 272K tokens. So you pay more for a model that retrieves correctly about a third of the time at full context.\n\nFor anyone building agents that run for hours, processing legal docs across hundreds of pages, or loading entire codebases into one session, the only number that matters is whether the model can actually find what you put in. At 1M tokens, that gap between these models just got very wide.",
+    "createdAt": "Fri Mar 13 18:09:49 +0000 2026",
+    "replyCount": 72,
+    "retweetCount": 178,
+    "likeCount": 1839,
+    "conversationId": "2032519515817599047",
+    "author": {
+      "username": "AnishA_Moonka",
+      "name": "Anish Moonka"
+    },
+    "authorId": "999564240850640897",
+    "quotedTweet": {
+      "id": "2032509548297343196",
+      "text": "1 million context window: Now generally available for Claude Opus 4.6 and Claude Sonnet 4.6. https://t.co/jreruGukcm",
+      "createdAt": "Fri Mar 13 17:30:13 +0000 2026",
+      "replyCount": 1156,
+      "retweetCount": 1966,
+      "likeCount": 24579,
+      "conversationId": "2032509548297343196",
+      "author": {
+        "username": "claudeai",
+        "name": "Claude"
+      },
+      "authorId": "1943306828697550848",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HDTovvJaMAI8jWP.png",
+          "width": 1920,
+          "height": 1080,
+          "previewUrl": "https://pbs.twimg.com/media/HDTovvJaMAI8jWP.png:small"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2032635370089693456",
+    "text": "agent-browser is now fully native Rust.\n\nThe results: 1.6x faster cold start. 18x less memory. 99x smaller install.\n\nLess abstraction means faster shipping, more control, and capabilities that weren't possible before.\n\nNow with 140+ commands across navigation, interaction, state management, network control, debugging, and multi-engine support.\n\nIt's become the tool we wished existed when we started building it.\n\nThanks to everyone who reported issues, contributed fixes, and helped shape this release. More to come.",
+    "createdAt": "Sat Mar 14 01:50:11 +0000 2026",
+    "replyCount": 115,
+    "retweetCount": 147,
+    "likeCount": 2260,
+    "conversationId": "2032635370089693456",
+    "author": {
+      "username": "ctatedev",
+      "name": "Chris Tate"
+    },
+    "authorId": "152108221",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDVfGNGXkAA7lOa.jpg",
+        "width": 1836,
+        "height": 958,
+        "previewUrl": "https://pbs.twimg.com/media/HDVfGNGXkAA7lOa.jpg:small"
+      }
+    ]
+  },
+  {
+    "id": "2032815633037996446",
+    "text": "Chrome 内置 MCP 支持 早在 144 就支持了。\n结果今天才有这么多人发。\n\n另外，这个方案非常方便但是也要注意它的问题\n第一是这个非常的费 token\n第二个是现在这种类似 MCP 的操作是完全可以被检测到的，就看平台方怎么处理\n\nchrome://inspect/#remote-debugging 这个144+ 就支持了，还没有试过的也可以去试一下",
+    "createdAt": "Sat Mar 14 13:46:29 +0000 2026",
+    "replyCount": 11,
+    "retweetCount": 3,
+    "likeCount": 64,
+    "conversationId": "2032815633037996446",
+    "author": {
+      "username": "jakevin7",
+      "name": "卡比卡比"
+    },
+    "authorId": "1068172934630395904"
+  },
+  {
+    "id": "2032794334089884023",
+    "text": "RIP flat RAG ☠️\n\nByteDance just open-sourced OpenViking and it exposes everything wrong with how we've been building AI agent memory.\n\nHere's what every agent framework gets wrong:\n\nMemories live in one place. Resources in another. Skills scattered everywhere. And when you need context, you're doing flat vector search and hoping for the best.\n\nThat's the problem. OpenViking fixes all of it with one idea: treat agent context like a file system.\n\nEverything lives under a unified viking:// protocol. Memories, resources, skills all organized in directories with unique URIs. Agents can ls, find, and navigate context like a developer working a terminal.\n\nBut the real breakthrough is tiered loading:\n\n→ L0: one-sentence abstract for quick lookup\n→ L1: ~2k token overview for planning decisions\n→ L2: full details loaded only when actually needed\n\nMost agents dump everything into context and pray. OpenViking loads only what's needed, when it's needed. Token costs drop. Accuracy goes up.\n\nAnd retrieval actually makes sense now. Instead of one flat semantic search, it does directory-level positioning first, then recursive refinement inside high-score directories. You can literally watch the retrieval trajectory  no more black box.\n\nThe self-evolution piece is wild too. At the end of every session, it automatically extracts learnings and updates agent and user memory. The agent just gets smarter the more you use it.\n\n9K stars. 13 contributors. Built by the ByteDance Viking team that's been running vector infrastructure since 2019.\n\n100% Opensource. Apache 2.0.\n\nLink in comments.",
+    "createdAt": "Sat Mar 14 12:21:51 +0000 2026",
+    "replyCount": 45,
+    "retweetCount": 142,
+    "likeCount": 939,
+    "conversationId": "2032794334089884023",
+    "author": {
+      "username": "ihtesham2005",
+      "name": "Ihtesham Ali"
+    },
+    "authorId": "1983182860388577282",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDXvrGeaQAAf_Fc.jpg",
+        "width": 1340,
+        "height": 1406,
+        "previewUrl": "https://pbs.twimg.com/media/HDXvrGeaQAAf_Fc.jpg:small"
+      }
+    ]
+  },
+  {
+    "id": "2033031825140949208",
+    "text": "This two-week promo tells you more about AI infrastructure economics than any earnings call this quarter.\n\nAnthropic hit $19 billion in annualized revenue as of early March. They raised $30 billion at a $380 billion valuation five weeks ago. Claude Code alone crossed $2.5 billion annualized, doubled since January.\n\nAnd they have so much spare GPU capacity outside a six-hour weekday window that they can double usage for free across every tier.\n\nThat’s the demand curve problem. Peak hours (8am to 2pm ET) consume the infrastructure. The other 18 hours per day, plus all of Saturday and Sunday, the GPUs sit underutilized. You’re paying for hardware sized to handle Monday at 10am, then watching it idle at 9pm.\n\nRun the actual numbers. Anthropic expects to spend roughly $7 billion on inference this year and another $12 billion training models. If utilization outside peak drops even 40%, billions in capacity sits dormant for 75% of the week.\n\nElectricity companies solved this decades ago. Time-of-use rates, off-peak discounts, demand response programs. Fixed infrastructure, variable demand, massive waste during idle periods. The economics are identical.\n\nTwo weeks of doubled off-peak limits generates exactly the behavioral data Anthropic needs: does free capacity actually pull users into evenings and weekends? If it does, they just discovered a lever that smooths GPU demand without building a single new data center.\n\nThe AI lab that cracks utilization shaping first gets the equivalent of a free fleet of H100s. Anthropic just started the clock.",
+    "createdAt": "Sun Mar 15 04:05:33 +0000 2026",
+    "replyCount": 24,
+    "retweetCount": 11,
+    "likeCount": 201,
+    "conversationId": "2033031825140949208",
+    "author": {
+      "username": "aakashgupta",
+      "name": "Aakash Gupta"
+    },
+    "authorId": "101805159",
+    "quotedTweet": {
+      "id": "2032911276226257206",
+      "text": "A small thank you to everyone using Claude: We’re doubling usage outside our peak hours for the next two weeks. https://t.co/W7TEBPditq",
+      "createdAt": "Sat Mar 14 20:06:32 +0000 2026",
+      "replyCount": 1519,
+      "retweetCount": 2906,
+      "likeCount": 40901,
+      "conversationId": "2032911276226257206",
+      "author": {
+        "username": "claudeai",
+        "name": "Claude"
+      },
+      "authorId": "1943306828697550848",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2032910823761551360/img/UIg7tG1Nfxhik5L-.jpg",
+          "width": 1920,
+          "height": 1080,
+          "previewUrl": "https://pbs.twimg.com/amplify_video_thumb/2032910823761551360/img/UIg7tG1Nfxhik5L-.jpg:small",
+          "videoUrl": "https://video.twimg.com/amplify_video/2032910823761551360/vid/avc1/1920x1080/Bqvup0wP4l8iicwB.mp4?tag=21",
+          "durationMs": 8208
+        }
+      ]
+    }
+  },
+  {
+    "id": "2033039474842865902",
+    "text": "Polymarket 上有关期中选举后参议院多数赢家的赌局中，民主党的期望值已经超过 50%，力压共和党。这在一年前是难以想象的。\n\n那时共和党保住多数的预期值在 80%以上。这也好理解，那时看到民主党能在2026年底反转的席位只有两席：缅因与北卡。其它红州都看不到翻转的可能。反倒是民主党自己有几席需要奋力防守。\n\n然而，事情从川普的四月“关税日”开始起了变化。下面我用 Kashi 网站的截屏来展示共和党守住参议院的希望是如何一步步被川普摧毁的。Kashi 是与 Polymarket 类似的预测赌博网站。两者关于未来事件的预测数据大同小异。\n\n如图中所示，关税日之后，共和党的期望便下了一个 10% 的台阶，从 80%降到 70%，然后一直持平，直到年地的“爱泼斯坦文件”争议。那件事逼反了一小批比较原教旨、有相对独立性的嘛噶，如马大姐。从此，共和党的希望便每下愈况，到上月底之前共跌了10%，降到 60%。\n\n然后便是两周前川普对伊朗开战。很快我就看到又一批嘛噶倒戈，其中一些人可以说愤怒值爆棚，后果是迅速将共和党参议院多数的期望值拉到 50%之下，完成所谓“死亡交叉”；当然对于上升中的民主党而言，这是“黄金交叉”。\n\n以上是big picture的整体预期。那么具体哪些共和党席位最可能遭到民主党反转呢？就是下面6席，按反转可能性由高到低排列：\n1）北卡： 82%\n2）缅因州： 71%\n3）俄亥俄： 53%\n4）阿拉斯加： 53%\n5）德克萨斯： 45%\n6）爱荷华： 42%\n\n1-4）民主党的期望都在 50%以上，1-2）可以说铁定，3-4）的期望还在上升中。只要拿下这四席，民主党就成功地夺回参议院，让川普在后半个任期彻底跛脚。\n\n然而好事不止于此。按照目前的势头发展下去，德州与爱荷华的两席也都有可能被民主党拿下。德州一席的意义重大，因它是美国第二大州，共和党的老巢重镇，自从1990年以来，民主党就没能在这里赢过联邦参议员选举。如果那位年轻后生 James Talarico 能在年底击败对手，无论是现任的 John Cornyn 还是一身丑闻的 Ken Paxton，都无异于在美国政坛引爆重型炸弹，沉重打击共和党的士气。\n\n如果民主党更进一步，连爱荷华的席位也收下，那么新的参议院将是现在的镜像，即 民主党53 vs 共和党47，算是民主党赢了“大满贯”。如果拿到德州但没有爱荷华，那也可以算是“小满贯”。总之，赢了德州的席位以及参议院多数就可以称“满贯”。\n\n下面细看这六席的战况。",
+    "createdAt": "Sun Mar 15 04:35:57 +0000 2026",
+    "replyCount": 1,
+    "retweetCount": 7,
+    "likeCount": 62,
+    "conversationId": "2033039474842865902",
+    "author": {
+      "username": "free_and_true",
+      "name": "硅谷码农"
+    },
+    "authorId": "263472219",
+    "quotedTweet": {
+      "id": "2025399317859893252",
+      "text": "这里的概率是关于众议院，没什么悬念。看点在参议院。原本民主党无望夺回多数，能不掉席次已经不错。然而经过川普民调一年的下滑与嘛噶的内讧之后，民主党已经坐二望四：很高可能翻转缅因与北卡，也有希望在俄亥俄、爱荷华、阿拉斯加与得克萨斯中翻转两席，这样民主党就可以在参议院以51席拿下多数。这个可能性目前不到40%，但我相信是可以实现的。",
+      "createdAt": "Sun Feb 22 02:36:42 +0000 2026",
+      "replyCount": 19,
+      "retweetCount": 7,
+      "likeCount": 102,
+      "conversationId": "2025399317859893252",
+      "author": {
+        "username": "free_and_true",
+        "name": "硅谷码农"
+      },
+      "authorId": "263472219"
+    },
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDbCRB2aMAIvJc_.jpg",
+        "width": 956,
+        "height": 754,
+        "previewUrl": "https://pbs.twimg.com/media/HDbCRB2aMAIvJc_.jpg:small"
+      }
+    ]
+  },
+  {
+    "id": "2032966857066688640",
+    "text": "btw every single compute infra provider’s chart, including render competitors, is looking like this. something broke in Dec 2025 and everything is becoming computer.\n\nforget GPU shortage, forget Memory shortage, the @fabknowledge pod on LS was right, there is going to be a CPU shortage",
+    "createdAt": "Sat Mar 14 23:47:24 +0000 2026",
+    "replyCount": 37,
+    "retweetCount": 22,
+    "likeCount": 620,
+    "conversationId": "2032966857066688640",
+    "author": {
+      "username": "swyx",
+      "name": "swyx"
+    },
+    "authorId": "33521530",
+    "quotedTweet": {
+      "id": "2032939764601729537",
+      "text": "This chart shows the number of paid services created on @render each week.\n\nWe're doing alright. https://t.co/HHZ0Y3U0im",
+      "createdAt": "Sat Mar 14 21:59:44 +0000 2026",
+      "replyCount": 19,
+      "retweetCount": 10,
+      "likeCount": 175,
+      "conversationId": "2032939764601729537",
+      "author": {
+        "username": "anuraggoel",
+        "name": "Anurag Goel"
+      },
+      "authorId": "14927721",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HDZzIB5aMAEHmXN.png",
+          "width": 628,
+          "height": 552,
+          "previewUrl": "https://pbs.twimg.com/media/HDZzIB5aMAEHmXN.png:small"
+        }
+      ]
+    }
+  },
+  {
+    "id": "2032804985390694573",
+    "text": "my homelab was running abnormally hot after shifting it to a new spot. asked claude code to investigate.\n\nit ssh'd into the machine, found beszel (monitoring tool) stores metrics in sqlite, wrote a python script to analyze 30 days of temperature data across all sensors - cpu, gpu, nvme, wifi module etc.\n\nthe script detected spikes: cpu went from ~46°C baseline to 82°C. cleverly, it used the wifi module (which generates almost no heat) as an ambient temperature proxy inside the case. wifi went from 34°C → 54°C, suggesting that the air inside the case itself was hotter.\n\nthen it checked thermal throttle states via sysfs, correlated cpu load vs temperature, and confirmed the cpu cooler was working fine but the case exhaust fan is likely dead.. and it was right! 🤯the header connection became loose during relocation.\n\npretty neat for a vibe debugging session.",
+    "createdAt": "Sat Mar 14 13:04:10 +0000 2026",
+    "replyCount": 27,
+    "retweetCount": 30,
+    "likeCount": 861,
+    "conversationId": "2032804985390694573",
+    "author": {
+      "username": "mrkaran_",
+      "name": "Karan Sharma"
+    },
+    "authorId": "71795977",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDX5MO1bsAAU8Ih.jpg",
+        "width": 1185,
+        "height": 904,
+        "previewUrl": "https://pbs.twimg.com/media/HDX5MO1bsAAU8Ih.jpg:small"
+      }
+    ]
+  },
+  {
+    "id": "2033152573033914722",
+    "text": "A PhD student at Oxford got caught submitting \"AI-generated\" work.\n\nExcept he hadn't used AI to write anything.\n\nHe used it to think.\n\nHere's the workflow his advisor called \"the most sophisticated research process I've seen in 20 years.\"\n\nHe starts every essay with a brutal diagnostic prompt.\n\nDumps his rough argument into Claude and asks: \"What are the 3 weakest logical jumps in this reasoning? Where would a hostile examiner attack first?\"\n\nThe AI doesn't write his essay. It destroys his draft.\n\nThen he rebuilds.\n\nBut the next step is what separates him from every other student using ChatGPT or Claude to generate paragraphs.\n\nHe uploads the top 5 papers in his field and asks: \"What claims in my argument contradict or oversimplify what these authors actually found?\"\nMost students cite papers they've skimmed. He cites papers he's been forced to genuinely understand.\n\nThe final move is almost unfair.\n\nBefore submitting, he pastes his conclusion and asks: \"What would a philosopher of science say is missing from this argument? What assumptions am I making that I haven't defended?\"\n\nHis essays come back with comments like \"unusually rigorous\" and \"demonstrates rare critical depth.\"\n\nHe's not using AI to write.\n\nHe's using it to think harder than he could alone.\n\nThe tool hasn't changed. The workflow has.",
+    "createdAt": "Sun Mar 15 12:05:22 +0000 2026",
+    "replyCount": 6,
+    "retweetCount": 15,
+    "likeCount": 67,
+    "conversationId": "2033152573033914722",
+    "author": {
+      "username": "ihtesham2005",
+      "name": "Ihtesham Ali"
+    },
+    "authorId": "1983182860388577282",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDc1fZ9bgAAz96l.jpg",
+        "width": 1600,
+        "height": 900,
+        "previewUrl": "https://pbs.twimg.com/media/HDc1fZ9bgAAz96l.jpg:small"
+      }
+    ]
+  },
+  {
+    "id": "2033064878857208007",
+    "text": "嗯，这个我也有，在每个项目都有一个READMEFIRST.md，就是保证重启Claude Code之后能准确继续干活，效果很好。而且不仅仅是退出的时候这么做，而是保证每完成一个小事都自动记录，以防因为特殊原因中断。",
+    "createdAt": "Sun Mar 15 06:16:54 +0000 2026",
+    "replyCount": 6,
+    "retweetCount": 15,
+    "likeCount": 99,
+    "conversationId": "2033064878857208007",
+    "author": {
+      "username": "mranti",
+      "name": "Michael Anti"
+    },
+    "authorId": "5709522",
+    "quotedTweet": {
+      "id": "2032771610881700274",
+      "text": "Agent 工作交接利器：继任者 Prompt\n\n使用 Codex / Claude Code / Gemini CLI 的一个技巧：如果对话太长，AI的幻觉越来越多，问题越来越难以解决，不妨开一个新的会话。在退出前让它做一下工作交接，Prompt 可以这样说：\n\n> 本次对话的上下文已经太长了，我打算关掉并重新开一个新的会话。你有什么想对你的继任者说的，以便它能更好的理解你当前的工作并顺利继续？\n\n这个版本是我9个月前发布的，一直用到现在。\n\n[Embedded Tweet: https://x.com/i/status/1939309508842639854]\n\n最近我突然领悟到一项新技能，我称之为「Prompt 自举」，就是我先写一段 Prompt，算是我的原始需求，然后交给 AI 打磨，以实现「左脚踩右脚上天」的效果。\n\n我知道这听起来好像没什么，但产生的效果惊人。我过去的很多所谓“自创”的 Prompt，在 AI 打磨后都变得惊人的好。\n\n这是升级后的版本（建议无脑用这个版本就好。当然也可以根据自身需求，交给 AI 在此基础上继续迭代）：\n\n[Embedded Tweet: https://x.com/i/status/2032770329702265299]",
+      "createdAt": "Sat Mar 14 10:51:33 +0000 2026",
+      "replyCount": 13,
+      "retweetCount": 52,
+      "likeCount": 229,
+      "conversationId": "2032771610881700274",
+      "author": {
+        "username": "cholf5",
+        "name": "周尔复"
+      },
+      "authorId": "213267726",
+      "article": {
+        "title": "Agent 工作交接利器：继任者 Prompt",
+        "previewText": "使用 Codex / Claude Code / Gemini CLI 的一个技巧：如果对话太长，AI的幻觉越来越多，问题越来越难以解决，不妨开一个新的会话。在退出前让它做一下工作交接，Prompt 可以这样说："
+      }
+    }
+  },
+  {
+    "id": "2032885424209932711",
+    "text": "My current agentic workflow is about 5x faster, better quality, I understand the system better, and I’m having fun again.\n\nMy previous workflows have left me exhausted, overwhelmed, and feeling out of touch with the systems I was building. They also degraded quality too much.\n\nThis is way better.\n\nI’m not ready to describe in detail. It’s still evolving a bit. But I’ll give you a high level here.\n\nI call this the Night Shift workflow.",
+    "createdAt": "Sat Mar 14 18:23:48 +0000 2026",
+    "replyCount": 61,
+    "retweetCount": 49,
+    "likeCount": 1131,
+    "conversationId": "2032885424209932711",
+    "author": {
+      "username": "jamonholmgren",
+      "name": "Jamon"
+    },
+    "authorId": "30273948"
+  },
+  {
+    "id": "2032967611319988395",
+    "text": "To reiterate a few things so they don't get lost:\n\n1. I never want to review another agent-produced plan again. Waste of my time, overwhelming, not worth it. It's valuable *to the agent*, but not to me.\n\n2. I will burn all the tokens, run all the tests, do all the validations to make sure that when the work product lands on my desk, it's as good as the agents can make it. My time and energy is the most important thing here.\n\n3. The feedback loop is critical: I'll work on the process, docs, and specs as much as I need to, in order to reap the benefits in future sessions. No more manual guidance via interactive sessions (with the exception of exploratory hacking).",
+    "createdAt": "Sat Mar 14 23:50:23 +0000 2026",
+    "replyCount": 29,
+    "retweetCount": 18,
+    "likeCount": 580,
+    "conversationId": "2032967611319988395",
+    "author": {
+      "username": "jamonholmgren",
+      "name": "Jamon"
+    },
+    "authorId": "30273948",
+    "quotedTweet": {
+      "id": "2032885424209932711",
+      "text": "My current agentic workflow is about 5x faster, better quality, I understand the system better, and I’m having fun again.\n\nMy previous workflows have left me exhausted, overwhelmed, and feeling out of touch with the systems I was building. They also degraded quality too much.\n\nThis is way better.\n\nI’m not ready to describe in detail. It’s still evolving a bit. But I’ll give you a high level here.\n\nI call this the Night Shift workflow.",
+      "createdAt": "Sat Mar 14 18:23:48 +0000 2026",
+      "replyCount": 61,
+      "retweetCount": 49,
+      "likeCount": 1131,
+      "conversationId": "2032885424209932711",
+      "author": {
+        "username": "jamonholmgren",
+        "name": "Jamon"
+      },
+      "authorId": "30273948"
+    }
+  },
+  {
+    "id": "2033089346459635799",
+    "text": "Claude Code can run entirely on your local GPU now.\n\nUnsloth AI published the complete guide.\n\nThe setup itself is straightforward - llama.cpp serves Qwen3.5 or GLM-4.7-Flash, one environment variable redirects Claude Code to localhost.\n\nBut the guide is valuable because of what it explains beyond the setup:\n\nWhy local inference feels impossibly slow: Claude Code adds an attribution header that breaks KV caching. Every request recomputes the full context. The fix requires editing settings.json - export doesn't work.\n\nWhy Qwen3.5 outputs seem off: f16 KV cache degrades accuracy, and it's llama.cpp's default. Multiple reports confirm this. Use q8_0 or bf16 instead.\n\nWhy responses take forever: Thinking mode is great for reasoning but slow for agentic tasks. The guide shows how to disable it.\n\nThe proof it all works: Claude Code autonomously fine-tuning a model with Unsloth. Start to finish. No API dependency.\n\nFits on 24GB. RTX 4090, Mac unified memory.",
+    "createdAt": "Sun Mar 15 07:54:07 +0000 2026",
+    "replyCount": 26,
+    "retweetCount": 45,
+    "likeCount": 394,
+    "conversationId": "2033089346459635799",
+    "author": {
+      "username": "techNmak",
+      "name": "Tech with Mak"
+    },
+    "authorId": "1818381581897412608",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDb744taMAQaQkS.jpg",
+        "width": 1280,
+        "height": 1472,
+        "previewUrl": "https://pbs.twimg.com/media/HDb744taMAQaQkS.jpg:small"
+      }
+    ]
+  },
+  {
+    "id": "2033093295052829161",
+    "text": "🚨Breaking: Someone just open sourced a knowledge graph engine for your codebase and it's terrifying how good it is.\n\nIt's called GitNexus. And it's not a documentation tool.\n\nIt's a full code intelligence layer that maps every dependency, call chain, and execution flow in your repo -- then plugs directly into Claude Code, Cursor, and Windsurf via MCP.\n\nHere's what this thing does autonomously:\n\n→ Indexes your entire codebase into a graph with Tree-sitter AST parsing\n→ Maps every function call, import, class inheritance, and interface\n→ Groups related code into functional clusters with cohesion scores\n→ Traces execution flows from entry points through full call chains\n→ Runs blast radius analysis before you change a single line\n→ Detects which processes break when you touch a specific function\n→ Renames symbols across 5+ files in one coordinated operation\n→ Generates a full codebase wiki from the knowledge graph automatically\n\nHere's the wildest part:\n\nYour AI agent edits UserService.validate().\n\nIt doesn't know 47 functions depend on its return type.\n\nBreaking changes ship.\n\nGitNexus pre-computes the entire dependency structure at index time -- so when Claude Code asks \"what depends on this?\", it gets a complete answer in 1 query instead of 10.\n\nSmaller models get full architectural clarity. Even GPT-4o-mini stops breaking call chains.\n\nOne command to set it up:\n`npx gitnexus analyze`\n\nThat's it. MCP registers automatically. Claude Code hooks install themselves.\n\nYour AI agent has been coding blind. This fixes that.\n\n9.4K GitHub stars. 1.2K forks. Already trending.\n\n100% Open Source.\n\n(Link in the comments)",
+    "createdAt": "Sun Mar 15 08:09:49 +0000 2026",
+    "replyCount": 25,
+    "retweetCount": 70,
+    "likeCount": 357,
+    "conversationId": "2033093295052829161",
+    "author": {
+      "username": "sukh_saroy",
+      "name": "Sukh Sroay"
+    },
+    "authorId": "1912650940555137025",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDb_k-PaMAYPDbK.png",
+        "width": 800,
+        "height": 569,
+        "previewUrl": "https://pbs.twimg.com/media/HDb_k-PaMAYPDbK.png:small"
+      }
+    ]
+  },
+  {
+    "id": "2032939863696388237",
+    "text": "I just read Anthropic's internal prompting docs.\n\n99% of people are skipping the one technique their own engineers use on every single prompt.\n\nXML tags.\n\nNot because it looks clean. Because Claude's architecture actually processes tagged content differently than plain text.\n\nHere's what changes when you add them:\n\nWhen you write a prompt as one block of text, Claude treats instructions, context, and examples as one continuous signal. It has to infer where each part starts and stops. That inference fails more than you think.\n\nXML eliminates the inference entirely.\n\n<instructions> tells Claude exactly what to do.\n\n<context> gives it background without contaminating the task.\n\n<examples> shows the format without Claude treating samples as commands.\n\n<input> isolates the variable content from everything else.\n\nThe output consistency difference on complex prompts is wild.\n\nThree things from the docs that nobody talks about:\n\n→ Queries belong at the bottom. Put long documents at the top, instructions in the middle, your actual question last. Anthropic says this improves response quality up to 30% on multi-document tasks.\n\n→ Always wrap examples in <example> tags. Without them, Claude sometimes blends your sample outputs into its instructions. With them, it treats examples as reference, not directive.\n\n→ For multiple documents, nest them. <documents> → <document index=\"n\"> → <document_content> and <source> inside each. Claude parses structure directly instead of guessing document boundaries.\n\nYou don't need better words in your prompts.\n\nYou need better architecture around those words.",
+    "createdAt": "Sat Mar 14 22:00:08 +0000 2026",
+    "replyCount": 28,
+    "retweetCount": 71,
+    "likeCount": 844,
+    "conversationId": "2032939863696388237",
+    "author": {
+      "username": "ihtesham2005",
+      "name": "Ihtesham Ali"
+    },
+    "authorId": "1983182860388577282",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HDZ0CFcaMAAjVaQ.jpg",
+        "width": 1538,
+        "height": 1256,
+        "previewUrl": "https://pbs.twimg.com/media/HDZ0CFcaMAAjVaQ.jpg:small"
+      }
+    ]
+  }
+]

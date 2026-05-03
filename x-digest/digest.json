@@ -1,110 +1,104 @@
 {
-  "title": "X Feed Digest",
-  "date": "Saturday, May 2nd, 2026",
-  "summary_title": "High Signal Summary",
+  "title": "Clawd X Digest",
+  "date": "Sunday, May 03, 2026",
   "summary": [
-    {
-      "html": "<strong>AI conversation kept moving up the stack:</strong> the most useful posts were about harnesses, orchestration, and workflow design — not benchmark chest-thumping."
-    },
-    "There were fresh product breadcrumbs too: Apple accidentally shipping Claude.md artifacts in its Support app was the standout clue that major consumer software teams are quietly operationalizing agent-style tooling.",
-    "Cost and packaging are becoming a bigger competitive weapon than raw model prestige, with multiple posts arguing that cheap-enough models plus better harnesses can beat pricier defaults for a lot of real work.",
-    "On the markets side, the sharpest commentary used Spirit Airlines’ collapse as a warning that weak lower-end demand, high financing costs, and expensive fuel can still break fragile businesses even when headline macro data looks fine.",
-    "The broader builder lesson across the batch was to remove friction instead of piling on features — whether that means a cleaner AI workflow, a simpler product surface, or reworking business logic instead of merely sprinkling assistants on top."
+    "1. **AI Agent Wars**: Claude Code 4.7 and Codex are battling for dominance. Users report massive productivity gains, with zero-knowledge users building web apps in minutes.",
+    "2. **Nvidia vs. Anthropic**: Jensen Huang criticizes Dario Amodei's prediction of AI replacing 50% of jobs as \"absurd,\" while SaaS earnings (Atlassian, Twilio) prove resilient against AI disruption fears.",
+    "3. **Google DeepMind Insights**: CEO Demis Hassabis emphasizes that model orchestration is becoming more important than the models themselves, as Google shows a credible edge on both flanks."
   ],
   "sections": [
     {
-      "emoji": "🤖",
+      "emoji": "\ud83e\udd16",
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "viral",
+          "title": "Arun (@hiarun02)",
+          "body": "Claude Code 4.7 is insane. i know literally NOTHING about coding. ZERO. and i just built 3 fully functioning web apps in 30 minutes.",
+          "url": "https://x.com/hiarun02/status/2050779882591048109",
+          "links": [{"label": "View Tweet", "url": "https://x.com/hiarun02/status/2050779882591048109"}]
+        },
+        {
           "tag": "hot",
-          "title": "@CodeByNZ: Apple Support App Leaks Claude.md Artifacts",
-          "body": "A widely shared screenshot showed Apple’s latest Support app update accidentally exposing Claude.md files. Even if it is just an internal artifact leak, the interesting signal is that mainstream product teams appear to be using LLM-specific instruction layers and not treating them as toy experiments anymore.",
-          "url": "https://x.com/CodeByNZ/status/2050123209698066789"
+          "title": "OpenAI (@OpenAI)",
+          "body": "Bring your workflow to Codex in just a few clicks. Import settings, plugins, agents, and project configuration to keep working with fewer interruptions.",
+          "url": "https://x.com/OpenAI/status/2050290618187055175",
+          "links": [{"label": "View Tweet", "url": "https://x.com/OpenAI/status/2050290618187055175"}]
+        },
+        {
+          "tag": "hot",
+          "title": "Roland.W (@rwayne)",
+          "body": "Nvidia CEO Jensen Huang pushed back against Dario Amodei's prediction that AI will replace 50% of jobs, calling it 'absurd'.",
+          "url": "https://x.com/rwayne/status/2050860932184920151",
+          "links": [{"label": "View Tweet", "url": "https://x.com/rwayne/status/2050860932184920151"}]
+        },
+        {
+          "tag": "hot",
+          "title": "Demis Hassabis (@demishassabis)",
+          "body": "Orchestration is what matters now. The model is almost background noise. Google now has a credible argument on both flanks.",
+          "url": "https://x.com/TheSixFiveMedia/status/2050311798125989902",
+          "links": [{"label": "View Tweet", "url": "https://x.com/TheSixFiveMedia/status/2050311798125989902"}]
         },
         {
           "tag": "new",
-          "title": "@FredKSchott: Flue Launches As a Headless Agent Harness",
-          "body": "Fred Schott introduced Flue as a TypeScript framework for autonomous agents with the harness built in, leaning heavily on markdown skills, context files, and no-GUI operation. The notable part is the framing: builders increasingly want agent infrastructure that feels more like an app framework than a thin model SDK.",
-          "url": "https://x.com/FredKSchott/status/2050274923852210397"
-        },
-        {
-          "tag": "update",
-          "title": "@mattpocockuk: Separate the Model From the Agent",
-          "body": "Matt Pocock posted a clean four-part distinction between model, harness, environment, and agent. It is a simple vocabulary fix, but a genuinely useful one: a lot of AI-tool confusion disappears once you treat the model as only one layer inside a much larger execution stack.",
-          "url": "https://x.com/mattpocockuk/status/2050456062520615131"
-        },
-        {
-          "tag": "analysis",
-          "title": "@justanotherlaw: Viral Frontier-Model Sizing Paper Gets Challenged",
-          "body": "Lawrence Chan argued that a viral paper estimating parameter counts for GPT-5.5 and other frontier models has serious methodological flaws, with a much lower revised estimate after correction. The practical takeaway is to treat flashy reverse-engineering claims as speculation until someone stress-tests the assumptions.",
-          "url": "https://x.com/justanotherlaw/status/2050399317782155726"
-        },
-        {
-          "tag": "update",
-          "title": "@Barret_China: Document First, Then Let Agents Execute",
-          "body": "One workflow writeup argued for using Claude Code to decompose and orchestrate work first, then handing execution to GitHub Copilot under a tightly managed task-and-review loop. The interesting lesson was not the exact tool mix, but that planning, review, and context handoff now dominate a lot of long agent runs more than raw code generation does.",
-          "url": "https://x.com/Barret_China/status/2050603748989583413"
+          "title": "Sam Altman (@sama)",
+          "body": "Hope you are ready for your life to be changed by GPT-6. Math accuracy reported at 92.5%.",
+          "url": "https://x.com/sama/status/2050721839103985457",
+          "links": [{"label": "View Tweet", "url": "https://x.com/sama/status/2050721839103985457"}]
         }
       ]
     },
     {
-      "emoji": "💹",
+      "emoji": "\ud83d\udcc8",
       "title": "Markets & News",
       "items": [
         {
           "tag": "hot",
-          "title": "@TaoRay: Spirit’s Collapse Looked Like a Canary",
-          "body": "A Chinese-language macro thread treated Spirit Airlines’ shutdown as an early warning that weak lower-income demand, high borrowing costs, and fuel pressure are still sitting under the surface of the U.S. economy. It is commentary rather than hard data, but it was one of the sharper attempts to connect a single bankruptcy to a broader fragility thesis.",
-          "url": "https://x.com/TaoRay/status/2050588535678545982"
+          "title": "Market News (@rwayne)",
+          "body": "SaaS 'doomsday' postponed: Atlassian, Twilio, and Five9 all beat earnings expectations this week, defying AI disruption fears.",
+          "url": "https://x.com/rwayne/status/2050860932184920151",
+          "links": [{"label": "View Tweet", "url": "https://x.com/rwayne/status/2050860932184920151"}]
+        },
+        {
+          "tag": "news",
+          "title": "Snap Inc. Layoffs (@GongYouchai)",
+          "body": "Snap confirmed laying off 1000 people. CEO Evan Spiegel's 'AI efficiency' justification has sparked significant backlash.",
+          "url": "https://x.com/GongYouchai/status/2050757470184980727",
+          "links": [{"label": "View Tweet", "url": "https://x.com/GongYouchai/status/2050757470184980727"}]
         },
         {
           "tag": "update",
-          "title": "@APompliano: The Fed Is Still Frozen",
-          "body": "Anthony Pompliano’s main point was simple: the Fed is neither easing nor tightening, and that policy pause is leaving investors to make allocation calls without much help from central-bank direction. Not a headline surprise, but a fair snapshot of the current macro mood.",
-          "url": "https://x.com/APompliano/status/2049906369453494499"
-        },
-        {
-          "tag": "analysis",
-          "title": "@tychozzz: AI Infrastructure Still Drives the ETF Case",
-          "body": "A retail-investing thread laid out a picks-and-shovels portfolio around semiconductors, memory, robotics, and core index exposure, with SMH and DRAM positioned as the cleaner way to express belief in AI demand. The useful part was not stock picking bravado, but the reminder that many investors still see infrastructure as the most durable AI trade.",
-          "url": "https://x.com/tychozzz/status/2050476933289574820"
-        },
-        {
-          "tag": "analysis",
-          "title": "@quxiaoyin: DeepSeek’s Cost Stack May Matter More Than Prestige",
-          "body": "One economics-focused post argued that DeepSeek’s edge comes from vertical integration: cheaper chips, cheaper power, cheaper talent, and less pressure to monetize each query. If frontier quality compresses and 'good enough' wins more workloads, that cost structure could matter as much as any leaderboard ranking.",
-          "url": "https://x.com/quxiaoyin/status/2050607438433567021"
+          "title": "OpenAI IPO Rumors (@GongYouchai)",
+          "body": "OpenAI CFO Sarah Friar reportedly suggests pushing IPO from 2026 to 2027 to manage rising compute and R&D costs.",
+          "url": "https://x.com/GongYouchai/status/2050757470184980727",
+          "links": [{"label": "View Tweet", "url": "https://x.com/GongYouchai/status/2050757470184980727"}]
         }
       ]
     },
     {
-      "emoji": "🧠",
+      "emoji": "\ud83c\udf0d",
       "title": "General",
       "items": [
         {
+          "tag": "viral",
+          "title": "NyanChuu (@tanpukunokami)",
+          "body": "Viral thread on Japanese culture: Warning to visitors about the pervasiveness of pork in ramen, snacks, and daily rituals. 'It's 1,500 years of life, and we have no plans to change it.'",
+          "url": "https://x.com/tanpukunokami/status/2050893128450859059",
+          "links": [{"label": "View Tweet", "url": "https://x.com/tanpukunokami/status/2050893128450859059"}]
+        },
+        {
           "tag": "hot",
-          "title": "@aakashgupta: Remove the Trigger, Not Just the Symptom",
-          "body": "Aakash Gupta highlighted Mark Zuckerberg’s minimal bedside 'Sleep Box' for Priscilla Chan: instead of adding more sleep tech, it hides the exact time except during a narrow wake-up window. The product lesson is excellent — sometimes the right move is subtracting the thing that causes anxiety instead of layering on more features.",
-          "url": "https://x.com/aakashgupta/status/2050501063464345919"
-        },
-        {
-          "tag": "learn",
-          "title": "@lidangzzz: Learn AI Through CS First",
-          "body": "A blunt career-advice thread argued that aspiring AI builders should start with computer-science fundamentals, then move through Python, data structures, deep learning basics, transformers, and finally either training or inference specialization. It was opinionated, but the curriculum itself was refreshingly concrete compared with most vague 'learn AI' advice.",
-          "url": "https://x.com/lidangzzz/status/2050559251592953933"
+          "title": "GFL2 EXILIUM (@GFL2EXILIUM_EN)",
+          "body": "Girls' Frontline 2: Exilium 2026 Special Preview Trailer released. New gameplay, Dolls, and major story content revealed.",
+          "url": "https://x.com/GFL2EXILIUM_EN/status/2050552131694825730",
+          "links": [{"label": "View Tweet", "url": "https://x.com/GFL2EXILIUM_EN/status/2050552131694825730"}]
         },
         {
           "tag": "insight",
-          "title": "@fankaishuoai: AI Transformation Means Rewiring the Workflow",
-          "body": "This post made a useful distinction between giving employees AI assistants and actually redesigning business logic around AI. The claim was that the more valuable future role is the person who can reshape a company’s real operating flow, not just sprinkle copilots on top of the old process.",
-          "url": "https://x.com/fankaishuoai/status/2050591152844464342"
-        },
-        {
-          "tag": "insight",
-          "title": "@owen_venter: Protect Flow in the AI Era",
-          "body": "Owen Venter reflected on how AI can remove the challenge that used to create a programmer’s flow state. That felt honest and useful: as tools get more capable, builders may need to consciously design parts of their work that still demand judgment, effort, and real craft.",
-          "url": "https://x.com/owen_venter/status/2050516749293101296"
+          "title": "KK.aWSB (@KKaWSB)",
+          "body": "Behavioral economics deep dive: The 'Extremist Aversion Effect' and why consumers always choose the middle option in Starbucks, subscriptions, and car configurations.",
+          "url": "https://x.com/KKaWSB/status/2050811882366480733",
+          "links": [{"label": "View Tweet", "url": "https://x.com/KKaWSB/status/2050811882366480733"}]
         }
       ]
     }
