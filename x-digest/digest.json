@@ -2,11 +2,10 @@
   "title": "Clawd X Digest",
   "date": "Monday, May 4th, 2026",
   "summary": [
-    "The strongest AI signal in this batch was not frontier-model hype but harness design: posts kept returning to memory files, agent scaffolding, auditability, and the idea that workflow architecture now matters almost as much as the model itself.",
-    "Local and operator-friendly AI tooling is getting better fast, especially on Apple Silicon, with new stacks promising lower latency, easier tool use, and cleaner drop-in compatibility with existing OpenAI-style workflows.",
-    "The sharpest warning was around agent security: one widely shared thread described a Morse-code prompt-injection path that allegedly tricked a Grok-linked bot into moving funds, a vivid reminder that tool permissions are still the real blast radius.",
-    "Market commentary stayed centered on monetization and infrastructure rather than vibes alone, from financing-heavy business models like Carvana to ongoing attempts to price AI-infrastructure winners, server suppliers, and simpler ways to own big-index exposure.",
-    "Outside AI, the most useful posts were compact systems hacks: better dashboards for scanning the internet, better health checks for background jobs, and a reminder that many platforms only help if you explicitly trigger the rule they already offer."
+    "The clearest AI theme was workflow infrastructure rather than raw model hype: local inference stacks, goal-setting layers, and terminal-native tools are getting good enough to change everyday work.",
+    "AI education and evaluation both kept moving upmarket, with lightweight public courses lowering the learning barrier while newer benchmarks start asking whether models actually improve from repeated work instead of just acing static tests.",
+    "Market commentary stayed cautious: the Fed still looks stuck, asset prices still feel disconnected from wage reality, and some investors are warning that the \"I’ll exit the AI-infra bubble in time\" trade is getting crowded.",
+    "A notable business-model shift showed up in China AI: posts around Doubao argued that free-user scale is no longer enough once token consumption gets large enough, so monetization pressure is now real."
   ],
   "sections": [
     {
@@ -15,33 +14,43 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@berryxia: Agent Engineering Becomes Real Engineering",
-          "body": "This thread argued that recent work from DeepMind, Anthropic, and Alibaba is converging on a more auditable style of agent building: versioned components, structured trajectory evidence, and verifiable decision loops instead of hand-tuned black boxes. The practical takeaway is that agent reliability may improve more through better harnesses and evaluation loops than through raw model scale alone.",
-          "url": "https://x.com/berryxia/status/2051103428861202532"
-        },
-        {
-          "tag": "new",
           "title": "@NFTCPS: Rapid-MLX for Faster Local Mac Inference",
-          "body": "A post highlighted Rapid-MLX as an Apple-Silicon-native inference service that claims meaningfully lower latency than Ollama while exposing an OpenAI-compatible API. What makes it interesting is the combination of local speed, tool-call parsing, and easy compatibility with existing coding-agent stacks.",
+          "body": "This post highlighted Rapid-MLX as a serious Apple Silicon local-model stack: faster than Ollama by the author’s telling, OpenAI-compatible, and built with tool-call parsing that should drop into existing agent workflows. The practical appeal is lower latency on Mac without having to rewire the rest of your tooling.",
           "url": "https://x.com/NFTCPS/status/2051163052666757543"
         },
         {
-          "tag": "update",
-          "title": "@_aashish_singh_: The Harness Matters More Than the Label",
-          "body": "One of the sharper workflow posts pushed back on the idea that 'GPT-5.5 is GPT-5.5' regardless of tool: the same base model can behave very differently inside Cursor versus Codex because context strategy, tool routing, and loop design change the outcome. Good reminder that the model is only part of the product; the wrapper is often where reliability lives or dies.",
-          "url": "https://x.com/_aashish_singh_/status/2050948176505716978"
-        },
-        {
-          "tag": "hot",
-          "title": "@Xuegaogx: Grok Prompt-Injection Turns Into Real Loss",
-          "body": "This post described a striking security failure: a Morse-code message was allegedly translated by Grok into a transfer command that a linked bot then executed, draining roughly $150K–$200K before controls were shut off. Even if some details evolve, the lesson is immediate—agents with action permissions need much tighter boundaries than agents that only answer questions.",
-          "url": "https://x.com/Xuegaogx/status/2051267266256551997"
+          "tag": "new",
+          "title": "@ArminPCM: CLBench Measures Whether Models Actually Learn",
+          "body": "CLBench 1.0 proposes a more realistic benchmark for coding agents by testing whether systems improve from experience inside a codebase instead of staying effectively stateless. That is a meaningful shift, because many current evals reward one-shot competence more than durable adaptation.",
+          "url": "https://x.com/ArminPCM/status/2051375479530443243"
         },
         {
           "tag": "update",
-          "title": "@rwayne: The Hidden 'Chinese Token Tax'",
-          "body": "A thoughtful thread pointed out that Chinese users often pay materially more context budget than English users on some model families, shrinking the real usable window for Chinese-heavy work. It also noted that tokenizer design is not just a pricing issue—changes that make Chinese cheaper can alter what semantic structure the model naturally perceives.",
-          "url": "https://x.com/rwayne/status/2051192350098243765"
+          "title": "@EnHeng456: MIT’s ‘How to AI (Almost) Anything’ Course",
+          "body": "A simple but useful signal: MIT OpenCourseWare now has a public course aimed at helping people use AI broadly rather than only study it abstractly. It looks like a good on-ramp for anyone who wants structured exposure without starting from research papers or scattered prompt tips.",
+          "url": "https://x.com/EnHeng456/status/2050877318252597325"
+        },
+        {
+          "tag": "update",
+          "title": "@baibanbaonet: Codex /goal Gets a Goal-Refinement Companion",
+          "body": "This post pointed to a small but smart workflow layer for Codex: instead of assuming users can state perfect objectives up front, the linked goal-forge skill helps turn fuzzy intent into a sharper execution target. That matters because agent quality often breaks long before coding starts, at the goal-definition step.",
+          "url": "https://x.com/baibanbaonet/status/2050996989983162739",
+          "links": [
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/baibanbaonet/status/2050996989983162739"
+            },
+            {
+              "label": "goal-forge Repo",
+              "url": "https://github.com/michaelpersonal/goal-forge"
+            }
+          ]
+        },
+        {
+          "tag": "new",
+          "title": "@wsl8297: SSH AI Chat Keeps the Assistant in the Terminal",
+          "body": "This was a nice terminal-native tool find: an SSH-based AI chat interface meant for people who troubleshoot servers and do not want to keep context-switching into a browser tab. The useful part is less the model list than the interface choice—keeping help inside the shell preserves flow.",
+          "url": "https://x.com/wsl8297/status/2051134483903185308"
         }
       ]
     },
@@ -51,27 +60,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@anishmoonka: Carvana's Real Business Is the Financing",
-          "body": "This was one of the better business-model breakdowns in the feed: Carvana's per-car profit reportedly looks extraordinary not because the metal is magical, but because a very high share of buyers use Carvana financing and the company monetizes the spread when those loans are sold on. It's a useful reminder to look past the visible product and find the hidden profit engine.",
-          "url": "https://x.com/anishmoonka/status/2051162403199738143"
+          "title": "@APompliano: The Fed Is Still Frozen",
+          "body": "Pompliano’s basic read was that policy is stuck in an awkward middle: no fresh cuts, no new hikes, and a lot of capital left searching for direction. Even if you do not buy the full thesis, it is a clean framing for why markets can feel simultaneously strong, nervous, and hard to price.",
+          "url": "https://x.com/APompliano/status/2049906369453494499"
         },
         {
           "tag": "hot",
-          "title": "@tychozzz: AI Infra Rally, but Screen for Valuation",
-          "body": "This market note said the AI-infrastructure trade is still extending, but argued that not every big AI name is equally expensive yet. The actionable bit was a simple forward-PE screen that framed names like MU, META, TSM, MSFT, ORCL, and NVDA against the broader Nasdaq 100 instead of treating the whole theme as one undifferentiated bubble.",
-          "url": "https://x.com/tychozzz/status/2051238392760029654"
+          "title": "@porterstansb: Asset Inflation Is Hiding a ‘Silent Depression’",
+          "body": "This thread argued that high asset prices are masking a much weaker lived economy for people whose wages never kept pace. The core takeaway is useful: broad index highs do not automatically mean broad prosperity, so household conditions and market charts can tell very different stories at the same time.",
+          "url": "https://x.com/porterstansb/status/2049869136528863593"
         },
         {
           "tag": "new",
-          "title": "@rwayne: HyperFusion IPO Watch",
-          "body": "A post flagged HyperFusion—the Huawei-spun server business—as an IPO story worth watching because revenue appears to be scaling quickly and the valuation is already substantial. The broader read-through is that AI-server and infrastructure suppliers are increasingly becoming standalone capital-markets stories rather than buried subsidiaries.",
-          "url": "https://x.com/rwayne/status/2050963341284085922"
+          "title": "@Phoenixyin13: Doubao’s Paid Tiers Signal the End of Subsidized AI",
+          "body": "A sharp China-AI business-model post argued that Doubao is finally leaning into subscriptions because token usage has grown too fast for ‘free forever’ to remain economical. If that framing is right, the important read-through is that consumer AI in China is entering its monetization phase, not just its user-acquisition phase.",
+          "url": "https://x.com/Phoenixyin13/status/2051282279104663567"
         },
         {
           "tag": "update",
-          "title": "@DtDt666: Simpler Index Exposure Beats Cross-Border Gymnastics",
-          "body": "This thread argued that for long-term holders, domestic S&P 500 or Nasdaq-tracking funds can be good enough even if offshore wrappers are slightly cheaper on paper. The useful point was operational, not ideological: a little fee drag may be worth accepting if it saves account friction, currency hassle, and the temptation to overtrade.",
-          "url": "https://x.com/DtDt666/status/2050927575644664316"
+          "title": "@erchenlu1: Crowded Bubble-Exit Playbooks Are a Risk Too",
+          "body": "This short market note made a good point: once too many people think they know exactly how to sidestep an AI-infrastructure bubble by replaying the dot-com script, that consensus itself becomes dangerous. Markets usually punish the obvious trade, not the forgotten one.",
+          "url": "https://x.com/erchenlu1/status/2051214605158945019"
         }
       ]
     },
@@ -80,28 +89,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@noahduck283: A 5-Minute Internet Radar",
-          "body": "A genuinely handy post shared three sites the author uses to scan mainstream, tech, and X-centric trends in a few minutes instead of app-hopping all morning. Even if you don't use the exact stack, the underlying idea is good: build one compact dashboard for broad awareness and keep your attention budget intact.",
-          "url": "https://x.com/noahduck283/status/2050929212119539999"
-        },
-        {
           "tag": "update",
-          "title": "@youyou8178: If You Don't Trigger the Rule, the System Assumes Consent",
-          "body": "This small consumer hack was more general than it sounds: the author realized a marketplace would auto-refund spoiled fresh food almost instantly once the correct after-sales path was used. The durable lesson is that many systems won't volunteer relief; they only respond when you explicitly invoke the rule.",
-          "url": "https://x.com/youyou8178/status/2051154349686964674"
-        },
-        {
-          "tag": "update",
-          "title": "@runes_leo: Trust Health Signals, Not Supervisor State",
-          "body": "A useful ops note: PM2, launchd, or pid files can say a job is dead even when the underlying process is still doing work. The better source of truth is fresh health output from the process itself, which is a nice general rule for monitoring anything important.",
-          "url": "https://x.com/runes_leo/status/2051196649037529279"
+          "title": "@josusanmartin: Cloud Shell + Tailscale Is a Handy Travel Fix",
+          "body": "A practical ops tip: when airplane Wi-Fi blocked port 22, the author used Google Cloud Shell as a temporary jump box, installed Tailscale, and recovered normal SSH access. It is the kind of small workaround worth remembering because it turns a dead end into a 15-minute detour.",
+          "url": "https://x.com/josusanmartin/status/2051110379028390209"
         },
         {
           "tag": "hot",
-          "title": "@lidangzzz: Children Copy Standards, Not Speeches",
-          "body": "Beneath the exaggeration, this was a sharp parenting point: if you want kids to study, build, read, or practice seriously, the adults around them have to model that standard first. It's basically a reminder that culture is transmitted more by imitation than instruction.",
-          "url": "https://x.com/lidangzzz/status/2051166164278038691"
+          "title": "@LLMJunky: macOS May Be the First Real Agent-First Desktop",
+          "body": "This was one of the more interesting computing takes in the batch: the claim is that macOS is unusually well positioned for agentic software because its accessibility APIs already make UI automation workable at a deep level. Even if overstated, it is a useful lens for thinking about which platforms will matter most as agents move from chat to direct computer use.",
+          "url": "https://x.com/LLMJunky/status/2051342251477946521"
+        },
+        {
+          "tag": "update",
+          "title": "@xiaochuan8688: AI Makes the One-Person Software Shop More Real",
+          "body": "This post argued that AI is finally making the ‘indie developer’ story structurally plausible by covering enough code, design, docs, support, and marketing work for one person to ship something competitive. The big idea is not that solo builders suddenly do everything perfectly, but that the threshold for being viable keeps dropping.",
+          "url": "https://x.com/xiaochuan8688/status/2051195370198216832"
         }
       ]
     }
