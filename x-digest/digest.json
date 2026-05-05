@@ -1,11 +1,11 @@
 {
   "title": "Clawd X Digest",
-  "date": "Monday, May 4th, 2026",
+  "date": "Tuesday, May 5th, 2026",
   "summary": [
-    "The clearest AI theme was workflow infrastructure rather than raw model hype: local inference stacks, goal-setting layers, and terminal-native tools are getting good enough to change everyday work.",
-    "AI education and evaluation both kept moving upmarket, with lightweight public courses lowering the learning barrier while newer benchmarks start asking whether models actually improve from repeated work instead of just acing static tests.",
-    "Market commentary stayed cautious: the Fed still looks stuck, asset prices still feel disconnected from wage reality, and some investors are warning that the \"I’ll exit the AI-infra bubble in time\" trade is getting crowded.",
-    "A notable business-model shift showed up in China AI: posts around Doubao argued that free-user scale is no longer enough once token consumption gets large enough, so monetization pressure is now real."
+    "Agent tooling was the clearest real signal in this batch: official releases from Anthropic, OpenAI, and Cognition all pushed beyond raw model quality toward alignment methods, sandboxed execution, and security workflows.",
+    "The practical workflow theme was continuity and auditability. Posts about Obsidian-backed memory, SKILL DAGs, PR-attached repro videos, and Claude usage reports all pointed to the same idea: better agent systems come from stronger scaffolding, not just smarter models.",
+    "AI business chatter stayed focused on monetization and spend. The strongest commentary centered on whether hyperscaler AI capex is arriving ahead of demand and whether consumer AI products like Doubao can finally convert heavy usage into paid subscriptions.",
+    "Macro conviction still looked thin. Fed-policy limbo and selective portfolio-rotation posts suggested people are still willing to take risk, but they want clearer earnings and cash-flow proof before fully leaning in."
   ],
   "sections": [
     {
@@ -14,43 +14,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@NFTCPS: Rapid-MLX for Faster Local Mac Inference",
-          "body": "This post highlighted Rapid-MLX as a serious Apple Silicon local-model stack: faster than Ollama by the author’s telling, OpenAI-compatible, and built with tool-call parsing that should drop into existing agent workflows. The practical appeal is lower latency on Mac without having to rewire the rest of your tooling.",
-          "url": "https://x.com/NFTCPS/status/2051163052666757543"
+          "title": "@AnthropicAI: Model Spec Midtraining",
+          "body": "Anthropic shared new research on Model Spec Midtraining, an alignment approach that tries to teach models how desired behavior should generalize, not just what outputs to copy. The interesting part is the shift from example-only training toward explicitly shaping generalization rules.",
+          "url": "https://x.com/AnthropicAI/status/2051758528562364902"
+        },
+        {
+          "tag": "hot",
+          "title": "@OpenAIDevs: TypeScript Agents SDK",
+          "body": "OpenAI rolled out a TypeScript version of its Agents SDK with sandbox-agent support and an open-source harness teams can inspect or customize. That makes production agent work a bit less magical and a lot more controllable.",
+          "url": "https://x.com/OpenAIDevs/status/2051725072873001338"
         },
         {
           "tag": "new",
-          "title": "@ArminPCM: CLBench Measures Whether Models Actually Learn",
-          "body": "CLBench 1.0 proposes a more realistic benchmark for coding agents by testing whether systems improve from experience inside a codebase instead of staying effectively stateless. That is a meaningful shift, because many current evals reward one-shot competence more than durable adaptation.",
-          "url": "https://x.com/ArminPCM/status/2051375479530443243"
+          "title": "@cognition: Devin for Security",
+          "body": "Cognition introduced Devin for Security, framing security remediation as an engineering-capacity problem rather than a pure detection problem. The pitch is straightforward: reduce security debt and shrink response time as AI speeds up the attacker side.",
+          "url": "https://x.com/cognition/status/2051708729880416614"
         },
         {
           "tag": "update",
-          "title": "@EnHeng456: MIT’s ‘How to AI (Almost) Anything’ Course",
-          "body": "A simple but useful signal: MIT OpenCourseWare now has a public course aimed at helping people use AI broadly rather than only study it abstractly. It looks like a good on-ramp for anyone who wants structured exposure without starting from research papers or scattered prompt tips.",
-          "url": "https://x.com/EnHeng456/status/2050877318252597325"
-        },
-        {
-          "tag": "update",
-          "title": "@baibanbaonet: Codex /goal Gets a Goal-Refinement Companion",
-          "body": "This post pointed to a small but smart workflow layer for Codex: instead of assuming users can state perfect objectives up front, the linked goal-forge skill helps turn fuzzy intent into a sharper execution target. That matters because agent quality often breaks long before coding starts, at the goal-definition step.",
-          "url": "https://x.com/baibanbaonet/status/2050996989983162739",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/baibanbaonet/status/2050996989983162739"
-            },
-            {
-              "label": "goal-forge Repo",
-              "url": "https://github.com/michaelpersonal/goal-forge"
-            }
-          ]
+          "title": "@steipete: Video-Backed Agent QA",
+          "body": "Steipete showed agents reproducing bugs inside ephemeral crabboxes and attaching WebVNC videos back to pull requests. That is a genuinely useful QA pattern because reviewers can see the exact failing state instead of trusting a vague repro description.",
+          "url": "https://x.com/steipete/status/2051557150040711425"
         },
         {
           "tag": "new",
-          "title": "@wsl8297: SSH AI Chat Keeps the Assistant in the Terminal",
-          "body": "This was a nice terminal-native tool find: an SSH-based AI chat interface meant for people who troubleshoot servers and do not want to keep context-switching into a browser tab. The useful part is less the model list than the interface choice—keeping help inside the shell preserves flow.",
-          "url": "https://x.com/wsl8297/status/2051134483903185308"
+          "title": "@berryxia: MATLAB Agentic Toolkit",
+          "body": "A post highlighting MathWorks' new MATLAB Agentic Toolkit says agents can work directly against live MATLAB and Simulink sessions with built-in skills for engineering workflows. If it holds up, that widens serious agent usage beyond the usual Python-first tooling stack.",
+          "url": "https://x.com/berryxia/status/2051678496502722569"
         }
       ]
     },
@@ -60,27 +50,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@APompliano: The Fed Is Still Frozen",
-          "body": "Pompliano’s basic read was that policy is stuck in an awkward middle: no fresh cuts, no new hikes, and a lot of capital left searching for direction. Even if you do not buy the full thesis, it is a clean framing for why markets can feel simultaneously strong, nervous, and hard to price.",
-          "url": "https://x.com/APompliano/status/2049906369453494499"
-        },
-        {
-          "tag": "hot",
-          "title": "@porterstansb: Asset Inflation Is Hiding a ‘Silent Depression’",
-          "body": "This thread argued that high asset prices are masking a much weaker lived economy for people whose wages never kept pace. The core takeaway is useful: broad index highs do not automatically mean broad prosperity, so household conditions and market charts can tell very different stories at the same time.",
-          "url": "https://x.com/porterstansb/status/2049869136528863593"
-        },
-        {
-          "tag": "new",
-          "title": "@Phoenixyin13: Doubao’s Paid Tiers Signal the End of Subsidized AI",
-          "body": "A sharp China-AI business-model post argued that Doubao is finally leaning into subscriptions because token usage has grown too fast for ‘free forever’ to remain economical. If that framing is right, the important read-through is that consumer AI in China is entering its monetization phase, not just its user-acquisition phase.",
-          "url": "https://x.com/Phoenixyin13/status/2051282279104663567"
+          "title": "@TheSixFiveMedia: AI CapEx Debate",
+          "body": "One of the sharper market posts in the batch framed the argument around roughly $700B of AI capex: are hyperscalers overspending, or are they still early relative to demand? The tension was strong AI-linked growth numbers on one side and weak stock-price reward plus thin enterprise penetration on the other.",
+          "url": "https://x.com/TheSixFiveMedia/status/2051716501569524162"
         },
         {
           "tag": "update",
-          "title": "@erchenlu1: Crowded Bubble-Exit Playbooks Are a Risk Too",
-          "body": "This short market note made a good point: once too many people think they know exactly how to sidestep an AI-infrastructure bubble by replaying the dot-com script, that consensus itself becomes dangerous. Markets usually punish the obvious trade, not the forgotten one.",
-          "url": "https://x.com/erchenlu1/status/2051214605158945019"
+          "title": "@APompliano: Fed in Holding Pattern",
+          "body": "Pompliano's read is that the Fed is effectively frozen, leaving investors without a clean signal on where policy goes next. It is commentary, but it neatly matches the broader mood of cautious risk-taking without full conviction.",
+          "url": "https://x.com/APompliano/status/2049906369453494499"
+        },
+        {
+          "tag": "new",
+          "title": "@yanhua1010: Doubao Tests Consumer AI Pricing",
+          "body": "A thoughtful breakdown of ByteDance's Doubao subscription launch argued the real signal is timing, not sticker price: user growth has matured, inference still costs real money, and the market may finally be ready to pay for heavy AI usage. If the category leader cannot convert here, that is a warning for the wider consumer-AI model.",
+          "url": "https://x.com/yanhua1010/status/2051639851011953094"
+        },
+        {
+          "tag": "update",
+          "title": "@tychozzz: Meta-over-Google Rotation Thesis",
+          "body": "One portfolio post laid out a clean rotation thesis: trim Google after a big run and move some capital into Meta because the valuation and path to another 30% upside look easier. It is just one investor's view, but it was one of the more concrete pieces of market reasoning in the feed.",
+          "url": "https://x.com/tychozzz/status/2051674003547578389"
         }
       ]
     },
@@ -89,22 +79,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@josusanmartin: Cloud Shell + Tailscale Is a Handy Travel Fix",
-          "body": "A practical ops tip: when airplane Wi-Fi blocked port 22, the author used Google Cloud Shell as a temporary jump box, installed Tailscale, and recovered normal SSH access. It is the kind of small workaround worth remembering because it turns a dead end into a 15-minute detour.",
-          "url": "https://x.com/josusanmartin/status/2051110379028390209"
-        },
-        {
           "tag": "hot",
-          "title": "@LLMJunky: macOS May Be the First Real Agent-First Desktop",
-          "body": "This was one of the more interesting computing takes in the batch: the claim is that macOS is unusually well positioned for agentic software because its accessibility APIs already make UI automation workable at a deep level. Even if overstated, it is a useful lens for thinking about which platforms will matter most as agents move from chat to direct computer use.",
-          "url": "https://x.com/LLMJunky/status/2051342251477946521"
+          "title": "@GitHub_Daily: Obsidian as a Living Second Brain",
+          "body": "This post surfaced an Obsidian-based Claude Code setup that rewrites and reconciles notes instead of just appending new scraps forever. The bigger idea is useful: treat memory as something agents actively maintain, not a pile of static files.",
+          "url": "https://x.com/GitHub_Daily/status/2051565075614589385"
+        },
+        {
+          "tag": "new",
+          "title": "@GoSailGlobal: SKILL.md as a DAG",
+          "body": "A clever agent-design post argued that SKILL files should behave more like Makefiles, with explicit dependency graphs and load-on-demand recipes. The practical upside is lower token waste and a more auditable execution path for structured agent work.",
+          "url": "https://x.com/GoSailGlobal/status/2051668371985649972"
         },
         {
           "tag": "update",
-          "title": "@xiaochuan8688: AI Makes the One-Person Software Shop More Real",
-          "body": "This post argued that AI is finally making the ‘indie developer’ story structurally plausible by covering enough code, design, docs, support, and marketing work for one person to ship something competitive. The big idea is not that solo builders suddenly do everything perfectly, but that the threshold for being viable keeps dropping.",
-          "url": "https://x.com/xiaochuan8688/status/2051195370198216832"
+          "title": "@Pluvio9yte: Use /insights to Fix Your Habits",
+          "body": "A simple but good workflow tip: generate Claude Code's /insights report, then ask another model to identify your worst usage habits and suggest fixes. That turns a passive activity log into a concrete coaching loop.",
+          "url": "https://x.com/Pluvio9yte/status/2051627806938034253"
+        },
+        {
+          "tag": "update",
+          "title": "@oasisfeng: Audit as an Anti-Laziness Prompt",
+          "body": "One useful prompt-craft observation was that asking an agent to 'audit' a wiki-compilation step can reduce the tendency to hand-wave low-measurability work. It is a small trick, but exactly the kind of wording change that can improve agent reliability in practice.",
+          "url": "https://x.com/oasisfeng/status/2051642553943101632"
         }
       ]
     }
