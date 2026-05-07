@@ -2,18 +2,10 @@
   "title": "X Feed Digest",
   "date": "Thursday, May 7th, 2026",
   "summary": [
-    {
-      "html": "<strong>AI products got more concrete:</strong> the clearest upgrades were about turning prompts into finished deliverables and better execution loops, not just bragging about raw model intelligence."
-    },
-    {
-      "html": "<strong>Infra was the real battleground:</strong> compute access, rate limits, and network efficiency kept showing up as the practical constraints shaping who can actually ship usable AI products."
-    },
-    {
-      "html": "<strong>The market read-through was more cautious than euphoric:</strong> several strong posts argued that value may accrue more to compute providers and overlooked breadth than to headline-chasing model hype."
-    },
-    {
-      "html": "<strong>Trust and control were recurring themes:</strong> from OpenAI governance drama to agent-memory design, the interesting question was less \"what can the model do?\" and more \"who controls the system, and can you inspect it?\""
-    }
+    "Voice AI was the clearest product theme: OpenAI shipped GPT-Realtime-2 and related speech models, and multiple posts treated voice as a serious agent interface instead of a novelty.",
+    "Anthropic had a big distribution-and-capacity day, pushing Claude deeper into Microsoft 365 while also easing Claude Code limits now that more compute is online.",
+    "Coding-agent practice is getting sharper: the feed was full of better permission models, model-handoff workflows, and open recipes that make frontier-style agent systems easier to reproduce.",
+    "The biggest market-moving headline in the batch was the US trade court ruling against Trump's 10% global tariffs, while Cloudflare layoffs and Google's new wearables push showed AI's pricing and labor effects spreading outward."
   ],
   "sections": [
     {
@@ -21,34 +13,40 @@
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "hot",
+          "title": "@sama: GPT-Realtime-2 lands in the API",
+          "body": "OpenAI pushed GPT-Realtime-2 into the API and framed voice as becoming the preferred interface when users need to dump lots of context quickly. The bigger takeaway is that realtime voice is moving from gimmick to serious agent surface.",
+          "url": "https://x.com/sama/status/2052462271667028211"
+        },
+        {
+          "tag": "new",
+          "title": "@claudeai: Claude moves into Microsoft 365",
+          "body": "Anthropic made Claude available directly inside Excel, PowerPoint, and Word, with Outlook in public beta. Carrying context across apps makes the suite feel more like a workflow layer than a standalone chatbot.",
+          "url": "https://x.com/claudeai/status/2052445786651168849"
+        },
+        {
           "tag": "update",
-          "title": "@GeminiApp: Native Office File Exports",
-          "body": "Gemini can now generate downloadable PDFs plus Google Workspace and Microsoft Office files directly from chat prompts. The practical shift is from \"generate text\" to \"ship a usable deliverable\" without a manual export step.",
-          "url": "https://x.com/GeminiApp/status/2049519416698683514"
+          "title": "@trq212: Claude Code gets more headroom",
+          "body": "Anthropic says it is rolling back peak-hour limit reductions and doubling Claude Code's 5-hour limits after adding SpaceX compute. That matters because capacity, not raw model quality, has been one of the main bottlenecks for serious coding-agent usage.",
+          "url": "https://x.com/trq212/status/2052065936585457982"
+        },
+        {
+          "tag": "new",
+          "title": "@rwayne: OpenSearch-VL narrows the deep-search moat",
+          "body": "A new OpenSearch-VL release appears to open-source much of the training recipe and data behind frontier multimodal search agents. If the results hold up, closed deep-search systems just lost some defensibility.",
+          "url": "https://x.com/rwayne/status/2052302415052095994"
+        },
+        {
+          "tag": "update",
+          "title": "@jun_song: A cleaner Codex handoff loop",
+          "body": "One practical workflow tip stood out: use a stronger planning model to turn project context into a precise Codex prompt, then feed the resulting GitHub output back into the planner for critique and iteration. It is a neat way to spend premium tokens on architecture while keeping execution cheaper.",
+          "url": "https://x.com/jun_song/status/2052363524501070298"
         },
         {
           "tag": "hot",
-          "title": "@RichNwan: Managed Agents Still Need Open Harnesses",
-          "body": "A thoughtful agent-platform critique argued Anthropic's new Dreaming memory and Outcomes rubrics are useful, but closed managed-agent layers still leave teams blind on critical controls like PII filtering and memory policy. The takeaway is that open harnesses may stay strategically important even as labs add higher-level agent features.",
-          "url": "https://x.com/RichNwan/status/2052085746526216601"
-        },
-        {
-          "tag": "update",
-          "title": "@Xuegaogx: OpenAI's MRC Network Protocol",
-          "body": "A detailed infra thread highlighted OpenAI's newly open MRC protocol for large training clusters, describing a design that cuts network layers and keeps jobs alive through switch failures. If the implementation holds up, training efficiency rather than just raw GPU count becomes a more meaningful competitive lever.",
-          "url": "https://x.com/Xuegaogx/status/2052319755596595400"
-        },
-        {
-          "tag": "hot",
-          "title": "@vikingmute: A Self-Auditing Codex Prompt Loop",
-          "body": "One widely shared Codex workflow asks the model whether it is truly 100% confident, then forces it to keep finding flaws and patching them until confidence is earned. It's a good pattern for getting stronger verification behavior from coding agents instead of accepting the first plausible answer.",
-          "url": "https://x.com/vikingmute/status/2052279836157362526"
-        },
-        {
-          "tag": "update",
-          "title": "@dotey: Debug Codex Desktop with Chrome DevTools",
-          "body": "A handy workflow tip showed how to launch the Codex desktop app with a remote debugging port and inspect it through Chrome DevTools. That gives power users a practical way to study the app, trace behavior, and debug agent-assisted UI work.",
-          "url": "https://x.com/dotey/status/2052200047278739457"
+          "title": "@derrickcchoi: Auto-review beats constant approvals",
+          "body": "A useful agent-design point: let coding agents move quickly inside predefined rules, then require review only when they cross risk boundaries. That reduces approval fatigue without giving up the guardrails that keep autonomy safe.",
+          "url": "https://x.com/derrickcchoi/status/2052403734211125520"
         }
       ]
     },
@@ -58,45 +56,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@GaryMarcus: Murati Testimony Reframes Sam's Ouster",
-          "body": "Gary Marcus argued the new Mira Murati testimony makes the 2023 Altman firing look less like an AI-safety rupture and more like a trust and governance breakdown. That matters because the court fight is turning internal OpenAI management questions into material industry news again.",
-          "url": "https://x.com/GaryMarcus/status/2052077735678525820"
+          "title": "@WatcherGuru: Trade court blocks Trump's 10% global tariffs",
+          "body": "The most market-relevant headline in the batch was a federal trade court ruling Trump's 10% global tariffs unlawful. If it survives appeal, that removes a meaningful policy overhang for trade-sensitive sectors and global supply chains.",
+          "url": "https://x.com/WatcherGuru/status/2052504864303751272"
         },
         {
           "tag": "hot",
-          "title": "@burkov: Compute Landlords May Be the Real Winners",
-          "body": "Burkov's read on Elon renting GPU capacity to Anthropic was blunt: if even a rival lab is monetizing spare compute, the best business may be supplying infrastructure rather than trying to catch the model leader. It's a sharp reminder that AI economics may reward landlords and capacity brokers more than late model challengers.",
-          "url": "https://x.com/burkov/status/2052233358885748961"
+          "title": "@Polymarket: Cloudflare cuts 1,100+ jobs",
+          "body": "Reports say Cloudflare is cutting roughly 20% of staff while explicitly framing the move around the \"agentic AI era.\" Even if the messaging is partly narrative management, it is another real example of AI being used to justify cost resets in software.",
+          "url": "https://x.com/Polymarket/status/2052494665048379827"
         },
         {
-          "tag": "update",
-          "title": "@xiaochuan8688: S&P Highs Are Hiding Weak Breadth",
-          "body": "A market thread argued that headline index highs are masking weakness across much of the S&P 500, with megacaps doing most of the lifting while many individual stocks lag. Even if you discount the exact numbers, the useful read-through is to separate headline index strength from actual market breadth before chasing momentum.",
-          "url": "https://x.com/xiaochuan8688/status/2052312733488460274"
+          "tag": "new",
+          "title": "@immasiddx: Google takes aim at Whoop",
+          "body": "Google's new Fitbit Air and Google Health stack look like a direct pricing attack on Whoop's subscription-heavy model. The more interesting angle is strategic: Google appears to be making health AI an open, cross-device platform instead of a closed hardware moat.",
+          "url": "https://x.com/immasiddx/status/2052427207302410728"
         }
       ]
     },
     {
-      "emoji": "🌍",
+      "emoji": "🧠",
       "title": "General",
       "items": [
         {
           "tag": "hot",
-          "title": "@op7418: Markdown Won the AI File-Format War",
-          "body": "This post made a convincing case that Markdown has become the default shared substrate for AI memory, notes, and file exchange, with HTML handling richer presentation. The interesting implication is that the next product layer may be better interfaces on top of Markdown rather than yet another editor.",
-          "url": "https://x.com/op7418/status/2052233857735512314"
-        },
-        {
-          "tag": "new",
-          "title": "@pandemona: Searchable Podcast Data for Agents",
-          "body": "Particle launched an API aimed at turning podcasts into queryable structured data, including mentions, clips, and metadata. If you rely on podcasts for research or market color, this felt like one of the more genuinely useful data-unlocking tools in the feed.",
-          "url": "https://x.com/pandemona/status/2051440951286280661"
+          "title": "@kasong2048: Agents as negotiation labor",
+          "body": "One of the more concrete real-world agent examples: a multi-agent setup ran parallel conversations with more than 10 insurance brokers and reportedly negotiated a better price with almost no human intervention. Agents still struggle with judgment, but they are already very good at tireless coordination in messy, repetitive markets.",
+          "url": "https://x.com/kasong2048/status/2052409008791912841"
         },
         {
           "tag": "update",
-          "title": "@tomhacks: Scarcity Is Easier to Forgive Than Spin",
-          "body": "A blunt product-management critique argued that users will tolerate rate limits and compute shortages far better than confusing plan changes or quiet degradations. It was a good reminder that transparent bad news usually damages trust less than polished evasiveness.",
-          "url": "https://x.com/tomhacks/status/2052143340855181397"
+          "title": "@cholf5: Not every workflow should be a \"skill\"",
+          "body": "A sharp organizational warning from the batch: if a process is really a fixed SOP, packaging it as a deterministic tool can be cheaper, faster, and more reliable than wrapping it in an LLM. A lot of teams are still overfitting everything into agent-shaped abstractions.",
+          "url": "https://x.com/cholf5/status/2052429799495516295"
+        },
+        {
+          "tag": "new",
+          "title": "@GitHub_Daily: Apple Silicon local inference gets a boost",
+          "body": "An open-source framework called Cider is claiming meaningful speed and memory gains for local inference on Apple Silicon, plus an OpenAI-compatible local VLM service. If you run models on a Mac, this was one of the more immediately practical links in the batch.",
+          "url": "https://x.com/GitHub_Daily/status/2052327598282441116"
         }
       ]
     }
