@@ -1,11 +1,19 @@
 {
-  "title": "Clawd X Digest",
-  "date": "Tuesday, May 5th, 2026",
+  "title": "X Feed Digest",
+  "date": "Thursday, May 7th, 2026",
   "summary": [
-    "Agent tooling was the clearest real signal in this batch: official releases from Anthropic, OpenAI, and Cognition all pushed beyond raw model quality toward alignment methods, sandboxed execution, and security workflows.",
-    "The practical workflow theme was continuity and auditability. Posts about Obsidian-backed memory, SKILL DAGs, PR-attached repro videos, and Claude usage reports all pointed to the same idea: better agent systems come from stronger scaffolding, not just smarter models.",
-    "AI business chatter stayed focused on monetization and spend. The strongest commentary centered on whether hyperscaler AI capex is arriving ahead of demand and whether consumer AI products like Doubao can finally convert heavy usage into paid subscriptions.",
-    "Macro conviction still looked thin. Fed-policy limbo and selective portfolio-rotation posts suggested people are still willing to take risk, but they want clearer earnings and cash-flow proof before fully leaning in."
+    {
+      "html": "<strong>AI products got more concrete:</strong> the clearest upgrades were about turning prompts into finished deliverables and better execution loops, not just bragging about raw model intelligence."
+    },
+    {
+      "html": "<strong>Infra was the real battleground:</strong> compute access, rate limits, and network efficiency kept showing up as the practical constraints shaping who can actually ship usable AI products."
+    },
+    {
+      "html": "<strong>The market read-through was more cautious than euphoric:</strong> several strong posts argued that value may accrue more to compute providers and overlooked breadth than to headline-chasing model hype."
+    },
+    {
+      "html": "<strong>Trust and control were recurring themes:</strong> from OpenAI governance drama to agent-memory design, the interesting question was less \"what can the model do?\" and more \"who controls the system, and can you inspect it?\""
+    }
   ],
   "sections": [
     {
@@ -13,34 +21,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@AnthropicAI: Model Spec Midtraining",
-          "body": "Anthropic shared new research on Model Spec Midtraining, an alignment approach that tries to teach models how desired behavior should generalize, not just what outputs to copy. The interesting part is the shift from example-only training toward explicitly shaping generalization rules.",
-          "url": "https://x.com/AnthropicAI/status/2051758528562364902"
+          "tag": "update",
+          "title": "@GeminiApp: Native Office File Exports",
+          "body": "Gemini can now generate downloadable PDFs plus Google Workspace and Microsoft Office files directly from chat prompts. The practical shift is from \"generate text\" to \"ship a usable deliverable\" without a manual export step.",
+          "url": "https://x.com/GeminiApp/status/2049519416698683514"
         },
         {
           "tag": "hot",
-          "title": "@OpenAIDevs: TypeScript Agents SDK",
-          "body": "OpenAI rolled out a TypeScript version of its Agents SDK with sandbox-agent support and an open-source harness teams can inspect or customize. That makes production agent work a bit less magical and a lot more controllable.",
-          "url": "https://x.com/OpenAIDevs/status/2051725072873001338"
-        },
-        {
-          "tag": "new",
-          "title": "@cognition: Devin for Security",
-          "body": "Cognition introduced Devin for Security, framing security remediation as an engineering-capacity problem rather than a pure detection problem. The pitch is straightforward: reduce security debt and shrink response time as AI speeds up the attacker side.",
-          "url": "https://x.com/cognition/status/2051708729880416614"
+          "title": "@RichNwan: Managed Agents Still Need Open Harnesses",
+          "body": "A thoughtful agent-platform critique argued Anthropic's new Dreaming memory and Outcomes rubrics are useful, but closed managed-agent layers still leave teams blind on critical controls like PII filtering and memory policy. The takeaway is that open harnesses may stay strategically important even as labs add higher-level agent features.",
+          "url": "https://x.com/RichNwan/status/2052085746526216601"
         },
         {
           "tag": "update",
-          "title": "@steipete: Video-Backed Agent QA",
-          "body": "Steipete showed agents reproducing bugs inside ephemeral crabboxes and attaching WebVNC videos back to pull requests. That is a genuinely useful QA pattern because reviewers can see the exact failing state instead of trusting a vague repro description.",
-          "url": "https://x.com/steipete/status/2051557150040711425"
+          "title": "@Xuegaogx: OpenAI's MRC Network Protocol",
+          "body": "A detailed infra thread highlighted OpenAI's newly open MRC protocol for large training clusters, describing a design that cuts network layers and keeps jobs alive through switch failures. If the implementation holds up, training efficiency rather than just raw GPU count becomes a more meaningful competitive lever.",
+          "url": "https://x.com/Xuegaogx/status/2052319755596595400"
         },
         {
-          "tag": "new",
-          "title": "@berryxia: MATLAB Agentic Toolkit",
-          "body": "A post highlighting MathWorks' new MATLAB Agentic Toolkit says agents can work directly against live MATLAB and Simulink sessions with built-in skills for engineering workflows. If it holds up, that widens serious agent usage beyond the usual Python-first tooling stack.",
-          "url": "https://x.com/berryxia/status/2051678496502722569"
+          "tag": "hot",
+          "title": "@vikingmute: A Self-Auditing Codex Prompt Loop",
+          "body": "One widely shared Codex workflow asks the model whether it is truly 100% confident, then forces it to keep finding flaws and patching them until confidence is earned. It's a good pattern for getting stronger verification behavior from coding agents instead of accepting the first plausible answer.",
+          "url": "https://x.com/vikingmute/status/2052279836157362526"
+        },
+        {
+          "tag": "update",
+          "title": "@dotey: Debug Codex Desktop with Chrome DevTools",
+          "body": "A handy workflow tip showed how to launch the Codex desktop app with a remote debugging port and inspect it through Chrome DevTools. That gives power users a practical way to study the app, trace behavior, and debug agent-assisted UI work.",
+          "url": "https://x.com/dotey/status/2052200047278739457"
         }
       ]
     },
@@ -50,27 +58,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@TheSixFiveMedia: AI CapEx Debate",
-          "body": "One of the sharper market posts in the batch framed the argument around roughly $700B of AI capex: are hyperscalers overspending, or are they still early relative to demand? The tension was strong AI-linked growth numbers on one side and weak stock-price reward plus thin enterprise penetration on the other.",
-          "url": "https://x.com/TheSixFiveMedia/status/2051716501569524162"
+          "title": "@GaryMarcus: Murati Testimony Reframes Sam's Ouster",
+          "body": "Gary Marcus argued the new Mira Murati testimony makes the 2023 Altman firing look less like an AI-safety rupture and more like a trust and governance breakdown. That matters because the court fight is turning internal OpenAI management questions into material industry news again.",
+          "url": "https://x.com/GaryMarcus/status/2052077735678525820"
+        },
+        {
+          "tag": "hot",
+          "title": "@burkov: Compute Landlords May Be the Real Winners",
+          "body": "Burkov's read on Elon renting GPU capacity to Anthropic was blunt: if even a rival lab is monetizing spare compute, the best business may be supplying infrastructure rather than trying to catch the model leader. It's a sharp reminder that AI economics may reward landlords and capacity brokers more than late model challengers.",
+          "url": "https://x.com/burkov/status/2052233358885748961"
         },
         {
           "tag": "update",
-          "title": "@APompliano: Fed in Holding Pattern",
-          "body": "Pompliano's read is that the Fed is effectively frozen, leaving investors without a clean signal on where policy goes next. It is commentary, but it neatly matches the broader mood of cautious risk-taking without full conviction.",
-          "url": "https://x.com/APompliano/status/2049906369453494499"
-        },
-        {
-          "tag": "new",
-          "title": "@yanhua1010: Doubao Tests Consumer AI Pricing",
-          "body": "A thoughtful breakdown of ByteDance's Doubao subscription launch argued the real signal is timing, not sticker price: user growth has matured, inference still costs real money, and the market may finally be ready to pay for heavy AI usage. If the category leader cannot convert here, that is a warning for the wider consumer-AI model.",
-          "url": "https://x.com/yanhua1010/status/2051639851011953094"
-        },
-        {
-          "tag": "update",
-          "title": "@tychozzz: Meta-over-Google Rotation Thesis",
-          "body": "One portfolio post laid out a clean rotation thesis: trim Google after a big run and move some capital into Meta because the valuation and path to another 30% upside look easier. It is just one investor's view, but it was one of the more concrete pieces of market reasoning in the feed.",
-          "url": "https://x.com/tychozzz/status/2051674003547578389"
+          "title": "@xiaochuan8688: S&P Highs Are Hiding Weak Breadth",
+          "body": "A market thread argued that headline index highs are masking weakness across much of the S&P 500, with megacaps doing most of the lifting while many individual stocks lag. Even if you discount the exact numbers, the useful read-through is to separate headline index strength from actual market breadth before chasing momentum.",
+          "url": "https://x.com/xiaochuan8688/status/2052312733488460274"
         }
       ]
     },
@@ -80,27 +82,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@GitHub_Daily: Obsidian as a Living Second Brain",
-          "body": "This post surfaced an Obsidian-based Claude Code setup that rewrites and reconciles notes instead of just appending new scraps forever. The bigger idea is useful: treat memory as something agents actively maintain, not a pile of static files.",
-          "url": "https://x.com/GitHub_Daily/status/2051565075614589385"
+          "title": "@op7418: Markdown Won the AI File-Format War",
+          "body": "This post made a convincing case that Markdown has become the default shared substrate for AI memory, notes, and file exchange, with HTML handling richer presentation. The interesting implication is that the next product layer may be better interfaces on top of Markdown rather than yet another editor.",
+          "url": "https://x.com/op7418/status/2052233857735512314"
         },
         {
           "tag": "new",
-          "title": "@GoSailGlobal: SKILL.md as a DAG",
-          "body": "A clever agent-design post argued that SKILL files should behave more like Makefiles, with explicit dependency graphs and load-on-demand recipes. The practical upside is lower token waste and a more auditable execution path for structured agent work.",
-          "url": "https://x.com/GoSailGlobal/status/2051668371985649972"
+          "title": "@pandemona: Searchable Podcast Data for Agents",
+          "body": "Particle launched an API aimed at turning podcasts into queryable structured data, including mentions, clips, and metadata. If you rely on podcasts for research or market color, this felt like one of the more genuinely useful data-unlocking tools in the feed.",
+          "url": "https://x.com/pandemona/status/2051440951286280661"
         },
         {
           "tag": "update",
-          "title": "@Pluvio9yte: Use /insights to Fix Your Habits",
-          "body": "A simple but good workflow tip: generate Claude Code's /insights report, then ask another model to identify your worst usage habits and suggest fixes. That turns a passive activity log into a concrete coaching loop.",
-          "url": "https://x.com/Pluvio9yte/status/2051627806938034253"
-        },
-        {
-          "tag": "update",
-          "title": "@oasisfeng: Audit as an Anti-Laziness Prompt",
-          "body": "One useful prompt-craft observation was that asking an agent to 'audit' a wiki-compilation step can reduce the tendency to hand-wave low-measurability work. It is a small trick, but exactly the kind of wording change that can improve agent reliability in practice.",
-          "url": "https://x.com/oasisfeng/status/2051642553943101632"
+          "title": "@tomhacks: Scarcity Is Easier to Forgive Than Spin",
+          "body": "A blunt product-management critique argued that users will tolerate rate limits and compute shortages far better than confusing plan changes or quiet degradations. It was a good reminder that transparent bad news usually damages trust less than polished evasiveness.",
+          "url": "https://x.com/tomhacks/status/2052143340855181397"
         }
       ]
     }
