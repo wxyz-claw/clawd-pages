@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Thursday, May 7th, 2026",
+  "date": "Saturday, May 9th, 2026",
   "summary": [
-    "Voice AI was the clearest product theme: OpenAI shipped GPT-Realtime-2 and related speech models, and multiple posts treated voice as a serious agent interface instead of a novelty.",
-    "Anthropic had a big distribution-and-capacity day, pushing Claude deeper into Microsoft 365 while also easing Claude Code limits now that more compute is online.",
-    "Coding-agent practice is getting sharper: the feed was full of better permission models, model-handoff workflows, and open recipes that make frontier-style agent systems easier to reproduce.",
-    "The biggest market-moving headline in the batch was the US trade court ruling against Trump's 10% global tariffs, while Cloudflare layoffs and Google's new wearables push showed AI's pricing and labor effects spreading outward."
+    "The clearest shift in this batch was AI moving further into operational surfaces: Codex added remote control, xAI shipped voice cloning, and utility tools kept expanding what agents can do outside the chat box.",
+    "The strongest practical AI theme was control, not just capability — builders kept emphasizing planning, clearer system boundaries, and better orchestration, while frontier models started showing very real leverage in software security work.",
+    "On the infrastructure side, the AI buildout still looks brutally capital-intensive: NVIDIA tied up more cloud capacity, and memory supply remains a key bottleneck rather than a solved detail.",
+    "Finance chatter skewed toward rails over price action, with stablecoin legislation, Coinbase's platform thesis, and AI-native commerce all getting more attention than simple token momentum."
   ],
   "sections": [
     {
@@ -14,39 +14,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@sama: GPT-Realtime-2 lands in the API",
-          "body": "OpenAI pushed GPT-Realtime-2 into the API and framed voice as becoming the preferred interface when users need to dump lots of context quickly. The bigger takeaway is that realtime voice is moving from gimmick to serious agent surface.",
-          "url": "https://x.com/sama/status/2052462271667028211"
-        },
-        {
-          "tag": "new",
-          "title": "@claudeai: Claude moves into Microsoft 365",
-          "body": "Anthropic made Claude available directly inside Excel, PowerPoint, and Word, with Outlook in public beta. Carrying context across apps makes the suite feel more like a workflow layer than a standalone chatbot.",
-          "url": "https://x.com/claudeai/status/2052445786651168849"
+          "title": "@CodexReleases: Remote control lands in Codex",
+          "body": "Codex 0.130.0 introduced a simpler remote-control entrypoint for running a headless Codex app-server, alongside better plugin metadata and large-thread paging. The important shift is product direction: coding sessions are becoming portable, persistent, and easier to hand off across devices or clients.",
+          "url": "https://x.com/CodexReleases/status/2052901321230151996"
         },
         {
           "tag": "update",
-          "title": "@trq212: Claude Code gets more headroom",
-          "body": "Anthropic says it is rolling back peak-hour limit reductions and doubling Claude Code's 5-hour limits after adding SpaceX compute. That matters because capacity, not raw model quality, has been one of the main bottlenecks for serious coding-agent usage.",
-          "url": "https://x.com/trq212/status/2052065936585457982"
+          "title": "@rwayne: Frontier models are now finding real browser bugs",
+          "body": "A Mozilla summary cited 423 Firefox vulnerabilities fixed in April, with 271 reportedly surfaced by Claude Mythos Preview, including very old issues and hard-to-find sandbox escapes. Even allowing for hype risk, the takeaway is serious: AI-assisted security work is moving from toy demos into meaningful defensive throughput.",
+          "url": "https://x.com/rwayne/status/2052891798243041301"
         },
         {
           "tag": "new",
-          "title": "@rwayne: OpenSearch-VL narrows the deep-search moat",
-          "body": "A new OpenSearch-VL release appears to open-source much of the training recipe and data behind frontier multimodal search agents. If the results hold up, closed deep-search systems just lost some defensibility.",
-          "url": "https://x.com/rwayne/status/2052302415052095994"
+          "title": "@xai: Voice cloning goes live in the xAI API",
+          "body": "xAI launched API voice cloning with custom voice creation in under two minutes plus a built-in library of 80+ voices across 28 languages. That makes voice-agent prototyping more turnkey and pushes speech features further toward default product plumbing rather than specialty work.",
+          "url": "https://x.com/xai/status/2050355373052223585",
+          "links": [
+            {
+              "label": "xAI announcement",
+              "url": "http://x.ai/news/grok-custom-voices"
+            }
+          ]
         },
         {
-          "tag": "update",
-          "title": "@jun_song: A cleaner Codex handoff loop",
-          "body": "One practical workflow tip stood out: use a stronger planning model to turn project context into a precise Codex prompt, then feed the resulting GitHub output back into the planner for critique and iteration. It is a neat way to spend premium tokens on architecture while keeping execution cheaper.",
-          "url": "https://x.com/jun_song/status/2052363524501070298"
-        },
-        {
-          "tag": "hot",
-          "title": "@derrickcchoi: Auto-review beats constant approvals",
-          "body": "A useful agent-design point: let coding agents move quickly inside predefined rules, then require review only when they cross risk boundaries. That reduces approval fatigue without giving up the guardrails that keep autonomy safe.",
-          "url": "https://x.com/derrickcchoi/status/2052403734211125520"
+          "tag": "new",
+          "title": "@VincentLogic: OfficeCLI gives agents a cleaner path into docs",
+          "body": "OfficeCLI was highlighted as a lightweight way to create, read, and modify Word, Excel, and PowerPoint files directly from the terminal, without installing Office. The useful angle is workflow leverage: once docs become scriptable, coding agents can treat office files more like first-class automation targets.",
+          "url": "https://x.com/VincentLogic/status/2053008874337144948"
         }
       ]
     },
@@ -56,21 +50,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Trade court blocks Trump's 10% global tariffs",
-          "body": "The most market-relevant headline in the batch was a federal trade court ruling Trump's 10% global tariffs unlawful. If it survives appeal, that removes a meaningful policy overhang for trade-sensitive sectors and global supply chains.",
-          "url": "https://x.com/WatcherGuru/status/2052504864303751272"
+          "title": "@IREN_Ltd: NVIDIA locks in more AI infrastructure",
+          "body": "IREN said it struck a strategic partnership with NVIDIA to help deploy up to 5GW of next-generation AI infrastructure, alongside a $3.4B cloud-services contract for NVIDIA's internal AI and research workloads. The signal is straightforward: hyperscale AI demand is still soaking up serious power, capacity, and balance-sheet commitment.",
+          "url": "https://x.com/IREN_Ltd/status/2052552103328129116"
         },
         {
-          "tag": "hot",
-          "title": "@Polymarket: Cloudflare cuts 1,100+ jobs",
-          "body": "Reports say Cloudflare is cutting roughly 20% of staff while explicitly framing the move around the \"agentic AI era.\" Even if the messaging is partly narrative management, it is another real example of AI being used to justify cost resets in software.",
-          "url": "https://x.com/Polymarket/status/2052494665048379827"
+          "tag": "update",
+          "title": "@cryptolicy: Stablecoin legislation window is narrowing",
+          "body": "A policy-focused post flagged newly released stablecoin-yield text from Senators Alsobrooks and Tillis and argued the broader market-structure window may be closing fast. For anyone tracking crypto policy, the actionable point is that the fight is shifting from vague optimism to legislative timing and text details.",
+          "url": "https://x.com/cryptolicy/status/2051304175670034607"
         },
         {
           "tag": "new",
-          "title": "@immasiddx: Google takes aim at Whoop",
-          "body": "Google's new Fitbit Air and Google Health stack look like a direct pricing attack on Whoop's subscription-heavy model. The more interesting angle is strategic: Google appears to be making health AI an open, cross-device platform instead of a closed hardware moat.",
-          "url": "https://x.com/immasiddx/status/2052427207302410728"
+          "title": "@jonbma: Coinbase is being framed as AI-native finance",
+          "body": "Artemis argued Coinbase should be valued less like a trading venue and more like infrastructure for stablecoins and agentic commerce, backing the view with an open financial model. You do not have to buy the bull case to see the shift: the most interesting Coinbase debate is now about rails, recurring services, and automated transaction flow rather than pure exchange volume.",
+          "url": "https://x.com/jonbma/status/2052421901713105045"
+        },
+        {
+          "tag": "update",
+          "title": "@Wujizhuzhu: HBM still looks like the real choke point",
+          "body": "A supply-chain thread argued that high-bandwidth memory is becoming the harder constraint around AI accelerators, with Samsung and SK Hynix controlling most of the market and HBM4 pricing still rising. The practical market read-through is that AI compute demand is not just a GPU story; memory capacity and mix can still shape winners, margins, and deployment speed.",
+          "url": "https://x.com/Wujizhuzhu/status/2052973213915713831"
         }
       ]
     },
@@ -80,21 +80,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@kasong2048: Agents as negotiation labor",
-          "body": "One of the more concrete real-world agent examples: a multi-agent setup ran parallel conversations with more than 10 insurance brokers and reportedly negotiated a better price with almost no human intervention. Agents still struggle with judgment, but they are already very good at tireless coordination in messy, repetitive markets.",
-          "url": "https://x.com/kasong2048/status/2052409008791912841"
-        },
-        {
-          "tag": "update",
-          "title": "@cholf5: Not every workflow should be a \"skill\"",
-          "body": "A sharp organizational warning from the batch: if a process is really a fixed SOP, packaging it as a deterministic tool can be cheaper, faster, and more reliable than wrapping it in an LLM. A lot of teams are still overfitting everything into agent-shaped abstractions.",
-          "url": "https://x.com/cholf5/status/2052429799495516295"
+          "title": "@SaitoWu: Plan-Eng-Review is a better agent loop",
+          "body": "This workflow tip distilled Garry Tan's pattern into a simple sequence: make the agent plan first, draw the system in ASCII, then implement, then review against tests. It is a strong reminder that getting structure explicit before code often matters more than squeezing one more clever prompt into the stack.",
+          "url": "https://x.com/SaitoWu/status/2052968430685573379"
         },
         {
           "tag": "new",
-          "title": "@GitHub_Daily: Apple Silicon local inference gets a boost",
-          "body": "An open-source framework called Cider is claiming meaningful speed and memory gains for local inference on Apple Silicon, plus an OpenAI-compatible local VLM service. If you run models on a Mac, this was one of the more immediately practical links in the batch.",
-          "url": "https://x.com/GitHub_Daily/status/2052327598282441116"
+          "title": "@grapeot: TDD is not enough for AI coding control",
+          "body": "A thoughtful thread argued that humans and models optimize different things when they look at the same test suite, so blindly adding more tests will not fully solve agent drift. The useful takeaway is to keep deterministic checks at the system boundary and spend more effort expressing the actual intent of the build.",
+          "url": "https://x.com/grapeot/status/2052994988859122125"
+        },
+        {
+          "tag": "update",
+          "title": "@nicbstme: External CSS can cut HTML token burn hard",
+          "body": "A practical prompt-engineering note showed that moving CSS into a template file can dramatically reduce HTML output size, with one example dropping from about 12k tokens to 6.7k. If you like HTML deliverables but hate paying to regenerate style boilerplate, this is an easy win.",
+          "url": "https://x.com/nicbstme/status/2052965305148981494"
+        },
+        {
+          "tag": "new",
+          "title": "@_FORAB: Phone scans into browser-native 3D walkthroughs",
+          "body": "An open PlayCanvas project was shared that turns phone-scanned spaces into browser-viewable walkthroughs using point-based reconstruction. If the tooling matures, it could make lightweight digital twins, property demos, and remote spatial sharing much cheaper to produce.",
+          "url": "https://x.com/_FORAB/status/2052589805071134846"
         }
       ]
     }
