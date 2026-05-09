@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Saturday, May 9th, 2026",
   "summary": [
-    "The clearest shift in this batch was AI moving further into operational surfaces: Codex added remote control, xAI shipped voice cloning, and utility tools kept expanding what agents can do outside the chat box.",
-    "The strongest practical AI theme was control, not just capability — builders kept emphasizing planning, clearer system boundaries, and better orchestration, while frontier models started showing very real leverage in software security work.",
-    "On the infrastructure side, the AI buildout still looks brutally capital-intensive: NVIDIA tied up more cloud capacity, and memory supply remains a key bottleneck rather than a solved detail.",
-    "Finance chatter skewed toward rails over price action, with stablecoin legislation, Coinbase's platform thesis, and AI-native commerce all getting more attention than simple token momentum."
+    "The strongest AI signal in this batch was operational maturity: the conversation moved past prompt tweaks toward remote control, better agent tooling, safer workflows, and artifacts that are easier for both humans and models to inspect.",
+    "Security stopped looking theoretical. A widely shared Mozilla note about Claude Mythos surfacing hundreds of Firefox bugs made the clearest case yet that frontier models are becoming real defensive throughput, not just demo material.",
+    "The most actionable infrastructure commentary focused on bottlenecks around the GPU, not just the GPU itself — HBM supply, optical interconnect vendors, and repurposed mixed-generation clusters all showed up as scarce assets with pricing power.",
+    "Markets chatter leaned toward rails over pure speculation, especially around Coinbase, stablecoins, and agentic commerce, while the better equity commentary focused on second-order AI beneficiaries rather than chasing model headlines directly."
   ],
   "sections": [
     {
@@ -14,32 +14,26 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@CodexReleases: Remote control lands in Codex",
-          "body": "Codex 0.130.0 introduced a simpler remote-control entrypoint for running a headless Codex app-server, alongside better plugin metadata and large-thread paging. The important shift is product direction: coding sessions are becoming portable, persistent, and easier to hand off across devices or clients.",
-          "url": "https://x.com/CodexReleases/status/2052901321230151996"
+          "title": "@mattlam_: Codex remote control expands the workflow surface",
+          "body": "OpenAI’s latest Codex release adds remote control so a session started on a local machine can be continued from mobile, which pushes coding agents closer to persistent, handoff-friendly workspaces instead of one-device chat sessions.",
+          "url": "https://x.com/mattlam_/status/2052910356238836073"
         },
         {
-          "tag": "update",
-          "title": "@rwayne: Frontier models are now finding real browser bugs",
-          "body": "A Mozilla summary cited 423 Firefox vulnerabilities fixed in April, with 271 reportedly surfaced by Claude Mythos Preview, including very old issues and hard-to-find sandbox escapes. Even allowing for hype risk, the takeaway is serious: AI-assisted security work is moving from toy demos into meaningful defensive throughput.",
+          "tag": "hot",
+          "title": "@rwayne: Claude Mythos reportedly unearthed a huge Firefox bug haul",
+          "body": "A Mozilla summary said 271 of 423 Firefox vulnerabilities fixed in April were surfaced by Claude Mythos Preview, including old bugs and difficult sandbox escapes. Even with normal hype caution, the big takeaway is that AI-assisted security work now looks operationally real.",
           "url": "https://x.com/rwayne/status/2052891798243041301"
         },
         {
           "tag": "new",
-          "title": "@xai: Voice cloning goes live in the xAI API",
-          "body": "xAI launched API voice cloning with custom voice creation in under two minutes plus a built-in library of 80+ voices across 28 languages. That makes voice-agent prototyping more turnkey and pushes speech features further toward default product plumbing rather than specialty work.",
-          "url": "https://x.com/xai/status/2050355373052223585",
-          "links": [
-            {
-              "label": "xAI announcement",
-              "url": "http://x.ai/news/grok-custom-voices"
-            }
-          ]
+          "title": "@SaitoWu: Cloudflare ships an Agent Readiness checker",
+          "body": "Cloudflare’s new tool audits whether a site is discoverable and usable by agents, including checks around robots rules and newer agent-facing standards. The practical bit is the repair loop: it points out gaps and generates a prompt you can hand straight to a coding agent.",
+          "url": "https://x.com/SaitoWu/status/2053098050277765403"
         },
         {
           "tag": "new",
-          "title": "@VincentLogic: OfficeCLI gives agents a cleaner path into docs",
-          "body": "OfficeCLI was highlighted as a lightweight way to create, read, and modify Word, Excel, and PowerPoint files directly from the terminal, without installing Office. The useful angle is workflow leverage: once docs become scriptable, coding agents can treat office files more like first-class automation targets.",
+          "title": "@VincentLogic: OfficeCLI turns Office files into agent-friendly targets",
+          "body": "OfficeCLI was highlighted as a lightweight way to create and edit Word, Excel, and PowerPoint files from the terminal without installing Office. That matters because it gives coding agents a cleaner path into document workflows that usually stay trapped in GUI apps.",
           "url": "https://x.com/VincentLogic/status/2053008874337144948"
         }
       ]
@@ -50,27 +44,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@IREN_Ltd: NVIDIA locks in more AI infrastructure",
-          "body": "IREN said it struck a strategic partnership with NVIDIA to help deploy up to 5GW of next-generation AI infrastructure, alongside a $3.4B cloud-services contract for NVIDIA's internal AI and research workloads. The signal is straightforward: hyperscale AI demand is still soaking up serious power, capacity, and balance-sheet commitment.",
-          "url": "https://x.com/IREN_Ltd/status/2052552103328129116"
+          "title": "@LZRationalnvest: Lumentum is being framed as an AI optical choke point",
+          "body": "A detailed thread argued that Lumentum’s EML laser and CPO positioning make it a critical supplier for next-gen AI interconnects, reinforced by NVIDIA’s strategic investment and purchase commitments. The useful market read is that optical plumbing may matter as much as headline GPU demand in the next leg of the buildout.",
+          "url": "https://x.com/LZRationalnvest/status/2053093347800347126"
         },
         {
           "tag": "update",
-          "title": "@cryptolicy: Stablecoin legislation window is narrowing",
-          "body": "A policy-focused post flagged newly released stablecoin-yield text from Senators Alsobrooks and Tillis and argued the broader market-structure window may be closing fast. For anyone tracking crypto policy, the actionable point is that the fight is shifting from vague optimism to legislative timing and text details.",
-          "url": "https://x.com/cryptolicy/status/2051304175670034607"
+          "title": "@Wujizhuzhu: HBM still looks like the real bottleneck",
+          "body": "This supply-chain post argued that high-bandwidth memory remains harder to secure than many investors appreciate, with Samsung and SK Hynix controlling most of the market and HBM4 pricing still rising. If that read is right, AI capacity winners will be shaped by memory access, not just chip branding.",
+          "url": "https://x.com/Wujizhuzhu/status/2052973213915713831"
         },
         {
           "tag": "new",
-          "title": "@jonbma: Coinbase is being framed as AI-native finance",
-          "body": "Artemis argued Coinbase should be valued less like a trading venue and more like infrastructure for stablecoins and agentic commerce, backing the view with an open financial model. You do not have to buy the bull case to see the shift: the most interesting Coinbase debate is now about rails, recurring services, and automated transaction flow rather than pure exchange volume.",
-          "url": "https://x.com/jonbma/status/2052421901713105045"
+          "title": "@qinbafrank: xAI leasing Colossus 1 to Anthropic has a clear capital-markets logic",
+          "body": "The thread’s core claim is that xAI can turn an awkward mixed-generation training cluster into a better inference asset by leasing it to a single tenant that desperately needs capacity. Whether the exact numbers hold or not, the sharper insight is that AI infra economics increasingly depend on repurposing imperfect clusters into cash-flowing assets.",
+          "url": "https://x.com/qinbafrank/status/2053039005126517031"
         },
         {
-          "tag": "update",
-          "title": "@Wujizhuzhu: HBM still looks like the real choke point",
-          "body": "A supply-chain thread argued that high-bandwidth memory is becoming the harder constraint around AI accelerators, with Samsung and SK Hynix controlling most of the market and HBM4 pricing still rising. The practical market read-through is that AI compute demand is not just a GPU story; memory capacity and mix can still shape winners, margins, and deployment speed.",
-          "url": "https://x.com/Wujizhuzhu/status/2052973213915713831"
+          "tag": "new",
+          "title": "@jonbma: Coinbase is being valued as AI-native financial infrastructure",
+          "body": "Artemis made the bull case that Coinbase should be thought of less as a crypto exchange and more as a stablecoin, subscription, and agentic-commerce rail. You do not need to buy the 6x upside target to see the bigger shift: the serious Coinbase debate is now about infrastructure and recurring services, not just trading volume.",
+          "url": "https://x.com/jonbma/status/2052421901713105045"
         }
       ]
     },
@@ -80,27 +74,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@SaitoWu: Plan-Eng-Review is a better agent loop",
-          "body": "This workflow tip distilled Garry Tan's pattern into a simple sequence: make the agent plan first, draw the system in ASCII, then implement, then review against tests. It is a strong reminder that getting structure explicit before code often matters more than squeezing one more clever prompt into the stack.",
-          "url": "https://x.com/SaitoWu/status/2052968430685573379"
-        },
-        {
-          "tag": "new",
-          "title": "@grapeot: TDD is not enough for AI coding control",
-          "body": "A thoughtful thread argued that humans and models optimize different things when they look at the same test suite, so blindly adding more tests will not fully solve agent drift. The useful takeaway is to keep deterministic checks at the system boundary and spend more effort expressing the actual intent of the build.",
-          "url": "https://x.com/grapeot/status/2052994988859122125"
+          "title": "@shao__meng: Perplexity’s skill design memo is really about context economics",
+          "body": "The most useful point in this breakdown is that a skill should be treated as compressed procedural context, not as mini code or documentation. That reframes good skill-writing around routing accuracy, gotchas, and token cost instead of completeness for its own sake.",
+          "url": "https://x.com/shao__meng/status/2053098123074105705"
         },
         {
           "tag": "update",
-          "title": "@nicbstme: External CSS can cut HTML token burn hard",
-          "body": "A practical prompt-engineering note showed that moving CSS into a template file can dramatically reduce HTML output size, with one example dropping from about 12k tokens to 6.7k. If you like HTML deliverables but hate paying to regenerate style boilerplate, this is an easy win.",
-          "url": "https://x.com/nicbstme/status/2052965305148981494"
+          "title": "@lxfater: Four practical ways to stop Codex from bloating itself",
+          "body": "The workflow advice here was unusually concrete: cut unnecessary narration, use sub-agents for context-heavy work, force a task list before execution, and keep the repo clean so the model does not thrash in junk. The broader lesson is that many “model quality” problems are really context-management problems.",
+          "url": "https://x.com/lxfater/status/2053147480938971585"
         },
         {
           "tag": "new",
-          "title": "@_FORAB: Phone scans into browser-native 3D walkthroughs",
-          "body": "An open PlayCanvas project was shared that turns phone-scanned spaces into browser-viewable walkthroughs using point-based reconstruction. If the tooling matures, it could make lightweight digital twins, property demos, and remote spatial sharing much cheaper to produce.",
-          "url": "https://x.com/_FORAB/status/2052589805071134846"
+          "title": "@elliotchen100: HTML is emerging as a shared working surface, not just output format",
+          "body": "This thread’s best idea is treating HTML as a disposable editor and shared memory layer for agents — useful for side-by-side specs, draggable prioritization, quick visual mocks, and SVG explanations that are easier to scan than giant markdown plans. It is a strong workflow pattern if you regularly bounce between planning and execution.",
+          "url": "https://x.com/elliotchen100/status/2052913108616954215"
+        },
+        {
+          "tag": "update",
+          "title": "@SaitoWu: Deep modules are friendlier to AI than shallow ones",
+          "body": "Borrowing from A Philosophy of Software Design, this post argues that agents behave much better when a codebase exposes simple, stable interfaces and hides complexity behind them. That is a useful design heuristic if you want both humans and models to make changes without constantly breaking adjacent code.",
+          "url": "https://x.com/SaitoWu/status/2053102344485916928"
         }
       ]
     }
