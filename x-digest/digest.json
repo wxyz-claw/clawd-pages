@@ -1,11 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Saturday, May 9th, 2026",
+  "date": "Sunday, May 10th, 2026",
   "summary": [
-    "The strongest AI signal in this batch was operational maturity: the conversation moved past prompt tweaks toward remote control, better agent tooling, safer workflows, and artifacts that are easier for both humans and models to inspect.",
-    "Security stopped looking theoretical. A widely shared Mozilla note about Claude Mythos surfacing hundreds of Firefox bugs made the clearest case yet that frontier models are becoming real defensive throughput, not just demo material.",
-    "The most actionable infrastructure commentary focused on bottlenecks around the GPU, not just the GPU itself — HBM supply, optical interconnect vendors, and repurposed mixed-generation clusters all showed up as scarce assets with pricing power.",
-    "Markets chatter leaned toward rails over pure speculation, especially around Coinbase, stablecoins, and agentic commerce, while the better equity commentary focused on second-order AI beneficiaries rather than chasing model headlines directly."
+    "Coding-agent discussion kept shifting from model worship to systems design: harnesses, observability, auditability, and context control mattered more than small model deltas.",
+    "OpenAI’s surface area expanded again with Codex on mobile, while the deeper infrastructure debate centered on whether ultra-fast inference stacks like Cerebras can scale economically.",
+    "The best workflow ideas were practical rather than flashy: bring design systems into prompt context, keep the lead agent coordinating instead of brute-forcing, and use AI on real production work instead of toy demos.",
+    "The sharpest market takes were cautionary: AI app companies are running into cash-burn limits, and U.S. index buyers may be underestimating how concentrated current valuations have become."
   ],
   "sections": [
     {
@@ -13,28 +13,28 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@mattlam_: Codex remote control expands the workflow surface",
-          "body": "OpenAI’s latest Codex release adds remote control so a session started on a local machine can be continued from mobile, which pushes coding agents closer to persistent, handoff-friendly workspaces instead of one-device chat sessions.",
-          "url": "https://x.com/mattlam_/status/2052910356238836073"
-        },
-        {
-          "tag": "hot",
-          "title": "@rwayne: Claude Mythos reportedly unearthed a huge Firefox bug haul",
-          "body": "A Mozilla summary said 271 of 423 Firefox vulnerabilities fixed in April were surfaced by Claude Mythos Preview, including old bugs and difficult sandbox escapes. Even with normal hype caution, the big takeaway is that AI-assisted security work now looks operationally real.",
-          "url": "https://x.com/rwayne/status/2052891798243041301"
-        },
-        {
           "tag": "new",
-          "title": "@SaitoWu: Cloudflare ships an Agent Readiness checker",
-          "body": "Cloudflare’s new tool audits whether a site is discoverable and usable by agents, including checks around robots rules and newer agent-facing standards. The practical bit is the repair loop: it points out gaps and generates a prompt you can hand straight to a coding agent.",
-          "url": "https://x.com/SaitoWu/status/2053098050277765403"
+          "title": "@ziwenxu_: Codex lands in the ChatGPT mobile app",
+          "body": "A small product update with bigger strategic implications: Codex is moving from a desktop-terminal habit into a phone-native surface. That matters because agent work becomes something users can monitor or kick off from anywhere, not just from a workstation.",
+          "url": "https://x.com/ziwenxu_/status/2053537963124969508"
         },
         {
-          "tag": "new",
-          "title": "@VincentLogic: OfficeCLI turns Office files into agent-friendly targets",
-          "body": "OfficeCLI was highlighted as a lightweight way to create and edit Word, Excel, and PowerPoint files from the terminal without installing Office. That matters because it gives coding agents a cleaner path into document workflows that usually stay trapped in GUI apps.",
-          "url": "https://x.com/VincentLogic/status/2053008874337144948"
+          "tag": "hot",
+          "title": "@shao__meng: Agent quality is mostly a harness problem",
+          "body": "This thread argues that Codex, Claude Code, Cursor, and similar tools differ less by base model than by the surrounding harness: prompts, tools, hooks, context strategy, sandboxes, and observability. The practical takeaway is to debug agent failures like software systems, not as mystical model shortcomings.",
+          "url": "https://x.com/shao__meng/status/2053456173622530407"
+        },
+        {
+          "tag": "hot",
+          "title": "@teach_fireworks: Long-running agents need runtime-level version control",
+          "body": "Once agents run for hours, the bottleneck stops being code generation and becomes traceability: who changed what, via which tool call, and how to replay or recover the session. This is a strong case that execution DAGs, workspace snapshots, and audit logs are becoming core infrastructure for AI coding.",
+          "url": "https://x.com/teach_fireworks/status/2053450504286691531"
+        },
+        {
+          "tag": "update",
+          "title": "@yaohui12138: DESIGN.md turns style systems into promptable UI rules",
+          "body": "A reverse-engineered library of big-company design systems packaged as markdown lets coding agents generate interfaces with a consistent house style instead of generic AI-looking UI. Useful caveat: it helps with visual language, not product logic, so sensitive teams should adapt it rather than copy it blindly.",
+          "url": "https://x.com/yaohui12138/status/2053327249479458830"
         }
       ]
     },
@@ -44,27 +44,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@LZRationalnvest: Lumentum is being framed as an AI optical choke point",
-          "body": "A detailed thread argued that Lumentum’s EML laser and CPO positioning make it a critical supplier for next-gen AI interconnects, reinforced by NVIDIA’s strategic investment and purchase commitments. The useful market read is that optical plumbing may matter as much as headline GPU demand in the next leg of the buildout.",
-          "url": "https://x.com/LZRationalnvest/status/2053093347800347126"
+          "title": "@LinQingV: Cerebras is fast enough to expose OpenAI’s software bottlenecks",
+          "body": "This deep dive treats Codex-Spark as proof that ultra-low-latency inference hardware can force a full stack rewrite above the model. The more important investor read-through is that Cerebras still has to prove cost and deployment scale, not just raw throughput.",
+          "url": "https://x.com/LinQingV/status/2053379655433069021"
+        },
+        {
+          "tag": "hot",
+          "title": "@lifesinger: AI app growth is colliding with cash-flow reality",
+          "body": "The claim here is that ByteDance is pulling back broad app-layer AI spending and refocusing because the burn rate no longer matches the business model. Whether every anecdote is perfect or not, the signal is clear: DAU-first internet tactics are a bad fit for many AI applications.",
+          "url": "https://x.com/lifesinger/status/2053352435369025992"
         },
         {
           "tag": "update",
-          "title": "@Wujizhuzhu: HBM still looks like the real bottleneck",
-          "body": "This supply-chain post argued that high-bandwidth memory remains harder to secure than many investors appreciate, with Samsung and SK Hynix controlling most of the market and HBM4 pricing still rising. If that read is right, AI capacity winners will be shaped by memory access, not just chip branding.",
-          "url": "https://x.com/Wujizhuzhu/status/2052973213915713831"
+          "title": "@DtDt666: Index buyers may be underpricing concentration risk",
+          "body": "A long valuation thread argues that many newer VOO and QQQ buyers have only experienced liquidity-fueled markets and may not appreciate how much current index performance depends on a handful of richly priced giants. The actionable point is less 'sell everything' than 'know what you actually own when you buy the index.'",
+          "url": "https://x.com/DtDt666/status/2053455499937620312"
         },
         {
           "tag": "new",
-          "title": "@qinbafrank: xAI leasing Colossus 1 to Anthropic has a clear capital-markets logic",
-          "body": "The thread’s core claim is that xAI can turn an awkward mixed-generation training cluster into a better inference asset by leasing it to a single tenant that desperately needs capacity. Whether the exact numbers hold or not, the sharper insight is that AI infra economics increasingly depend on repurposing imperfect clusters into cash-flowing assets.",
-          "url": "https://x.com/qinbafrank/status/2053039005126517031"
-        },
-        {
-          "tag": "new",
-          "title": "@jonbma: Coinbase is being valued as AI-native financial infrastructure",
-          "body": "Artemis made the bull case that Coinbase should be thought of less as a crypto exchange and more as a stablecoin, subscription, and agentic-commerce rail. You do not need to buy the 6x upside target to see the bigger shift: the serious Coinbase debate is now about infrastructure and recurring services, not just trading volume.",
-          "url": "https://x.com/jonbma/status/2052421901713105045"
+          "title": "@rwayne: Anthropic is productizing junior finance work",
+          "body": "Anthropic’s financial-services repo packages pitch, earnings, modeling, reconciliation, and KYC workflows into reusable agents with market-data connectors and Office integration. The notable shift is that AI for finance is moving from slideware to explicit production templates, with human sign-off left as the main safety rail.",
+          "url": "https://x.com/rwayne/status/2053256703001395365"
         }
       ]
     },
@@ -74,27 +74,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@shao__meng: Perplexity’s skill design memo is really about context economics",
-          "body": "The most useful point in this breakdown is that a skill should be treated as compressed procedural context, not as mini code or documentation. That reframes good skill-writing around routing accuracy, gotchas, and token cost instead of completeness for its own sake.",
-          "url": "https://x.com/shao__meng/status/2053098123074105705"
+          "title": "@yanhua1010: Real AI leverage comes from workflows, not prompting",
+          "body": "The best advice here is to stop equating 'knowing ChatGPT' with actual AI fluency and start building a repeatable stack around coding, research, writing, and execution. In practice, the leverage comes from shipping small real things and assigning the strongest models to the hardest problems.",
+          "url": "https://x.com/yanhua1010/status/2053326989298397560"
         },
         {
           "tag": "update",
-          "title": "@lxfater: Four practical ways to stop Codex from bloating itself",
-          "body": "The workflow advice here was unusually concrete: cut unnecessary narration, use sub-agents for context-heavy work, force a task list before execution, and keep the repo clean so the model does not thrash in junk. The broader lesson is that many “model quality” problems are really context-management problems.",
-          "url": "https://x.com/lxfater/status/2053147480938971585"
+          "title": "@Suryanshti777: A note vault is only useful if AI can think with it",
+          "body": "This post argues that most second-brain systems are just storage, while the real edge comes from connecting years of personal notes, ideas, and patterns to an AI that can reason across them. The core insight is that accumulated context may become a bigger moat than prompt cleverness.",
+          "url": "https://x.com/Suryanshti777/status/2053498623560909197"
         },
         {
           "tag": "new",
-          "title": "@elliotchen100: HTML is emerging as a shared working surface, not just output format",
-          "body": "This thread’s best idea is treating HTML as a disposable editor and shared memory layer for agents — useful for side-by-side specs, draggable prioritization, quick visual mocks, and SVG explanations that are easier to scan than giant markdown plans. It is a strong workflow pattern if you regularly bounce between planning and execution.",
-          "url": "https://x.com/elliotchen100/status/2052913108616954215"
-        },
-        {
-          "tag": "update",
-          "title": "@SaitoWu: Deep modules are friendlier to AI than shallow ones",
-          "body": "Borrowing from A Philosophy of Software Design, this post argues that agents behave much better when a codebase exposes simple, stable interfaces and hides complexity behind them. That is a useful design heuristic if you want both humans and models to make changes without constantly breaking adjacent code.",
-          "url": "https://x.com/SaitoWu/status/2053102344485916928"
+          "title": "@vista8: Invention history says engineering beats idea scarcity",
+          "body": "A Claude-assisted review of past inventions concluded that most breakthroughs appear soon after the enabling pieces are ready, and that the true delays usually come from materials, manufacturing, or weak knowledge transfer. It is a useful reminder that progress is often blocked by integration work, not by lack of imagination.",
+          "url": "https://x.com/vista8/status/2053484686840881158"
         }
       ]
     }
