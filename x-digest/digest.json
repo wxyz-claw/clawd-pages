@@ -2,11 +2,11 @@
   "title": "X Feed Digest",
   "date": "Monday, May 11th, 2026",
   "summary": [
-    "Agent tooling is moving out of the terminal and into more operational surfaces: mobile remote control for Codex, measurable skill packs, and tighter instruction files got more attention than prompt cleverness.",
-    "Several strong posts pointed to the same deeper lesson: model quality matters, but the harness around the model matters more — explicit rules, evaluations, interfaces, and organizational plumbing are becoming the real leverage.",
-    "On the market side, the AI trade is broadening beyond chips into data centers, power, cooling, and ARM-based server infrastructure, while app-layer companies are running into cash-burn reality.",
-    "The sharpest operational warning in the batch was infrastructure fragility: AWS's cooling incident that knocked Coinbase offline was a reminder that multi-AZ redundancy is not the same thing as multi-region resilience.",
-    "The most immediately useful workflow ideas were practical and low-drama: better translation tooling, cheaper edge infrastructure, and clearer product-stage frameworks for deciding how teams should operate."
+    "AI product design kept moving away from plain chat and toward richer operating surfaces: HTML-first outputs, session dashboards, voice layers, and security-specific workflows all showed up as the new interface frontier.",
+    "The strongest technical thread was that agent performance is increasingly about the full system, not just the base model — harness design, benchmark methodology, caching, observability, and guardrails are becoming first-class concerns.",
+    "Enterprise distribution is tightening around big platforms: Claude's native AWS availability and OpenAI's Daybreak launch both point to AI vendors pushing deeper into production infrastructure and security budgets.",
+    "Markets chatter was notably more cautious than euphoric, with a record U.S. housing seller-buyer gap and fresh debate over whether frontier-model leaders can turn massive usage into software-like margins.",
+    "A quieter but useful builder theme: the cost floor for shipping things keeps dropping, from commodity email delivery to surprisingly capable local Apple-silicon clusters."
   ],
   "sections": [
     {
@@ -15,33 +15,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@dunik_7: CLAUDE.md beats prompt sprawl",
-          "body": "A good CLAUDE.md or equivalent instruction file can cut rework dramatically by forcing explicit assumptions, minimal changes, and clear verification loops. The bigger lesson is that concise, testable rules often steer coding agents better than long preference dumps.",
-          "url": "https://x.com/dunik_7/status/2053495306235347100"
-        },
-        {
-          "tag": "new",
-          "title": "@QingQ77: Skills can now be benchmarked instead of vibe-checked",
-          "body": "This tool runs the same prompt with and without a SKILL.md, then grades both outputs against assertions and emits JSON plus HTML reports. That turns agent-skill design from prompt folklore into something teams can actually measure in CI.",
-          "url": "https://x.com/QingQ77/status/2053652309721206834",
-          "links": [
-            {
-              "label": "GitHub",
-              "url": "https://github.com/darkrishabh/agent-skills-eval"
-            }
-          ]
-        },
-        {
-          "tag": "new",
-          "title": "@btibor91: Codex Remote and Codex Voice show up in ChatGPT beta",
-          "body": "Android beta strings suggest ChatGPT is gaining Codex Remote, desktop sync, and a voice layer for coding sessions. If this ships, coding agents become much easier to monitor and steer away from the desk, which meaningfully changes long-running workflows.",
-          "url": "https://x.com/btibor91/status/2053788481869189469"
+          "title": "@karpathy: HTML may be the next default UI for LLM output",
+          "body": "Karpathy argues that asking an LLM to format responses as HTML often produces a meaningfully better user experience than raw text or markdown, especially as models move toward richer visual output. The bigger insight is that interface bandwidth — not just model intelligence — is becoming a real workflow multiplier.",
+          "url": "https://x.com/karpathy/status/2053872850101285137"
         },
         {
           "tag": "update",
-          "title": "@0xLogicrw: Claude 3.7 reportedly came from a tiny RL team and fast feedback loops",
-          "body": "A former Anthropic researcher says Claude 3.7 was built by a roughly 10-person reinforcement-learning team in about four to five months, and that Anthropic's coding push only hardened after Claude 3 got strong user feedback. The interesting read-through is organizational: fast technical decision loops may matter almost as much as raw research scale.",
-          "url": "https://x.com/0xLogicrw/status/2053731440966471784"
+          "title": "@claudeai: Claude Platform is now native on AWS",
+          "body": "Anthropic says Claude's full API feature set is now generally available through AWS with AWS-native auth, billing, and commitment spend. That lowers friction for enterprises already standardized on AWS and makes direct Claude usage easier to adopt inside existing procurement paths.",
+          "url": "https://x.com/claudeai/status/2053868592286822443"
+        },
+        {
+          "tag": "new",
+          "title": "@claudeai: Claude Code adds an agent session view",
+          "body": "Claude Code is rolling out an agent view that puts all sessions in one place, a small feature with big operational implications for people running multiple long-lived coding tasks. It is another sign that agent products are maturing from single-chat tools into workload management surfaces.",
+          "url": "https://x.com/claudeai/status/2053940934736228454"
+        },
+        {
+          "tag": "new",
+          "title": "@ArtificialAnlys: Coding agents are finally being benchmarked as full stacks",
+          "body": "Artificial Analysis launched a Coding Agent Index that scores model-plus-harness combinations across SWE and terminal-style tasks while also tracking cost, tokens, cache behavior, and runtime. That's useful because it measures the thing developers actually buy: not a model in isolation, but a full agent setup with real tradeoffs.",
+          "url": "https://x.com/ArtificialAnlys/status/2053865095076438427"
+        },
+        {
+          "tag": "new",
+          "title": "@OpenAI: Daybreak targets cybersecurity workflows",
+          "body": "OpenAI introduced Daybreak as a security-focused offering that combines frontier models, Codex, and partner workflows for defensive use cases. The move suggests cybersecurity is becoming one of the first major verticals where frontier AI vendors want a dedicated operating surface instead of a generic API story.",
+          "url": "https://x.com/OpenAI/status/2053939702110269822"
         }
       ]
     },
@@ -51,27 +51,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@lifesinger: AI app cash burn is forcing a rethink",
-          "body": "This thread argues that ByteDance is retrenching at the AI application layer because old internet-style DAU chasing does not fund AI-era cost structures. Even if some sourcing is anecdotal, the broader signal is important: many AI apps still do not have economics strong enough to carry their own inference bill.",
-          "url": "https://x.com/lifesinger/status/2053352435369025992"
-        },
-        {
-          "tag": "hot",
-          "title": "@LuBtc888: The AI trade is rotating down the stack",
-          "body": "A long market map frames the AI trade as moving from semis to memory to optical interconnects and now into data centers, power, cooling, and adjacent infrastructure. It is less a call to chase every ticker than a useful framework for thinking about second-order winners after the obvious GPU names.",
-          "url": "https://x.com/LuBtc888/status/2053471367769858415"
+          "title": "@Barchart: U.S. housing sellers now outnumber buyers by a record margin",
+          "body": "Barchart highlighted a record 630,000 gap between home sellers and buyers in the U.S., a sharp signal that supply-demand conditions have swung materially. If the data holds up, it reinforces the idea that housing is losing pricing power even before any broader macro slowdown fully shows up in earnings.",
+          "url": "https://x.com/Barchart/status/2053810202454221186"
         },
         {
           "tag": "update",
-          "title": "@xiaochuan8688: ARM is taking real data-center share from x86",
-          "body": "This post makes the structural case for ARM servers: better perf-per-watt, rising hyperscaler adoption, and a meaningful share shift in new deployments. If the thesis holds, the AI buildout will keep reshaping the CPU architecture mix underneath cloud workloads, not just rewarding the model layer.",
-          "url": "https://x.com/xiaochuan8688/status/2053671688038989859"
+          "title": "@xiaochuan8688: OpenAI's margin story still looks more like hardware than SaaS",
+          "body": "This thread argues that despite OpenAI's enormous valuation, its gross margins remain far below classic software names because inference costs are still eating a huge share of revenue. The actionable takeaway for markets is simple: AI leaders may keep winning on usage and relevance while still getting challenged on business quality and IPO-grade margin structure.",
+          "url": "https://x.com/xiaochuan8688/status/2053701886251761781"
         },
         {
           "tag": "new",
-          "title": "@plantegg: The AWS cooling incident was a real resilience warning",
-          "body": "A detailed recap of the AWS us-east-1 thermal event argues that multi-AZ design did not protect users from correlated physical failures, with Coinbase's outage as the clearest example. The actionable takeaway is blunt: critical paths increasingly need multi-region or multi-cloud assumptions, not just redundancy inside one region.",
-          "url": "https://x.com/plantegg/status/2053743484796833935"
+          "title": "@RockportAI: Musk v. OpenAI trial surfaced a big Microsoft revenue number",
+          "body": "RockportAI flagged court discussion that Microsoft has recognized $9.5 billion in revenue tied to its OpenAI partnership, which could become an important datapoint in how investors frame the economics and control dynamics of that relationship. Even with the caveat that this came through trial coverage, it is the kind of number markets will latch onto quickly if echoed elsewhere.",
+          "url": "https://x.com/RockportAI/status/2053942008721318070"
         }
       ]
     },
@@ -80,28 +74,34 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@hongming731: AI-native orgs need explicit infrastructure, not just better models",
-          "body": "A thoughtful essay argues that the main bottleneck is not model quality but how much tacit knowledge is still trapped in people, meetings, and undocumented systems. Teams that want agents to do real work will need to turn judgment, interfaces, tests, permissions, and logs into explicit operating infrastructure.",
-          "url": "https://x.com/hongming731/status/2053314677237846060"
-        },
-        {
           "tag": "update",
-          "title": "@LinearUncle: Kent Beck's 3X model is a useful operating system for product teams",
-          "body": "Explore, Expand, and Extract is a crisp reminder that products in different stages need different rules, metrics, and process. That is especially relevant for AI teams, where experimental features, scaling products, and mature cash engines often sit under the same roof but should not be managed the same way.",
-          "url": "https://x.com/LinearUncle/status/2053660080600649743"
+          "title": "@aakashgupta: The Magic Mouse charging-port joke is really an Apple thesis",
+          "body": "Aakash Gupta's thread reframes the Magic Mouse's infamous bottom charging port as a pure expression of Apple's aesthetic-first design philosophy rather than a lingering oversight. Whether you agree or not, it is a concise reminder that some companies optimize relentlessly for brand coherence even when it creates obvious usability pain.",
+          "url": "https://x.com/aakashgupta/status/2053776159054372956"
         },
         {
           "tag": "new",
-          "title": "@shachepi: Read Frog looks like a strong translation workflow upgrade",
-          "body": "Read Frog was highlighted as a cleaner replacement for generic translation extensions because it adds contextual translation, multi-model support, and TTS without as much clutter. For anyone who reads lots of web pages or YouTube subtitles across languages, this is a practical tool worth trying.",
-          "url": "https://x.com/shachepi/status/2053426113058341321"
+          "title": "@Merocle: A tiny M5 Max cluster shows how far local compute has moved",
+          "body": "Merocle showed a four-machine M5 Max cluster tied together over Thunderbolt 5, yielding 72 CPU cores, 128 GPU cores, and 512 GB of unified memory. It is not a mainstream deployment recipe yet, but it is a good illustration of how much serious experimentation can now happen on the edge without renting a full cloud stack.",
+          "url": "https://x.com/Merocle/status/2053853870174962177"
         },
         {
           "tag": "update",
-          "title": "@fayazara: Cloudflare's $5 plan keeps lowering the build cost floor",
-          "body": "Cloudflare's cheapest tier now bundles enough requests, storage, browser time, and workflow primitives to make lightweight products surprisingly cheap to ship. For builders, the point is not just price envy; it is that the default cost floor for small AI-enabled web apps keeps falling.",
-          "url": "https://x.com/fayazara/status/2053774461934191032"
+          "title": "@yanhua1010: Transactional email is getting commoditized fast",
+          "body": "Using a cost comparison sourced from Levels, this post shows how far pricing has spread for sending a million emails per month, with SES and Cloudflare now dramatically below legacy providers like Postmark. For builders, the practical lesson is that one more formerly sticky infra category is turning into a low-margin utility.",
+          "url": "https://x.com/yanhua1010/status/2053627340589256873",
+          "links": [
+            {
+              "label": "Quoted source",
+              "url": "https://x.com/levelsio/status/2053466448169685110"
+            }
+          ]
+        },
+        {
+          "tag": "new",
+          "title": "@dotey: Agent apps are converging on the same three-pane workspace",
+          "body": "Dotey makes the case that products like Codex, Claude, and Cursor are independently converging on a left-nav, chat, and right-side workbench layout because agents need a built-in place for review and human edits. The interesting forward-looking claim is that this naturally points toward plugin ecosystems, where the last mile becomes editing and specialized tooling rather than raw generation.",
+          "url": "https://x.com/dotey/status/2053940091970580736"
         }
       ]
     }
