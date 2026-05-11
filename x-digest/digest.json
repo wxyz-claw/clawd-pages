@@ -1,11 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Sunday, May 10th, 2026",
+  "date": "Monday, May 11th, 2026",
   "summary": [
-    "Coding-agent discussion kept shifting from model worship to systems design: harnesses, observability, auditability, and context control mattered more than small model deltas.",
-    "OpenAI’s surface area expanded again with Codex on mobile, while the deeper infrastructure debate centered on whether ultra-fast inference stacks like Cerebras can scale economically.",
-    "The best workflow ideas were practical rather than flashy: bring design systems into prompt context, keep the lead agent coordinating instead of brute-forcing, and use AI on real production work instead of toy demos.",
-    "The sharpest market takes were cautionary: AI app companies are running into cash-burn limits, and U.S. index buyers may be underestimating how concentrated current valuations have become."
+    "Agent tooling is moving out of the terminal and into more operational surfaces: mobile remote control for Codex, measurable skill packs, and tighter instruction files got more attention than prompt cleverness.",
+    "Several strong posts pointed to the same deeper lesson: model quality matters, but the harness around the model matters more — explicit rules, evaluations, interfaces, and organizational plumbing are becoming the real leverage.",
+    "On the market side, the AI trade is broadening beyond chips into data centers, power, cooling, and ARM-based server infrastructure, while app-layer companies are running into cash-burn reality.",
+    "The sharpest operational warning in the batch was infrastructure fragility: AWS's cooling incident that knocked Coinbase offline was a reminder that multi-AZ redundancy is not the same thing as multi-region resilience.",
+    "The most immediately useful workflow ideas were practical and low-drama: better translation tooling, cheaper edge infrastructure, and clearer product-stage frameworks for deciding how teams should operate."
   ],
   "sections": [
     {
@@ -13,28 +14,34 @@
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "hot",
+          "title": "@dunik_7: CLAUDE.md beats prompt sprawl",
+          "body": "A good CLAUDE.md or equivalent instruction file can cut rework dramatically by forcing explicit assumptions, minimal changes, and clear verification loops. The bigger lesson is that concise, testable rules often steer coding agents better than long preference dumps.",
+          "url": "https://x.com/dunik_7/status/2053495306235347100"
+        },
+        {
           "tag": "new",
-          "title": "@ziwenxu_: Codex lands in the ChatGPT mobile app",
-          "body": "A small product update with bigger strategic implications: Codex is moving from a desktop-terminal habit into a phone-native surface. That matters because agent work becomes something users can monitor or kick off from anywhere, not just from a workstation.",
-          "url": "https://x.com/ziwenxu_/status/2053537963124969508"
+          "title": "@QingQ77: Skills can now be benchmarked instead of vibe-checked",
+          "body": "This tool runs the same prompt with and without a SKILL.md, then grades both outputs against assertions and emits JSON plus HTML reports. That turns agent-skill design from prompt folklore into something teams can actually measure in CI.",
+          "url": "https://x.com/QingQ77/status/2053652309721206834",
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/darkrishabh/agent-skills-eval"
+            }
+          ]
         },
         {
-          "tag": "hot",
-          "title": "@shao__meng: Agent quality is mostly a harness problem",
-          "body": "This thread argues that Codex, Claude Code, Cursor, and similar tools differ less by base model than by the surrounding harness: prompts, tools, hooks, context strategy, sandboxes, and observability. The practical takeaway is to debug agent failures like software systems, not as mystical model shortcomings.",
-          "url": "https://x.com/shao__meng/status/2053456173622530407"
-        },
-        {
-          "tag": "hot",
-          "title": "@teach_fireworks: Long-running agents need runtime-level version control",
-          "body": "Once agents run for hours, the bottleneck stops being code generation and becomes traceability: who changed what, via which tool call, and how to replay or recover the session. This is a strong case that execution DAGs, workspace snapshots, and audit logs are becoming core infrastructure for AI coding.",
-          "url": "https://x.com/teach_fireworks/status/2053450504286691531"
+          "tag": "new",
+          "title": "@btibor91: Codex Remote and Codex Voice show up in ChatGPT beta",
+          "body": "Android beta strings suggest ChatGPT is gaining Codex Remote, desktop sync, and a voice layer for coding sessions. If this ships, coding agents become much easier to monitor and steer away from the desk, which meaningfully changes long-running workflows.",
+          "url": "https://x.com/btibor91/status/2053788481869189469"
         },
         {
           "tag": "update",
-          "title": "@yaohui12138: DESIGN.md turns style systems into promptable UI rules",
-          "body": "A reverse-engineered library of big-company design systems packaged as markdown lets coding agents generate interfaces with a consistent house style instead of generic AI-looking UI. Useful caveat: it helps with visual language, not product logic, so sensitive teams should adapt it rather than copy it blindly.",
-          "url": "https://x.com/yaohui12138/status/2053327249479458830"
+          "title": "@0xLogicrw: Claude 3.7 reportedly came from a tiny RL team and fast feedback loops",
+          "body": "A former Anthropic researcher says Claude 3.7 was built by a roughly 10-person reinforcement-learning team in about four to five months, and that Anthropic's coding push only hardened after Claude 3 got strong user feedback. The interesting read-through is organizational: fast technical decision loops may matter almost as much as raw research scale.",
+          "url": "https://x.com/0xLogicrw/status/2053731440966471784"
         }
       ]
     },
@@ -44,27 +51,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@LinQingV: Cerebras is fast enough to expose OpenAI’s software bottlenecks",
-          "body": "This deep dive treats Codex-Spark as proof that ultra-low-latency inference hardware can force a full stack rewrite above the model. The more important investor read-through is that Cerebras still has to prove cost and deployment scale, not just raw throughput.",
-          "url": "https://x.com/LinQingV/status/2053379655433069021"
-        },
-        {
-          "tag": "hot",
-          "title": "@lifesinger: AI app growth is colliding with cash-flow reality",
-          "body": "The claim here is that ByteDance is pulling back broad app-layer AI spending and refocusing because the burn rate no longer matches the business model. Whether every anecdote is perfect or not, the signal is clear: DAU-first internet tactics are a bad fit for many AI applications.",
+          "title": "@lifesinger: AI app cash burn is forcing a rethink",
+          "body": "This thread argues that ByteDance is retrenching at the AI application layer because old internet-style DAU chasing does not fund AI-era cost structures. Even if some sourcing is anecdotal, the broader signal is important: many AI apps still do not have economics strong enough to carry their own inference bill.",
           "url": "https://x.com/lifesinger/status/2053352435369025992"
         },
         {
+          "tag": "hot",
+          "title": "@LuBtc888: The AI trade is rotating down the stack",
+          "body": "A long market map frames the AI trade as moving from semis to memory to optical interconnects and now into data centers, power, cooling, and adjacent infrastructure. It is less a call to chase every ticker than a useful framework for thinking about second-order winners after the obvious GPU names.",
+          "url": "https://x.com/LuBtc888/status/2053471367769858415"
+        },
+        {
           "tag": "update",
-          "title": "@DtDt666: Index buyers may be underpricing concentration risk",
-          "body": "A long valuation thread argues that many newer VOO and QQQ buyers have only experienced liquidity-fueled markets and may not appreciate how much current index performance depends on a handful of richly priced giants. The actionable point is less 'sell everything' than 'know what you actually own when you buy the index.'",
-          "url": "https://x.com/DtDt666/status/2053455499937620312"
+          "title": "@xiaochuan8688: ARM is taking real data-center share from x86",
+          "body": "This post makes the structural case for ARM servers: better perf-per-watt, rising hyperscaler adoption, and a meaningful share shift in new deployments. If the thesis holds, the AI buildout will keep reshaping the CPU architecture mix underneath cloud workloads, not just rewarding the model layer.",
+          "url": "https://x.com/xiaochuan8688/status/2053671688038989859"
         },
         {
           "tag": "new",
-          "title": "@rwayne: Anthropic is productizing junior finance work",
-          "body": "Anthropic’s financial-services repo packages pitch, earnings, modeling, reconciliation, and KYC workflows into reusable agents with market-data connectors and Office integration. The notable shift is that AI for finance is moving from slideware to explicit production templates, with human sign-off left as the main safety rail.",
-          "url": "https://x.com/rwayne/status/2053256703001395365"
+          "title": "@plantegg: The AWS cooling incident was a real resilience warning",
+          "body": "A detailed recap of the AWS us-east-1 thermal event argues that multi-AZ design did not protect users from correlated physical failures, with Coinbase's outage as the clearest example. The actionable takeaway is blunt: critical paths increasingly need multi-region or multi-cloud assumptions, not just redundancy inside one region.",
+          "url": "https://x.com/plantegg/status/2053743484796833935"
         }
       ]
     },
@@ -74,21 +81,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@yanhua1010: Real AI leverage comes from workflows, not prompting",
-          "body": "The best advice here is to stop equating 'knowing ChatGPT' with actual AI fluency and start building a repeatable stack around coding, research, writing, and execution. In practice, the leverage comes from shipping small real things and assigning the strongest models to the hardest problems.",
-          "url": "https://x.com/yanhua1010/status/2053326989298397560"
+          "title": "@hongming731: AI-native orgs need explicit infrastructure, not just better models",
+          "body": "A thoughtful essay argues that the main bottleneck is not model quality but how much tacit knowledge is still trapped in people, meetings, and undocumented systems. Teams that want agents to do real work will need to turn judgment, interfaces, tests, permissions, and logs into explicit operating infrastructure.",
+          "url": "https://x.com/hongming731/status/2053314677237846060"
         },
         {
           "tag": "update",
-          "title": "@Suryanshti777: A note vault is only useful if AI can think with it",
-          "body": "This post argues that most second-brain systems are just storage, while the real edge comes from connecting years of personal notes, ideas, and patterns to an AI that can reason across them. The core insight is that accumulated context may become a bigger moat than prompt cleverness.",
-          "url": "https://x.com/Suryanshti777/status/2053498623560909197"
+          "title": "@LinearUncle: Kent Beck's 3X model is a useful operating system for product teams",
+          "body": "Explore, Expand, and Extract is a crisp reminder that products in different stages need different rules, metrics, and process. That is especially relevant for AI teams, where experimental features, scaling products, and mature cash engines often sit under the same roof but should not be managed the same way.",
+          "url": "https://x.com/LinearUncle/status/2053660080600649743"
         },
         {
           "tag": "new",
-          "title": "@vista8: Invention history says engineering beats idea scarcity",
-          "body": "A Claude-assisted review of past inventions concluded that most breakthroughs appear soon after the enabling pieces are ready, and that the true delays usually come from materials, manufacturing, or weak knowledge transfer. It is a useful reminder that progress is often blocked by integration work, not by lack of imagination.",
-          "url": "https://x.com/vista8/status/2053484686840881158"
+          "title": "@shachepi: Read Frog looks like a strong translation workflow upgrade",
+          "body": "Read Frog was highlighted as a cleaner replacement for generic translation extensions because it adds contextual translation, multi-model support, and TTS without as much clutter. For anyone who reads lots of web pages or YouTube subtitles across languages, this is a practical tool worth trying.",
+          "url": "https://x.com/shachepi/status/2053426113058341321"
+        },
+        {
+          "tag": "update",
+          "title": "@fayazara: Cloudflare's $5 plan keeps lowering the build cost floor",
+          "body": "Cloudflare's cheapest tier now bundles enough requests, storage, browser time, and workflow primitives to make lightweight products surprisingly cheap to ship. For builders, the point is not just price envy; it is that the default cost floor for small AI-enabled web apps keeps falling.",
+          "url": "https://x.com/fayazara/status/2053774461934191032"
         }
       ]
     }
