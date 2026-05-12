@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Tuesday, May 12th, 2026",
   "summary": [
-    "AI tooling in this batch was less about raw model launches and more about operational leverage: session views, Kanban-style agent management, computer-use setup, and lower-latency voice all pointed to products becoming more usable as systems.",
-    "The strongest technical theme was that agent performance increasingly depends on the surrounding environment and harness, not just the base model — from generated eval environments to interfaces for supervising many concurrent runs.",
-    "Markets/news discussion centered on control points in the AI stack: Microsoft-OpenAI economics, HBM memory supply, and education-platform consolidation around AI upskilling all stood out as more durable stories than the usual hype-cycle chatter.",
-    "A quieter but important broader theme: physical-world AI keeps creeping closer to reality, with robotics and spatial/perceptual arguments showing up as a serious counterweight to pure chatbot discourse."
+    "Enterprise AI discussion in this batch was much more about control surfaces than raw model launches: Anthropic moving Claude Platform into customer AWS accounts, Feishu/Lark emerging as an agent workspace, and operators asking for better ways to supervise multiple concurrent agent runs.",
+    "The most practical developer signal came from workflow glue rather than new foundation models — token-trimming wrappers, parallel Codex windows, and HTML+JSON system maps all point to the same idea: harness quality is still the biggest force multiplier.",
+    "Markets/news conversation centered on AI's financial plumbing instead of hype-cycle narratives, especially legal interpretation around Anthropic secondary shares and the shift toward customized models as the real engine of inference economics.",
+    "The clearest hard-news item was security: the TanStack npm compromise was a sharp reminder that modern supply-chain attacks can abuse trusted release provenance, not just sloppy package hygiene."
   ],
   "sections": [
     {
@@ -14,33 +14,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@aakashgupta: Voice UX May Be Won on Latency, Not IQ",
-          "body": "Aakash Gupta highlights Thinking Machines' first voice model as a latency play first, with 400ms turn-taking versus roughly 570-590ms for current OpenAI and Google realtime systems. The practical point is that voice products may now live or die on whether they stay inside the human conversation window, not just on benchmark intelligence.",
-          "url": "https://x.com/aakashgupta/status/2054087692422672821"
+          "title": "@berryxia: Claude Platform Moves Inside AWS Accounts",
+          "body": "Anthropic can now run Managed Agents, prompt caching, and built-in tools inside a customer's own AWS account, keeping billing, IAM, and security review in AWS. The significance is less the feature list than the distribution shift: it removes one of the biggest enterprise blockers to deploying agent systems at scale.",
+          "url": "https://x.com/berryxia/status/2053966059015930095",
+          "links": [
+            {
+              "label": "Claude Platform on AWS",
+              "url": "https://claude.com/blog/claude-platform-on-aws"
+            }
+          ]
         },
         {
           "tag": "update",
-          "title": "@bcherny: Claude Code Gets an Agent Session View",
-          "body": "Bcherny spotlights Claude Code's new agent view, which pulls all sessions into one list instead of forcing users to juggle terminal tabs. It looks small on the surface, but it matters because multi-agent work is clearly turning into something products now manage explicitly rather than leaving to shell habits.",
-          "url": "https://x.com/bcherny/status/2053982327123132846"
-        },
-        {
-          "tag": "new",
-          "title": "@tolibear_: Codex /goal Adds a Native Kanban Board",
-          "body": "Codex /goal runs can now surface as a lightweight Kanban board with clickable cards, making long-running agent work much easier to inspect and steer. That's a real workflow upgrade for anyone using coding agents as ongoing workers instead of one-shot chat assistants.",
-          "url": "https://x.com/tolibear_/status/2053859040556360116"
+          "title": "@wsl8297: RTK Cuts Coding-Agent Log Bloat",
+          "body": "RTK sits between coding agents and noisy shell output, deduplicating and compressing logs before they hit context. If the reported 60%–90% token savings holds up, it's exactly the kind of small infrastructure layer that materially improves coding-agent cost and usability.",
+          "url": "https://x.com/wsl8297/status/2054185858589503674",
+          "links": [
+            {
+              "label": "RTK on GitHub",
+              "url": "https://github.com/rtk-ai/rtk"
+            }
+          ]
         },
         {
           "tag": "update",
-          "title": "@steipete: Codex Starts Handling Cloud Setup",
-          "body": "Steipete shared Codex noticing a missing Google Cloud API, launching computer use, and enabling the dependency on its own. The useful signal is that agentic coding is moving closer to end-to-end environment setup, not just writing code and waiting for a human to finish the wiring.",
-          "url": "https://x.com/steipete/status/2053797643516592299"
+          "title": "@dkundel: A Better Way to Operate Codex in Parallel",
+          "body": "Dkundel's tip is simple but genuinely useful: open multiple Codex windows in parallel, use /side for temporary forks, and bind a hotkey to launch new tasks quickly. It's a good reminder that a lot of agent leverage still comes from operator ergonomics, not just better underlying models.",
+          "url": "https://x.com/dkundel/status/2054307264794866148"
         },
         {
           "tag": "new",
-          "title": "@xiruili7_li: ClawEnvKit Turns Tasks into Generated Environments",
-          "body": "ClawEnvKit proposes generating verified agent environments from natural-language task descriptions so evaluation no longer depends on a small pool of hand-built benchmarks. If that approach sticks, the next scaling frontier for agents may be environment generation and harness quality more than raw model size alone.",
-          "url": "https://x.com/xiruili7_li/status/2053854046432157911"
+          "title": "@jakevin7: Feishu/Lark Starts Looking Like an Agent Workspace",
+          "body": "This setup wires agents into Feishu/Lark documents, tasks, calendars, and lark-cli so work can be handed off, observed, interrupted, and corrected in place. The broader signal is that collaboration suites are becoming operational surfaces for agent teams rather than passive systems of record.",
+          "url": "https://x.com/jakevin7/status/2054152596584341959"
         }
       ]
     },
@@ -50,21 +56,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RockportAI: Courtroom Testimony Puts a Number on Microsoft-OpenAI Economics",
-          "body": "RockportAI flagged courtroom discussion that Microsoft has recognized $9.5 billion in revenue from its OpenAI partnership. Even before broader reporting fills in the context, that is the kind of hard economic datapoint investors will use to rethink how much value Microsoft is already capturing from the relationship.",
-          "url": "https://x.com/RockportAI/status/2053942008721318070"
+          "title": "@freeportmarkets: Anthropic Secondary Prices May Have Overreacted",
+          "body": "Freeport argues the market interpreted Anthropic's notice as if downstream secondary buyers are automatically wiped out, while Delaware precedent suggests the legal path is more nuanced. Whether or not you buy the trade, the important takeaway is that private AI valuations are now highly sensitive to legal plumbing, not just model headlines.",
+          "url": "https://x.com/freeportmarkets/status/2054257197383643611"
         },
         {
           "tag": "update",
-          "title": "@xiaochuan8688: Samsung's HBM4 Catch-Up Could Ease an AI Bottleneck",
-          "body": "This supply-chain thread argues Samsung's HBM4 yields are now roughly in line with SK Hynix, which could materially loosen one of the tightest constraints in AI infrastructure if Nvidia validation follows. The investing takeaway is that memory supply and pricing may matter just as much as GPU headlines for 2026 AI capex and margin expectations.",
-          "url": "https://x.com/xiaochuan8688/status/2054034075401466236"
+          "title": "@servasyy_ai: Baseten Sees a Custom-Model Economy Taking Over",
+          "body": "Summarizing Baseten's CEO, this thread claims 95% of inference tokens are now running on customized models rather than raw open-source weights. That's a meaningful market signal that value is shifting toward post-training, inference control, and proprietary workflow data instead of base-model branding alone.",
+          "url": "https://x.com/servasyy_ai/status/2053993175170396512"
         },
         {
           "tag": "new",
-          "title": "@AndrewYNg: Coursera and Udemy Are Combining",
-          "body": "Andrew Ng says Coursera and Udemy are joining forces, with him set to chair the combined company. The broader signal is that AI-driven reskilling is important enough to drive real education-platform consolidation, not just incremental course launches or product tweaks.",
-          "url": "https://x.com/AndrewYNg/status/2053857910451827061"
+          "title": "@p4sc4lh: Europe Backs Harder Bargaining Rules for Platforms",
+          "body": "The CJEU upheld Italy's position that platforms like Meta can be pushed into meaningful negotiation with press publishers and cannot rely on opacity or throttling as leverage. It's a concrete regulatory datapoint for anyone tracking how Europe intends to price platform power and content distribution.",
+          "url": "https://x.com/p4sc4lh/status/2054179469233881579"
         }
       ]
     },
@@ -74,21 +80,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@UnitreeRobotics: Robotics Hype Gets a Real Product and a Price Tag",
-          "body": "Unitree unveiled GD01, a $650,000 manned transformable mecha positioned as a production-ready civilian machine rather than a lab demo. Even if it stays niche, it's a strong reminder that some of the most interesting robotics progress is now showing up as actual shippable hardware, not just concept videos.",
-          "url": "https://x.com/UnitreeRobotics/status/2054067819634159622"
+          "title": "@IntCyberDigest: The TanStack npm Compromise Was the Real Red Alert",
+          "body": "The standout security story in the batch: compromised TanStack packages allegedly included a watcher that wipes a machine after a stolen GitHub token is revoked. More unsettling than the malware itself is the claim that the poisoned packages appeared to carry legitimate provenance, which hits directly at a core software-supply-chain trust assumption.",
+          "url": "https://x.com/IntCyberDigest/status/2053983157628596484"
         },
         {
           "tag": "update",
-          "title": "@GoSailGlobal: A Strong Template for Long Research Projects with Claude Code",
-          "body": "This thread lays out a practical pattern for running multi-month research with Claude Code: folder-level CLAUDE.md files, plan mode, subagents, connectors, and scheduled tasks. The insight travels well beyond academia — long projects work better when the AI workspace is treated like an operating system, not just a chat box.",
-          "url": "https://x.com/GoSailGlobal/status/2054018787704549662"
+          "title": "@DaveJ: Have Claude Output App Maps as HTML Plus JSON",
+          "body": "Dave J's suggestion is to generate both a human-readable single-page flow document and a parallel JSON representation of the app. That's a strong pattern because it gives people something easy to review while leaving future agents a structured artifact they can reliably reuse.",
+          "url": "https://x.com/DaveJ/status/2053867258653339746"
         },
         {
           "tag": "update",
-          "title": "@JonhernandezIA: Fei-Fei Li's Case for Moving Beyond Text-Only AI",
-          "body": "Summarizing Fei-Fei Li, this post argues that the industry's fixation on language models misses where much of the real economy actually lives: physical, perceptual, and spatial tasks. It's a useful framing for why vision, robotics, and embodied systems still matter even when text models dominate the daily hype cycle.",
-          "url": "https://x.com/JonhernandezIA/status/2053784194078101818"
+          "title": "@obsdmd: Obsidian Refreshes Its Community and Dev Surface",
+          "body": "Obsidian launched a new Community site, developer dashboard, and roadmap for plugins and themes. It's not flashy, but it is a solid ecosystem update for anyone whose research or knowledge workflow depends on a healthy plugin layer.",
+          "url": "https://x.com/obsdmd/status/2054235051622285621",
+          "links": [
+            {
+              "label": "Obsidian Community",
+              "url": "https://obsidian.md/community"
+            }
+          ]
         }
       ]
     }
