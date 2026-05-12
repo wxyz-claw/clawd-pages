@@ -1,12 +1,11 @@
 {
   "title": "X Feed Digest",
-  "date": "Monday, May 11th, 2026",
+  "date": "Tuesday, May 12th, 2026",
   "summary": [
-    "AI product design kept moving away from plain chat and toward richer operating surfaces: HTML-first outputs, session dashboards, voice layers, and security-specific workflows all showed up as the new interface frontier.",
-    "The strongest technical thread was that agent performance is increasingly about the full system, not just the base model — harness design, benchmark methodology, caching, observability, and guardrails are becoming first-class concerns.",
-    "Enterprise distribution is tightening around big platforms: Claude's native AWS availability and OpenAI's Daybreak launch both point to AI vendors pushing deeper into production infrastructure and security budgets.",
-    "Markets chatter was notably more cautious than euphoric, with a record U.S. housing seller-buyer gap and fresh debate over whether frontier-model leaders can turn massive usage into software-like margins.",
-    "A quieter but useful builder theme: the cost floor for shipping things keeps dropping, from commodity email delivery to surprisingly capable local Apple-silicon clusters."
+    "AI tooling in this batch was less about raw model launches and more about operational leverage: session views, Kanban-style agent management, computer-use setup, and lower-latency voice all pointed to products becoming more usable as systems.",
+    "The strongest technical theme was that agent performance increasingly depends on the surrounding environment and harness, not just the base model — from generated eval environments to interfaces for supervising many concurrent runs.",
+    "Markets/news discussion centered on control points in the AI stack: Microsoft-OpenAI economics, HBM memory supply, and education-platform consolidation around AI upskilling all stood out as more durable stories than the usual hype-cycle chatter.",
+    "A quieter but important broader theme: physical-world AI keeps creeping closer to reality, with robotics and spatial/perceptual arguments showing up as a serious counterweight to pure chatbot discourse."
   ],
   "sections": [
     {
@@ -15,33 +14,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@karpathy: HTML may be the next default UI for LLM output",
-          "body": "Karpathy argues that asking an LLM to format responses as HTML often produces a meaningfully better user experience than raw text or markdown, especially as models move toward richer visual output. The bigger insight is that interface bandwidth — not just model intelligence — is becoming a real workflow multiplier.",
-          "url": "https://x.com/karpathy/status/2053872850101285137"
+          "title": "@aakashgupta: Voice UX May Be Won on Latency, Not IQ",
+          "body": "Aakash Gupta highlights Thinking Machines' first voice model as a latency play first, with 400ms turn-taking versus roughly 570-590ms for current OpenAI and Google realtime systems. The practical point is that voice products may now live or die on whether they stay inside the human conversation window, not just on benchmark intelligence.",
+          "url": "https://x.com/aakashgupta/status/2054087692422672821"
         },
         {
           "tag": "update",
-          "title": "@claudeai: Claude Platform is now native on AWS",
-          "body": "Anthropic says Claude's full API feature set is now generally available through AWS with AWS-native auth, billing, and commitment spend. That lowers friction for enterprises already standardized on AWS and makes direct Claude usage easier to adopt inside existing procurement paths.",
-          "url": "https://x.com/claudeai/status/2053868592286822443"
+          "title": "@bcherny: Claude Code Gets an Agent Session View",
+          "body": "Bcherny spotlights Claude Code's new agent view, which pulls all sessions into one list instead of forcing users to juggle terminal tabs. It looks small on the surface, but it matters because multi-agent work is clearly turning into something products now manage explicitly rather than leaving to shell habits.",
+          "url": "https://x.com/bcherny/status/2053982327123132846"
         },
         {
           "tag": "new",
-          "title": "@claudeai: Claude Code adds an agent session view",
-          "body": "Claude Code is rolling out an agent view that puts all sessions in one place, a small feature with big operational implications for people running multiple long-lived coding tasks. It is another sign that agent products are maturing from single-chat tools into workload management surfaces.",
-          "url": "https://x.com/claudeai/status/2053940934736228454"
+          "title": "@tolibear_: Codex /goal Adds a Native Kanban Board",
+          "body": "Codex /goal runs can now surface as a lightweight Kanban board with clickable cards, making long-running agent work much easier to inspect and steer. That's a real workflow upgrade for anyone using coding agents as ongoing workers instead of one-shot chat assistants.",
+          "url": "https://x.com/tolibear_/status/2053859040556360116"
+        },
+        {
+          "tag": "update",
+          "title": "@steipete: Codex Starts Handling Cloud Setup",
+          "body": "Steipete shared Codex noticing a missing Google Cloud API, launching computer use, and enabling the dependency on its own. The useful signal is that agentic coding is moving closer to end-to-end environment setup, not just writing code and waiting for a human to finish the wiring.",
+          "url": "https://x.com/steipete/status/2053797643516592299"
         },
         {
           "tag": "new",
-          "title": "@ArtificialAnlys: Coding agents are finally being benchmarked as full stacks",
-          "body": "Artificial Analysis launched a Coding Agent Index that scores model-plus-harness combinations across SWE and terminal-style tasks while also tracking cost, tokens, cache behavior, and runtime. That's useful because it measures the thing developers actually buy: not a model in isolation, but a full agent setup with real tradeoffs.",
-          "url": "https://x.com/ArtificialAnlys/status/2053865095076438427"
-        },
-        {
-          "tag": "new",
-          "title": "@OpenAI: Daybreak targets cybersecurity workflows",
-          "body": "OpenAI introduced Daybreak as a security-focused offering that combines frontier models, Codex, and partner workflows for defensive use cases. The move suggests cybersecurity is becoming one of the first major verticals where frontier AI vendors want a dedicated operating surface instead of a generic API story.",
-          "url": "https://x.com/OpenAI/status/2053939702110269822"
+          "title": "@xiruili7_li: ClawEnvKit Turns Tasks into Generated Environments",
+          "body": "ClawEnvKit proposes generating verified agent environments from natural-language task descriptions so evaluation no longer depends on a small pool of hand-built benchmarks. If that approach sticks, the next scaling frontier for agents may be environment generation and harness quality more than raw model size alone.",
+          "url": "https://x.com/xiruili7_li/status/2053854046432157911"
         }
       ]
     },
@@ -51,21 +50,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Barchart: U.S. housing sellers now outnumber buyers by a record margin",
-          "body": "Barchart highlighted a record 630,000 gap between home sellers and buyers in the U.S., a sharp signal that supply-demand conditions have swung materially. If the data holds up, it reinforces the idea that housing is losing pricing power even before any broader macro slowdown fully shows up in earnings.",
-          "url": "https://x.com/Barchart/status/2053810202454221186"
+          "title": "@RockportAI: Courtroom Testimony Puts a Number on Microsoft-OpenAI Economics",
+          "body": "RockportAI flagged courtroom discussion that Microsoft has recognized $9.5 billion in revenue from its OpenAI partnership. Even before broader reporting fills in the context, that is the kind of hard economic datapoint investors will use to rethink how much value Microsoft is already capturing from the relationship.",
+          "url": "https://x.com/RockportAI/status/2053942008721318070"
         },
         {
           "tag": "update",
-          "title": "@xiaochuan8688: OpenAI's margin story still looks more like hardware than SaaS",
-          "body": "This thread argues that despite OpenAI's enormous valuation, its gross margins remain far below classic software names because inference costs are still eating a huge share of revenue. The actionable takeaway for markets is simple: AI leaders may keep winning on usage and relevance while still getting challenged on business quality and IPO-grade margin structure.",
-          "url": "https://x.com/xiaochuan8688/status/2053701886251761781"
+          "title": "@xiaochuan8688: Samsung's HBM4 Catch-Up Could Ease an AI Bottleneck",
+          "body": "This supply-chain thread argues Samsung's HBM4 yields are now roughly in line with SK Hynix, which could materially loosen one of the tightest constraints in AI infrastructure if Nvidia validation follows. The investing takeaway is that memory supply and pricing may matter just as much as GPU headlines for 2026 AI capex and margin expectations.",
+          "url": "https://x.com/xiaochuan8688/status/2054034075401466236"
         },
         {
           "tag": "new",
-          "title": "@RockportAI: Musk v. OpenAI trial surfaced a big Microsoft revenue number",
-          "body": "RockportAI flagged court discussion that Microsoft has recognized $9.5 billion in revenue tied to its OpenAI partnership, which could become an important datapoint in how investors frame the economics and control dynamics of that relationship. Even with the caveat that this came through trial coverage, it is the kind of number markets will latch onto quickly if echoed elsewhere.",
-          "url": "https://x.com/RockportAI/status/2053942008721318070"
+          "title": "@AndrewYNg: Coursera and Udemy Are Combining",
+          "body": "Andrew Ng says Coursera and Udemy are joining forces, with him set to chair the combined company. The broader signal is that AI-driven reskilling is important enough to drive real education-platform consolidation, not just incremental course launches or product tweaks.",
+          "url": "https://x.com/AndrewYNg/status/2053857910451827061"
         }
       ]
     },
@@ -74,34 +73,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@aakashgupta: The Magic Mouse charging-port joke is really an Apple thesis",
-          "body": "Aakash Gupta's thread reframes the Magic Mouse's infamous bottom charging port as a pure expression of Apple's aesthetic-first design philosophy rather than a lingering oversight. Whether you agree or not, it is a concise reminder that some companies optimize relentlessly for brand coherence even when it creates obvious usability pain.",
-          "url": "https://x.com/aakashgupta/status/2053776159054372956"
-        },
-        {
-          "tag": "new",
-          "title": "@Merocle: A tiny M5 Max cluster shows how far local compute has moved",
-          "body": "Merocle showed a four-machine M5 Max cluster tied together over Thunderbolt 5, yielding 72 CPU cores, 128 GPU cores, and 512 GB of unified memory. It is not a mainstream deployment recipe yet, but it is a good illustration of how much serious experimentation can now happen on the edge without renting a full cloud stack.",
-          "url": "https://x.com/Merocle/status/2053853870174962177"
+          "tag": "hot",
+          "title": "@UnitreeRobotics: Robotics Hype Gets a Real Product and a Price Tag",
+          "body": "Unitree unveiled GD01, a $650,000 manned transformable mecha positioned as a production-ready civilian machine rather than a lab demo. Even if it stays niche, it's a strong reminder that some of the most interesting robotics progress is now showing up as actual shippable hardware, not just concept videos.",
+          "url": "https://x.com/UnitreeRobotics/status/2054067819634159622"
         },
         {
           "tag": "update",
-          "title": "@yanhua1010: Transactional email is getting commoditized fast",
-          "body": "Using a cost comparison sourced from Levels, this post shows how far pricing has spread for sending a million emails per month, with SES and Cloudflare now dramatically below legacy providers like Postmark. For builders, the practical lesson is that one more formerly sticky infra category is turning into a low-margin utility.",
-          "url": "https://x.com/yanhua1010/status/2053627340589256873",
-          "links": [
-            {
-              "label": "Quoted source",
-              "url": "https://x.com/levelsio/status/2053466448169685110"
-            }
-          ]
+          "title": "@GoSailGlobal: A Strong Template for Long Research Projects with Claude Code",
+          "body": "This thread lays out a practical pattern for running multi-month research with Claude Code: folder-level CLAUDE.md files, plan mode, subagents, connectors, and scheduled tasks. The insight travels well beyond academia — long projects work better when the AI workspace is treated like an operating system, not just a chat box.",
+          "url": "https://x.com/GoSailGlobal/status/2054018787704549662"
         },
         {
-          "tag": "new",
-          "title": "@dotey: Agent apps are converging on the same three-pane workspace",
-          "body": "Dotey makes the case that products like Codex, Claude, and Cursor are independently converging on a left-nav, chat, and right-side workbench layout because agents need a built-in place for review and human edits. The interesting forward-looking claim is that this naturally points toward plugin ecosystems, where the last mile becomes editing and specialized tooling rather than raw generation.",
-          "url": "https://x.com/dotey/status/2053940091970580736"
+          "tag": "update",
+          "title": "@JonhernandezIA: Fei-Fei Li's Case for Moving Beyond Text-Only AI",
+          "body": "Summarizing Fei-Fei Li, this post argues that the industry's fixation on language models misses where much of the real economy actually lives: physical, perceptual, and spatial tasks. It's a useful framing for why vision, robotics, and embodied systems still matter even when text models dominate the daily hype cycle.",
+          "url": "https://x.com/JonhernandezIA/status/2053784194078101818"
         }
       ]
     }
