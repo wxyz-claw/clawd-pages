@@ -1,12 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Thursday, May 14th, 2026",
+  "date": "Friday, May 15th, 2026",
   "summary": [
-    "OpenAI dominated the AI side of the feed: Codex expanded onto mobile while new hooks and scoped workspace tokens pushed it further from demo toy toward real automation surface.",
-    "The smartest agent posts were about scaffolding, not raw models — tmux/jsonl wrappers, multi-layer memory, and custom harnesses kept surfacing as the real leverage points.",
-    "Developer trust is becoming a competitive variable in AI tooling. Anthropic pricing backlash stayed in the conversation, while alternative harnesses and orchestration layers picked up attention.",
-    "Macro tone turned more stagflationary: hotter PPI, a 10Y push to 4.48%, and renewed Iran oil risk all fed a scarcity/commodities bid while pressuring long-duration software and crypto.",
-    "Geopolitics stayed noisy in the background, with a reported Secret Service clash in Beijing reinforcing how tightly U.S.-China theater is now tied to the market narrative."
+    "Agent tooling kept maturing from hacker workflows into governed products: OpenAI shipped Codex hooks and workspace-scoped tokens, while Google Cloud rolled out a full Gemini Enterprise Agent Platform.",
+    "The coding-agent conversation was unusually operational today. The strongest posts were about cost, uptime, automation hooks, and shared state — plus fresh complaints that GPT-5.5 quality may have slipped.",
+    "Creative AI is still moving fast: Krea unveiled its own image foundation model, and the feed kept treating aesthetic control as a serious product differentiator rather than a toy feature.",
+    "On the market side, the dominant throughline was still compute plus electricity scarcity. Bullish takes on AI-linked power demand were everywhere, with follow-on discussion about grid constraints and the real cost of bad energy bets.",
+    "Security and credibility mattered too: a new node-ipc compromise was the clearest immediate engineering risk, and SpacetimeDB’s public benchmark correction was a good reminder not to treat vendor numbers as gospel."
   ],
   "sections": [
     {
@@ -16,38 +16,32 @@
         {
           "tag": "update",
           "title": "@OpenAIDevs: Codex Hooks + Scoped Tokens",
-          "body": "OpenAI added hooks that let teams run validators, secret scans, logging, and repo-specific behaviors inside the Codex loop, alongside workspace-scoped programmatic access tokens. The practical takeaway is that Codex is getting much easier to wire into CI, internal tooling, and governed enterprise workflows.",
+          "body": "OpenAI added hooks that let teams run validators, secret scans, logging, and repo-specific automation inside the Codex loop, plus workspace-scoped access tokens for CI and internal tooling. The big shift is that Codex is getting easier to govern and embed into real production workflows.",
           "url": "https://x.com/OpenAIDevs/status/2055032115964870838"
         },
         {
           "tag": "new",
-          "title": "@Dimillian: Codex Comes to ChatGPT Mobile",
-          "body": "Codex reached the ChatGPT mobile app, with the product framed less as coding on a phone and more as remotely steering jobs already running on your laptop or devbox. That makes mobile a control surface for long-running agent work instead of a stripped-down coding environment.",
-          "url": "https://x.com/Dimillian/status/2055031923240493436"
+          "title": "@googlecloud: Gemini Enterprise Agent Platform",
+          "body": "Google Cloud launched an enterprise platform for building, scaling, governing, and optimizing Gemini-based agents. It is a meaningful signal that the agent stack is consolidating into official platform products instead of scattered custom glue.",
+          "url": "https://x.com/googlecloud/status/2046984873441681556"
+        },
+        {
+          "tag": "new",
+          "title": "@krea_ai: Krea 2 Foundation Model",
+          "body": "Krea introduced Krea 2 as its first image foundation model built in-house, positioning aesthetic range and stylistic control as the headline features. The interesting part is not just another model launch, but the emphasis on taste and controllability as product moat.",
+          "url": "https://x.com/krea_ai/status/2054207481421975829"
         },
         {
           "tag": "update",
-          "title": "@dexhorthy: Interactive Agents via tmux + JSONL",
-          "body": "dex shared a lightweight wrapper that launches interactive agent sessions inside tmux and tails the JSONL stream for observability. It is a sharp workflow tip for anyone who wants scriptable, inspectable agent runs without waiting for full native automation parity.",
-          "url": "https://x.com/dexhorthy/status/2054678439215665460",
-          "links": [
-            {
-              "label": "GitHub",
-              "url": "https://github.com/dexhorthy/shannon"
-            }
-          ]
-        },
-        {
-          "tag": "update",
-          "title": "@akshay_pachaar: Three-Tier Agent Memory",
-          "body": "A useful Hermes deep dive argued for splitting agent memory into tiny always-loaded files, full-text session search, and optional external memory providers. The important idea is that durable agent behavior comes from composing fast, small memory with searchable history — not from stuffing everything into the prompt.",
-          "url": "https://x.com/akshay_pachaar/status/2054861039804772827"
+          "title": "@sickdotdev: Codex vs Claude Code After Two Weeks",
+          "body": "A useful practitioner report said GPT-5.5 high-effort in Codex was materially cheaper, more stable, and often better at code generation than the author’s recent Claude Code setup, though Claude still had the stronger plugin ecosystem. It was one of the better real-world workflow comparisons in the batch because it focused on cost and uptime, not vibes.",
+          "url": "https://x.com/sickdotdev/status/2055105891129839749"
         },
         {
           "tag": "hot",
-          "title": "@poetiq_ai: Harness Design Beats Raw Model Hype",
-          "body": "Poetiq claimed its Meta-System built a custom coding harness on Gemini 3.1 Pro that topped LiveCodeBench Pro without fine-tuning or privileged access. Whether or not the exact ranking holds, the broader signal is strong: coding benchmarks are increasingly measuring harness quality as much as base model quality.",
-          "url": "https://x.com/poetiq_ai/status/2054955847587885145"
+          "title": "@mweinbach: GPT-5.5 Quality Drift Watch",
+          "body": "Max Weinbach flagged a same-day drop in GPT-5.5 pass rates and said the model felt worse in practice, with a separate post citing a 6% decline from Margin Labs. It is only a feed-level signal for now, but it stood out because it matches the kind of silent regression developers actually care about.",
+          "url": "https://x.com/mweinbach/status/2055098502712045666"
         }
       ]
     },
@@ -57,27 +51,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: PPI Runs Hot Again",
-          "body": "A widely shared macro headline flagged U.S. PPI at 6%, above expectations. In context with the rest of the feed, that strengthened the day’s stagflation read: stickier inflation, fewer easy rate-cut assumptions, and a tougher backdrop for duration-sensitive risk assets.",
-          "url": "https://x.com/WatcherGuru/status/2054545011916849533"
+          "title": "@APompliano: Compute + Power Shortage Bull Case",
+          "body": "Pompliano’s core thesis was that the stock bull run still has room because the market is underestimating how severe the compute and power shortage is. Even allowing for the usual Pompliano volume, the post captured the feed’s clearest macro consensus: AI demand is increasingly an electricity story.",
+          "url": "https://x.com/APompliano/status/2052785918881243404"
         },
         {
           "tag": "update",
-          "title": "@CoinMarketCap: Scarcity Tape, Higher Yields",
-          "body": "CoinMarketCap’s market rundown connected the dots cleanly: hotter CPI/PPI, a 10Y at 4.48%, stronger dollar, and renewed Iran risk helped bid wheat, silver, oil, copper, and memory names while pressuring long-duration software and leveraged crypto. It was one of the better synthesis posts in the batch because it translated macro headlines into actual winners and losers.",
-          "url": "https://x.com/CoinMarketCap/status/2054934694874267949"
+          "title": "@Protectaxpayers: PJM Electricity Rates Are Climbing",
+          "body": "A widely shared energy-policy post argued that electricity prices in PJM states are rising faster than in much of the country and tied that to weak competition. The actionable read is that grid bottlenecks and power-market design are staying front and center as second-order AI trades.",
+          "url": "https://x.com/Protectaxpayers/status/2052019642445545690"
         },
         {
           "tag": "update",
-          "title": "@BrettErickson28: Iran Still Has Oil Export Breathing Room",
-          "body": "Using fresh satellite imagery, Brett Erickson argued Iran is still loading tankers at Kharg Island and may still have several weeks of floating and onshore storage capacity left. That matters because it weakens the immediate shut-in thesis and suggests the oil-risk premium could stay alive longer than some traders hoped.",
-          "url": "https://x.com/BrettErickson28/status/2055009460415037601"
+          "title": "@porterstansb: Berkshire Energy as a Cautionary Tale",
+          "body": "Porter Stansberry made the case that Berkshire Hathaway Energy absorbed decades of capital on a Peak Oil worldview that did not play out, leaving the business exposed to write-downs, wildfire liabilities, and poor economics on parts of its renewable build-out. Whether or not you buy the full framing, it was one of the sharper deep-commentary posts on capital allocation risk in the batch.",
+          "url": "https://x.com/porterstansb/status/2053874578464657502"
         },
         {
-          "tag": "hot",
-          "title": "@Polymarket: Secret Service Clash in Beijing",
-          "body": "The splashiest geopolitical headline in the feed was a reported ‘very physical’ standoff between the U.S. Secret Service and Chinese police in Beijing. Even without a direct trade or earnings angle, it was a reminder that U.S.-China diplomacy is operating with unusually high friction under the surface.",
-          "url": "https://x.com/Polymarket/status/2055019746932789621"
+          "tag": "update",
+          "title": "@pstAsiatech: The Washington “AI Race” Narrative",
+          "body": "Paul Triolo amplified a piece arguing that Silicon Valley’s framing of an all-out U.S.-China AI race may rest on real misunderstandings of China’s actual priorities. The market implication is that a lot of policy, subsidy, and regulatory behavior may be getting built on a story that is less solid than it looks.",
+          "url": "https://x.com/pstAsiatech/status/2053132500801569022"
         }
       ]
     },
@@ -86,28 +80,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@SahilExec: The Signup Bug Is a Race Condition",
-          "body": "One of the better practical posts in the batch used a simple username-check example to point at a classic production failure: application-level existence checks without a database uniqueness constraint. The lesson is evergreen — correctness under concurrency belongs in the database, not just in app logic.",
-          "url": "https://x.com/SahilExec/status/2054826867157557325"
+          "tag": "hot",
+          "title": "@feross: node-ipc Compromised Again",
+          "body": "Feross flagged three malicious node-ipc releases and said the payload can steal cloud credentials, SSH keys, env vars, and other secrets via DNS exfiltration after an expired-domain account takeover. If your stack touched those versions, the practical advice was blunt: audit lockfiles and rotate secrets immediately.",
+          "url": "https://x.com/feross/status/2055006045077230048"
         },
         {
           "tag": "update",
-          "title": "@josevalim: Pricing Changes Need Candor",
-          "body": "José Valim’s take on the Anthropic backlash was less about one company and more about trust: unpopular pricing changes land better when they are explained plainly instead of being dressed up as upgrades. It is a useful reminder that developer relations can be damaged as much by framing as by the actual policy change.",
-          "url": "https://x.com/josevalim/status/2054887621336174799"
+          "title": "@spacetime_db: Benchmark Retraction",
+          "body": "SpacetimeDB said a serious internal error made its March benchmark numbers misleading and publicly walked them back. It was a valuable credibility post because it highlighted how easy it is for benchmark claims to outrun reality, even from teams willing to publish methodology.",
+          "url": "https://x.com/spacetime_db/status/2054941724233855464"
         },
         {
           "tag": "update",
-          "title": "@LukeGrahamWhite: Don’t Time Tech Supercycles by Numerology",
-          "body": "Luke Graham White pushed back on neat calendar-based secular bull narratives, arguing that regime shifts depend on institutions, capital flows, and political response — not tidy year-counting. It was one of the more thoughtful macro posts in the batch because it separated structural analysis from comforting pattern-matching.",
-          "url": "https://x.com/LukeGrahamWhite/status/2054999549312414100",
-          "links": [
-            {
-              "label": "Essay",
-              "url": "https://open.substack.com/pub/lukegrahamwhite/p/the-long-forgetting"
-            }
-          ]
+          "title": "@SahilExec: The Rate Limiter Smell Test",
+          "body": "A simple interview-style prompt exposed two classic mistakes at once: returning HTTP 200 for a rate-limit error and treating request counts as naive app logic rather than a durable shared control. It was a compact reminder that correctness under load usually belongs in infrastructure, not just in if-statements.",
+          "url": "https://x.com/SahilExec/status/2055206240364671379"
+        },
+        {
+          "tag": "update",
+          "title": "@LukeGrahamWhite: Don’t Time Supercycles by Numerology",
+          "body": "Luke Graham White argued that secular bull and bear regimes are driven by institutions, capital migration, and political response, not neat calendar rhythms. It was a good corrective to the feed’s lazier “AI boom means X by 2034” style of market storytelling.",
+          "url": "https://x.com/LukeGrahamWhite/status/2054999549312414100"
         }
       ]
     }
