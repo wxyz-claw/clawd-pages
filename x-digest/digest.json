@@ -2,10 +2,10 @@
   "title": "X Feed Digest",
   "date": "Saturday, May 16th, 2026",
   "summary": [
-    "Coding-agent discussion shifted from raw model hype to operational setup: the strongest posts were about multi-machine control, repo harnesses, and the infrastructure layers that make tools like Codex and Claude Code actually reliable in production.",
-    "A second clear theme was execution moving closer to the edge: Claude Code running in the browser, local voice agents completing real tasks on consumer hardware, and voice stacks exposing lower-level SDKs instead of staying buried inside app wrappers.",
-    "The market posts were mostly about repricing rather than euphoria — crypto consolidation as a healthy filter, FIFA getting forced to slash its China rights expectations, and AI demand pushing mainstream PC hardware costs high enough to hurt the very buyers vendors were hoping to win.",
-    "The most useful general workflow signal was simplification: if AI is doing more of the heavy lifting, lighter editors, clearer research provenance, and tighter tooling stacks may matter more than ever-larger software bundles."
+    "The strongest AI posts were about operating the tools well, not just chasing model headlines: cache behavior, structured Codex workflows, lean browser runtimes, and auditable agent deployments all mattered more than raw benchmark bragging.",
+    "A second theme was distribution getting messier and broader at the same time — frontier-model access is leaking into gray markets, telecom bundles, and third-party software surfaces instead of staying locked inside the original chat apps.",
+    "The best market commentary focused on long-duration capital allocation under new constraints: private money may have to fund more U.S. infrastructure, while legacy bets in energy and AI policy narratives are being stress-tested harder than the headlines suggest.",
+    "Outside pure tech, the most useful posts were about compression: product windows are shortening fast, Bay Area career ladders are warping around AI wealth concentration, and more businesses are discovering they can manufacture friction first and monetize the escape hatch later."
   ],
   "sections": [
     {
@@ -14,33 +14,43 @@
       "items": [
         {
           "tag": "update",
-          "title": "@op7418: Codex Multi-Device Workflow",
-          "body": "A practical Codex tip showed how one ChatGPT/Codex setup can attach to projects running on other machines over remote connections, so the assistant can work across multiple computers without constant device switching. The useful takeaway is that multi-machine context sharing is becoming a real day-to-day workflow, not just a demo feature.",
-          "url": "https://x.com/op7418/status/2055561525633642762"
-        },
-        {
-          "tag": "hot",
-          "title": "@gyro_ai: Claude Code Needs a Harness, Not Just a Better Model",
-          "body": "A sharp summary of Anthropic’s enterprise guidance argued that Claude Code performance in large repos depends more on the surrounding harness than on model upgrades alone. The seven-layer stack — from CLAUDE.md and hooks up through MCP servers and sub-agents — is a good reminder that AI coding wins are increasingly systems-engineering wins.",
-          "url": "https://x.com/gyro_ai/status/2055453340968837282"
+          "title": "@binghe: Claude Code Cache-Busting Header",
+          "body": "Binghe flagged that Claude Code 2.1.36 appears to prepend a randomized x-anthropic-billing-header fragment to each API request, which can destroy prompt-cache hits on third-party endpoints. If you proxy Claude Code through external APIs, the practical warning is higher token burn and slower runs until providers normalize or strip that field.",
+          "url": "https://x.com/binghe/status/2055658426332860432"
         },
         {
           "tag": "new",
-          "title": "@Barret_China: Claude Code in the Browser via WebAssembly",
-          "body": "One team reportedly packed Claude Code, Node.js, and Python into a WebAssembly-based browser runtime, then bridged in filesystem and external-tool access. If this approach holds up, it points toward serious agent tooling that can run in a browser sandbox rather than depending on a fully local terminal install.",
-          "url": "https://x.com/Barret_China/status/2055564356168098266"
-        },
-        {
-          "tag": "new",
-          "title": "@TheCesarCross: Local Voice Agent Books a Real Flight",
-          "body": "A demo showed a local voice-driven agent on a Minisforum box completing an end-to-end Delta booking in 73 seconds with no cloud agent in the loop. The interesting signal is less the travel use case itself and more that fully local action-taking agents are getting fast enough to feel practical.",
-          "url": "https://x.com/TheCesarCross/status/2051677581267661079"
+          "title": "@Huanusa: Obscura as a Lean Browser Substrate",
+          "body": "A widely shared tooling post pointed to Obscura, a Rust browser runtime claiming CDP compatibility with Puppeteer and Playwright while using far less memory and startup time than full Chrome. If the benchmarks hold, it is exactly the kind of lower-overhead browser substrate AI agents and scraping-heavy workflows have been missing.",
+          "url": "https://x.com/Huanusa/status/2055596872773812521"
         },
         {
           "tag": "update",
-          "title": "@krispHQ: Voice Infra Surfaces as a Product",
-          "body": "Krisp said the audio engine already used underneath products like Vapi, LiveKit, and Daily is now available as a standalone SDK with materially better turn-taking. That matters because voice-app builders may be able to buy better conversational latency and interruption handling instead of rebuilding core audio plumbing themselves.",
-          "url": "https://x.com/krispHQ/status/2051984855278162133"
+          "title": "@rwayne: Obsidian + Claude Code + n8n Workflow Stack",
+          "body": "This workflow thread framed Obsidian as the durable knowledge layer, Claude Code as the reasoning layer, and n8n as the execution layer, with QUEUE and GENERATED folders creating an asynchronous loop. The useful idea is to organize notes around business flows rather than topics so the system compounds work while you are away.",
+          "url": "https://x.com/rwayne/status/2055583786314989655"
+        },
+        {
+          "tag": "update",
+          "title": "@BillorDenizcan: Azure Networking Uses Governed AI Coworkers",
+          "body": "A Microsoft-linked case study said Azure Networking is already using AI agents as governed coworkers in operational workflows, with 2x faster incident mitigation and up to 78% less manual effort. The notable signal is that enterprise agent adoption is moving from copilots to tightly scoped, auditable operations roles.",
+          "url": "https://x.com/BillorDenizcan/status/2055499121889538453",
+          "links": [
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/BillorDenizcan/status/2055499121889538453"
+            },
+            {
+              "label": "Microsoft case study",
+              "url": "https://techcommunity.microsoft.com/blog/appsonazureblog/from-copilots-to-coworkers-how-ai-agents-are-transforming-azure-networking-opera/4519850"
+            }
+          ]
+        },
+        {
+          "tag": "new",
+          "title": "@kloss_xyz: Seven Production Codex Goal Templates",
+          "body": "Kloss shared seven structured Codex /goal templates covering ideation, planning, implementation, refactors, hardening, and migrations. It is a good reminder that better task framing is becoming a bigger lever than prompt cleverness alone.",
+          "url": "https://x.com/kloss_xyz/status/2055477217552142782"
         }
       ]
     },
@@ -50,27 +60,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@APompliano: Crypto’s Shakeout as a Bullish Filter",
-          "body": "Pompliano’s argument was that the standalone crypto ‘industry’ shrinking is healthy because the durable businesses now have to compete in mainstream markets rather than hiding inside sector-specific hype. Even if you dislike the framing, the underlying idea is actionable: watch for which firms still compound once easy narrative capital disappears.",
-          "url": "https://x.com/APompliano/status/2052068896702710105"
+          "title": "@adxtyahq: Gray-Market Frontier API Resale",
+          "body": "One high-engagement post claimed Xianyu and Taobao sellers are reselling GPT-5.4, GPT-5.5, and Claude API access at extreme discounts, with buyers reportedly burning through huge token volumes. Even if the exact numbers are noisy, the bigger market signal is that demand for frontier-model access is strong enough to create arbitrage and leakage outside official pricing channels.",
+          "url": "https://x.com/adxtyahq/status/2055710603482988998"
+        },
+        {
+          "tag": "update",
+          "title": "@sonalibasak: Water Infrastructure as a Private-Capital Trade",
+          "body": "Sonali Basak highlighted a striking figure that roughly 40% of U.S. water is lost through bad piping, then tied it to fiscal constraints at the state and federal level. The actionable takeaway is to watch private-infrastructure capital as a bigger beneficiary if public budgets cannot fund the repair cycle.",
+          "url": "https://x.com/sonalibasak/status/2055695329530712246"
         },
         {
           "tag": "hot",
-          "title": "@okaythenfuture: FIFA’s China Rights Repriced Hard",
-          "body": "A widely shared sports-rights post said FIFA started by asking China for $300 million, then ended up settling around $60 million after poor East Asia viewing windows crushed its leverage. The broader signal is that global media rights are getting repriced much more brutally when scheduling and regional demand are misaligned.",
-          "url": "https://x.com/okaythenfuture/status/2055515589599469873"
+          "title": "@porterstansb: Berkshire Energy and the Peak-Oil Hangover",
+          "body": "Porter Stansberry argued that Berkshire Hathaway Energy’s huge capital commitment to wind, solar, and transmission was built on a peak-oil thesis that no longer matches U.S. hydrocarbon abundance. Whether or not you buy the full indictment, it is one of the sharper threads on how long-duration capital allocation can go wrong even inside elite institutions.",
+          "url": "https://x.com/porterstansb/status/2053874578464657502"
         },
         {
           "tag": "update",
-          "title": "@python_xxt: AI Hardware Costs Are Hitting Consumer PCs",
-          "body": "One of the better hardware takes in the batch argued that AI demand is inflating mainstream PC bills of materials so aggressively that the promised ‘AI PC’ upgrade cycle is becoming self-defeating. If notebook pricing really is up roughly 30–40% for decent specs, that is a real demand risk for consumer hardware names.",
-          "url": "https://x.com/python_xxt/status/2055527263224168503"
-        },
-        {
-          "tag": "update",
-          "title": "@porterstansb: RCA as the Original AI Stock",
-          "body": "A long historical thread mapped the 1920s radio boom onto today’s AI trade: the technology can be transformative and still destroy late investors when expectations outrun structure. It was one of the stronger macro reminders in the feed that real platform shifts do not protect you from valuation wipeouts.",
-          "url": "https://x.com/porterstansb/status/2054667537623973974"
+          "title": "@pstAsiatech: The AI-Race Narrative as Policy Trade",
+          "body": "A shared essay thread argued that Washington’s AI-race framing has been shaped partly by actors seeking defense contracts, looser regulation, and investment upside, not just genuine security concern. The useful lens is to separate real competitive risk from narratives that also happen to support convenient policy and capital agendas.",
+          "url": "https://x.com/pstAsiatech/status/2053132500801569022"
         }
       ]
     },
@@ -80,33 +90,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@dotey: Why Lightweight Editors May Win Again",
-          "body": "A simple but persuasive workflow note argued that if AI is generating more of the code, many people may no longer need an IDE that behaves like a full operating system. The case for going back to a lighter editor like Sublime is basically that syntax highlighting and fast editing are enough when the assistant handles more of the heavy lift.",
-          "url": "https://x.com/dotey/status/2055470006679302261",
-          "links": [
-            {
-              "label": "Sublime Text",
-              "url": "https://www.sublimetext.com/"
-            }
-          ]
+          "title": "@deedydas: SF’s AI Wealth Split Is Warping Career Incentives",
+          "body": "Deedy described a Bay Area labor market where a small cohort of AI insiders has effectively reached retirement wealth while everyone else is reassessing career paths, salary expectations, and even the value of their skills. It is a strong anecdotal signal that AI’s first-order effects may hit status ladders and worker psychology before they show up cleanly in employment data.",
+          "url": "https://x.com/deedydas/status/2055545833748455480"
         },
         {
           "tag": "new",
-          "title": "@umarelbably: A Transparent Medical-Research Assistant",
-          "body": "Peer was pitched as a free alternative to OpenEvidence with explicit source weighting, claim verification, and transparent citation methodology across sources like PubMed, FDA, NHS, and ClinicalTrials.gov. Whether or not it wins, the strong idea is that medical AI products need provenance and verification to be product features, not footnotes.",
-          "url": "https://x.com/umarelbably/status/2055073284769870162",
-          "links": [
-            {
-              "label": "Peer",
-              "url": "http://frompeer.com"
-            }
-          ]
+          "title": "@bearliu: AI Product Windows Are Shrinking Fast",
+          "body": "Bear Liu’s point was that interface ideas now move from sketch to big-tech launch so quickly that product teams no longer have much time to sit on good concepts. The broader insight is that AI UX feels like a pre-paradigm-shift moment, with lots of open territory but very short windows to claim it.",
+          "url": "https://x.com/bearliu/status/2055636900694692270"
         },
         {
           "tag": "update",
-          "title": "@snowboat84: Using Claude Code to Study Reverse Engineering",
-          "body": "A thoughtful post reframed AI-assisted reverse engineering as a methodology problem rather than a nostalgia project by using a 1994 strategy game as the training ground. The useful insight is that old software can be a safe sandbox for learning how agents help with reverse engineering and for recovering design wisdom from older constrained systems.",
-          "url": "https://x.com/snowboat84/status/2055461989313585299"
+          "title": "@python_xxt: Disney’s ‘Create Friction, Sell Relief’ Pattern",
+          "body": "A long post about Shanghai Disney argued the real outrage is not fast passes themselves but the operator allegedly creating excess crowding first and then monetizing relief. That manufacture-friction-then-sell-the-bypass pattern is a useful business lens well beyond theme parks.",
+          "url": "https://x.com/python_xxt/status/2055717814384939064"
         }
       ]
     }
