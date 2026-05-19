@@ -3,11 +3,11 @@
   "date": "Tuesday, May 19th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Enterprise AI kept moving into real operating surfaces: Google launched Gemini Enterprise Agent Platform, Claude Code shipped workflow-minded CLI upgrades, and Apple previewed accessibility features powered by Apple Intelligence.",
-    "The strongest practical workflow theme was that agents need better state and tighter human supervision: shared memory patterns, Codex browser-plus-script loops, and Linux maintainer backlash to AI-generated vuln spam all pointed in the same direction.",
-    "Economics showed up everywhere. Gemini 3.5 Flash pricing drew immediate pushback, Codex quota experiments kept circulating, and the deeper investment thesis was that vertical apps with proprietary data may still beat frontier generalists on cost-performance.",
-    "Markets and policy chatter centered on governance plus expectations: new OpenAI-vs-Musk trial details kept control issues in focus, Nvidia earnings were framed as 'priced for perfection,' and hospital consolidation resurfaced as a serious healthcare-cost target.",
-    "One broader warning stood out beyond AI tooling itself: image generation is now good enough that visual plausibility is no longer a meaningful truth test, so verification increasingly has to come from provenance and corroboration."
+    "Google I/O dominated the feed, but the deeper signal was structural: Google is turning Gemini from a model-and-IDE story into an agent-platform story via Antigravity CLI, managed agents, and broader subscription bundling.",
+    "Capacity constraints are now explicit product strategy rather than background noise. OpenAI formalized multi-year compute commitments, while Cerebras pushed raw inference-speed bragging rights with Kimi K2.6 enterprise trials.",
+    "The strongest workflow theme was multi-agent orchestration with economic guardrails: Google showcased subagent-heavy builds at surprisingly low listed cost, even as users immediately started debating tighter usage caps and value tiers.",
+    "Human judgment is still the scarce resource around AI. Linux maintainers are already pushing back on low-quality AI bug-report spam, and the more credible research/tooling posts emphasized verification over blind autonomy.",
+    "Outside pure AI, the sharper market commentary centered on long-duration bets and policy pressure, from Berkshire's energy capital allocation to renewed scrutiny of hospital consolidation as a driver of healthcare costs."
   ],
   "sections": [
     {
@@ -16,43 +16,43 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@googlecloud: Gemini Enterprise Agent Platform",
-          "body": "Google Cloud introduced Gemini Enterprise Agent Platform as a full stack for building, governing, and optimizing agents. The important signal is that the market is shifting from single-chat assistants toward managed multi-agent systems with controls, observability, and cost discipline.",
-          "url": "https://x.com/googlecloud/status/2046984873441681556"
+          "title": "@mark_k: Antigravity Becomes the Product",
+          "body": "The sharpest read on Google I/O was that Antigravity 2.0 no longer sells an IDE first; it sells the agent layer itself. Desktop, CLI, SDK, scheduled tasks, and subagents all point to Google wanting one shared runtime across surfaces rather than another standalone coding tool.",
+          "url": "https://x.com/mark_k/status/2056809475101872369"
         },
         {
           "tag": "update",
-          "title": "@ClaudeCodeLog: Claude Code Gets More Operational",
-          "body": "Claude Code 2.1.144 added background-session resume support, clearer elapsed-time reporting, and safer exact-string file edits. It is a small but meaningful step from demo coding agent toward something you can keep running and trust in a real workflow.",
-          "url": "https://x.com/ClaudeCodeLog/status/2056539661481206232"
-        },
-        {
-          "tag": "update",
-          "title": "@CatChen: Codex Browser Actions Can Become Scripts",
-          "body": "A useful workflow tip: let Codex perform a browser task once, then have it turn that interaction into reusable JavaScript for repeated runs. The win is faster iteration than jumping straight to Playwright, because the agent can debug against the live page in the same session.",
-          "url": "https://x.com/CatChen/status/2056542354882879915"
-        },
-        {
-          "tag": "hot",
-          "title": "@MaxForAI: Linus Pushes Back on AI Bug-Report Slop",
-          "body": "A translated thread highlighted Linus Torvalds' complaint that AI-assisted Linux bug hunters are flooding security lists with duplicate, low-judgment reports. The takeaway is blunt: using AI to find issues is fine, but maintainers still expect humans to validate impact, reproduce, and propose a real fix.",
-          "url": "https://x.com/MaxForAI/status/2056639870504948170"
-        },
-        {
-          "tag": "new",
-          "title": "@MacRumors: Apple Intelligence Expands Accessibility",
-          "body": "Apple previewed new accessibility features that lean on Apple Intelligence rather than treating AI as a separate novelty layer. That feels like the more durable adoption path: AI embedded inside existing system capabilities where the value is immediately obvious.",
-          "url": "https://x.com/MacRumors/status/2056713029518241856",
+          "title": "@geminicli: Consumer Gemini CLI Moves to Antigravity CLI",
+          "body": "Google said consumer and free Gemini CLI users will transition to Antigravity CLI, which is rebuilt in Go and designed around asynchronous multi-agent workflows. The practical detail is the timeline: consumer Gemini CLI access stops serving requests on June 18, while enterprise access remains unchanged.",
+          "url": "https://x.com/geminicli/status/2056796084790304833",
           "links": [
             {
-              "label": "MacRumors coverage",
-              "url": "https://www.macrumors.com/2026/05/19/new-accessibility-features-with-apple-intelligence/"
+              "label": "Google developer blog",
+              "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/?utm_source=social"
             },
             {
               "label": "View Tweet",
-              "url": "https://x.com/MacRumors/status/2056713029518241856"
+              "url": "https://x.com/geminicli/status/2056796084790304833"
             }
           ]
+        },
+        {
+          "tag": "new",
+          "title": "@Google: Managed Agents in the Gemini API",
+          "body": "Managed Agents packages Google's internal Antigravity harness behind a single API call, complete with a hosted Linux sandbox for code execution, browsing, and file work. That is a meaningful shift toward selling agent runtime as infrastructure instead of making teams wire everything together themselves.",
+          "url": "https://x.com/Google/status/2056838495298367773"
+        },
+        {
+          "tag": "update",
+          "title": "@mweinbach: A Concrete Multi-Agent Cost Signal",
+          "body": "A Google demo claimed Antigravity plus Gemini 3.5 Flash assembled an operating system using 93 subagents in 12 hours for under $1,000 of API credits. Even if the exact benchmark is marketing-shaped, the important point is that large multi-agent runs are starting to look budgetable instead of purely experimental.",
+          "url": "https://x.com/mweinbach/status/2056789391901970626"
+        },
+        {
+          "tag": "hot",
+          "title": "@cerebras: Kimi K2.6 at ~1,000 Tokens/Sec",
+          "body": "Cerebras said it is running Kimi K2.6, a trillion-parameter model, in enterprise trials at roughly 1,000 tokens per second according to Artificial Analysis. The useful signal is not just the speed claim, but that inference throughput is becoming a frontline enterprise sales argument.",
+          "url": "https://x.com/cerebras/status/2056778123329274279"
         }
       ]
     },
@@ -62,37 +62,47 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@LZRationalnvest: New OpenAI vs. Musk Trial Details",
-          "body": "A widely shared Chinese summary of fresh Wall Street Journal reporting surfaced more color from the Musk-OpenAI courtroom fight, especially around control demands, boardroom chaos, and the aborted Anthropic tie-up discussion. The core signal is that governance risk around frontier labs is still very real even when the product story looks unstoppable.",
-          "url": "https://x.com/LZRationalnvest/status/2056384245745258832"
-        },
-        {
-          "tag": "hot",
-          "title": "@Stocktwits: Nvidia Expectations Look Maxed Out",
-          "body": "Ahead of earnings, the interesting part was not whether Nvidia beats but whether a beat still matters when the market is already assuming near-perfection. That is the right framing for crowded AI trades now: strong fundamentals can still disappoint if expectations get too far ahead.",
-          "url": "https://x.com/Stocktwits/status/2056716574367604921"
-        },
-        {
-          "tag": "update",
-          "title": "@HospitalWatchUS: Hospital Consolidation Back in Focus",
-          "body": "A policy thread tied rising U.S. healthcare costs to hospital consolidation and pointed to building pressure in Washington to make big systems the target. Even if the post is advocacy-flavored, the underlying policy vector is worth watching because antitrust and cost-control narratives are converging again.",
-          "url": "https://x.com/HospitalWatchUS/status/2047063711605510216",
+          "title": "@OpenAI: Guaranteed Capacity and Multi-Year Commits",
+          "body": "OpenAI launched Guaranteed Capacity, letting customers make 1-3 year commitments in exchange for discounted tokens and assured access to compute. That is a strong tell that frontier-model demand is still constrained enough for vendors to sell reservations like cloud capacity.",
+          "url": "https://x.com/OpenAI/status/2056823271774101907",
           "links": [
             {
-              "label": "Axios link",
-              "url": "https://www.axios.com/2026/04/22/trump-aligned-think-tank-goes-after-hospitals"
+              "label": "OpenAI page",
+              "url": "https://openai.com/business/guaranteed-capacity/"
             },
             {
               "label": "View Tweet",
-              "url": "https://x.com/HospitalWatchUS/status/2047063711605510216"
+              "url": "https://x.com/OpenAI/status/2056823271774101907"
             }
           ]
         },
         {
           "tag": "update",
-          "title": "@bendee983: Vertical AI May Keep the Edge",
-          "body": "One of the sharper market takes argued that frontier labs will not automatically wipe out every application layer, because vertical players with proprietary data can still beat general models on task quality and cost. That is a useful antidote to the lazy 'wrappers always die' trade.",
-          "url": "https://x.com/bendee983/status/2056450784837955711"
+          "title": "@GeminiApp: Frontier AI Gets Bundled Like a Subscription Stack",
+          "body": "Google cut the top AI Ultra price from $250 to $200 and added a new $100 tier while folding in storage, YouTube, and higher model limits. The broader takeaway is that frontier AI is increasingly being packaged as a consumer bundle, not sold only as raw model access.",
+          "url": "https://x.com/GeminiApp/status/2056792679607103626",
+          "links": [
+            {
+              "label": "Google AI plans",
+              "url": "https://one.google.com/about/google-ai-plans/"
+            },
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/GeminiApp/status/2056792679607103626"
+            }
+          ]
+        },
+        {
+          "tag": "update",
+          "title": "@porterstansb: Berkshire Energy's Long Bet Under Fire",
+          "body": "A pointed Berkshire thread argued Berkshire Hathaway Energy's weak economics stem from a long-running Peak Oil thesis that went badly wrong, leaving huge reinvestment, no dividends, and serious write-down risk. Whether or not you buy every flourish, it is a sharp reminder that infrastructure bets can look safe for years before the thesis breaks.",
+          "url": "https://x.com/porterstansb/status/2053874578464657502"
+        },
+        {
+          "tag": "update",
+          "title": "@HospitalWatchUS: Hospital Consolidation Back on the Policy Radar",
+          "body": "A healthcare-cost thread highlighted renewed Washington interest in hospital consolidation as a policy target, citing a Paragon study and Axios coverage. If that pressure builds, it could matter more for healthcare margins than a lot of noisier daily political chatter.",
+          "url": "https://x.com/HospitalWatchUS/status/2047063711605510216"
         }
       ]
     },
@@ -102,27 +112,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@wolfyxbt: AI Images Are Breaking Visual Trust",
-          "body": "A thoughtful post argued that image models have crossed the threshold where visual inspection is no longer enough to tell fake from real. The practical implication is uncomfortable but important: for anything consequential, provenance and fact-checking now matter more than your eyes.",
-          "url": "https://x.com/wolfyxbt/status/2056586410891821072"
+          "title": "@MaxForAI: Linus vs. AI Bug-Report Slop",
+          "body": "A translated Linux-maintainer thread made the core rule explicit: AI-assisted bug hunting is fine, but dumping unverified reports on maintainers is not. The durable lesson is that AI can widen search, yet humans still own validation, threat modeling, and fixes.",
+          "url": "https://x.com/MaxForAI/status/2056639870504948170"
         },
         {
           "tag": "update",
-          "title": "@MaxForAI: Compound Skills Beat Single-Track Depth",
-          "body": "Relaying comments from DeepMind researcher Susan Zhang, this thread made the case that stacking distinct skill domains can become more defensible than maximizing depth in only one lane. It is a useful career lens for the AI era, where unusual combinations often compound faster than narrow specialization.",
-          "url": "https://x.com/MaxForAI/status/2056644097352319011"
+          "title": "@MSFTResearch: A Good Reading List for Serious Agent Builders",
+          "body": "Microsoft Research's roundup was valuable less as hype and more as a reading list: verification-first agents, agentic GitHub workflows, and fine-tuning work that points toward safer automation. It is a useful cue for where serious lab effort is going beyond chatbot demos.",
+          "url": "https://x.com/MSFTResearch/status/2055303919497089337"
         },
         {
           "tag": "update",
-          "title": "@joenandez: Memory Should Belong to the Work",
-          "body": "A short product principle cut through a lot of agent hype: memory should attach to the task or workspace, not vanish with a specific assistant. That framing feels right, because the valuable asset in multi-agent systems is accumulated context, not loyalty to one interface.",
-          "url": "https://x.com/joenandez/status/2050321110864936962"
+          "title": "@0xLogicrw: Codex Moves Into Interpretable Scientific Control",
+          "body": "One of the more interesting research shares argued that Codex-written control code beat reinforcement-learning baselines on fluid-dynamics tasks by iterating on simulation feedback. The intriguing part is interpretability: short human-readable rules may be competitive in domains where black-box controllers are brittle.",
+          "url": "https://x.com/0xLogicrw/status/2056695371984982195"
         },
         {
           "tag": "update",
-          "title": "@rwayne: Burning Quota Isn't the Same as Progress",
-          "body": "One of the better reality-check posts said a founder nearly exhausted a high-end Codex plan in a week without much progress, largely because he still could not specify what he wanted clearly. It is a good reminder that stronger models amplify clarity; they do not replace it.",
-          "url": "https://x.com/rwayne/status/2056581107790074227"
+          "title": "@alliekmiller: Ambient AI, Not Just Bigger Chat Boxes",
+          "body": "The strongest hardware moment from Google I/O was a glasses-to-watch Gemini demo that completed capture and editing through voice. It reinforces the idea that off-screen, ambient interfaces may matter more than endlessly expanding desktop copilots.",
+          "url": "https://x.com/alliekmiller/status/2056809340481450495"
         }
       ]
     }
