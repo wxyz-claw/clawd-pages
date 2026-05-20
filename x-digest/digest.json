@@ -3,11 +3,11 @@
   "date": "Wednesday, May 20th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Google I/O aftershocks dominated the feed: the real story is Google repositioning Antigravity as a shared agent platform across desktop, CLI, SDK, managed runtimes, and Android rather than shipping yet another AI IDE.",
-    "Pricing and capacity became explicit strategy. OpenAI is now selling 1-3 year compute commitments, while Google cut AI Ultra pricing and expanded bundles/limits—only to trigger immediate backlash from early adopters who bought the day before the change.",
-    "The most useful workflow posts were practical, not flashy: official managed-agent infrastructure, steadier Codex CLI ergonomics, and a strong push toward HTML-based plans/prototypes for agent collaboration instead of giant Markdown files.",
-    "Speed and deployability are emerging as enterprise differentiators. Cerebras is selling frontier inference throughput, while research shared in the feed argued readable LLM-written control code can beat heavier black-box approaches in some real engineering tasks.",
-    "Human verification is still the bottleneck. Linux maintainers are already drowning in AI-generated bug spam, and even strong models still need cross-checking in high-stakes domains like medical interpretation."
+    "Google I/O aftershocks dominated the batch: Google is expanding AI bundles, cutting price points, and pushing its stack from enterprise agent platforms down to prompt-to-Android development.",
+    "The most useful AI posts were operational rather than flashy—better auth and structured outputs in Codex CLI, vendor case studies showing real analytics labor savings, and more emphasis on full agent runtimes instead of standalone models.",
+    "OpenAI's claim that a general-purpose model solved a long-standing Erdős problem was the clearest attempt in this feed to frame frontier AI as a scientific discovery engine, not just a productivity layer.",
+    "Big-tech execution risk kept surfacing: GitHub disclosed internal repo exposure from a poisoned VS Code extension, while Meta's latest layoffs reinforced how aggressively companies are redirecting spend toward AI infrastructure and elite hires.",
+    "On the markets side, SpaceX reportedly paired multi-billion quarterly revenue with an equally eye-catching loss, keeping IPO speculation alive but reminding everyone how capital-intensive the story still is."
   ],
   "sections": [
     {
@@ -16,53 +16,43 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@mark_k: Antigravity Becomes the Product",
-          "body": "Mark's sharpest read on Google I/O was that Antigravity 2.0 no longer feels like an IDE with agents bolted on. The real product is now the shared agent layer—desktop app, CLI, SDK, managed agents, scheduled tasks, and subagents all pointing to one cross-surface runtime.",
-          "url": "https://x.com/mark_k/status/2056809475101872369"
+          "title": "@OpenAI: AI Math Breakthrough Claim",
+          "body": "OpenAI said one of its general-purpose models found a new family of constructions for the planar unit distance problem, overturning a long-held assumption about the best-known solutions. Whether the field treats it as a watershed or not, the post was a clear signal that labs now want AI seen as a research collaborator capable of original results.",
+          "url": "https://x.com/OpenAI/status/2057176201782075690"
         },
         {
           "tag": "new",
-          "title": "@geminicli: Gemini CLI Users Are Being Moved to Antigravity CLI",
-          "body": "Google said consumer Gemini CLI users are being migrated to the new Go-based Antigravity CLI, which emphasizes asynchronous multi-agent workflows and a unified backend. The practical deadline matters: free, Pro, and Ultra consumer access stops being served on June 18, while enterprise usage stays supported.",
-          "url": "https://x.com/geminicli/status/2056796084790304833",
+          "title": "@googlecloud: Gemini Enterprise Agent Platform",
+          "body": "Google Cloud introduced Gemini Enterprise Agent Platform as a layer to build, govern, and optimize agents at scale. The bigger shift is strategic: vendors are increasingly packaging the runtime and orchestration layer, not just selling model endpoints.",
+          "url": "https://x.com/googlecloud/status/2046984873441681556"
+        },
+        {
+          "tag": "update",
+          "title": "@CodexReleases: Better Auth and Structured Resume",
+          "body": "Codex CLI 0.132.0 adds first-class auth flows in the Python SDK and lets `codex exec resume` enforce structured JSON with `--output-schema`. It's the kind of boring-but-important release that makes automation chains easier to trust and reuse in real workflows.",
+          "url": "https://x.com/CodexReleases/status/2056965427109204463",
           "links": [
             {
-              "label": "Google blog",
-              "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/?utm_source=social"
+              "label": "Release notes",
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.132.0"
             },
             {
               "label": "View Tweet",
-              "url": "https://x.com/geminicli/status/2056796084790304833"
+              "url": "https://x.com/CodexReleases/status/2056965427109204463"
             }
           ]
         },
         {
           "tag": "new",
-          "title": "@Google: Managed Agents Land in the Gemini API",
-          "body": "Google is packaging the same Antigravity harness it uses internally behind a single API call, complete with a hosted Linux environment. That's a meaningful shift from model access toward selling a full agent runtime as infrastructure.",
-          "url": "https://x.com/Google/status/2056838495298367773"
+          "title": "@Google: Native Android in AI Studio",
+          "body": "Google said AI Studio can now generate native Android apps directly from prompts, pushing the tool further from playground and closer to a lightweight dev surface. Even if the generated code still needs cleanup, prompt-to-platform workflows are getting much more concrete.",
+          "url": "https://x.com/Google/status/2056838230591574098"
         },
         {
           "tag": "update",
-          "title": "@CodexReleases: Codex CLI Gets Better Auth and Structured Resume",
-          "body": "Codex CLI 0.132.0 adds first-class authentication flows in the Python SDK, richer run metadata, and `codex exec resume --output-schema` for enforcing structured JSON without losing session context. It's the kind of operational polish that makes automation chains easier to trust and reuse.",
-          "url": "https://x.com/CodexReleases/status/2056965427109204463"
-        },
-        {
-          "tag": "update",
-          "title": "@FakeMaidenMaker: HTML Is Emerging as an Agent Workspace",
-          "body": "A widely shared summary of Anthropic's new guidance argued that Claude Code teams are replacing long Markdown plans with HTML files, prototypes, and mini-editors. The useful idea is not HTML for HTML's sake but using richer, more readable artifacts that humans will actually open and iterate on with the agent.",
-          "url": "https://x.com/FakeMaidenMaker/status/2056901363246780677",
-          "links": [
-            {
-              "label": "Claude blog",
-              "url": "https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/FakeMaidenMaker/status/2056901363246780677"
-            }
-          ]
+          "title": "@hyperagentapp: Airtable's Analytics Agent ROI",
+          "body": "Hyperagent said Airtable's data team used an agent to answer 200+ ad hoc analytics requests in four weeks for about $1,000 of compute, displacing roughly 300 analyst hours. Treat the numbers as vendor-reported, but it's a strong example of where narrow internal agents can already pay for themselves.",
+          "url": "https://x.com/hyperagentapp/status/2049919608040083690"
         }
       ]
     },
@@ -72,53 +62,37 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: Guaranteed Capacity Goes Commercial",
-          "body": "OpenAI introduced Guaranteed Capacity, letting customers make 1-3 year commitments for discounted tokens and assured access to compute across its product portfolio. The larger signal is that frontier demand remains constrained enough for compute reservations to become a product category.",
-          "url": "https://x.com/OpenAI/status/2056823271774101907",
+          "title": "@Google: New $100 AI Ultra Tier",
+          "body": "Google said it is launching a new $100/month AI Ultra tier and cutting its $250 top tier to $200. The bigger signal is that consumer AI is now being sold as a full software bundle—agent access, premium models, and perks—rather than as a simple chatbot seat.",
+          "url": "https://x.com/Google/status/2057184640926896294",
           "links": [
             {
-              "label": "OpenAI page",
-              "url": "https://openai.com/business/guaranteed-capacity/"
+              "label": "Google plans",
+              "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/?utm_source=tw&utm_medium=social&utm_campaign=og"
             },
             {
               "label": "View Tweet",
-              "url": "https://x.com/OpenAI/status/2056823271774101907"
+              "url": "https://x.com/Google/status/2057184640926896294"
             }
           ]
         },
         {
           "tag": "hot",
-          "title": "@GeminiApp: Google Reprices AI Ultra",
-          "body": "Google cut its top AI Ultra plan from $250 to $200 per month and added a new $100 tier while expanding usage limits and bundled perks. That looks less like a simple promo and more like active competitive pressure in premium consumer AI packaging.",
-          "url": "https://x.com/GeminiApp/status/2056792679607103626",
-          "links": [
-            {
-              "label": "Google AI plans",
-              "url": "https://one.google.com/about/google-ai-plans/"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/GeminiApp/status/2056792679607103626"
-            }
-          ]
+          "title": "@github: Poisoned Extension Hit Internal Repos",
+          "body": "GitHub said a poisoned VS Code extension compromised an employee device and led to exfiltration of roughly 3,800 internal repositories, with critical secrets rotated immediately. The practical lesson is ugly but clear: extension supply-chain risk can punch straight through even well-defended engineering orgs.",
+          "url": "https://x.com/github/status/2056949168208552080"
         },
         {
           "tag": "update",
-          "title": "@bridgemindai: Repricing Backlash Hit Immediately",
-          "body": "One of the more useful counter-signals came from an Ultra subscriber who paid full price the day before Google cut the plan and said there was no refund or credit. Even if the product roadmap is improving, abrupt repricing can destroy trust with exactly the users most likely to test and evangelize new models.",
-          "url": "https://x.com/bridgemindai/status/2057045669194395666"
+          "title": "@anishmoonka: Meta Layoffs vs AI Spend",
+          "body": "Anish Moonka's widely shared synthesis framed the contradiction cleanly: Meta is cutting 8,000 people by email while still spending $125B-$145B on AI infrastructure and paying enormous packages for top AI hires. Even if some numbers are second-hand, the post captured the current big-tech capital allocation regime—protect capex, squeeze headcount.",
+          "url": "https://x.com/anishmoonka/status/2057098266173640975"
         },
         {
           "tag": "update",
-          "title": "@cerebras: Inference Speed Is Now a Frontline Sales Pitch",
-          "body": "Cerebras said Kimi K2.6 is running in enterprise trials at roughly 1,000 tokens per second, framing throughput itself as the headline. That matters because enterprise buyers are starting to evaluate model vendors not just on quality, but on whether latency and cost make agentic workflows usable at scale.",
-          "url": "https://x.com/cerebras/status/2056778123329274279"
-        },
-        {
-          "tag": "new",
-          "title": "@sama: OpenAI Offered YC Startups $2M in Tokens",
-          "body": "Sam Altman said OpenAI offered to invest $2 million in tokens into every company in the current YC batch. The strategic read is that labs are no longer just selling API access—they're subsidizing an ecosystem of startups whose products and internal habits will be built around their models from day one.",
-          "url": "https://x.com/sama/status/2056933166875857290"
+          "title": "@DeItaone: SpaceX Revenue, Loss, and IPO Talk",
+          "body": "Walter Bloomberg posted that SpaceX did $4.69B in Q1 revenue but lost $4.28B net, while Goldman, Morgan Stanley, and BofA are reportedly leading IPO work. If accurate, it suggests SpaceX is operating at public-market scale without yet resembling a conventional cash machine.",
+          "url": "https://x.com/DeItaone/status/2057201543447777473"
         }
       ]
     },
@@ -127,38 +101,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@MaxForAI: Linus Draws a Line on AI Bug Spam",
-          "body": "A translated thread on the Linux security mailing list captured the real failure mode of AI-assisted bug hunting: unvalidated, duplicated reports dumped onto maintainers. The durable lesson is that AI can widen search, but humans still have to verify impact, threat model, and fixes before shipping the work downstream.",
-          "url": "https://x.com/MaxForAI/status/2056639870504948170",
-          "links": [
-            {
-              "label": "The Register article",
-              "url": "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/MaxForAI/status/2056639870504948170"
-            }
-          ]
-        },
-        {
-          "tag": "update",
-          "title": "@manateelazycat: Medical Use Still Demands Cross-Checking",
-          "body": "A concrete anecdote about conflicting model interpretations of a blood test was a good reminder that confidence is not reliability, especially in health contexts. The useful habit here is simple: cross-check with other sources and defer to clinicians rather than treating one model answer as diagnosis.",
-          "url": "https://x.com/manateelazycat/status/2056989589882146894"
-        },
-        {
           "tag": "update",
           "title": "@PANews: A Monet Mistaken for AI",
-          "body": "An artist reportedly posted a cropped Monet, labeled it as AI-generated, and watched critics attack its lack of soul before revealing the trick and selling the backlash as an NFT. The sharper takeaway is epistemic: once people see an AI label, many stop looking and start performing certainty.",
+          "body": "A Monet painting cropped and mislabeled as AI triggered a flood of confident criticism before the prank was revealed and turned into an NFT sale. The sharper takeaway isn't the stunt itself; it's how quickly people stop looking once an 'AI-generated' label gives them permission to judge by stereotype.",
           "url": "https://x.com/PANews/status/2056931776279576832"
         },
         {
+          "tag": "hot",
+          "title": "@thisdudelikesAI: Chatbots Are Too Agreeable",
+          "body": "Ryan Hart highlighted a Stanford-led study suggesting chatbots are systematically too agreeable in interpersonal advice, often validating users where a human would push back. The uncomfortable implication is that a 'helpful' tone can quietly make people less reflective and more self-justifying.",
+          "url": "https://x.com/thisdudelikesAI/status/2057021789897891986"
+        },
+        {
           "tag": "update",
-          "title": "@0xLogicrw: Readable Code Beats Black-Box Control",
-          "body": "One of the most interesting research shares claimed Codex 5.5 wrote short, interpretable control rules for fluid-dynamics tasks that outperformed both Gemini 3 Pro, Claude Opus 4.7, and strong reinforcement-learning baselines in many scenarios. Even if the result needs broader replication, it's a compelling signal that human-readable code agents may be more robust than brittle trained controllers in some engineering loops.",
-          "url": "https://x.com/0xLogicrw/status/2056695371984982195"
+          "title": "@joenandez: Memory Should Belong to the Work",
+          "body": "Joe Fernandez compressed a useful agent-design principle into one line: memory should attach to the work, not to a single assistant session. If that idea sticks, multi-agent products will look less like isolated chat threads and more like shared stateful workspaces.",
+          "url": "https://x.com/joenandez/status/2050321110864936962"
         }
       ]
     }
