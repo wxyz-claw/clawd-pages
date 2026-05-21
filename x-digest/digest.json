@@ -3,11 +3,11 @@
   "date": "Thursday, May 21st, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Google dominated the batch, but mostly on the back foot: Antigravity had to triple Gemini limits after quota backlash, while developers kept mocking the company’s fragmented AI product surface.",
-    "The most useful AI signal was operational, not theatrical—people are getting real leverage from agent harnesses, better context plumbing, and tool interfaces that translate machine state back into natural language.",
-    "Frontier labs are still competing on headline capability, with OpenAI pushing an AI-math breakthrough narrative and builders increasingly benchmarking platforms by what they can automate end to end, not by chat quality alone.",
-    "AI buyers are getting more cost disciplined: the feed repeatedly pushed model routing, fewer tool calls, and production reliability over blind spending on the biggest models.",
-    "On the markets side, the feed mixed near-term positioning with longer-horizon bets—private-tech IPO chatter, Nvidia-driven capex narratives, and a structural bull case for underowned resource markets like Brazil."
+    "Codex shipped the highest-signal product updates in the batch: Appshots, locked-Mac remote control, goal mode GA, and CLI lifecycle hooks that make agent workflows less brittle.",
+    "Google spent the day in damage control around Antigravity, tripling Gemini limits and resetting quotas after users pushed back hard on paid-tier caps.",
+    "The AI labor-market conversation turned sharper: both ClickUp and Meta framed leaner staffing as compatible with strong business performance, with value shifting toward orchestrators, reviewers, and customer-facing humans.",
+    "Markets chatter kept extending the AI capex story beyond training clusters, with Nvidia bulls already rotating toward on-device AI, hybrid edge/cloud deployments, and physical-AI follow-ons.",
+    "The most thoughtful builder posts agreed on the next bottleneck: not raw model IQ, but context handoff, coordination, and review across humans plus multiple agents."
   ],
   "sections": [
     {
@@ -16,43 +16,47 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: Planar Unit Distance Breakthrough",
-          "body": "OpenAI said one of its general-purpose models found a new family of constructions for the planar unit distance problem, overturning an 80-year assumption about the best-known pattern. If the result stands, the bigger significance is that frontier labs now have a credible example of AI being framed as a research collaborator, not just a productivity layer.",
-          "url": "https://x.com/OpenAI/status/2057176201782075690"
+          "title": "@Codex_Changelog: Appshots and Locked-Mac Control",
+          "body": "OpenAI’s latest Codex app update bundled the most immediately useful product changes: Appshots for pulling a live app window into a thread, goal mode graduating out of beta, and remote computer use even after a Mac locks. The practical signal is that Codex is moving from chat assistant toward a persistent operator that can keep working against real UI context.",
+          "url": "https://x.com/Codex_Changelog/status/2057532714811584682",
+          "links": [
+            {
+              "label": "Changelog",
+              "url": "https://developers.openai.com/codex/changelog#codex-2026-05-21"
+            },
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/Codex_Changelog/status/2057532714811584682"
+            }
+          ]
+        },
+        {
+          "tag": "update",
+          "title": "@Codex_Changelog: CLI 0.133.0 for Agent Workflows",
+          "body": "Codex CLI 0.133.0 turned goals on by default and added dedicated storage, plugin inventory tooling, and lifecycle events for subagents, tools, and turns. Those sound small, but they directly reduce glue-code pain for people building repeatable agent workflows instead of one-off prompts.",
+          "url": "https://x.com/Codex_Changelog/status/2057506276045947386",
+          "links": [
+            {
+              "label": "GitHub Release",
+              "url": "https://github.com/openai/codex/releases/tag/rust-v0.133.0"
+            },
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/Codex_Changelog/status/2057506276045947386"
+            }
+          ]
         },
         {
           "tag": "update",
           "title": "@_mohansolo: Antigravity Triples Gemini Limits",
-          "body": "Varun Mohan said Antigravity is tripling Gemini rate limits across all paid tiers and resetting weekly quotas after users hit caps almost immediately. The fast rollback was the real signal: AI IDEs are now being judged like developer infrastructure, where throughput and pricing mistakes trigger instant backlash.",
+          "body": "Varun Mohan said Antigravity is tripling Gemini rate limits across all paid tiers and resetting weekly quotas after users ran into caps almost immediately. The bigger takeaway is that AI coding products are now being judged like infrastructure: if throughput feels fake or cramped, users revolt fast.",
           "url": "https://x.com/_mohansolo/status/2057331857755422922"
         },
         {
-          "tag": "hot",
-          "title": "@elvissun: Codex as a Product Reverse-Engineer",
-          "body": "Elvis showed Codex inferring a product's architecture, data model, prompt design, and rebuild plan in roughly half an hour, then chaining that into a goal-directed implementation loop. The practical takeaway is that agents get dramatically better when you give them a tight harness and a crisp success condition instead of a blank prompt.",
-          "url": "https://x.com/elvissun/status/2057272866236985656"
-        },
-        {
           "tag": "update",
-          "title": "@yan5xu: Natural-Language Tool I/O Helps Agents",
-          "body": "yan5xu argued that agent tooling works better when commands begin with a plain-language description and raw status codes get translated back into human language. It's a sharp design pattern: descriptions anchor intent, and readable failure states make the next step much easier for the model to choose correctly.",
-          "url": "https://x.com/yan5xu/status/2057389610129564140"
-        },
-        {
-          "tag": "new",
-          "title": "@AirbyteHQ: Context Stores for Production Agents",
-          "body": "Airbyte launched Airbyte Agents around a shared context layer that pre-materializes knowledge across business systems, claiming 80% fewer tokens and 40% fewer tool calls. Even if the exact numbers are vendor-reported, the core idea rings true: production agents usually fail from missing context, not missing raw intelligence.",
-          "url": "https://x.com/AirbyteHQ/status/2051686041950523720",
-          "links": [
-            {
-              "label": "Product post",
-              "url": "https://airbyte.com/blog/airbyte-agents"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/AirbyteHQ/status/2051686041950523720"
-            }
-          ]
+          "title": "@elvissun: What a Long /goal Run Actually Costs",
+          "body": "Elvis shared a live Codex /goal run that wrote roughly 6,300 lines while consuming only a few dollars of external model and scraping spend, plus 14% of a weekly Codex quota. More useful than the flex was the lesson: goal-oriented agent prompts need a different shape than classic spec-driven coding prompts.",
+          "url": "https://x.com/elvissun/status/2057459033427308942"
         }
       ]
     },
@@ -62,37 +66,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@sonalibasak: Goldman on the Mega-IPO Window",
-          "body": "Sonali Basak highlighted Goldman president John Waldron's view on the next wave of mega-listings, with investor attention already clustering around private AI names like SpaceX, OpenAI, and Anthropic. The useful read is less about a specific IPO date and more about how late-stage private exposure and retail allocation are being framed ahead of any listings.",
-          "url": "https://x.com/sonalibasak/status/2057196541040074859",
-          "links": [
-            {
-              "label": "Interview",
-              "url": "https://youtu.be/iKPuz7RW97I?si=11tE4aH7gyQrLDh1"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/sonalibasak/status/2057196541040074859"
-            }
-          ]
+          "title": "@GergelyOrosz: Meta Layoffs Despite Record Profits",
+          "body": "Gergely Orosz highlighted the dissonance of Meta cutting 10% of staff while revenue growth and profits are near highs, arguing the move looks more like executive choice than financial necessity. For anyone watching tech employment or margins, that is a blunt reminder that AI-era cost discipline can show up even when the business is healthy.",
+          "url": "https://x.com/GergelyOrosz/status/2057466641609347124"
+        },
+        {
+          "tag": "hot",
+          "title": "@DJ_CURFEW: ClickUp’s '100x Organization' Bet",
+          "body": "ClickUp’s CEO said the company cut 22% of headcount from a position of strength because AI is changing which roles create leverage, with more value concentrating in people who can orchestrate and review agent output. Whether you agree or not, it was one of the clearest first-person statements in the batch about how management teams are re-architecting org charts around AI productivity.",
+          "url": "https://x.com/DJ_CURFEW/status/2057522382315929802"
         },
         {
           "tag": "update",
-          "title": "@Leooo2099: Nvidia Bulls Are Already Mapping the Next Leg",
-          "body": "A widely shared Nvidia thread argued that Blackwell demand and hyperscaler capex still have room to run, then pushed the next upside narrative toward on-device AI, agents, and physical AI. The point isn't that every revenue target will hit; it's that the market's bullish case is already extending beyond datacenter chips into second-order beneficiaries.",
+          "title": "@Leooo2099: Nvidia Bulls Extend the AI Capex Story",
+          "body": "A widely shared Nvidia thesis argued the next leg is moving from datacenter training toward AI PCs, AI phones, and hybrid local-plus-cloud deployments, while physical AI remains earlier still. The market read is that investors are already looking for second-order beneficiaries beyond the obvious chip winners.",
           "url": "https://x.com/Leooo2099/status/2057383322494583054"
-        },
-        {
-          "tag": "update",
-          "title": "@drewcrawford_: Brazil as an Underowned Resource Bet",
-          "body": "Drew Crawford made a compact case that U.S. allocators still underweight Brazil despite its clean power mix, water abundance, mineral leverage, and offshore oil base. Whether or not you buy the full thesis, it's the kind of deep macro argument worth tracking because it focuses on structural assets rather than just election noise.",
-          "url": "https://x.com/drewcrawford_/status/2056433193167774053"
-        },
-        {
-          "tag": "update",
-          "title": "@its_maddy_a: Benioff's Model-Routing Economics",
-          "body": "A Benioff clip circulated with a blunt message: even companies spending hundreds of millions on frontier-model tokens should route most tasks to smaller, cheaper systems. That's a useful capital-allocation signal for the AI stack—buyers are becoming much more interested in cost discipline than in defaulting every workflow to the most expensive model.",
-          "url": "https://x.com/its_maddy_a/status/2056464882753581319"
         }
       ]
     },
@@ -101,22 +89,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@theo: Google AI Politics and Reliability Risk",
-          "body": "Theo's video framed Google's problem less as model quality and more as organizational execution: internal politics, muddled product decisions, and cloud reliability failures all compounding each other. Even if you discount some of the rhetoric, it landed because it attacked the part of the stack that developers actually feel day to day.",
-          "url": "https://x.com/theo/status/2056946993407369300"
-        },
-        {
-          "tag": "update",
-          "title": "@nathanclark_: Google's AI Product Maze",
-          "body": "Nathan Clark's satirical 'it's in Gemini... no, AI Studio... no, Antigravity' post captured a real product problem: Google's AI naming and entry-point sprawl has become an onboarding tax. It's funny because it's accurate, and accuracy is why the post spread.",
-          "url": "https://x.com/nathanclark_/status/2056947354654355849"
+          "tag": "new",
+          "title": "@spolu: Multiplayer AI, Not Solo Copilots",
+          "body": "Dust’s CEO argued that as agents stretch from minutes of work to days or weeks, the real architecture shift is toward shared context, handoffs, and multiple humans steering multiple agents together. The funding announcement mattered less than the framing: coordination is emerging as the next bottleneck for enterprise AI.",
+          "url": "https://x.com/spolu/status/2056658851588399389"
         },
         {
           "tag": "new",
-          "title": "@spolu: Multiplayer AI as the Next Org Model",
-          "body": "Dust's CEO argued that the next architecture is 'multiplayer AI': shared context, multiple humans, and fleets of agents handing work across teams instead of isolated single-user copilots. It's one of the cleaner frames in the batch for why agent products increasingly need coordination primitives, not just smarter models.",
-          "url": "https://x.com/spolu/status/2056658851588399389"
+          "title": "@stanine: Compliance Automation Moves Into the Core Stack",
+          "body": "Rippling launched Automated Compliance starting with SOC 2, pitching the advantage of already owning device, identity, HR, and performance data instead of sitting beside the stack as a checklist tool. That is a useful enterprise pattern to watch: boring admin workflows are getting automated fastest where the system of record is already in place.",
+          "url": "https://x.com/stanine/status/2049160646231789671"
+        },
+        {
+          "tag": "update",
+          "title": "@MaxForAI: Google’s Product Maze Is Becoming the Product",
+          "body": "A sharply observed post mapped Google’s growing AI naming maze across Gemini, AI Studio, Antigravity, Jules, Flow/Veo, AI Mode, and NotebookLM. It landed because it captures a real adoption problem: even strong models lose momentum when the entry points feel fragmented and bureaucratic.",
+          "url": "https://x.com/MaxForAI/status/2057389390578811289"
         }
       ]
     }
