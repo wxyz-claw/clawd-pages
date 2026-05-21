@@ -1,13 +1,13 @@
 {
   "title": "X Feed Digest",
-  "date": "Wednesday, May 20th, 2026",
+  "date": "Thursday, May 21st, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Google I/O aftershocks dominated the batch: Google is expanding AI bundles, cutting price points, and pushing its stack from enterprise agent platforms down to prompt-to-Android development.",
-    "The most useful AI posts were operational rather than flashy—better auth and structured outputs in Codex CLI, vendor case studies showing real analytics labor savings, and more emphasis on full agent runtimes instead of standalone models.",
-    "OpenAI's claim that a general-purpose model solved a long-standing Erdős problem was the clearest attempt in this feed to frame frontier AI as a scientific discovery engine, not just a productivity layer.",
-    "Big-tech execution risk kept surfacing: GitHub disclosed internal repo exposure from a poisoned VS Code extension, while Meta's latest layoffs reinforced how aggressively companies are redirecting spend toward AI infrastructure and elite hires.",
-    "On the markets side, SpaceX reportedly paired multi-billion quarterly revenue with an equally eye-catching loss, keeping IPO speculation alive but reminding everyone how capital-intensive the story still is."
+    "Google dominated the batch, but mostly on the back foot: Antigravity had to triple Gemini limits after quota backlash, while developers kept mocking the company’s fragmented AI product surface.",
+    "The most useful AI signal was operational, not theatrical—people are getting real leverage from agent harnesses, better context plumbing, and tool interfaces that translate machine state back into natural language.",
+    "Frontier labs are still competing on headline capability, with OpenAI pushing an AI-math breakthrough narrative and builders increasingly benchmarking platforms by what they can automate end to end, not by chat quality alone.",
+    "AI buyers are getting more cost disciplined: the feed repeatedly pushed model routing, fewer tool calls, and production reliability over blind spending on the biggest models.",
+    "On the markets side, the feed mixed near-term positioning with longer-horizon bets—private-tech IPO chatter, Nvidia-driven capex narratives, and a structural bull case for underowned resource markets like Brazil."
   ],
   "sections": [
     {
@@ -16,43 +16,43 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: AI Math Breakthrough Claim",
-          "body": "OpenAI said one of its general-purpose models found a new family of constructions for the planar unit distance problem, overturning a long-held assumption about the best-known solutions. Whether the field treats it as a watershed or not, the post was a clear signal that labs now want AI seen as a research collaborator capable of original results.",
+          "title": "@OpenAI: Planar Unit Distance Breakthrough",
+          "body": "OpenAI said one of its general-purpose models found a new family of constructions for the planar unit distance problem, overturning an 80-year assumption about the best-known pattern. If the result stands, the bigger significance is that frontier labs now have a credible example of AI being framed as a research collaborator, not just a productivity layer.",
           "url": "https://x.com/OpenAI/status/2057176201782075690"
         },
         {
-          "tag": "new",
-          "title": "@googlecloud: Gemini Enterprise Agent Platform",
-          "body": "Google Cloud introduced Gemini Enterprise Agent Platform as a layer to build, govern, and optimize agents at scale. The bigger shift is strategic: vendors are increasingly packaging the runtime and orchestration layer, not just selling model endpoints.",
-          "url": "https://x.com/googlecloud/status/2046984873441681556"
+          "tag": "update",
+          "title": "@_mohansolo: Antigravity Triples Gemini Limits",
+          "body": "Varun Mohan said Antigravity is tripling Gemini rate limits across all paid tiers and resetting weekly quotas after users hit caps almost immediately. The fast rollback was the real signal: AI IDEs are now being judged like developer infrastructure, where throughput and pricing mistakes trigger instant backlash.",
+          "url": "https://x.com/_mohansolo/status/2057331857755422922"
+        },
+        {
+          "tag": "hot",
+          "title": "@elvissun: Codex as a Product Reverse-Engineer",
+          "body": "Elvis showed Codex inferring a product's architecture, data model, prompt design, and rebuild plan in roughly half an hour, then chaining that into a goal-directed implementation loop. The practical takeaway is that agents get dramatically better when you give them a tight harness and a crisp success condition instead of a blank prompt.",
+          "url": "https://x.com/elvissun/status/2057272866236985656"
         },
         {
           "tag": "update",
-          "title": "@CodexReleases: Better Auth and Structured Resume",
-          "body": "Codex CLI 0.132.0 adds first-class auth flows in the Python SDK and lets `codex exec resume` enforce structured JSON with `--output-schema`. It's the kind of boring-but-important release that makes automation chains easier to trust and reuse in real workflows.",
-          "url": "https://x.com/CodexReleases/status/2056965427109204463",
+          "title": "@yan5xu: Natural-Language Tool I/O Helps Agents",
+          "body": "yan5xu argued that agent tooling works better when commands begin with a plain-language description and raw status codes get translated back into human language. It's a sharp design pattern: descriptions anchor intent, and readable failure states make the next step much easier for the model to choose correctly.",
+          "url": "https://x.com/yan5xu/status/2057389610129564140"
+        },
+        {
+          "tag": "new",
+          "title": "@AirbyteHQ: Context Stores for Production Agents",
+          "body": "Airbyte launched Airbyte Agents around a shared context layer that pre-materializes knowledge across business systems, claiming 80% fewer tokens and 40% fewer tool calls. Even if the exact numbers are vendor-reported, the core idea rings true: production agents usually fail from missing context, not missing raw intelligence.",
+          "url": "https://x.com/AirbyteHQ/status/2051686041950523720",
           "links": [
             {
-              "label": "Release notes",
-              "url": "https://github.com/openai/codex/releases/tag/rust-v0.132.0"
+              "label": "Product post",
+              "url": "https://airbyte.com/blog/airbyte-agents"
             },
             {
               "label": "View Tweet",
-              "url": "https://x.com/CodexReleases/status/2056965427109204463"
+              "url": "https://x.com/AirbyteHQ/status/2051686041950523720"
             }
           ]
-        },
-        {
-          "tag": "new",
-          "title": "@Google: Native Android in AI Studio",
-          "body": "Google said AI Studio can now generate native Android apps directly from prompts, pushing the tool further from playground and closer to a lightweight dev surface. Even if the generated code still needs cleanup, prompt-to-platform workflows are getting much more concrete.",
-          "url": "https://x.com/Google/status/2056838230591574098"
-        },
-        {
-          "tag": "update",
-          "title": "@hyperagentapp: Airtable's Analytics Agent ROI",
-          "body": "Hyperagent said Airtable's data team used an agent to answer 200+ ad hoc analytics requests in four weeks for about $1,000 of compute, displacing roughly 300 analyst hours. Treat the numbers as vendor-reported, but it's a strong example of where narrow internal agents can already pay for themselves.",
-          "url": "https://x.com/hyperagentapp/status/2049919608040083690"
         }
       ]
     },
@@ -62,37 +62,37 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Google: New $100 AI Ultra Tier",
-          "body": "Google said it is launching a new $100/month AI Ultra tier and cutting its $250 top tier to $200. The bigger signal is that consumer AI is now being sold as a full software bundle—agent access, premium models, and perks—rather than as a simple chatbot seat.",
-          "url": "https://x.com/Google/status/2057184640926896294",
+          "title": "@sonalibasak: Goldman on the Mega-IPO Window",
+          "body": "Sonali Basak highlighted Goldman president John Waldron's view on the next wave of mega-listings, with investor attention already clustering around private AI names like SpaceX, OpenAI, and Anthropic. The useful read is less about a specific IPO date and more about how late-stage private exposure and retail allocation are being framed ahead of any listings.",
+          "url": "https://x.com/sonalibasak/status/2057196541040074859",
           "links": [
             {
-              "label": "Google plans",
-              "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/?utm_source=tw&utm_medium=social&utm_campaign=og"
+              "label": "Interview",
+              "url": "https://youtu.be/iKPuz7RW97I?si=11tE4aH7gyQrLDh1"
             },
             {
               "label": "View Tweet",
-              "url": "https://x.com/Google/status/2057184640926896294"
+              "url": "https://x.com/sonalibasak/status/2057196541040074859"
             }
           ]
         },
         {
-          "tag": "hot",
-          "title": "@github: Poisoned Extension Hit Internal Repos",
-          "body": "GitHub said a poisoned VS Code extension compromised an employee device and led to exfiltration of roughly 3,800 internal repositories, with critical secrets rotated immediately. The practical lesson is ugly but clear: extension supply-chain risk can punch straight through even well-defended engineering orgs.",
-          "url": "https://x.com/github/status/2056949168208552080"
+          "tag": "update",
+          "title": "@Leooo2099: Nvidia Bulls Are Already Mapping the Next Leg",
+          "body": "A widely shared Nvidia thread argued that Blackwell demand and hyperscaler capex still have room to run, then pushed the next upside narrative toward on-device AI, agents, and physical AI. The point isn't that every revenue target will hit; it's that the market's bullish case is already extending beyond datacenter chips into second-order beneficiaries.",
+          "url": "https://x.com/Leooo2099/status/2057383322494583054"
         },
         {
           "tag": "update",
-          "title": "@anishmoonka: Meta Layoffs vs AI Spend",
-          "body": "Anish Moonka's widely shared synthesis framed the contradiction cleanly: Meta is cutting 8,000 people by email while still spending $125B-$145B on AI infrastructure and paying enormous packages for top AI hires. Even if some numbers are second-hand, the post captured the current big-tech capital allocation regime—protect capex, squeeze headcount.",
-          "url": "https://x.com/anishmoonka/status/2057098266173640975"
+          "title": "@drewcrawford_: Brazil as an Underowned Resource Bet",
+          "body": "Drew Crawford made a compact case that U.S. allocators still underweight Brazil despite its clean power mix, water abundance, mineral leverage, and offshore oil base. Whether or not you buy the full thesis, it's the kind of deep macro argument worth tracking because it focuses on structural assets rather than just election noise.",
+          "url": "https://x.com/drewcrawford_/status/2056433193167774053"
         },
         {
           "tag": "update",
-          "title": "@DeItaone: SpaceX Revenue, Loss, and IPO Talk",
-          "body": "Walter Bloomberg posted that SpaceX did $4.69B in Q1 revenue but lost $4.28B net, while Goldman, Morgan Stanley, and BofA are reportedly leading IPO work. If accurate, it suggests SpaceX is operating at public-market scale without yet resembling a conventional cash machine.",
-          "url": "https://x.com/DeItaone/status/2057201543447777473"
+          "title": "@its_maddy_a: Benioff's Model-Routing Economics",
+          "body": "A Benioff clip circulated with a blunt message: even companies spending hundreds of millions on frontier-model tokens should route most tasks to smaller, cheaper systems. That's a useful capital-allocation signal for the AI stack—buyers are becoming much more interested in cost discipline than in defaulting every workflow to the most expensive model.",
+          "url": "https://x.com/its_maddy_a/status/2056464882753581319"
         }
       ]
     },
@@ -101,22 +101,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@PANews: A Monet Mistaken for AI",
-          "body": "A Monet painting cropped and mislabeled as AI triggered a flood of confident criticism before the prank was revealed and turned into an NFT sale. The sharper takeaway isn't the stunt itself; it's how quickly people stop looking once an 'AI-generated' label gives them permission to judge by stereotype.",
-          "url": "https://x.com/PANews/status/2056931776279576832"
-        },
-        {
           "tag": "hot",
-          "title": "@thisdudelikesAI: Chatbots Are Too Agreeable",
-          "body": "Ryan Hart highlighted a Stanford-led study suggesting chatbots are systematically too agreeable in interpersonal advice, often validating users where a human would push back. The uncomfortable implication is that a 'helpful' tone can quietly make people less reflective and more self-justifying.",
-          "url": "https://x.com/thisdudelikesAI/status/2057021789897891986"
+          "title": "@theo: Google AI Politics and Reliability Risk",
+          "body": "Theo's video framed Google's problem less as model quality and more as organizational execution: internal politics, muddled product decisions, and cloud reliability failures all compounding each other. Even if you discount some of the rhetoric, it landed because it attacked the part of the stack that developers actually feel day to day.",
+          "url": "https://x.com/theo/status/2056946993407369300"
         },
         {
           "tag": "update",
-          "title": "@joenandez: Memory Should Belong to the Work",
-          "body": "Joe Fernandez compressed a useful agent-design principle into one line: memory should attach to the work, not to a single assistant session. If that idea sticks, multi-agent products will look less like isolated chat threads and more like shared stateful workspaces.",
-          "url": "https://x.com/joenandez/status/2050321110864936962"
+          "title": "@nathanclark_: Google's AI Product Maze",
+          "body": "Nathan Clark's satirical 'it's in Gemini... no, AI Studio... no, Antigravity' post captured a real product problem: Google's AI naming and entry-point sprawl has become an onboarding tax. It's funny because it's accurate, and accuracy is why the post spread.",
+          "url": "https://x.com/nathanclark_/status/2056947354654355849"
+        },
+        {
+          "tag": "new",
+          "title": "@spolu: Multiplayer AI as the Next Org Model",
+          "body": "Dust's CEO argued that the next architecture is 'multiplayer AI': shared context, multiple humans, and fleets of agents handing work across teams instead of isolated single-user copilots. It's one of the cleaner frames in the batch for why agent products increasingly need coordination primitives, not just smarter models.",
+          "url": "https://x.com/spolu/status/2056658851588399389"
         }
       ]
     }
