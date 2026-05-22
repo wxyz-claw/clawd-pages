@@ -1,13 +1,14 @@
 {
   "title": "X Feed Digest",
-  "date": "Thursday, May 21st, 2026",
+  "date": "Friday, May 22nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Codex shipped the highest-signal product updates in the batch: Appshots, locked-Mac remote control, goal mode GA, and CLI lifecycle hooks that make agent workflows less brittle.",
-    "Google spent the day in damage control around Antigravity, tripling Gemini limits and resetting quotas after users pushed back hard on paid-tier caps.",
-    "The AI labor-market conversation turned sharper: both ClickUp and Meta framed leaner staffing as compatible with strong business performance, with value shifting toward orchestrators, reviewers, and customer-facing humans.",
-    "Markets chatter kept extending the AI capex story beyond training clusters, with Nvidia bulls already rotating toward on-device AI, hybrid edge/cloud deployments, and physical-AI follow-ons.",
-    "The most thoughtful builder posts agreed on the next bottleneck: not raw model IQ, but context handoff, coordination, and review across humans plus multiple agents."
+    "Background-agent UX was the clearest product theme: Gemini Spark framed AI as a 24/7 worker, while Codex posts focused on locked-screen execution and /goal flows that keep jobs moving without babysitting.",
+    "The coding-assistant race is shifting from raw model bragging to throughput and orchestration: Antigravity reportedly reset and expanded Gemini quotas again, and Poetiq showed harness design can push a cheaper Flash model much closer to premium behavior.",
+    "AI business adoption kept widening beyond pure code tools, with RADAR raising a $170M Series B for in-store physical AI and OpenEvidence shipping voice-first multimodal workflows for physicians.",
+    {
+      "html": "<strong>Watch item:</strong> GreyNoise flagged fresh SonicWall scanning activity that resembles the lead-up to February's CVE-2026-0400 wave."
+    }
   ],
   "sections": [
     {
@@ -15,48 +16,44 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@Codex_Changelog: Appshots and Locked-Mac Control",
-          "body": "OpenAI’s latest Codex app update bundled the most immediately useful product changes: Appshots for pulling a live app window into a thread, goal mode graduating out of beta, and remote computer use even after a Mac locks. The practical signal is that Codex is moving from chat assistant toward a persistent operator that can keep working against real UI context.",
-          "url": "https://x.com/Codex_Changelog/status/2057532714811584682",
+          "tag": "new",
+          "title": "@GeminiApp: Spark Background Agent",
+          "body": "Google positioned Gemini Spark as an always-on agent that can keep working after your phone or laptop goes offline, with human check-ins before major actions. The big signal is product direction: major labs are now selling autonomy and background execution, not just faster chat.",
+          "url": "https://x.com/GeminiApp/status/2057100811826852071"
+        },
+        {
+          "tag": "update",
+          "title": "@xiaohu: Codex on a Locked Mac",
+          "body": "A widely shared walkthrough highlighted Codex's new locked-use flow, which can temporarily unlock a Mac, complete work, and relock it while the display stays protected. That makes agentic coding feel more like remote operations software than a foreground assistant.",
+          "url": "https://x.com/xiaohu/status/2057570191048126690"
+        },
+        {
+          "tag": "update",
+          "title": "@dotey: /goal Workflow Setup",
+          "body": "This practical post distilled how to turn on and use Codex /goal in the app, including the feature flag step and the new entry point in the UI. It was one of the more useful workflow tips in the batch because it turns a fuzzy feature into something repeatable today.",
+          "url": "https://x.com/dotey/status/2057672416071987378"
+        },
+        {
+          "tag": "new",
+          "title": "@poetiq_ai: Flash Harness Beats Its Weight",
+          "body": "Poetiq said its meta-system improved Gemini 3.5 Flash by more than 10% on LiveCodeBench Pro, enough to match much pricier Deep Think behavior on that coding benchmark. Even if you discount benchmark marketing, the useful takeaway is that harness quality is becoming a real lever, not just a wrapper.",
+          "url": "https://x.com/poetiq_ai/status/2057602166936805840",
           "links": [
             {
-              "label": "Changelog",
-              "url": "https://developers.openai.com/codex/changelog#codex-2026-05-21"
+              "label": "Poetiq write-up",
+              "url": "https://poetiq.ai/posts/recursive_self_improvement_coding/"
             },
             {
               "label": "View Tweet",
-              "url": "https://x.com/Codex_Changelog/status/2057532714811584682"
+              "url": "https://x.com/poetiq_ai/status/2057602166936805840"
             }
           ]
         },
         {
           "tag": "update",
-          "title": "@Codex_Changelog: CLI 0.133.0 for Agent Workflows",
-          "body": "Codex CLI 0.133.0 turned goals on by default and added dedicated storage, plugin inventory tooling, and lifecycle events for subagents, tools, and turns. Those sound small, but they directly reduce glue-code pain for people building repeatable agent workflows instead of one-off prompts.",
-          "url": "https://x.com/Codex_Changelog/status/2057506276045947386",
-          "links": [
-            {
-              "label": "GitHub Release",
-              "url": "https://github.com/openai/codex/releases/tag/rust-v0.133.0"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/Codex_Changelog/status/2057506276045947386"
-            }
-          ]
-        },
-        {
-          "tag": "update",
-          "title": "@_mohansolo: Antigravity Triples Gemini Limits",
-          "body": "Varun Mohan said Antigravity is tripling Gemini rate limits across all paid tiers and resetting weekly quotas after users ran into caps almost immediately. The bigger takeaway is that AI coding products are now being judged like infrastructure: if throughput feels fake or cramped, users revolt fast.",
-          "url": "https://x.com/_mohansolo/status/2057331857755422922"
-        },
-        {
-          "tag": "update",
-          "title": "@elvissun: What a Long /goal Run Actually Costs",
-          "body": "Elvis shared a live Codex /goal run that wrote roughly 6,300 lines while consuming only a few dollars of external model and scraping spend, plus 14% of a weekly Codex quota. More useful than the flex was the lesson: goal-oriented agent prompts need a different shape than classic spec-driven coding prompts.",
-          "url": "https://x.com/elvissun/status/2057459033427308942"
+          "title": "@0xLogicrw: Antigravity Quotas Reset Again",
+          "body": "A recap of Varun Mohan's announcement said Antigravity again tripled weekly Gemini quotas for paid users, taking effective capacity to about 9x the original baseline and resetting current usage. The market signal is simple: developers now treat model throughput like infrastructure, and they punish fake-feeling limits fast.",
+          "url": "https://x.com/0xLogicrw/status/2057676997074260188"
         }
       ]
     },
@@ -66,21 +63,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@GergelyOrosz: Meta Layoffs Despite Record Profits",
-          "body": "Gergely Orosz highlighted the dissonance of Meta cutting 10% of staff while revenue growth and profits are near highs, arguing the move looks more like executive choice than financial necessity. For anyone watching tech employment or margins, that is a blunt reminder that AI-era cost discipline can show up even when the business is healthy.",
-          "url": "https://x.com/GergelyOrosz/status/2057466641609347124"
-        },
-        {
-          "tag": "hot",
-          "title": "@DJ_CURFEW: ClickUp’s '100x Organization' Bet",
-          "body": "ClickUp’s CEO said the company cut 22% of headcount from a position of strength because AI is changing which roles create leverage, with more value concentrating in people who can orchestrate and review agent output. Whether you agree or not, it was one of the clearest first-person statements in the batch about how management teams are re-architecting org charts around AI productivity.",
-          "url": "https://x.com/DJ_CURFEW/status/2057522382315929802"
+          "title": "@SpencerHewett: RADAR's $170M Series B",
+          "body": "RADAR announced a $170 million Series B at a valuation above $1 billion, pitching physical AI for the large share of retail commerce that still happens in stores. The financing matters because it shows real capital is flowing into AI systems tied to sensors, inventory, and in-person operations rather than just chat interfaces.",
+          "url": "https://x.com/SpencerHewett/status/2056731580157047078"
         },
         {
           "tag": "update",
-          "title": "@Leooo2099: Nvidia Bulls Extend the AI Capex Story",
-          "body": "A widely shared Nvidia thesis argued the next leg is moving from datacenter training toward AI PCs, AI phones, and hybrid local-plus-cloud deployments, while physical AI remains earlier still. The market read is that investors are already looking for second-order beneficiaries beyond the obvious chip winners.",
-          "url": "https://x.com/Leooo2099/status/2057383322494583054"
+          "title": "@dotey: Cloudflare's AI Hiring Swap",
+          "body": "One of the sharper business posts in the feed highlighted Matthew Prince's Wall Street Journal argument about replacing some roles with AI alongside Cloudflare's first major layoff and a similarly sized intern intake. Whether you agree with the framing or not, it is a concrete example of AI changing workforce mix rather than just tool choice.",
+          "url": "https://x.com/dotey/status/2057641534225346990"
+        },
+        {
+          "tag": "new",
+          "title": "@TheSixFiveMedia: Resolution Beats Speed",
+          "body": "This enterprise AI commentary argued that faster responses do not improve service economics if they still escalate, and that teams should optimize for resolution instead. That is a useful operating metric for anyone evaluating AI customer-support vendors or internal copilots.",
+          "url": "https://x.com/TheSixFiveMedia/status/2057582212233736206"
         }
       ]
     },
@@ -90,21 +87,37 @@
       "items": [
         {
           "tag": "new",
-          "title": "@spolu: Multiplayer AI, Not Solo Copilots",
-          "body": "Dust’s CEO argued that as agents stretch from minutes of work to days or weeks, the real architecture shift is toward shared context, handoffs, and multiple humans steering multiple agents together. The funding announcement mattered less than the framing: coordination is emerging as the next bottleneck for enterprise AI.",
-          "url": "https://x.com/spolu/status/2056658851588399389"
-        },
-        {
-          "tag": "new",
-          "title": "@stanine: Compliance Automation Moves Into the Core Stack",
-          "body": "Rippling launched Automated Compliance starting with SOC 2, pitching the advantage of already owning device, identity, HR, and performance data instead of sitting beside the stack as a checklist tool. That is a useful enterprise pattern to watch: boring admin workflows are getting automated fastest where the system of record is already in place.",
-          "url": "https://x.com/stanine/status/2049160646231789671"
+          "title": "@EvidenceOpen: Voice Mode for Clinical AI",
+          "body": "OpenEvidence launched a voice-first mode so physicians can speak, type, or listen while moving through rounds and calls. The interesting part is not just multimodality; it is that clinical AI is being shaped around messy real workflows instead of ideal desk setups.",
+          "url": "https://x.com/EvidenceOpen/status/2057515808826503420"
         },
         {
           "tag": "update",
-          "title": "@MaxForAI: Google’s Product Maze Is Becoming the Product",
-          "body": "A sharply observed post mapped Google’s growing AI naming maze across Gemini, AI Studio, Antigravity, Jules, Flow/Veo, AI Mode, and NotebookLM. It landed because it captures a real adoption problem: even strong models lose momentum when the entry points feel fragmented and bureaucratic.",
-          "url": "https://x.com/MaxForAI/status/2057389390578811289"
+          "title": "@GreyNoiseIO: SonicWall Recon Is Heating Up",
+          "body": "GreyNoise warned that it is seeing SonicWall scanning patterns similar to the activity that preceded February's CVE-2026-0400 wave, with the biggest one-day spike in 90 days on May 12. If you manage edge security gear, this is the most actionable risk signal in the batch.",
+          "url": "https://x.com/GreyNoiseIO/status/2057530455633834136"
+        },
+        {
+          "tag": "update",
+          "title": "@MaxForAI: Codex Built the Deliverable",
+          "body": "A developer shared that after being given an open-source ASR repo and a rough goal, Codex did not just explain the setup but pulled the code, built a front end, deployed it locally, and even fixed a bug. It is anecdotal, but it captures the shift from advice bots toward systems that hand back working artifacts.",
+          "url": "https://x.com/MaxForAI/status/2057775319789265292"
+        },
+        {
+          "tag": "new",
+          "title": "@CARMA_411: Adaptive AI Governance Paper",
+          "body": "CARMA shared a new paper arguing that advanced AI governance needs adaptive institutional structures with explicit failure modes, not just high-level principles. If you follow safety or policy work, it is a more concrete frame than the usual generic governance thread.",
+          "url": "https://x.com/CARMA_411/status/2057456594133106942",
+          "links": [
+            {
+              "label": "Paper summary",
+              "url": "https://carma.org/research-highlights/f/introducing-adaptive-governance-for-advanced-ai"
+            },
+            {
+              "label": "View Tweet",
+              "url": "https://x.com/CARMA_411/status/2057456594133106942"
+            }
+          ]
         }
       ]
     }
