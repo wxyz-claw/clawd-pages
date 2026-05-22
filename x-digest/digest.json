@@ -3,11 +3,11 @@
   "date": "Friday, May 22nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Background-agent UX was the clearest product theme: Gemini Spark framed AI as a 24/7 worker, while Codex posts focused on locked-screen execution and /goal flows that keep jobs moving without babysitting.",
-    "The coding-assistant race is shifting from raw model bragging to throughput and orchestration: Antigravity reportedly reset and expanded Gemini quotas again, and Poetiq showed harness design can push a cheaper Flash model much closer to premium behavior.",
-    "AI business adoption kept widening beyond pure code tools, with RADAR raising a $170M Series B for in-store physical AI and OpenEvidence shipping voice-first multimodal workflows for physicians.",
+    "Developer AI tools spent the batch smoothing real workflow pain: Codex added richer app-window context, Antigravity rushed IDE fixes plus another quota reset, and even small UX tweaks were framed around keeping heavy users productive.",
+    "The clearest financial/regulatory signal was a sharper China clamp on offshore broker access, with feed commentary centering on Futu, Tiger, and Longbridge as channels mainland investors used to reach U.S. and Hong Kong markets.",
+    "Specialized AI products kept getting more practical rather than more theatrical, especially in clinical and research workflows where voice interaction and paper-centric organization are starting to feel mature.",
     {
-      "html": "<strong>Watch item:</strong> GreyNoise flagged fresh SonicWall scanning activity that resembles the lead-up to February's CVE-2026-0400 wave."
+      "html": "<strong>Watch:</strong> Security and policy risk stayed elevated, from renewed SonicWall reconnaissance to immigration-policy criticism framed as a direct hit to U.S. AI competitiveness."
     }
   ],
   "sections": [
@@ -17,43 +17,27 @@
       "items": [
         {
           "tag": "new",
-          "title": "@GeminiApp: Spark Background Agent",
-          "body": "Google positioned Gemini Spark as an always-on agent that can keep working after your phone or laptop goes offline, with human check-ins before major actions. The big signal is product direction: major labs are now selling autonomy and background execution, not just faster chat.",
-          "url": "https://x.com/GeminiApp/status/2057100811826852071"
+          "title": "@OpenAIDevs: Codex Appshots",
+          "body": "OpenAI shipped Appshots for Codex, letting a Mac user attach a live app window so the agent sees both text and a screenshot. That narrows the gap between code-only agents and debugging real UI state.",
+          "url": "https://x.com/OpenAIDevs/status/2057530207976989179"
         },
         {
           "tag": "update",
-          "title": "@xiaohu: Codex on a Locked Mac",
-          "body": "A widely shared walkthrough highlighted Codex's new locked-use flow, which can temporarily unlock a Mac, complete work, and relock it while the display stays protected. That makes agentic coding feel more like remote operations software than a foreground assistant.",
-          "url": "https://x.com/xiaohu/status/2057570191048126690"
-        },
-        {
-          "tag": "update",
-          "title": "@dotey: /goal Workflow Setup",
-          "body": "This practical post distilled how to turn on and use Codex /goal in the app, including the feature flag step and the new entry point in the UI. It was one of the more useful workflow tips in the batch because it turns a fuzzy feature into something repeatable today.",
-          "url": "https://x.com/dotey/status/2057672416071987378"
+          "title": "@_mohansolo: Antigravity IDE Reset",
+          "body": "After backlash around the IDE experience, Antigravity clarified that developer IDE support is staying, pushed connection/setup fixes, and reset everyone's Gemini quota again. The signal is that throughput and workflow friction are now product-critical, not secondary polish.",
+          "url": "https://x.com/_mohansolo/status/2057910616153882949"
         },
         {
           "tag": "new",
-          "title": "@poetiq_ai: Flash Harness Beats Its Weight",
-          "body": "Poetiq said its meta-system improved Gemini 3.5 Flash by more than 10% on LiveCodeBench Pro, enough to match much pricier Deep Think behavior on that coding benchmark. Even if you discount benchmark marketing, the useful takeaway is that harness quality is becoming a real lever, not just a wrapper.",
-          "url": "https://x.com/poetiq_ai/status/2057602166936805840",
-          "links": [
-            {
-              "label": "Poetiq write-up",
-              "url": "https://poetiq.ai/posts/recursive_self_improvement_coding/"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/poetiq_ai/status/2057602166936805840"
-            }
-          ]
+          "title": "@EvidenceOpen: Voice Mode for Physicians",
+          "body": "OpenEvidence launched voice mode across web and mobile so physicians can ask, listen, and interrupt naturally while moving through rounds or calls. It feels meaningful because the product is adapting to messy clinical workflows instead of expecting doctors to sit and type at a desk.",
+          "url": "https://x.com/EvidenceOpen/status/2057515808826503420"
         },
         {
-          "tag": "update",
-          "title": "@0xLogicrw: Antigravity Quotas Reset Again",
-          "body": "A recap of Varun Mohan's announcement said Antigravity again tripled weekly Gemini quotas for paid users, taking effective capacity to about 9x the original baseline and resetting current usage. The market signal is simple: developers now treat model throughput like infrastructure, and they punish fake-feeling limits fast.",
-          "url": "https://x.com/0xLogicrw/status/2057676997074260188"
+          "tag": "new",
+          "title": "@scite: Research Collections",
+          "body": "Scite added Collections, a workspace for curating papers, getting Smart Citation alerts, and asking targeted questions against a specific bundle of literature. It's a small but genuinely useful research workflow upgrade if you live in papers all day.",
+          "url": "https://x.com/scite/status/2057475166192504926"
         }
       ]
     },
@@ -63,21 +47,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@SpencerHewett: RADAR's $170M Series B",
-          "body": "RADAR announced a $170 million Series B at a valuation above $1 billion, pitching physical AI for the large share of retail commerce that still happens in stores. The financing matters because it shows real capital is flowing into AI systems tied to sensors, inventory, and in-person operations rather than just chat interfaces.",
-          "url": "https://x.com/SpencerHewett/status/2056731580157047078"
+          "title": "@qingyue820: Offshore Broker Crackdown",
+          "body": "Feed commentary converged on Beijing's move against Futu, Tiger, and Longbridge, with this post arguing regulators are confiscating mainland-derived revenue and tightening a popular route into U.S. and Hong Kong equities. The actionable takeaway is that mainland access to offshore broker rails looks materially riskier now.",
+          "url": "https://x.com/qingyue820/status/2057762316351951082"
+        },
+        {
+          "tag": "hot",
+          "title": "@HedgieMarkets: The AI Subsidy Era Ends",
+          "body": "One of the sharper market takes in the batch argued that usage-based billing, price hikes, and enterprise budget blowups are colliding across AI software. Even if some sourcing is secondhand, the framing is useful for anyone underwriting AI SaaS margins or internal AI budgets.",
+          "url": "https://x.com/HedgieMarkets/status/2057531661785628841"
         },
         {
           "tag": "update",
-          "title": "@dotey: Cloudflare's AI Hiring Swap",
-          "body": "One of the sharper business posts in the feed highlighted Matthew Prince's Wall Street Journal argument about replacing some roles with AI alongside Cloudflare's first major layoff and a similarly sized intern intake. Whether you agree with the framing or not, it is a concrete example of AI changing workforce mix rather than just tool choice.",
-          "url": "https://x.com/dotey/status/2057641534225346990"
-        },
-        {
-          "tag": "new",
-          "title": "@TheSixFiveMedia: Resolution Beats Speed",
-          "body": "This enterprise AI commentary argued that faster responses do not improve service economics if they still escalate, and that teams should optimize for resolution instead. That is a useful operating metric for anyone evaluating AI customer-support vendors or internal copilots.",
-          "url": "https://x.com/TheSixFiveMedia/status/2057582212233736206"
+          "title": "@S3Partners: Wendy's Short Squeeze Setup",
+          "body": "S3 flagged Wendy's as a live event-driven setup: short interest is up 94% YTD while Trian explores financing a take-private deal. If financing firms up, bears could be forced to cover into a tight tape.",
+          "url": "https://x.com/S3Partners/status/2057546087846531357"
         }
       ]
     },
@@ -86,27 +70,21 @@
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@EvidenceOpen: Voice Mode for Clinical AI",
-          "body": "OpenEvidence launched a voice-first mode so physicians can speak, type, or listen while moving through rounds and calls. The interesting part is not just multimodality; it is that clinical AI is being shaped around messy real workflows instead of ideal desk setups.",
-          "url": "https://x.com/EvidenceOpen/status/2057515808826503420"
-        },
-        {
           "tag": "update",
-          "title": "@GreyNoiseIO: SonicWall Recon Is Heating Up",
-          "body": "GreyNoise warned that it is seeing SonicWall scanning patterns similar to the activity that preceded February's CVE-2026-0400 wave, with the biggest one-day spike in 90 days on May 12. If you manage edge security gear, this is the most actionable risk signal in the batch.",
+          "title": "@GreyNoiseIO: SonicWall Recon Warning",
+          "body": "GreyNoise is seeing SonicWall scanning activity that resembles the pattern ahead of February's CVE-2026-0400 wave, with May 12 marking the largest daily session volume in 90 days. If you run SonicWall gear, this is the clearest patch-and-hunt warning in the batch.",
           "url": "https://x.com/GreyNoiseIO/status/2057530455633834136"
         },
         {
           "tag": "update",
-          "title": "@MaxForAI: Codex Built the Deliverable",
-          "body": "A developer shared that after being given an open-source ASR repo and a rough goal, Codex did not just explain the setup but pulled the code, built a front end, deployed it locally, and even fixed a bug. It is anecdotal, but it captures the shift from advice bots toward systems that hand back working artifacts.",
-          "url": "https://x.com/MaxForAI/status/2057775319789265292"
+          "title": "@AndrewYNg: Immigration as AI Policy",
+          "body": "Andrew Ng argued that forcing green-card applicants to apply from outside the U.S. is not just cruel but strategically self-defeating for science and AI talent. The useful signal is that immigration policy is again being framed as part of national AI competitiveness, not a separate debate.",
+          "url": "https://x.com/AndrewYNg/status/2057907324380217821"
         },
         {
           "tag": "new",
-          "title": "@CARMA_411: Adaptive AI Governance Paper",
-          "body": "CARMA shared a new paper arguing that advanced AI governance needs adaptive institutional structures with explicit failure modes, not just high-level principles. If you follow safety or policy work, it is a more concrete frame than the usual generic governance thread.",
+          "title": "@CARMA_411: Adaptive AI Governance",
+          "body": "CARMA released a governance paper that moves past vague principles and names concrete failure modes plus structural requirements for adaptive AI oversight. It is useful if you want a systems-style frame for governance rather than the usual slogan thread.",
           "url": "https://x.com/CARMA_411/status/2057456594133106942",
           "links": [
             {
