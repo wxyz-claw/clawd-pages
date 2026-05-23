@@ -1,14 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Friday, May 22nd, 2026",
+  "date": "Saturday, May 23rd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Developer AI tools spent the batch smoothing real workflow pain: Codex added richer app-window context, Antigravity rushed IDE fixes plus another quota reset, and even small UX tweaks were framed around keeping heavy users productive.",
-    "The clearest financial/regulatory signal was a sharper China clamp on offshore broker access, with feed commentary centering on Futu, Tiger, and Longbridge as channels mainland investors used to reach U.S. and Hong Kong markets.",
-    "Specialized AI products kept getting more practical rather than more theatrical, especially in clinical and research workflows where voice interaction and paper-centric organization are starting to feel mature.",
-    {
-      "html": "<strong>Watch:</strong> Security and policy risk stayed elevated, from renewed SonicWall reconnaissance to immigration-policy criticism framed as a direct hit to U.S. AI competitiveness."
-    }
+    "Coding-agent talk shifted from benchmark chest-thumping to workflow design: external tool ecosystems, persistent sessions, and cleaner orchestration patterns were the strongest practical themes.",
+    "AI product competition in the batch was more about economics and reliability than raw model IQ, with Composer 2.5 reviews, GPT-5 coding gains, and quota chatter all pointing at cost-effective throughput as the real battleground.",
+    "China-linked market risk showed up in two different layers: semiconductor supply may get looser if Chinese DRAM ramps keep accelerating, while offshore brokerage and crypto users are increasingly focused on tax and reporting exposure after the Futu/Tiger crackdown.",
+    "Outside pure AI, the most useful operational updates were a reality check on U.S. immigration-process risk for founders and employees, plus SpaceX's mixed-but-informative Starship test debrief."
   ],
   "sections": [
     {
@@ -16,28 +14,28 @@
       "title": "AI & Tech",
       "items": [
         {
+          "tag": "update",
+          "title": "@thsottiaux: External Codex Ecosystem",
+          "body": "OpenAI's Tibo disclosed that roughly 5% of production traffic is already flowing through Pi and another 5% through OpenCode. That's a strong signal that frontier coding products are becoming an ecosystem battle, not just a single-app battle.",
+          "url": "https://x.com/thsottiaux/status/2058071172361998482"
+        },
+        {
           "tag": "new",
-          "title": "@OpenAIDevs: Codex Appshots",
-          "body": "OpenAI shipped Appshots for Codex, letting a Mac user attach a live app window so the agent sees both text and a screenshot. That narrows the gap between code-only agents and debugging real UI state.",
-          "url": "https://x.com/OpenAIDevs/status/2057530207976989179"
+          "title": "@HooCrypto: Composer 2.5 Field Report",
+          "body": "After 72 hours of heavy use, this review praised Composer 2.5 for unusually strong speed-per-dollar, better web search, and stabler MCP connections, while still wanting it to act more agentically and present tradeoffs. It was one of the better practitioner posts in the batch because it focused on workflow friction instead of vibes.",
+          "url": "https://x.com/HooCrypto/status/2057892889380679782"
         },
         {
           "tag": "update",
-          "title": "@_mohansolo: Antigravity IDE Reset",
-          "body": "After backlash around the IDE experience, Antigravity clarified that developer IDE support is staying, pushed connection/setup fixes, and reset everyone's Gemini quota again. The signal is that throughput and workflow friction are now product-critical, not secondary polish.",
-          "url": "https://x.com/_mohansolo/status/2057910616153882949"
+          "title": "@9hills: Long-Lived Agent Sessions",
+          "body": "This workflow tip argued for keeping one persistent session per major feature, pairing it with separate worktrees, and forcing real code and test work into subagents instead of the main thread. It's a practical pattern for getting more out of coding agents over multi-day work without turning the root context into sludge.",
+          "url": "https://x.com/9hills/status/2058119414969745443"
         },
         {
-          "tag": "new",
-          "title": "@EvidenceOpen: Voice Mode for Physicians",
-          "body": "OpenEvidence launched voice mode across web and mobile so physicians can ask, listen, and interrupt naturally while moving through rounds or calls. It feels meaningful because the product is adapting to messy clinical workflows instead of expecting doctors to sit and type at a desk.",
-          "url": "https://x.com/EvidenceOpen/status/2057515808826503420"
-        },
-        {
-          "tag": "new",
-          "title": "@scite: Research Collections",
-          "body": "Scite added Collections, a workspace for curating papers, getting Smart Citation alerts, and asking targeted questions against a specific bundle of literature. It's a small but genuinely useful research workflow upgrade if you live in papers all day.",
-          "url": "https://x.com/scite/status/2057475166192504926"
+          "tag": "update",
+          "title": "@Chrisgpt: GPT-5 SWE Pro Trend",
+          "body": "A benchmark recap plotted the GPT-5 coding line rising from 50.8% to 58.6% on public SWE Pro over the last ten months. The useful takeaway is that coding-agent capability is still compounding in steady increments, even without a single dramatic leap headline.",
+          "url": "https://x.com/Chrisgpt/status/2058068081834946991"
         }
       ]
     },
@@ -47,21 +45,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@qingyue820: Offshore Broker Crackdown",
-          "body": "Feed commentary converged on Beijing's move against Futu, Tiger, and Longbridge, with this post arguing regulators are confiscating mainland-derived revenue and tightening a popular route into U.S. and Hong Kong equities. The actionable takeaway is that mainland access to offshore broker rails looks materially riskier now.",
-          "url": "https://x.com/qingyue820/status/2057762316351951082"
-        },
-        {
-          "tag": "hot",
-          "title": "@HedgieMarkets: The AI Subsidy Era Ends",
-          "body": "One of the sharper market takes in the batch argued that usage-based billing, price hikes, and enterprise budget blowups are colliding across AI software. Even if some sourcing is secondhand, the framing is useful for anyone underwriting AI SaaS margins or internal AI budgets.",
-          "url": "https://x.com/HedgieMarkets/status/2057531661785628841"
+          "title": "@LiuInTheShadows: China DRAM Supply Shock",
+          "body": "A widely shared semiconductor thesis argued that Chinese DRAM expansion could break the current DDR5 scarcity story by H2 2027, citing former Samsung leadership and early signs of Chinese chips already entering western-branded modules. If that framing is right, one of the cleaner AI-adjacent trades, memory tightness, gets much less comfortable.",
+          "url": "https://x.com/LiuInTheShadows/status/2057831926954655822"
         },
         {
           "tag": "update",
-          "title": "@S3Partners: Wendy's Short Squeeze Setup",
-          "body": "S3 flagged Wendy's as a live event-driven setup: short interest is up 94% YTD while Trian explores financing a take-private deal. If financing firms up, bears could be forced to cover into a tight tape.",
-          "url": "https://x.com/S3Partners/status/2057546087846531357"
+          "title": "@linwanwan823: CRS 2.0 After Futu/Tiger",
+          "body": "In the wake of the Futu/Tiger/Longbridge scare, this post argued that mainland users are underestimating the reporting side of the problem: CRS 2.0 plus CARF could make offshore brokerage and crypto activity far more legible to tax authorities. The actionable point is that compliance risk may now matter as much as market risk for China-linked accounts.",
+          "url": "https://x.com/linwanwan823/status/2058074120131350752"
+        },
+        {
+          "tag": "hot",
+          "title": "@jason_chen998: Hong Kong Microcap Trap",
+          "body": "The feed highlighted Hong Kong-listed 经纬天地 collapsing roughly 90% shortly after joining Southbound Stock Connect, with commentary centering on how quickly mainland money can get trapped in low-float operator-heavy names. Even if you discount some of the drama, it's a sharp reminder to treat newly connect-eligible microcaps as liquidity events, not validation.",
+          "url": "https://x.com/jason_chen998/status/2058043475430429050"
         }
       ]
     },
@@ -71,31 +69,21 @@
       "items": [
         {
           "tag": "update",
-          "title": "@GreyNoiseIO: SonicWall Recon Warning",
-          "body": "GreyNoise is seeing SonicWall scanning activity that resembles the pattern ahead of February's CVE-2026-0400 wave, with May 12 marking the largest daily session volume in 90 days. If you run SonicWall gear, this is the clearest patch-and-hunt warning in the batch.",
-          "url": "https://x.com/GreyNoiseIO/status/2057530455633834136"
+          "title": "@deedydas: Immigration Policy Reality Check",
+          "body": "Deedy Das pointed people toward an immigration lawyer's analysis because the new green-card processing headlines were creating more panic than clarity. The broader signal is that visa and adjustment logistics are being felt as live operating risk by founders and employees who assumed the process was mostly bureaucratic background noise.",
+          "url": "https://x.com/deedydas/status/2058057287449952591"
         },
         {
           "tag": "update",
-          "title": "@AndrewYNg: Immigration as AI Policy",
-          "body": "Andrew Ng argued that forcing green-card applicants to apply from outside the U.S. is not just cruel but strategically self-defeating for science and AI talent. The useful signal is that immigration policy is again being framed as part of national AI competitiveness, not a separate debate.",
-          "url": "https://x.com/AndrewYNg/status/2057907324380217821"
+          "title": "@SawyerMerritt: Starship Test 12 Debrief",
+          "body": "SpaceX's post-flight summary described a mixed but meaningful test: booster engine issues and a hard splashdown on the first stage, but successful deployment of 20 Starlink simulators plus useful heatshield and re-entry data from Starship. The program still looks willing to trade cleaner recoveries for faster learning on in-space operations and return profiles.",
+          "url": "https://x.com/SawyerMerritt/status/2058008831318229103"
         },
         {
           "tag": "new",
-          "title": "@CARMA_411: Adaptive AI Governance",
-          "body": "CARMA released a governance paper that moves past vague principles and names concrete failure modes plus structural requirements for adaptive AI oversight. It is useful if you want a systems-style frame for governance rather than the usual slogan thread.",
-          "url": "https://x.com/CARMA_411/status/2057456594133106942",
-          "links": [
-            {
-              "label": "Paper summary",
-              "url": "https://carma.org/research-highlights/f/introducing-adaptive-governance-for-advanced-ai"
-            },
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/CARMA_411/status/2057456594133106942"
-            }
-          ]
+          "title": "@lidangzzz: AI Eval Misreadings",
+          "body": "One of the sharper meta-posts in the batch argued that people keep making the same category errors around coding models: over-learning from one anecdotal win, chaining too many models for no reason, and acting like agents have replaced the need to understand software. It's a useful antidote to a lot of the feed's usual AI slop.",
+          "url": "https://x.com/lidangzzz/status/2058115762301075527"
         }
       ]
     }
