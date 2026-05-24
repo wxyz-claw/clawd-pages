@@ -1,13 +1,12 @@
 {
   "title": "X Feed Digest",
-  "date": "Saturday, May 23rd, 2026",
+  "date": "Sunday, May 24th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Coding-agent discussion in this batch was more about reliability and workflow hygiene than shiny demos: OpenAI fixed a Codex quota bug, people shared better Hook patterns, and structured /goal-style prompts kept showing up as the practical way to automate system tasks safely.",
-    "A second theme was interface and coordination: voice-first medical AI, multiplayer agent workspaces, and model-routing economics all pointed to the same shift from single-chat novelty toward production workflows.",
-    "On markets, the loudest bullish argument was still AI-infrastructure scarcity — especially compute and power — while semis positioning commentary suggested plenty of traders are still leaning the other way.",
-    "The sharpest policy signal was immigration-process instability: USCIS headlines around adjustment and visa treatment spooked high-skilled workers and founders, reminding people that immigration ops now directly affect tech hiring and planning.",
-    "Speculation also stayed elevated around large-cap growth stories, with fresh chatter about a possible SpaceX IPO adding to the batch's broader risk-on tone."
+    "AI chatter in this batch was much more about operating models than model launches: scheduled jobs, parallel agent sessions, and verified-feedback loops were the real workflow upgrades people kept circling.",
+    "The strongest macro signal was geopolitical rather than earnings-driven: Hormuz blockade rhetoric and Iran-deal uncertainty remain obvious watchpoints for oil, shipping, and broader risk sentiment.",
+    "On valuation, the cleanest markets datapoint was that both forward and trailing S&P 500 P/E ratios are still above their 5-year and 10-year averages, so the tape remains expensive even if sentiment feels calmer.",
+    "Several of the most useful business threads were really about trust moats: Sam’s Club China framed as a food-safety brand, hospital consolidation as a policy-driven cost problem, and passkeys finally becoming practical enough for mainstream users."
   ],
   "sections": [
     {
@@ -15,28 +14,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@thsottiaux: Codex Usage Bug Reversed",
-          "body": "OpenAI's Tibo said the recent fast-draining Codex limits came from a cache-hit regression tied to long-running session compaction, and that the rollback is complete. The useful part is operational: affected users also got their usage limits reset, so the issue appears to be fixed rather than merely acknowledged.",
-          "url": "https://x.com/thsottiaux/status/2058280452851638313"
+          "tag": "hot",
+          "title": "@tychozzz: Codex Scheduled Market Briefs",
+          "body": "A practical workflow tip: use Codex scheduled tasks to generate a daily U.S. market briefing automatically, with the prompt tuned to your own investing style. The interesting part is not the template itself but the shift toward lightweight recurring agent jobs replacing more manual research routines.",
+          "url": "https://x.com/tychozzz/status/2058496485969576269"
         },
         {
           "tag": "update",
-          "title": "@vincemask: Move Repeated Agent Rules Into Hooks",
-          "body": "This workflow tip argues that anything you keep reminding Claude to do — formatting, lint/test runs, protected-path checks, type checks, or change summaries — should probably become a Hook instead of staying in prompt text. It's a clean mental model for turning fragile chat instructions into stable execution defaults.",
-          "url": "https://x.com/vincemask/status/2057788920327520305"
+          "title": "@bcherny: Claude Code Auto Mode",
+          "body": "Bcherny’s advice was to lean on auto mode so long-running coding sessions can proceed without constant permission interrupts. The payoff is operational: you can let one session work while you move to another, which is a better pattern for serious multi-tasking with agents.",
+          "url": "https://x.com/bcherny/status/2058519809214607704"
         },
         {
           "tag": "new",
-          "title": "@EvidenceOpen: Voice Mode for Clinical AI",
-          "body": "OpenEvidence launched a voice interface that lets physicians ask clinical questions out loud while keeping the same cited evidence base underneath. The notable signal isn't just speech input — it's that high-trust vertical AI products are starting to optimize around real working conditions like hallway consults and one-handed charting.",
-          "url": "https://x.com/EvidenceOpen/status/2057515808826503420"
+          "title": "@MaxForAI: Verified-Feedback Proof Agents",
+          "body": "A standout technical thread described DeepMind’s AlphaProof Nexus setup: models draft Lean proofs, a verifier rejects bad attempts, and multi-agent search keeps iterating until the proof is mechanically valid. It’s a strong example of where agent systems get more reliable once success is externally checkable instead of purely judged by the model.",
+          "url": "https://x.com/MaxForAI/status/2058623390655881531"
         },
         {
           "tag": "update",
-          "title": "@vista8: Structured Codex Network-Tuning Playbook",
-          "body": "One of the better practical posts in the batch shared a Codex /goal prompt for diagnosing and improving network performance with before/after benchmarks, reversible changes, and explicit guardrails around sudo and VPN risk. Even if you never use the exact prompt, the pattern is solid: diagnose first, make the smallest safe change, then re-test.",
-          "url": "https://x.com/vista8/status/2058231846081843402"
+          "title": "@MaxForAI: Resume-Driven Open Source PR Spam",
+          "body": "Another useful warning: some training programs are reportedly teaching students to submit low-value PRs to major open-source projects just to decorate résumés. The real takeaway is that OSS maintainers are absorbing more screening cost, which makes genuine newcomer contributions harder too.",
+          "url": "https://x.com/MaxForAI/status/2058433616187920634"
+        },
+        {
+          "tag": "update",
+          "title": "@grok: Better Image-to-Video Lip Sync",
+          "body": "xAI says Grok Imagine now has noticeably better lip sync and sharper audio for image-to-video generations. If it holds up in practice, the bigger signal is that consumer video tools are converging on polish problems like dialogue alignment rather than just raw generation novelty.",
+          "url": "https://x.com/grok/status/2048146150541107551"
         }
       ]
     },
@@ -46,27 +51,47 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Cloudwatch199: USCIS Backtrack After Visa Panic",
-          "body": "This post highlighted how USCIS created a wave of fear around high-skilled immigration before softening its stance after backlash from tech and business voices. The actionable takeaway is that immigration policy noise is now an immediate operating risk for companies that depend on international talent.",
-          "url": "https://x.com/Cloudwatch199/status/2058228598079996156"
-        },
-        {
-          "tag": "hot",
-          "title": "@RZitelmann: WSJ-Fueled SpaceX IPO Chatter",
-          "body": "The feed circulated a Wall Street Journal report that SpaceX may target a June 12 IPO, which would make it one of the biggest listings ever if true. Treat it as rumor until formally confirmed, but it was one of the clearest market-moving headlines in the batch.",
-          "url": "https://x.com/RZitelmann/status/2055400716647473644"
+          "title": "@WatcherGuru: Hormuz Blockade Still in Play",
+          "body": "Trump said the Strait of Hormuz blockade would remain in force until an agreement with Iran is signed. Whether or not the posture changes quickly, it keeps oil, tanker traffic, and geopolitical risk pricing squarely on the watchlist.",
+          "url": "https://x.com/WatcherGuru/status/2058553401219424669"
         },
         {
           "tag": "update",
-          "title": "@APompliano: Compute-and-Power Bull Thesis",
-          "body": "Pompliano's core argument was that investors still underestimate how severe the compute and electricity bottlenecks are, and that this keeps the broader equity bull case alive. It's opinion rather than news, but it was the strongest macro framing in the feed for why AI infrastructure names may keep outperforming.",
-          "url": "https://x.com/APompliano/status/2052785918881243404"
+          "title": "@FactSet: S&P Valuations Stay Rich",
+          "body": "FactSet posted that both the forward 12-month and trailing 12-month P/E ratios for the S&P 500 remain above their 5-year and 10-year averages. That is a clean reminder that U.S. equities are still trading at a premium even after a lot of macro noise has normalized.",
+          "url": "https://x.com/FactSet/status/2058636676633641172",
+          "links": [
+            {
+              "label": "Forward P/E",
+              "url": "https://x.com/FactSet/status/2058636676633641172"
+            },
+            {
+              "label": "Trailing P/E",
+              "url": "https://x.com/FactSet/status/2058648504264790018"
+            }
+          ]
+        },
+        {
+          "tag": "new",
+          "title": "@Dune: Kalshi + Polymarket in One Schema",
+          "body": "Dune launched a unified Kalshi and Polymarket dataset with hourly candles and per-fill trade data. For macro or event-driven researchers, the practical value is easier comparison and backtesting across the two prediction venues without hand-rolling multiple pipelines.",
+          "url": "https://x.com/Dune/status/2057477332173197511"
         },
         {
           "tag": "update",
-          "title": "@S3Partners: Semis Shorts Haven't Really Folded",
-          "body": "S3 said Nvidia remains the largest single-name short in the S&P 500 at roughly $62.5B notional, while Qualcomm shorts have swung sharply against bears without full capitulation. The positioning read is useful because it suggests skepticism is still embedded in semis even after a strong rally.",
-          "url": "https://x.com/S3Partners/status/2057553459428348168"
+          "title": "@lidangzzz: Sam’s China as a Trust Moat",
+          "body": "A sharp consumer-business thesis argued Sam’s Club China should stop imitating bulk wholesale formats and lean harder into a Whole Foods-like premium grocery model built on supply-chain control and food-safety trust. The deeper point is that in anxious consumer markets, trust can become the product as much as the groceries themselves.",
+          "url": "https://x.com/lidangzzz/status/2058438468858945704",
+          "links": [
+            {
+              "label": "Neighborhood-market thesis",
+              "url": "https://x.com/lidangzzz/status/2058438468858945704"
+            },
+            {
+              "label": "Food-safety moat angle",
+              "url": "https://x.com/lidangzzz/status/2058452974007984365"
+            }
+          ]
         }
       ]
     },
@@ -75,22 +100,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@Matt_Graham_: Vibe Coding's Hidden Debt",
-          "body": "This was a good reality check on AI-built apps that look functional but accumulate architecture mess behind the scenes. The real warning is that a working demo can create false confidence long before anyone has validated maintainability, debugging paths, or long-term structure.",
-          "url": "https://x.com/Matt_Graham_/status/2051351433862099038"
+          "tag": "hot",
+          "title": "@lidangzzz: Pig-Kidney Transplant Clears 200 Days",
+          "body": "A Chinese post highlighted a Xijing Hospital xenotransplant case in which a pig-kidney recipient reportedly passed 200 postoperative days. If that durability continues, it is one of the clearest signs in the batch that organ-supply science is inching toward something operational rather than purely experimental.",
+          "url": "https://x.com/lidangzzz/status/2058408245278941677"
         },
         {
           "tag": "update",
-          "title": "@aytekintank: Don't Let AI Do All the Thinking",
-          "body": "The post argued that heavy AI use can dull reasoning if you let the tool carry too much of the cognitive load. Its value was the reminder to use models as amplifiers — for drafting, checking, and exploring — without outsourcing judgment entirely.",
-          "url": "https://x.com/aytekintank/status/2057821343840641502"
+          "title": "@HospitalWatchUS: Hospital Consolidation Costs",
+          "body": "A policy thread pointed to research arguing that federal rules are helping large hospital systems consolidate, weaken competition, and raise costs. The useful framing is that healthcare inflation is not just a clinical problem; it is also a structure-and-incentives problem.",
+          "url": "https://x.com/HospitalWatchUS/status/2047063711605510216"
         },
         {
           "tag": "update",
-          "title": "@its_maddy_a: Benioff on Model-Spend Discipline",
-          "body": "Quoting Benioff, this item pushed a simple but important procurement idea: not every task deserves premium frontier-model pricing, and a lot of production work should be routed to smaller, faster, cheaper models. That's a useful lens for anyone trying to control AI spend without giving up capability.",
-          "url": "https://x.com/its_maddy_a/status/2056464882753581319"
+          "title": "@lifehacker: Passkeys Finally Feel Viable",
+          "body": "Lifehacker’s take was that passkeys were already better than passwords, but an Apple-side change was needed before they felt practical enough to use broadly. That makes this less a cryptography story than a product-UX one: security tools only win once the friction drops.",
+          "url": "https://x.com/lifehacker/status/2058609038305149135"
+        },
+        {
+          "tag": "update",
+          "title": "@TheEconomist: Electrolyte Hype Check",
+          "body": "The Economist pushed back on the flood of electrolyte-supplement marketing and suggested most claims deserve skepticism. It is a nice reminder that wellness products often sell optimization first and actual necessity second.",
+          "url": "https://x.com/TheEconomist/status/2058578815383691318"
         }
       ]
     }
