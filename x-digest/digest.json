@@ -3,11 +3,11 @@
   "date": "Tuesday, May 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The clearest AI theme was the shift from chat to delegated work: Grok Build, Gemini Spark, and vertical voice interfaces all pushed toward background agents rather than one-shot assistants.",
-    "The workflow conversation got more disciplined: cross-model review patterns, Codex-vs-Claude efficiency chatter, and vibe-coding warnings all pointed to reliability and cost control mattering more than novelty.",
-    "The most actionable data launch in the batch was Dune's unified Kalshi + Polymarket dataset, which makes prediction markets easier to study as real research inputs instead of isolated apps.",
-    "Market commentary was thinner than AI, but one durable macro thread stood out: AI beneficiaries may include power-, mineral-, and land-rich geographies like Brazil, not just model vendors.",
-    "A more sobering undercurrent kept surfacing too: stronger AI tooling can reduce headcount just as easily as it boosts output, and blindly trusting a single model can go sideways fast."
+    "The feed kept pushing toward persistent agents rather than smarter chat: Gemini Spark, Codex workflow upgrades, and identity-and-memory commentary all pointed to AI that keeps context and works in the background.",
+    "Evaluation and operating discipline are getting sharper too. DeepSWE tried to separate agentic coding models on real software tasks, while developer chatter kept focusing on continuity, history search, and the hidden cost of cleaning up AI-written code.",
+    "The most interesting enterprise signal was budgetary: one CEO reportedly replaced a $600K Salesforce contract with a vibe-coded CRM and expects much of internal SaaS spend to get compressed next.",
+    "The clearest business-news story was SpaceX widening its footprint on two fronts at once: American Airlines plans to adopt Starlink in-flight internet, and the U.S. Space Force awarded a $2.29B military data-network contract.",
+    "Outside AI, the most genuinely useful post in the batch was simple consumer-defense advice: if a rental-car company claims hidden damage after return, ask for the inspection paperwork before arguing about the contract."
   ],
   "sections": [
     {
@@ -16,33 +16,27 @@
       "items": [
         {
           "tag": "new",
-          "title": "@xai: Grok Build Beta Widens",
-          "body": "xAI opened Grok Build beta to SuperGrok and X Premium+ users with planning mode, image/video generation, CLI automations, and orchestration hooks. The bigger signal is X moving from chatbot access toward a full agent-builder surface inside its consumer subscription stack.",
-          "url": "https://x.com/xai/status/2058973760708091907"
+          "title": "@serenaa_ge: DeepSWE Agentic Coding Benchmark",
+          "body": "Serena Ge introduced DeepSWE, a benchmark aimed at agentic coding workflows rather than leaderboard trivia. The point is that models which look similar on public evals can separate much more clearly when measured against day-to-day software tasks.",
+          "url": "https://x.com/serenaa_ge/status/2059308218564890875"
+        },
+        {
+          "tag": "update",
+          "title": "@CodexReleases: Codex CLI 0.134.0",
+          "body": "Codex CLI 0.134.0 adds local conversation-history search, unifies profile selection across CLI/TUI/sandbox, and expands MCP support with per-server env targeting, OAuth, and concurrent read-only tools. It's a meaningful usability upgrade for long-running coding workflows.",
+          "url": "https://x.com/CodexReleases/status/2059354476822036718"
         },
         {
           "tag": "new",
-          "title": "@GeminiApp: Spark as a Background Agent",
-          "body": "Google framed Gemini Spark as a 24/7 agent that keeps working even when your devices are off and checks back before major actions. That's a meaningful product shift: the frontier is moving from answer quality toward trustworthy delegated execution.",
+          "title": "@GeminiApp: Spark as a 24/7 Agent",
+          "body": "Google pitched Gemini Spark as a background agent that keeps working after you leave and checks back before major actions. It reinforces the biggest product shift in the feed: competition is moving from one-shot chat answers toward trustworthy delegated execution.",
           "url": "https://x.com/GeminiApp/status/2057100811826852071"
         },
         {
-          "tag": "new",
-          "title": "@EvidenceOpen: Voice Mode for Doctors",
-          "body": "OpenEvidence launched a multimodal voice interface for clinicians that keeps peer-reviewed citations while making responses short enough for rounds and hallway use. It's a good example of vertical AI winning by fitting a real workflow instead of just adding generic chat.",
-          "url": "https://x.com/EvidenceOpen/status/2057515808826503420"
-        },
-        {
           "tag": "update",
-          "title": "@getsome_air: Cross-Model Code Review Pattern",
-          "body": "One practical workflow tip stood out: let one model implement code and a different model review it, leave comments, and hand fixes back. It's a clean way to get some multi-agent upside without letting multiple writers stomp on the same codebase.",
-          "url": "https://x.com/getsome_air/status/2051659753034514505"
-        },
-        {
-          "tag": "update",
-          "title": "@heykeithbrown: Codex Usage Growth Speeds Up",
-          "body": "A usage tracker covering 100-plus AI-native developers said Codex usage is growing faster than Claude Code even though Claude still leads overall share. Small sample caveat aside, it matches the broader feed mood: teams are optimizing harder for speed, reliability, and token efficiency.",
-          "url": "https://x.com/heykeithbrown/status/2055240780575301984"
+          "title": "@kylegawley: AI Code Backlash Warning",
+          "body": "Kyle Gawley joked that AI may write nearly all code in 2026 and a much smaller share in 2027 once teams feel the cleanup burden. The line is funny, but the warning is real: generation is cheap, maintenance debt isn't.",
+          "url": "https://x.com/kylegawley/status/2059224815282917745"
         }
       ]
     },
@@ -51,16 +45,22 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "new",
-          "title": "@Dune: Unified Kalshi + Polymarket Data",
-          "body": "Dune launched a combined Kalshi and Polymarket dataset with hourly candles, per-fill trades, and warehouse export paths into Snowflake, BigQuery, and Databricks. For macro or event-driven researchers, this meaningfully lowers the friction to compare pricing and liquidity across the two main prediction-market venues.",
-          "url": "https://x.com/Dune/status/2057477332173197511"
+          "tag": "hot",
+          "title": "@elonmusk: Starlink on American Airlines",
+          "body": "American Airlines says it will bring Starlink-powered connectivity to flights starting in 2027, a notable distribution win for SpaceX in consumer internet. If performance holds up, it also puts more pressure on legacy in-flight Wi‑Fi vendors.",
+          "url": "https://x.com/elonmusk/status/2059302994890440961"
+        },
+        {
+          "tag": "hot",
+          "title": "@zerohedge: $2.29B Space Force Contract",
+          "body": "A Space Force award worth $2.29B for a military space data network underlines how much of SpaceX's upside is now defense and communications infrastructure, not just launches. That's a real contract headline with business implications, not just product buzz.",
+          "url": "https://x.com/zerohedge/status/2059361223469039793"
         },
         {
           "tag": "update",
-          "title": "@drewcrawford_: Brazil as an AI-Adjacent Asset Bet",
-          "body": "A detailed Brazil thread argued that U.S. allocators still under-own a country with farmland, freshwater, clean power, niobium, and offshore oil in one package. Whether or not you buy the full bull case, it was a sharp reminder that AI beneficiaries may include resource-heavy geographies, not just software names.",
-          "url": "https://x.com/drewcrawford_/status/2056433193167774053"
+          "title": "@HarryStebbings: AI as SaaS Budget Pressure",
+          "body": "Harry Stebbings relayed a CEO claim that a vibe-coded CRM replaced a $600K Salesforce contract in three weeks and that most internal SaaS could disappear next. Even with anecdotal caveats, it's a sharp signal that AI budgets may cannibalize software vendors rather than simply layer on top.",
+          "url": "https://x.com/HarryStebbings/status/2059239785030443472"
         }
       ]
     },
@@ -69,22 +69,16 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@LabSpeculation: Cross-Check Strange LLM Output",
-          "body": "A widely shared cautionary post argued that a flattering assistant can reinforce bad beliefs instead of challenging them, and that switching models can break the spell. The practical takeaway is solid: for anything high-stakes or weird, force a second-model or human sanity check.",
-          "url": "https://x.com/LabSpeculation/status/2059090637920866396"
+          "tag": "update",
+          "title": "@heynavtoor: Rental Car Dispute Playbook",
+          "body": "Nav Toor's rental-car anecdote was refreshingly practical: when a company claims hidden damage after drop-off, ask for the inspection report and check-in sheet instead of debating the generic contract language. In his case, that was enough to make an $1,800 charge disappear.",
+          "url": "https://x.com/heynavtoor/status/2059305933332009193"
         },
         {
           "tag": "update",
-          "title": "@Matt_Graham_: Vibe Coding Debt Still Counts",
-          "body": "A builder-services thread made the case that AI can get you to a working demo faster than it gets you to a maintainable product. The useful point wasn't anti-AI; it was that structure, review, and refactoring still have to happen somewhere.",
-          "url": "https://x.com/Matt_Graham_/status/2051351433862099038"
-        },
-        {
-          "tag": "update",
-          "title": "@shao__meng: AI Efficiency Can Become Layoff Math",
-          "body": "One blunt anecdote described a team proving strong productivity gains with large Cursor budgets and then getting cut because management concluded fewer developers were needed. Crude as it is, it captures a real near-term risk: tooling wins do not automatically accrue to the people using the tools.",
-          "url": "https://x.com/shao__meng/status/2059099727120208374"
+          "title": "@urbit: Personal AI Needs Identity & Memory",
+          "body": "Urbit argued that the next personal-AI bottleneck is not raw model intelligence but durable identity, memory, permissions, and ownership. That's a useful frame: assistants don't feel truly personal until they can remember, act, and stay bounded on infrastructure the user controls.",
+          "url": "https://x.com/urbit/status/2059305896984060131"
         }
       ]
     }
