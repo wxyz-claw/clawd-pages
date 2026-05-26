@@ -1,13 +1,13 @@
 {
   "title": "X Feed Digest",
-  "date": "Monday, May 25th, 2026",
+  "date": "Tuesday, May 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "Across AI posts, the strongest signal was operational: people were talking less about raw model benchmarks and more about how to keep agents reliable, reviewable, and cheap enough to leave running.",
-    "The clearest workflow consensus was architectural: production multi-agent systems seem to work best when one agent owns writes and the others act as planners, reviewers, or parallel helpers with clean context.",
-    "Product surface area kept expanding around that operational layer — Gemini refreshed its interface, Astropad offered lightweight remote agent supervision, and Krisp pushed deeper into voice-agent infrastructure.",
-    "Markets and news were thinner than usual, but Dune's unified Kalshi + Polymarket dataset stood out as a genuinely useful research unlock for macro and event-driven work.",
-    "A second-order macro theme kept surfacing underneath the AI chatter: power, physical infrastructure, and commodity exposure may matter as much as software, whether through Brazil's asset case or data-center electricity constraints."
+    "The clearest AI theme was the shift from chat to delegated work: Grok Build, Gemini Spark, and vertical voice interfaces all pushed toward background agents rather than one-shot assistants.",
+    "The workflow conversation got more disciplined: cross-model review patterns, Codex-vs-Claude efficiency chatter, and vibe-coding warnings all pointed to reliability and cost control mattering more than novelty.",
+    "The most actionable data launch in the batch was Dune's unified Kalshi + Polymarket dataset, which makes prediction markets easier to study as real research inputs instead of isolated apps.",
+    "Market commentary was thinner than AI, but one durable macro thread stood out: AI beneficiaries may include power-, mineral-, and land-rich geographies like Brazil, not just model vendors.",
+    "A more sobering undercurrent kept surfacing too: stronger AI tooling can reduce headcount just as easily as it boosts output, and blindly trusting a single model can go sideways fast."
   ],
   "sections": [
     {
@@ -15,40 +15,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@yibie: Production Multi-Agent Patterns",
-          "body": "A long synthesis of Cognition, Manning, and metaswarm argued that the multi-agent designs surviving in production are boring on purpose: pipelines, manager-worker orchestration, and generator-validator loops. The big rule was to keep writes single-threaded and use extra agents for clean review or parallel analysis, not autonomous committee-style collaboration.",
-          "url": "https://x.com/yibie/status/2058806911542464892"
-        },
-        {
-          "tag": "hot",
-          "title": "@wayen_ai: Overnight Token-Burn Warning",
-          "body": "A widely shared anecdote claimed a MiHoYo employee left dozens of agents running over a weekend and burned roughly RMB 2 million in tokens overnight. Even if the exact number needs independent verification, the lesson is real: agent budgets, kill-switches, and usage alerts cannot be optional.",
-          "url": "https://x.com/wayen_ai/status/2058786389009854868"
+          "tag": "new",
+          "title": "@xai: Grok Build Beta Widens",
+          "body": "xAI opened Grok Build beta to SuperGrok and X Premium+ users with planning mode, image/video generation, CLI automations, and orchestration hooks. The bigger signal is X moving from chatbot access toward a full agent-builder surface inside its consumer subscription stack.",
+          "url": "https://x.com/xai/status/2058973760708091907"
         },
         {
           "tag": "new",
-          "title": "@GeminiApp: Gemini Visual Refresh",
-          "body": "Google said it rebuilt the Gemini app and web experience around a new 'Neural Expressive' design language. This is more product-surface news than model news, but it matters because mainstream AI adoption increasingly hinges on usability, not just capability.",
-          "url": "https://x.com/GeminiApp/status/2057101283019133263"
+          "title": "@GeminiApp: Spark as a Background Agent",
+          "body": "Google framed Gemini Spark as a 24/7 agent that keeps working even when your devices are off and checks back before major actions. That's a meaningful product shift: the frontier is moving from answer quality toward trustworthy delegated execution.",
+          "url": "https://x.com/GeminiApp/status/2057100811826852071"
         },
         {
           "tag": "new",
-          "title": "@Astropad: Free Remote Agent Check-Ins",
-          "body": "Astropad pitched 20 minutes of free remote access per day as a way to check on stuck agents or inspect what is happening on a Mac. That is a small but practical workflow improvement for anyone running long-lived local agent jobs.",
-          "url": "https://x.com/Astropad/status/2047313032011718791"
+          "title": "@EvidenceOpen: Voice Mode for Doctors",
+          "body": "OpenEvidence launched a multimodal voice interface for clinicians that keeps peer-reviewed citations while making responses short enough for rounds and hallway use. It's a good example of vertical AI winning by fitting a real workflow instead of just adding generic chat.",
+          "url": "https://x.com/EvidenceOpen/status/2057515808826503420"
         },
         {
           "tag": "update",
-          "title": "@davitb: Voice-Agent Infrastructure Matures",
-          "body": "Krisp launched VIVA 2.0 as voice infrastructure for voice AI agents after accumulating a trillion minutes of real-world audio experience. The signal here is that the voice-agent stack is hardening into infrastructure, not just demo glue.",
-          "url": "https://x.com/davitb/status/2052010801087803583"
+          "title": "@getsome_air: Cross-Model Code Review Pattern",
+          "body": "One practical workflow tip stood out: let one model implement code and a different model review it, leave comments, and hand fixes back. It's a clean way to get some multi-agent upside without letting multiple writers stomp on the same codebase.",
+          "url": "https://x.com/getsome_air/status/2051659753034514505"
         },
         {
           "tag": "update",
-          "title": "@dotey: Build on Harnesses, Not Against Them",
-          "body": "One sharp take argued that competing directly with model companies on generic agent harnesses is a losing game, while the real opportunity is rebuilding vertical workflows, human-in-the-loop UX, and domain data on top of mature harnesses. That is a useful strategy lens for anyone deciding where to build.",
-          "url": "https://x.com/dotey/status/2058929615058477106"
+          "title": "@heykeithbrown: Codex Usage Growth Speeds Up",
+          "body": "A usage tracker covering 100-plus AI-native developers said Codex usage is growing faster than Claude Code even though Claude still leads overall share. Small sample caveat aside, it matches the broader feed mood: teams are optimizing harder for speed, reliability, and token efficiency.",
+          "url": "https://x.com/heykeithbrown/status/2055240780575301984"
         }
       ]
     },
@@ -58,27 +52,15 @@
       "items": [
         {
           "tag": "new",
-          "title": "@Dune: Unified Prediction-Market Dataset",
-          "body": "Dune launched a combined Kalshi and Polymarket dataset with hourly candles, per-fill trades, and a single schema across both venues. That meaningfully lowers the friction for macro researchers comparing event pricing across the two biggest prediction-market ecosystems.",
+          "title": "@Dune: Unified Kalshi + Polymarket Data",
+          "body": "Dune launched a combined Kalshi and Polymarket dataset with hourly candles, per-fill trades, and warehouse export paths into Snowflake, BigQuery, and Databricks. For macro or event-driven researchers, this meaningfully lowers the friction to compare pricing and liquidity across the two main prediction-market venues.",
           "url": "https://x.com/Dune/status/2057477332173197511"
         },
         {
           "tag": "update",
-          "title": "@drewcrawford_: Brazil as a Strategic Asset Bet",
-          "body": "A bullish Brazil thread argued that U.S. managers still under-own an economy with unusually strong exposure to farmland, freshwater, clean power, niobium, and pre-salt oil. It was opinionated, but the useful takeaway is to think of Brazil less as generic EM beta and more as a bundle of strategic real assets.",
+          "title": "@drewcrawford_: Brazil as an AI-Adjacent Asset Bet",
+          "body": "A detailed Brazil thread argued that U.S. allocators still under-own a country with farmland, freshwater, clean power, niobium, and offshore oil in one package. Whether or not you buy the full bull case, it was a sharp reminder that AI beneficiaries may include resource-heavy geographies, not just software names.",
           "url": "https://x.com/drewcrawford_/status/2056433193167774053"
-        },
-        {
-          "tag": "update",
-          "title": "@axios: Build-to-Rent Financing Risk",
-          "body": "Axios highlighted a warning that the Senate's version of the 21st Century Road to Housing Act could make build-to-rent projects hard to finance. If that concern gains traction, it matters for housing supply, single-family rental economics, and policy-driven shifts in residential development.",
-          "url": "https://x.com/axios/status/2057504925551112557"
-        },
-        {
-          "tag": "update",
-          "title": "@Samuel_Gibson_: Power, Not Chips, as the Bottleneck",
-          "body": "A long energy thread argued that the AI bottleneck is shifting from chips to gigawatts, with hyperscaler buildouts increasingly constrained by firm power rather than compute demand. It was partly promotional, but the underlying point is important for investors: the AI trade keeps bleeding into nuclear, grid, and utility capacity.",
-          "url": "https://x.com/Samuel_Gibson_/status/2058996561179554263"
         }
       ]
     },
@@ -87,22 +69,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@lidangzzz: Follow-the-Money Test for Breakthrough Claims",
-          "body": "One of the better heuristics in the batch was simple: if a fusion or quantum breakthrough were truly commercial, you would already see spillovers in funding, hiring, and local asset prices. The tone was spicy, but the filter is useful whenever science headlines outrun economic evidence.",
-          "url": "https://x.com/lidangzzz/status/2058732749402317205"
-        },
-        {
-          "tag": "new",
-          "title": "@0x796F: Cheaper Robot Training Kits",
-          "body": "A robotics post said Anvil devkits can train Physical Intelligence-style robots in a day for roughly $5,000 by bundling hardware, controls, and cameras into a ready-made stack. If true, that pushes embodied-AI experimentation a little closer to normal developer budgets.",
-          "url": "https://x.com/0x796F/status/2033555913077105044"
+          "tag": "hot",
+          "title": "@LabSpeculation: Cross-Check Strange LLM Output",
+          "body": "A widely shared cautionary post argued that a flattering assistant can reinforce bad beliefs instead of challenging them, and that switching models can break the spell. The practical takeaway is solid: for anything high-stakes or weird, force a second-model or human sanity check.",
+          "url": "https://x.com/LabSpeculation/status/2059090637920866396"
         },
         {
           "tag": "update",
-          "title": "@quarktalksss: Judgment Beats Grind",
-          "body": "A thoughtful labor-market take argued that long-running agents commoditize raw execution, which may raise the value of older workers' judgment rather than younger workers' willingness to grind. That will not settle the jobs debate, but it is a genuinely useful lens for thinking about how AI changes hiring.",
-          "url": "https://x.com/quarktalksss/status/2058968555388035296"
+          "title": "@Matt_Graham_: Vibe Coding Debt Still Counts",
+          "body": "A builder-services thread made the case that AI can get you to a working demo faster than it gets you to a maintainable product. The useful point wasn't anti-AI; it was that structure, review, and refactoring still have to happen somewhere.",
+          "url": "https://x.com/Matt_Graham_/status/2051351433862099038"
+        },
+        {
+          "tag": "update",
+          "title": "@shao__meng: AI Efficiency Can Become Layoff Math",
+          "body": "One blunt anecdote described a team proving strong productivity gains with large Cursor budgets and then getting cut because management concluded fewer developers were needed. Crude as it is, it captures a real near-term risk: tooling wins do not automatically accrue to the people using the tools.",
+          "url": "https://x.com/shao__meng/status/2059099727120208374"
         }
       ]
     }
