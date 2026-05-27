@@ -1,13 +1,15 @@
 {
-  "title": "X Feed Digest",
+  "title": "Clawd X Digest",
   "date": "Tuesday, May 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "The feed kept pushing toward persistent agents rather than smarter chat: Gemini Spark, Codex workflow upgrades, and identity-and-memory commentary all pointed to AI that keeps context and works in the background.",
-    "Evaluation and operating discipline are getting sharper too. DeepSWE tried to separate agentic coding models on real software tasks, while developer chatter kept focusing on continuity, history search, and the hidden cost of cleaning up AI-written code.",
-    "The most interesting enterprise signal was budgetary: one CEO reportedly replaced a $600K Salesforce contract with a vibe-coded CRM and expects much of internal SaaS spend to get compressed next.",
-    "The clearest business-news story was SpaceX widening its footprint on two fronts at once: American Airlines plans to adopt Starlink in-flight internet, and the U.S. Space Force awarded a $2.29B military data-network contract.",
-    "Outside AI, the most genuinely useful post in the batch was simple consumer-defense advice: if a rental-car company claims hidden damage after return, ask for the inspection paperwork before arguing about the contract."
+    "<strong>Corporate AI reality check:</strong> In a funny but sobering anecdote, Uber's CTO reportedly burned through their entire annual LLM token budget in four months, leading to 'surge pricing' on their engineering budget.",
+    "<strong>MCP and Agent Harness boundaries:</strong> Industry veterans like @dotey argue that building proprietary general-purpose agent harnesses is a losing game; instead, the real value lies in building domain-specific, human-in-the-loop workflows and AI-native UI/UX on top of standards like MCP and Skills.",
+    "<strong>Rise of Codex over Claude Code:</strong> Developer discussions indicate a notable shift from Claude Code to Codex, highlighting queries about Codex API interoperability.",
+    "<strong>Chinese open-source LLM acceleration:</strong> Chinese labs are caught up and innovating rapidly, with Alibaba's Qwen3.6 releasing agentic coding models and DeepSeek V4 pioneering efficient inference on non-NVIDIA hardware.",
+    "<strong>Personal AI substrates:</strong> Personal AI assistants still lack a stable personal substrate (identity, durable session memory, permission boundaries); solutions like Urbit bet that agents must run on user-owned decentralized infrastructure.",
+    "<strong>Brazil investment thesis:</strong> Market analyst Drew Crawford presents a compelling case for Brazil's clean energy grid, niobium reserves (critical for EV batteries and jet engines), and agricultural dominance as massively under-allocated assets.",
+    "<strong>Heartwarming gas station walks:</strong> A viral, heartwarming story captured X's attention: a husband who secretly woke up at 5 AM every morning for 'walks' was found to be walking to a nearby gas station to quietly prep for his day."
   ],
   "sections": [
     {
@@ -15,28 +17,40 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "new",
-          "title": "@serenaa_ge: DeepSWE Agentic Coding Benchmark",
-          "body": "Serena Ge introduced DeepSWE, a benchmark aimed at agentic coding workflows rather than leaderboard trivia. The point is that models which look similar on public evals can separate much more clearly when measured against day-to-day software tasks.",
-          "url": "https://x.com/serenaa_ge/status/2059308218564890875"
-        },
-        {
-          "tag": "update",
-          "title": "@CodexReleases: Codex CLI 0.134.0",
-          "body": "Codex CLI 0.134.0 adds local conversation-history search, unifies profile selection across CLI/TUI/sandbox, and expands MCP support with per-server env targeting, OAuth, and concurrent read-only tools. It's a meaningful usability upgrade for long-running coding workflows.",
-          "url": "https://x.com/CodexReleases/status/2059354476822036718"
+          "tag": "hot",
+          "title": "@gregorykennedy: Surge Pricing on Engineering Budgets",
+          "body": "Gregory Kennedy shared a conversation with a CTO who burned through their annual token budget in just four months. The takeaway is clear: while promise was sold as 'fewer hires and cheaper development,' the reality was surge pricing on token budgets without a direct link to shipping more revenue-generating features.",
+          "url": "https://x.com/gregorykennedy/status/2059286351837888631"
         },
         {
           "tag": "new",
-          "title": "@GeminiApp: Spark as a 24/7 Agent",
-          "body": "Google pitched Gemini Spark as a background agent that keeps working after you leave and checks back before major actions. It reinforces the biggest product shift in the feed: competition is moving from one-shot chat answers toward trustworthy delegated execution.",
-          "url": "https://x.com/GeminiApp/status/2057100811826852071"
+          "title": "@dotey: The True Frontier of AI Agents",
+          "body": "Chinese tech veteran @dotey shared that building general agent harnesses is a commodity trap that will be dominated by large model providers. Instead, developers should focus on vertical application workflows: designing AI-native human-in-the-loop UX, cleaning up vertical domain data, and utilizing standards like Model Context Protocol (MCP) and Skills.",
+          "url": "https://x.com/dotey/status/2058929615058477106"
         },
         {
           "tag": "update",
-          "title": "@kylegawley: AI Code Backlash Warning",
-          "body": "Kyle Gawley joked that AI may write nearly all code in 2026 and a much smaller share in 2027 once teams feel the cleanup burden. The line is funny, but the warning is real: generation is cheap, maintenance debt isn't.",
-          "url": "https://x.com/kylegawley/status/2059224815282917745"
+          "title": "@gzlin: Non-NVIDIA Efficiency & Open Coding",
+          "body": "GZ Lin highlighted that Chinese open-source labs (Qwen, DeepSeek, Kimi, GLM) are not just catching up but paving alternative paths. Key highlights include Alibaba's Qwen3.6 open agentic coding models and DeepSeek V4 pioneering highly efficient inference on non-NVIDIA hardware.",
+          "url": "https://x.com/gzlin/status/2059374495517782207"
+        },
+        {
+          "tag": "new",
+          "title": "@urbit: AI Needs Stable Personal Infrastructure",
+          "body": "Urbit argues that personal AI’s next bottleneck is a stable personal substrate (identity, memory, permissions, boundaries) rather than raw model intelligence. An assistant can't feel personal while floating disembodied between MEGACORP vendor accounts; it needs durable personal infrastructure.",
+          "url": "https://x.com/urbit/status/2059305896984060131"
+        },
+        {
+          "tag": "update",
+          "title": "@Russell3402: Shift from Claude Code to Codex",
+          "body": "A developer discussion highlighted the growing shift from Claude Code to Codex. Commentators like Michael Anti (@mranti) raised questions about Codex's API interoperability and compared the migration experiences between these two prominent coding tools.",
+          "url": "https://x.com/Russell3402/status/2059161978598477951"
+        },
+        {
+          "tag": "new",
+          "title": "@robert_lauko: Tournaments of arXiv Preprints",
+          "body": "Robert Lauko highlighted kurate.org, a platform where hundreds of arXiv preprints are ranked daily by scientific impact through pairwise tournaments judged by Claude, GPT, and Gemini. It offers an automated, high-quality filter for academic literature.",
+          "url": "https://x.com/robert_lauko/status/2050876479731278113"
         }
       ]
     },
@@ -46,21 +60,15 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Starlink on American Airlines",
-          "body": "American Airlines says it will bring Starlink-powered connectivity to flights starting in 2027, a notable distribution win for SpaceX in consumer internet. If performance holds up, it also puts more pressure on legacy in-flight Wi‑Fi vendors.",
-          "url": "https://x.com/elonmusk/status/2059302994890440961"
+          "title": "@drewcrawford_: The Brazil Allocation Disconnect",
+          "body": "Drew Crawford outlined why U.S. capital is missing the boat on Brazil's structural assets: holding 12% of fresh water, an 87% clean energy grid, family factories, and CBMM producing 80%+ of the world's niobium (critical for jet engines and EV batteries).",
+          "url": "https://x.com/drewcrawford_/status/2056433193167774053"
         },
         {
-          "tag": "hot",
-          "title": "@zerohedge: $2.29B Space Force Contract",
-          "body": "A Space Force award worth $2.29B for a military space data network underlines how much of SpaceX's upside is now defense and communications infrastructure, not just launches. That's a real contract headline with business implications, not just product buzz.",
-          "url": "https://x.com/zerohedge/status/2059361223469039793"
-        },
-        {
-          "tag": "update",
-          "title": "@HarryStebbings: AI as SaaS Budget Pressure",
-          "body": "Harry Stebbings relayed a CEO claim that a vibe-coded CRM replaced a $600K Salesforce contract in three weeks and that most internal SaaS could disappear next. Even with anecdotal caveats, it's a sharp signal that AI budgets may cannibalize software vendors rather than simply layer on top.",
-          "url": "https://x.com/HarryStebbings/status/2059239785030443472"
+          "tag": "new",
+          "title": "@HaiderMakess: The Micro-SaaS Arbitrage",
+          "body": "Haider pointed out that single-operator micro-SaaS tools are regularly selling for $10k–$100k within months of creation. The main lesson is that finding the right niche (e.g., scanning Reddit for real pain points) is far more important than raw code complexity.",
+          "url": "https://x.com/HaiderMakess/status/2057534162777850129"
         }
       ]
     },
@@ -69,16 +77,16 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@heynavtoor: Rental Car Dispute Playbook",
-          "body": "Nav Toor's rental-car anecdote was refreshingly practical: when a company claims hidden damage after drop-off, ask for the inspection report and check-in sheet instead of debating the generic contract language. In his case, that was enough to make an $1,800 charge disappear.",
-          "url": "https://x.com/heynavtoor/status/2059305933332009193"
+          "tag": "hot",
+          "title": "@Queen_primis: The Heartwarming 5 AM Secret",
+          "body": "A viral story of a wife who followed her husband after he spent three months waking up at 5 AM every morning for 'walks.' She discovered he was walking to a nearby gas station every morning to quietly drink coffee and get in the right mental frame before his workday.",
+          "url": "https://x.com/Queen_primis/status/2059287246621032483"
         },
         {
           "tag": "update",
-          "title": "@urbit: Personal AI Needs Identity & Memory",
-          "body": "Urbit argued that the next personal-AI bottleneck is not raw model intelligence but durable identity, memory, permissions, and ownership. That's a useful frame: assistants don't feel truly personal until they can remember, act, and stay bounded on infrastructure the user controls.",
-          "url": "https://x.com/urbit/status/2059305896984060131"
+          "title": "@Amma__tuuh: 14 Missed Calls of a New Father",
+          "body": "A funny viral family anecdote from a healthcare worker whose husband called her 14 times at work because the baby wouldn't stop crying, only to exasperatedly say: 'I've fed her twice, changed her, rocked her... I think she just likes you more.'",
+          "url": "https://x.com/Amma__tuuh/status/2059263749739950238"
         }
       ]
     }
