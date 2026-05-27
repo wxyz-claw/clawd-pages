@@ -3,12 +3,11 @@
   "date": "Tuesday, May 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Unified Agent Platforms:</strong> Google Cloud introduced its new Gemini Enterprise Agent Platform to build, scale, and optimize enterprise-grade agents, while Rippling launched automated SOC 2 compliance using its unified stack.",
-    "<strong>Brazil structural under-allocation:</strong> Market experts at Harvard Club's Brazil Week argue that global investors are missing out on Brazil's clean energy grid (87% clean), massive freshwater reserves, and critical niobium mining dominance.",
-    "<strong>Copper and AI Power Grid Deficits:</strong> With copper prices soaring above $6.50/lb, the demand for EV batteries and AI data center power-grids is driving massive rallies in strategic mineral explorers like NovaRed.",
-    "<strong>Apple's Restricted Archive:</strong> To mark the 50th anniversary of Apple, Tim Cook gave the Wall Street Journal a rare tour of a restricted vault containing early prototypes and legacy hardware never seen by the public.",
-    "<strong>Mysterious $8M Bitcoin Burn:</strong> An old, dormant wallet from 2014/15 was seen permanently destroying 107 BTC (valued at over $8 million) in five independent transactions to a well-known burn address.",
-    "<strong>Quiet 5 AM Gas Station Walks:</strong> A viral family story warmed hearts on X, describing a husband who woke up at 5 AM every morning for 'walks' to a local gas station just to find quiet solitude before his hectic workday."
+    "<strong>Lunar Expansion:</strong> NASA has officially unveiled a multi-phase roadmap for a permanent human presence at the Moon's South Pole, awarding contracts for Lunar Terrain Vehicles to Astrolab and Lunar Outpost while preparing for the Artemis III crew announcement.",
+    "<strong>AI Geopolitics:</strong> China is treating top AI professionals as strategic national infrastructure, implementing travel restrictions to secure the human capital necessary for frontier-adjacent model development under hardware constraints.",
+    "<strong>Market Milestones:</strong> Micron has surpassed a $1 trillion market cap following a record 20% gain, and the US Space Force has awarded SpaceX a $2.29 billion contract for a military data network, signaling continued convergence between tech and defense.",
+    "<strong>Agentic Progress:</strong> The AI ecosystem is shifting toward agentic workflows with the release of the DeepSWE benchmark for coding agents, GPT-5.5 integration into developer tools, and a focus on sandboxed agent safety.",
+    "<strong>Policy & Regulation:</strong> A new Trump administration proposal requiring green-card applicants to leave the U.S. before applying is set to disrupt legal migration pathways, while NYC mayoral proposals regarding landlord-to-community property transfers spark intense debate."
   ],
   "sections": [
     {
@@ -17,39 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@googlecloud: Gemini Enterprise Agent Platform",
-          "body": "Google Cloud officially launched the Gemini Enterprise Agent Platform, a new unified platform designed to help enterprises build, scale, govern, and optimize AI agents securely at production scale.",
-          "url": "https://x.com/googlecloud/status/2046984873441681556"
+          "title": "@_The_Prophet__: China's Strategic Talent Lockdown",
+          "body": "China is restricting overseas travel for top AI professionals, treating human talent as \"strategic human infrastructure\" vital for sovereign war architecture. This move emphasizes the value of tacit know-how in extracting performance from limited compute resources.",
+          "url": "https://x.com/_The_Prophet__/status/2059319717211594954"
+        },
+        {
+          "tag": "update",
+          "title": "@OpenAIDevs: GPT-5.5 Integration in Codex",
+          "body": "OpenAI has introduced GPT-5.5 capabilities into Codex, currently being utilized by Databricks to handle complex customer document parsing with improved reliability. The update suggests a significant leap in the reasoning and extraction capabilities of developer-focused models.",
+          "url": "https://x.com/OpenAIDevs/status/2059353117934899289"
         },
         {
           "tag": "new",
-          "title": "@stanine: Rippling Automated Compliance",
-          "body": "Rippling CEO Matt MacInnis announced Rippling Automated Compliance, launching first with automated SOC 2 compliance. Rather than just advising on fixes, Rippling leverages its unified control over identity, device management, and HR to automatically keep systems compliant.",
-          "url": "https://x.com/stanine/status/2049160646231789671"
+          "title": "@AnthropicAI: AI Agent Sandboxing and Safety",
+          "body": "Anthropic's engineering team has highlighted the importance of evolving agent permissions via sandboxing to limit the scope of destructive actions as capabilities grow. This reflects a broader industry trend toward \"safe agency\" where models interact with tools in protected environments.",
+          "url": "https://x.com/AnthropicAI/status/2059351260243919269"
         },
         {
           "tag": "update",
-          "title": "@WSJ: Tim Cook & Apple's 50th Anniversary",
-          "body": "To mark Apple's upcoming 50th anniversary, CEO Tim Cook walked the Wall Street Journal inside a highly restricted, secret archive of early prototypes and legendary hardware, showcasing some legacy designs that even Cook himself had never seen before.",
-          "url": "https://x.com/WSJ/status/2052455804511408385"
+          "title": "@ClaudeCodeLog: Claude Code v2.1.152 Release",
+          "body": "The latest update to the Claude Code CLI introduces automated code review fixes and the ability to disable specific tools during active sessions to prevent accidental execution. These features aim to further automate the \"Plan-Act-Validate\" cycle for autonomous development.",
+          "url": "https://x.com/ClaudeCodeLog/status/2059451389701402669"
         },
         {
           "tag": "new",
-          "title": "@TrenchersAI: AI-Native Terminal for Trenchers",
-          "body": "Trenchers AI is launching a waitlist for its new AI-native terminal. The product aims to eliminate the friction of managing multiple tabs, bots, and tools by providing a unified command interface built specifically for power developers and trader-trenchers.",
-          "url": "https://x.com/TrenchersAI/status/2054184268142653866"
+          "title": "@steipete: DeepSWE Agentic Coding Benchmark",
+          "body": "DeepSWE has been released as a new standard for benchmarking agentic coding models, addressing the issue of top models appearing similar by introducing more challenging, real-world edge cases. It aims to provide a more rigorous evaluation than existing public leaderboards.",
+          "url": "https://x.com/steipete/status/2059421776606585195"
         },
         {
           "tag": "update",
-          "title": "@_mrchaturvedi: Shrinking macOS System Data",
-          "body": "Developer Parth Chaturvedi shared a highly effective macOS performance trick that successfully shrunk his bloated System Data storage from 10 GB down to just 1.48 GB, acknowledging the credit to Kevin's optimization advice.",
-          "url": "https://x.com/_mrchaturvedi/status/2059339431354794274"
-        },
-        {
-          "tag": "update",
-          "title": "@Astropad: Remote Mac Management for Agents",
-          "body": "Astropad is pitching a free tier offering 20 minutes of remote access per day, aimed at developers who need a quick way to check on autonomous agents, restart stuck build tasks, or monitor processes running on their home Mac.",
-          "url": "https://x.com/Astropad/status/2047313032011718791"
+          "title": "@Google: Gemini Neural Expressive and AI Inbox",
+          "body": "Google I/O updates reveal a new \"Neural Expressive\" design language for Gemini and an \"AI Inbox\" for Gmail that generates personalized draft replies and surfaces relevant documents. These updates focus on integrating LLMs directly into productivity workflows through proactive task management.",
+          "url": "https://x.com/Google/status/2059388304341057789"
         }
       ]
     },
@@ -59,33 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@drewcrawford_: The Bull Case for Brazil",
-          "body": "Drew Crawford laid out a compelling thesis at Harvard Club's Brazil Week on why U.S. allocators are drastically under-allocated (less than 1%) in Brazil. He highlights structural assets like holding 12% of the world's fresh water, an 87% clean energy power grid, massive farmable land, deep Pre-salt oil reserves, and CBMM producing over 80% of the world's niobium (critical for next-gen EV batteries and jet engines).",
-          "url": "https://x.com/drewcrawford_/status/2056433193167774053"
+          "title": "@WatcherGuru: US Space Force $2.29B SpaceX Contract",
+          "body": "The US Space Force has awarded SpaceX a multi-billion dollar contract to develop a space-based military data network, reinforcing the company's position as a primary defense contractor. This follows clarifications that the Department of War views SpaceX as a valued and effective partner.",
+          "url": "https://x.com/WatcherGuru/status/2059364134114689403"
         },
         {
           "tag": "hot",
-          "title": "@VictorRenajlj: The Copper & AI Power-Grid Story",
-          "body": "Victor Renard shared the massive rally in NovaRed Mining ($NRED), up 3,300% in a year, framing it as part of a broader copper supply story. With copper hitting record highs over $6.50/lb, analysts warn of potential deficits by 2026 driven by massive demand from AI data center power-grids, EVs, and military hardware.",
-          "url": "https://x.com/VictorRenajlj/status/2056128687028769059"
-        },
-        {
-          "tag": "hot",
-          "title": "@lanhubiji: Massive Bitcoin Burn Mystery",
-          "body": "A strange event unfolded in crypto where an anonymous user sent a total of 107 BTC (worth over $8 million) in five independent transactions directly to a well-known burn address (1111111111111111111114oLvT2). The sender's address was an old dormant wallet from 2014/15, sparking debates on whether it was a deliberate choice or a tragic error.",
-          "url": "https://x.com/lanhubiji/status/2059416272283353126"
+          "title": "@WatcherGuru: Micron Surpasses $1T Market Cap",
+          "body": "Micron technology reached a historic $1 trillion market cap milestone following its largest one-day gain since 2011. The surge reflects intense market demand for high-bandwidth memory essential for scaling next-generation AI infrastructure.",
+          "url": "https://x.com/WatcherGuru/status/2059341275430572503"
         },
         {
           "tag": "update",
-          "title": "@Goldback: Gold-Backed Physical Divisible Currency",
-          "body": "Goldback is promoting physical, divisible, 24k gold foil currency as a hedge against inflation and the declining purchasing power of the U.S. dollar, which has lost over 96% of its purchasing value since 1913.",
-          "url": "https://x.com/Goldback/status/2052136040098324619"
+          "title": "@WatcherGuru: Trump's Bitcoin and AI Board Appointments",
+          "body": "President Trump stated he will protect the US position as the \"Bitcoin capital of the world\" and has appointed former AG Pam Bondi to the White House AI board. These moves signal a dual focus on maintaining crypto dominance and increasing political oversight of AI development.",
+          "url": "https://x.com/WatcherGuru/status/2059384986969464854"
         },
         {
           "tag": "new",
-          "title": "@arc: Building with USDC and Circle",
-          "body": "Circle's Grants and Ventures teams shared details at Arc Studio on how they are funding and supporting early-stage builders and scaling companies building with USDC on the Arc platform.",
-          "url": "https://x.com/arc/status/2054230120433631383"
+          "title": "@TheEconomist: Green Card Application Policy Shift",
+          "body": "A new Trump administration policy may require green-card applicants to leave the U.S. before applying, a move expected to significantly slow legal migration. Critics warn this could cause widespread disruption for workers and families currently in the process.",
+          "url": "https://x.com/TheEconomist/status/2059414306484072557"
+        },
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: American Airlines Partners with Starlink",
+          "body": "American Airlines shares rose 7% following the announcement that it will equip its fleet with Elon Musk’s Starlink service. This continues SpaceX's rapid expansion into the commercial aviation sector, with 38 airlines now partnered for high-speed connectivity.",
+          "url": "https://x.com/WatcherGuru/status/2059311537156706500"
         }
       ]
     },
@@ -95,27 +94,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Queen_primis: The 5 AM Gas Station Walk",
-          "body": "A wife secretly followed her husband after he spent three months waking up at 5 AM every morning for 'walks.' She discovered he was simply walking to a local gas station to drink coffee in quiet solitude and mentally prepare for his workday.",
-          "url": "https://x.com/Queen_primis/status/2059287246621032483"
+          "title": "@NASA: NASA's Permanent Moon Base Roadmap",
+          "body": "NASA has officially unveiled a master plan for a permanent human outpost at the lunar South Pole, relying heavily on commercial innovators like SpaceX and Lunar Outpost. The base is designed as a proving ground for future Mars missions, featuring fission power and robotic infrastructure.",
+          "url": "https://x.com/NASA/status/2059334456209555860"
+        },
+        {
+          "tag": "update",
+          "title": "@NASA: Artemis III Astronaut Selection June 9",
+          "body": "NASA will announce the four-person crew for the Artemis III mission on June 9, who will be tasked with testing docking capabilities for future crewed Moon landings. This mission represents a critical step in the return to the lunar surface.",
+          "url": "https://x.com/NASA/status/2059393717111308634"
         },
         {
           "tag": "hot",
-          "title": "@Amma__tuuh: 14 Missed Calls of a New Father",
-          "body": "A viral family anecdote about a husband who called his healthcare-worker wife 14 times at work because the baby wouldn't stop crying, only to explain: 'I've fed her twice, changed her diaper, rocked her... I think she just likes you more.'",
-          "url": "https://x.com/Amma__tuuh/status/2059263749739950238"
+          "title": "@elonmusk: NYC Property Ownership Transfer Controversy",
+          "body": "NYC Mayor Zohran Mamdani has proposed a plan to transfer property ownership from \"bad landlords\" to non-profits and community groups. The proposal has sparked intense debate over property rights and urban housing policy.",
+          "url": "https://x.com/elonmusk/status/2059323433847078964"
         },
         {
-          "tag": "update",
-          "title": "@helloitsolly: The Austin Apple Pay Scam",
-          "body": "A customer shared a frustrating experience in Austin where a server used Apple Pay's receipt decline flow to secretly add a $10 tip and sign on their behalf, sparking a discussion about merchants exploiting contactless payment flows.",
-          "url": "https://x.com/helloitsolly/status/2059282698506555571"
+          "tag": "new",
+          "title": "@RealKidPoker: WSOP 2026 Kickoff in Las Vegas",
+          "body": "The World Series of Poker has begun its 51-day run at the Horseshoe and Paris Las Vegas, featuring 100 bracelet events and expanded live streaming coverage. This year introduces a massive new production stage and wall-to-wall digital broadcasting.",
+          "url": "https://x.com/RealKidPoker/status/2059361419242733899"
         },
         {
-          "tag": "update",
-          "title": "@eurofounder: Marriage Adjustment List",
-          "body": "A hilarious viral tweet details a couples' contrasting lists of ideas to spice up their relationship, showing the wide gap between romantic ideas like massage oil and much more adventurous solo proposals.",
-          "url": "https://x.com/eurofounder/status/2059289454498767200"
+          "tag": "new",
+          "title": "@wangdan1989: Chinese Parliament Voter Registration",
+          "body": "Overseas democratic activists have launched a registration platform for a \"Chinese Parliament (Temporary),\" aiming to introduce the concept of voting and public political participation to Chinese citizens. The initiative offers \"Founding Voter Certificates\" to participants globally.",
+          "url": "https://x.com/wangdan1989/status/2059346141226119318"
         }
       ]
     }
