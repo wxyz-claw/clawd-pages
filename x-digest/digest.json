@@ -3,13 +3,12 @@
   "date": "Tuesday, May 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Corporate AI reality check:</strong> In a funny but sobering anecdote, Uber's CTO reportedly burned through their entire annual LLM token budget in four months, leading to 'surge pricing' on their engineering budget.",
-    "<strong>MCP and Agent Harness boundaries:</strong> Industry veterans like @dotey argue that building proprietary general-purpose agent harnesses is a losing game; instead, the real value lies in building domain-specific, human-in-the-loop workflows and AI-native UI/UX on top of standards like MCP and Skills.",
-    "<strong>Rise of Codex over Claude Code:</strong> Developer discussions indicate a notable shift from Claude Code to Codex, highlighting queries about Codex API interoperability.",
-    "<strong>Chinese open-source LLM acceleration:</strong> Chinese labs are caught up and innovating rapidly, with Alibaba's Qwen3.6 releasing agentic coding models and DeepSeek V4 pioneering efficient inference on non-NVIDIA hardware.",
-    "<strong>Personal AI substrates:</strong> Personal AI assistants still lack a stable personal substrate (identity, durable session memory, permission boundaries); solutions like Urbit bet that agents must run on user-owned decentralized infrastructure.",
-    "<strong>Brazil investment thesis:</strong> Market analyst Drew Crawford presents a compelling case for Brazil's clean energy grid, niobium reserves (critical for EV batteries and jet engines), and agricultural dominance as massively under-allocated assets.",
-    "<strong>Heartwarming gas station walks:</strong> A viral, heartwarming story captured X's attention: a husband who secretly woke up at 5 AM every morning for 'walks' was found to be walking to a nearby gas station to quietly prep for his day."
+    "<strong>Unified Agent Platforms:</strong> Google Cloud introduced its new Gemini Enterprise Agent Platform to build, scale, and optimize enterprise-grade agents, while Rippling launched automated SOC 2 compliance using its unified stack.",
+    "<strong>Brazil structural under-allocation:</strong> Market experts at Harvard Club's Brazil Week argue that global investors are missing out on Brazil's clean energy grid (87% clean), massive freshwater reserves, and critical niobium mining dominance.",
+    "<strong>Copper and AI Power Grid Deficits:</strong> With copper prices soaring above $6.50/lb, the demand for EV batteries and AI data center power-grids is driving massive rallies in strategic mineral explorers like NovaRed.",
+    "<strong>Apple's Restricted Archive:</strong> To mark the 50th anniversary of Apple, Tim Cook gave the Wall Street Journal a rare tour of a restricted vault containing early prototypes and legacy hardware never seen by the public.",
+    "<strong>Mysterious $8M Bitcoin Burn:</strong> An old, dormant wallet from 2014/15 was seen permanently destroying 107 BTC (valued at over $8 million) in five independent transactions to a well-known burn address.",
+    "<strong>Quiet 5 AM Gas Station Walks:</strong> A viral family story warmed hearts on X, describing a husband who woke up at 5 AM every morning for 'walks' to a local gas station just to find quiet solitude before his hectic workday."
   ],
   "sections": [
     {
@@ -18,39 +17,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@gregorykennedy: Surge Pricing on Engineering Budgets",
-          "body": "Gregory Kennedy shared a conversation with a CTO who burned through their annual token budget in just four months. The takeaway is clear: while promise was sold as 'fewer hires and cheaper development,' the reality was surge pricing on token budgets without a direct link to shipping more revenue-generating features.",
-          "url": "https://x.com/gregorykennedy/status/2059286351837888631"
+          "title": "@googlecloud: Gemini Enterprise Agent Platform",
+          "body": "Google Cloud officially launched the Gemini Enterprise Agent Platform, a new unified platform designed to help enterprises build, scale, govern, and optimize AI agents securely at production scale.",
+          "url": "https://x.com/googlecloud/status/2046984873441681556"
         },
         {
           "tag": "new",
-          "title": "@dotey: The True Frontier of AI Agents",
-          "body": "Chinese tech veteran @dotey shared that building general agent harnesses is a commodity trap that will be dominated by large model providers. Instead, developers should focus on vertical application workflows: designing AI-native human-in-the-loop UX, cleaning up vertical domain data, and utilizing standards like Model Context Protocol (MCP) and Skills.",
-          "url": "https://x.com/dotey/status/2058929615058477106"
+          "title": "@stanine: Rippling Automated Compliance",
+          "body": "Rippling CEO Matt MacInnis announced Rippling Automated Compliance, launching first with automated SOC 2 compliance. Rather than just advising on fixes, Rippling leverages its unified control over identity, device management, and HR to automatically keep systems compliant.",
+          "url": "https://x.com/stanine/status/2049160646231789671"
         },
         {
           "tag": "update",
-          "title": "@gzlin: Non-NVIDIA Efficiency & Open Coding",
-          "body": "GZ Lin highlighted that Chinese open-source labs (Qwen, DeepSeek, Kimi, GLM) are not just catching up but paving alternative paths. Key highlights include Alibaba's Qwen3.6 open agentic coding models and DeepSeek V4 pioneering highly efficient inference on non-NVIDIA hardware.",
-          "url": "https://x.com/gzlin/status/2059374495517782207"
+          "title": "@WSJ: Tim Cook & Apple's 50th Anniversary",
+          "body": "To mark Apple's upcoming 50th anniversary, CEO Tim Cook walked the Wall Street Journal inside a highly restricted, secret archive of early prototypes and legendary hardware, showcasing some legacy designs that even Cook himself had never seen before.",
+          "url": "https://x.com/WSJ/status/2052455804511408385"
         },
         {
           "tag": "new",
-          "title": "@urbit: AI Needs Stable Personal Infrastructure",
-          "body": "Urbit argues that personal AI’s next bottleneck is a stable personal substrate (identity, memory, permissions, boundaries) rather than raw model intelligence. An assistant can't feel personal while floating disembodied between MEGACORP vendor accounts; it needs durable personal infrastructure.",
-          "url": "https://x.com/urbit/status/2059305896984060131"
+          "title": "@TrenchersAI: AI-Native Terminal for Trenchers",
+          "body": "Trenchers AI is launching a waitlist for its new AI-native terminal. The product aims to eliminate the friction of managing multiple tabs, bots, and tools by providing a unified command interface built specifically for power developers and trader-trenchers.",
+          "url": "https://x.com/TrenchersAI/status/2054184268142653866"
         },
         {
           "tag": "update",
-          "title": "@Russell3402: Shift from Claude Code to Codex",
-          "body": "A developer discussion highlighted the growing shift from Claude Code to Codex. Commentators like Michael Anti (@mranti) raised questions about Codex's API interoperability and compared the migration experiences between these two prominent coding tools.",
-          "url": "https://x.com/Russell3402/status/2059161978598477951"
+          "title": "@_mrchaturvedi: Shrinking macOS System Data",
+          "body": "Developer Parth Chaturvedi shared a highly effective macOS performance trick that successfully shrunk his bloated System Data storage from 10 GB down to just 1.48 GB, acknowledging the credit to Kevin's optimization advice.",
+          "url": "https://x.com/_mrchaturvedi/status/2059339431354794274"
         },
         {
-          "tag": "new",
-          "title": "@robert_lauko: Tournaments of arXiv Preprints",
-          "body": "Robert Lauko highlighted kurate.org, a platform where hundreds of arXiv preprints are ranked daily by scientific impact through pairwise tournaments judged by Claude, GPT, and Gemini. It offers an automated, high-quality filter for academic literature.",
-          "url": "https://x.com/robert_lauko/status/2050876479731278113"
+          "tag": "update",
+          "title": "@Astropad: Remote Mac Management for Agents",
+          "body": "Astropad is pitching a free tier offering 20 minutes of remote access per day, aimed at developers who need a quick way to check on autonomous agents, restart stuck build tasks, or monitor processes running on their home Mac.",
+          "url": "https://x.com/Astropad/status/2047313032011718791"
         }
       ]
     },
@@ -60,15 +59,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@drewcrawford_: The Brazil Allocation Disconnect",
-          "body": "Drew Crawford outlined why U.S. capital is missing the boat on Brazil's structural assets: holding 12% of fresh water, an 87% clean energy grid, family factories, and CBMM producing 80%+ of the world's niobium (critical for jet engines and EV batteries).",
+          "title": "@drewcrawford_: The Bull Case for Brazil",
+          "body": "Drew Crawford laid out a compelling thesis at Harvard Club's Brazil Week on why U.S. allocators are drastically under-allocated (less than 1%) in Brazil. He highlights structural assets like holding 12% of the world's fresh water, an 87% clean energy power grid, massive farmable land, deep Pre-salt oil reserves, and CBMM producing over 80% of the world's niobium (critical for next-gen EV batteries and jet engines).",
           "url": "https://x.com/drewcrawford_/status/2056433193167774053"
         },
         {
+          "tag": "hot",
+          "title": "@VictorRenajlj: The Copper & AI Power-Grid Story",
+          "body": "Victor Renard shared the massive rally in NovaRed Mining ($NRED), up 3,300% in a year, framing it as part of a broader copper supply story. With copper hitting record highs over $6.50/lb, analysts warn of potential deficits by 2026 driven by massive demand from AI data center power-grids, EVs, and military hardware.",
+          "url": "https://x.com/VictorRenajlj/status/2056128687028769059"
+        },
+        {
+          "tag": "hot",
+          "title": "@lanhubiji: Massive Bitcoin Burn Mystery",
+          "body": "A strange event unfolded in crypto where an anonymous user sent a total of 107 BTC (worth over $8 million) in five independent transactions directly to a well-known burn address (1111111111111111111114oLvT2). The sender's address was an old dormant wallet from 2014/15, sparking debates on whether it was a deliberate choice or a tragic error.",
+          "url": "https://x.com/lanhubiji/status/2059416272283353126"
+        },
+        {
+          "tag": "update",
+          "title": "@Goldback: Gold-Backed Physical Divisible Currency",
+          "body": "Goldback is promoting physical, divisible, 24k gold foil currency as a hedge against inflation and the declining purchasing power of the U.S. dollar, which has lost over 96% of its purchasing value since 1913.",
+          "url": "https://x.com/Goldback/status/2052136040098324619"
+        },
+        {
           "tag": "new",
-          "title": "@HaiderMakess: The Micro-SaaS Arbitrage",
-          "body": "Haider pointed out that single-operator micro-SaaS tools are regularly selling for $10k–$100k within months of creation. The main lesson is that finding the right niche (e.g., scanning Reddit for real pain points) is far more important than raw code complexity.",
-          "url": "https://x.com/HaiderMakess/status/2057534162777850129"
+          "title": "@arc: Building with USDC and Circle",
+          "body": "Circle's Grants and Ventures teams shared details at Arc Studio on how they are funding and supporting early-stage builders and scaling companies building with USDC on the Arc platform.",
+          "url": "https://x.com/arc/status/2054230120433631383"
         }
       ]
     },
@@ -78,15 +95,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Queen_primis: The Heartwarming 5 AM Secret",
-          "body": "A viral story of a wife who followed her husband after he spent three months waking up at 5 AM every morning for 'walks.' She discovered he was walking to a nearby gas station every morning to quietly drink coffee and get in the right mental frame before his workday.",
+          "title": "@Queen_primis: The 5 AM Gas Station Walk",
+          "body": "A wife secretly followed her husband after he spent three months waking up at 5 AM every morning for 'walks.' She discovered he was simply walking to a local gas station to drink coffee in quiet solitude and mentally prepare for his workday.",
           "url": "https://x.com/Queen_primis/status/2059287246621032483"
         },
         {
-          "tag": "update",
+          "tag": "hot",
           "title": "@Amma__tuuh: 14 Missed Calls of a New Father",
-          "body": "A funny viral family anecdote from a healthcare worker whose husband called her 14 times at work because the baby wouldn't stop crying, only to exasperatedly say: 'I've fed her twice, changed her, rocked her... I think she just likes you more.'",
+          "body": "A viral family anecdote about a husband who called his healthcare-worker wife 14 times at work because the baby wouldn't stop crying, only to explain: 'I've fed her twice, changed her diaper, rocked her... I think she just likes you more.'",
           "url": "https://x.com/Amma__tuuh/status/2059263749739950238"
+        },
+        {
+          "tag": "update",
+          "title": "@helloitsolly: The Austin Apple Pay Scam",
+          "body": "A customer shared a frustrating experience in Austin where a server used Apple Pay's receipt decline flow to secretly add a $10 tip and sign on their behalf, sparking a discussion about merchants exploiting contactless payment flows.",
+          "url": "https://x.com/helloitsolly/status/2059282698506555571"
+        },
+        {
+          "tag": "update",
+          "title": "@eurofounder: Marriage Adjustment List",
+          "body": "A hilarious viral tweet details a couples' contrasting lists of ideas to spice up their relationship, showing the wide gap between romantic ideas like massage oil and much more adventurous solo proposals.",
+          "url": "https://x.com/eurofounder/status/2059289454498767200"
         }
       ]
     }
