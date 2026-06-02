@@ -3,11 +3,11 @@
   "date": "Tuesday, June 2nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI Innovation:</strong> Google Cloud introduces Gemini Enterprise Agent Platform while Anthropic reportedly considers a $1T valuation IPO and releases Claude Mythos in the EU.",
-    "<strong>Sports Business:</strong> Bayern Munich actively pursues Ismael Saibari as a priority winger addition following the collapse of the Gordon deal, while Harry Kane eyes the Ballon d'Or ahead of the World Cup.",
-    "<strong>Market Dynamics:</strong> Prediction markets like Kalshi reach significant valuations and are being utilized by small businesses for real-world financial hedging against promotional events.",
-    "<strong>Tech Heritage:</strong> Apple marks its 50th anniversary with a rare look inside its secret prototype archives, showcasing five decades of hardware evolution.",
-    "<strong>Autonomous Agents:</strong> The rise of AI agents capable of autonomous decision-making and model building prompts new discussions on enterprise governance and security frameworks."
+    "<strong>Ecosystem Expansion:</strong> OpenAI is blurring the lines of development by releasing 'Sites' directly into Codex for end-to-end deployment, while extending access to their frontier models via AWS Bedrock.",
+    "<strong>Tooling Upgrades:</strong> Anthropic continues to refine its ecosystem by launching a dedicated CLI for the Claude Platform and expanding Project Glasswing's footprint globally.",
+    "<strong>Open Source Momentum:</strong> The open-source AI community pushes forward with the release of Holo 3.1, a fast and efficient local computer-use model optimized specifically for GUI understanding and navigation.",
+    "<strong>Market Realities:</strong> Serious capital and concerns intersect as Warren Buffett reportedly invests $10 billion into AI infrastructure, simultaneously as reports emerge detailing Silicon Valley's internal anxieties about AI displacing knowledge workers.",
+    "<strong>Real-World AI Utility:</strong> Developers are sharing advanced productivity frameworks, from utilizing AI to stitch together deleted SQLite overflow pages to recover lost work, to structuring robust autonomous execution loops with AI goal commands."
   ],
   "sections": [
     {
@@ -15,34 +15,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "new",
-          "title": "@googlecloud: Gemini Enterprise Agent Platform",
-          "body": "Google Cloud has launched a new platform designed to build, scale, and optimize AI agents with built-in governance features for enterprise environments.",
-          "url": "https://x.com/googlecloud/status/2046984873441681556"
+          "tag": "update",
+          "title": "@AnthropicAI: Anthropic Expands Project Glasswing",
+          "body": "Anthropic is extending access to the Claude Mythos Preview to over 150 additional organizations across more than 15 countries. This signals a broadening of their specialized or experimental model deployments to a wider array of enterprise partners.",
+          "url": "https://x.com/AnthropicAI/status/2061796327986454883"
         },
         {
           "tag": "hot",
-          "title": "@mSanterre: Anthropic $1T IPO Rumors",
-          "body": "Discussion emerges regarding the strategic rationale for Anthropic potentially seeking a $1 trillion valuation followed by an immediate initial public offering.",
-          "url": "https://x.com/mSanterre/status/2061520498576765031"
-        },
-        {
-          "tag": "update",
-          "title": "@scaling01: Claude Mythos EU Release",
-          "body": "Anthropic has expanded access to its Claude Mythos models to the European Union, highlighting the tiered release strategy used by frontier AI labs.",
-          "url": "https://x.com/scaling01/status/2061446928898867715"
+          "title": "@theo: OpenAI Models Arrive on AWS Bedrock",
+          "body": "OpenAI's frontier models and Codex are now generally available on AWS Bedrock, offering enterprise customers a secure and compliant path to integrate OpenAI technologies. The rollout will also pave the way for future cybersecurity capabilities like Daybreak.",
+          "url": "https://x.com/theo/status/2061572633599394200"
         },
         {
           "tag": "new",
-          "title": "@cmuptx: AIBuildAI Autonomous Modeler",
-          "body": "A new AI agent named AIBuildAI has achieved the top rank on OpenAI's MLE-Bench by automating the entire lifecycle of designing, training, and tuning AI models.",
-          "url": "https://x.com/cmuptx/status/2033902461757313265"
+          "title": "@ClaudeDevs: Official CLI for Claude Platform",
+          "body": "Anthropic has released a dedicated command-line interface for the Claude Platform, allowing developers to call the Messages API, run Claude Managed Agents, and pipe results directly in the terminal. The tool is highly optimized to be utilized by AI coding agents.",
+          "url": "https://x.com/ClaudeDevs/status/2061877343078244459"
         },
         {
-          "tag": "update",
-          "title": "@Airia_AI: Securing Autonomous Agents",
-          "body": "As AI agents gain autonomous API and data access, traditional governance frameworks are being refactored to provide runtime security and oversight.",
-          "url": "https://x.com/Airia_AI/status/2055388024888840276"
+          "tag": "hot",
+          "title": "@TheRohanVarma: OpenAI Launches 'Sites' in Codex",
+          "body": "OpenAI has introduced 'Sites' into Codex, allowing users to build, deploy, and host full-stack applications directly from the chat interface. The feature natively supports authentication and dynamic databases, empowering non-technical users to deploy software end-to-end.",
+          "url": "https://x.com/TheRohanVarma/status/2061872164442403139"
+        },
+        {
+          "tag": "new",
+          "title": "@TeksEdge: Holo 3.1 Local Computer-Use LLM",
+          "body": "French AI startup H Company has launched Holo 3.1, an open-source model specialized in GUI understanding and computer control that runs entirely locally. Built on the Qwen architecture, it reportedly outperforms similar models in local desktop automation tasks.",
+          "url": "https://x.com/TeksEdge/status/2061825310669332818"
         }
       ]
     },
@@ -52,33 +52,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@eostudi0: The Rise of Kalshi",
-          "body": "Prediction market Kalshi has reached a $22B valuation after successfully challenging regulatory hurdles, signaling a shift in how public sentiment and probability are traded.",
-          "url": "https://x.com/eostudi0/status/2055358895812653555"
+          "title": "@Alpha_Cat: Warren Buffett Backs AI Infrastructure",
+          "body": "Warren Buffett has reportedly committed a massive $10 billion investment towards AI infrastructure development. This substantial capital allocation from a traditionally conservative investor suggests long-term market confidence in AI's foundational physical layer.",
+          "url": "https://x.com/Alpha_Cat/status/2061672010581999732"
+        },
+        {
+          "tag": "hot",
+          "title": "@pete80155006: Silicon Valley's Private AI Anxieties",
+          "body": "A New York Times report allegedly exposes deep-seated anxieties among Silicon Valley elites regarding AI's impact on employment and societal stability. The internal consensus reportedly points to a rapid hollowing-out of knowledge-worker roles and severe class stratification.",
+          "url": "https://x.com/pete80155006/status/2061646333476483137"
         },
         {
           "tag": "update",
-          "title": "@elonmusk: Tesla's Growth Trajectory",
-          "body": "Elon Musk reflects on Tesla's IPO, noting that its initial market capitalization was only 0.1% of its current valuation, emphasizing the scale of the company's long-term expansion.",
-          "url": "https://x.com/elonmusk/status/2061699109527195862"
-        },
-        {
-          "tag": "new",
-          "title": "@vonzz6: Real-World Hedging with Prediction Markets",
-          "body": "Small businesses are beginning to use platforms like Kalshi to hedge against promotional losses, such as a New York bar offsetting free drink offers tied to sports victories.",
-          "url": "https://x.com/vonzz6/status/2061614343440237009"
+          "title": "@FabrizioRomano: Denzel Dumfries to Real Madrid",
+          "body": "Real Madrid has successfully agreed to terms with Inter Milan's Dutch right-back Denzel Dumfries. The Spanish club will trigger his €20m release clause, marking a significant strategic reinforcement of their defensive lineup.",
+          "url": "https://x.com/FabrizioRomano/status/2061911578014806466"
         },
         {
           "tag": "update",
-          "title": "@GoingParabolic: Bitcoin Tax Strategies",
-          "body": "A reminder on the tax utility of realizing capital losses in Bitcoin by selling and immediately rebuying to reset cost basis while maintaining the same asset position.",
-          "url": "https://x.com/GoingParabolic/status/2061529607946305764"
-        },
-        {
-          "tag": "new",
-          "title": "@prukalpa: The Enterprise Context Layer",
-          "body": "Deep dive into the architectural necessity of an Enterprise Context Layer to ensure AI systems have the relevant data to be effective in corporate environments.",
-          "url": "https://x.com/prukalpa/status/2061512556590809342"
+          "title": "@EwanMacKenna: FIFA Cancels US Hotel Block Bookings",
+          "body": "FIFA has abruptly cancelled its widespread block bookings of hotel rooms across the US, a move initially made to artificially inflate demand ahead of the 2026 World Cup. The reversal highlights ongoing logistical and pricing controversies surrounding the upcoming tournament.",
+          "url": "https://x.com/EwanMacKenna/status/2061765848054792343"
         }
       ]
     },
@@ -88,33 +82,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FabrizioRomano: Bayern Munich's Saibari Pursuit",
-          "body": "Bayern Munich has pivoted to PSV's Ismael Saibari as a primary winger target after the Anthony Gordon deal collapsed, with official talks already underway.",
-          "url": "https://x.com/FabrizioRomano/status/2061689518579958137"
+          "title": "@giansegato: Claude Recovers Lost Work via SQLite",
+          "body": "A user successfully utilized Claude to recover a lost 11-hour report by having the AI reverse-engineer the Alfred clipboard manager's SQLite database. Claude scanned the raw database, bypassed deletion markers, and stitched the document back together from overflow pages.",
+          "url": "https://x.com/giansegato/status/2061285376548077614"
+        },
+        {
+          "tag": "hot",
+          "title": "@0xTodd: Epic Rescue from Internet Addiction Camp",
+          "body": "A viral story details a man's methodical and successful cross-country journey to rescue his girlfriend from a coercive internet addiction school in China. The account highlights the extreme lengths of parental control and the striking real-life application of strategy to secure her freedom.",
+          "url": "https://x.com/0xTodd/status/2061637136181563566"
         },
         {
           "tag": "new",
-          "title": "@WSJ: Apple's 50th Anniversary Archive",
-          "body": "Tim Cook provides an exclusive tour of Apple's secret hardware archive, revealing unreleased prototypes and early designs spanning the company's 50-year history.",
-          "url": "https://x.com/WSJ/status/2052455804511408385"
+          "title": "@dotey: Advanced Strategies for AI /goal Workflows",
+          "body": "A developer shares practical frameworks for leveraging the /goal command in AI coding tools, such as breaking complex tasks into phased checklists. By setting strict acceptance criteria for each phase, users can maintain high-quality, sequential autonomous execution.",
+          "url": "https://x.com/dotey/status/2061260768729809096"
         },
         {
-          "tag": "update",
-          "title": "@BarackObama: Presidential Center Letters",
-          "body": "Barack Obama highlights the personal impact of the letters he read daily as President, which will be featured as a core exhibit at the Obama Presidential Center.",
-          "url": "https://x.com/BarackObama/status/2061532991638093909"
-        },
-        {
-          "tag": "new",
-          "title": "@TouchlineX: Harry Kane's Ballon d'Or Ambitions",
-          "body": "Harry Kane expresses confidence in his Ballon d'Or chances, citing his performance and the potential for an English victory at the upcoming World Cup.",
-          "url": "https://x.com/TouchlineX/status/2061704574080008384"
-        },
-        {
-          "tag": "update",
-          "title": "@Sage_FCB: Pique on Barcelona's Identity",
-          "body": "Gerard Pique analyzes why Julian Alvarez's positional intelligence makes him a more natural fit for Barcelona's traditional style of play compared to Victor Osimhen.",
-          "url": "https://x.com/Sage_FCB/status/2061538232299606454"
+          "tag": "hot",
+          "title": "@elonmusk: Debate Over Justice in Henry Nowak Case",
+          "body": "Elon Musk amplified ongoing public debate surrounding the tragic murder of Henry Nowak, drawing comparisons to international social justice movements. The discourse highlights perceived media disparities and demands for accountability in the British justice system.",
+          "url": "https://x.com/elonmusk/status/2061808027666415902"
         }
       ]
     }
