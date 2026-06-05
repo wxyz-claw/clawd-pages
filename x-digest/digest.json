@@ -3,11 +3,11 @@
   "date": "Friday, June 5th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Real Madrid's Galáctico Strategy:</strong> President Florentino Pérez has teased a massive €150M bid for a non-forward 'superstar' outside the Premier League, with Michael Olise and Khvicha Kvaratskhelia emerging as top rumored targets.",
-    "<strong>AI Development & Infrastructure:</strong> New tools like OnPilot and Hermes Desktop are enhancing productivity, while discussions around DeepSeek v4 highlight the shift toward ultra-low-cost, high-performance inference models.",
-    "<strong>SpaceX Growth:</strong> The company is reportedly preparing for a highly anticipated IPO within a week, signaling a major transition for the aerospace giant into public markets.",
-    "<strong>Corporate & Market Shifts:</strong> Vercel's acquisition of Turborepo-related assets and the ongoing debate over private credit risks within traditional banking highlight significant structural changes in tech and finance.",
-    "<strong>Sports Evolution:</strong> FIFA is introducing a new pre-match ceremony format for the World Cup, replacing traditional lineups with team circles and giant flag displays to modernize the viewer experience."
+    "<strong>AI Infrastructure Powerhouse:</strong> SpaceX emerges as a dominant player in the AI supply chain, securing massive compute deals with Google and Anthropic totaling billions.",
+    "<strong>Infrastructure Efficiency:</strong> Google and Anthropic push the boundaries of AI deployment with QAT optimizations for Gemma 4 and specialized scientific capabilities for Claude.",
+    "<strong>Market Volatility:</strong> A significant global sell-off wipes out trillions in value across stocks, gold, and Bitcoin, with MicroStrategy facing record unrealized losses.",
+    "<strong>Sports Medical Crisis:</strong> German football faces a setback as rising star Lennart Karl is ruled out of the World Cup, necessitating immediate squad reshuffling.",
+    "<strong>Historical Social Progress:</strong> The story of Franca Viola highlights the evolution of legal protections against sexual violence and the power of individual defiance."
   ],
   "sections": [
     {
@@ -15,34 +15,40 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "update",
-          "title": "@evanyou: Vercel Acquisition & Vue Independence",
-          "body": "Evan You clarifies that while recent acquisitions strengthen the financial support for Vue contributors, Vue remains an independent project and will maintain vendor-neutral relationships within its ecosystem.",
-          "url": "https://x.com/evanyou/status/2062767662917451803"
+          "tag": "hot",
+          "title": "@twtayaan: Linus Torvalds on AI Hype",
+          "body": "Linus Torvalds critiques the 'AI wrote my code' narrative, positioning AI as a productivity tool akin to compilers while warning about the burden of AI-generated bug reports on maintainers.",
+          "url": "https://x.com/twtayaan/status/2062784735722537444"
         },
         {
           "tag": "new",
-          "title": "@cjzafir: DeepSeek v4 Cost Efficiency",
-          "body": "Analysis of DeepSeek v4 models shows significant cost-per-token advantages, with 1M input tokens priced at approximately $0.0036, suggesting a new benchmark for budget-friendly, high-instruction-following AI.",
-          "url": "https://x.com/cjzafir/status/2062668685031149811"
+          "title": "@SawyerMerritt: SpaceX-Google $920M/Month Compute Deal",
+          "body": "SpaceX has secured a massive $920 million per month agreement with Google to provide compute capacity using 110,000 NVIDIA GPUs through 2029.",
+          "url": "https://x.com/SawyerMerritt/status/2062972460018905246"
+        },
+        {
+          "tag": "update",
+          "title": "@googlegemma: Gemma 4 Quantization-Aware Training",
+          "body": "Google released QAT checkpoints for Gemma 4, enabling models like the 26B-A4B variant to run on just 16GB of RAM with minimal performance loss.",
+          "url": "https://x.com/googlegemma/status/2062928831229665566"
         },
         {
           "tag": "hot",
-          "title": "@DamiDefi: SpaceX IPO Analysis",
-          "body": "Analysis of SpaceX's S-1 filing ahead of its upcoming IPO reveals critical financial details buried in the 300-page document, highlighting the company's trajectory as it prepares to go public.",
-          "url": "https://x.com/DamiDefi/status/2062467341263196286"
-        },
-        {
-          "tag": "update",
-          "title": "@PalantirTech: USDA Ontology & Food Security",
-          "body": "Palantir demonstrates how its Ontology system is being used by the USDA to govern disconnected databases, reducing AI hallucinations and securing the national food supply chain through auditable data tech.",
-          "url": "https://x.com/PalantirTech/status/2062633365497340199"
+          "title": "@AnthropicAI: Making Claude a Chemist",
+          "body": "Anthropic's Opus 4.7 demonstrates expert-level chemistry capabilities, matching or exceeding specialized NMR spectroscopy software in molecular structure analysis.",
+          "url": "https://x.com/AnthropicAI/status/2062979607448682731"
         },
         {
           "tag": "new",
-          "title": "@imbabybrooklyn: Hermes Desktop Multi-Profile Management",
-          "body": "Nous Research's Hermes Desktop now supports simultaneous multi-profile sessions, allowing users to switch mid-thread and reference different chat contexts with visual color tagging.",
-          "url": "https://x.com/imbabybrooklyn/status/2062717648685719622"
+          "title": "@signulll: SpaceX's Role in AI Infrastructure",
+          "body": "Analysis highlights Elon Musk’s strategic ownership of power, chips, and physical deployment assets, positioning SpaceX as a critical 'pick and shovel' provider for the AI gold rush.",
+          "url": "https://x.com/signulll/status/2063002432804671802"
+        },
+        {
+          "tag": "update",
+          "title": "@thsottiaux: ChatGPT's Enhanced Memory System",
+          "body": "OpenAI is rolling out a more capable memory system for ChatGPT, allowing it to carry context across conversations more effectively to improve utility per token.",
+          "url": "https://x.com/thsottiaux/status/2062966625733861752"
         }
       ]
     },
@@ -52,33 +58,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@DeadlineDayLive: Real Madrid's €150M Galáctico Bid",
-          "body": "Real Madrid President Florentino Pérez has confirmed a plan to launch a massive €150M bid for a 'Galáctico' profile player if re-elected, specifically targeting a star outside the Premier League.",
-          "url": "https://x.com/DeadlineDayLive/status/2062828570762719510"
+          "title": "@USronaldcarter: Trillions Wiped in Global Market Sell-off",
+          "body": "Global markets experienced a massive downturn with Gold dropping 4%, Stocks 3%, and Bitcoin 10% in a single day, signaling deep investor anxiety.",
+          "url": "https://x.com/USronaldcarter/status/2062947667638903067"
         },
         {
           "tag": "update",
-          "title": "@WSJ: Private Credit & Banking Risks",
-          "body": "A report highlights the growing exposure of traditional banks to private credit firms, with $300 billion in loans now facing scrutiny as market cracks begin to appear in the once-isolated sector.",
-          "url": "https://x.com/WSJ/status/2052457365799100908"
-        },
-        {
-          "tag": "hot",
-          "title": "@elonmusk: SAVE America Act Vote",
-          "body": "The U.S. Senate has rejected a motion to include the SAVE America Act in the budget reconciliation, with a narrow 48-50 vote highlighting deep partisan divisions on election-related legislation.",
-          "url": "https://x.com/elonmusk/status/2062733952729726994"
-        },
-        {
-          "tag": "update",
-          "title": "@iMiaSanMia: Bayern Munich's Transfer Veto",
-          "body": "Bayern Munich's supervisory board reportedly vetoed the signing of Kennet Eichhorn due to high signing fees, demonstrating a shift toward stricter financial oversight despite manager Vincent Kompany's approval.",
-          "url": "https://x.com/iMiaSanMia/status/2062791929306173564"
+          "title": "@fey_xbt: MicroStrategy's $10.8B Unrealized Bitcoin Loss",
+          "body": "MicroStrategy ($MSTR) is facing its largest unrealized loss ever at -$10.8 billion, representing a -17% return on its position after six years of buying Bitcoin.",
+          "url": "https://x.com/fey_xbt/status/2062805625789198499"
         },
         {
           "tag": "new",
-          "title": "@DeclareNews: 2024 Voting Law Complications",
-          "body": "A 2024 law that altered vote-counting methods has created an implementation crisis as officials struggle to establish a replacement process ahead of upcoming deadlines.",
-          "url": "https://x.com/DeclareNews/status/2049549137121509562"
+          "title": "@elonmusk: Insights into SpaceX IPO Strategy",
+          "body": "Elon Musk reaffirms SpaceX's core mission of making life multiplanetary while hinting at the strategic roles of Starlink and AI in the company's eventual IPO path.",
+          "url": "https://x.com/elonmusk/status/2062638415644865024"
+        },
+        {
+          "tag": "update",
+          "title": "@zephyr_z9: Blackwell GPU Pricing in Google-SpaceX Deal",
+          "body": "Breakdown of the SpaceX-Google deal suggests a price point of approximately $11.60 per hour for NVIDIA Blackwell GPUs, setting a significant benchmark for high-end AI compute.",
+          "url": "https://x.com/zephyr_z9/status/2062989352603734128"
         }
       ]
     },
@@ -87,28 +87,34 @@
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@TouchlineX: FIFA World Cup Ceremony Overhaul",
-          "body": "FIFA has unveiled a new pre-match protocol where players form circles in their own halves rather than parallel lines, accompanied by massive flag displays during national anthems.",
-          "url": "https://x.com/TouchlineX/status/2062789897874719031"
+          "tag": "hot",
+          "title": "@FabrizioRomano: Lennart Karl to Miss World Cup",
+          "body": "German talent Lennart Karl has been ruled out of the 2026 World Cup following a torn muscle in training, a major blow to Julian Nagelsmann's squad.",
+          "url": "https://x.com/FabrizioRomano/status/2063009535468372448"
         },
         {
           "tag": "update",
-          "title": "@cosmicbooknews: Campaign to Save Stargate",
-          "body": "Actor Michael Shanks is leading a fan campaign to revive the Stargate franchise after Amazon canceled a new series, urging involvement from original creators and the legacy cast.",
-          "url": "https://x.com/cosmicbooknews/status/2062577433660772744"
-        },
-        {
-          "tag": "hot",
-          "title": "@TouchlineX: England's Heat Struggle in USA",
-          "body": "Reports indicate the England national team is struggling to adapt to the high temperatures in the USA during their current tour, potentially impacting their physical performance and training schedule.",
-          "url": "https://x.com/TouchlineX/status/2062761332005630179"
+          "title": "@theMadridZone: Real Madrid's Strategic Interest in Michael Olise",
+          "body": "Real Madrid's denial of a Michael Olise bid was revealed to be a strategic move to avoid public negotiations before direct contact with Bayern Munich.",
+          "url": "https://x.com/theMadridZone/status/2062905701643497928"
         },
         {
           "tag": "new",
-          "title": "@WhoScored: Premier League CB Rankings",
-          "body": "Historical data shows Virgil van Dijk has been the highest-rated centre-back in the Premier League for 6 of the last 11 seasons, though Gabriel Magalhães has taken the top spot for the 2025/26 season.",
-          "url": "https://x.com/WhoScored/status/2062806635769434239"
+          "title": "@Kenntnis22: The Historical Defiance of Franca Viola",
+          "body": "The thread recounts the landmark 1965 case of Franca Viola, the first woman in Italy to successfully refuse a 'repairing marriage' with her rapist, changing Italian law forever.",
+          "url": "https://x.com/Kenntnis22/status/2062676411605803207"
+        },
+        {
+          "tag": "hot",
+          "title": "@wjf110: Biological Pest Control in Guangzhou",
+          "body": "Guangzhou, China, operates the world's largest mosquito factory, releasing millions of sterilized males weekly to crash the local population of disease-carrying mosquitoes.",
+          "url": "https://x.com/wjf110/status/2062812288705593767"
+        },
+        {
+          "tag": "update",
+          "title": "@FoxNews: NASA’s Historic Artemis II Mission Update",
+          "body": "NASA provides an update on Artemis II, the first crewed mission to orbit the moon in over half a century, marking a critical milestone for deep-space exploration.",
+          "url": "https://x.com/FoxNews/status/2039360232443326820"
         }
       ]
     }
