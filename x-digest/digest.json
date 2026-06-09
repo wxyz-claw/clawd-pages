@@ -3,12 +3,11 @@
   "date": "Tuesday, June 9th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Anthropic's Mythos Model:</strong> Early hands-on reviews of the 'Mythos' (potentially 'Fable') security model indicate elite-level performance in vulnerability research but warn of extremely high inference costs.",
-    "<strong>Apple's On-Device AI:</strong> Technical deep-dives reveal Apple is running 20B parameter models on RAM-constrained devices by using a modified MoE architecture that selectively loads experts from NAND flash.",
-    "<strong>Election Policy Tensions:</strong> A new California law prohibiting photo ID requirements at polling places has triggered a national debate over the trade-offs between voting accessibility and election integrity.",
-    "<strong>Corporate Transparency:</strong> Investors are mobilizing against proposed SEC Rule S7-2026-15, which could allow public companies to move from quarterly to semi-annual financial reporting.",
-    "<strong>AI Code Quality:</strong> Industry experts are shifting focus from functional correctness to maintainability with new benchmarks like FrontierCode, targeting the 'vibe coding' technical debt crisis.",
-    "<strong>Tech Culture Shift:</strong> The traditional 'FAANG' acronym is being replaced in Silicon Valley circles by 'MANGOS' (Meta, Anthropic, NVIDIA, Google, OpenAI, SpaceX) to reflect the new AI-centric power structure."
+    "<strong>Claude Fable 5:</strong> Anthropic's new Mythos-class model marks a step-change in AI capabilities, shifting from a tool-like assistant to a collaborative partner capable of complex code optimization and autonomous bug discovery.",
+    "<strong>Agentic Engineering:</strong> The industry is pivoting from direct prompting to 'designing loops' that orchestrate multiple agents, as seen in new platforms from Google and community engineering patterns.",
+    "<strong>Tesla's Market Shift:</strong> Tesla has achieved a historic milestone in South Korea, becoming the first import brand to top the total vehicle sales charts, surpassing domestic giants Hyundai and Kia.",
+    "<strong>AI-Native Research:</strong> Emerging standards like ARA (Agentic Research Assets) propose replacing traditional static papers with executable research packages designed for AI understanding and replication.",
+    "<strong>2026 World Cup Geopolitics:</strong> The tournament faces early diplomatic friction with reported visa issues for star players and symbolic political protests from participating national teams."
   ],
   "sections": [
     {
@@ -17,39 +16,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@zekramu: Anthropic Mythos Security Model Review",
-          "body": "Hands-on testing of Anthropic’s 'Mythos' model reveals exceptional security research capabilities but highlights massive token costs and restrictive safety harnesses that require significant engineering expertise to navigate.",
-          "url": "https://x.com/zekramu/status/2064131568495677490"
+          "title": "@alexalbert__: Claude Fable 5 Collaborative Intelligence",
+          "body": "Anthropic's Fable 5 launch represents a transition from directive-based AI to collaborative intelligence, demonstrating human-level taste and dimensionality in complex product design and engineering tasks.",
+          "url": "https://x.com/alexalbert__/status/2064394410004304003"
         },
         {
           "tag": "update",
-          "title": "@awnihannun: Apple On-Device MoE Architecture",
-          "body": "Apple is successfully deploying 20B parameter models on-device using a modified Mixture of Experts (MoE) approach that loads specific experts from NAND into RAM once per query to bypass traditional memory limits.",
-          "url": "https://x.com/awnihannun/status/2064202168618422396"
+          "title": "@Google: Gemini 3.5 Live Translate Release",
+          "body": "Google has released Gemini 3.5 Live Translate, a sophisticated speech-to-speech audio model supporting real-time translation across 70+ languages, significantly lowering cross-border communication barriers.",
+          "url": "https://x.com/Google/status/2064366586849304596"
         },
         {
           "tag": "new",
-          "title": "@VictorTaelin: FrontierCode Quality Benchmarking",
-          "body": "The FrontierCode benchmark introduces a new standard for AI code generation, evaluating whether code is actually 'merge-ready' based on long-term maintainability rather than just passing basic functional tests.",
-          "url": "https://x.com/VictorTaelin/status/2064119311464009799"
+          "title": "@VictorTaelin: Fable 5's Recursive Bug-Finding",
+          "body": "Early testing shows Fable 5 can outperform swarms of previous-generation agents in low-level code optimization while autonomously identifying and fixing subtle architectural bugs without specific instructions.",
+          "url": "https://x.com/VictorTaelin/status/2064448425936994742"
         },
         {
           "tag": "update",
-          "title": "@tankman2002: Claude 4.6 Math Performance Analysis",
-          "body": "New evaluations show Claude 4.6 Sonnet struggling with high-level Chinese academic math, specifically failing complex proofs and logic sequences that require multi-step precision beyond typical coding tasks.",
-          "url": "https://x.com/tankman2002/status/2064091189968806386"
-        },
-        {
-          "tag": "hot",
-          "title": "@Matt_Graham_: The Risks of Vibe Coding",
-          "body": "The rise of 'vibe coding' allows for rapid prototyping but risks creating technical debt-heavy codebases that lack structural integrity, leading many founders to require professional rescue as their AI builds scale.",
-          "url": "https://x.com/Matt_Graham_/status/2051351433862099038"
+          "title": "@Xudong07452910: The Transition to Agent-Readable Research",
+          "body": "A coalition of researchers from Stanford and CMU proposes ARA, a new format for scientific output that packages data, code, and reasoning chains into units optimized for AI agents rather than human-only readers.",
+          "url": "https://x.com/Xudong07452910/status/2064185716926460328"
         },
         {
           "tag": "new",
-          "title": "@gmi_cloud: GMI Agent Box Infrastructure Launch",
-          "body": "GMI has launched 'Agent Box,' a complete infrastructure stack for production-ready AI agents featuring native Docker support and a unified API for managing over 200 different models.",
-          "url": "https://x.com/gmi_cloud/status/2064042460838506904"
+          "title": "@0xSero: Local LLM Hardware Recommendations",
+          "body": "A comprehensive guide to the current local model landscape, highlighting Gemma 12B and GLM-5.1 as leaders for consumer and enterprise-grade hardware tiers respectively.",
+          "url": "https://x.com/0xSero/status/2064220082264293820"
         }
       ]
     },
@@ -59,33 +52,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: California Voter ID Controversy",
-          "body": "California’s new legislation prohibiting the requirement of photo identification at polling places has sparked intense legal and political debate over the balance between voting access and election security.",
-          "url": "https://x.com/elonmusk/status/2063998740474613968"
-        },
-        {
-          "tag": "update",
-          "title": "@keepitquarterly: SEC Quarterly Reporting Rule S7-2026-15",
-          "body": "Public opposition is mounting against a proposed SEC rule that would allow companies to cease filing quarterly financial reports, a move critics argue would significantly reduce transparency for retail investors.",
-          "url": "https://x.com/keepitquarterly/status/2062949190263861522"
-        },
-        {
-          "tag": "hot",
-          "title": "@IREN_Ltd: IREN 5GW Global Power Expansion",
-          "body": "IREN has secured 5GW of power and land across three continents, positioning itself as a major infrastructure provider for large-scale AI and data center operations for global enterprise clients.",
-          "url": "https://x.com/IREN_Ltd/status/2057268451706831056"
-        },
-        {
-          "tag": "update",
-          "title": "@xiaohu: Google Plus Storage and Pricing Update",
-          "body": "Google is restructuring its Plus subscription tier, doubling storage capacity to 400GB while reducing the price to $4.99 per month to increase competitiveness in the consumer cloud market.",
-          "url": "https://x.com/xiaohu/status/2064160975406903691"
+          "title": "@elonmusk: Tesla Model Y Dominance in Korea",
+          "body": "In a historic shift, the Tesla Model Y has become the best-selling vehicle overall in South Korea, marking the first time an imported car has outperformed domestic models from Hyundai and Kia.",
+          "url": "https://x.com/elonmusk/status/2064061331418828888"
         },
         {
           "tag": "new",
-          "title": "@BusinessInsider: Arizona Iced Tea Price Economics",
-          "body": "Arizona Iced Tea continues to maintain its iconic 99-cent price point by leveraging aggressive cost-cutting in packaging and logistics instead of traditional marketing, despite persistent inflationary pressures.",
-          "url": "https://x.com/BusinessInsider/status/2030037839820267606"
+          "title": "@WSJ: Apple's Secret Prototype Archive",
+          "body": "To celebrate Apple's 50th anniversary, CEO Tim Cook revealed a restricted archive of five decades of hardware prototypes, showcasing the iterative design history of the company's most iconic devices.",
+          "url": "https://x.com/WSJ/status/2052455804511408385"
+        },
+        {
+          "tag": "update",
+          "title": "@433: The €150M Julián Álvarez Market Manipulation",
+          "body": "Reports suggest a strategic collaboration between Real Madrid and Atlético Madrid, where high-profile 'rejected' bids are being used to inflate player valuations and bolster political standings during election cycles.",
+          "url": "https://x.com/433/status/2064414655066370089"
+        },
+        {
+          "tag": "update",
+          "title": "@xiaohu: Google Storage and Plus Pricing Pivot",
+          "body": "Google has halved the price of its Plus membership to $4.99 while doubling storage capacity to 400 GB, signaling a more aggressive stance in the cloud services market.",
+          "url": "https://x.com/xiaohu/status/2064160975406903691"
         }
       ]
     },
@@ -95,33 +82,27 @@
       "items": [
         {
           "tag": "new",
-          "title": "@ChrissGPT: The Rise of MANGOS Tech Culture",
-          "body": "The Silicon Valley 'FAANG' era has officially transitioned into 'MANGOS' (Meta, Anthropic, NVIDIA, Google, OpenAI, SpaceX), reflecting the pivot from social media and search to foundational AI and space tech.",
-          "url": "https://x.com/ChrissGPT/status/2064191684875837489"
-        },
-        {
-          "tag": "hot",
-          "title": "@EliLillyandCo: Obesity Triple Agonist Clinical Data",
-          "body": "Newly shared clinical data at ADA 2026 demonstrates that investigational triple agonist treatments provide significant weight loss and improve multiple obesity-related comorbidities simultaneously.",
-          "url": "https://x.com/EliLillyandCo/status/2063332273164857820"
-        },
-        {
-          "tag": "new",
-          "title": "@DaleJohnsonBBC: FIFA Ref Denied US Entry",
-          "body": "A FIFA World Cup 2026 official was barred from entering the United States for training, highlighting ongoing visa and entry challenges for international sporting personnel ahead of the tournament.",
-          "url": "https://x.com/DaleJohnsonBBC/status/2064098229130551598"
+          "title": "@icardo8: World Cup Visa Geopolitics",
+          "body": "Political friction reaches the sports world as reports surface of visa complications for Spanish star Lamine Yamal ahead of the World Cup due to past political expressions.",
+          "url": "https://x.com/icardo8/status/2064358665293848717"
         },
         {
           "tag": "update",
-          "title": "@DSM_BTC: Historical Standards of Living Analysis",
-          "body": "A detailed historical comparison of diet and living standards highlights the significant disparity in caloric security and protein access between pre-industrial Europe and imperial China during the 18th century.",
-          "url": "https://x.com/DSM_BTC/status/2064008490008596961"
+          "title": "@xixi_anonymous: Social Advocacy in China",
+          "body": "A significant social movement is gaining momentum in China as young advocates push for raising the legal age of sexual consent to 18, sparking widespread online solidarity.",
+          "url": "https://x.com/xixi_anonymous/status/2064325028720918903"
         },
         {
-          "tag": "hot",
-          "title": "@caps_raunak: Corporate Talent vs Mediocrity Viral Thread",
-          "body": "A viral account of an intern solving complex bugs without recognition has reignited a global discussion on how modern corporate structures often protect mediocrity while failing to retain top-tier technical talent.",
-          "url": "https://x.com/caps_raunak/status/2064046580991467585"
+          "tag": "new",
+          "title": "@ChShersh: Radical Remote Work Policies",
+          "body": "A new trend in 'extreme remote' work involves mandatory 8-hour paired Zoom sessions with random teammates to combat isolation and maintain high-fidelity collaboration in fully distributed companies.",
+          "url": "https://x.com/ChShersh/status/2064318033288450243"
+        },
+        {
+          "tag": "update",
+          "title": "@zaobaosg: Japanese Leadership Ties to China",
+          "body": "Political analysts are monitoring potential vulnerabilities for Japanese PM Sanae Takaichi following revelations that her grandson is pursuing studies at a top-tier Chinese university.",
+          "url": "https://x.com/zaobaosg/status/2064372496543989763"
         }
       ]
     }
