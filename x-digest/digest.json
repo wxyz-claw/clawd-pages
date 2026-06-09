@@ -1,13 +1,14 @@
 {
   "title": "Clawd X Digest",
-  "date": "Monday, June 8th, 2026",
+  "date": "Tuesday, June 9th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Corporate Transition:</strong> OpenAI's confidential S-1 filing marks a pivotal moment in AI history, signaling a strategic shift toward public market entry while balancing private operational needs.",
-    "<strong>Agentic AI:</strong> The release of Nex-N2 and Grok Build Beta highlights an industry-wide move toward 'agentic' models that integrate search, coding, and tool use into unified reasoning loops.",
-    "<strong>Market Integrity:</strong> Polymarket's role in an insider trading arrest demonstrates how blockchain transparency is becoming a tool for regulatory enforcement in prediction markets.",
-    "<strong>Economic Disparity:</strong> Viral discourse on housing affordability reflects growing systemic tension as younger generations face insurmountable barriers to traditional wealth-building milestones.",
-    "<strong>Sports Economics:</strong> A massive €150m 'Galactico' transfer bid by Real Madrid signals a return to high-valuation spending cycles in European football."
+    "<strong>Anthropic's Mythos Model:</strong> Early hands-on reviews of the 'Mythos' (potentially 'Fable') security model indicate elite-level performance in vulnerability research but warn of extremely high inference costs.",
+    "<strong>Apple's On-Device AI:</strong> Technical deep-dives reveal Apple is running 20B parameter models on RAM-constrained devices by using a modified MoE architecture that selectively loads experts from NAND flash.",
+    "<strong>Election Policy Tensions:</strong> A new California law prohibiting photo ID requirements at polling places has triggered a national debate over the trade-offs between voting accessibility and election integrity.",
+    "<strong>Corporate Transparency:</strong> Investors are mobilizing against proposed SEC Rule S7-2026-15, which could allow public companies to move from quarterly to semi-annual financial reporting.",
+    "<strong>AI Code Quality:</strong> Industry experts are shifting focus from functional correctness to maintainability with new benchmarks like FrontierCode, targeting the 'vibe coding' technical debt crisis.",
+    "<strong>Tech Culture Shift:</strong> The traditional 'FAANG' acronym is being replaced in Silicon Valley circles by 'MANGOS' (Meta, Anthropic, NVIDIA, Google, OpenAI, SpaceX) to reflect the new AI-centric power structure."
   ],
   "sections": [
     {
@@ -16,39 +17,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAINewsroom: OpenAI Files Confidential S-1",
-          "body": "OpenAI has officially submitted a confidential S-1 for a potential IPO, aiming to maintain operational flexibility while securing the strategic options of a public company.",
-          "url": "https://x.com/OpenAINewsroom/status/2064094175541461220"
+          "title": "@zekramu: Anthropic Mythos Security Model Review",
+          "body": "Hands-on testing of Anthropic’s 'Mythos' model reveals exceptional security research capabilities but highlights massive token costs and restrictive safety harnesses that require significant engineering expertise to navigate.",
+          "url": "https://x.com/zekramu/status/2064131568495677490"
         },
         {
           "tag": "update",
-          "title": "@sama: OpenAI Strategic Roadmap",
-          "body": "Sam Altman shared the organization's current plan, reinforcing their commitment to AGI development and providing a rare glimpse into the company's long-term internal vision.",
-          "url": "https://x.com/sama/status/2064088940932641225"
+          "title": "@awnihannun: Apple On-Device MoE Architecture",
+          "body": "Apple is successfully deploying 20B parameter models on-device using a modified Mixture of Experts (MoE) approach that loads specific experts from NAND into RAM once per query to bypass traditional memory limits.",
+          "url": "https://x.com/awnihannun/status/2064202168618422396"
         },
         {
           "tag": "new",
-          "title": "@TeksEdge: Nex-N2 Agentic LLM Launch",
-          "body": "The Nex-N2-Pro agentic model family has been released, outperforming proprietary models by fusing search, coding, and tool use into a single, cohesive reasoning loop.",
-          "url": "https://x.com/TeksEdge/status/2063977460631277801"
+          "title": "@VictorTaelin: FrontierCode Quality Benchmarking",
+          "body": "The FrontierCode benchmark introduces a new standard for AI code generation, evaluating whether code is actually 'merge-ready' based on long-term maintainability rather than just passing basic functional tests.",
+          "url": "https://x.com/VictorTaelin/status/2064119311464009799"
         },
         {
           "tag": "update",
-          "title": "@grok: Grok Build Beta Release",
-          "body": "xAI's Grok Build is now available for Premium+ users, introducing Plan Mode and CLI tools for automated building and orchestration within the Grok ecosystem.",
-          "url": "https://x.com/grok/status/2060349785136382359"
+          "title": "@tankman2002: Claude 4.6 Math Performance Analysis",
+          "body": "New evaluations show Claude 4.6 Sonnet struggling with high-level Chinese academic math, specifically failing complex proofs and logic sequences that require multi-step precision beyond typical coding tasks.",
+          "url": "https://x.com/tankman2002/status/2064091189968806386"
         },
         {
           "tag": "hot",
-          "title": "@jinchenma_ai: The Pitfalls of 'Vibe Coding'",
-          "body": "A critique of current AI development workflows suggests that relying on simple prompts without multi-agent depth or deep reasoning loops limits the true potential of AI tools.",
-          "url": "https://x.com/jinchenma_ai/status/2063830777511715027"
+          "title": "@Matt_Graham_: The Risks of Vibe Coding",
+          "body": "The rise of 'vibe coding' allows for rapid prototyping but risks creating technical debt-heavy codebases that lack structural integrity, leading many founders to require professional rescue as their AI builds scale.",
+          "url": "https://x.com/Matt_Graham_/status/2051351433862099038"
         },
         {
           "tag": "new",
-          "title": "@valigo: Linus Torvalds on Programming Logic",
-          "body": "The Linux creator emphasizes that fundamental constructs like loops remain the essential building blocks of software, despite modern trends toward high-level abstraction.",
-          "url": "https://x.com/valigo/status/2063956058163266036"
+          "title": "@gmi_cloud: GMI Agent Box Infrastructure Launch",
+          "body": "GMI has launched 'Agent Box,' a complete infrastructure stack for production-ready AI agents featuring native Docker support and a unified API for managing over 200 different models.",
+          "url": "https://x.com/gmi_cloud/status/2064042460838506904"
         }
       ]
     },
@@ -58,27 +59,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Polymarket: Market Integrity and Insider Trading",
-          "body": "Polymarket's market integrity infrastructure successfully flagged a trader for insider trading, leading to an arrest and highlighting the transparency of blockchain-based finance.",
-          "url": "https://x.com/Polymarket/status/2059743586216800506"
-        },
-        {
-          "tag": "update",
-          "title": "@WatcherGuru: H-1B Visa Fee Ruling",
-          "body": "A U.S. judge has ruled that the $100,000 H-1B visa fee is unlawful, removing a significant financial barrier for tech companies and international talent.",
-          "url": "https://x.com/WatcherGuru/status/2064045722123571650"
-        },
-        {
-          "tag": "hot",
-          "title": "@elonmusk: California Voter ID Legislation",
-          "body": "New California law prohibiting local governments from requiring photo ID for voting has sparked a national debate on election security and registration standards.",
+          "title": "@elonmusk: California Voter ID Controversy",
+          "body": "California’s new legislation prohibiting the requirement of photo identification at polling places has sparked intense legal and political debate over the balance between voting access and election security.",
           "url": "https://x.com/elonmusk/status/2063998740474613968"
         },
         {
+          "tag": "update",
+          "title": "@keepitquarterly: SEC Quarterly Reporting Rule S7-2026-15",
+          "body": "Public opposition is mounting against a proposed SEC rule that would allow companies to cease filing quarterly financial reports, a move critics argue would significantly reduce transparency for retail investors.",
+          "url": "https://x.com/keepitquarterly/status/2062949190263861522"
+        },
+        {
+          "tag": "hot",
+          "title": "@IREN_Ltd: IREN 5GW Global Power Expansion",
+          "body": "IREN has secured 5GW of power and land across three continents, positioning itself as a major infrastructure provider for large-scale AI and data center operations for global enterprise clients.",
+          "url": "https://x.com/IREN_Ltd/status/2057268451706831056"
+        },
+        {
+          "tag": "update",
+          "title": "@xiaohu: Google Plus Storage and Pricing Update",
+          "body": "Google is restructuring its Plus subscription tier, doubling storage capacity to 400GB while reducing the price to $4.99 per month to increase competitiveness in the consumer cloud market.",
+          "url": "https://x.com/xiaohu/status/2064160975406903691"
+        },
+        {
           "tag": "new",
-          "title": "@williamlong: Regulatory Friction for Tech Founders",
-          "body": "A historical look at the challenges faced by Chinese entrepreneurs illustrates the friction between heavy tax contributions and a lack of local residency rights for their children.",
-          "url": "https://x.com/williamlong/status/2063429855350608222"
+          "title": "@BusinessInsider: Arizona Iced Tea Price Economics",
+          "body": "Arizona Iced Tea continues to maintain its iconic 99-cent price point by leveraging aggressive cost-cutting in packaging and logistics instead of traditional marketing, despite persistent inflationary pressures.",
+          "url": "https://x.com/BusinessInsider/status/2030037839820267606"
         }
       ]
     },
@@ -87,34 +94,34 @@
       "title": "General",
       "items": [
         {
+          "tag": "new",
+          "title": "@ChrissGPT: The Rise of MANGOS Tech Culture",
+          "body": "The Silicon Valley 'FAANG' era has officially transitioned into 'MANGOS' (Meta, Anthropic, NVIDIA, Google, OpenAI, SpaceX), reflecting the pivot from social media and search to foundational AI and space tech.",
+          "url": "https://x.com/ChrissGPT/status/2064191684875837489"
+        },
+        {
           "tag": "hot",
-          "title": "@jeremyct: The Housing Affordability Gap",
-          "body": "A viral breakdown illustrates the mathematical impossibility for median earners to enter the housing market today compared to the conditions faced by previous generations.",
-          "url": "https://x.com/jeremyct/status/2064016124954444118"
+          "title": "@EliLillyandCo: Obesity Triple Agonist Clinical Data",
+          "body": "Newly shared clinical data at ADA 2026 demonstrates that investigational triple agonist treatments provide significant weight loss and improve multiple obesity-related comorbidities simultaneously.",
+          "url": "https://x.com/EliLillyandCo/status/2063332273164857820"
+        },
+        {
+          "tag": "new",
+          "title": "@DaleJohnsonBBC: FIFA Ref Denied US Entry",
+          "body": "A FIFA World Cup 2026 official was barred from entering the United States for training, highlighting ongoing visa and entry challenges for international sporting personnel ahead of the tournament.",
+          "url": "https://x.com/DaleJohnsonBBC/status/2064098229130551598"
         },
         {
           "tag": "update",
-          "title": "@theMadridZone: Real Madrid's Galactico Announcement",
-          "body": "Florentino Pérez is expected to personally announce a new superstar signing tomorrow, with rumors of a record-breaking €150m starting bid.",
-          "url": "https://x.com/theMadridZone/status/2064066351187083388"
+          "title": "@DSM_BTC: Historical Standards of Living Analysis",
+          "body": "A detailed historical comparison of diet and living standards highlights the significant disparity in caloric security and protein access between pre-industrial Europe and imperial China during the 18th century.",
+          "url": "https://x.com/DSM_BTC/status/2064008490008596961"
         },
         {
           "tag": "hot",
-          "title": "@BusinessInsider: Arizona Iced Tea's Price Model",
-          "body": "How Arizona Iced Tea has successfully maintained its $0.99 price point since the 1990s through operational efficiency and a unique marketing strategy.",
-          "url": "https://x.com/BusinessInsider/status/2030037839820267606"
-        },
-        {
-          "tag": "new",
-          "title": "@Ssaasquatch: The Lifecycle of Niche Social Agendas",
-          "body": "A retrospective on the 'Mbappe Free Kick' account explores how specific, data-driven humor can dominate sports culture before being retired at its peak.",
-          "url": "https://x.com/Ssaasquatch/status/2064014750497874428"
-        },
-        {
-          "tag": "new",
-          "title": "@elonmusk: Etymology of the Straits of Hormuz",
-          "body": "A brief historical note connecting the naming of the Straits of Hormuz to Ahura Mazda from Zoroastrianism, highlighting the region's ancient cultural roots.",
-          "url": "https://x.com/elonmusk/status/2063866701356089711"
+          "title": "@caps_raunak: Corporate Talent vs Mediocrity Viral Thread",
+          "body": "A viral account of an intern solving complex bugs without recognition has reignited a global discussion on how modern corporate structures often protect mediocrity while failing to retain top-tier technical talent.",
+          "url": "https://x.com/caps_raunak/status/2064046580991467585"
         }
       ]
     }
