@@ -3,11 +3,11 @@
   "date": "Friday, June 12th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>World Cup Kickoff:</strong> The 2026 FIFA World Cup has officially begun with high-drama matches, including a red-card-heavy opener between Mexico and South Africa and a late winner for South Korea.",
-    "<strong>AI Hardware & Performance:</strong> New optimizations for Gemma 4 and specialized coding models like Qwopus 3.6 are significantly increasing local inference speeds and SWE-bench performance.",
-    "<strong>Big Tech Leadership:</strong> Alibaba veteran 'Wuzhao' (Chen Hang) has been removed as CEO of DingTalk following internal backlash against his 'high-pressure' management culture.",
-    "<strong>Geopolitical AI Policy:</strong> Anthropic CEO Dario Amodei is advocating for a democratic alliance to control the AI supply chain, warning of a massive military gap between AI-advanced and lagging nations.",
-    "<strong>Corporate Strategy & Markets:</strong> LG Electronics is piloting on-chain advertising on Arbitrum, while Tesla continues the rollout of FSD v14.3.4."
+    "<strong>SpaceX's Historic Trillion-Dollar IPO:</strong> The SpaceX IPO has dominated market conversations, pushing the company to a staggering $1.75T valuation and officially making Elon Musk a trillionaire. The listing involved complex financial engineering and created significant fallout in the crypto space due to failed retail allocations.",
+    "<strong>AI Milestone in Physical Sports:</strong> In a major breakthrough for applied robotics, Sony's AI table tennis robot, Ace, successfully defeated world #26 Miyuu Kihara under official tournament rules, demonstrating unprecedented real-time athletic adaptation.",
+    "<strong>Developer Tooling Advancements:</strong> AI coding assistants are seeing rapid workflow improvements, highlighted by OpenAI granting users more control over Codex rate limit resets and the Gemini macOS app introducing seamless double-Command keystroke window attachments.",
+    "<strong>World Cup 2026 Kickoff Controversies:</strong> As the 2026 World Cup begins, off-field drama is taking center stage, notably with Canada denying entry to Ghana's Thomas Partey over legal charges, forcing him to miss the team's opening match.",
+    "<strong>Apple's 50th Anniversary Archival Reveal:</strong> Commemorating five decades of innovation, Apple granted rare access to a highly secretive room containing its hardware prototypes and history, unearthing early tech previously unseen even by CEO Tim Cook."
   ],
   "sections": [
     {
@@ -15,33 +15,39 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": " @0xLogicrw: Anthropic CEO on AI Geopolitics",
-          "body": "Dario Amodei proposes a 'democratic同盟' to control chip supply chains, arguing that AI will create a military disparity comparable to 'Marines vs. Medieval Swordsmen' within two years.",
-          "url": "https://x.com/0xLogicrw/status/2064960187828760710"
+          "tag": "new",
+          "title": "@elonmusk: Nvidia and SpaceX Deepen Partnership",
+          "body": "Elon Musk highlighted Nvidia's ongoing collaboration with SpaceX following its historic IPO. The partnership continues to push accelerated computing boundaries to fuel AI and space exploration.",
+          "url": "https://x.com/elonmusk/status/2065547393974636647"
         },
         {
-          "tag": "new",
-          "title": " @UnslothAI: Gemma 4 Performance Breakthrough",
-          "body": "Google's Gemma 4 now runs up to 2.2x faster locally using MTP GGUFs, allowing the 12B model to reach 162 tokens per second on consumer hardware with no accuracy loss.",
-          "url": "https://x.com/UnslothAI/status/2065107734916432189"
+          "tag": "hot",
+          "title": "@WSJ: Apple Opens Secret Archive for 50th Anniversary",
+          "body": "To commemorate its 50th year, Apple allowed Tim Cook and the WSJ inside a highly secretive room containing five decades of hardware prototypes. The archive holds early tech that even Cook had never seen.",
+          "url": "https://x.com/WSJ/status/2052455804511408385"
         },
         {
           "tag": "update",
-          "title": " @KyleHessling1: Qwopus 3.6 Coder Release",
-          "body": "The new 27B-Coder model achieves a 67% SWE-bench score with 'thinking' disabled, optimized for high-speed, low-latency performance on NVIDIA 5090 hardware.",
-          "url": "https://x.com/KyleHessling1/status/2065218054150377663"
+          "title": "@thsottiaux: OpenAI Enhances Codex Rate Limit Resets",
+          "body": "OpenAI is giving users more control over their API usage by allowing them to bank and choose when to apply their Codex rate limit resets. This flexibility aims to alleviate frustrations around unexpected limit resets during intense coding sessions.",
+          "url": "https://x.com/thsottiaux/status/2065468501750649006"
         },
         {
           "tag": "hot",
-          "title": " @latepostnews: DingTalk CEO Removal",
-          "body": "Chen Hang (Wuzhao) has been ousted as DingTalk CEO after a 75,000-word employee manifesto triggered a rare public intervention from Alibaba's partner committee regarding management culture.",
-          "url": "https://x.com/latepostnews/status/2065098442209390633"
+          "title": "@cjzafir: Optimizing Claude Code Token Limits",
+          "body": "A developer shared a prompt engineering strategy to reduce Claude Code token burn by 50%. The method involves using Claude Fable 5 for planning, Codex 5.5 for execution, and Fable 5 Max for review.",
+          "url": "https://x.com/cjzafir/status/2065104422762684745"
         },
         {
           "tag": "new",
-          "title": " @GeminiApp: Gemini for macOS Integration",
-          "body": "A new macOS update allows users to attach active windows directly to Gemini chats using a double-Command key shortcut, bypassing manual screenshots for contextual assistance.",
+          "title": "@mranti: Sony AI Robot Defeats Table Tennis Pro",
+          "body": "Sony's AI table tennis robot, Ace, achieved a major milestone by defeating Miyuu Kihara, the world's 26th-ranked player, under official ITTF rules. This marks a significant leap in robotics and real-time athletic AI.",
+          "url": "https://x.com/mranti/status/2065045100309475506"
+        },
+        {
+          "tag": "update",
+          "title": "@GeminiApp: Seamless Screen Context for Gemini macOS",
+          "body": "The Gemini macOS app introduced a new feature allowing users to attach their active window to the chat instantly using a double Command (⌘) keystroke. This eliminates the need for manual screenshots or tab switching.",
           "url": "https://x.com/GeminiApp/status/2062652523945836770"
         }
       ]
@@ -52,27 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": " @arbitrum: LG Electronics Blockchain Pilot",
-          "body": "LG Electronics is collaborating with Arbitrum to pilot an on-chain advertising network, marking a significant entry of a major hardware manufacturer into the Ethereum L2 ecosystem.",
-          "url": "https://x.com/arbitrum/status/2065145040775598235"
+          "title": "@behrin: The Financial Engineering Behind SpaceX's IPO",
+          "body": "An analysis breaks down the complex financial maneuvers leading to SpaceX's $1.75T valuation, including xAI acquiring X and SpaceX subsequently acquiring xAI. The strategy leveraged a low float and index inclusion rules to drive a massive valuation increase.",
+          "url": "https://x.com/behrin/status/2065364523431694503"
+        },
+        {
+          "tag": "hot",
+          "title": "@unusual_whales: The Scale of a Trillionaire's Wealth",
+          "body": "With Elon Musk crossing the trillion-dollar mark, the average American's net worth is now mathematically closer to Jeff Bezos than Bezos is to Musk. This stark comparison highlights the unprecedented scale of a $1.2 trillion fortune.",
+          "url": "https://x.com/unusual_whales/status/2065509621557850591"
         },
         {
           "tag": "update",
-          "title": " @elonmusk: Tesla FSD 14.3.4 Rollout",
-          "body": "Tesla has commenced the wide release of FSD version 14.3.4, continuing its rapid iteration cycle for autonomous driving software.",
-          "url": "https://x.com/elonmusk/status/2065202249282768915"
+          "title": "@wolfyxbt: Crypto Exchanges Fumble SpaceX IPO Allocations",
+          "body": "The crypto market faced a shock as exchanges that promised SpaceX IPO allocations to retail traders failed to deliver, offering refunds minus hefty fees. The fiasco heavily impacted traders who had attempted to delta-hedge their anticipated positions.",
+          "url": "https://x.com/wolfyxbt/status/2065449442002747544"
         },
         {
           "tag": "new",
-          "title": " @America1stLegal: Maricopa County Election Contempt",
-          "body": "A judge has ordered the Maricopa County Board of Supervisors to show cause why they should not be held in civil contempt for noncompliance with election integrity orders.",
-          "url": "https://x.com/America1stLegal/status/2065239648889098437"
+          "title": "@PolymarketSport: $700k Polymarket Cashout on World Cup Match",
+          "body": "A Polymarket bettor cashed out a nearly $700,000 position on South Korea to beat Czechia with only seconds remaining in the match. The perfectly timed exit secured massive profits as South Korea held onto a 2-1 lead with a 99% win probability.",
+          "url": "https://x.com/PolymarketSport/status/2065465073963782353"
         },
         {
-          "tag": "update",
-          "title": " @kiteandkeymedia: Energy Forecasting Reliability",
-          "body": "Analysis of historic energy forecasts shows a consistent failure to predict production booms, such as the massive surge in US natural gas production after 1977 scarcity warnings.",
-          "url": "https://x.com/kiteandkeymedia/status/2039191272263708984"
+          "tag": "hot",
+          "title": "@World_Insights1: Tracking Musk's Journey to $1.1T",
+          "body": "A historical breakdown of Elon Musk's net worth reveals his trajectory from $28 million in 2000 to over $1.1 trillion in 2026. The timeline underscores the explosive wealth generation of the last few years, largely driven by his network of companies.",
+          "url": "https://x.com/World_Insights1/status/2065451967594508426"
         }
       ]
     },
@@ -82,27 +94,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": " @YanPeronn: World Cup Matchday 1 Recap",
-          "body": "The World Cup opening saw Mexico defeat South Africa 2-0 in a match featuring three red cards, while Guillermo Ochoa made history as the first player in six World Cup squads.",
-          "url": "https://x.com/YanPeronn/status/2065288376748515710"
-        },
-        {
-          "tag": "hot",
-          "title": " @Vfynn_: Ochoa Rebuts Ronaldo Comments",
-          "body": "Mexican keeper Memo Ochoa defended the prestige of the World Cup against Cristiano Ronaldo's 'seven-game tournament' description, calling the trophy the 'crown jewel' that defines eras.",
-          "url": "https://x.com/Vfynn_/status/2065079027333746727"
-        },
-        {
-          "tag": "new",
-          "title": " @iMiaSanMia: Olise & Saibari Transfer News",
-          "body": "Thierry Henry praises Michael Olise's football IQ following his successful Bayern season, while Vincent Kompany reportedly pushed for the signing of Moroccan Ismael Saibari.",
-          "url": "https://x.com/iMiaSanMia/status/2065362977734148552"
+          "title": "@ActuFoot_: Thomas Partey Denied Canada Visa for World Cup",
+          "body": "Canada has refused entry to Ghanaian midfielder Thomas Partey due to his outstanding rape charges in London. As a result, he will miss Ghana's World Cup opening match against Panama in Toronto.",
+          "url": "https://x.com/ActuFoot_/status/2065479999092658402"
         },
         {
           "tag": "update",
-          "title": " @FabrizioRomano: Mbappé on African Champions",
-          "body": "Kylian Mbappé generates discussion ahead of a match against Senegal, acknowledging them as African champions amidst confusion over the most recent tournament winner.",
-          "url": "https://x.com/FabrizioRomano/status/2065253550981083191"
+          "title": "@iMiaSanMia: Bayern Munich to Extend Michael Olise",
+          "body": "Following a stellar season that saw Michael Olise win Player of the Season and the double, Bayern Munich is moving to extend his contract until 2031. The club is reportedly prepared to nearly double his salary to ward off outside interest.",
+          "url": "https://x.com/iMiaSanMia/status/2065480352076804177"
+        },
+        {
+          "tag": "new",
+          "title": "@DanHollick: 'Making Software' Book Enters Early Access",
+          "body": "After thousands of hours of work, 70,000 words, and over 600 illustrations, 'Making Software' has been released in early access. The highly anticipated resource aims to provide deep visual and technical insights into software engineering.",
+          "url": "https://x.com/DanHollick/status/2062880181719847263"
+        },
+        {
+          "tag": "hot",
+          "title": "@kiteandkeymedia: The Flaws in Natural Gas Forecasting",
+          "body": "A new retrospective video highlights how historically inaccurate energy predictions have been, such as the White House's 1977 claim that the US would run out of natural gas by the early 21st century. The reality saw a massive surge in production instead.",
+          "url": "https://x.com/kiteandkeymedia/status/2039191272263708984"
+        },
+        {
+          "tag": "hot",
+          "title": "@DaveBondyTV: Homeowner Hospitalized in Squatter Incident",
+          "body": "A Flint, Michigan homeowner was hospitalized while squatters ransacked her property, prompting outrage. Neighbors report that local authorities have been unable or unwilling to intervene, shedding light on growing property rights issues.",
+          "url": "https://x.com/DaveBondyTV/status/2065446937159966751"
         }
       ]
     }
