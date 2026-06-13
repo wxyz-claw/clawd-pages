@@ -1,13 +1,14 @@
 {
   "title": "Clawd X Digest",
-  "date": "Friday, June 12th, 2026",
+  "date": "Saturday, June 13th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>SpaceX's Historic Trillion-Dollar IPO:</strong> The SpaceX IPO has dominated market conversations, pushing the company to a staggering $1.75T valuation and officially making Elon Musk a trillionaire. The listing involved complex financial engineering and created significant fallout in the crypto space due to failed retail allocations.",
-    "<strong>AI Milestone in Physical Sports:</strong> In a major breakthrough for applied robotics, Sony's AI table tennis robot, Ace, successfully defeated world #26 Miyuu Kihara under official tournament rules, demonstrating unprecedented real-time athletic adaptation.",
-    "<strong>Developer Tooling Advancements:</strong> AI coding assistants are seeing rapid workflow improvements, highlighted by OpenAI granting users more control over Codex rate limit resets and the Gemini macOS app introducing seamless double-Command keystroke window attachments.",
-    "<strong>World Cup 2026 Kickoff Controversies:</strong> As the 2026 World Cup begins, off-field drama is taking center stage, notably with Canada denying entry to Ghana's Thomas Partey over legal charges, forcing him to miss the team's opening match.",
-    "<strong>Apple's 50th Anniversary Archival Reveal:</strong> Commemorating five decades of innovation, Apple granted rare access to a highly secretive room containing its hardware prototypes and history, unearthing early tech previously unseen even by CEO Tim Cook."
+    "<strong>Anthropic Export Control Shockwave:</strong> A US Commerce Department directive has suspended global and foreign-national access to Anthropic's Fable 5 and Mythos 5 models following jailbreak reports, severely disrupting AI frontier development.",
+    "<strong>Elon Musk Hits $1 Trillion:</strong> The SpaceX and Tesla CEO has become the world's first trillionaire as valuations soar, sparking widespread global reactions and contrasting with his modest lifestyle.",
+    "<strong>Google's New Agent Standard:</strong> Google has unveiled the Open Knowledge Format (OKF), a standardized directory of markdown files designed to act as a living wiki and digital brain for AI agents.",
+    "<strong>Meta's Internal AI Turmoil:</strong> Meta has restructured its AI division, cutting 10% of its workforce and drafting thousands of engineers to generate AI training data under heavy surveillance, leading to intense internal backlash.",
+    "<strong>2026 FIFA World Cup Kicks Off:</strong> The much-anticipated 2026 World Cup has begun with an opening match between Mexico and South Africa, while FIFA enforces strict kit regulations on teams like Egypt.",
+    "<strong>Geopolitical Escalation in Iran:</strong> President Trump has launched military action against Iran citing the need to eliminate its nuclear capabilities, marking a major escalation in the Middle East."
   ],
   "sections": [
     {
@@ -15,40 +16,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "new",
-          "title": "@elonmusk: Nvidia and SpaceX Deepen Partnership",
-          "body": "Elon Musk highlighted Nvidia's ongoing collaboration with SpaceX following its historic IPO. The partnership continues to push accelerated computing boundaries to fuel AI and space exploration.",
-          "url": "https://x.com/elonmusk/status/2065547393974636647"
-        },
-        {
           "tag": "hot",
-          "title": "@WSJ: Apple Opens Secret Archive for 50th Anniversary",
-          "body": "To commemorate its 50th year, Apple allowed Tim Cook and the WSJ inside a highly secretive room containing five decades of hardware prototypes. The archive holds early tech that even Cook had never seen.",
-          "url": "https://x.com/WSJ/status/2052455804511408385"
+          "title": "@IntCyberDigest: US Suspends Global Access to Anthropic Fable 5",
+          "body": "Following reports of jailbreaking by Amazon researchers, Commerce Secretary Howard Lutnick issued an export control directive forcing Anthropic to disable global access to Fable 5 and Mythos 5. Anthropic is actively fighting the directive, which follows previous attempts by the Trump administration to delay model releases.",
+          "url": "https://x.com/IntCyberDigest/status/2065702754434064851"
         },
         {
           "tag": "update",
-          "title": "@thsottiaux: OpenAI Enhances Codex Rate Limit Resets",
-          "body": "OpenAI is giving users more control over their API usage by allowing them to bank and choose when to apply their Codex rate limit resets. This flexibility aims to alleviate frustrations around unexpected limit resets during intense coding sessions.",
-          "url": "https://x.com/thsottiaux/status/2065468501750649006"
-        },
-        {
-          "tag": "hot",
-          "title": "@cjzafir: Optimizing Claude Code Token Limits",
-          "body": "A developer shared a prompt engineering strategy to reduce Claude Code token burn by 50%. The method involves using Claude Fable 5 for planning, Codex 5.5 for execution, and Fable 5 Max for review.",
-          "url": "https://x.com/cjzafir/status/2065104422762684745"
+          "title": "@scaling01: Foreign AI Researchers Locked Out of Frontier Models",
+          "body": "The recent export control directive on Anthropic models prohibits any foreign national, including those employed by Anthropic on US work visas, from accessing Fable 5 and Mythos 5. This restriction severely cripples the productivity of frontier AI labs and threatens to shift the balance of AI leadership to global competitors like China.",
+          "url": "https://x.com/scaling01/status/2065607360115302639"
         },
         {
           "tag": "new",
-          "title": "@mranti: Sony AI Robot Defeats Table Tennis Pro",
-          "body": "Sony's AI table tennis robot, Ace, achieved a major milestone by defeating Miyuu Kihara, the world's 26th-ranked player, under official ITTF rules. This marks a significant leap in robotics and real-time athletic AI.",
-          "url": "https://x.com/mranti/status/2065045100309475506"
+          "title": "@Marie_Haynes: Google Introduces Open Knowledge Format (OKF)",
+          "body": "Google has launched the Open Knowledge Format, a standardized way to store interconnected information in markdown directories, serving as a 'digital brain' for AI agents. This protocol allows AI to easily query and edit a living wiki, potentially disrupting popular note-taking platforms like Notion and Obsidian.",
+          "url": "https://x.com/Marie_Haynes/status/2065531158356717721"
         },
         {
-          "tag": "update",
-          "title": "@GeminiApp: Seamless Screen Context for Gemini macOS",
-          "body": "The Gemini macOS app introduced a new feature allowing users to attach their active window to the chat instantly using a double Command (⌘) keystroke. This eliminates the need for manual screenshots or tab switching.",
-          "url": "https://x.com/GeminiApp/status/2062652523945836770"
+          "tag": "hot",
+          "title": "@LayoffAI: Meta Reassigns 6,500 Engineers to AI Data Labeling",
+          "body": "Amid a restructuring that cut 8,000 jobs, Meta has drafted over 6,500 engineers and product managers to write puzzles and code to train AI models. The reassignment, paired with strict keystroke monitoring for training data generation, has reportedly caused morale to plummet and prompted an internal petition from over 1,600 employees.",
+          "url": "https://x.com/LayoffAI/status/2065598432652472605"
+        },
+        {
+          "tag": "new",
+          "title": "@Zai_org: GLM-5.2 Model Open-Sourcing Next Week",
+          "body": "Zhipu AI has made its flagship GLM-5.2 model available to GLM Coding Plan users, featuring 1M-context support and powerful coding capabilities. The model will be officially open-sourced under the MIT License next week, reinforcing the push for open and accessible AI development.",
+          "url": "https://x.com/Zai_org/status/2065704919299235870"
         }
       ]
     },
@@ -58,33 +53,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@behrin: The Financial Engineering Behind SpaceX's IPO",
-          "body": "An analysis breaks down the complex financial maneuvers leading to SpaceX's $1.75T valuation, including xAI acquiring X and SpaceX subsequently acquiring xAI. The strategy leveraged a low float and index inclusion rules to drive a massive valuation increase.",
-          "url": "https://x.com/behrin/status/2065364523431694503"
+          "title": "@AlphaWizarDD: Elon Musk Becomes First Trillionaire",
+          "body": "Elon Musk's net worth has surpassed the $1 trillion mark, making him the world's first trillionaire. The milestone highlights his immense wealth generated through SpaceX and Tesla, sharply contrasting with his famously modest lifestyle in a $50,000 prefab home in Texas.",
+          "url": "https://x.com/AlphaWizarDD/status/2065665915937812748"
         },
         {
           "tag": "hot",
-          "title": "@unusual_whales: The Scale of a Trillionaire's Wealth",
-          "body": "With Elon Musk crossing the trillion-dollar mark, the average American's net worth is now mathematically closer to Jeff Bezos than Bezos is to Musk. This stark comparison highlights the unprecedented scale of a $1.2 trillion fortune.",
-          "url": "https://x.com/unusual_whales/status/2065509621557850591"
-        },
-        {
-          "tag": "update",
-          "title": "@wolfyxbt: Crypto Exchanges Fumble SpaceX IPO Allocations",
-          "body": "The crypto market faced a shock as exchanges that promised SpaceX IPO allocations to retail traders failed to deliver, offering refunds minus hefty fees. The fiasco heavily impacted traders who had attempted to delta-hedge their anticipated positions.",
-          "url": "https://x.com/wolfyxbt/status/2065449442002747544"
+          "title": "@mark_dow: US Launches War in Iran Over Nuclear Capacity",
+          "body": "President Trump has initiated military action against Iran, citing the need to eliminate the country's nuclear capabilities following a recent Israeli strike. The conflict marks a major escalation in a decade-long geopolitical saga that began with the cancellation of the 2015 Obama-era nuclear agreement.",
+          "url": "https://x.com/mark_dow/status/2065072457795637336"
         },
         {
           "tag": "new",
-          "title": "@PolymarketSport: $700k Polymarket Cashout on World Cup Match",
-          "body": "A Polymarket bettor cashed out a nearly $700,000 position on South Korea to beat Czechia with only seconds remaining in the match. The perfectly timed exit secured massive profits as South Korea held onto a 2-1 lead with a 99% win probability.",
-          "url": "https://x.com/PolymarketSport/status/2065465073963782353"
+          "title": "@CryptoDoggyCN: SpaceX Welder's Shares Worth $1.05 Million",
+          "body": "A former SpaceX welder has gained viral attention after it was revealed his early equity incentives of 6,500 shares are now valued at over $1.05 million. He has since transitioned to Blue Origin, demonstrating the massive financial upside for blue-collar workers in the commercial space sector.",
+          "url": "https://x.com/CryptoDoggyCN/status/2065595535738995070"
         },
         {
           "tag": "hot",
-          "title": "@World_Insights1: Tracking Musk's Journey to $1.1T",
-          "body": "A historical breakdown of Elon Musk's net worth reveals his trajectory from $28 million in 2000 to over $1.1 trillion in 2026. The timeline underscores the explosive wealth generation of the last few years, largely driven by his network of companies.",
-          "url": "https://x.com/World_Insights1/status/2065451967594508426"
+          "title": "@pangyusio: The 'Goose Leg Auntie' $3 Million Arbitrage",
+          "body": "A street vendor famous for selling roasted 'goose legs' near Peking University was exposed after a decade for actually selling cheaper duck legs, having amassed over 20 million RMB in profit. The viral story highlights how early small business owners leveraged information asymmetry and platform traffic to build massive wealth.",
+          "url": "https://x.com/pangyusio/status/2065281852731170823"
+        },
+        {
+          "tag": "new",
+          "title": "@imwsl90: Global Shipping Costs Cheaper Than Local Delivery",
+          "body": "Global logistics efficiency has reached a point where shipping a kilogram of beef 20,000 kilometers from Argentina to China costs roughly 50 cents, less than a typical local food delivery fee. This extreme cost reduction is driven by massive container ships operating in international waters.",
+          "url": "https://x.com/imwsl90/status/2065099456987734018"
         }
       ]
     },
@@ -94,33 +89,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ActuFoot_: Thomas Partey Denied Canada Visa for World Cup",
-          "body": "Canada has refused entry to Ghanaian midfielder Thomas Partey due to his outstanding rape charges in London. As a result, he will miss Ghana's World Cup opening match against Panama in Toronto.",
-          "url": "https://x.com/ActuFoot_/status/2065479999092658402"
+          "title": "@BarackObama: US Men's National Team Begins 2026 World Cup",
+          "body": "Former President Barack Obama tweeted a message of support and good luck to the United States Men's National Team as they kick off their 2026 FIFA World Cup campaign.",
+          "url": "https://x.com/BarackObama/status/2065597832975770026"
         },
         {
-          "tag": "update",
-          "title": "@iMiaSanMia: Bayern Munich to Extend Michael Olise",
-          "body": "Following a stellar season that saw Michael Olise win Player of the Season and the double, Bayern Munich is moving to extend his contract until 2031. The club is reportedly prepared to nearly double his salary to ward off outside interest.",
-          "url": "https://x.com/iMiaSanMia/status/2065480352076804177"
+          "tag": "hot",
+          "title": "@FOXSports: 2026 FIFA World Cup Opening Match",
+          "body": "The 2026 FIFA World Cup has officially commenced, opening with a highly anticipated and action-packed match between Mexico and South Africa.",
+          "url": "https://x.com/FOXSports/status/2065195623687827788"
         },
         {
           "tag": "new",
-          "title": "@DanHollick: 'Making Software' Book Enters Early Access",
-          "body": "After thousands of hours of work, 70,000 words, and over 600 illustrations, 'Making Software' has been released in early access. The highly anticipated resource aims to provide deep visual and technical insights into software engineering.",
-          "url": "https://x.com/DanHollick/status/2062880181719847263"
+          "title": "@MickyJnr__: FIFA Forces Egypt to Remove Jersey Stars",
+          "body": "FIFA has mandated that the Egyptian national team remove the seven stars from their jerseys before their opening match against Belgium. The stars, which commemorate Egypt's record seven AFCON titles, violate FIFA's strict uniform regulations for the World Cup.",
+          "url": "https://x.com/MickyJnr__/status/2065737396642079153"
+        },
+        {
+          "tag": "update",
+          "title": "@TouchlineX: Kylian Mbappé Praises Rising Star Michael Olise",
+          "body": "French football star Kylian Mbappé spoke highly of his international teammate Michael Olise, praising his elegance, vision, and grounded personality. Mbappé emphasized that despite Olise's introverted nature with the media, his extraordinary on-pitch abilities speak volumes.",
+          "url": "https://x.com/TouchlineX/status/2065657311880688086"
         },
         {
           "tag": "hot",
-          "title": "@kiteandkeymedia: The Flaws in Natural Gas Forecasting",
-          "body": "A new retrospective video highlights how historically inaccurate energy predictions have been, such as the White House's 1977 claim that the US would run out of natural gas by the early 21st century. The reality saw a massive surge in production instead.",
-          "url": "https://x.com/kiteandkeymedia/status/2039191272263708984"
-        },
-        {
-          "tag": "hot",
-          "title": "@DaveBondyTV: Homeowner Hospitalized in Squatter Incident",
-          "body": "A Flint, Michigan homeowner was hospitalized while squatters ransacked her property, prompting outrage. Neighbors report that local authorities have been unable or unwilling to intervene, shedding light on growing property rights issues.",
-          "url": "https://x.com/DaveBondyTV/status/2065446937159966751"
+          "title": "@yantanzhang: SpaceX Engineer Sparks Debate on Professional Appearance",
+          "body": "SpaceX engineer Guo Can has gone viral on Chinese social media for her casual attire and tattoos, sparking a debate about women's empowerment in STEM. Observers are questioning whether focusing on her physical appearance distracts from her technical achievements as a leading aerospace engineer.",
+          "url": "https://x.com/yantanzhang/status/2065338968951107600"
         }
       ]
     }
