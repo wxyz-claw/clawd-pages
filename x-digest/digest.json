@@ -3,12 +3,11 @@
   "date": "Saturday, June 13th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Anthropic Export Control Shockwave:</strong> A US Commerce Department directive has suspended global and foreign-national access to Anthropic's Fable 5 and Mythos 5 models following jailbreak reports, severely disrupting AI frontier development.",
-    "<strong>Elon Musk Hits $1 Trillion:</strong> The SpaceX and Tesla CEO has become the world's first trillionaire as valuations soar, sparking widespread global reactions and contrasting with his modest lifestyle.",
-    "<strong>Google's New Agent Standard:</strong> Google has unveiled the Open Knowledge Format (OKF), a standardized directory of markdown files designed to act as a living wiki and digital brain for AI agents.",
-    "<strong>Meta's Internal AI Turmoil:</strong> Meta has restructured its AI division, cutting 10% of its workforce and drafting thousands of engineers to generate AI training data under heavy surveillance, leading to intense internal backlash.",
-    "<strong>2026 FIFA World Cup Kicks Off:</strong> The much-anticipated 2026 World Cup has begun with an opening match between Mexico and South Africa, while FIFA enforces strict kit regulations on teams like Egypt.",
-    "<strong>Geopolitical Escalation in Iran:</strong> President Trump has launched military action against Iran citing the need to eliminate its nuclear capabilities, marking a major escalation in the Middle East."
+    "<strong>SpaceX IPO & Musk's Trillion-Dollar Milestone:</strong> SpaceX completes a historic IPO, expanding its AI partnership with Nvidia, propelling Elon Musk's net worth past the $1 trillion mark amidst scrutiny over employee equity.",
+    "<strong>Global AI Access Restrictions:</strong> Rising geopolitical tensions lead to strict regulatory actions, notably the U.S. government temporarily restricting Claude Fable 5 and top researchers like Andrej Karpathy facing citizenship-based access bans.",
+    "<strong>Open-Source AI Milestones:</strong> In response to frontier model restrictions, Zhipu AI officially open-sources its highly capable GLM-5.2 model under the MIT license, pushing for borderless AI development.",
+    "<strong>Meta's Cultural AI Shift:</strong> Meta faces significant internal backlash after restructuring 10% of its workforce to manually generate AI training data in what employees are describing as a soul-crushing pivot.",
+    "<strong>World Cup 2026 Cultural Moments:</strong> As the World Cup heats up, players like Kylian Mbappé and Michael Olise draw spotlight for their unselfish playstyle, alongside nostalgic debates on football intelligence by legends like Zlatan Ibrahimović."
   ],
   "sections": [
     {
@@ -17,33 +16,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@IntCyberDigest: US Suspends Global Access to Anthropic Fable 5",
-          "body": "Following reports of jailbreaking by Amazon researchers, Commerce Secretary Howard Lutnick issued an export control directive forcing Anthropic to disable global access to Fable 5 and Mythos 5. Anthropic is actively fighting the directive, which follows previous attempts by the Trump administration to delay model releases.",
-          "url": "https://x.com/IntCyberDigest/status/2065702754434064851"
+          "title": "@PolymarketMoney: Andrej Karpathy Barred from Anthropic Model",
+          "body": "Top AI scientist Andrej Karpathy is reportedly barred from accessing Anthropic's most advanced AI model due to citizenship restrictions. This highlights the growing geopolitical walls and strict export controls being placed around frontier intelligence.",
+          "url": "https://x.com/PolymarketMoney/status/2065801798137545076"
+        },
+        {
+          "tag": "new",
+          "title": "@Zai_org: GLM-5.2 Officially Open-Sourced",
+          "body": "Zhipu AI has open-sourced its flagship GLM-5.2 model under the MIT License, featuring a 1M-context window and strong coding capabilities. The move is explicitly framed as a countermeasure against the sudden restriction of frontier models.",
+          "url": "https://x.com/Zai_org/status/2065704919299235870"
         },
         {
           "tag": "update",
-          "title": "@scaling01: Foreign AI Researchers Locked Out of Frontier Models",
-          "body": "The recent export control directive on Anthropic models prohibits any foreign national, including those employed by Anthropic on US work visas, from accessing Fable 5 and Mythos 5. This restriction severely cripples the productivity of frontier AI labs and threatens to shift the balance of AI leadership to global competitors like China.",
-          "url": "https://x.com/scaling01/status/2065607360115302639"
-        },
-        {
-          "tag": "new",
-          "title": "@Marie_Haynes: Google Introduces Open Knowledge Format (OKF)",
-          "body": "Google has launched the Open Knowledge Format, a standardized way to store interconnected information in markdown directories, serving as a 'digital brain' for AI agents. This protocol allows AI to easily query and edit a living wiki, potentially disrupting popular note-taking platforms like Notion and Obsidian.",
-          "url": "https://x.com/Marie_Haynes/status/2065531158356717721"
-        },
-        {
-          "tag": "hot",
-          "title": "@LayoffAI: Meta Reassigns 6,500 Engineers to AI Data Labeling",
-          "body": "Amid a restructuring that cut 8,000 jobs, Meta has drafted over 6,500 engineers and product managers to write puzzles and code to train AI models. The reassignment, paired with strict keystroke monitoring for training data generation, has reportedly caused morale to plummet and prompted an internal petition from over 1,600 employees.",
+          "title": "@LayoffAI: Meta's Internal AI Restructuring and Morale Crisis",
+          "body": "A recent reorganization at Meta has shifted thousands of engineers into an 'Applied AI' unit focused solely on generating training data and writing puzzles for models. Internal morale is reportedly plummeting, with heavy pushback against mandatory keystroke logging.",
           "url": "https://x.com/LayoffAI/status/2065598432652472605"
         },
         {
+          "tag": "hot",
+          "title": "@AYi_AInotes: Claude Fable 5 Vulnerabilities Lead to Export Controls",
+          "body": "Detailed prompt-injection vulnerabilities in Claude Fable 5 allowed users to bypass safety guardrails using multi-agent workflows. This public exposition directly triggered swift U.S. government export controls and a global shutdown of the model.",
+          "url": "https://x.com/AYi_AInotes/status/2065666897077576032"
+        },
+        {
           "tag": "new",
-          "title": "@Zai_org: GLM-5.2 Model Open-Sourcing Next Week",
-          "body": "Zhipu AI has made its flagship GLM-5.2 model available to GLM Coding Plan users, featuring 1M-context support and powerful coding capabilities. The model will be officially open-sourced under the MIT License next week, reinforcing the push for open and accessible AI development.",
-          "url": "https://x.com/Zai_org/status/2065704919299235870"
+          "title": "@prz_chojecki: Kimi 2.7 Benchmarks Show Strong Performance",
+          "body": "Recent ErdosBench tests show Kimi 2.7 performing exceptionally well on complex reasoning tasks. It currently ranks second overall, trailing only the heavily restricted Fable 5 and surpassing GPT-5 xhigh.",
+          "url": "https://x.com/prz_chojecki/status/2065741640635990128"
         }
       ]
     },
@@ -53,33 +52,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@AlphaWizarDD: Elon Musk Becomes First Trillionaire",
-          "body": "Elon Musk's net worth has surpassed the $1 trillion mark, making him the world's first trillionaire. The milestone highlights his immense wealth generated through SpaceX and Tesla, sharply contrasting with his famously modest lifestyle in a $50,000 prefab home in Texas.",
-          "url": "https://x.com/AlphaWizarDD/status/2065665915937812748"
+          "title": "@elonmusk: SpaceX Historic IPO and Expanded Nvidia Partnership",
+          "body": "Following a highly anticipated and historic public offering, SpaceX has reinforced its decade-long strategic partnership with Nvidia. The alliance aims to heavily integrate accelerated computing into the future of space exploration.",
+          "url": "https://x.com/elonmusk/status/2065547393974636647"
         },
         {
-          "tag": "hot",
-          "title": "@mark_dow: US Launches War in Iran Over Nuclear Capacity",
-          "body": "President Trump has initiated military action against Iran, citing the need to eliminate the country's nuclear capabilities following a recent Israeli strike. The conflict marks a major escalation in a decade-long geopolitical saga that began with the cancellation of the 2015 Obama-era nuclear agreement.",
-          "url": "https://x.com/mark_dow/status/2065072457795637336"
-        },
-        {
-          "tag": "new",
-          "title": "@CryptoDoggyCN: SpaceX Welder's Shares Worth $1.05 Million",
-          "body": "A former SpaceX welder has gained viral attention after it was revealed his early equity incentives of 6,500 shares are now valued at over $1.05 million. He has since transitioned to Blue Origin, demonstrating the massive financial upside for blue-collar workers in the commercial space sector.",
-          "url": "https://x.com/CryptoDoggyCN/status/2065595535738995070"
-        },
-        {
-          "tag": "hot",
-          "title": "@pangyusio: The 'Goose Leg Auntie' $3 Million Arbitrage",
-          "body": "A street vendor famous for selling roasted 'goose legs' near Peking University was exposed after a decade for actually selling cheaper duck legs, having amassed over 20 million RMB in profit. The viral story highlights how early small business owners leveraged information asymmetry and platform traffic to build massive wealth.",
-          "url": "https://x.com/pangyusio/status/2065281852731170823"
+          "tag": "update",
+          "title": "@quarktalksss: Elon Musk's Net Worth Crosses $1 Trillion Milestone",
+          "body": "Elon Musk's net worth has officially surpassed $1 trillion following recent market valuations. The milestone has sparked polarized global reactions, exposing stark ideological divides regarding extreme wealth concentration.",
+          "url": "https://x.com/quarktalksss/status/2065609518684504557"
         },
         {
           "tag": "new",
-          "title": "@imwsl90: Global Shipping Costs Cheaper Than Local Delivery",
-          "body": "Global logistics efficiency has reached a point where shipping a kilogram of beef 20,000 kilometers from Argentina to China costs roughly 50 cents, less than a typical local food delivery fee. This extreme cost reduction is driven by massive container ships operating in international waters.",
-          "url": "https://x.com/imwsl90/status/2065099456987734018"
+          "title": "@Camp4: Analysis of SpaceX Employee Equity Following IPO",
+          "body": "Discussions surrounding the SpaceX IPO have highlighted surprising disparities in early employee equity. Key early employees from 2002 reportedly hold fractionally smaller percentages than market expectations, sparking conversations on startup dilution.",
+          "url": "https://x.com/Camp4/status/2065792531237875882"
+        },
+        {
+          "tag": "hot",
+          "title": "@kevinxu: The Changing Purchasing Power of $1 Million (1995 vs. 2026)",
+          "body": "A viral reflection on how the purchasing power of $1 million has drastically degraded over thirty years. What once bought early retirement and a forever home is now viewed as insufficient for basic financial independence.",
+          "url": "https://x.com/kevinxu/status/2065657614374215834"
         }
       ]
     },
@@ -89,33 +82,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@BarackObama: US Men's National Team Begins 2026 World Cup",
-          "body": "Former President Barack Obama tweeted a message of support and good luck to the United States Men's National Team as they kick off their 2026 FIFA World Cup campaign.",
-          "url": "https://x.com/BarackObama/status/2065597832975770026"
-        },
-        {
-          "tag": "hot",
-          "title": "@FOXSports: 2026 FIFA World Cup Opening Match",
-          "body": "The 2026 FIFA World Cup has officially commenced, opening with a highly anticipated and action-packed match between Mexico and South Africa.",
-          "url": "https://x.com/FOXSports/status/2065195623687827788"
+          "title": "@FabrizioRomano: Kylian Mbappé Values World Cup Over Personal Stats",
+          "body": "When asked if he would accept scoring zero goals in exchange for a French World Cup victory, Kylian Mbappé enthusiastically agreed. The statement reinforces his shift toward team-oriented success over individual accolades.",
+          "url": "https://x.com/FabrizioRomano/status/2065254297009279424"
         },
         {
           "tag": "new",
-          "title": "@MickyJnr__: FIFA Forces Egypt to Remove Jersey Stars",
-          "body": "FIFA has mandated that the Egyptian national team remove the seven stars from their jerseys before their opening match against Belgium. The stars, which commemorate Egypt's record seven AFCON titles, violate FIFA's strict uniform regulations for the World Cup.",
-          "url": "https://x.com/MickyJnr__/status/2065737396642079153"
-        },
-        {
-          "tag": "update",
-          "title": "@TouchlineX: Kylian Mbappé Praises Rising Star Michael Olise",
-          "body": "French football star Kylian Mbappé spoke highly of his international teammate Michael Olise, praising his elegance, vision, and grounded personality. Mbappé emphasized that despite Olise's introverted nature with the media, his extraordinary on-pitch abilities speak volumes.",
+          "title": "@TouchlineX: Mbappé Praises Michael Olise's Vision and Demeanor",
+          "body": "Mbappé offered high praise for teammate Michael Olise, lauding his elegance and football vision. He also highlighted Olise's quiet, introverted nature, noting that the young star prefers to let his performance speak for him.",
           "url": "https://x.com/TouchlineX/status/2065657311880688086"
         },
         {
           "tag": "hot",
-          "title": "@yantanzhang: SpaceX Engineer Sparks Debate on Professional Appearance",
-          "body": "SpaceX engineer Guo Can has gone viral on Chinese social media for her casual attire and tattoos, sparking a debate about women's empowerment in STEM. Observers are questioning whether focusing on her physical appearance distracts from her technical achievements as a leading aerospace engineer.",
-          "url": "https://x.com/yantanzhang/status/2065338968951107600"
+          "title": "@fcb_elias1: Zlatan Ibrahimović on the Football Intelligence of Messi vs. Ronaldo",
+          "body": "In a viral exchange, Zlatan Ibrahimović argued that football greatness is defined by vision rather than mere statistics. He praised Lionel Messi for understanding and seeing the game on a fundamentally different level than his peers.",
+          "url": "https://x.com/fcb_elias1/status/2065812980432851414"
+        },
+        {
+          "tag": "update",
+          "title": "@turingou: Philosophical Reflections on Wealth, Challenge, and Creation",
+          "body": "A deep dive into how humans find purpose when freed from survival pressures. The essay argues that while pleasure is fleeting, continuous creation and embracing difficult challenges remain the true drivers of long-term fulfillment.",
+          "url": "https://x.com/turingou/status/2065448594170347946"
         }
       ]
     }
