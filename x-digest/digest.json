@@ -1,13 +1,14 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, June 18th, 2026",
+  "date": "Friday, June 19th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Geopolitical Shift:</strong> A controversial US-Iran ceasefire agreement brokered by the Trump administration is dominating discourse, drawing intense bipartisan criticism for unfreezing assets without dismantling Iran's nuclear capabilities, while defenders praise the avoidance of a prolonged ground war.",
-    "<strong>OpenAI's Major Hire:</strong> Legendary AI researcher and Transformer co-author Noam Shazeer has officially left Google to join OpenAI as the lead for architecture research, signaling a massive talent acquisition in the race toward AGI.",
-    "<strong>Grok's Enterprise Expansion:</strong> Elon Musk's xAI is aggressively scaling its infrastructure footprint, making the Grok model available across all major cloud providers (AWS, Google Cloud, Azure, Oracle) while teasing advanced developer-focused code review capabilities.",
-    "<strong>Regulatory Alarms:</strong> A proposed SEC rule (S7-2026-15) is sparking severe backlash in financial circles, with critics warning it could allow public companies to delay the reporting of negative financial metrics, heavily favoring corporate insiders over retail investors.",
-    "<strong>AI Hardware Evolution:</strong> A novel 'app-less' AI smartphone has launched across 5,000 retail locations in Japan, utilizing a system-wide, context-aware agent designed to eliminate traditional app silos."
+    "<strong>Local AI SOTA:</strong> Zhipu's GLM 5.2 model launches with performance rivaling OpenAI's and Anthropic's flagship models, running 100% locally on Apple Silicon and deployed on Ollama via Blackwell GPUs.",
+    "<strong>US-Iran Negotiations Collapse:</strong> Iran halts the 60-day diplomatic talks framework and cancels the Switzerland delegation meeting over Israeli strikes in Lebanon, leading to US Vice President Vance also canceling his travel.",
+    "<strong>Developer Tools:</strong> OpenAI introduces 'Record & Replay' for Codex on macOS, enabling users to record manual desktop workflows and automatically compile them into reusable agent skills.",
+    "<strong>Regulatory Backlash:</strong> Financial circles raise alarm over proposed SEC Rule S7-2026-15, which could allow public companies to delay reporting negative financial metrics for up to six months.",
+    "<strong>LLM Genealogy:</strong> Tech historians trace the roots of China's current AI ecosystem back to the 2018 founding of BAAI (智源) and early scaling law research at Baidu and Tsinghua.",
+    "<strong>World Cup Drama:</strong> Underdog Cape Verde holds Spain to a shocking 0-0 draw, while discussions intensify over Lionel Messi's tactical off-the-ball playstyle versus Cristiano Ronaldo's goal-scoring rigidity."
   ],
   "sections": [
     {
@@ -16,33 +17,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@markchen90: Noam Shazeer Joins OpenAI",
-          "body": "Former Google researcher and Transformer architecture co-author Noam Shazeer has officially joined OpenAI to lead architecture research. Shazeer's foundational work on Mixture of Experts (MoE) and efficient decoding is expected to heavily influence OpenAI's strategic roadmap toward AGI.",
-          "url": "https://x.com/markchen90/status/2067402457500758375"
+          "title": "@AlexFinn: Local GLM 5.2 Launch",
+          "body": "Zhipu AI has launched GLM 5.2, an open-weights model capable of running locally on Apple Silicon. Early testing indicates performance rivaling proprietary models like Claude Opus 4.8, marking a significant milestone for private, local superintelligence.",
+          "url": "https://x.com/AlexFinn/status/2067751557379297762"
         },
         {
           "tag": "new",
-          "title": "@elonmusk: Grok Expands to Major Cloud Providers",
-          "body": "xAI's Grok model is expanding its enterprise availability by integrating natively with major cloud platforms, including AWS Bedrock, Google Vertex, Oracle, and Azure. This infrastructure expansion establishes Grok as a highly accessible alternative to OpenAI and Anthropic for enterprise developers.",
-          "url": "https://x.com/elonmusk/status/2067290524206453099"
+          "title": "@OpenAIDevs: Codex Record & Replay",
+          "body": "OpenAI has introduced a 'Record & Replay' feature for Codex on macOS. The tool records manual desktop workflows—like filing expenses or submitting requests—and automatically converts them into inspectable, reusable agent skills.",
+          "url": "https://x.com/OpenAIDevs/status/2067681320281723113"
         },
         {
           "tag": "update",
-          "title": "@framer: Framer 3.0 Launch",
-          "body": "Framer has released version 3.0, introducing a major redesign alongside new built-in AI Agent capabilities, project branching, and collaborative community features. The update signals the platform's continued push to embed agentic AI directly into the professional web design workflow.",
-          "url": "https://x.com/framer/status/2066939366568804508"
+          "title": "@pankajkumar_dev: GPT-5.6 Pro Leak",
+          "body": "Leaks suggest OpenAI is preparing to release the GPT-5.6 series by late June. Early testers report massive improvements in SVG and 3D generation, as well as superior image understanding and design replication capabilities.",
+          "url": "https://x.com/pankajkumar_dev/status/2067675759075074138"
         },
         {
           "tag": "new",
-          "title": "@Jerryshengyue: App-Less AI Smartphone Debuts in Japan",
-          "body": "A new paradigm in mobile computing is rolling out in Japan, featuring an 'app-less' smartphone powered entirely by a context-aware AI agent. The hardware aims to break down data silos inherent in traditional app-based operating systems, launching immediately across 5,000 retail locations.",
-          "url": "https://x.com/Jerryshengyue/status/2049739266482450522"
+          "title": "@googlecloud: Agent UI Protocol (A2UI)",
+          "body": "Google Cloud has announced support for the Agent-to-UI protocol (A2UI). The protocol enables custom enterprise agents to dynamically generate native, interactive UI components directly within the Gemini Enterprise application.",
+          "url": "https://x.com/googlecloud/status/2060436009574142313"
         },
         {
-          "tag": "update",
-          "title": "@elonmusk: Grok Build 0.1 Code Review Progress",
-          "body": "Elon Musk teased upcoming developer-centric features for xAI, noting that Grok Build 0.1 is demonstrating rapid progress in automated code review tasks. This indicates xAI is explicitly targeting software engineering optimization as a primary enterprise use case.",
-          "url": "https://x.com/elonmusk/status/2067432573836652699"
+          "tag": "hot",
+          "title": "@vidyamadhavan2: Perplexity Valuation Surge",
+          "body": "Perplexity AI has reached a $22 billion valuation with a $450 million ARR. Despite lacking the general catchphrase familiarity of ChatGPT or Claude, its massive enterprise adoption has quietly made it one of the most financially successful AI products.",
+          "url": "https://x.com/vidyamadhavan2/status/2067500595817353289"
         }
       ]
     },
@@ -52,33 +53,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ABlinken: Blinken Condemns US-Iran Ceasefire",
-          "body": "Former Secretary of State Antony Blinken released a scathing critique of the newly signed US-Iran ceasefire agreement, labeling it a strategic failure. He argued the deal unfreezes billions in assets and leaves Iran's nuclear infrastructure intact without securing long-term American or allied interests.",
-          "url": "https://x.com/ABlinken/status/2067289757076603033"
+          "title": "@allenanalysis: US-Iran Talks Suspended",
+          "body": "Iran has halted its 60-day negotiation framework with the United States and canceled its delegation's trip to Switzerland. Tehran claims recent Israeli strikes in Lebanon violated the first clause of the newly signed memorandum of understanding.",
+          "url": "https://x.com/allenanalysis/status/2067744654343242216"
         },
         {
-          "tag": "new",
-          "title": "@keepitquarterly: Controversial SEC Rule S7-2026-15",
-          "body": "Financial commentators are raising alarms over proposed SEC Rule S7-2026-15, which could allow public companies to obscure negative financial data for up to six months. Critics warn the rule would create severe information asymmetry, potentially enabling insider trading while leaving retail investors vulnerable.",
+          "tag": "hot",
+          "title": "@keepitquarterly: Delayed Reporting Rule",
+          "body": "Public criticism is mounting against proposed SEC Rule S7-2026-15, which would permit public corporations to withhold negative financial results for up to six months. Critics warn this heavily disadvantages retail investors while enabling corporate insider selling.",
           "url": "https://x.com/keepitquarterly/status/2063273442103922979"
         },
         {
-          "tag": "hot",
-          "title": "@Xking332: Trump's Pivot on Iran Policy",
-          "body": "Political analysts are highlighting a dramatic pivot in Donald Trump's rhetoric regarding Iran following the recent ceasefire agreement. Reports indicate a sharp departure from his previously hawkish stance, with the President making newly conciliatory statements defending Iran's right to ballistic missiles and unfrozen funds.",
-          "url": "https://x.com/Xking332/status/2067445418326397283"
+          "tag": "new",
+          "title": "@CodyC64: Protect College Sports Act",
+          "body": "The Protect College Sports Act has passed the Senate Commerce Committee with a 19-9 vote, clearing the way for a potential vote on the Senate floor. The bill marks the first viable bipartisan effort to negotiate federal standards for college sports.",
+          "url": "https://x.com/CodyC64/status/2067631801988710770"
         },
         {
           "tag": "update",
-          "title": "@Jaredhowe: Conservative Defense of the Iran Deal",
-          "body": "Defenders of the recent US-Iran ceasefire argue the agreement successfully averts a multi-trillion dollar quagmire and permanent military occupation. Proponents claim the deal will stabilize global energy markets and allow the US to focus on countering China and Russia without maintaining boots on the ground in the Middle East.",
-          "url": "https://x.com/Jaredhowe/status/2067403139410547128"
-        },
-        {
-          "tag": "hot",
-          "title": "@SenBillCassidy: Bipartisan Unease Over Iran Concessions",
-          "body": "Republican Senator Bill Cassidy publicly condemned the Trump administration's Iran deal as the 'worst foreign policy blunder in decades.' His criticism of the lifted sanctions and uncurbed nuclear ambitions highlights growing internal party fractures and bipartisan unease regarding the administration's foreign policy.",
-          "url": "https://x.com/SenBillCassidy/status/2067318744552997372"
+          "title": "@DataStorageCorp: DTST Divestiture Highlights",
+          "body": "Data Storage Corp ($DTST) reported strong 2025 results, highlighted by the completion of a $40 million CloudFirst divestiture, a $29.3 million tender offer return to shareholders, and record net income of $19.2 million.",
+          "url": "https://x.com/DataStorageCorp/status/2055986483874472264"
         }
       ]
     },
@@ -88,33 +83,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@sa10nee: Zendaya Prioritizes Career Over Children",
-          "body": "In a recent interview, Zendaya confirmed her marriage to Tom Holland while stating they have mutually agreed not to have children in order to prioritize her career. Her candid remarks on safeguarding her professional trajectory have sparked widespread cultural discussions on modern marriage dynamics.",
-          "url": "https://x.com/sa10nee/status/2067511999471255620"
-        },
-        {
-          "tag": "new",
-          "title": "@Rococo90933671: Exposé on Illegal Internet Addiction Camps",
-          "body": "A viral exposé detailed the harrowing experience of a 26-year-old Chinese esports booster who was deceived by his mother into an illegal, abusive 'internet addiction' correction facility. The incident has ignited public outrage over the lack of regulation for such extrajudicial camps and the extreme control exerted by overbearing parents.",
-          "url": "https://x.com/Rococo90933671/status/2067125472765640796"
-        },
-        {
-          "tag": "hot",
-          "title": "@nini_incrypto_: Psychological Profile of Justin Sun",
-          "body": "A fascinating psychological profile of crypto founder Justin Sun emerged from his ex-girlfriend, describing him as relentlessly logical, devoid of emotional outbursts, and entirely focused on data. The account paints a picture of a hyper-resilient entrepreneur who views every setback strictly as a lack of personal leverage.",
-          "url": "https://x.com/nini_incrypto_/status/2067170130027848047"
-        },
-        {
-          "tag": "new",
-          "title": "@lidangzzz: Viral Advice Urging Women into STEM",
-          "body": "A prominent Chinese influencer's pragmatic manifesto urging young women to strictly pursue STEM degrees—regardless of their initial aptitude—has gone viral. The commentary argues that technical skills in hardware or software engineering provide an irreplaceable economic safety net compared to increasingly precarious humanities degrees.",
-          "url": "https://x.com/lidangzzz/status/2067072644202082815"
+          "title": "@FOXSoccer: Cape Verde Holds Spain",
+          "body": "In a historic World Cup upset, underdog Cape Verde held soccer powerhouse Spain to a scoreless 0-0 draw. Goalkeeper Vozinha made several critical saves to secure the points, shocking fans worldwide.",
+          "url": "https://x.com/FOXSoccer/status/2066581036465639605"
         },
         {
           "tag": "update",
-          "title": "@NigelYu3: Gig Economy Precarity Highlighted by Viral Incident",
-          "body": "A minor altercation over an elevator button between a Chinese delivery driver and an elderly resident rapidly escalated, resulting in the driver losing his platform account and livelihood. The tragicomic incident has struck a chord online, underscoring the extreme precarity of gig economy work and harsh algorithmic penalization.",
-          "url": "https://x.com/NigelYu3/status/2067047676861112779"
+          "title": "@Compute_King: China LLM Genealogy",
+          "body": "A deep dive traces the roots of Chinese large language models (like CPM, GLM, and Qwen) back to the 2018 establishment of the non-profit Beijing Academy of Artificial Intelligence (BAAI) and early deep learning engineering at Baidu and Tsinghua.",
+          "url": "https://x.com/Compute_King/status/2067407487624691991"
+        },
+        {
+          "tag": "update",
+          "title": "@ESPNFC: Messi vs. Ronaldo Playstyles",
+          "body": "Pundits analyze the contrasting aging trajectories of Lionel Messi and Cristiano Ronaldo. Analysts argue Messi's intelligence and 'off-the-ball' walk-and-stand movement allow him to age better tactically compared to Ronaldo's physical, penalty-box-bound role.",
+          "url": "https://x.com/ESPNFC/status/2067629574741975487"
+        },
+        {
+          "tag": "new",
+          "title": "@FabrizioRomano: Nico Williams Transfer Stance",
+          "body": "Highly coveted forward Nico Williams expressed his loyalty to Athletic Club, stating he would happily sign off on staying with the Spanish club until the end of his career, despite intense transfer speculation from larger European teams.",
+          "url": "https://x.com/FabrizioRomano/status/2067732031199391846"
+        },
+        {
+          "tag": "update",
+          "title": "@yuniyiqi8848: Huawei Store Courier Policy",
+          "body": "Controversy erupted in Shandong after a delivery courier was barred from entering a Huawei retail store to hand over a phone. The employee insisted the worker wait outside to avoid impacting business, drawing backlash from netizens online.",
+          "url": "https://x.com/yuniyiqi8848/status/2067517358936404340"
         }
       ]
     }
