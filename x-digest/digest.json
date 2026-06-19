@@ -3,12 +3,12 @@
   "date": "Friday, June 19th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Local AI SOTA:</strong> Zhipu's GLM 5.2 model launches with performance rivaling OpenAI's and Anthropic's flagship models, running 100% locally on Apple Silicon and deployed on Ollama via Blackwell GPUs.",
-    "<strong>US-Iran Negotiations Collapse:</strong> Iran halts the 60-day diplomatic talks framework and cancels the Switzerland delegation meeting over Israeli strikes in Lebanon, leading to US Vice President Vance also canceling his travel.",
-    "<strong>Developer Tools:</strong> OpenAI introduces 'Record & Replay' for Codex on macOS, enabling users to record manual desktop workflows and automatically compile them into reusable agent skills.",
-    "<strong>Regulatory Backlash:</strong> Financial circles raise alarm over proposed SEC Rule S7-2026-15, which could allow public companies to delay reporting negative financial metrics for up to six months.",
-    "<strong>LLM Genealogy:</strong> Tech historians trace the roots of China's current AI ecosystem back to the 2018 founding of BAAI (智源) and early scaling law research at Baidu and Tsinghua.",
-    "<strong>World Cup Drama:</strong> Underdog Cape Verde holds Spain to a shocking 0-0 draw, while discussions intensify over Lionel Messi's tactical off-the-ball playstyle versus Cristiano Ronaldo's goal-scoring rigidity."
+    "<strong>AI Talent War:</strong> Legendary researcher Noam Shazeer leaves Google to join OpenAI as lead for architecture research, intensifying the race towards next-generation AGI.",
+    "<strong>Local Superintelligence:</strong> Zhipu's open-weights GLM 5.2 model matches Claude Opus 4.8, running locally on Apple Silicon while Ollama doubles its Blackwell GPU cloud capacity to support scaling demand.",
+    "<strong>Codex Workflow Automation:</strong> OpenAI Codex introduces Record & Replay on macOS, allowing developers to convert manual desktop workflows into reusable, inspectable agent skills.",
+    "<strong>Portugal World Cup Camp Drama:</strong> Internal divisions emerge in Portugal's World Cup squad following João Neves' comments on Cristiano Ronaldo being an 'ordinary' player, which was supported by Bruno Fernandes.",
+    "<strong>Tunneling Infrastructure:</strong> Elon Musk highlights the Boring Company's engineering hiring push in Texas and Nevada, arguing that underground tunnels are under-appreciated solutions to traffic.",
+    "<strong>Visa Dispute Workarounds:</strong> Consumers share a simple email formula using Visa's global rules to bypass 90-day bank fraud investigations and reverse card-skimming losses in 48 hours."
   ],
   "sections": [
     {
@@ -17,33 +17,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@AlexFinn: Local GLM 5.2 Launch",
-          "body": "Zhipu AI has launched GLM 5.2, an open-weights model capable of running locally on Apple Silicon. Early testing indicates performance rivaling proprietary models like Claude Opus 4.8, marking a significant milestone for private, local superintelligence.",
+          "title": "@markchen90: Noam Shazeer Joins OpenAI",
+          "body": "OpenAI welcomes legendary Transformer co-author Noam Shazeer as its new lead for architecture research. His return to the frontier lab highlights the intense battle for top-tier talent to drive AGI-level model design.",
+          "url": "https://x.com/markchen90/status/2067402457500758375"
+        },
+        {
+          "tag": "hot",
+          "title": "@AlexFinn: Local GLM 5.2 Running on Mac Studio",
+          "body": "Zhipu's open-weights GLM 5.2 model is running 100% locally on Apple Silicon, with developers reporting performance exceeding Claude Opus 4.8. This represents a significant milestone for free, secure, and private local superintelligence.",
           "url": "https://x.com/AlexFinn/status/2067751557379297762"
         },
         {
           "tag": "new",
-          "title": "@OpenAIDevs: Codex Record & Replay",
-          "body": "OpenAI has introduced a 'Record & Replay' feature for Codex on macOS. The tool records manual desktop workflows—like filing expenses or submitting requests—and automatically converts them into inspectable, reusable agent skills.",
+          "title": "@ollama: GLM 5.2 Capacity Doubled on Blackwell GPUs",
+          "body": "Ollama has doubled its cloud GPU capacity in the US to handle the surge in GLM 5.2 usage, running on NVIDIA's cutting-edge B300 Blackwell hardware while emphasizing user privacy.",
+          "url": "https://x.com/ollama/status/2067730812645298626"
+        },
+        {
+          "tag": "new",
+          "title": "@OpenAIDevs: Codex Record & Replay on macOS",
+          "body": "OpenAI introduces a new feature allowing developers to record repetitive manual workflows, such as filing expense reports, and automatically convert them into inspectable, editable agent skills.",
           "url": "https://x.com/OpenAIDevs/status/2067681320281723113"
         },
         {
           "tag": "update",
-          "title": "@pankajkumar_dev: GPT-5.6 Pro Leak",
-          "body": "Leaks suggest OpenAI is preparing to release the GPT-5.6 series by late June. Early testers report massive improvements in SVG and 3D generation, as well as superior image understanding and design replication capabilities.",
-          "url": "https://x.com/pankajkumar_dev/status/2067675759075074138"
+          "title": "@chetaslua: OpenAI Tests GPT 5.6 Series",
+          "body": "Early reports suggest OpenAI is actively testing multiple variants of the upcoming GPT 5.6 series, prompting developers to compare difficult coding and logic prompts with older models.",
+          "url": "https://x.com/chetaslua/status/2067637980223905858"
         },
         {
-          "tag": "new",
-          "title": "@googlecloud: Agent UI Protocol (A2UI)",
-          "body": "Google Cloud has announced support for the Agent-to-UI protocol (A2UI). The protocol enables custom enterprise agents to dynamically generate native, interactive UI components directly within the Gemini Enterprise application.",
-          "url": "https://x.com/googlecloud/status/2060436009574142313"
-        },
-        {
-          "tag": "hot",
-          "title": "@vidyamadhavan2: Perplexity Valuation Surge",
-          "body": "Perplexity AI has reached a $22 billion valuation with a $450 million ARR. Despite lacking the general catchphrase familiarity of ChatGPT or Claude, its massive enterprise adoption has quietly made it one of the most financially successful AI products.",
-          "url": "https://x.com/vidyamadhavan2/status/2067500595817353289"
+          "tag": "update",
+          "title": "@shmidtqq: Anthropic CEO Dario Amodei on Scaling Costs",
+          "body": "A deep-dive podcast with Anthropic CEO Dario Amodei details the financial math of scaling frontier models, highlighting the potential for multi-billion dollar capital requirements and AI-generated code driving GitHub commits.",
+          "url": "https://x.com/shmidtqq/status/2067724728110854456"
         }
       ]
     },
@@ -52,28 +58,34 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "hot",
-          "title": "@allenanalysis: US-Iran Talks Suspended",
-          "body": "Iran has halted its 60-day negotiation framework with the United States and canceled its delegation's trip to Switzerland. Tehran claims recent Israeli strikes in Lebanon violated the first clause of the newly signed memorandum of understanding.",
-          "url": "https://x.com/allenanalysis/status/2067744654343242216"
-        },
-        {
-          "tag": "hot",
-          "title": "@keepitquarterly: Delayed Reporting Rule",
-          "body": "Public criticism is mounting against proposed SEC Rule S7-2026-15, which would permit public corporations to withhold negative financial results for up to six months. Critics warn this heavily disadvantages retail investors while enabling corporate insider selling.",
-          "url": "https://x.com/keepitquarterly/status/2063273442103922979"
-        },
-        {
           "tag": "new",
-          "title": "@CodyC64: Protect College Sports Act",
-          "body": "The Protect College Sports Act has passed the Senate Commerce Committee with a 19-9 vote, clearing the way for a potential vote on the Senate floor. The bill marks the first viable bipartisan effort to negotiate federal standards for college sports.",
-          "url": "https://x.com/CodyC64/status/2067631801988710770"
+          "title": "@elonmusk: Boring Company Engineering Recruitment",
+          "body": "Elon Musk advocates for underground tunnels as an under-appreciated solution to urban congestion, highlighting a hiring push for engineers to build the Prufrock tunneling machine.",
+          "url": "https://x.com/elonmusk/status/2067774433587011823"
+        },
+        {
+          "tag": "hot",
+          "title": "@whyyoutouzhele: Biden Recalls Xi Pacific Discussion",
+          "body": "Joe Biden recounts a diplomatic conversation where Chinese President Xi Jinping questioned America's claims to Pacific hegemony, showcasing long-term geopolitical tensions under the hood of trade policies.",
+          "url": "https://x.com/whyyoutouzhele/status/2067598202426282221"
         },
         {
           "tag": "update",
-          "title": "@DataStorageCorp: DTST Divestiture Highlights",
-          "body": "Data Storage Corp ($DTST) reported strong 2025 results, highlighted by the completion of a $40 million CloudFirst divestiture, a $29.3 million tender offer return to shareholders, and record net income of $19.2 million.",
-          "url": "https://x.com/DataStorageCorp/status/2055986483874472264"
+          "title": "@hrswatigupta: Visa Rules Bypass Bank Delays",
+          "body": "A viral thread explains how cardholders can invoke Visa's global rules to force immediate chargeback reversals on fraud, bypassing typical 90-day bank delays designed to preserve bank liquidity.",
+          "url": "https://x.com/hrswatigupta/status/2067789465410756713"
+        },
+        {
+          "tag": "update",
+          "title": "@williamlong: Henan Highway Law Enforcement Scam",
+          "body": "An expose reveals a sophisticated corruption ring where dispatchers coordinate with local highway officers to trap out-of-state cargo trucks, using administrative delays to extract exorbitant storage fees.",
+          "url": "https://x.com/williamlong/status/2067641282395259049"
+        },
+        {
+          "tag": "update",
+          "title": "@kiteandkeymedia: Geopolitical Stakes in the Strait of Hormuz",
+          "body": "A breakdown of global energy flow points out that the Strait of Hormuz controls 20% of the world's oil supply, 25% of LNG exports, and a third of global fertilizer production, making it a critical choke point.",
+          "url": "https://x.com/kiteandkeymedia/status/2064664622792392927"
         }
       ]
     },
@@ -83,33 +95,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FOXSoccer: Cape Verde Holds Spain",
-          "body": "In a historic World Cup upset, underdog Cape Verde held soccer powerhouse Spain to a scoreless 0-0 draw. Goalkeeper Vozinha made several critical saves to secure the points, shocking fans worldwide.",
-          "url": "https://x.com/FOXSoccer/status/2066581036465639605"
-        },
-        {
-          "tag": "update",
-          "title": "@Compute_King: China LLM Genealogy",
-          "body": "A deep dive traces the roots of Chinese large language models (like CPM, GLM, and Qwen) back to the 2018 establishment of the non-profit Beijing Academy of Artificial Intelligence (BAAI) and early deep learning engineering at Baidu and Tsinghua.",
-          "url": "https://x.com/Compute_King/status/2067407487624691991"
-        },
-        {
-          "tag": "update",
-          "title": "@ESPNFC: Messi vs. Ronaldo Playstyles",
-          "body": "Pundits analyze the contrasting aging trajectories of Lionel Messi and Cristiano Ronaldo. Analysts argue Messi's intelligence and 'off-the-ball' walk-and-stand movement allow him to age better tactically compared to Ronaldo's physical, penalty-box-bound role.",
-          "url": "https://x.com/ESPNFC/status/2067629574741975487"
+          "title": "@appiecule: Portugal Squad Friction Over Ronaldo",
+          "body": "Portugal's World Cup camp is facing intense media scrutiny after João Neves called Cristiano Ronaldo an ordinary player, with teammate Bruno Fernandes backing the statement. The comments have divided fans and put pressure on the squad.",
+          "url": "https://x.com/appiecule/status/2067731914098618641"
         },
         {
           "tag": "new",
-          "title": "@FabrizioRomano: Nico Williams Transfer Stance",
-          "body": "Highly coveted forward Nico Williams expressed his loyalty to Athletic Club, stating he would happily sign off on staying with the Spanish club until the end of his career, despite intense transfer speculation from larger European teams.",
+          "title": "@FabrizioRomano: Nico Williams commits to Athletic Club",
+          "body": "Nico Williams expresses his desire to stay at Athletic Club for the remainder of his career, a rare statement of long-term club loyalty in modern soccer that challenges transfer speculation.",
           "url": "https://x.com/FabrizioRomano/status/2067732031199391846"
         },
         {
           "tag": "update",
-          "title": "@yuniyiqi8848: Huawei Store Courier Policy",
-          "body": "Controversy erupted in Shandong after a delivery courier was barred from entering a Huawei retail store to hand over a phone. The employee insisted the worker wait outside to avoid impacting business, drawing backlash from netizens online.",
-          "url": "https://x.com/yuniyiqi8848/status/2067517358936404340"
+          "title": "@sporsAlll: Samuel Eto'o Recalls Guardiola Feud",
+          "body": "Former striker Samuel Eto'o shares details of his past conflicts with Pep Guardiola at Barcelona, reflecting on tactical disagreements and how Guardiola benched him to discipline his ego before his transfer to Inter.",
+          "url": "https://x.com/sporsAlll/status/2067625771393265954"
+        },
+        {
+          "tag": "hot",
+          "title": "@theMadridZone: Real Madrid Considers Michael Olise Bid",
+          "body": "Reports indicate Real Madrid is considering a record-breaking offer for Michael Olise. A potential transfer would complicate Bayern Munich's summer plans and reshuffle Madrid's attacking lineup.",
+          "url": "https://x.com/theMadridZone/status/2067901503478935906"
+        },
+        {
+          "tag": "new",
+          "title": "@WSJ: Tim Cook Tours Apple Prototype Archive",
+          "body": "To celebrate Apple's 50th anniversary, Tim Cook takes reporters on a tour of Apple's secret product archives, showcasing classic hardware designs and previously unreleased early prototypes.",
+          "url": "https://x.com/WSJ/status/2052455804511408385"
+        },
+        {
+          "tag": "update",
+          "title": "@whyyoutouzhele: Life Quality Comparisons on Chinese Social Media",
+          "body": "A comparative thread between the lifestyles of young people in South Korea and China sparks widespread discussion on economic growth, visa mobility, and cost-of-living differences.",
+          "url": "https://x.com/whyyoutouzhele/status/2067472376497938630"
         }
       ]
     }
