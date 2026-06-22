@@ -1,12 +1,13 @@
 {
-  "title": "X Feed Digest",
+  "title": "Clawd X Digest",
   "date": "Monday, June 22nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI workflow shift:</strong> The feed centered on how AI is changing real work, from OpenAI's rare-disease research and Google's Gemini interview pilot to posts arguing that prompt placement and tool choice matter more than generic vibe coding.",
-    "<strong>Macro risk:</strong> Iran and the Strait of Hormuz stayed in focus, with market posts treating shipping disruption and Middle East tension as live inputs for energy and risk assets.",
-    "<strong>Football overload:</strong> The rest of the timeline was dominated by World Cup and international football clips, especially first goals, viral reactions, and Lamine Yamal chatter.",
-    "<strong>Broad market tone:</strong> Sector commentary stayed constructive, with cyclicals leading while defensives and gold miners lagged."
+    "<strong>Agent Loops & Vibe Coding:</strong> Anthropic showcases 40-minute app builds using agent loops, while tech timelines debate GLM-5.2's cost-efficiency and the rise of high-access vibe coding.",
+    "<strong>SpaceX MSCI ESG Drama:</strong> Tech founders react to MSCI giving SpaceX the lowest possible ESG rating, amid debates on the physics of electric rocketry.",
+    "<strong>World Cup 2026 Drama:</strong> The FIFA World Cup dominates the general timeline, highlighted by Iran's disallowed innovative free-kick masterpiece vs Belgium and Uruguay's controversial equalizer against Cape Verde.",
+    "<strong>Heartwarming Apprenticing:</strong> A viral story from Wuxi, China, highlights a food stall owner offering an apprenticeship to an unemployed customer struggling to buy food.",
+    "<strong>Gen Z Corporate Calm:</strong> A popular office story details a Gen Z employee's deadpan response to a 4/10 performance evaluation, asking 'what does a 10 look like?' and leaving HR speechless."
   ],
   "sections": [
     {
@@ -14,28 +15,28 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "new",
-          "title": "@OpenAI: o3 Deep Research in clinical care",
-          "body": "OpenAI highlighted a NEJM AI study with Boston Children's Hospital and Harvard showing o3 Deep Research helping clinicians revisit unsolved rare pediatric disease cases. The signal is less about a benchmark and more about AI becoming useful in real clinical triage and literature review.",
-          "url": "https://x.com/OpenAI/status/2067625110199247353"
-        },
-        {
-          "tag": "update",
-          "title": "@Xudong07452910: Google tests Gemini in interviews",
-          "body": "Google is reportedly piloting Gemini in parts of software engineering interviews, reflecting a shift from banning AI in assessment to treating it as part of the job. The post argues the real skill is now using AI to build, verify, and debug software.",
-          "url": "https://x.com/Xudong07452910/status/2068635043006923208"
-        },
-        {
-          "tag": "update",
-          "title": "@VincentLogic: Karpathy's prompt workflow",
-          "body": "Karpathy's advice here is that long natural-language prompts are less efficient than putting the cursor on the right line and letting the model complete from local context. The takeaway is that AI coding quality depends heavily on where and how you supply context.",
-          "url": "https://x.com/VincentLogic/status/2068683635633668294"
-        },
-        {
           "tag": "hot",
-          "title": "@mylifcc: GLM-5.2 edges Claude Fable 5",
-          "body": "This post summarizes a model-vs-model result claiming GLM-5.2 topped a single-turn web design benchmark, with lower cost and MIT licensing. The interesting part is the explanation: layout awareness, Tailwind-heavy output, and stronger above-the-fold design made it win on user preference.",
-          "url": "https://x.com/mylifcc/status/2068678045200728309"
+          "title": "Elon Musk (@elonmusk)",
+          "body": "Elon Musk laughs at a 'vibecoding' demo featuring agentic code execution, highlighting the mainstreaming of coding entirely through AI prompts and high-access agents.",
+          "url": "https://x.com/elonmusk/status/2068885116064080018"
+        },
+        {
+          "tag": "new",
+          "title": "Theo - t3.gg (@theo)",
+          "body": "Tech creator Theo discusses the excitement around the open-weight GLM-5.2 model, but highlights that it remains cost-ineffective compared to Claude Opus 4.8 and GPT-5.5 in medium configurations.",
+          "url": "https://x.com/theo/status/2068533586131841072"
+        },
+        {
+          "tag": "update",
+          "title": "Anatoli Kopadze (@AnatoliKopadze)",
+          "body": "Anthropic engineers demonstrated building a full application in 40 minutes using Claude Code running in a multi-agent loop (planning, building, and judging), showcasing that execution loops are becoming more critical than model intelligence.",
+          "url": "https://x.com/AnatoliKopadze/status/2068690663919530207"
+        },
+        {
+          "tag": "update",
+          "title": "Supermicro (@Supermicro)",
+          "body": "Supermicro showcases their end-to-end AI Factory server solutions powered by NVIDIA's Blackwell GPUs, as reviewed by ServeTheHome.",
+          "url": "https://x.com/Supermicro/status/2057951165070131541"
         }
       ]
     },
@@ -45,33 +46,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Trump on the Strait of Hormuz",
-          "body": "Trump said there would be no tolls in the Strait of Hormuz unless imposed by and for the United States, keeping the shipping lane and Iran dispute front and center for energy markets.",
-          "url": "https://x.com/WatcherGuru/status/2068413385989861440"
-        },
-        {
-          "tag": "hot",
-          "title": "@Liv_Boeree: Hormuz closure chatter",
-          "body": "A widely shared repost claimed the Strait of Hormuz was closed over the weekend with limited operating windows starting Monday. Even as a social post rather than a formal bulletin, it shows how quickly the market is repricing geopolitical risk.",
-          "url": "https://x.com/Liv_Boeree/status/2068670553884430363"
-        },
-        {
-          "tag": "update",
-          "title": "@NateSilver538: Iran conflict grinds on",
-          "body": "Silver's read is blunt: the confrontation has become a real quagmire against Iran. That kind of framing tends to matter because it feeds expectations about duration, escalation, and policy response.",
-          "url": "https://x.com/NateSilver538/status/2068796182814511491"
-        },
-        {
-          "tag": "update",
-          "title": "@WallStCourier: Cyclicals still leading",
-          "body": "The sector note says the market remains constructive, with Industrials and Financials in very strong trend regimes while Health Care, Consumer Staples, and gold miners lag. The message is that risk appetite is still tilted toward cyclicals.",
-          "url": "https://x.com/WallStCourier/status/2068759614271766733"
+          "title": "Austen Allred (@Austen)",
+          "body": "MSCI handed SpaceX its lowest possible ESG rating, drawing reactions from tech founders, while Elon Musk reiterates that electric rocketry is physically impossible due to propulsive constraints.",
+          "url": "https://x.com/Austen/status/2068705187447861656"
         },
         {
           "tag": "new",
-          "title": "@TheAroraReport: Mania can outlast caution",
-          "body": "A short market quote warns that AI, space, and options manias can last longer than expected, but asks whether investors are positioned for the turn. It is a simple reminder that momentum and risk can stay extended.",
-          "url": "https://x.com/TheAroraReport/status/2062278386450346208"
+          "title": "Think Big PAC (@thinkbig_pac)",
+          "body": "A political action committee targets Assemblymember Alex Bores' comments surrounding his departure from Palantir, claiming the reasons cited were incorrect.",
+          "url": "https://x.com/thinkbig_pac/status/2058967167396086076"
+        },
+        {
+          "tag": "update",
+          "title": "Isaac (@isaacrrr7)",
+          "body": "A viral clip summarizing the current economic and political state of Europe highlights growing concerns over regional competitiveness and energy policies.",
+          "url": "https://x.com/isaacrrr7/status/2068776964358312178"
+        },
+        {
+          "tag": "hot",
+          "title": "Elon Musk (@elonmusk)",
+          "body": "Elon Musk endorses El Salvador's President Nayib Bukele's straightforward, zero-tolerance security policies, asserting that they have been proven to work every time.",
+          "url": "https://x.com/elonmusk/status/2068845321984053656"
         }
       ]
     },
@@ -81,33 +76,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FabrizioRomano: Endrick puts the team first",
-          "body": "Endrick is quoted saying Ancelotti will do what is best for the team, not for individual players or fan wishes. It is a standard squad-selection quote, but it also signals the pressure around Real Madrid's lineup decisions.",
-          "url": "https://x.com/FabrizioRomano/status/2068575139797885123"
+          "title": "Ashraf Garda Champion South Africa (@AshrafGarda)",
+          "body": "Iran's innovative and highly choreographed free kick goal against Belgium at the World Cup 2026 was ruled out for offside, sparking widespread discussions on tournament officiating.",
+          "url": "https://x.com/AshrafGarda/status/2068788838927831100"
         },
         {
           "tag": "hot",
-          "title": "@heis_fede: Japan coach stunned by goal four",
-          "body": "The clip captures Japan's coach reacting to his side scoring a fourth goal against Tunisia. It is the kind of viral sports moment that spread the fastest in this feed.",
-          "url": "https://x.com/heis_fede/status/2068572157047640198"
+          "title": "Error ArbitraI (@ErrorArbitralTR)",
+          "body": "Uruguay scored a controversial equalizing goal against Cape Verde after an Uruguayan player abandoned a Cape Verde player he was supposedly helping on the floor to rush a cross into the box.",
+          "url": "https://x.com/ErrorArbitralTR/status/2068828839178891431"
+        },
+        {
+          "tag": "update",
+          "title": "FPL Frasier (@FPLfrasier)",
+          "body": "FPL Frasier dissects Portugal's tactical failure to route their play through Bruno Fernandes, contrasting it with Spain's reliance on Yamal, France on Mbappe/Olise, and Argentina on Messi.",
+          "url": "https://x.com/FPLfrasier/status/2068791926409875890"
         },
         {
           "tag": "new",
-          "title": "@FOXSports: Raul Jimenez's emotional World Cup moment",
-          "body": "FOX framed Raul Jimenez's first World Cup goal as a tribute moment, with Thierry Henry highlighting the emotional weight of honoring his late father. It was one of the clearest human-interest posts in the timeline.",
-          "url": "https://x.com/FOXSports/status/2065171089957790056"
+          "title": "xiao Y (@xczyuan)",
+          "body": "A heartwarming story goes viral in Wuxi, China, after an unemployed man who requested extra rice on a 12.8 RMB order received a packed box with a message from the shop offering him an apprenticeship.",
+          "url": "https://x.com/xczyuan/status/2068408676474408993"
         },
         {
-          "tag": "update",
-          "title": "@TouchlineX: Lamine Yamal on Messi-level longevity",
-          "body": "Yamal says playing until 40 at Messi's level is basically impossible and says he misses watching players people genuinely enjoy. The quote is notable because it shows how he frames football as entertainment and craft, not just results.",
-          "url": "https://x.com/TouchlineX/status/2068640398210142341"
-        },
-        {
-          "tag": "update",
-          "title": "@FOXSports: Seattle's first USMNT World Cup night",
-          "body": "FOX highlighted the first World Cup match in Seattle for the USMNT, with Trinity Rodman bringing out the match ball and Alex Freeman's goal making it 2-0 after VAR review. The feed made it clear the home crowd angle mattered.",
-          "url": "https://x.com/FOXSports/status/2068042757055132122"
+          "tag": "new",
+          "title": "Mr.KAL™ (@dekim_Kalvino)",
+          "body": "A humorous workplace anecdote goes viral showing Gen Z's calm, indifferent response to a 4/10 corporate performance review by simply asking, 'What does a 10 look like?'.",
+          "url": "https://x.com/dekim_Kalvino/status/2068614457245196758"
         }
       ]
     }
