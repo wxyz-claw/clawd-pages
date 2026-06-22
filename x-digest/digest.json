@@ -3,11 +3,11 @@
   "date": "Monday, June 22nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Agent Loops & Vibe Coding:</strong> Anthropic showcases 40-minute app builds using agent loops, while tech timelines debate GLM-5.2's cost-efficiency and the rise of high-access vibe coding.",
-    "<strong>SpaceX MSCI ESG Drama:</strong> Tech founders react to MSCI giving SpaceX the lowest possible ESG rating, amid debates on the physics of electric rocketry.",
-    "<strong>World Cup 2026 Drama:</strong> The FIFA World Cup dominates the general timeline, highlighted by Iran's disallowed innovative free-kick masterpiece vs Belgium and Uruguay's controversial equalizer against Cape Verde.",
-    "<strong>Heartwarming Apprenticing:</strong> A viral story from Wuxi, China, highlights a food stall owner offering an apprenticeship to an unemployed customer struggling to buy food.",
-    "<strong>Gen Z Corporate Calm:</strong> A popular office story details a Gen Z employee's deadpan response to a 4/10 performance evaluation, asking 'what does a 10 look like?' and leaving HR speechless."
+    "<strong>Agent Loops & Autocomplete:</strong> Anthropic's team showcases agent loops building full apps in 40 minutes, while developers debate Andrej Karpathy's thesis that natural language prompts are inefficient compared to cursor-guided autocomplete.",
+    "<strong>Grok Video & Zhipu Growth:</strong> xAI announces Grok Imagine Video 1.5 featuring enhanced realism and physics, as commentators highlight the massive valuation growth of Chinese AI startup Zhipu.",
+    "<strong>European Competitiveness:</strong> Viral discussions analyze the economic and competitive standing of Europe, highlighting issues in regional energy and productivity policies.",
+    "<strong>Japan's Pedestrian Safety:</strong> Public debates grow around the 'Butsukari' phenomenon in Japan where men deliberately bump into vulnerable pedestrians, highlighted by a strongman's selective shoulder check demo.",
+    "<strong>Sports Injuries & Regulatory Fines:</strong> German defender Nico Schlotterbeck is sidelined for 8 weeks ending his World Cup, and pop star Jane Zhang is fined 760k RMB for performing unauthorized acapella songs."
   ],
   "sections": [
     {
@@ -16,27 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "Elon Musk (@elonmusk)",
-          "body": "Elon Musk laughs at a 'vibecoding' demo featuring agentic code execution, highlighting the mainstreaming of coding entirely through AI prompts and high-access agents.",
-          "url": "https://x.com/elonmusk/status/2068885116064080018"
-        },
-        {
-          "tag": "new",
-          "title": "Theo - t3.gg (@theo)",
-          "body": "Tech creator Theo discusses the excitement around the open-weight GLM-5.2 model, but highlights that it remains cost-ineffective compared to Claude Opus 4.8 and GPT-5.5 in medium configurations.",
-          "url": "https://x.com/theo/status/2068533586131841072"
-        },
-        {
-          "tag": "update",
           "title": "Anatoli Kopadze (@AnatoliKopadze)",
-          "body": "Anthropic engineers demonstrated building a full application in 40 minutes using Claude Code running in a multi-agent loop (planning, building, and judging), showcasing that execution loops are becoming more critical than model intelligence.",
+          "body": "Anthropic engineers demonstrate building a full app in 40 minutes using Claude Code running in a multi-agent loop, proving that developer loops are becoming more critical than standalone model intelligence.",
           "url": "https://x.com/AnatoliKopadze/status/2068690663919530207"
         },
         {
+          "tag": "new",
+          "title": "Vincent (@VincentLogic)",
+          "body": "Andrej Karpathy argues that natural language prompt programming is inefficient, advocating instead for high-density cursor autocomplete where developers act as architects guiding the autocomplete loop.",
+          "url": "https://x.com/VincentLogic/status/2068683635633668294"
+        },
+        {
+          "tag": "hot",
+          "title": "xAI (@xai)",
+          "body": "xAI releases Grok Imagine Video 1.5, their new image-to-video model featuring sharper realism, better physics, and faster generation times.",
+          "url": "https://x.com/xai/status/2067092897951109427"
+        },
+        {
           "tag": "update",
-          "title": "Supermicro (@Supermicro)",
-          "body": "Supermicro showcases their end-to-end AI Factory server solutions powered by NVIDIA's Blackwell GPUs, as reviewed by ServeTheHome.",
-          "url": "https://x.com/Supermicro/status/2057951165070131541"
+          "title": "Matt Graham (@Matt_Graham_)",
+          "body": "A viral critique warns about the risks of prompt-driven 'vibe coding', noting that continuous AI generation without structural planning creates long-term code maintainability issues.",
+          "url": "https://x.com/Matt_Graham_/status/2051351433862099038"
+        },
+        {
+          "tag": "new",
+          "title": "0xAA (@0xAA_Science)",
+          "body": "Commentators highlight the massive return on investment for early backers of Chinese AI pioneer Zhipu, noting its valuation has grown 21x since January.",
+          "url": "https://x.com/0xAA_Science/status/2068925836045209837"
+        },
+        {
+          "tag": "new",
+          "title": "王长富 (@wangchangfu88)",
+          "body": "A popular demonstration showcases using Codex to automatically sketch complex architectural and logic flowcharts from developer commands.",
+          "url": "https://x.com/wangchangfu88/status/2068672784746811894"
         }
       ]
     },
@@ -46,27 +58,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "Austen Allred (@Austen)",
-          "body": "MSCI handed SpaceX its lowest possible ESG rating, drawing reactions from tech founders, while Elon Musk reiterates that electric rocketry is physically impossible due to propulsive constraints.",
-          "url": "https://x.com/Austen/status/2068705187447861656"
-        },
-        {
-          "tag": "new",
-          "title": "Think Big PAC (@thinkbig_pac)",
-          "body": "A political action committee targets Assemblymember Alex Bores' comments surrounding his departure from Palantir, claiming the reasons cited were incorrect.",
-          "url": "https://x.com/thinkbig_pac/status/2058967167396086076"
-        },
-        {
-          "tag": "update",
           "title": "Isaac (@isaacrrr7)",
-          "body": "A viral clip summarizing the current economic and political state of Europe highlights growing concerns over regional competitiveness and energy policies.",
+          "body": "A viral 19-second video outlining Europe's current economic and energy crisis goes viral, explaining competitiveness issues across the EU.",
           "url": "https://x.com/isaacrrr7/status/2068776964358312178"
         },
         {
+          "tag": "update",
+          "title": "Bryan E. Leib (@BryanLeibFL)",
+          "body": "Criticism mounts over the US VP's diplomatic meetings in Qatar following interactions surrounding the Iranian Foreign Minister's delegation.",
+          "url": "https://x.com/BryanLeibFL/status/2068770307616166305"
+        },
+        {
+          "tag": "new",
+          "title": "Monty Bennett (@MontyBennett)",
+          "body": "Monty Bennett pushes back on taxing billionaires by highlighting that the US federal government spends $20 billion daily, framing the national deficit as a spending crisis.",
+          "url": "https://x.com/MontyBennett/status/2068102624965259545"
+        },
+        {
           "tag": "hot",
-          "title": "Elon Musk (@elonmusk)",
-          "body": "Elon Musk endorses El Salvador's President Nayib Bukele's straightforward, zero-tolerance security policies, asserting that they have been proven to work every time.",
-          "url": "https://x.com/elonmusk/status/2068845321984053656"
+          "title": "作家崔成浩 (@cuichenghao)",
+          "body": "A highway toll discrepancy report goes viral after a driver was charged 132 RMB using the automated ETC system, while their friend paying manually was only charged 88 RMB.",
+          "url": "https://x.com/cuichenghao/status/2068605691057877072"
         }
       ]
     },
@@ -76,33 +88,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "Ashraf Garda Champion South Africa (@AshrafGarda)",
-          "body": "Iran's innovative and highly choreographed free kick goal against Belgium at the World Cup 2026 was ruled out for offside, sparking widespread discussions on tournament officiating.",
-          "url": "https://x.com/AshrafGarda/status/2068788838927831100"
+          "title": "Barack Obama (@BarackObama)",
+          "body": "Former President Barack Obama surprises the first visitors to the newly opened Obama Presidential Center in Chicago during a Juneteenth celebration event.",
+          "url": "https://x.com/BarackObama/status/2068420262719091068"
         },
         {
           "tag": "hot",
-          "title": "Error ArbitraI (@ErrorArbitralTR)",
-          "body": "Uruguay scored a controversial equalizing goal against Cape Verde after an Uruguayan player abandoned a Cape Verde player he was supposedly helping on the floor to rush a cross into the box.",
-          "url": "https://x.com/ErrorArbitralTR/status/2068828839178891431"
+          "title": "청춘암생존자 (@it_sallgoodman)",
+          "body": "Social media debates ignite over Japan's 'Butsukari' men who intentionally bump into women and kids, contrasted with a strongman standing his ground.",
+          "url": "https://x.com/it_sallgoodman/status/2068580809121153264"
         },
         {
           "tag": "update",
-          "title": "FPL Frasier (@FPLfrasier)",
-          "body": "FPL Frasier dissects Portugal's tactical failure to route their play through Bruno Fernandes, contrasting it with Spain's reliance on Yamal, France on Mbappe/Olise, and Argentina on Messi.",
-          "url": "https://x.com/FPLfrasier/status/2068791926409875890"
+          "title": "Bayern & Germany (@iMiaSanMia)",
+          "body": "Nico Schlotterbeck suffers an ankle ligament tear, ruling him out of the remainder of the World Cup in a major blow to Germany's defensive lineup.",
+          "url": "https://x.com/iMiaSanMia/status/2069015450751586524"
         },
         {
           "tag": "new",
-          "title": "xiao Y (@xczyuan)",
-          "body": "A heartwarming story goes viral in Wuxi, China, after an unemployed man who requested extra rice on a 12.8 RMB order received a packed box with a message from the shop offering him an apprenticeship.",
-          "url": "https://x.com/xczyuan/status/2068408676474408993"
+          "title": "作家崔成浩 (@cuichenghao)",
+          "body": "Pop singer Jane Zhang (张靓颖) confirms she was fined 760,000 RMB by regulators for performing unapproved, impromptu acapella songs at a commercial show.",
+          "url": "https://x.com/cuichenghao/status/2068915276935286881"
         },
         {
-          "tag": "new",
-          "title": "Mr.KAL™ (@dekim_Kalvino)",
-          "body": "A humorous workplace anecdote goes viral showing Gen Z's calm, indifferent response to a 4/10 corporate performance review by simply asking, 'What does a 10 look like?'.",
-          "url": "https://x.com/dekim_Kalvino/status/2068614457245196758"
+          "tag": "update",
+          "title": "郑敏 (@MinMin89485072)",
+          "body": "A historic behind-the-scenes look at the Roman Holiday (1953) set captures Audrey Hepburn's genuine reaction of terror when Gregory Peck pranks her with the mouth of truth sculpture.",
+          "url": "https://x.com/MinMin89485072/status/2068358391840620681"
         }
       ]
     }
