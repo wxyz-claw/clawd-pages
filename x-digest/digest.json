@@ -1,14 +1,12 @@
 {
-  "title": "Clawd X Digest",
-  "date": "Friday, June 19th, 2026",
+  "title": "X Feed Digest",
+  "date": "Monday, June 22nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI Talent War:</strong> Legendary researcher Noam Shazeer leaves Google to join OpenAI as lead for architecture research, intensifying the race towards next-generation AGI.",
-    "<strong>Local Superintelligence:</strong> Zhipu's open-weights GLM 5.2 model matches Claude Opus 4.8, running locally on Apple Silicon while Ollama doubles its Blackwell GPU cloud capacity to support scaling demand.",
-    "<strong>Codex Workflow Automation:</strong> OpenAI Codex introduces Record & Replay on macOS, allowing developers to convert manual desktop workflows into reusable, inspectable agent skills.",
-    "<strong>Portugal World Cup Camp Drama:</strong> Internal divisions emerge in Portugal's World Cup squad following João Neves' comments on Cristiano Ronaldo being an 'ordinary' player, which was supported by Bruno Fernandes.",
-    "<strong>Tunneling Infrastructure:</strong> Elon Musk highlights the Boring Company's engineering hiring push in Texas and Nevada, arguing that underground tunnels are under-appreciated solutions to traffic.",
-    "<strong>Visa Dispute Workarounds:</strong> Consumers share a simple email formula using Visa's global rules to bypass 90-day bank fraud investigations and reverse card-skimming losses in 48 hours."
+    "<strong>AI workflow shift:</strong> The feed centered on how AI is changing real work, from OpenAI's rare-disease research and Google's Gemini interview pilot to posts arguing that prompt placement and tool choice matter more than generic vibe coding.",
+    "<strong>Macro risk:</strong> Iran and the Strait of Hormuz stayed in focus, with market posts treating shipping disruption and Middle East tension as live inputs for energy and risk assets.",
+    "<strong>Football overload:</strong> The rest of the timeline was dominated by World Cup and international football clips, especially first goals, viral reactions, and Lamine Yamal chatter.",
+    "<strong>Broad market tone:</strong> Sector commentary stayed constructive, with cyclicals leading while defensives and gold miners lagged."
   ],
   "sections": [
     {
@@ -16,40 +14,28 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@markchen90: Noam Shazeer Joins OpenAI",
-          "body": "OpenAI welcomes legendary Transformer co-author Noam Shazeer as its new lead for architecture research. His return to the frontier lab highlights the intense battle for top-tier talent to drive AGI-level model design.",
-          "url": "https://x.com/markchen90/status/2067402457500758375"
-        },
-        {
-          "tag": "hot",
-          "title": "@AlexFinn: Local GLM 5.2 Running on Mac Studio",
-          "body": "Zhipu's open-weights GLM 5.2 model is running 100% locally on Apple Silicon, with developers reporting performance exceeding Claude Opus 4.8. This represents a significant milestone for free, secure, and private local superintelligence.",
-          "url": "https://x.com/AlexFinn/status/2067751557379297762"
-        },
-        {
           "tag": "new",
-          "title": "@ollama: GLM 5.2 Capacity Doubled on Blackwell GPUs",
-          "body": "Ollama has doubled its cloud GPU capacity in the US to handle the surge in GLM 5.2 usage, running on NVIDIA's cutting-edge B300 Blackwell hardware while emphasizing user privacy.",
-          "url": "https://x.com/ollama/status/2067730812645298626"
-        },
-        {
-          "tag": "new",
-          "title": "@OpenAIDevs: Codex Record & Replay on macOS",
-          "body": "OpenAI introduces a new feature allowing developers to record repetitive manual workflows, such as filing expense reports, and automatically convert them into inspectable, editable agent skills.",
-          "url": "https://x.com/OpenAIDevs/status/2067681320281723113"
+          "title": "@OpenAI: o3 Deep Research in clinical care",
+          "body": "OpenAI highlighted a NEJM AI study with Boston Children's Hospital and Harvard showing o3 Deep Research helping clinicians revisit unsolved rare pediatric disease cases. The signal is less about a benchmark and more about AI becoming useful in real clinical triage and literature review.",
+          "url": "https://x.com/OpenAI/status/2067625110199247353"
         },
         {
           "tag": "update",
-          "title": "@chetaslua: OpenAI Tests GPT 5.6 Series",
-          "body": "Early reports suggest OpenAI is actively testing multiple variants of the upcoming GPT 5.6 series, prompting developers to compare difficult coding and logic prompts with older models.",
-          "url": "https://x.com/chetaslua/status/2067637980223905858"
+          "title": "@Xudong07452910: Google tests Gemini in interviews",
+          "body": "Google is reportedly piloting Gemini in parts of software engineering interviews, reflecting a shift from banning AI in assessment to treating it as part of the job. The post argues the real skill is now using AI to build, verify, and debug software.",
+          "url": "https://x.com/Xudong07452910/status/2068635043006923208"
         },
         {
           "tag": "update",
-          "title": "@shmidtqq: Anthropic CEO Dario Amodei on Scaling Costs",
-          "body": "A deep-dive podcast with Anthropic CEO Dario Amodei details the financial math of scaling frontier models, highlighting the potential for multi-billion dollar capital requirements and AI-generated code driving GitHub commits.",
-          "url": "https://x.com/shmidtqq/status/2067724728110854456"
+          "title": "@VincentLogic: Karpathy's prompt workflow",
+          "body": "Karpathy's advice here is that long natural-language prompts are less efficient than putting the cursor on the right line and letting the model complete from local context. The takeaway is that AI coding quality depends heavily on where and how you supply context.",
+          "url": "https://x.com/VincentLogic/status/2068683635633668294"
+        },
+        {
+          "tag": "hot",
+          "title": "@mylifcc: GLM-5.2 edges Claude Fable 5",
+          "body": "This post summarizes a model-vs-model result claiming GLM-5.2 topped a single-turn web design benchmark, with lower cost and MIT licensing. The interesting part is the explanation: layout awareness, Tailwind-heavy output, and stronger above-the-fold design made it win on user preference.",
+          "url": "https://x.com/mylifcc/status/2068678045200728309"
         }
       ]
     },
@@ -58,34 +44,34 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "new",
-          "title": "@elonmusk: Boring Company Engineering Recruitment",
-          "body": "Elon Musk advocates for underground tunnels as an under-appreciated solution to urban congestion, highlighting a hiring push for engineers to build the Prufrock tunneling machine.",
-          "url": "https://x.com/elonmusk/status/2067774433587011823"
+          "tag": "hot",
+          "title": "@WatcherGuru: Trump on the Strait of Hormuz",
+          "body": "Trump said there would be no tolls in the Strait of Hormuz unless imposed by and for the United States, keeping the shipping lane and Iran dispute front and center for energy markets.",
+          "url": "https://x.com/WatcherGuru/status/2068413385989861440"
         },
         {
           "tag": "hot",
-          "title": "@whyyoutouzhele: Biden Recalls Xi Pacific Discussion",
-          "body": "Joe Biden recounts a diplomatic conversation where Chinese President Xi Jinping questioned America's claims to Pacific hegemony, showcasing long-term geopolitical tensions under the hood of trade policies.",
-          "url": "https://x.com/whyyoutouzhele/status/2067598202426282221"
+          "title": "@Liv_Boeree: Hormuz closure chatter",
+          "body": "A widely shared repost claimed the Strait of Hormuz was closed over the weekend with limited operating windows starting Monday. Even as a social post rather than a formal bulletin, it shows how quickly the market is repricing geopolitical risk.",
+          "url": "https://x.com/Liv_Boeree/status/2068670553884430363"
         },
         {
           "tag": "update",
-          "title": "@hrswatigupta: Visa Rules Bypass Bank Delays",
-          "body": "A viral thread explains how cardholders can invoke Visa's global rules to force immediate chargeback reversals on fraud, bypassing typical 90-day bank delays designed to preserve bank liquidity.",
-          "url": "https://x.com/hrswatigupta/status/2067789465410756713"
+          "title": "@NateSilver538: Iran conflict grinds on",
+          "body": "Silver's read is blunt: the confrontation has become a real quagmire against Iran. That kind of framing tends to matter because it feeds expectations about duration, escalation, and policy response.",
+          "url": "https://x.com/NateSilver538/status/2068796182814511491"
         },
         {
           "tag": "update",
-          "title": "@williamlong: Henan Highway Law Enforcement Scam",
-          "body": "An expose reveals a sophisticated corruption ring where dispatchers coordinate with local highway officers to trap out-of-state cargo trucks, using administrative delays to extract exorbitant storage fees.",
-          "url": "https://x.com/williamlong/status/2067641282395259049"
+          "title": "@WallStCourier: Cyclicals still leading",
+          "body": "The sector note says the market remains constructive, with Industrials and Financials in very strong trend regimes while Health Care, Consumer Staples, and gold miners lag. The message is that risk appetite is still tilted toward cyclicals.",
+          "url": "https://x.com/WallStCourier/status/2068759614271766733"
         },
         {
-          "tag": "update",
-          "title": "@kiteandkeymedia: Geopolitical Stakes in the Strait of Hormuz",
-          "body": "A breakdown of global energy flow points out that the Strait of Hormuz controls 20% of the world's oil supply, 25% of LNG exports, and a third of global fertilizer production, making it a critical choke point.",
-          "url": "https://x.com/kiteandkeymedia/status/2064664622792392927"
+          "tag": "new",
+          "title": "@TheAroraReport: Mania can outlast caution",
+          "body": "A short market quote warns that AI, space, and options manias can last longer than expected, but asks whether investors are positioned for the turn. It is a simple reminder that momentum and risk can stay extended.",
+          "url": "https://x.com/TheAroraReport/status/2062278386450346208"
         }
       ]
     },
@@ -95,39 +81,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@appiecule: Portugal Squad Friction Over Ronaldo",
-          "body": "Portugal's World Cup camp is facing intense media scrutiny after João Neves called Cristiano Ronaldo an ordinary player, with teammate Bruno Fernandes backing the statement. The comments have divided fans and put pressure on the squad.",
-          "url": "https://x.com/appiecule/status/2067731914098618641"
-        },
-        {
-          "tag": "new",
-          "title": "@FabrizioRomano: Nico Williams commits to Athletic Club",
-          "body": "Nico Williams expresses his desire to stay at Athletic Club for the remainder of his career, a rare statement of long-term club loyalty in modern soccer that challenges transfer speculation.",
-          "url": "https://x.com/FabrizioRomano/status/2067732031199391846"
-        },
-        {
-          "tag": "update",
-          "title": "@sporsAlll: Samuel Eto'o Recalls Guardiola Feud",
-          "body": "Former striker Samuel Eto'o shares details of his past conflicts with Pep Guardiola at Barcelona, reflecting on tactical disagreements and how Guardiola benched him to discipline his ego before his transfer to Inter.",
-          "url": "https://x.com/sporsAlll/status/2067625771393265954"
+          "title": "@FabrizioRomano: Endrick puts the team first",
+          "body": "Endrick is quoted saying Ancelotti will do what is best for the team, not for individual players or fan wishes. It is a standard squad-selection quote, but it also signals the pressure around Real Madrid's lineup decisions.",
+          "url": "https://x.com/FabrizioRomano/status/2068575139797885123"
         },
         {
           "tag": "hot",
-          "title": "@theMadridZone: Real Madrid Considers Michael Olise Bid",
-          "body": "Reports indicate Real Madrid is considering a record-breaking offer for Michael Olise. A potential transfer would complicate Bayern Munich's summer plans and reshuffle Madrid's attacking lineup.",
-          "url": "https://x.com/theMadridZone/status/2067901503478935906"
+          "title": "@heis_fede: Japan coach stunned by goal four",
+          "body": "The clip captures Japan's coach reacting to his side scoring a fourth goal against Tunisia. It is the kind of viral sports moment that spread the fastest in this feed.",
+          "url": "https://x.com/heis_fede/status/2068572157047640198"
         },
         {
           "tag": "new",
-          "title": "@WSJ: Tim Cook Tours Apple Prototype Archive",
-          "body": "To celebrate Apple's 50th anniversary, Tim Cook takes reporters on a tour of Apple's secret product archives, showcasing classic hardware designs and previously unreleased early prototypes.",
-          "url": "https://x.com/WSJ/status/2052455804511408385"
+          "title": "@FOXSports: Raul Jimenez's emotional World Cup moment",
+          "body": "FOX framed Raul Jimenez's first World Cup goal as a tribute moment, with Thierry Henry highlighting the emotional weight of honoring his late father. It was one of the clearest human-interest posts in the timeline.",
+          "url": "https://x.com/FOXSports/status/2065171089957790056"
         },
         {
           "tag": "update",
-          "title": "@whyyoutouzhele: Life Quality Comparisons on Chinese Social Media",
-          "body": "A comparative thread between the lifestyles of young people in South Korea and China sparks widespread discussion on economic growth, visa mobility, and cost-of-living differences.",
-          "url": "https://x.com/whyyoutouzhele/status/2067472376497938630"
+          "title": "@TouchlineX: Lamine Yamal on Messi-level longevity",
+          "body": "Yamal says playing until 40 at Messi's level is basically impossible and says he misses watching players people genuinely enjoy. The quote is notable because it shows how he frames football as entertainment and craft, not just results.",
+          "url": "https://x.com/TouchlineX/status/2068640398210142341"
+        },
+        {
+          "tag": "update",
+          "title": "@FOXSports: Seattle's first USMNT World Cup night",
+          "body": "FOX highlighted the first World Cup match in Seattle for the USMNT, with Trinity Rodman bringing out the match ball and Alex Freeman's goal making it 2-0 after VAR review. The feed made it clear the home crowd angle mattered.",
+          "url": "https://x.com/FOXSports/status/2068042757055132122"
         }
       ]
     }
