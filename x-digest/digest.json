@@ -1,13 +1,12 @@
 {
   "title": "Clawd X Digest",
-  "date": "Monday, June 22nd, 2026",
+  "date": "Tuesday, June 23rd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Agent Loops & Autocomplete:</strong> Anthropic's team showcases agent loops building full apps in 40 minutes, while developers debate Andrej Karpathy's thesis that natural language prompts are inefficient compared to cursor-guided autocomplete.",
-    "<strong>Grok Video & Zhipu Growth:</strong> xAI announces Grok Imagine Video 1.5 featuring enhanced realism and physics, as commentators highlight the massive valuation growth of Chinese AI startup Zhipu.",
-    "<strong>European Competitiveness:</strong> Viral discussions analyze the economic and competitive standing of Europe, highlighting issues in regional energy and productivity policies.",
-    "<strong>Japan's Pedestrian Safety:</strong> Public debates grow around the 'Butsukari' phenomenon in Japan where men deliberately bump into vulnerable pedestrians, highlighted by a strongman's selective shoulder check demo.",
-    "<strong>Sports Injuries & Regulatory Fines:</strong> German defender Nico Schlotterbeck is sidelined for 8 weeks ending his World Cup, and pop star Jane Zhang is fined 760k RMB for performing unauthorized acapella songs."
+    "<strong>AI & Agentic Loops:</strong> Andrew Ng highlights the transition to self-improving loops within 3-6 months, while developers compile E-Fund manager Zheng Xi's investment framework into a Claude Code Skill.",
+    "<strong>Workflow Shifts:</strong> Viral guides detail how developers use Claude Code inside Obsidian to construct a self-compounding 'second brain' wiki, and Boris Cherny explains how he ditched IDEs to code on his phone.",
+    "<strong>AI Research Milestones:</strong> OpenAI's o3 Deep Research successfully helps clinicians solve complex rare pediatric disease cases in a newly published NEJM AI study.",
+    "<strong>World Cup Legacy & Action:</strong> Debates intensify around Messi's World Cup legacy compared to Pelé, while Messi's relentless counter-attack performance at 39 and Mbappé's pitch management capture viral attention."
   ],
   "sections": [
     {
@@ -16,39 +15,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "Anatoli Kopadze (@AnatoliKopadze)",
-          "body": "Anthropic engineers demonstrate building a full app in 40 minutes using Claude Code running in a multi-agent loop, proving that developer loops are becoming more critical than standalone model intelligence.",
-          "url": "https://x.com/AnatoliKopadze/status/2068690663919530207"
-        },
-        {
-          "tag": "new",
-          "title": "Vincent (@VincentLogic)",
-          "body": "Andrej Karpathy argues that natural language prompt programming is inefficient, advocating instead for high-density cursor autocomplete where developers act as architects guiding the autocomplete loop.",
-          "url": "https://x.com/VincentLogic/status/2068683635633668294"
+          "title": "@ridark_eth: Andrej Karpathy's Second Brain System",
+          "body": "A breakdown of a viral workflow inspired by Andrej Karpathy: using AI agents to build a self-compounding personal knowledge wiki instead of just using it to write code. Users point tools like Claude Code to an Obsidian vault to automatically ingest resources and maintain a structured wiki.",
+          "url": "https://x.com/ridark_eth/status/2068753952850546985"
         },
         {
           "tag": "hot",
-          "title": "xAI (@xai)",
-          "body": "xAI releases Grok Imagine Video 1.5, their new image-to-video model featuring sharper realism, better physics, and faster generation times.",
-          "url": "https://x.com/xai/status/2067092897951109427"
+          "title": "@0xMovez: Andrew Ng on the Shift to Agentic Loops",
+          "body": "AI pioneer Andrew Ng states that 100% of his tasks are now done by AI agents, and notes that self-improving loops represent the next big shift. He predicts that everyone will transition to these loops in the next 3 to 6 months, rendering basic prompting obsolete.",
+          "url": "https://x.com/0xMovez/status/2068763235587694769"
         },
         {
           "tag": "update",
-          "title": "Matt Graham (@Matt_Graham_)",
-          "body": "A viral critique warns about the risks of prompt-driven 'vibe coding', noting that continuous AI generation without structural planning creates long-term code maintainability issues.",
-          "url": "https://x.com/Matt_Graham_/status/2051351433862099038"
+          "title": "@Raytar: How the Anthropic Team Uses Claude",
+          "body": "Insights from a presentation by Boris Cherny on how the Anthropic team utilizes Claude internally. Cherny revealed he deleted his local IDE eight months ago and now codes primarily using Claude directly from his phone, highlighting a shift in software engineering workflows.",
+          "url": "https://x.com/Raytar/status/2068769808720543781"
         },
         {
           "tag": "new",
-          "title": "0xAA (@0xAA_Science)",
-          "body": "Commentators highlight the massive return on investment for early backers of Chinese AI pioneer Zhipu, noting its valuation has grown 21x since January.",
-          "url": "https://x.com/0xAA_Science/status/2068925836045209837"
+          "title": "@alisawuffles: OpenAI Career Transition Insights",
+          "body": "Alisa Liu announces she is joining OpenAI and publishes a detailed guide detailing her challenging but rewarding job search experience, aimed at demystifying the AI industry hiring process for other applicants.",
+          "url": "https://x.com/alisawuffles/status/2068765723569324462"
+        },
+        {
+          "tag": "update",
+          "title": "@OpenAI: o3 Deep Research Solves Rare Disease Cases",
+          "body": "OpenAI publishes a collaborative study in the New England Journal of Medicine (NEJM) AI alongside researchers from Boston Children's Hospital and Harvard. The paper demonstrates how o3 Deep Research assisted clinicians in solving previously unresolved pediatric rare disease cases.",
+          "url": "https://x.com/OpenAI/status/2067625110199247353"
         },
         {
           "tag": "new",
-          "title": "王长富 (@wangchangfu88)",
-          "body": "A popular demonstration showcases using Codex to automatically sketch complex architectural and logic flowcharts from developer commands.",
-          "url": "https://x.com/wangchangfu88/status/2068672784746811894"
+          "title": "@markksantos: Fugu Ultra vs. Claude Opus 4.8 Head-to-Head",
+          "body": "A benchmark test comparing Sakana Fugu Ultra and Claude Opus 4.8 on a Three.js Crossy Road game development task. While Opus 4.8 won on final design and application functionality quality, Fugu Ultra demonstrated impressive speed and cost efficiency, running for just $7.32 compared to Opus's $37.85.",
+          "url": "https://x.com/markksantos/status/2068962823007285628"
+        },
+        {
+          "tag": "update",
+          "title": "@SUOHA_AI: Quantitative Skill for Fund Manager Zheng Xi",
+          "body": "Community developers have compiled and distilled a decade of public writings, quarterly reports, and interviews from E-Fund manager Zheng Xi into a custom AI投研 skill. The tool is compatible with Claude Code and codeX, allowing users to query, analyze, and map his investment framework against actual holdings.",
+          "url": "https://x.com/SUOHA_AI/status/2068726088608428180"
         }
       ]
     },
@@ -57,28 +62,28 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "hot",
-          "title": "Isaac (@isaacrrr7)",
-          "body": "A viral 19-second video outlining Europe's current economic and energy crisis goes viral, explaining competitiveness issues across the EU.",
-          "url": "https://x.com/isaacrrr7/status/2068776964358312178"
+          "tag": "new",
+          "title": "@fminvestllc: Evolution of Cash Management via Treasury ETFs",
+          "body": "F/m Investments discusses cash management, emphasizing that tools have evolved past traditional money market funds. They highlight TBIL, which provides short-term Treasury exposure with ETF-level efficiency, liquidity, and transparency.",
+          "url": "https://x.com/fminvestllc/status/2048851081690542517"
         },
         {
           "tag": "update",
-          "title": "Bryan E. Leib (@BryanLeibFL)",
-          "body": "Criticism mounts over the US VP's diplomatic meetings in Qatar following interactions surrounding the Iranian Foreign Minister's delegation.",
-          "url": "https://x.com/BryanLeibFL/status/2068770307616166305"
+          "title": "@freedomcenterlu: Virginia Supreme Court Redistricting Ruling",
+          "body": "Virginia's Supreme Court upheld the independent redistricting commission created in 2020. In response, local Democrats are debating raising the retirement age for justices to replace those who ruled against them, drawing criticism over judicial independence.",
+          "url": "https://x.com/freedomcenterlu/status/2053941235232931844"
         },
         {
           "tag": "new",
-          "title": "Monty Bennett (@MontyBennett)",
-          "body": "Monty Bennett pushes back on taxing billionaires by highlighting that the US federal government spends $20 billion daily, framing the national deficit as a spending crisis.",
-          "url": "https://x.com/MontyBennett/status/2068102624965259545"
+          "title": "@jewishinsider: Midterm Campaign Funding Flows",
+          "body": "An investigation by Jewish Insider explores the dark money network behind the Justice Democrats' spending surge in the 2026 midterms, highlighting the political action committees and donors funding primary campaigns.",
+          "url": "https://x.com/jewishinsider/status/2066924680179818601"
         },
         {
-          "tag": "hot",
-          "title": "作家崔成浩 (@cuichenghao)",
-          "body": "A highway toll discrepancy report goes viral after a driver was charged 132 RMB using the automated ETC system, while their friend paying manually was only charged 88 RMB.",
-          "url": "https://x.com/cuichenghao/status/2068605691057877072"
+          "tag": "update",
+          "title": "@FannieMae: Manufactured Housing and Financing Options",
+          "body": "Fannie Mae shares data showing that manufactured homes provide a high-quality, lower-cost path to homeownership. Some owners save up to 40% on monthly housing costs compared to site-built homes, backed by expanded financing options.",
+          "url": "https://x.com/FannieMae/status/1998787649394585683"
         }
       ]
     },
@@ -88,33 +93,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "Barack Obama (@BarackObama)",
-          "body": "Former President Barack Obama surprises the first visitors to the newly opened Obama Presidential Center in Chicago during a Juneteenth celebration event.",
-          "url": "https://x.com/BarackObama/status/2068420262719091068"
+          "title": "@NetMentorTW: Messi's Determination at 39 Years Old",
+          "body": "A breakdown of Lionel Messi's sensational second goal. At 39, Messi led a counter-attack from 40 meters, created an opportunity for a teammate who missed, and immediately fought for the rebound to secure the 2-0 victory, highlighting his relentless work ethic.",
+          "url": "https://x.com/NetMentorTW/status/2069138573413199891"
         },
         {
           "tag": "hot",
-          "title": "청춘암생존자 (@it_sallgoodman)",
-          "body": "Social media debates ignite over Japan's 'Butsukari' men who intentionally bump into women and kids, contrasted with a strongman standing his ground.",
-          "url": "https://x.com/it_sallgoodman/status/2068580809121153264"
+          "title": "@NJanfren: Comparing World Cup Careers of Messi and Pelé",
+          "body": "A heated critique of comparisons between Lionel Messi and Pelé. The post points out that Pelé won three World Cups in four appearances, whereas Messi played five to secure one title and six to surpass Pelé's goal count, arguing Pelé's tournament legacy remains unmatched.",
+          "url": "https://x.com/NJanfren/status/2069118435481551125"
         },
         {
           "tag": "update",
-          "title": "Bayern & Germany (@iMiaSanMia)",
-          "body": "Nico Schlotterbeck suffers an ankle ligament tear, ruling him out of the remainder of the World Cup in a major blow to Germany's defensive lineup.",
-          "url": "https://x.com/iMiaSanMia/status/2069015450751586524"
+          "title": "@mui_king: 2026 World Cup Goal Standings",
+          "body": "An analysis of the current World Cup goalscorer standings, noting that Messi's five goals place him seventh in the tournament rankings. Germany leads with nine goals, followed by the Netherlands and Canada with seven.",
+          "url": "https://x.com/mui_king/status/2069169761246933489"
         },
         {
-          "tag": "new",
-          "title": "作家崔成浩 (@cuichenghao)",
-          "body": "Pop singer Jane Zhang (张靓颖) confirms she was fined 760,000 RMB by regulators for performing unapproved, impromptu acapella songs at a commercial show.",
-          "url": "https://x.com/cuichenghao/status/2068915276935286881"
+          "tag": "viral",
+          "title": "@NoodleHairCR7: Kylian Mbappé Takes Charge of Pitch Conditions",
+          "body": "Fans react with amusement as Kylian Mbappé is spotted directing stadium cleaners to remove excess water from specific areas of the pitch, showcasing his hands-on leadership style during a waterlogged World Cup match.",
+          "url": "https://x.com/NoodleHairCR7/status/2069214916486041891"
         },
         {
-          "tag": "update",
-          "title": "郑敏 (@MinMin89485072)",
-          "body": "A historic behind-the-scenes look at the Roman Holiday (1953) set captures Audrey Hepburn's genuine reaction of terror when Gregory Peck pranks her with the mouth of truth sculpture.",
-          "url": "https://x.com/MinMin89485072/status/2068358391840620681"
+          "tag": "viral",
+          "title": "@njdmarlon: Norway's Viking Row World Cup Moment",
+          "body": "Norway U15 teammate history and senior team achievements culminate in a spectacular post-match celebration, with the Norwegian national team performing a massive 'Viking Row' celebration alongside their traveling fans.",
+          "url": "https://x.com/njdmarlon/status/2069241591286419513"
         }
       ]
     }
