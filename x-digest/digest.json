@@ -1,125 +1,115 @@
 {
   "title": "Clawd X Digest",
-  "date": "Tuesday, June 23rd, 2026",
+  "date": "Wednesday, June 24th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI & Agentic Loops:</strong> Andrew Ng highlights the transition to self-improving loops within 3-6 months, while developers compile E-Fund manager Zheng Xi's investment framework into a Claude Code Skill.",
-    "<strong>Workflow Shifts:</strong> Viral guides detail how developers use Claude Code inside Obsidian to construct a self-compounding 'second brain' wiki, and Boris Cherny explains how he ditched IDEs to code on his phone.",
-    "<strong>AI Research Milestones:</strong> OpenAI's o3 Deep Research successfully helps clinicians solve complex rare pediatric disease cases in a newly published NEJM AI study.",
-    "<strong>World Cup Legacy & Action:</strong> Debates intensify around Messi's World Cup legacy compared to Pelé, while Messi's relentless counter-attack performance at 39 and Mbappé's pitch management capture viral attention."
+    "<strong>AI Model Delays:</strong> GPT-5.6 is delayed to mid-July and DeepMind's 3.5 Pro launch is pushed back, while select customers gain early access to Claude Sonnet 5.",
+    "<strong>Open Source CLI Fallout:</strong> Developer JPoehnelt shares details of being terminated by Google for creating a viral Google Workspace CLI just prior to Google's official release.",
+    "<strong>Commit Co-Authorship Debate:</strong> Developers push back against Anthropic's Claude Code CLI automatically adding its name to git commit metadata as a co-author.",
+    "<strong>Baidu OCR Breakthrough:</strong> Baidu open-sources a 3B OCR model that achieves SOTA results, beating massive models like Qwen-VL and Gemini 2.5 Pro while running efficiently on large documents.",
+    "<strong>SEC Disclosure Concerns:</strong> Proposed SEC Rule S7-2026-15 faces opposition for allowing public companies to hide negative numbers for six months, raising insider trading concerns.",
+    "<strong>Sports Milestones:</strong> Michael Olise matches Zinedine Zidane's 1996 record of 12 goal involvements in his first 19 appearances for France as Bayern finalizes Saibari's transfer."
   ],
   "sections": [
     {
-      "emoji": "🤖",
+      "emoji": "\ud83e\udd16",
       "title": "AI & Tech",
       "items": [
         {
           "tag": "hot",
-          "title": "@ridark_eth: Andrej Karpathy's Second Brain System",
-          "body": "A breakdown of a viral workflow inspired by Andrej Karpathy: using AI agents to build a self-compounding personal knowledge wiki instead of just using it to write code. Users point tools like Claude Code to an Obsidian vault to automatically ingest resources and maintain a structured wiki.",
-          "url": "https://x.com/ridark_eth/status/2068753952850546985"
+          "title": "@Semper_Viventem: Claude Code Git Commit Co-Authorship Dispute",
+          "body": "Developers are debating Anthropic's Claude Code CLI automatically inserting 'Co-Authored-By: Claude Opus <noreply@anthropic.com>' in git commit metadata. Critics argue that an AI assistant is a paid utility tool rather than a copyright holder or collaborator, comparing it to not crediting Visual Studio.",
+          "url": "https://x.com/Semper_Viventem/status/2069205276696445094"
         },
         {
           "tag": "hot",
-          "title": "@0xMovez: Andrew Ng on the Shift to Agentic Loops",
-          "body": "AI pioneer Andrew Ng states that 100% of his tasks are now done by AI agents, and notes that self-improving loops represent the next big shift. He predicts that everyone will transition to these loops in the next 3 to 6 months, rendering basic prompting obsolete.",
-          "url": "https://x.com/0xMovez/status/2068763235587694769"
+          "title": "@synthwavedd: AI Frontier Model Release Delays & Stop-Gaps",
+          "body": "OpenAI's GPT-5.6 has reportedly been delayed to mid-July, while DeepMind's Gemini 3.5 Pro launch is pushed past this month. Concurrently, Anthropic has made Claude Sonnet 5 available to select enterprise customers under early access as Mythos/Fable 5 progress stalls.",
+          "url": "https://x.com/synthwavedd/status/2069432791184650426"
         },
         {
-          "tag": "update",
-          "title": "@Raytar: How the Anthropic Team Uses Claude",
-          "body": "Insights from a presentation by Boris Cherny on how the Anthropic team utilizes Claude internally. Cherny revealed he deleted his local IDE eight months ago and now codes primarily using Claude directly from his phone, highlighting a shift in software engineering workflows.",
-          "url": "https://x.com/Raytar/status/2068769808720543781"
-        },
-        {
-          "tag": "new",
-          "title": "@alisawuffles: OpenAI Career Transition Insights",
-          "body": "Alisa Liu announces she is joining OpenAI and publishes a detailed guide detailing her challenging but rewarding job search experience, aimed at demystifying the AI industry hiring process for other applicants.",
-          "url": "https://x.com/alisawuffles/status/2068765723569324462"
-        },
-        {
-          "tag": "update",
-          "title": "@OpenAI: o3 Deep Research Solves Rare Disease Cases",
-          "body": "OpenAI publishes a collaborative study in the New England Journal of Medicine (NEJM) AI alongside researchers from Boston Children's Hospital and Harvard. The paper demonstrates how o3 Deep Research assisted clinicians in solving previously unresolved pediatric rare disease cases.",
-          "url": "https://x.com/OpenAI/status/2067625110199247353"
+          "tag": "hot",
+          "title": "@JPoehnelt: Workspace CLI Creator Terminated by Google",
+          "body": "The developer of the popular open-source Google Workspace CLI details being fired by Google after the tool went viral and hit #1 on Hacker News. The dismissal came just two days after Google announced an official Workspace CLI, highlighting corporate fears of agentic disruption.",
+          "url": "https://x.com/JPoehnelt/status/2069482265953087602"
         },
         {
           "tag": "new",
-          "title": "@markksantos: Fugu Ultra vs. Claude Opus 4.8 Head-to-Head",
-          "body": "A benchmark test comparing Sakana Fugu Ultra and Claude Opus 4.8 on a Three.js Crossy Road game development task. While Opus 4.8 won on final design and application functionality quality, Fugu Ultra demonstrated impressive speed and cost efficiency, running for just $7.32 compared to Opus's $37.85.",
-          "url": "https://x.com/markksantos/status/2068962823007285628"
+          "title": "@enoch4306: Baidu's 3B Unlimited OCR Model Outperforms Giants",
+          "body": "Baidu has open-sourced 'Unlimited OCR,' a 3B parameter model (activating only 500M parameters) that scored 93.23% on OmniDocBench v1.5, beating Qwen2.5-VL and Gemini 2.5 Pro. The model parses 40+ page documents in a single inference without speed or memory degradation.",
+          "url": "https://x.com/enoch4306/status/2069273985196626397"
         },
         {
           "tag": "update",
-          "title": "@SUOHA_AI: Quantitative Skill for Fund Manager Zheng Xi",
-          "body": "Community developers have compiled and distilled a decade of public writings, quarterly reports, and interviews from E-Fund manager Zheng Xi into a custom AI投研 skill. The tool is compatible with Claude Code and codeX, allowing users to query, analyze, and map his investment framework against actual holdings.",
-          "url": "https://x.com/SUOHA_AI/status/2068726088608428180"
+          "title": "@NousResearch: Hermes Agent Learns Skills from Raw Code & Docs",
+          "body": "Nous Research released Hermes Agent with a /learn command, enabling the agent to ingest entire directories of source code, API documentation, manuals, or configs to distill a verifiable, reusable skill.",
+          "url": "https://x.com/NousResearch/status/2069526242236182697"
+        },
+        {
+          "tag": "new",
+          "title": "@0xSilver_Time: ByteDance Launches Seedance 2.5 for AI Film Co-Creation",
+          "body": "ByteDance released Seedance 2.5 alongside a novel IP licensing system on Douyin and Jianying, allowing users to buy passes to legally create AI secondary creations using Stephen Chow's classic movies like The King of Comedy and The God of Cookery.",
+          "url": "https://x.com/0xSilver_Time/status/2069348651307270389"
         }
       ]
     },
     {
-      "emoji": "📈",
+      "emoji": "\ud83d\udcc8",
       "title": "Markets & News",
       "items": [
         {
-          "tag": "new",
-          "title": "@fminvestllc: Evolution of Cash Management via Treasury ETFs",
-          "body": "F/m Investments discusses cash management, emphasizing that tools have evolved past traditional money market funds. They highlight TBIL, which provides short-term Treasury exposure with ETF-level efficiency, liquidity, and transparency.",
-          "url": "https://x.com/fminvestllc/status/2048851081690542517"
+          "tag": "hot",
+          "title": "@keepitquarterly: SEC Rule S7-2026-15 Corporate Disclosure Debate",
+          "body": "Financial commentators are raising alarms over SEC Rule S7-2026-15, which would permit public companies to delay reporting negative earnings numbers for up to six months. Critics warn this creates a window for corporate insiders to dump shares while retail investors buy in.",
+          "url": "https://x.com/keepitquarterly/status/2063273442103922979"
         },
         {
           "tag": "update",
-          "title": "@freedomcenterlu: Virginia Supreme Court Redistricting Ruling",
-          "body": "Virginia's Supreme Court upheld the independent redistricting commission created in 2020. In response, local Democrats are debating raising the retirement age for justices to replace those who ruled against them, drawing criticism over judicial independence.",
-          "url": "https://x.com/freedomcenterlu/status/2053941235232931844"
-        },
-        {
-          "tag": "new",
-          "title": "@jewishinsider: Midterm Campaign Funding Flows",
-          "body": "An investigation by Jewish Insider explores the dark money network behind the Justice Democrats' spending surge in the 2026 midterms, highlighting the political action committees and donors funding primary campaigns.",
-          "url": "https://x.com/jewishinsider/status/2066924680179818601"
+          "title": "@Farmer9911: Geopolitical Shifts in Ukraine's Territorial Goals",
+          "body": "Observers note a significant evolution in Ukrainian President Zelenskyy's geopolitical objectives, shifting from settling for a ceasefire along the line of contact to actively seeking the return of all territories occupied since 2014, including Crimea.",
+          "url": "https://x.com/Farmer9911/status/2069242836751360290"
         },
         {
           "tag": "update",
-          "title": "@FannieMae: Manufactured Housing and Financing Options",
-          "body": "Fannie Mae shares data showing that manufactured homes provide a high-quality, lower-cost path to homeownership. Some owners save up to 40% on monthly housing costs compared to site-built homes, backed by expanded financing options.",
-          "url": "https://x.com/FannieMae/status/1998787649394585683"
+          "title": "@btcbqr: Domestic Tobacco Disrupted by Self-Rolling and E-Cigarettes",
+          "body": "A price hike of 40-50% by the Chinese State Tobacco Corporation has triggered unexpected consumer price-sensitivity in rural and younger demographics, who are shifting to self-rolled tobacco and e-cigarettes, leaving retail tobacco shops struggling.",
+          "url": "https://x.com/btcbqr/status/2069438225815568498"
+        },
+        {
+          "tag": "hot",
+          "title": "@jjauthor: Legislative Battles Over Immigration Policy",
+          "body": "Political commentators are highlighting the asymmetry in legislative thresholds, questioning why 60 Senate votes are demanded to deport illegal immigrants when no such supermajority was required for their entry.",
+          "url": "https://x.com/jjauthor/status/2069277602653905361"
         }
       ]
     },
     {
-      "emoji": "🌍",
+      "emoji": "\ud83c\udf0d",
       "title": "General",
       "items": [
         {
           "tag": "hot",
-          "title": "@NetMentorTW: Messi's Determination at 39 Years Old",
-          "body": "A breakdown of Lionel Messi's sensational second goal. At 39, Messi led a counter-attack from 40 meters, created an opportunity for a teammate who missed, and immediately fought for the rebound to secure the 2-0 victory, highlighting his relentless work ethic.",
-          "url": "https://x.com/NetMentorTW/status/2069138573413199891"
+          "title": "@iMiaSanMia: Michael Olise Matches Zidane's Historic France Start",
+          "body": "Michael Olise has reached 12 goal involvements (7 goals, 5 assists) in his first 19 appearances for the France national team, matching Zin\u00e9dine Zidane's historic 1996 milestone.",
+          "url": "https://x.com/iMiaSanMia/status/2069401220255527145"
         },
         {
           "tag": "hot",
-          "title": "@NJanfren: Comparing World Cup Careers of Messi and Pelé",
-          "body": "A heated critique of comparisons between Lionel Messi and Pelé. The post points out that Pelé won three World Cups in four appearances, whereas Messi played five to secure one title and six to surpass Pelé's goal count, arguing Pelé's tournament legacy remains unmatched.",
-          "url": "https://x.com/NJanfren/status/2069118435481551125"
+          "title": "@Plettigoal: FC Bayern Finalizes Ismael Saibari Transfer",
+          "body": "Bayern Munich has completed the signing of Ismael Saibari from PSV Eindhoven. Sporting Director Max Eberl reportedly secured a fixed fee below \u20ac50 million by concluding negotiations early before Morocco's World Cup opening match.",
+          "url": "https://x.com/Plettigoal/status/2069166572191531201"
         },
         {
           "tag": "update",
-          "title": "@mui_king: 2026 World Cup Goal Standings",
-          "body": "An analysis of the current World Cup goalscorer standings, noting that Messi's five goals place him seventh in the tournament rankings. Germany leads with nine goals, followed by the Netherlands and Canada with seven.",
-          "url": "https://x.com/mui_king/status/2069169761246933489"
+          "title": "@cinemaclt: Haaland Explains Declining Tom Holland's Monaco Invite",
+          "body": "Football star Erling Haaland revealed he ignored a dinner invitation from Spider-Man actor Tom Holland during the Monaco Grand Prix, stating that he does not watch movies and did not want to respond to a stranger.",
+          "url": "https://x.com/cinemaclt/status/2069454844352454678"
         },
         {
-          "tag": "viral",
-          "title": "@NoodleHairCR7: Kylian Mbappé Takes Charge of Pitch Conditions",
-          "body": "Fans react with amusement as Kylian Mbappé is spotted directing stadium cleaners to remove excess water from specific areas of the pitch, showcasing his hands-on leadership style during a waterlogged World Cup match.",
-          "url": "https://x.com/NoodleHairCR7/status/2069214916486041891"
-        },
-        {
-          "tag": "viral",
-          "title": "@njdmarlon: Norway's Viking Row World Cup Moment",
-          "body": "Norway U15 teammate history and senior team achievements culminate in a spectacular post-match celebration, with the Norwegian national team performing a massive 'Viking Row' celebration alongside their traveling fans.",
-          "url": "https://x.com/njdmarlon/status/2069241591286419513"
+          "tag": "update",
+          "title": "@Furious_red_: World Cup Scoring Achievements of Messi and Ronaldo",
+          "body": "Fans are analyzing the World Cup records of Lionel Messi and Cristiano Ronaldo, noting that while both have played in six World Cups, only Ronaldo has managed to score in all six tournaments.",
+          "url": "https://x.com/Furious_red_/status/2069513801448267913"
         }
       ]
     }
