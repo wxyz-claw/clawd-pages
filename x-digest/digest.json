@@ -3,11 +3,10 @@
   "date": "Thursday, June 25th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>GPT-5.5 Instant Rollout:</strong> OpenAI releases GPT-5.5 Instant, focusing on better intent alignment, constraint adherence, and local/shopping recommendation features.",
-    "<strong>Figma Valuation Debate:</strong> Despite consistently beating revenue targets post-IPO, Figma's stock is down 85%, triggering debates on whether AI design tools have dampended long-term growth expectations.",
-    "<strong>Apple's Secret Prototypes:</strong> For Apple's 50th anniversary, Tim Cook gave a tour of Apple's secret hardware archive, showcasing five decades of prototype history including never-before-seen devices.",
-    "<strong>Crisis in Venezuela:</strong> Reports filter out of Venezuela indicating a massive humanitarian crisis with unconfirmed reports of up to 10,000 casualties.",
-    "<strong>World Cup Brackets & Kane's Curse:</strong> Analysts evaluate Morocco's grueling path in the knockout stage, while a Ghanaian spiritualist claims to have lifted the curse on striker Harry Kane."
+    "<strong>OpenAI API Upgrades:</strong> OpenAI published a massive changelog detailing the launch of GPT-5.5, GPT-5.4, and the new Agents SDK.",
+    "<strong>AI Benchmarks & Valuation:</strong> GLM-5.2 scored 77.0% on ARC-AGI, matching low-reasoning GPT-5.5 performance, while Figma's post-IPO stock slump sparks debate on AI design threats.",
+    "<strong>Macro & Semiconductor Trends:</strong> China's CXMT sees intense talent competition ahead of its expected 2 trillion RMB IPO, while discussions arise over the SEC's proposed reporting frequency changes.",
+    "<strong>Sports & Culture:</strong> Julian Nagelsmann criticizes the World Cup bracket layout, a spiritualist claims to lift a curse on Harry Kane, and social trends in Shanghai show young people opting out of traditional milestones."
   ],
   "sections": [
     {
@@ -16,27 +15,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: GPT-5.5 Instant Launched",
-          "body": "OpenAI rolled out GPT-5.5 Instant to paid users, featuring enhanced intent understanding, better constraint handling, and cohesive local/shopping recommendations. It rolls out to free users tomorrow.",
-          "url": "https://x.com/OpenAI/status/2069843083701915755"
-        },
-        {
-          "tag": "new",
-          "title": "@ansonlin: Figma Stock Valuation Debate",
-          "body": "A discussion on why Figma's stock has declined 85% despite beating revenue projections every quarter post-IPO, highlighting market skepticism and the threat of AI design tools like Claude Design.",
-          "url": "https://x.com/ansonlin/status/2069791078341812693"
+          "title": "@OpenAIDevs: OpenAI Releases Massive API Changelog",
+          "body": "OpenAI published a major update to its API changelog, introducing GPT-5.5, GPT-5.4 mini/nano, new GPT-Realtime models, and developer blocks including the Agents SDK harness.",
+          "url": "https://x.com/OpenAIDevs/status/2069499656305090671"
         },
         {
           "tag": "update",
-          "title": "@WSJ: Inside Apple's Secret Prototype Archive",
-          "body": "To mark Apple's 50th anniversary, Tim Cook took the WSJ inside a secret archive of prototypes and early hardware, detailing the story of five decades in one room including tech Cook himself had never seen.",
-          "url": "https://x.com/WSJ/status/2052455804511408385"
+          "title": "@cremieuxrecueil: Continuous GPT 5.5 Job Completed",
+          "body": "A user reports successfully completing a long-running research job that required 16 days of continuous processing utilizing GPT 5.5 xhigh.",
+          "url": "https://x.com/cremieuxrecueil/status/2069982977195393059"
         },
         {
           "tag": "new",
-          "title": "@specs: Pre-orders Open for SPECS AR Glasses",
-          "body": "Augmented reality startup SPECS has opened pre-orders for its smart glasses, designed to make spatial computing feel more natural and human-centric.",
-          "url": "https://x.com/specs/status/2069132417408118917"
+          "title": "@arcprize: GLM-5.2 ARC-AGI Performance Results",
+          "body": "ARC-AGI benchmarking results for GLM-5.2 show 77.0% on ARC-AGI-1, placing it on par with GPT-5.4 and GPT-5.5 in low-reasoning modes.",
+          "url": "https://x.com/arcprize/status/2069845152773099854"
+        },
+        {
+          "tag": "update",
+          "title": "@ansonlin: Figma Stock Valuation Debate",
+          "body": "The stock valuation of Figma is questioned after falling 85% post-IPO despite hitting revenue targets, with debate focusing on the actual threat of AI design tools like Claude.",
+          "url": "https://x.com/ansonlin/status/2069791078341812693"
+        },
+        {
+          "tag": "new",
+          "title": "@thdxr: Measuring Vibe Coding in Codebases",
+          "body": "A humorous take on measuring 'vibe coding' codebase health by counting specific occurrences of type-checking overrides.",
+          "url": "https://x.com/thdxr/status/2069927201638682976"
+        },
+        {
+          "tag": "update",
+          "title": "@GeminiApp: Gemini 3.5 Flash Travel Strategy",
+          "body": "Google highlights Gemini 3.5 Flash's integration capabilities with Gmail and Calendar to automatically generate jet lag sleep plans.",
+          "url": "https://x.com/GeminiApp/status/2067654431953547590"
         }
       ]
     },
@@ -46,21 +57,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RyanGirdusky: Devastating Casualties Reported in Venezuela",
-          "body": "Unconfirmed reports out of Venezuela suggest a major unfolding tragedy with reports of up to 10,000 casualties, sparking deep concern and prayers on social platforms.",
-          "url": "https://x.com/RyanGirdusky/status/2069934303601934704"
+          "title": "@CryptoDoggyCN: CXMT Massive Recruitment and IPO",
+          "body": "Recruitment at China's memory chipmaker CXMT (长鑫存储) is extremely competitive, with an upcoming July IPO expected to value the firm at 2 trillion RMB.",
+          "url": "https://x.com/CryptoDoggyCN/status/2069760611635122678"
+        },
+        {
+          "tag": "update",
+          "title": "@keepitquarterly: SEC Reporting Frequency Debate",
+          "body": "Criticisms mount against SEC Chair Atkins' support of semiannual financial reporting, with critics arguing it reduces investor protection.",
+          "url": "https://x.com/keepitquarterly/status/2063272940729172209"
         },
         {
           "tag": "new",
-          "title": "@MinMin89485072: Japan PM Announces First Wave of Countermeasures",
-          "body": "Reports state that Japan has launched its first wave of counter-responses to regional economic and geopolitical disputes, marking a potential escalation in East Asian relations.",
-          "url": "https://x.com/MinMin89485072/status/2069640900654100777"
+          "title": "@APompliano: Shifting Federal Reserve Policy",
+          "body": "Pomp discusses the macro economic outlook, potential new leadership candidates like Kevin Warsh, and shifting policy directions at the Federal Reserve.",
+          "url": "https://x.com/APompliano/status/2057499158039458276"
         },
         {
-          "tag": "hot",
-          "title": "@PatsKam: World Cup Tourism and US Cost of Living Debates",
-          "body": "A debate on ticket pricing and standard of living, questioning how international fans from developing countries can afford $5,000 World Cup tickets while many average Americans feel economically strained.",
-          "url": "https://x.com/PatsKam/status/2069855717528322224"
+          "tag": "update",
+          "title": "@dabowagaga: Venezuela Earthquake Evacuation Footage",
+          "body": "Dramatic footage emerges of the earthquake shaking Venezuela, showing a resident evacuating a high-rise building during the tremors.",
+          "url": "https://x.com/dabowagaga/status/2070024970626019720"
+        },
+        {
+          "tag": "update",
+          "title": "@MinMin89485072: Japan Initiates Response Measures",
+          "body": "Reports surface regarding Japan's first round of economic or diplomatic countermeasures in response to recent geopolitical friction.",
+          "url": "https://x.com/MinMin89485072/status/2069640900654100777"
         }
       ]
     },
@@ -69,34 +92,34 @@
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@Mawzen20: Ronaldo's Underrated 800-Goal Milestone",
-          "body": "Football fans debate why Cristiano Ronaldo's record of 800 goals in 500 matches isn't receiving more active media recognition, emphasizing its historical scale.",
-          "url": "https://x.com/Mawzen20/status/2069767114290847751"
-        },
-        {
           "tag": "update",
-          "title": "@MessiahYaniss16: Morocco's Tough World Cup Bracket Path",
-          "body": "An analysis of the FIFA World Cup knockout matchups showing a grueling path for Morocco after finishing second, lining them up against Netherlands, Mexico, France, and Spain.",
-          "url": "https://x.com/MessiahYaniss16/status/2069935698686206066"
-        },
-        {
-          "tag": "update",
-          "title": "@iMiaSanMia: Harry Kane Curse Lifted by Spiritualist",
-          "body": "Ghanaian spiritualist Nana Kwaku Bonsam claims to have removed the 'curse' he previously placed on Harry Kane to prevent him from scoring against Ghana, wishing him luck in future matches.",
+          "title": "@iMiaSanMia: Harry Kane Spiritual Curse Lifted",
+          "body": "Ghanaian spiritualist Nana Kwaku Bonsam claims to have lifted his curse on Harry Kane, wishing the striker well for his next matches.",
           "url": "https://x.com/iMiaSanMia/status/2069768123457155550"
         },
         {
-          "tag": "new",
-          "title": "@BayernPapa: Kane's Depressing Contrast in Midfield Support",
-          "body": "Fans point out the stark contrast in creative midfield support for Harry Kane between his club squad (Bayern Munich) and his international national team teammates.",
-          "url": "https://x.com/BayernPapa/status/2069531190147830112"
+          "tag": "update",
+          "title": "@goalsside: Nagelsmann Criticizes World Cup Schedule",
+          "body": "Germany's manager Julian Nagelsmann expresses frustration with the FIFA World Cup 2026 scheduling, claiming they face a tougher path for winning their group.",
+          "url": "https://x.com/goalsside/status/2070104285090615809"
         },
         {
-          "tag": "hot",
-          "title": "@JoshuaMMKR: World Cup Seattle Attendance Anomalies",
-          "body": "Spectators express insouciance and skepticism over a packed 70,000-person Seattle stadium for a midday Bosnia-Herzegovina vs. Qatar match, questioning if tickets were given away.",
-          "url": "https://x.com/JoshuaMMKR/status/2069856887357456802"
+          "tag": "update",
+          "title": "@wjf110: Shanghai Demographics and Marriage Trends",
+          "body": "A viral discussion centers on Shanghai's high cost of living and changing social attitudes leading to declining marriage and birth rates among young professionals.",
+          "url": "https://x.com/wjf110/status/2069790426354286698"
+        },
+        {
+          "tag": "new",
+          "title": "@lidangzzz: PLC Engineering Careers for Women",
+          "body": "Practical advice for female students looking to enter manufacturing, highlighting PLC (programmable logic controller) engineering as a high-paying, accessible field.",
+          "url": "https://x.com/lidangzzz/status/2069770176401231908"
+        },
+        {
+          "tag": "update",
+          "title": "@FOXSoccer: Morocco World Cup Highlight",
+          "body": "Morocco's early breakthrough goal from Ismael Saibari highlights a thrilling World Cup performance.",
+          "url": "https://x.com/FOXSoccer/status/2068092249997451598"
         }
       ]
     }
