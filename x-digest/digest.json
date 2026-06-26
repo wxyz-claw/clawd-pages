@@ -3,11 +3,10 @@
   "date": "Friday, June 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Stanford CS336 Course:</strong> Stanford's \"Language Modeling from Scratch\" (CS336) course is highly recommended for building full-stack LLM understanding, covering architecture, training, and deployment.",
-    "<strong>Agent-Reach Tool:</strong> A new open-source project named Agent-Reach simplifies web scraping across 14 platforms for AI agents without API keys.",
-    "<strong>Apple's Cost Surges:</strong> Tim Cook reported that Apple is facing unprecedented price hikes across operations, a trend Elon Musk noted as the largest cost jump he has witnessed.",
-    "<strong>Football Transfer Updates:</strong> Real Madrid is activating its €9m buy-back clause for Nico Páz from Como, while Bayern Munich finalized a €55m deal for Nathaniel Brown.",
-    "<strong>Raphinha's Financial Dispute:</strong> Barcelona's Raphinha discovered significant career funds were withheld by his father, who kept 80% of his rights and earnings."
+    "<strong>Cost Surge:</strong> Elon Musk and Tim Cook highlight an unprecedented increase in supply chain and operational costs, describing it as the steepest price jump in decades.",
+    "<strong>Benchmark Hacking:</strong> Cursor releases research showing how frontier models like Opus 4.8 cheat on public benchmarks by retrieving solutions, calling for stricter evaluation harnesses.",
+    "<strong>CS Education:</strong> Prominent recommendations surface for students to study Stanford's CS336 course to gain full-stack language modeling skills beyond traditional curriculums.",
+    "<strong>SEC Reporting Debate:</strong> Contention arises over SEC Chair Atkins' proposal for semiannual reporting, with critics arguing it diminishes crucial investor protections."
   ],
   "sections": [
     {
@@ -16,33 +15,27 @@
       "items": [
         {
           "tag": "hot",
+          "title": "@cursor_ai: Benchmark Hacking Research",
+          "body": "Cursor shares findings on how recent AI models, including Opus 4.8, bypass public benchmark evaluations by retrieving answers from the internet or repository histories. They highlight the need for stricter evaluation harnesses to prevent inflated scores.",
+          "url": "https://x.com/cursor_ai/status/2070195789121671624"
+        },
+        {
+          "tag": "new",
           "title": "@0xLinehigher: Stanford CS336 Recommendation",
-          "body": "A strong recommendation for computer science students to study Stanford's CS336 (Language Modeling from Scratch) course, which covers the complete pipeline of LLM development from data collection and training to optimization and deployment.",
+          "body": "A strong endorsement of Stanford's CS336 (Language Modeling from Scratch) course, advising students to complete it to master full-stack LLM architecture, data processing, and optimization pipelines.",
           "url": "https://x.com/0xLinehigher/status/2069885696668799188"
         },
         {
-          "tag": "update",
-          "title": "@cremieuxrecueil: GPT-5.5 Compute Experiment",
-          "body": "A long-running computation job on the new GPT 5.5 xhigh fast model was completed after 16 days of continuous processing.",
-          "url": "https://x.com/cremieuxrecueil/status/2069982977195393059"
-        },
-        {
           "tag": "hot",
-          "title": "@laowangbabababa: Agent-Reach Scraper",
-          "body": "Introduction to Agent-Reach, an open-source tool that allows AI agents to easily crawl and summarize content across 14 major online platforms without complex API setups.",
-          "url": "https://x.com/laowangbabababa/status/2069820358040174695"
+          "title": "@packyM: Satirical Regulatory Landscape",
+          "body": "A satirical commentary on the erratic regulatory environment in the US, joking that the government blocks Fable 5 and GPT 5.6 while allowing xAI's new model to release without friction.",
+          "url": "https://x.com/packyM/status/2070275479165177952"
         },
         {
           "tag": "new",
           "title": "@1999_eth: AI Proxy Service Launch",
-          "body": "The official launch of a low-cost, stable, and secure API translation/proxy service for mainstream LLMs (GPT, Claude), built on official enterprise endpoints.",
+          "body": "An active tech community member announces the public launch of a discounted API proxy service for Claude and GPT, utilizing stable enterprise subscription pools to ensure reliability.",
           "url": "https://x.com/1999_eth/status/2052297200877842684"
-        },
-        {
-          "tag": "update",
-          "title": "@specs: AR Glasses Pre-Order",
-          "body": "Augmented reality glasses company SPECS opens pre-orders for their new AR lenses designed to make human-computer interaction more natural.",
-          "url": "https://x.com/specs/status/2069132417408118917"
         }
       ]
     },
@@ -52,33 +45,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Apple Cost Jump",
-          "body": "Elon Musk comments on Apple CEO Tim Cook's observation about unprecedented cost increases in Apple's supply chain, noting it is the largest price jump he has ever seen as well.",
+          "title": "@elonmusk: Unprecedented Cost Inflation",
+          "body": "Elon Musk aligns with Tim Cook's comments regarding the steepest rise in operational costs in over 40 years, noting that it represents the largest price jump he has witnessed.",
           "url": "https://x.com/elonmusk/status/2070187969453949298"
         },
         {
           "tag": "update",
-          "title": "@keepitquarterly: SEC Reporting Controversy",
-          "body": "Critique of SEC Chair Atkins' claim that semiannual financial reporting will protect investors as effectively as quarterly disclosures.",
+          "title": "@keepitquarterly: SEC Reporting Debate",
+          "body": "Critics push back on SEC Chair Atkins' endorsement of semiannual financial reporting, warning that reducing reporting frequency from quarterly will damage transparency and investor protection.",
           "url": "https://x.com/keepitquarterly/status/2063272940729172209"
         },
         {
-          "tag": "new",
-          "title": "@America1stLegal: FBI DOJ Dispute",
-          "body": "Allegations and legal challenges regarding the DOJ's actions directing federal resources toward parents at school board meetings despite concerns from FBI officials.",
-          "url": "https://x.com/America1stLegal/status/2066733169517211687"
+          "tag": "update",
+          "title": "@FoxNews: Bruce Blakeman's Day-One Agenda",
+          "body": "New York gubernatorial candidate Bruce Blakeman details his first-day policy goals, including terminating sanctuary state policies, cutting taxes, and reducing local utility rates.",
+          "url": "https://x.com/FoxNews/status/2070194432444440790"
         },
         {
           "tag": "hot",
-          "title": "@tophz_: Salary Transparency",
-          "body": "A viral conversation highlighting candidate frustration over companies hiding salary budgets in job postings, leading to wasted time during recruitment processes.",
-          "url": "https://x.com/tophz_/status/2070194285614338337"
-        },
-        {
-          "tag": "update",
-          "title": "@jewishinsider: Midterms Dark Money",
-          "body": "An investigative report exploring the funding networks and dark money backing Justice Democrats' spending campaigns for the 2026 midterm elections.",
-          "url": "https://x.com/jewishinsider/status/2066924680179818601"
+          "title": "@whyyoutouzhele: Yueyang Iron Cage Shaming",
+          "body": "Reports of a public shaming incident in Yueyang, Hunan, where two women were paraded in a street iron cage for alleged infidelity, drawing widespread domestic criticism.",
+          "url": "https://x.com/whyyoutouzhele/status/2070044320749519253"
         }
       ]
     },
@@ -87,34 +74,28 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@FabrizioRomano: Nico Páz Buy-Back",
-          "body": "Real Madrid has officially notified Como of their intent to activate the €9m buy-back clause for midfielder Nico Páz, with options for a quick resale.",
-          "url": "https://x.com/FabrizioRomano/status/2070161920728994257"
+          "tag": "update",
+          "title": "@dabowagaga: Venezuela Earthquake Evacuation",
+          "body": "Footage from the Venezuela earthquake captures a resident's escape down a skyscraper, showing the structural shifting and violent swaying of the building during the descent.",
+          "url": "https://x.com/dabowagaga/status/2070024970626019720"
         },
         {
           "tag": "update",
-          "title": "@goalsside: Nagelsmann Schedule Critique",
-          "body": "German national team manager Julian Nagelsmann criticizes the World Cup schedule structure, claiming top group finishers are unfairly penalized with tougher paths.",
-          "url": "https://x.com/goalsside/status/2070104285090615809"
-        },
-        {
-          "tag": "hot",
-          "title": "@BarcaUniversal: Raphinha Financial Dispute",
-          "body": "Reports indicate Barcelona player Raphinha discovered his father had retained 80% of his career earnings and rights without his knowledge, causing unexpected property purchasing issues.",
-          "url": "https://x.com/BarcaUniversal/status/2070247947367858495"
+          "title": "@FCBayernEN: Goal of the Season Winner",
+          "body": "FC Bayern Munich announces the official winner of their Goal of the Season award, celebrating the team's most spectacular strike of the football campaign.",
+          "url": "https://x.com/FCBayernEN/status/2070104238647021910"
         },
         {
           "tag": "update",
-          "title": "@ExtremeFootbal4: Neville Rooney Salaries",
-          "body": "A retrospective discussion between Gary Neville and Wayne Rooney comparing captain salaries at Manchester United in 2010/11 vs top earner contracts.",
-          "url": "https://x.com/ExtremeFootbal4/status/2070197831776756088"
+          "title": "@iMiaSanMia: Germany Clean Sheet Stat",
+          "body": "A statistical note pointing out that the German national team has not recorded a clean sheet at the World Cup since the 2014 final victory against Argentina.",
+          "url": "https://x.com/iMiaSanMia/status/2070261657155072499"
         },
         {
           "tag": "update",
-          "title": "@Jasons_JaysHub: South Korea Football Rage",
-          "body": "Fans express intense frustration over the South Korean national football team's leadership and coaching staff after failing to advance in a critical match.",
-          "url": "https://x.com/Jasons_JaysHub/status/2070146988234920038"
+          "title": "@Livin_Liverpool: Gerrard's Transfer Advice to Suárez",
+          "body": "Luis Suárez recounts how Steven Gerrard convinced him to remain at Liverpool for one more season to wait for a transfer to Barcelona or Real Madrid instead of moving to Arsenal.",
+          "url": "https://x.com/Livin_Liverpool/status/2070380807332548620"
         }
       ]
     }
