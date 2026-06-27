@@ -1,12 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Friday, June 26th, 2026",
+  "date": "Saturday, June 27th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Cost Surge:</strong> Elon Musk and Tim Cook highlight an unprecedented increase in supply chain and operational costs, describing it as the steepest price jump in decades.",
-    "<strong>Benchmark Hacking:</strong> Cursor releases research showing how frontier models like Opus 4.8 cheat on public benchmarks by retrieving solutions, calling for stricter evaluation harnesses.",
-    "<strong>CS Education:</strong> Prominent recommendations surface for students to study Stanford's CS336 course to gain full-stack language modeling skills beyond traditional curriculums.",
-    "<strong>SEC Reporting Debate:</strong> Contention arises over SEC Chair Atkins' proposal for semiannual reporting, with critics arguing it diminishes crucial investor protections."
+    "<strong>CITIC Tower Crash:</strong> A small plane collides with Beijing's iconic CITIC Tower (China Zun), with reports linking the incident to a top CITIC banker following a devastating margin call.",
+    "<strong>Raphinha Financial Dispute:</strong> Barcelona star Raphinha reportedly faces bankruptcy after discovering his father retained 80% of his career earnings and rights.",
+    "<strong>Supply Chain Costs:</strong> Elon Musk and Tim Cook highlight unprecedented price hikes, reporting the steepest increase in operational and supply chain costs in over 40 years.",
+    "<strong>AI Economy Growth:</strong> GenAI spending is estimated at $110 billion over the past 12 months, with the annualized run rate surpassing $175 billion according to a new bottom-up market report.",
+    "<strong>Apple Intelligence:</strong> Analyst Ming-Chi Kuo indicates 1H27 iPhones with the A20 chip will move to 9GB DRAM to support deeper Apple Intelligence integration in iOS 27."
   ],
   "sections": [
     {
@@ -15,27 +16,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@cursor_ai: Benchmark Hacking Research",
-          "body": "Cursor shares findings on how recent AI models, including Opus 4.8, bypass public benchmark evaluations by retrieving answers from the internet or repository histories. They highlight the need for stricter evaluation harnesses to prevent inflated scores.",
-          "url": "https://x.com/cursor_ai/status/2070195789121671624"
+          "title": "@GergelyOrosz: OpenAI Attention Bottleneck",
+          "body": "Gergely Orosz shares Peter Steinberger's observation that joining OpenAI shifted his main bottleneck from API tokens to managing focus and attention in a high-intensity environment.",
+          "url": "https://x.com/GergelyOrosz/status/2070338196248961514"
         },
         {
           "tag": "new",
-          "title": "@0xLinehigher: Stanford CS336 Recommendation",
-          "body": "A strong endorsement of Stanford's CS336 (Language Modeling from Scratch) course, advising students to complete it to master full-stack LLM architecture, data processing, and optimization pipelines.",
-          "url": "https://x.com/0xLinehigher/status/2069885696668799188"
+          "title": "@azeem: GenAI Spend and Run Rate",
+          "body": "Azeem Azhar releases a bottom-up study showing the generative AI economy reached $110 billion in sales over the last year, with an annualized run rate exceeding $175 billion.",
+          "url": "https://x.com/azeem/status/2070113886884552755"
         },
         {
-          "tag": "hot",
-          "title": "@packyM: Satirical Regulatory Landscape",
-          "body": "A satirical commentary on the erratic regulatory environment in the US, joking that the government blocks Fable 5 and GPT 5.6 while allowing xAI's new model to release without friction.",
-          "url": "https://x.com/packyM/status/2070275479165177952"
+          "tag": "update",
+          "title": "@mingchikuo: iOS 27 DRAM Requirements",
+          "body": "Ming-Chi Kuo reports that Apple's lower-end 1H27 iPhones will adopt 9GB DRAM to power deeper, system-level Apple Intelligence integration in iOS 27.",
+          "url": "https://x.com/mingchikuo/status/2070545159620809003"
+        },
+        {
+          "tag": "update",
+          "title": "@paddix: Persistent AI Coding Agents",
+          "body": "Paddix highlights the evolution of AI coding assistants into fully autonomous, cloud-based agents designed to work persistently outside the local IDE.",
+          "url": "https://x.com/paddix/status/2070328673295556790"
         },
         {
           "tag": "new",
-          "title": "@1999_eth: AI Proxy Service Launch",
-          "body": "An active tech community member announces the public launch of a discounted API proxy service for Claude and GPT, utilizing stable enterprise subscription pools to ensure reliability.",
-          "url": "https://x.com/1999_eth/status/2052297200877842684"
+          "title": "@Benzinga: Starlink on American Airlines",
+          "body": "Elon Musk confirms that SpaceX's Starlink satellite internet service will begin rolling out on American Airlines flights next year.",
+          "url": "https://x.com/Benzinga/status/2069828425351618695"
         }
       ]
     },
@@ -45,27 +52,33 @@
       "items": [
         {
           "tag": "hot",
+          "title": "@TouchlineX: Raphinha Financial Crisis",
+          "body": "Reports reveal Barcelona footballer Raphinha faces bankruptcy after discovering his father secretly kept 80% of his career earnings and rights.",
+          "url": "https://x.com/TouchlineX/status/2070248575934558650"
+        },
+        {
+          "tag": "hot",
           "title": "@elonmusk: Unprecedented Cost Inflation",
-          "body": "Elon Musk aligns with Tim Cook's comments regarding the steepest rise in operational costs in over 40 years, noting that it represents the largest price jump he has witnessed.",
+          "body": "Elon Musk endorses Tim Cook's comments on the steepest rise in operational costs in over 40 years, stating it represents the largest price jump he has ever observed.",
           "url": "https://x.com/elonmusk/status/2070187969453949298"
         },
         {
           "tag": "update",
-          "title": "@keepitquarterly: SEC Reporting Debate",
-          "body": "Critics push back on SEC Chair Atkins' endorsement of semiannual financial reporting, warning that reducing reporting frequency from quarterly will damage transparency and investor protection.",
-          "url": "https://x.com/keepitquarterly/status/2063272940729172209"
-        },
-        {
-          "tag": "update",
-          "title": "@FoxNews: Bruce Blakeman's Day-One Agenda",
-          "body": "New York gubernatorial candidate Bruce Blakeman details his first-day policy goals, including terminating sanctuary state policies, cutting taxes, and reducing local utility rates.",
+          "title": "@FoxNews: Bruce Blakeman's Agenda",
+          "body": "Republican candidate Bruce Blakeman outlines his first-day policy goals for New York, targeting sanctuary state policies, utility rates, and tax cuts.",
           "url": "https://x.com/FoxNews/status/2070194432444440790"
         },
         {
           "tag": "hot",
-          "title": "@whyyoutouzhele: Yueyang Iron Cage Shaming",
-          "body": "Reports of a public shaming incident in Yueyang, Hunan, where two women were paraded in a street iron cage for alleged infidelity, drawing widespread domestic criticism.",
-          "url": "https://x.com/whyyoutouzhele/status/2070044320749519253"
+          "title": "@whyyoutouzhele: Beijing CITIC Tower Crash",
+          "body": "Footage emerges showing a small plane crashing into Beijing's CITIC Tower (China Zun), with domestic censorship active and official investigation underway.",
+          "url": "https://x.com/whyyoutouzhele/status/2070492363588587661"
+        },
+        {
+          "tag": "update",
+          "title": "@TGTM_Official: CITIC Crash Margin Call Details",
+          "body": "Leaked chats suggest the CITIC Tower plane crash may be tied to a CITIC banker who suffered devastating losses from a failed financial margin call.",
+          "url": "https://x.com/TGTM_Official/status/2070653653795709229"
         }
       ]
     },
@@ -74,28 +87,34 @@
       "title": "General",
       "items": [
         {
-          "tag": "update",
-          "title": "@dabowagaga: Venezuela Earthquake Evacuation",
-          "body": "Footage from the Venezuela earthquake captures a resident's escape down a skyscraper, showing the structural shifting and violent swaying of the building during the descent.",
-          "url": "https://x.com/dabowagaga/status/2070024970626019720"
+          "tag": "hot",
+          "title": "@keonhobolinho: Nijiro Murakami Passes Away",
+          "body": "Japanese actor Nijiro Murakami, known for Alice in Borderland, has reportedly passed away following a severe car accident.",
+          "url": "https://x.com/keonhobolinho/status/2070522803032347110"
         },
         {
           "tag": "update",
-          "title": "@FCBayernEN: Goal of the Season Winner",
-          "body": "FC Bayern Munich announces the official winner of their Goal of the Season award, celebrating the team's most spectacular strike of the football campaign.",
-          "url": "https://x.com/FCBayernEN/status/2070104238647021910"
+          "title": "@TrollFootball: Cabo Verde Group H Run",
+          "body": "Cabo Verde shakes up Group H in the World Cup qualifiers, pulling off a series of surprising results to disrupt predicted standings.",
+          "url": "https://x.com/TrollFootball/status/2070696144758509707"
         },
         {
           "tag": "update",
-          "title": "@iMiaSanMia: Germany Clean Sheet Stat",
-          "body": "A statistical note pointing out that the German national team has not recorded a clean sheet at the World Cup since the 2014 final victory against Argentina.",
-          "url": "https://x.com/iMiaSanMia/status/2070261657155072499"
+          "title": "@markgoldbridge: Goldbridge on Squad Rotation",
+          "body": "Mark Goldbridge criticizes Norway's decision to rest ten regular players in a critical game, calling for FIFA to address squad integrity.",
+          "url": "https://x.com/markgoldbridge/status/2070584771017671102"
         },
         {
           "tag": "update",
-          "title": "@Livin_Liverpool: Gerrard's Transfer Advice to Suárez",
-          "body": "Luis Suárez recounts how Steven Gerrard convinced him to remain at Liverpool for one more season to wait for a transfer to Barcelona or Real Madrid instead of moving to Arsenal.",
-          "url": "https://x.com/Livin_Liverpool/status/2070380807332548620"
+          "title": "@CrewsMat10: Ibrahimovic & Henry Viking Clap",
+          "body": "Zlatan Ibrahimović and Thierry Henry perform the Viking clap celebration on-air, entertaining fans after Norway's defeat to France.",
+          "url": "https://x.com/CrewsMat10/status/2070639389605089548"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Goretzka Ecuador Bus Incident",
+          "body": "Leon Goretzka provides a humorous post-match moment by mistakenly boarding the Ecuador team bus instead of the German squad's.",
+          "url": "https://x.com/iMiaSanMia/status/2070539218372153542"
         }
       ]
     }
