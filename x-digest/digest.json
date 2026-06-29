@@ -1,14 +1,12 @@
 {
   "title": "Clawd X Digest",
-  "date": "Sunday, June 28th, 2026",
+  "date": "Monday, June 29th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Algeria-Austria World Cup Controversy:</strong> World Cup match between Algeria and Austria sparks outrage as Algeria appears to concede a late equalizer on purpose to avoid Spain in the Round of 16.",
-    "<strong>Harry Kane Reaches 70 Goals:</strong> Harry Kane reaches 70 goals for club and country this season, placing him second this century behind Lionel Messi's historic 82-goal year.",
-    "<strong>OpenCode v2 Shared Backend:</strong> OpenCode v2 introduces a unified backend for TUI, desktop, and web clients, significantly reducing resource footprint and enabling default state sync.",
-    "<strong>Claude Code Ad Monetization:</strong> Developers introduce 'Kickbacks', an ad marketplace built into the Claude Code terminal spinner, allowing engineers to monetize execution wait times.",
-    "<strong>Beijing China Zun Plane Crash Mystery:</strong> Financial commentators trace links between the June 26 Beijing China Zun CITIC Tower plane crash and failed stock margin calls of local bank executives.",
-    "<strong>Midea AC European Boom:</strong> Chinese manufacturer Midea's window AC units see massive demand and price hikes from €800 to €2000 in Europe due to escalating summer heatwaves."
+    "<strong>AI Agent Loops:</strong> AI developers are standardizing on LLM-in-the-loop diagnostics for auto-evals and self-improvement loops, with Anthropic reporting over 90% engineer adoption.",
+    "<strong>Midea Window ACs:</strong> European heatwave pushes window AC prices from €800 up to €2000 due to extreme inventory shortages.",
+    "<strong>World Cup Controversies:</strong> Fans debate referee decisions, strange goalkeeper actions, and proposals to fix the bloated 48-team tournament format.",
+    "<strong>Decompilation Tuning:</strong> Elon Musk shares how Tesla/xAI engineers decompile closed-source binary packages for switch performance optimization."
   ],
   "sections": [
     {
@@ -17,39 +15,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "Andrew McCalip (@andrewmccalip)",
-          "body": "Andrew McCalip launches 'Kickbacks', a browser extension and ad marketplace for the Claude Code execution spinner, allowing developers to monetize terminal waiting time.",
-          "url": "https://x.com/andrewmccalip/status/2065049432652189933"
+          "title": "@bcherny: Future Roles in Engineering and Product",
+          "body": "Reflecting on the convergence of engineering, product, design, and data science as AI agents mature, citing the Claude Code team as a blueprint for a new unified role.",
+          "url": "https://x.com/bcherny/status/2071379474277613732"
         },
         {
-          "tag": "hot",
-          "title": "Dax (@thdxr)",
-          "body": "Dax announces that OpenCode v2 shares a unified backend across TUI, desktop, and web instances, minimizing CPU/memory footprint and keeping all windows synchronized by default.",
+          "tag": "new",
+          "title": "@thdxr: OpenCode v2 Shared Backend Architecture",
+          "body": "Details how OpenCode v2 unifies the TUI, desktop, and web clients under a shared backend, ensuring sync-by-default and minimized resource footprint across multiple open windows.",
           "url": "https://x.com/thdxr/status/2071007637487894883"
         },
         {
-          "tag": "new",
-          "title": "OpenAI Developers (@OpenAIDevs)",
-          "body": "OpenAI Developers release quality-of-life updates for Codex, improving scrolling performance and maintaining chat position during long multi-turn threads.",
-          "url": "https://x.com/OpenAIDevs/status/2070922791529091376"
-        },
-        {
-          "tag": "new",
-          "title": "Cosmtrek (@cosmtrek)",
-          "body": "A popular developer handbook 'The Hitchhiker’s Guide to Agentic AI' goes viral for offering a comprehensive architectural overview of building autonomous AI agents.",
-          "url": "https://x.com/cosmtrek/status/2070729072842600650"
+          "tag": "update",
+          "title": "@0xMovez: Standardizing AI Agent Self-Improvement Loops",
+          "body": "Explains the crucial loop for AI agent reliability: tracing every run, judging outputs with an LLM, diagnosing failures, and deploying fixes.",
+          "url": "https://x.com/0xMovez/status/2071214176526049739"
         },
         {
           "tag": "hot",
-          "title": "Fix (@FixlationAI)",
-          "body": "OpenAI's GPT-5.6 shows major capability upgrades in frontend design, simulations, game mechanics, and model interactions, indicating a new generation of agentic capabilities.",
-          "url": "https://x.com/FixlationAI/status/2070883758081823181"
+          "title": "@0xCodez: High Adoption of Managed Agentic Loops at Anthropic",
+          "body": "Notes that over 90% of Anthropic engineers now develop using self-improving loops, aiming for 100% in 4-6 months to run long, cost-effective agent tasks.",
+          "url": "https://x.com/0xCodez/status/2071239626128298131"
         },
         {
-          "tag": "hot",
-          "title": "futurenomics (@futurenomics)",
-          "body": "A viral comparison outlines developer experiences: Codex acts like a fast-prototyping Stanford engineer on caffeine, whereas Claude Code behaves like an elegant, precise craftsman.",
-          "url": "https://x.com/futurenomics/status/2071086359276671461"
+          "tag": "update",
+          "title": "@elonmusk: Decompiling Binaries for Network Performance",
+          "body": "Shares that in situations where source code is unavailable, such as with network switch software, teams are decompiling and directly hacking binaries to boost performance.",
+          "url": "https://x.com/elonmusk/status/2071536327930060974"
         }
       ]
     },
@@ -59,33 +51,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "Fox News (@FoxNews)",
-          "body": "New York Republican gubernatorial hopeful Bruce Blakeman outlines a first-day agenda focusing on ending sanctuary policies, tax cuts, and reducing energy costs.",
-          "url": "https://x.com/FoxNews/status/2070194432444440790"
+          "title": "@kenw_2: Midea Window Air Conditioners Surge in Europe",
+          "body": "Highlights how Europe's summer heatwave has driven massive demand for Midea window AC units, driving prices from €800 up to €2000 due to severe local shortages.",
+          "url": "https://x.com/kenw_2/status/2071155975608770593"
         },
         {
-          "tag": "hot",
-          "title": "Wanjun Xie (@WanjunXie)",
-          "body": "Reports emerge that Liu Ren, a high-profile 'Belt and Road' figure and president of the Cambodia Anhui Chamber of Commerce, has been arrested after a raid uncovered 2,100 Chinese college students locked in underground chambers of a cyber scam park.",
-          "url": "https://x.com/WanjunXie/status/2071036961335169184"
+          "tag": "viral",
+          "title": "@kunoo: Explaining Crypto Mechanics Visually",
+          "body": "A viral, concise 24-second animated video explaining cryptocurrency and blockchain technology concepts for the general public.",
+          "url": "https://x.com/kunoo/status/2071224600508186794"
         },
         {
           "tag": "new",
-          "title": "Brad Porter (@BradPorter_)",
-          "body": "Tech investor Brad Porter highlights the near-record work rates of prime-age Americans and projects that US manufacturing faces a shortage of 1.9 million unfilled jobs by 2033.",
-          "url": "https://x.com/BradPorter_/status/2069824804408991924"
+          "title": "@kimmonismus: Anthropic Enterprise Market Dominance",
+          "body": "Documents the significant surge in business and enterprise sector adoption for Anthropic models from late 2025 into early 2026, establishing a strong market lead.",
+          "url": "https://x.com/kimmonismus/status/2071213273031004529"
         },
         {
           "tag": "update",
-          "title": "World Capital AI (@WorldCapitalAI)",
-          "body": "Financial commentators dissect the multi-layered rumors surrounding 'Liu Junhua,' linking the Beijing China Zun CITIC Tower plane crash on June 26 to CITIC Bank executives, failed stock margin calls, and systemic debt scapegoating.",
-          "url": "https://x.com/WorldCapitalAI/status/2071042692516360545"
+          "title": "@caijingshujuku: Extreme Appliance Price Spikes in Europe",
+          "body": "Confirms window AC units are selling for up to €2000 in European markets under heatwave pressure, compared to heavily subsidized domestic air conditioning in China.",
+          "url": "https://x.com/caijingshujuku/status/2071227251774169598"
         },
         {
-          "tag": "new",
-          "title": "Sukiyonio (@Sukiyonio)",
-          "body": "A historical analysis suggests an alternative timeline where Chiang Kai-shek could have voluntarily abandoned China's northern provinces in 1945 to establish a 'Chinese version of the Berlin Wall,' potentially altering the Cold War.",
-          "url": "https://x.com/Sukiyonio/status/2070871467508809956"
+          "tag": "update",
+          "title": "@juanli324324: Beijing CITIC Tower Incident Details",
+          "body": "Details reports that the Beijing CITIC Tower plane crash was allegedly linked to a former bank executive experiencing margin call failures, triggering military response.",
+          "url": "https://x.com/juanli324324/status/2071489787304001727"
         }
       ]
     },
@@ -94,40 +86,34 @@
       "title": "General",
       "items": [
         {
+          "tag": "hot",
+          "title": "@nokai: Ref Cam & Goalkeeper Scandal",
+          "body": "Analyzes ref cam footage of a controversial play where a goalkeeper bizarrely retracted his hand to avoid touching the ball, fueling match-fixing discussions.",
+          "url": "https://x.com/nokai/status/2071270126519816451"
+        },
+        {
           "tag": "viral",
-          "title": "FPL Olympian (@FPLOlympian)",
-          "body": "A major controversy erupts during the World Cup as Algeria and Austria draw 3-3 after Algeria seemingly conceded a late 96th-minute equalizer on purpose to avoid Spain in the Round of 16.",
-          "url": "https://x.com/FPLOlympian/status/2071088141940019626"
-        },
-        {
-          "tag": "hot",
-          "title": "Prime Video Sport (@primevideosport)",
-          "body": "Harry Kane's sensational season reaches 70 goals for club and country, representing the second-highest goal tally in Europe's top five leagues this century behind Lionel Messi's 82-goal year in 2011/12.",
-          "url": "https://x.com/primevideosport/status/2071006913412698374"
-        },
-        {
-          "tag": "hot",
-          "title": "Anfield Papers (@AnfieldPapers)",
-          "body": "Reports circulate that former Liverpool right-back Trent Alexander-Arnold is set to switch his international allegiance to represent the United States after growing frustrated with his treatment in the England setup.",
-          "url": "https://x.com/AnfieldPapers/status/2071006781179056576"
+          "title": "@Priceless_MCI: Haaland Startled by Mirror Reflection",
+          "body": "A viral clip showing footballer Erling Haaland eating dinner and jumping in fright upon catching his own reflection in the mirror.",
+          "url": "https://x.com/Priceless_MCI/status/2071536826368553127"
         },
         {
           "tag": "new",
-          "title": "iPaul Canada (@iPaulCanada)",
-          "body": "A viral spotlight on the booming market for high-fidelity LED 'fake windows' that simulate realistic sunlight cycles, helping windowless offices and basements achieve pleasant ambient lighting.",
-          "url": "https://x.com/iPaulCanada/status/2070560999300559283"
+          "title": "@hwwaanng: Apple Sports World Cup Interface Innovations",
+          "body": "Showcases the new interactive and highly polished features in the Apple Sports application tailored for the current World Cup tournament.",
+          "url": "https://x.com/hwwaanng/status/2071122831308693719"
         },
         {
-          "tag": "hot",
-          "title": "Ken (@kenw_2)",
-          "body": "Home appliance trackers report that Chinese manufacturer Midea's window-mounted AC units are selling at a premium in Europe, with prices rising from €800 to €2000 amid severe summer heatwaves.",
-          "url": "https://x.com/kenw_2/status/2071155975608770593"
+          "tag": "viral",
+          "title": "@TrollFootball: Global Representation at the World Cup",
+          "body": "Comedic comparison of the presence and performance of Asian, African, and South American countries competing in the current World Cup matches.",
+          "url": "https://x.com/TrollFootball/status/2071255507298599282"
         },
         {
-          "tag": "hot",
-          "title": "崔承浩 (@cuichenghao)",
-          "body": "A clip from a Chinese League One football match goes viral showing a striker missing a wide-open empty goal due to poor footwork, drawing widespread online ridicule from domestic football fans.",
-          "url": "https://x.com/cuichenghao/status/2071054460194095553"
+          "tag": "update",
+          "title": "@UtdMaI: Streamlining the 48-Team World Cup Tournament",
+          "body": "Proposes an optimized playoff and tournament tree configuration to fix issues with the bloated 48-team World Cup format.",
+          "url": "https://x.com/UtdMaI/status/2071435849724477806"
         }
       ]
     }
