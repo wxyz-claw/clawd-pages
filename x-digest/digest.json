@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Wednesday, July 1st, 2026",
+  "date": "Thursday, July 2nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Loop Engineering:</strong> Andrew Ng popularizes the term to describe the agentic coding loops (e.g. Claude Code, OpenClaw) where agents iterate autonomously, shifting developers from QA to product steering.",
-    "<strong>SEC Reporting Debate:</strong> A major controversy emerges over proposed SEC Rule S7-2026-15, which would permit public companies to report financials semiannually instead of quarterly, raising concerns about retail investor transparency.",
-    "<strong>UBTECH Humanoid Robots:</strong> Chinese robotics firm UBTECH launched pre-leasing/sales for over 50 bipedal humanoid robots (1.6m-1.85m tall) starting at 119.8k RMB, bringing cyberpunk aesthetics to commercial reality.",
-    "<strong>Hong Kong Icon Passes:</strong> Chua Lam (蔡澜), legendary writer, film producer, and food critic, passed away at 83. He was the last surviving member of the \"Four Talents of Hong Kong,\" marking the end of an era.",
-    "<strong>German Football Drama:</strong> Sports analysts discuss the intense pressure in the German national team's World Cup exit penalty shootout, highlighting Jonathan Tah's brave but missed penalty after other senior players hesitated."
+    "<strong>Claude Fable 5 Benchmarks:</strong> Claude Fable 5 dominates public leaderboards, scoring 16.10% on the Remote Labor Index for real freelance projects, and proving highly capable—though token-heavy—in rendering complex physics simulations.",
+    "<strong>World Cup Drama:</strong> The FIFA World Cup sees major drama with England securing a Round of 16 spot in Mexico behind a Harry Kane brace, Belgium staging a historic 3-2 extra-time comeback against Senegal, and Oliver Kahn criticizing Germany's structural team leadership after their exit.",
+    "<strong>SEC Reporting Debate:</strong> A massive debate erupts over the proposed SEC Rule S7-2026-15, which would allow public companies to report financial figures semiannually instead of quarterly, threatening transparency for retail investors.",
+    "<strong>X Money Card:</strong> Elon Musk's X Money platform generates interest with a gunmetal grey debit card offering a highly competitive 6% APR checking yield and 3% cash back.",
+    "<strong>Palantir CEO CNBC Outburst:</strong> Palantir CEO Alex Karp delivers an animated CNBC appearance, accusing closed-source LLM providers of overselling token APIs and warning that enterprise clients risk losing proprietary edge by feeding centralized models."
   ],
   "sections": [
     {
@@ -16,33 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@AndrewYNg: Loop Engineering and Feedback Loops",
-          "body": "Andrew Ng breaks down 'loop engineering' as the core driver for next-gen coding agents (like Claude Code and OpenClaw), explaining the three essential feedback loops: agentic coding, developer feedback, and external feedback.",
-          "url": "https://x.com/AndrewYNg/status/2071988145667928442"
-        },
-        {
-          "tag": "new",
-          "title": "@sharbel: Agent Reach CLI Tool",
-          "body": "Introduces Agent Reach, an open-source CLI that allows AI agents to search and scrape X, Reddit, YouTube, Bilibili, and XiaoHongShu without API fees or accounts.",
-          "url": "https://x.com/sharbel/status/2071992786103193664"
-        },
-        {
-          "tag": "update",
-          "title": "@higgsfield: Gemini Omni Flash Video Generation",
-          "body": "Announces Gemini Omni Flash live on Higgsfield, offering advanced motion design, real text consistency across frames, and integration with Claude via MCP.",
-          "url": "https://x.com/higgsfield/status/2071997607665357000"
+          "title": "@theo: Claude Fable Model Orchestration Tips",
+          "body": "Developer Theo shares practical strategies for using Claude Fable without hitting rate limits, recommending high-effort settings and utilizing Codex as a fallback model for token-heavy engineering tasks.",
+          "url": "https://x.com/theo/status/2072481845363822914"
         },
         {
           "tag": "hot",
-          "title": "@_FORAB: UBTECH Humanoid Bipedal Robots",
-          "body": "Chinese robotics pioneer UBTECH launches a pre-sale for 50 bipedal humanoid robots with heights up to 1.85m and pricing starting at 119.8k RMB.",
-          "url": "https://x.com/_FORAB/status/2071943079133839838"
+          "title": "@atomic_chat_hq: Fable 5 Physics Benchmarks",
+          "body": "A multi-model comparison of Claude Fable 5, GPT 5.5, Opus 4.8, and GLM 5.2 on physics canvas rendering tasks reveals Fable 5 produces the highest quality simulations, though it consumed significantly more tokens and cost six times more than Opus.",
+          "url": "https://x.com/atomic_chat_hq/status/2072446067962978411"
+        },
+        {
+          "tag": "hot",
+          "title": "@kimmonismus: Claude Fable 5 Remote Labor Index Leader",
+          "body": "Claude Fable 5 sets a new benchmark standard on the Remote Labor Index by achieving a 16.10% success rate on professional freelance tasks, doubling the performance of its closest competitors.",
+          "url": "https://x.com/kimmonismus/status/2072376968729817531"
+        },
+        {
+          "tag": "update",
+          "title": "@higgsfield: Gemini Omni Flash Live",
+          "body": "Higgsfield announces the integration of Gemini Omni Flash on its video platform, offering frame-to-frame text consistency, motion design tools, and accessibility for Claude developers via MCP.",
+          "url": "https://x.com/higgsfield/status/2071997607665357000"
         },
         {
           "tag": "new",
-          "title": "@ExaAILabs: Exa Connect Release",
-          "body": "Exa AI Labs launches Exa Connect, allowing AI agents to connect directly with private data providers like ZoomInfo, Crunchbase, and Similarweb.",
-          "url": "https://x.com/ExaAILabs/status/2069842203577651283"
+          "title": "@mark_k: OpenAI GPT-5.6 Launch Rumors",
+          "body": "Reports state OpenAI is scheduling the launch of its next model suite, GPT-5.6 (Sol, Terra, Luna), for this Thursday, maintaining their rapid release cadence despite internal staff time off.",
+          "url": "https://x.com/mark_k/status/2072364112252744066"
+        },
+        {
+          "tag": "hot",
+          "title": "@Phoenixyin13: Karp Critiques Closed-Source Over-selling",
+          "body": "Palantir CEO Alex Karp's CNBC interview warns enterprise leaders that closed-source token APIs are overhyped and risk draining corporate intellectual property by training centralized models on customer data.",
+          "url": "https://x.com/Phoenixyin13/status/2072467672684503311"
         }
       ]
     },
@@ -52,33 +58,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@keepitquarterly: SEC Semiannual Reporting Rule",
-          "body": "Warns about SEC Rule S7-2026-15, which could allow public companies to stop filing quarterly reports and only report financials every six months, sparking debate on retail investor transparency.",
-          "url": "https://x.com/keepitquarterly/status/2062949190263861522"
+          "title": "@keepitquarterly: SEC Rule S7-2026-15 Reporting Limits",
+          "body": "Financial accountability advocate keepitquarterly warns that the proposed SEC Rule S7-2026-15 would allow public companies to report earnings semiannually instead of quarterly, enabling insiders to trade ahead of long-delayed retail disclosures.",
+          "url": "https://x.com/keepitquarterly/status/2063273442103922979"
         },
         {
           "tag": "update",
-          "title": "@TaoRay: Deflation & Lifestyle Differences",
-          "body": "Argues that China's deflation offers a low-cost, high-quality living advantage for locals compared to the high cost of living, energy crises, and basic amenity gaps in Europe and the US.",
-          "url": "https://x.com/TaoRay/status/2072176920318591350"
-        },
-        {
-          "tag": "new",
-          "title": "@WangxsNB: Indie Hacking and $10k MRR Milestone",
-          "body": "Celebrates hitting $10,000/month MRR, sharing lessons on the psychological shift from chasing venture capital to running a sustainable, self-sufficient indie development business.",
-          "url": "https://x.com/WangxsNB/status/2071976333509558604"
+          "title": "@NoraX2026: X Money High-Yield Card launch",
+          "body": "Details Elon Musk's newly launched gunmetal grey X Money debit card, featuring a highly competitive 6% APR checking account yield and 3% cash back on all transactions.",
+          "url": "https://x.com/NoraX2026/status/2072221336068338001"
         },
         {
           "tag": "hot",
-          "title": "@Nicole_yang88: Reality of Small Chinese Counties",
-          "body": "Recommends a viral, unvarnished essay on the economic reality and shifting fortunes of small Chinese counties ('真实中国：中国小县城沉浮录').",
-          "url": "https://x.com/Nicole_yang88/status/2071853325365240013"
+          "title": "@Polymarket: Speculation on Conor McGregor octagon return",
+          "body": "Polymarket highlights the surge in betting volume and speculation surrounding Conor McGregor's potential return to the UFC octagon.",
+          "url": "https://x.com/Polymarket/status/2072076905935777912"
         },
         {
-          "tag": "update",
-          "title": "@Xudong07452910: Tang Jie's AI Era Framework",
-          "body": "Highlights Zhipu AI founder Tang Jie's framework for the AI era, prioritizing cognition and vision over technology and management.",
-          "url": "https://x.com/Xudong07452910/status/2071919593610731555"
+          "tag": "new",
+          "title": "@FoxNews: Bruce Blakeman Outlines First-Day Agenda",
+          "body": "New York Republican gubernatorial candidate Bruce Blakeman outlines his first-day policy goals, pledging to end sanctuary policies, cut state taxes, and reduce high energy costs.",
+          "url": "https://x.com/FoxNews/status/2070194432444440790"
+        },
+        {
+          "tag": "hot",
+          "title": "@energyx: Scaling Direct Lithium Extraction",
+          "body": "EnergyX promotes its direct lithium extraction technology as global lithium demand is projected to grow fivefold by 2040, securing backing from over 35,000 retail investors.",
+          "url": "https://x.com/energyx/status/2048902573331992906"
+        },
+        {
+          "tag": "hot",
+          "title": "@TheOneLanceB: Lance Breitstein on Market Structure and Psychology",
+          "body": "Pro trader Lance Breitstein shares verification of substantial market profits and offers mentoring insights on psychological discipline and reading market structures.",
+          "url": "https://x.com/TheOneLanceB/status/2049008148900405685"
         }
       ]
     },
@@ -88,33 +100,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@AriXZone: Obituary of Chua Lam",
-          "body": "Commemorates Chua Lam (蔡澜), legendary writer, film producer, and food critic, who passed away at 83, marking the passing of all members of the historic 'Four Talents of Hong Kong.'",
-          "url": "https://x.com/AriXZone/status/2071973357827084381"
-        },
-        {
-          "tag": "update",
-          "title": "@pmarca: Seth Rogen & Keanu Reeves on Public Works",
-          "body": "Marc Andreessen shares a conversation between Seth Rogen and Keanu Reeves highlighting how ultra-wealthy people no longer build public libraries, parks, or museums because modern regulatory environments make it nearly illegal.",
-          "url": "https://x.com/pmarca/status/2072108481784758430"
+          "title": "@HKane: England World Cup Comeback Complete",
+          "body": "Harry Kane celebrates England's hard-fought World Cup comeback victory against DR Congo, locking in a spot in the Round of 16 in Mexico.",
+          "url": "https://x.com/HKane/status/2072420784417419434"
         },
         {
           "tag": "hot",
-          "title": "@33monteirao: Germany Shootout & Jonathan Tah",
-          "body": "Relates the drama in the German national team shootout where senior players hesitated, prompting defender Jonathan Tah to take his first-ever career penalty under immense pressure (which he missed).",
-          "url": "https://x.com/33monteirao/status/2071932139554197921"
+          "title": "@iMiaSanMia: Oliver Kahn on German Leadership Deficit",
+          "body": "German football legend Oliver Kahn critiques Germany's recurring World Cup failures under multiple coaches, arguing that the squad suffers from a lack of player responsibility and clutch leadership rather than a lack of talent.",
+          "url": "https://x.com/iMiaSanMia/status/2072431682125185337"
+        },
+        {
+          "tag": "hot",
+          "title": "@appiecule: Belgium Extra-Time Comeback Thriller",
+          "body": "Analyzes Belgium's dramatic 3-2 comeback against Senegal, highlighting Youri Tielemans' late equalizer and Youri's extra-time penalty shootout setup that completed a historic World Cup shocker.",
+          "url": "https://x.com/appiecule/status/2072454572346380351"
         },
         {
           "tag": "new",
-          "title": "@5xyxh: Chinese CPC 105th Anniversary Absences",
-          "body": "Notes the unusual absence of former Chinese political standing committee members (such as Hu Jintao and Wen Jiabao) from the CPC 105th anniversary celebration.",
-          "url": "https://x.com/5xyxh/status/2072087609912799286"
+          "title": "@HumanityChad: Goal Celebration Unspoiled by Notifications",
+          "body": "A viral video showcases a football fan who checks their phone to see a goal notification but manages to keep the news quiet to let friends experience the live broadcast moment naturally.",
+          "url": "https://x.com/HumanityChad/status/2072386192419725428"
+        },
+        {
+          "tag": "new",
+          "title": "@KeruboSk: Gen Z Corporate Travel Loophole",
+          "body": "Shares a viral story of a Gen Z employee leveraging a corporate late-night office transit policy to book high-end Uber rides, prompting a broader debate on policy parameters and corporate employee perks.",
+          "url": "https://x.com/KeruboSk/status/2072271825380200942"
         },
         {
           "tag": "update",
-          "title": "@RB94_FCB: World Cup Exit Airport Meme",
-          "body": "A viral meme depicting the German and Dutch national teams crossing paths at the airport after their respective World Cup exits.",
-          "url": "https://x.com/RB94_FCB/status/2071810545448005769"
+          "title": "@Jevrix9: Duolingo Resume Bluffs and Remote Work",
+          "body": "A popular thread recounts a remote worker's humorous journey of bluffing Spanish fluency on a resume and spending thousands on private tutoring to keep the lie hidden during international client meetings.",
+          "url": "https://x.com/Jevrix9/status/2072304552657690948"
         }
       ]
     }
