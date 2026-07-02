@@ -3,11 +3,11 @@
   "date": "Thursday, July 2nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Claude Fable 5 Benchmarks:</strong> Claude Fable 5 dominates public leaderboards, scoring 16.10% on the Remote Labor Index for real freelance projects, and proving highly capable—though token-heavy—in rendering complex physics simulations.",
-    "<strong>World Cup Drama:</strong> The FIFA World Cup sees major drama with England securing a Round of 16 spot in Mexico behind a Harry Kane brace, Belgium staging a historic 3-2 extra-time comeback against Senegal, and Oliver Kahn criticizing Germany's structural team leadership after their exit.",
-    "<strong>SEC Reporting Debate:</strong> A massive debate erupts over the proposed SEC Rule S7-2026-15, which would allow public companies to report financial figures semiannually instead of quarterly, threatening transparency for retail investors.",
-    "<strong>X Money Card:</strong> Elon Musk's X Money platform generates interest with a gunmetal grey debit card offering a highly competitive 6% APR checking yield and 3% cash back.",
-    "<strong>Palantir CEO CNBC Outburst:</strong> Palantir CEO Alex Karp delivers an animated CNBC appearance, accusing closed-source LLM providers of overselling token APIs and warning that enterprise clients risk losing proprietary edge by feeding centralized models."
+    "<strong>Voice Agent API Rollout:</strong> xAI launches its no-code Voice Agent Builder with Grok Voice, priced competitively at $0.05 per minute to target developers.",
+    "<strong>Claude Fable 5 Performance:</strong> Claude Fable 5 achieves a leading 16.10% success rate on the Remote Labor Index for real freelance projects, displaying superior physics simulation capability despite higher token costs.",
+    "<strong>OpenAI GPT-5.6 Sol Rumors:</strong> Reports circulate that OpenAI is targeting a July 7th launch date for GPT-5.6 Sol, which is already in limited gray rollout.",
+    "<strong>SEC Rule S7-2026-15 Controversy:</strong> Financial advocates push back against a proposed SEC rule change allowing public companies to report financials semiannually, raising concerns about transparency.",
+    "<strong>World Cup Action & Records:</strong> Harry Kane reaches 72 goals for club and country this season—second only to Lionel Messi's 2011/12 record—while Lukaku's leadership inspires a dramatic 3-2 comeback for Belgium over Senegal."
   ],
   "sections": [
     {
@@ -15,40 +15,40 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "hot",
-          "title": "@theo: Claude Fable Model Orchestration Tips",
-          "body": "Developer Theo shares practical strategies for using Claude Fable without hitting rate limits, recommending high-effort settings and utilizing Codex as a fallback model for token-heavy engineering tasks.",
-          "url": "https://x.com/theo/status/2072481845363822914"
+          "tag": "new",
+          "title": "@xai: No-Code Voice Agent Builder Launched",
+          "body": "xAI launches a no-code developer platform to create human-like voice agents using Grok Voice, priced competitively at $0.05 per minute.",
+          "url": "https://x.com/xai/status/2072342803787702422"
         },
         {
           "tag": "hot",
-          "title": "@atomic_chat_hq: Fable 5 Physics Benchmarks",
-          "body": "A multi-model comparison of Claude Fable 5, GPT 5.5, Opus 4.8, and GLM 5.2 on physics canvas rendering tasks reveals Fable 5 produces the highest quality simulations, though it consumed significantly more tokens and cost six times more than Opus.",
-          "url": "https://x.com/atomic_chat_hq/status/2072446067962978411"
-        },
-        {
-          "tag": "hot",
-          "title": "@kimmonismus: Claude Fable 5 Remote Labor Index Leader",
-          "body": "Claude Fable 5 sets a new benchmark standard on the Remote Labor Index by achieving a 16.10% success rate on professional freelance tasks, doubling the performance of its closest competitors.",
+          "title": "@kimmonismus: Claude Fable 5 Dominates Freelance Benchmarks",
+          "body": "Claude Fable 5 reaches a new milestone of 16.10% on the Remote Labor Index, which tests AI on real remote freelance projects across 23 domains. This represents a doubling of the performance of the next closest model.",
           "url": "https://x.com/kimmonismus/status/2072376968729817531"
         },
         {
+          "tag": "hot",
+          "title": "@pankajkumar_dev: OpenAI Targets July 7th GPT-5.6 Sol Release",
+          "body": "Reports indicate OpenAI is targeting July 7th for the global launch of GPT-5.6 Sol, which is already undergoing a limited gray rollout to select users.",
+          "url": "https://x.com/pankajkumar_dev/status/2072318019628564556"
+        },
+        {
           "tag": "update",
-          "title": "@higgsfield: Gemini Omni Flash Live",
-          "body": "Higgsfield announces the integration of Gemini Omni Flash on its video platform, offering frame-to-frame text consistency, motion design tools, and accessibility for Claude developers via MCP.",
-          "url": "https://x.com/higgsfield/status/2071997607665357000"
+          "title": "@atomic_chat_hq: Fable 5 Physics Simulation Costs and Quality",
+          "body": "A detailed benchmark of Fable 5, GPT 5.5, Opus 4.8, and GLM 5.2 on HTML5 canvas physics simulations shows Fable 5 achieves perfect fidelity but consumes 6x more tokens than Opus 4.8.",
+          "url": "https://x.com/atomic_chat_hq/status/2072446067962978411"
         },
         {
           "tag": "new",
-          "title": "@mark_k: OpenAI GPT-5.6 Launch Rumors",
-          "body": "Reports state OpenAI is scheduling the launch of its next model suite, GPT-5.6 (Sol, Terra, Luna), for this Thursday, maintaining their rapid release cadence despite internal staff time off.",
-          "url": "https://x.com/mark_k/status/2072364112252744066"
+          "title": "@leerob: Kimi K2.7 Now Available in Cursor",
+          "body": "Vercel's VP of Product Lee Robinson shares evaluations of the newly integrated Kimi K2.7 model in Cursor, comparing its performance directly against GLM 5.2.",
+          "url": "https://x.com/leerob/status/2072416355836740059"
         },
         {
-          "tag": "hot",
-          "title": "@Phoenixyin13: Karp Critiques Closed-Source Over-selling",
-          "body": "Palantir CEO Alex Karp's CNBC interview warns enterprise leaders that closed-source token APIs are overhyped and risk draining corporate intellectual property by training centralized models on customer data.",
-          "url": "https://x.com/Phoenixyin13/status/2072467672684503311"
+          "tag": "new",
+          "title": "@GitHub_Daily: Archify Agent Skill Generates Technical Diagrams",
+          "body": "Introduces Archify, a CLI and editor-integrated Agent skill that converts natural language text descriptions into self-contained HTML and high-resolution PNG architecture diagrams.",
+          "url": "https://x.com/GitHub_Daily/status/2072311811693777035"
         }
       ]
     },
@@ -58,39 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@keepitquarterly: SEC Rule S7-2026-15 Reporting Limits",
-          "body": "Financial accountability advocate keepitquarterly warns that the proposed SEC Rule S7-2026-15 would allow public companies to report earnings semiannually instead of quarterly, enabling insiders to trade ahead of long-delayed retail disclosures.",
+          "title": "@keepitquarterly: Public Feedback Closes on SEC Rule S7-2026-15",
+          "body": "Advocates warn that the proposed SEC Rule S7-2026-15, which allows public companies to report financials semiannually rather than quarterly, could enable corporate insiders to front-run retail investors before disclosures.",
           "url": "https://x.com/keepitquarterly/status/2063273442103922979"
         },
         {
-          "tag": "update",
-          "title": "@NoraX2026: X Money High-Yield Card launch",
-          "body": "Details Elon Musk's newly launched gunmetal grey X Money debit card, featuring a highly competitive 6% APR checking account yield and 3% cash back on all transactions.",
-          "url": "https://x.com/NoraX2026/status/2072221336068338001"
+          "tag": "new",
+          "title": "@WatcherGuru: US June Unemployment and Job Growth Below Expectations",
+          "body": "The US economy added 57,000 jobs in June, coming in below economic forecasts, while the overall unemployment rate fell slightly to 4.2%.",
+          "url": "https://x.com/WatcherGuru/status/2072659179257373078"
         },
         {
-          "tag": "hot",
-          "title": "@Polymarket: Speculation on Conor McGregor octagon return",
-          "body": "Polymarket highlights the surge in betting volume and speculation surrounding Conor McGregor's potential return to the UFC octagon.",
-          "url": "https://x.com/Polymarket/status/2072076905935777912"
+          "tag": "update",
+          "title": "@433: Real Madrid Secures €95M from Non-Squad Player Sales",
+          "body": "Real Madrid closes in on €95M in revenue from academy players, including a €12.5M windfall from a 50% sell-on clause for Álvaro Rodríguez's €25M transfer from Elche to Bournemouth.",
+          "url": "https://x.com/433/status/2072646144094593213"
+        },
+        {
+          "tag": "update",
+          "title": "@shirish: Perplexity Traffic and Market Share Plummet",
+          "body": "Data reveals Perplexity's US daily active user share dropped 65% over five months, falling from 6% to 2% as Gemini and ChatGPT capture over 56% of global AI search traffic.",
+          "url": "https://x.com/shirish/status/2072288544492757491"
         },
         {
           "tag": "new",
-          "title": "@FoxNews: Bruce Blakeman Outlines First-Day Agenda",
-          "body": "New York Republican gubernatorial candidate Bruce Blakeman outlines his first-day policy goals, pledging to end sanctuary policies, cut state taxes, and reduce high energy costs.",
-          "url": "https://x.com/FoxNews/status/2070194432444440790"
-        },
-        {
-          "tag": "hot",
-          "title": "@energyx: Scaling Direct Lithium Extraction",
-          "body": "EnergyX promotes its direct lithium extraction technology as global lithium demand is projected to grow fivefold by 2040, securing backing from over 35,000 retail investors.",
-          "url": "https://x.com/energyx/status/2048902573331992906"
-        },
-        {
-          "tag": "hot",
-          "title": "@TheOneLanceB: Lance Breitstein on Market Structure and Psychology",
-          "body": "Pro trader Lance Breitstein shares verification of substantial market profits and offers mentoring insights on psychological discipline and reading market structures.",
-          "url": "https://x.com/TheOneLanceB/status/2049008148900405685"
+          "title": "@Oliviacoder1: Finding Untouched Costco Executive Cashback Balances",
+          "body": "A viral thread highlights how Costco Executive members frequently leave hundreds or thousands of dollars in cashback checks unclaimed due to a lack of awareness of member portal rewards.",
+          "url": "https://x.com/Oliviacoder1/status/2072347089493954605"
         }
       ]
     },
@@ -100,39 +94,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@HKane: England World Cup Comeback Complete",
-          "body": "Harry Kane celebrates England's hard-fought World Cup comeback victory against DR Congo, locking in a spot in the Round of 16 in Mexico.",
-          "url": "https://x.com/HKane/status/2072420784417419434"
+          "title": "@brfutboll: Harry Kane Rejects Old Age Excuses",
+          "body": "Asked about being the oldest player on the pitch for England's match, Harry Kane laughed off age limitations by noting that Lionel Messi is still the world's best at 39.",
+          "url": "https://x.com/brfutboll/status/2072384058982830577"
         },
         {
           "tag": "hot",
-          "title": "@iMiaSanMia: Oliver Kahn on German Leadership Deficit",
-          "body": "German football legend Oliver Kahn critiques Germany's recurring World Cup failures under multiple coaches, arguing that the squad suffers from a lack of player responsibility and clutch leadership rather than a lack of talent.",
-          "url": "https://x.com/iMiaSanMia/status/2072431682125185337"
-        },
-        {
-          "tag": "hot",
-          "title": "@appiecule: Belgium Extra-Time Comeback Thriller",
-          "body": "Analyzes Belgium's dramatic 3-2 comeback against Senegal, highlighting Youri Tielemans' late equalizer and Youri's extra-time penalty shootout setup that completed a historic World Cup shocker.",
-          "url": "https://x.com/appiecule/status/2072454572346380351"
-        },
-        {
-          "tag": "new",
-          "title": "@HumanityChad: Goal Celebration Unspoiled by Notifications",
-          "body": "A viral video showcases a football fan who checks their phone to see a goal notification but manages to keep the news quiet to let friends experience the live broadcast moment naturally.",
-          "url": "https://x.com/HumanityChad/status/2072386192419725428"
-        },
-        {
-          "tag": "new",
-          "title": "@KeruboSk: Gen Z Corporate Travel Loophole",
-          "body": "Shares a viral story of a Gen Z employee leveraging a corporate late-night office transit policy to book high-end Uber rides, prompting a broader debate on policy parameters and corporate employee perks.",
-          "url": "https://x.com/KeruboSk/status/2072271825380200942"
+          "title": "@433: Harry Kane Hits 72 Goals for Club and Country",
+          "body": "With 72 goals scored for club and country this season, Harry Kane records the second-highest single-season goal tally of the 21st century, surpassed only by Lionel Messi's legendary 2011/12 campaign.",
+          "url": "https://x.com/433/status/2072594397045084216"
         },
         {
           "tag": "update",
-          "title": "@Jevrix9: Duolingo Resume Bluffs and Remote Work",
-          "body": "A popular thread recounts a remote worker's humorous journey of bluffing Spanish fluency on a resume and spending thousands on private tutoring to keep the lie hidden during international client meetings.",
-          "url": "https://x.com/Jevrix9/status/2072304552657690948"
+          "title": "@_su6an: Lukaku's Leadership Sparks Belgium's World Cup Win",
+          "body": "Belgian striker Romelu Lukaku is praised for diffusing a team argument on the pitch while down 2-0 to Senegal, scoring the opening goal, and rallying Belgium to an epic 3-2 victory.",
+          "url": "https://x.com/_su6an/status/2072446454468120776"
+        },
+        {
+          "tag": "new",
+          "title": "@yantanzhang: Leadership Transition Challenges in Chinese Legacies",
+          "body": "Highlights business hurdles in second-generation leadership transitions, citing the short-lived 'Wa Xiao Zong' brand under Kelly Zong at WahaHa and product naming disruptions at Great Wall Motor.",
+          "url": "https://x.com/yantanzhang/status/2072486160673157569"
+        },
+        {
+          "tag": "new",
+          "title": "@WrittenBy_SS: Electrician's Haunted Motion Sensor Discovery",
+          "body": "A humorous story of home buyers apologizing to previous owners after spending $2,000 to fix a 'haunted' hallway light, only to discover a faulty motion sensor was triggering the system.",
+          "url": "https://x.com/WrittenBy_SS/status/2072363622169526649"
         }
       ]
     }
