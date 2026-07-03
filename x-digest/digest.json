@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, July 2nd, 2026",
+  "date": "Friday, July 3rd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Voice Agent API Rollout:</strong> xAI launches its no-code Voice Agent Builder with Grok Voice, priced competitively at $0.05 per minute to target developers.",
-    "<strong>Claude Fable 5 Performance:</strong> Claude Fable 5 achieves a leading 16.10% success rate on the Remote Labor Index for real freelance projects, displaying superior physics simulation capability despite higher token costs.",
-    "<strong>OpenAI GPT-5.6 Sol Rumors:</strong> Reports circulate that OpenAI is targeting a July 7th launch date for GPT-5.6 Sol, which is already in limited gray rollout.",
-    "<strong>SEC Rule S7-2026-15 Controversy:</strong> Financial advocates push back against a proposed SEC rule change allowing public companies to report financials semiannually, raising concerns about transparency.",
-    "<strong>World Cup Action & Records:</strong> Harry Kane reaches 72 goals for club and country this season—second only to Lionel Messi's 2011/12 record—while Lukaku's leadership inspires a dramatic 3-2 comeback for Belgium over Senegal."
+    "<strong>AI Benchmark Advances:</strong> Claude Fable 5 sets a new performance standard by scoring 16.10% on the comprehensive Remote Labor Index (RLI), demonstrating dramatic improvements in handling complex, multi-step real-world projects.",
+    "<strong>Domain-Specific AI Fine-Tuning:</strong> Bridgewater Associates successfully fine-tuned Qwen3-235B to outperform top frontier models at 1/14th the inference cost, illustrating how custom models trained on internal archives can bypass prompting limitations.",
+    "<strong>Regulatory Controversies:</strong> Public debate intensifies over the proposed SEC Rule S7-2026-15 allowing semiannual reporting, while the FAA moves to replace decades-old overland speed bans with noise-based standards for supersonic flights.",
+    "<strong>Financial Windfalls & Milestones:</strong> FTX's liquidation estate gains from a 10x surge in tungsten cube prices, Binance's stock trading surpasses $1 billion in AUM in its first month, and Chinese police detail crypto asset tracing forensics.",
+    "<strong>World Cup Tactical Drama:</strong> David Alaba highlights football intelligence over physical dominance after Austria's 3-0 loss to Spain, while UEFA updates its disciplinary rules for on-field player mouth-covering confrontations."
   ],
   "sections": [
     {
@@ -15,40 +15,34 @@
       "title": "AI & Tech",
       "items": [
         {
-          "tag": "new",
-          "title": "@xai: No-Code Voice Agent Builder Launched",
-          "body": "xAI launches a no-code developer platform to create human-like voice agents using Grok Voice, priced competitively at $0.05 per minute.",
-          "url": "https://x.com/xai/status/2072342803787702422"
-        },
-        {
           "tag": "hot",
-          "title": "@kimmonismus: Claude Fable 5 Dominates Freelance Benchmarks",
-          "body": "Claude Fable 5 reaches a new milestone of 16.10% on the Remote Labor Index, which tests AI on real remote freelance projects across 23 domains. This represents a doubling of the performance of the next closest model.",
+          "title": "@kimmonismus: Claude Fable 5 Sets New Standard on Remote Labor Index",
+          "body": "Claude Fable 5 has reached a score of 16.10% on the Remote Labor Index (RLI), which tests AI models on 240 real-world remote freelance tasks spanning 23 domains. This represents a massive performance leap compared to previous-generation models like Opus 4.6 at 4.2%.",
           "url": "https://x.com/kimmonismus/status/2072376968729817531"
         },
         {
           "tag": "hot",
-          "title": "@pankajkumar_dev: OpenAI Targets July 7th GPT-5.6 Sol Release",
-          "body": "Reports indicate OpenAI is targeting July 7th for the global launch of GPT-5.6 Sol, which is already undergoing a limited gray rollout to select users.",
-          "url": "https://x.com/pankajkumar_dev/status/2072318019628564556"
+          "title": "@aakashgupta: Bridgewater Beats Frontier AI via Domain-Specific Fine-Tuning",
+          "body": "The world's largest hedge fund, Bridgewater, bypassed frontier models by fine-tuning Qwen3-235B on domain-specific data. The custom model achieved 84.7% accuracy on document filtering—a 29.8% reduction in errors compared to top frontier models—at 1/14th the inference cost.",
+          "url": "https://x.com/aakashgupta/status/2072765754102174114"
+        },
+        {
+          "tag": "new",
+          "title": "@mitchellh: Designing Efficient Hybrid AI Orchestration Pipelines",
+          "body": "Mitchell Hashimoto shares success using Fable 5 (xhigh) for architecture and planning, GPT 5.5 (xhigh) for coding, and Fable 5 again as a judge. This hybrid workflow limits the number of expensive model round-trips, bringing planning and judging costs down to the single-digit dollar range.",
+          "url": "https://x.com/mitchellh/status/2072715852944957531"
+        },
+        {
+          "tag": "new",
+          "title": "@morganlinton: Practical Guidance for Optimizing Claude Fable 5 Costs",
+          "body": "Reflecting on a high-throughput run of over 1 million lines of code written by Fable 5, Morgan Linton advises developers to use low/medium effort modes where appropriate. Medium-effort Fable excels at planning and matches or beats Opus Max, saving high-effort queries for complex architectural reviews.",
+          "url": "https://x.com/morganlinton/status/2072763633088843799"
         },
         {
           "tag": "update",
-          "title": "@atomic_chat_hq: Fable 5 Physics Simulation Costs and Quality",
-          "body": "A detailed benchmark of Fable 5, GPT 5.5, Opus 4.8, and GLM 5.2 on HTML5 canvas physics simulations shows Fable 5 achieves perfect fidelity but consumes 6x more tokens than Opus 4.8.",
-          "url": "https://x.com/atomic_chat_hq/status/2072446067962978411"
-        },
-        {
-          "tag": "new",
-          "title": "@leerob: Kimi K2.7 Now Available in Cursor",
-          "body": "Vercel's VP of Product Lee Robinson shares evaluations of the newly integrated Kimi K2.7 model in Cursor, comparing its performance directly against GLM 5.2.",
-          "url": "https://x.com/leerob/status/2072416355836740059"
-        },
-        {
-          "tag": "new",
-          "title": "@GitHub_Daily: Archify Agent Skill Generates Technical Diagrams",
-          "body": "Introduces Archify, a CLI and editor-integrated Agent skill that converts natural language text descriptions into self-contained HTML and high-resolution PNG architecture diagrams.",
-          "url": "https://x.com/GitHub_Daily/status/2072311811693777035"
+          "title": "@VittoStack: Adversarial Testing Exposes Fable 5 Layered Security Defenses",
+          "body": "A security researcher details the extensive defensive layers of Fable 5, which include input-side, live-response, and output-side classifiers using semantic intent detection. While bypasses are theoretically possible using obscure languages or chain-of-thought hijacking, the defenses make adversarial exploits highly impractical.",
+          "url": "https://x.com/VittoStack/status/2072707521547001882"
         }
       ]
     },
@@ -58,33 +52,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@keepitquarterly: Public Feedback Closes on SEC Rule S7-2026-15",
-          "body": "Advocates warn that the proposed SEC Rule S7-2026-15, which allows public companies to report financials semiannually rather than quarterly, could enable corporate insiders to front-run retail investors before disclosures.",
+          "title": "@keepitquarterly: SEC Proposal Sparking Concerns Over Retail Trader Disadvantage",
+          "body": "The proposed SEC Rule S7-2026-15, which would allow public companies to report financial figures semiannually instead of quarterly, is drawing criticism. Opponents argue the rule creates a six-month information gap that could facilitate insider trading at the expense of retail investors.",
           "url": "https://x.com/keepitquarterly/status/2063273442103922979"
         },
         {
           "tag": "new",
-          "title": "@WatcherGuru: US June Unemployment and Job Growth Below Expectations",
-          "body": "The US economy added 57,000 jobs in June, coming in below economic forecasts, while the overall unemployment rate fell slightly to 4.2%.",
-          "url": "https://x.com/WatcherGuru/status/2072659179257373078"
+          "title": "@aakashgupta: FAA Proposes Acoustic-Based Regulatory Shifts for Supersonic Aircraft",
+          "body": "The FAA is shifting its 53-year-old supersonic flight restrictions from absolute speed limits to noise-based standards. By capping the sound permitted to reach the ground rather than banning supersonic speeds entirely, the rule opens the door for modern aircraft to fly overland using noise-bending flight dynamics.",
+          "url": "https://x.com/aakashgupta/status/2072652004242203091"
         },
         {
           "tag": "update",
-          "title": "@433: Real Madrid Secures €95M from Non-Squad Player Sales",
-          "body": "Real Madrid closes in on €95M in revenue from academy players, including a €12.5M windfall from a 50% sell-on clause for Álvaro Rodríguez's €25M transfer from Elche to Bournemouth.",
-          "url": "https://x.com/433/status/2072646144094593213"
+          "title": "@bernhardsson: FTX Liquidation Portfolio Benefits from Tungsten Price Spike",
+          "body": "FTX's bankruptcy estate continues to see value appreciation from non-traditional assets, including a physical tungsten cube bought for $200k in 2021. Due to a 10x rise in tungsten prices, the cube has turned into a surprising windfall for creditors.",
+          "url": "https://x.com/bernhardsson/status/2072746407799480345"
+        },
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Binance stock trading surpasses $1B AUM in its first month",
+          "body": "Binance's stock trading platform has crossed $1 billion in assets under management just 30 days after its launch, demonstrating massive retail interest in digital asset platforms offering traditional equities.",
+          "url": "https://x.com/WatcherGuru/status/2072399890013954400"
         },
         {
           "tag": "update",
-          "title": "@shirish: Perplexity Traffic and Market Share Plummet",
-          "body": "Data reveals Perplexity's US daily active user share dropped 65% over five months, falling from 6% to 2% as Gemini and ChatGPT capture over 56% of global AI search traffic.",
-          "url": "https://x.com/shirish/status/2072288544492757491"
-        },
-        {
-          "tag": "new",
-          "title": "@Oliviacoder1: Finding Untouched Costco Executive Cashback Balances",
-          "body": "A viral thread highlights how Costco Executive members frequently leave hundreds or thousands of dollars in cashback checks unclaimed due to a lack of awareness of member portal rewards.",
-          "url": "https://x.com/Oliviacoder1/status/2072347089493954605"
+          "title": "@whyyoutouzhele: Chinese Police Publish Case Study on Crypto Asset Tracing",
+          "body": "A newly published research paper from Chinese law enforcement outlines their methodologies for tracking and seizing crypto assets. The process relies on local device forensics to locate private keys, combined with blockchain flow analysis and KYC data requests to major offshore exchanges.",
+          "url": "https://x.com/whyyoutouzhele/status/2072611234965303579"
         }
       ]
     },
@@ -94,33 +88,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@brfutboll: Harry Kane Rejects Old Age Excuses",
-          "body": "Asked about being the oldest player on the pitch for England's match, Harry Kane laughed off age limitations by noting that Lionel Messi is still the world's best at 39.",
-          "url": "https://x.com/brfutboll/status/2072384058982830577"
+          "title": "@VitalikButerin: Vitalik Buterin Proposes Playful Etymology of Salmon",
+          "body": "Ethereum creator Vitalik Buterin shares a lighthearted joke linking the naming conventions of 'Pokemon' (pocket monsters) and 'Digimon' (digital monsters) to 'salmon' as 'saltwater monsters,' pointing out that salmon spend significant time in freshwater much like Pokemon spend time out of pockets.",
+          "url": "https://x.com/VitalikButerin/status/2072688115550929387"
         },
         {
           "tag": "hot",
-          "title": "@433: Harry Kane Hits 72 Goals for Club and Country",
-          "body": "With 72 goals scored for club and country this season, Harry Kane records the second-highest single-season goal tally of the 21st century, surpassed only by Lionel Messi's legendary 2011/12 campaign.",
-          "url": "https://x.com/433/status/2072594397045084216"
+          "title": "@ok6ixx: Viral Story of Partner Bullied by Heckling Parrots",
+          "body": "A highly shared comedic narrative details a woman's experiences dating a man with seven vocal parrots. The story recounts how one parrot named Gerald heckled her in a British accent, calling her arguments 'irrelevant' and predicting she would refuse a marriage proposal.",
+          "url": "https://x.com/ok6ixx/status/2072734640314454358"
         },
         {
           "tag": "update",
-          "title": "@_su6an: Lukaku's Leadership Sparks Belgium's World Cup Win",
-          "body": "Belgian striker Romelu Lukaku is praised for diffusing a team argument on the pitch while down 2-0 to Senegal, scoring the opening goal, and rallying Belgium to an epic 3-2 victory.",
-          "url": "https://x.com/_su6an/status/2072446454468120776"
+          "title": "@whyyoutouzhele: Chinese Physics Textbook Revision Sparks Online Discourse",
+          "body": "A viral discussion on Chinese social media highlighted the deletion of a passage emphasizing the importance of academic democracy and freedom of thought to scientific progress from a 2004 introductory physics textbook. The removal has sparked online debates about academic freedom.",
+          "url": "https://x.com/whyyoutouzhele/status/2072586068780593646"
         },
         {
           "tag": "new",
-          "title": "@yantanzhang: Leadership Transition Challenges in Chinese Legacies",
-          "body": "Highlights business hurdles in second-generation leadership transitions, citing the short-lived 'Wa Xiao Zong' brand under Kelly Zong at WahaHa and product naming disruptions at Great Wall Motor.",
-          "url": "https://x.com/yantanzhang/status/2072486160673157569"
+          "title": "@Sage_FCB: David Alaba Highlights Football Intelligence Over Physical Dominance",
+          "body": "Following Austria's 3-0 defeat by Spain in the World Cup, David Alaba praised Spanish forward Mikel Oyarzabal. Alaba remarked that Oyarzabal's positioning, movement between defensive lines, and spatial awareness made him the game's decisive factor despite not being the fastest or strongest player.",
+          "url": "https://x.com/Sage_FCB/status/2072795551670604112"
         },
         {
           "tag": "new",
-          "title": "@WrittenBy_SS: Electrician's Haunted Motion Sensor Discovery",
-          "body": "A humorous story of home buyers apologizing to previous owners after spending $2,000 to fix a 'haunted' hallway light, only to discover a faulty motion sensor was triggering the system.",
-          "url": "https://x.com/WrittenBy_SS/status/2072363622169526649"
+          "title": "@iMiaSanMia: UEFA Implements New Non-Red Card Rule for Player Confrontations",
+          "body": "UEFA has announced that players who cover their mouths during confrontations with opponents will no longer receive red cards in its primary competitions. However, this rule change will not extend to Champions League, Europa League, or Conference League matches.",
+          "url": "https://x.com/iMiaSanMia/status/2072733472523755818"
         }
       ]
     }
