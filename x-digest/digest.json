@@ -3,11 +3,11 @@
   "date": "Friday, July 3rd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI Benchmark Advances:</strong> Claude Fable 5 sets a new performance standard by scoring 16.10% on the comprehensive Remote Labor Index (RLI), demonstrating dramatic improvements in handling complex, multi-step real-world projects.",
-    "<strong>Domain-Specific AI Fine-Tuning:</strong> Bridgewater Associates successfully fine-tuned Qwen3-235B to outperform top frontier models at 1/14th the inference cost, illustrating how custom models trained on internal archives can bypass prompting limitations.",
-    "<strong>Regulatory Controversies:</strong> Public debate intensifies over the proposed SEC Rule S7-2026-15 allowing semiannual reporting, while the FAA moves to replace decades-old overland speed bans with noise-based standards for supersonic flights.",
-    "<strong>Financial Windfalls & Milestones:</strong> FTX's liquidation estate gains from a 10x surge in tungsten cube prices, Binance's stock trading surpasses $1 billion in AUM in its first month, and Chinese police detail crypto asset tracing forensics.",
-    "<strong>World Cup Tactical Drama:</strong> David Alaba highlights football intelligence over physical dominance after Austria's 3-0 loss to Spain, while UEFA updates its disciplinary rules for on-field player mouth-covering confrontations."
+    "<strong>xAI Grok Voice:</strong> xAI launched Voice Agent Builder, a no-code platform to build human-like voice agents at $0.05/min.",
+    "<strong>Google Gemini Free Tier:</strong> Google quietly enabled free-tier access for Gemini 3.5 Flash, offering a 1M token context window and 1,500 free requests per day.",
+    "<strong>Developer Tools Crackdown:</strong> Major tech enterprises are restricting internal usage of AI coding tools like Claude Code and Codex due to IP concerns.",
+    "<strong>YSJF Tim Censored:</strong> Renowned Chinese tech creator Tim from YSJF (影视飓风) was unexpectedly blocked across all major platforms.",
+    "<strong>SEC Reporting Rule:</strong> Public feedback is open on proposed SEC Rule S7-2026-15, which critics warn could allow corporations to delay reporting poor earnings for six months."
   ],
   "sections": [
     {
@@ -16,33 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@kimmonismus: Claude Fable 5 Sets New Standard on Remote Labor Index",
-          "body": "Claude Fable 5 has reached a score of 16.10% on the Remote Labor Index (RLI), which tests AI models on 240 real-world remote freelance tasks spanning 23 domains. This represents a massive performance leap compared to previous-generation models like Opus 4.6 at 4.2%.",
-          "url": "https://x.com/kimmonismus/status/2072376968729817531"
-        },
-        {
-          "tag": "hot",
-          "title": "@aakashgupta: Bridgewater Beats Frontier AI via Domain-Specific Fine-Tuning",
-          "body": "The world's largest hedge fund, Bridgewater, bypassed frontier models by fine-tuning Qwen3-235B on domain-specific data. The custom model achieved 84.7% accuracy on document filtering—a 29.8% reduction in errors compared to top frontier models—at 1/14th the inference cost.",
-          "url": "https://x.com/aakashgupta/status/2072765754102174114"
+          "title": "@xai: Voice Agent Builder Launch",
+          "body": "xAI has introduced Voice Agent Builder, a no-code platform to create human-like voice agents using Grok Voice, priced at $0.05 per minute.",
+          "url": "https://x.com/xai/status/2072342803787702422"
         },
         {
           "tag": "new",
-          "title": "@mitchellh: Designing Efficient Hybrid AI Orchestration Pipelines",
-          "body": "Mitchell Hashimoto shares success using Fable 5 (xhigh) for architecture and planning, GPT 5.5 (xhigh) for coding, and Fable 5 again as a judge. This hybrid workflow limits the number of expensive model round-trips, bringing planning and judging costs down to the single-digit dollar range.",
-          "url": "https://x.com/mitchellh/status/2072715852944957531"
-        },
-        {
-          "tag": "new",
-          "title": "@morganlinton: Practical Guidance for Optimizing Claude Fable 5 Costs",
-          "body": "Reflecting on a high-throughput run of over 1 million lines of code written by Fable 5, Morgan Linton advises developers to use low/medium effort modes where appropriate. Medium-effort Fable excels at planning and matches or beats Opus Max, saving high-effort queries for complex architectural reviews.",
-          "url": "https://x.com/morganlinton/status/2072763633088843799"
+          "title": "@Etudecn: Building Personal AI Agents",
+          "body": "Highlights an Anthropic engineer's 45-minute step-by-step tutorial on dismantling manual tasks and configuring custom AI assistants to automate daily workflows.",
+          "url": "https://x.com/Etudecn/status/2072321319140782304"
         },
         {
           "tag": "update",
-          "title": "@VittoStack: Adversarial Testing Exposes Fable 5 Layered Security Defenses",
-          "body": "A security researcher details the extensive defensive layers of Fable 5, which include input-side, live-response, and output-side classifiers using semantic intent detection. While bypasses are theoretically possible using obscure languages or chain-of-thought hijacking, the defenses make adversarial exploits highly impractical.",
-          "url": "https://x.com/VittoStack/status/2072707521547001882"
+          "title": "@baoshu88: Corporate Bans on AI Coding Tools",
+          "body": "Reports that multiple large tech companies are starting to ban AI coding assistants like Claude Code and Codex internally to protect intellectual property.",
+          "url": "https://x.com/baoshu88/status/2072930170168648033"
+        },
+        {
+          "tag": "hot",
+          "title": "@CDGalpha: Gemini 3.5 Flash Free Tier Availability",
+          "body": "Google has quietly made its latest Gemini 3.5 Flash model available on the free tier, offering a 1M token context window, 1,500 requests per day, and native multimodal support without a credit card.",
+          "url": "https://x.com/CDGalpha/status/2072928597573353947"
+        },
+        {
+          "tag": "update",
+          "title": "@GergelyOrosz: AI Talent Exodus from Apple",
+          "body": "Relays a former Apple engineer's experience leaving the company for an AI infrastructure startup due to the difficulty of transferring internally to Apple's AI-focused teams.",
+          "url": "https://x.com/GergelyOrosz/status/2072966698685301168"
+        },
+        {
+          "tag": "new",
+          "title": "@ma_zhenyuan: Learning AI Agents with Open Deep Research",
+          "body": "Recommends studying the LangChain team's open-deep-research codebase as a definitive resource for understanding how to build advanced AI agents.",
+          "url": "https://x.com/ma_zhenyuan/status/2072660873802567849"
         }
       ]
     },
@@ -52,33 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@keepitquarterly: SEC Proposal Sparking Concerns Over Retail Trader Disadvantage",
-          "body": "The proposed SEC Rule S7-2026-15, which would allow public companies to report financial figures semiannually instead of quarterly, is drawing criticism. Opponents argue the rule creates a six-month information gap that could facilitate insider trading at the expense of retail investors.",
+          "title": "@keepitquarterly: SEC Proposal on Semiannual Reporting",
+          "body": "Warns about SEC Rule S7-2026-15, a proposed regulation that would allow public companies to delay reporting poor financial results for up to six months, raising concerns about insider selling.",
           "url": "https://x.com/keepitquarterly/status/2063273442103922979"
         },
         {
-          "tag": "new",
-          "title": "@aakashgupta: FAA Proposes Acoustic-Based Regulatory Shifts for Supersonic Aircraft",
-          "body": "The FAA is shifting its 53-year-old supersonic flight restrictions from absolute speed limits to noise-based standards. By capping the sound permitted to reach the ground rather than banning supersonic speeds entirely, the rule opens the door for modern aircraft to fly overland using noise-bending flight dynamics.",
-          "url": "https://x.com/aakashgupta/status/2072652004242203091"
-        },
-        {
-          "tag": "update",
-          "title": "@bernhardsson: FTX Liquidation Portfolio Benefits from Tungsten Price Spike",
-          "body": "FTX's bankruptcy estate continues to see value appreciation from non-traditional assets, including a physical tungsten cube bought for $200k in 2021. Due to a 10x rise in tungsten prices, the cube has turned into a surprising windfall for creditors.",
-          "url": "https://x.com/bernhardsson/status/2072746407799480345"
-        },
-        {
           "tag": "hot",
-          "title": "@WatcherGuru: Binance stock trading surpasses $1B AUM in its first month",
-          "body": "Binance's stock trading platform has crossed $1 billion in assets under management just 30 days after its launch, demonstrating massive retail interest in digital asset platforms offering traditional equities.",
-          "url": "https://x.com/WatcherGuru/status/2072399890013954400"
+          "title": "@qaq5777: YSJF Tim Blocked Across Chinese Platforms",
+          "body": "Reports the sudden, sweeping censorship and blocking of popular tech content creator Tim (影视飓风) and his associate Li Siwei across Chinese social media platforms.",
+          "url": "https://x.com/qaq5777/status/2072694084553367876"
+        },
+        {
+          "tag": "new",
+          "title": "@0xKevin00: Hedging SK Hynix with OTM Puts",
+          "body": "Details a practical case study of using Out-of-the-Money (OTM) put options to hedge a 13.6% three-day drop in SK Hynix stock, mitigating portfolio drawdowns by several percentage points.",
+          "url": "https://x.com/0xKevin00/status/2072945184992804959"
         },
         {
           "tag": "update",
-          "title": "@whyyoutouzhele: Chinese Police Publish Case Study on Crypto Asset Tracing",
-          "body": "A newly published research paper from Chinese law enforcement outlines their methodologies for tracking and seizing crypto assets. The process relies on local device forensics to locate private keys, combined with blockchain flow analysis and KYC data requests to major offshore exchanges.",
-          "url": "https://x.com/whyyoutouzhele/status/2072611234965303579"
+          "title": "@xianzhe9527: Personal Finance & Permanent Portfolios",
+          "body": "Assesses the wealth comparison of having 350,000 RMB ($50,000 USD) yielding a steady return via a permanent portfolio compared to general monthly income statistics in China.",
+          "url": "https://x.com/xianzhe9527/status/2072888960360022177"
+        },
+        {
+          "tag": "update",
+          "title": "@FoxNews: Bruce Blakeman's NY Gubernatorial Agenda",
+          "body": "NY Republican gubernatorial candidate Bruce Blakeman outlines his core policies, including ending sanctuary policies, lowering energy costs, and cutting taxes.",
+          "url": "https://x.com/FoxNews/status/2070194432444440790"
         }
       ]
     },
@@ -87,34 +93,34 @@
       "title": "General",
       "items": [
         {
-          "tag": "hot",
-          "title": "@VitalikButerin: Vitalik Buterin Proposes Playful Etymology of Salmon",
-          "body": "Ethereum creator Vitalik Buterin shares a lighthearted joke linking the naming conventions of 'Pokemon' (pocket monsters) and 'Digimon' (digital monsters) to 'salmon' as 'saltwater monsters,' pointing out that salmon spend significant time in freshwater much like Pokemon spend time out of pockets.",
-          "url": "https://x.com/VitalikButerin/status/2072688115550929387"
+          "tag": "viral",
+          "title": "@TheBestqueenx: Laser Pointer User Caught in 4K",
+          "body": "A viral video capturing a stadium spectator using a laser pointer being caught red-handed in high definition by professional broadcasting cameras.",
+          "url": "https://x.com/TheBestqueenx/status/2072704349046763900"
         },
         {
           "tag": "hot",
-          "title": "@ok6ixx: Viral Story of Partner Bullied by Heckling Parrots",
-          "body": "A highly shared comedic narrative details a woman's experiences dating a man with seven vocal parrots. The story recounts how one parrot named Gerald heckled her in a British accent, calling her arguments 'irrelevant' and predicting she would refuse a marriage proposal.",
-          "url": "https://x.com/ok6ixx/status/2072734640314454358"
+          "title": "@mamashami2: World Cup VAR Decisions Under Fire",
+          "body": "Criticizes FIFA's video assistant referee (VAR) implementation, calling the tournament an elimination process driven by VAR decisions rather than standard football.",
+          "url": "https://x.com/mamashami2/status/2072857759599755467"
         },
         {
           "tag": "update",
-          "title": "@whyyoutouzhele: Chinese Physics Textbook Revision Sparks Online Discourse",
-          "body": "A viral discussion on Chinese social media highlighted the deletion of a passage emphasizing the importance of academic democracy and freedom of thought to scientific progress from a 2004 introductory physics textbook. The removal has sparked online debates about academic freedom.",
-          "url": "https://x.com/whyyoutouzhele/status/2072586068780593646"
+          "title": "@NotFarLeftAtAll: David Beckham Queuing in Public",
+          "body": "Highlights the moment David Beckham chose to queue for 12 hours with the general public to view Queen Elizabeth II lying in state in 2022, eschewing the VIP fast-track option.",
+          "url": "https://x.com/NotFarLeftAtAll/status/2072838351099490679"
         },
         {
           "tag": "new",
-          "title": "@Sage_FCB: David Alaba Highlights Football Intelligence Over Physical Dominance",
-          "body": "Following Austria's 3-0 defeat by Spain in the World Cup, David Alaba praised Spanish forward Mikel Oyarzabal. Alaba remarked that Oyarzabal's positioning, movement between defensive lines, and spatial awareness made him the game's decisive factor despite not being the fastest or strongest player.",
-          "url": "https://x.com/Sage_FCB/status/2072795551670604112"
+          "title": "@suanrongyouyuxu: Zootopia as a Metaphor for DEI",
+          "body": "A lengthy analysis of how Disney's Zootopia serves as a powerful, non-confrontational allegory for Diversity, Equity, and Inclusion (DEI) by bypassing political defensive mechanisms through animal characters.",
+          "url": "https://x.com/suanrongyouyuxu/status/2072316452246622408"
         },
         {
-          "tag": "new",
-          "title": "@iMiaSanMia: UEFA Implements New Non-Red Card Rule for Player Confrontations",
-          "body": "UEFA has announced that players who cover their mouths during confrontations with opponents will no longer receive red cards in its primary competitions. However, this rule change will not extend to Champions League, Europa League, or Conference League matches.",
-          "url": "https://x.com/iMiaSanMia/status/2072733472523755818"
+          "tag": "viral",
+          "title": "@cuichenghao: Extreme Remote Work Culture",
+          "body": "Shows a viral video of a Chinese worker forced to participate in an emergency video call with their manager while sitting on a fast-moving amusement park ride.",
+          "url": "https://x.com/cuichenghao/status/2072890271449382992"
         }
       ]
     }
