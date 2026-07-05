@@ -1,4 +1,4 @@
-const CACHE_NAME = "eye-rest-timer-v1";
+const CACHE_NAME = "eye-rest-timer-v3";
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", event => {
@@ -16,5 +16,9 @@ self.addEventListener("activate", event => {
 });
 
 self.addEventListener("fetch", event => {
+  if (event.request.mode === "navigate") {
+    event.respondWith(fetch(event.request).catch(() => caches.match("./index.html")));
+    return;
+  }
   event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request)));
 });
