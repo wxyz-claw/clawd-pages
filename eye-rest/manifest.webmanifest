@@ -1,0 +1,18 @@
+{
+  "name": "20-20-20 Eye Rest Timer",
+  "short_name": "Eye Rest",
+  "description": "A simple 20-20-20 eye protection timer with voice guidance.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f141a",
+  "theme_color": "#0f141a",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
