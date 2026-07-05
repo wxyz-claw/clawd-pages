@@ -1,4 +1,4 @@
-const CACHE_NAME = "eye-rest-timer-v4";
+const CACHE_NAME = "eye-rest-timer-v5";
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", event => {
