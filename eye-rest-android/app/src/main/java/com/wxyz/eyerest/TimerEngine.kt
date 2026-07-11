@@ -35,8 +35,8 @@ data class TickResult(
 
 class TimerEngine(
     initialConfig: TimerConfig = TimerConfig(),
-    private val nowMillis: () -> Long,
-    initialSnapshot: TimerSnapshot? = null
+    initialSnapshot: TimerSnapshot? = null,
+    private val nowMillis: () -> Long
 ) {
     private var config = initialConfig
     private var phase = initialSnapshot?.phase ?: TimerPhase.REST
