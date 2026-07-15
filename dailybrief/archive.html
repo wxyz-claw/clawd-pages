@@ -41,13 +41,6 @@
     }
     li .date { font-weight: 700; color: #fff; }
     li .desc { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
-    .empty {
-      background: #111;
-      border: 1px dashed var(--border);
-      border-radius: 12px;
-      padding: 18px;
-      color: var(--text-muted);
-    }
     footer { margin-top: 42px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.82rem; text-align: center; }
   </style>
 </head>
@@ -59,13 +52,16 @@
 
   <header>
     <h1>Daily Briefing Archive</h1>
-    <p class="subtitle">Dated daily briefing pages will be listed here newest first.</p>
+    <p class="subtitle">Dated daily briefing pages listed newest first.</p>
   </header>
 
   <main>
-    <div class="empty">
-      No archived daily brief pages yet. The next scheduled daily briefing should create the first entry as <code>brief-YYYY-MM-DD.html</code> and add it to this list.
-    </div>
+    <ul>
+      <li>
+        <a href="brief-2026-07-15.html"><span class="date">Daily Briefing — 2026-07-15</span></a>
+        <div class="desc">AI infrastructure, coding agents, ASML, China memory chips, oncology update, AI literacy, and travel-points watch.</div>
+      </li>
+    </ul>
     <!-- Archive entries should be inserted here, newest first. -->
   </main>
 
