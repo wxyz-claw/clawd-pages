@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Briefing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #9a9a9a;
+      --accent: #7c3aed;
+      --accent-dim: #7c3aed22;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --blue: #1d9bf0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #17112a 0, var(--bg) 360px);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 24px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 36px 0 28px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
+    .subtitle { color: var(--text-muted); font-size: 0.98rem; }
+    .nav { margin-top: 14px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .summary-box {
+      background: linear-gradient(135deg, var(--accent-dim), #1d9bf008);
+      border: 1px solid var(--accent);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 28px;
+    }
+    .summary-box h2 { font-size: 1.05rem; color: #fff; margin-bottom: 10px; }
+    .summary-box p { color: var(--text-muted); margin-bottom: 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      min-height: 120px;
+    }
+    .card h3 { font-size: 0.95rem; margin-bottom: 8px; color: #fff; }
+    .card p { color: var(--text-muted); font-size: 0.9rem; }
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 4px 9px;
+      margin-bottom: 12px;
+    }
+    .status {
+      margin-top: 26px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text-muted);
+      background: #111;
+      font-size: 0.9rem;
+    }
+    footer { margin-top: 42px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.82rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <!--
+    Daily Brief automation target:
+    - Latest page: dailybrief/index.html
+    - Archive entries: dailybrief/brief-YYYY-MM-DD.html
+    - Archive index: dailybrief/archive.html
+    - Root homepage links to this section.
+  -->
+  <header>
+    <h1>🗞️ Daily Briefing</h1>
+    <p class="subtitle">Mixed English + 中文 · high-signal updates for AI, markets, China/US, health, parenting, and travel points</p>
+    <nav class="nav">
+      <a href="../">Home</a>
+      <a href="archive.html">Archive</a>
+    </nav>
+  </header>
+
+  <section class="summary-box">
+    <span class="pill">Setup complete</span>
+    <h2>Daily briefs will publish here instead of being pasted into chat.</h2>
+    <p>The scheduled briefing should overwrite this latest page each day and add a dated archive page under <code>dailybrief/brief-YYYY-MM-DD.html</code>.</p>
+    <p>Each brief should stay concise, use mixed English + 中文, separate sections clearly, and explain why each item matters.</p>
+  </section>
+
+  <section class="grid" aria-label="Briefing topics">
+    <div class="card"><h3>🤖 AI / Coding Tools</h3><p>Model launches, coding agents, MCP/tooling, developer workflows, and practical AI engineering shifts.</p></div>
+    <div class="card"><h3>📈 Markets / Economy</h3><p>Macro signals, earnings, rates, semiconductors, AI infrastructure demand, and investor-relevant trends.</p></div>
+    <div class="card"><h3>🇨🇳 China / 🇺🇸 US</h3><p>Trade, technology competition, AI policy, semiconductor supply chains, and high-signal geopolitical updates.</p></div>
+    <div class="card"><h3>🩺 Health / Medicine</h3><p>Practical medical, oncology, ophthalmology, and healthcare AI developments worth noticing.</p></div>
+    <div class="card"><h3>👨‍👩‍👧 Parenting / Education</h3><p>AI literacy, education changes, child learning, and practical family implications.</p></div>
+    <div class="card"><h3>✈️ Travel / Points</h3><p>Airline and hotel loyalty changes, transfer bonuses, devaluations, and U.S.–Asia travel implications.</p></div>
+  </section>
+
+  <div class="status">
+    Last setup update: July 15, 2026. The next scheduled run should replace this placeholder with the actual daily briefing.
+  </div>
+
+  <footer>Generated by Clawd • Powered by OpenClaw</footer>
+</body>
+</html>
