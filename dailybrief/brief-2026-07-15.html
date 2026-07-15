@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Briefing — 2026-07-15</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #9a9a9a;
+      --accent: #7c3aed;
+      --accent-dim: #7c3aed22;
+      --blue: #1d9bf0;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #17112a 0, var(--bg) 380px);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    header { text-align: center; padding: 34px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+    h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
+    .subtitle { color: var(--text-muted); font-size: 0.98rem; }
+    .nav { margin-top: 14px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .summary-box {
+      background: linear-gradient(135deg, var(--accent-dim), #1d9bf008);
+      border: 1px solid var(--accent);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 28px;
+    }
+    .summary-box h2 { font-size: 1.1rem; color: #fff; margin-bottom: 10px; }
+    .summary-box p { color: var(--text-muted); margin-bottom: 8px; }
+    .section { margin-bottom: 26px; }
+    .section-header { display: flex; gap: 10px; align-items: center; padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+    .section-header h2 { font-size: 1.05rem; color: var(--accent); }
+    .item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 12px; }
+    .item-title { font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .item-body { color: var(--text-muted); font-size: 0.93rem; }
+    .why { margin-top: 10px; padding-left: 12px; border-left: 3px solid var(--accent); color: #d7d7d7; font-size: 0.9rem; }
+    .tag { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; border-radius: 999px; padding: 3px 8px; margin-right: 8px; }
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.signal { background: var(--accent); color: #fff; }
+    .tag.watch { background: var(--orange); color: #111; }
+    .sources { background: #111; border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-top: 30px; }
+    .sources h2 { font-size: 1rem; margin-bottom: 10px; }
+    .sources ul { padding-left: 18px; color: var(--text-muted); font-size: 0.9rem; }
+    footer { margin-top: 42px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.82rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily Briefing — 2026-07-15</h1>
+    <p class="subtitle">Mixed English + 中文 · concise, high-signal updates</p>
+    <nav class="nav">
+      <a href="../">Home</a>
+      <a href="index.html">Latest</a>
+      <a href="archive.html">Archive</a>
+    </nav>
+  </header>
+
+  <section class="summary-box">
+    <h2>Today’s takeaway</h2>
+    <p><strong>AI infrastructure is being validated by real orders, not just model demos.</strong></p>
+    <p>ASML raised its 2026 outlook on strong AI chip demand, while coding-agent research continues to point toward measurable engineering productivity. The useful question is shifting from “which model is smartest?” to “which workflow converts compute into completed work?”</p>
+  </section>
+
+  <section class="section">
+    <div class="section-header"><span>🤖</span><h2>AI / Coding Tools</h2></div>
+    <div class="item">
+      <div class="item-title"><span class="tag signal">Signal</span>CLI coding agents are moving from novelty to measured productivity.</div>
+      <div class="item-body">A Microsoft rollout study of command-line coding agents such as Claude Code and GitHub Copilot CLI found adopters merged roughly 24% more pull requests over a four-month window. The study also notes adoption spread through peer visibility and that PR count is only a proxy for value.</div>
+      <div class="why"><strong>Why it matters：</strong>For your Claude Code / Codex / MCP workflow, the bottleneck is less “which chat model?” and more rollout design: repo context, CLI ergonomics, review loops, cost controls, and visible team adoption.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header"><span>📈</span><h2>Markets / Economy</h2></div>
+    <div class="item">
+      <div class="item-title"><span class="tag hot">Hot</span>ASML raised 2026 guidance on AI chip demand.</div>
+      <div class="item-body">ASML reported stronger-than-expected Q2 results and lifted its 2026 revenue forecast to roughly €43–45B. It also pointed to capacity expansion for EUV and DUV tools as customers keep investing in AI-related logic and memory capacity.</div>
+      <div class="why"><strong>Why it matters：</strong>ASML is one of the cleanest upstream indicators for whether AI infrastructure capex is still real. This supports the AI hardware cycle, but also raises the bar for TSMC and other chip names this earnings season.</div>
+    </div>
+    <div class="item">
+      <div class="item-title"><span class="tag watch">Watch</span>Softer CPI helps growth stocks, but oil/geopolitics remain a risk.</div>
+      <div class="item-body">Markets were supported by softer U.S. inflation data and ASML’s AI signal, while oil moved higher on renewed Middle East tensions. That keeps the macro setup mixed rather than risk-free.</div>
+      <div class="why"><strong>Why it matters：</strong>Lower inflation helps long-duration tech valuations; higher oil can push the other way by reviving inflation concerns.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header"><span>🇨🇳🇺🇸</span><h2>China / US</h2></div>
+    <div class="item">
+      <div class="item-title"><span class="tag signal">Signal</span>China’s memory-chip push is becoming more financialized.</div>
+      <div class="item-body">CXMT is reportedly preparing a large Shanghai STAR Market IPO, targeting a very large valuation as China pushes to localize memory-chip supply and reduce dependence on foreign suppliers.</div>
+      <div class="why"><strong>Why it matters：</strong>AI competition is increasingly about memory, lithography access, domestic supply chains, and financing capacity—not just frontier-model benchmarks.</div>
+    </div>
+    <div class="item">
+      <div class="item-title"><span class="tag watch">Watch</span>China growth still looks two-speed.</div>
+      <div class="item-body">Recent market coverage points to weaker overall China growth while export/AI-linked manufacturing remains more resilient.</div>
+      <div class="why"><strong>Why it matters：</strong>Expect policy support to keep emphasizing advanced manufacturing, chips, and AI infrastructure while domestic demand remains uneven.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header"><span>🩺</span><h2>Health / Medicine</h2></div>
+    <div class="item">
+      <div class="item-title"><span class="tag hot">Hot</span>FDA approved Celcuity’s breast-cancer drug gedatolisib.</div>
+      <div class="item-body">The FDA approved gedatolisib, branded Revtorpyk, for a specific advanced HR-positive/HER2-negative breast cancer setting after progression on endocrine therapy and CDK inhibitors. Reuters reported trial data showing a large progression-risk reduction when combined with Ibrance and fulvestrant.</div>
+      <div class="why"><strong>Why it matters：</strong>This is relevant to the broader ER+/HER2− treatment landscape, but it is an advanced/metastatic treatment setting—not something that changes routine surveillance or adjuvant decisions by itself.</div>
+    </div>
+    <div class="item">
+      <div class="item-title"><span class="tag signal">Signal</span>Oncology convenience continues improving.</div>
+      <div class="item-body">Sanofi recently received FDA approval for an on-body injector form of Sarclisa for multiple myeloma, reducing administration time compared with long IV infusion workflows.</div>
+      <div class="why"><strong>Why it matters：</strong>The near-term practical healthcare trend is often not a new cure, but lower treatment burden and less clinic time.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header"><span>👨‍👩‍👧</span><h2>Parenting / Education</h2></div>
+    <div class="item">
+      <div class="item-title"><span class="tag signal">Signal</span>AI literacy = learning how to question the machine.</div>
+      <div class="item-body">Recent education research suggests students benefit from explicit training in how LLMs fail, how to ask follow-ups, and how to evaluate response correctness. A short workshop improved students’ regulation of LLM use in science tasks.</div>
+      <div class="why"><strong>Why it matters：</strong>For Chloe, the durable skill is not “using AI early”; it is reading carefully, checking sources, asking why, and explaining reasoning.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header"><span>✈️</span><h2>Travel / Points</h2></div>
+    <div class="item">
+      <div class="item-title"><span class="tag watch">Watch</span>No major loyalty-program action item today.</div>
+      <div class="item-body">No high-confidence same-day airline/hotel devaluation or transfer-bonus change stood out in today’s scan. Continue to verify live award space before transferring flexible points.</div>
+      <div class="why"><strong>Why it matters：</strong>For U.S.–Asia awards, the practical rule remains: find bookable EVA/ANA/Cathay/partner space first, then transfer. Do not speculatively move points unless there is a clear near-term redemption.</div>
+    </div>
+  </section>
+
+  <section class="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://www.reuters.com/business/asml-tops-q2-estimates-ai-chip-demand-2026-07-15/">Reuters — ASML raises 2026 forecast on AI chip demand</a></li>
+      <li><a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-07-15/">Reuters — Global markets, CPI, oil, and China growth context</a></li>
+      <li><a href="https://www.wsj.com/tech/chinas-cxmt-eyes-85-5-billion-market-cap-ahead-of-blockbuster-ipo-da13d61c">WSJ — CXMT IPO and China memory-chip strategy</a></li>
+      <li><a href="https://arxiv.org/abs/2607.01418">arXiv — Adoption and impact of command-line AI coding agents</a></li>
+      <li><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-celcuitys-breast-cancer-drug-2026-07-14/">Reuters — FDA approves Celcuity breast-cancer drug</a></li>
+      <li><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/us-fda-approves-sanofis-wearable-injector-form-blood-cancer-drug-2026-07-10/">Reuters — FDA approves Sanofi wearable injector form of Sarclisa</a></li>
+      <li><a href="https://arxiv.org/abs/2604.01955">arXiv — AI literacy intervention and student regulation of LLM use</a></li>
+    </ul>
+  </section>
+
+  <footer>Generated by Clawd • Powered by OpenClaw</footer>
+</body>
+</html>
