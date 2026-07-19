@@ -20,6 +20,7 @@ class EyeRestService : Service() {
     private val handler = Handler(Looper.getMainLooper())
     private lateinit var engine: TimerEngine
     private lateinit var voiceGuide: VoiceGuide
+    private lateinit var breakMusicPlayer: BreakMusicPlayer
     private lateinit var wakeLock: PowerManager.WakeLock
     private var settings = UserSettings()
     private var foregroundActive = false
@@ -28,6 +29,7 @@ class EyeRestService : Service() {
     private val ticker = object : Runnable {
         override fun run() {
             val result = engine.tick()
+            syncBreakMusic(result.snapshot)
             handleEvents(result.events)
             publish(result.snapshot)
             if (result.snapshot.running) handler.postDelayed(this, TICK_MILLIS)
@@ -42,7 +44,10 @@ class EyeRestService : Service() {
             initialConfig = settings.timerConfig(),
             initialSnapshot = TimerStore.load(this)
         ) { SystemClock.elapsedRealtime() }
-        voiceGuide = VoiceGuide(this).also { it.prepare() }
+        breakMusicPlayer = BreakMusicPlayer()
+        voiceGuide = VoiceGuide(this) { speechActive ->
+            breakMusicPlayer.setDucked(speechActive)
+        }.also { it.prepare() }
         val powerManager = getSystemService(PowerManager::class.java)
         wakeLock = powerManager.newWakeLock(
             PowerManager.PARTIAL_WAKE_LOCK,
@@ -66,6 +71,7 @@ class EyeRestService : Service() {
     override fun onDestroy() {
         handler.removeCallbacksAndMessages(null)
         releaseWakeLock()
+        breakMusicPlayer.close()
         voiceGuide.close()
         super.onDestroy()
     }
@@ -76,6 +82,7 @@ class EyeRestService : Service() {
         val result = engine.start()
         ensureForeground(result.snapshot)
         acquireWakeLock()
+        syncBreakMusic(result.snapshot)
         handleEvents(result.events)
         publish(result.snapshot, force = true)
         handler.removeCallbacks(ticker)
@@ -86,6 +93,7 @@ class EyeRestService : Service() {
         val snapshot = engine.pause()
         handler.removeCallbacks(ticker)
         releaseWakeLock()
+        breakMusicPlayer.stop()
         ensureForeground(snapshot)
         publish(snapshot, force = true)
     }
@@ -100,6 +108,7 @@ class EyeRestService : Service() {
         } else {
             releaseWakeLock()
         }
+        syncBreakMusic(result.snapshot)
         handleEvents(result.events)
         publish(result.snapshot, force = true)
     }
@@ -107,6 +116,7 @@ class EyeRestService : Service() {
     private fun stopSession() {
         handler.removeCallbacks(ticker)
         releaseWakeLock()
+        breakMusicPlayer.stop()
         val snapshot = engine.stop()
         publish(snapshot, force = true)
         stopForeground(STOP_FOREGROUND_REMOVE)
@@ -117,7 +127,20 @@ class EyeRestService : Service() {
     private fun refreshSettings() {
         settings = AppSettings.load(this)
         val snapshot = engine.updateConfig(settings.timerConfig())
+        syncBreakMusic(snapshot)
         if (foregroundActive) publish(snapshot, force = true)
+    }
+
+    private fun syncBreakMusic(snapshot: TimerSnapshot) {
+        if (
+            settings.breakMusicEnabled &&
+            snapshot.running &&
+            snapshot.phase == TimerPhase.REST
+        ) {
+            breakMusicPlayer.start()
+        } else {
+            breakMusicPlayer.stop()
+        }
     }
 
     private fun handleEvents(events: List<TimerEvent>) {
