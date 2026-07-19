@@ -7,7 +7,8 @@ data class UserSettings(
     val restSeconds: Int = 40,
     val workMinutes: Int = 20,
     val voiceEnabled: Boolean = true,
-    val chimeEnabled: Boolean = true
+    val chimeEnabled: Boolean = true,
+    val breakMusicEnabled: Boolean = true
 ) {
     fun timerConfig(): TimerConfig = clampConfig(restSeconds, workMinutes)
 }
@@ -18,6 +19,7 @@ object AppSettings {
     private const val WORK_MINUTES = "work_minutes"
     private const val VOICE_ENABLED = "voice_enabled"
     private const val CHIME_ENABLED = "chime_enabled"
+    private const val BREAK_MUSIC_ENABLED = "break_music_enabled"
 
     fun load(context: Context): UserSettings {
         val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
@@ -26,7 +28,8 @@ object AppSettings {
                 restSeconds = prefs.getInt(REST_SECONDS, 40),
                 workMinutes = prefs.getInt(WORK_MINUTES, 20),
                 voiceEnabled = prefs.getBoolean(VOICE_ENABLED, true),
-                chimeEnabled = prefs.getBoolean(CHIME_ENABLED, true)
+                chimeEnabled = prefs.getBoolean(CHIME_ENABLED, true),
+                breakMusicEnabled = prefs.getBoolean(BREAK_MUSIC_ENABLED, true)
             )
         )
     }
@@ -39,6 +42,7 @@ object AppSettings {
             .putInt(WORK_MINUTES, normalized.workMinutes)
             .putBoolean(VOICE_ENABLED, normalized.voiceEnabled)
             .putBoolean(CHIME_ENABLED, normalized.chimeEnabled)
+            .putBoolean(BREAK_MUSIC_ENABLED, normalized.breakMusicEnabled)
             .apply()
         return normalized
     }
