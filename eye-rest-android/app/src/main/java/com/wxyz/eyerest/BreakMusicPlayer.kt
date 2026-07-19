@@ -62,6 +62,7 @@ class BreakMusicPlayer {
     @Synchronized
     fun stop() {
         generation += 1
+        ducked = false
         val oldTrack = track
         track = null
         runCatching { oldTrack?.pause() }
