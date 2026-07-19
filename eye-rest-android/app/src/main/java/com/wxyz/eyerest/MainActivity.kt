@@ -36,6 +36,7 @@ class MainActivity : Activity() {
     private lateinit var workMinutesInput: EditText
     private lateinit var voiceCheck: CheckBox
     private lateinit var chimeCheck: CheckBox
+    private lateinit var breakMusicCheck: CheckBox
     private var receiverRegistered = false
     private var currentSnapshot = TimerSnapshot(
         phase = TimerPhase.REST,
@@ -262,7 +263,7 @@ class MainActivity : Activity() {
         )
 
         voiceCheck = CheckBox(this).apply {
-            text = "Voice guidance"
+            text = "Natural voice guidance"
             textSize = 16f
             setTextColor(Color.parseColor("#40564D"))
             setPadding(0, dp(8), 0, 0)
@@ -274,10 +275,17 @@ class MainActivity : Activity() {
             setTextColor(Color.parseColor("#40564D"))
             setOnCheckedChangeListener { _, _ -> settingsChanged() }
         }
+        breakMusicCheck = CheckBox(this).apply {
+            text = "Gentle music during breaks"
+            textSize = 16f
+            setTextColor(Color.parseColor("#40564D"))
+            setOnCheckedChangeListener { _, _ -> settingsChanged() }
+        }
         settingsCard.addView(voiceCheck)
         settingsCard.addView(chimeCheck)
+        settingsCard.addView(breakMusicCheck)
         settingsCard.addView(label(
-            "The ongoing notification and a partial wake lock keep timing and audio active with the display off. Stop the timer when you are finished to release the wake lock.",
+            "The app chooses the highest-quality English voice installed on the phone. Break music is generated locally, plays only during eye rests, and becomes quieter while the voice speaks.",
             13f,
             "#72827B",
             Typeface.NORMAL
@@ -324,9 +332,9 @@ class MainActivity : Activity() {
             else -> "Resume"
         }
         detailView.text = when {
-            ready -> "Rest first, then focus. Voice guidance continues after the phone locks."
+            ready -> "Rest first, then focus. Voice and gentle music can continue after the phone locks."
             snapshot.phase == TimerPhase.REST && snapshot.running ->
-                "Look far away and blink slowly. The audio will guide you back."
+                "Look far away and let your gaze soften. The audio will guide you back."
             snapshot.phase == TimerPhase.WORK && snapshot.running ->
                 "Work quietly. The next eye rest starts automatically."
             else -> "Timer paused. Resume here or from the lock-screen notification."
@@ -339,6 +347,7 @@ class MainActivity : Activity() {
         workMinutesInput.setText(settings.workMinutes.toString())
         voiceCheck.isChecked = settings.voiceEnabled
         chimeCheck.isChecked = settings.chimeEnabled
+        breakMusicCheck.isChecked = settings.breakMusicEnabled
     }
 
     private fun settingsChanged() {
@@ -356,7 +365,8 @@ class MainActivity : Activity() {
                 workMinutes = workMinutesInput.text.toString().toIntOrNull()
                     ?: existing.workMinutes,
                 voiceEnabled = voiceCheck.isChecked,
-                chimeEnabled = chimeCheck.isChecked
+                chimeEnabled = chimeCheck.isChecked,
+                breakMusicEnabled = breakMusicCheck.isChecked
             )
         )
         restSecondsInput.setText(saved.restSeconds.toString())
