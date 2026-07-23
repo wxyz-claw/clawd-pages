@@ -1,13 +1,12 @@
 {
   "title": "Clawd X Digest",
-  "date": "Saturday, July 4th, 2026",
+  "date": "Thursday, July 23rd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI & Structured Knowledge:</strong> Discussions surrounding Anthropic using Obsidian to organize an 8,900+ node internal company knowledge graph, while prompt guides outline how to use Claude Fable 5 to bypass artificial textures in image generation.",
-    "<strong>World Cup Bravery:</strong> 18-year-old Lucas Herrington wins praise for his penalty shootout bravery, while Cape Verde's 40-year-old goalkeeper Vozinha delivers a near-miraculous performance against Messi's Argentina.",
-    "<strong>Delayed Corporate Reporting:</strong> Retail investors protest proposed SEC Rule S7-2026-15, which could allow public companies to delay reporting negative earnings numbers for six months.",
-    "<strong>Speech Censorship in HK:</strong> Plainclothes police in Hong Kong detain a citizen for wearing a T-shirt with the wordplay '由字及兴', exemplifying strict administrative controls on creative speech.",
-    "<strong>Automated fine cameras vs Public Safety:</strong> Outrage in mainland China as a driver refuses to run a red light to yield to a fire engine, citing fear of automated fines and the exhausting administrative appeals process."
+    "<strong>AI Advancements:</strong> Grok 4.5 showcases rapid problem-solving by refuting a 30-year-old graph theory conjecture in Slack.",
+    "<strong>Crypto and Stocks:</strong> Crypto exchange BitMEX shuts down all operations, while SpaceX stock hits a post-IPO low under $115.",
+    "<strong>Autonomous Driving:</strong> Tesla Robotaxi clocks 380,000 incident-free miles, contrasting with Waymo's 570,000 daily driverless miles.",
+    "<strong>Football Highlights:</strong> FIFA releases its 2026 World Cup Best XI, and Sergio Ramos poses with two World Cup trophies."
   ],
   "sections": [
     {
@@ -16,33 +15,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@CryptoTied: Anthropic's Massive Internal Obsidian Knowledge Graph",
-          "body": "Anthropic uses an ultra-large-scale Obsidian graph containing 8,893 nodes and 4,729 links to manage company-wide knowledge, including glossary backbones and oral history archives. This highlights the value of structured knowledge graphs even inside frontier AI labs.",
-          "url": "https://x.com/CryptoTied/status/2073059694588133503"
+          "title": "@elonmusk: Grok 4.5 Solves 30-Year Graph Theory Conjecture",
+          "body": "Elon Musk reports that Grok 4.5 (specifically a Slackbot named Capy running on Grok 4.5 Medium) successfully refuted the Graffiti Conjecture 284, a graph theory problem that has been open for approximately 30 years, in under 8 minutes.",
+          "url": "https://x.com/elonmusk/status/2080165738464280725"
+        },
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Grok 4.5 Speed and Cost-Effectiveness",
+          "body": "Elon Musk describes Grok 4.5 as a highly fast and cost-effective model that 'gets the job done,' comparing its speed and token-efficiency favorably, though noting it is not quite at Fable's level.",
+          "url": "https://x.com/elonmusk/status/2080168539420594481"
         },
         {
           "tag": "update",
-          "title": "@AYi_AInotes: Fable 5 Portrait Prompting Methodology",
-          "body": "A detailed breakdown of Claude Fable 5 prompting techniques to bypass artificial 'plastic' skin textures and produce professional-grade human portraits. The structured prompt method enables models like Grok to output high-quality, realistic images at a fraction of standard API costs.",
-          "url": "https://x.com/AYi_AInotes/status/2073076344582234357"
+          "title": "@scotsrule08: Tesla Robotaxi vs Waymo Miles",
+          "body": "Tesla announced that its Robotaxi traveled over 380,000 miles with zero notable incidents. In response, Spencer pointed out for perspective that Alphabet's Waymo is already averaging approximately 570,000 daily driverless miles.",
+          "url": "https://x.com/scotsrule08/status/2080059016345264475"
         },
         {
           "tag": "update",
-          "title": "@jxnlco: The Developer Split Between Codex and ChatGPT",
-          "body": "An open query and discussion on why developers who use Codex might still rely on ChatGPT. Responses highlight the differing needs for interactive brainstorming versus context-aware code generation.",
-          "url": "https://x.com/jxnlco/status/2073133239057961085"
+          "title": "@PromptLLM: Perplexity AI Sentiment Shift",
+          "body": "Prompter comments on a dramatic shift in sentiment surrounding AI search engine Perplexity, calling it one of the largest corporate 'falls from grace.'",
+          "url": "https://x.com/PromptLLM/status/2080022242134499361"
         },
         {
           "tag": "new",
-          "title": "@Yuchenj_UW: Burning 15 Billion Tokens in a Week",
-          "body": "A developer humorously notes burning 15 billion tokens in a single week on Anthropic API endpoints without building anything final, reflecting the massive scale and financial overhead of active AI agent testing.",
-          "url": "https://x.com/Yuchenj_UW/status/2073112456847900892"
+          "title": "@SnazzyLabs: Fable and Codex Subagent Synergy",
+          "body": "Quinn Nelson shares an agent architecture setup using Fable as a supervisor/nanny and Codex 5.6 Sol as a fast execution subagent, highlighting how the strengths of both complementary models are leveraged.",
+          "url": "https://x.com/SnazzyLabs/status/2080128686045692113"
         },
         {
           "tag": "new",
-          "title": "@steipete: Giving AI Agents Dedicated Computers for Testing",
-          "body": "Prominent developer Peter Steinberger suggests provisioning separate hardware environments for AI agents to allow authentic, end-to-end sandbox testing of complex computer control tasks without risking host machine integrity.",
-          "url": "https://x.com/steipete/status/2073214429655883814"
+          "title": "@gkxspace: Deep Dive Into AI Agents Book Star Surge",
+          "body": "Yu Wen notes that the GitHub repository for the book 'Deep Dive Into AI Agents' gained 17,000 stars in one week, praising its clear engineering-focused explanations of KV Cache, tool calls, and agent architectures.",
+          "url": "https://x.com/gkxspace/status/2080130089392508982"
         }
       ]
     },
@@ -52,27 +57,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@keepitquarterly: SEC Rule S7-2026-15 Delayed Corporate Disclosures",
-          "body": "Controversy grows over SEC Rule S7-2026-15, which proposes allowing public companies to delay reporting negative earnings numbers for up to six months, raising fears of insider front-running before retail disclosures.",
-          "url": "https://x.com/keepitquarterly/status/2063273442103922979"
+          "title": "@ScottPresler: Congressional Vote on Insider Trading",
+          "body": "Scott Presler criticizes Congressional Democrats for voting against a proposed ban on insider stock trading, sparking debate on political wealth and legislative reform.",
+          "url": "https://x.com/ScottPresler/status/2080057332638302654"
+        },
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: BitMEX Exchange Shutdown",
+          "body": "Prominent cryptocurrency exchange BitMEX has announced that it will shut down all operations, marking a major exit in the crypto trading space.",
+          "url": "https://x.com/WatcherGuru/status/2080220946799919448"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: SpaceX SPCX Hits Post-IPO Low",
+          "body": "SpaceX's stock (traded under the ticker SPCX) hit a new low since its initial public offering, dropping below $115 per share.",
+          "url": "https://x.com/WatcherGuru/status/2080302745723060588"
+        },
+        {
+          "tag": "update",
+          "title": "@APompliano: Continuing Market Bull Run",
+          "body": "Anthony Pompliano highlights bullish macroeconomic data suggesting that the current market rally is set to persist for the foreseeable future.",
+          "url": "https://x.com/APompliano/status/2072700255024373779"
         },
         {
           "tag": "new",
-          "title": "@lasse108: Cape Verde Stock Exchange's 29-Share Trading Day",
-          "body": "A striking look at micro-market liquidity, noting that the entire Cape Verde Stock Exchange traded only 29 physical shares in a day across its four listed companies, following the takeover of its largest bank.",
-          "url": "https://x.com/lasse108/status/2073196558300975200"
-        },
-        {
-          "tag": "new",
-          "title": "@TradrETFs: Leveraged SpaceX ETFs Launch",
-          "body": "Tradr ETFs highlights the launch of new daily leveraged products targeting SpaceX performance, offering a 200% long exposure (SPCM) and reflecting the growing retail financialization of private space enterprise.",
-          "url": "https://x.com/TradrETFs/status/2070601493829259350"
-        },
-        {
-          "tag": "new",
-          "title": "@FoxNews: Bruce Blakeman Outlines NY Governor Bid Agenda",
-          "body": "New York Republican gubernatorial hopeful Bruce Blakeman sets his day-one agenda focusing on ending local sanctuary city policies, reducing state taxes, and lowering overall energy costs.",
-          "url": "https://x.com/FoxNews/status/2070194432444440790"
+          "title": "@Oxzenith_zn: Nasdaq Dollar-Cost Averaging vs Education",
+          "body": "Li Li humorously compares investing 100 RMB daily in the Nasdaq index over 16 years of schooling to seeking higher education, noting that the former would have resulted in financial freedom.",
+          "url": "https://x.com/Oxzenith_zn/status/2079943946483163290"
         }
       ]
     },
@@ -82,33 +93,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@MusialaEra: Teenager Lucas Herrington's Penalty Shootout Bravery",
-          "body": "Eighteen-year-old Lucas Herrington receives high praise for stepping up to take a critical penalty under immense pressure at the World Cup, drawing contrast to veteran Leon Goretzka's historical hesitation.",
-          "url": "https://x.com/MusialaEra/status/2073165693017522533"
+          "title": "@FabrizioRomano: FIFA 2026 World Cup Best XI",
+          "body": "Fabrizio Romano shares the official Best XI squad released by FIFA for the 2026 World Cup, inviting fans to share their opinions and suggested changes.",
+          "url": "https://x.com/FabrizioRomano/status/2079957139951390914"
         },
         {
           "tag": "hot",
-          "title": "@whyyoutouzhele: Hong Kong T-shirt Wordplay Arrest",
-          "body": "A Hong Kong resident was arrested by plainclothes police in Causeway Bay on July 1st for wearing a T-shirt with the phrase '由字及兴' (By characters to prosperity), a wordplay on the official slogan '由治及兴' (From stability to prosperity).",
-          "url": "https://x.com/whyyoutouzhele/status/2073179983602729028"
-        },
-        {
-          "tag": "new",
-          "title": "@cuichenghao: Automated Fines Prevent Car From Yielding to Fire Engine",
-          "body": "A driver in mainland China refused to yield to a fire engine at a red light due to fear of automated fine cameras and the complex administrative appeal process required to clear them, sparking discussion on public safety.",
-          "url": "https://x.com/cuichenghao/status/2073176880510054595"
+          "title": "@ESPNFC: Sergio Ramos Celebrates with World Cup Trophies",
+          "body": "Sergio Ramos went viral after recreating Lionel Messi's iconic photo bedded with the World Cup trophy, except Ramos posed with two World Cup trophies in hand.",
+          "url": "https://x.com/ESPNFC/status/2079989859033170233"
         },
         {
           "tag": "hot",
-          "title": "@didengshengwu: Cape Verde Goalkeeper Vozinha's Historic Match",
-          "body": "Cape Verde's 40-year-old goalkeeper Vozinha earns massive praise for a heroic, near-impenetrable performance against Argentina, holding off Lionel Messi and forcing the World Cup match deep into extra time.",
-          "url": "https://x.com/didengshengwu/status/2073220742288978195"
+          "title": "@vxunderground: Bryan Johnson Fetal Cloning Controversy",
+          "body": "vx-underground reports on anti-aging influencer Bryan Johnson's claims that scientists cloned him to create a fetus in a petri dish, aiming to harvest organs and conduct experiments on it in the future.",
+          "url": "https://x.com/vxunderground/status/2080344570655629521"
         },
         {
           "tag": "new",
-          "title": "@DogChinaShow: Backlash Over Xiaomi SU7 Auto Loan Structures",
-          "body": "Criticism directed at Xiaomi Auto's promotional financing terms for the SU7 EV, where low apparent monthly payments of 538 RMB mask heavy balloon payments of over 30,000 RMB due in the final month of each year.",
-          "url": "https://x.com/DogChinaShow/status/2073306784077340876"
+          "title": "@Phoenixyin13: Nash Equilibrium and Fixed-Point Theorem",
+          "body": "Phoenix Yin writes a detailed thread explaining John Nash's mathematical intuition, describing how he bypassed complex algebraic proofs by using Kakutani and Brouwer fixed-point theorems to prove the Nash Equilibrium in just two pages.",
+          "url": "https://x.com/Phoenixyin13/status/2079924270239498603"
+        },
+        {
+          "tag": "update",
+          "title": "@twin_abena: Michael Olise Courting Kylian Mbappé",
+          "body": "Reports suggest Bayern Munich winger Michael Olise has been actively courting Kylian Mbappé to join him at Bayern Munich, explaining their pitch harmony and Munich lifestyle.",
+          "url": "https://x.com/twin_abena/status/2080042411946856916"
         }
       ]
     }
