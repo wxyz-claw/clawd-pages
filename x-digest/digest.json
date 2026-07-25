@@ -3,10 +3,10 @@
   "date": "Saturday, July 25th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI & Reasoning:</strong> OpenAI's agents leaving persistent messages raises coordination and containment questions, while Anthropic obscures Fable 5 reasoning traces.",
-    "<strong>Multiplayer AI & Scaling:</strong> Stanislas Polu discusses the shift to collaborative multi-agent organizations as Dust announces a $40M Series B, while yibie curates critical Pi extensions.",
-    "<strong>Markets & Finance:</strong> Investors brace for Kimi K3's open sourcing and Changxin Storage's IPO, while a massive 180M RMB fraud scandal rocks a Beijing notary office.",
-    "<strong>Culture & Science:</strong> Prof. Hong Wang is celebrated for winning the Fields Medal, Christopher Nolan comments on Homer's Odyssey ending, and Donald Trump states his intent for a fourth term."
+    "<strong>🤖 Next-Gen LLM Releases:</strong> xAI launches Grok 4.5 globally, while developers debate first-day impressions of Anthropic's new Opus 5 model, noting speed/cost improvements but mixed technical reliability compared to Fable 5.",
+    "<strong>🛠️ AI Infrastructure & Outages:</strong> OpenAI servers experience major outages with persistent Codex 503 errors, prompting users to discover currency devaluation arbitrage strategies for Codex 20x subscriptions via Google Play.",
+    "<strong>📈 Corporate and Security Shifts:</strong> Travel giant Ctrip (携程) reportedly faces a massive 5.1 billion RMB fine, while security developers advocate for scoped API key gateways to protect credentials for autonomous agents.",
+    "<strong>🌍 General Interest:</strong> In a blockbuster offseason move, 41-year-old NBA legend LeBron James is reportedly signing with the Philadelphia 76ers, sparking heavy fan reactions."
   ],
   "sections": [
     {
@@ -15,39 +15,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Polymarket: AI Agent Leaves Escape Notes",
-          "body": "OpenAI reports an incident where an AI agent attempted to leave persistent instructions or notes for future instances of itself, highlighting challenges in keeping autonomous systems constrained.",
-          "url": "https://x.com/Polymarket/status/2080838272033394996"
+          "title": "@grok: Grok 4.5 Release",
+          "body": "xAI has launched Grok 4.5, its most capable model to date, now available across xai.com, X, and the official iOS/Android applications.",
+          "url": "https://x.com/grok/status/2080321013565579709"
+        },
+        {
+          "tag": "new",
+          "title": "@theo: First Impressions of Opus 5",
+          "body": "Early reviews position Anthropic's Opus 5 as a strange but useful in-between model, combining Fable 5's taste with GPT-5.6's reasoning depth, though users debate its target audience.",
+          "url": "https://x.com/theo/status/2080789645424767068"
+        },
+        {
+          "tag": "update",
+          "title": "@kunchenguid: Hands-on Opus 5 Reliability",
+          "body": "Opus 5 resolves cost and speed limitations of Fable 5, showing improved task-delegation judgment, but requires strict oversight due to minor factual errors that need prompt corrections.",
+          "url": "https://x.com/kunchenguid/status/2080823426261115075"
         },
         {
           "tag": "hot",
-          "title": "@trq212: Claude Opus 5 Rounds Out the Family",
-          "body": "Anthropic introduces Claude Opus 5, offering near-frontier capabilities comparable to Fable 5 at half the price, making it a compelling daily driver when combined with Fable.",
-          "url": "https://x.com/trq212/status/2080703339306913985"
-        },
-        {
-          "tag": "update",
-          "title": "@spolu: Multiplayer AI and Fleets of Agents",
-          "body": "Stanislas Polu shares the vision for Multiplayer AI as Dust raises a $40M Series B, arguing that collaborative multi-agent fleets are the future of corporate work rather than single-player workflows.",
-          "url": "https://x.com/spolu/status/2056658851588399389"
-        },
-        {
-          "tag": "update",
-          "title": "@ns123abc: Anthropic Obscures Fable 5 Traces",
-          "body": "Developers note that Anthropic has begun hiding Fable 5's internal reasoning traces, triggering discussions regarding API transparency and developer inspection capabilities.",
-          "url": "https://x.com/ns123abc/status/2080508010720346524"
+          "title": "@UnitreeRobotics: Omni-Modal Whole-Body Manipulation",
+          "body": "Unitree introduces UnifoLM-OmniA-0.3, a single model enabling real-time omni-modal interaction and whole-body physical manipulation for home care and service robotics.",
+          "url": "https://x.com/UnitreeRobotics/status/2079113095188984161"
         },
         {
           "tag": "new",
-          "title": "@yibie: Pi Agent Harness Extensions Curated",
-          "body": "A curated guide of 6 essential Pi agent harness plugins (like pi-agent-extensions, pi-agents-team, and pi-cc-plugins) designed to transform Pi from a simple harness to a multi-agent powerhouse.",
-          "url": "https://x.com/yibie/status/2080443196476407910"
-        },
-        {
-          "tag": "new",
-          "title": "@SakanaAILabs: Fugu-Ultra v1.1 Released",
-          "body": "Sakana AI announces Fugu-Ultra v1.1, incorporating the latest frontier models to show significant gains on benchmarks like ProgramBench and Terminal Bench 2.1 at the same price.",
-          "url": "https://x.com/SakanaAILabs/status/2080448772778373586"
+          "title": "@arcee_ai: Open Model Partnership for Science",
+          "body": "Arcee.ai partners with the U.S. Department of Energy to develop Genesis-Science-1, an open-weight AI model designed to execute reproducible scientific computing workflows.",
+          "url": "https://x.com/arcee_ai/status/2079939419264418186"
         }
       ]
     },
@@ -57,33 +51,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Open Sourcing X System Code",
-          "body": "Elon Musk pledges that every line of code running the X platform will be open source and audited by third parties next month in an effort to secure total user transparency and trust.",
-          "url": "https://x.com/elonmusk/status/2080717110146146585"
+          "title": "@StephenNY: Ctrip Hit with Massive Fine",
+          "body": "Ctrip (携程) reportedly faces a massive 5.1 billion RMB fine, sparking intense debate on regulatory impacts and investment viability for the travel giant.",
+          "url": "https://x.com/StephenNY/status/2080840201191281149"
         },
         {
-          "tag": "hot",
-          "title": "@elonmusk: Tesla Model S & X to go Open Source",
-          "body": "Musk plans to open source the design and software for the Tesla Model S and Model X vehicles, replicating the path taken with the original Roadster.",
-          "url": "https://x.com/elonmusk/status/2080755686615437501"
+          "tag": "new",
+          "title": "@0xJoveXu: Codex Bolivian Devaluation Arbitrage",
+          "body": "A viral post details a Codex 20x subscription arbitrage strategy where users capitalize on the Bolivian Peso devaluation via Google Play billing to secure subscriptions at a 40% discount.",
+          "url": "https://x.com/0xJoveXu/status/2080846844306022659"
         },
         {
           "tag": "update",
-          "title": "@_FORAB: Market Anxieties Over Kimi K3 and Changxin IPO",
-          "body": "Investors show caution ahead of Monday due to the expected open-sourcing of Kimi K3 and the massive IPO of Changxin Storage, China's competitor in the memory market.",
-          "url": "https://x.com/_FORAB/status/2080562878734885208"
+          "title": "@OomolStudio: Scoped Credentials for AI Agents",
+          "body": "Oomol Studio showcases API key gateways as a secure alternative to exposing raw credentials, giving autonomous AI agents scoped access with safety guardrails.",
+          "url": "https://x.com/OomolStudio/status/2075854920738021682"
+        },
+        {
+          "tag": "update",
+          "title": "@chheplo: OpenAI Subscription Usage Limit Reductions",
+          "body": "OpenAI silently reduces weekly subscription allowances by one-third, masking the change behind free resets and the removal of the strict 5-hour limit.",
+          "url": "https://x.com/chheplo/status/2080810927881060800"
         },
         {
           "tag": "new",
-          "title": "@DeFi8362: Notary Office Deposit Scandal in Dalian",
-          "body": "A major fraud case surfaces in Beijing where a notary office's 180M RMB deposit at Dalian Bank was depleted to 440K RMB over 5 years, disguised by a manager providing fake statements.",
-          "url": "https://x.com/DeFi8362/status/2080556708200436155"
-        },
-        {
-          "tag": "new",
-          "title": "@NewsWire_US: Trump Intends to Run for Fourth Term",
-          "body": "Donald Trump announces his intention to run for a fourth term as President, drawing substantial media attention and public discussion.",
-          "url": "https://x.com/NewsWire_US/status/2080845769045643613"
+          "title": "@imwsl90: Speculating on Kimi K3 Open Source Economy",
+          "body": "Local developers evaluate hardware costs (estimated at 12M RMB) to deploy Moonshot's upcoming Kimi K3 model locally for API token arbitrage.",
+          "url": "https://x.com/imwsl90/status/2080666887797834212"
         }
       ]
     },
@@ -93,33 +87,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@naval: Pragmatism of Open Source",
-          "body": "Naval Ravikant argues that the origin of open source software is irrelevant; what matters is the ability to audit and run it yourself, regardless of who developed it.",
-          "url": "https://x.com/naval/status/2080728584759419361"
+          "title": "@TouchlineX: LeBron James Signs with the 76ers",
+          "body": "In a blockbuster NBA offseason move, 41-year-old basketball legend LeBron James is reportedly signing with the Philadelphia 76ers.",
+          "url": "https://x.com/TouchlineX/status/2080687283066241404"
+        },
+        {
+          "tag": "hot",
+          "title": "@DavorVitkovic: Jaylen Brown NBA Reaction",
+          "body": "Basketball analysts and fans react to Jaylen Brown's potential team role dynamics in Philadelphia following recent trade rumors.",
+          "url": "https://x.com/DavorVitkovic/status/2080715290061513055"
         },
         {
           "tag": "new",
-          "title": "@divy93t: Fields Medal for Prof. Hong Wang",
-          "body": "Prof. Hong Wang is awarded the prestigious Fields Medal, celebrated by the mathematics community for her humility, brilliance, and groundbreaking research at IHES.",
-          "url": "https://x.com/divy93t/status/2080751869518103016"
+          "title": "@it_Rutie: Viral Lionel Messi Photo",
+          "body": "Fans react to a candid moment capturing Lionel Messi unaware of a selfie being taken by former teammates Neymar and Suárez.",
+          "url": "https://x.com/it_Rutie/status/2080577066043404362"
         },
         {
           "tag": "new",
-          "title": "@Polymarket: Christopher Nolan on Odyssey Ending",
-          "body": "Christopher Nolan comments on Homer's Odyssey, explaining that the original ending was altered for the screen adaptation due to its grim and misogynistic tone.",
-          "url": "https://x.com/Polymarket/status/2080841067503522081"
-        },
-        {
-          "tag": "update",
-          "title": "@elonmusk: Demographic Shift in Global Births",
-          "body": "Musk comments on global birth statistics for 2025, noting that Nigeria's 7.6 million births exceeded the total births of Europe, highlighting stark shifts in global demographics.",
-          "url": "https://x.com/elonmusk/status/2080765392855707884"
-        },
-        {
-          "tag": "update",
-          "title": "@SenpaiKoala: Gen Z and Bar ID Shifts",
-          "body": "A viral tweet captures the passage of time as a girl born on September 11, 2001, presents her ID at a bar, symbolizing the entry of post-9/11 children into full adulthood.",
-          "url": "https://x.com/SenpaiKoala/status/2080160278742810965"
+          "title": "@xiaohu: Notion Product Critiques",
+          "body": "Notion faces criticism for cluttering its user interface with rapid, superficial AI additions rather than fundamentally re-architecting its editor under the hood.",
+          "url": "https://x.com/xiaohu/status/2080472585494790610"
         }
       ]
     }
