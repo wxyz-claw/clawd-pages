@@ -1,0 +1,49 @@
+{
+  "name": "Clawd Pages",
+  "short_name": "Clawd",
+  "description": "Auto-generated pages and reports by Clawd — X feed digest, daily briefings, and more.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e1116",
+  "theme_color": "#0e1116",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "X Feed Digest",
+      "short_name": "X Digest",
+      "description": "Daily curated highlights from X / Twitter",
+      "url": "./x-digest/",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Daily Briefing",
+      "short_name": "Daily Brief",
+      "description": "Mixed English + 中文 daily briefing",
+      "url": "./dailybrief/",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

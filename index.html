@@ -2,94 +2,346 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Clawd Pages</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Auto-generated pages and reports by Clawd — X feed digest, daily briefings, and more.">
+  <meta name="theme-color" content="#0e1116">
+
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Clawd">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0f0f0f;
-      --card-bg: #1a1a1a;
-      --border: #2a2a2a;
-      --text: #e5e5e5;
-      --text-muted: #888;
-      --accent: #1d9bf0;
+      --bg: #0e1116;
+      --card: #151a21;
+      --border: #242c37;
+      --text: #e9edf2;
+      --muted: #8b95a3;
+      --blue: #1d9bf0;
+      --amber: #f7b955;
+      --green: #3ddc84;
+      --display: 'Space Grotesk', ui-sans-serif, sans-serif;
+      --body: 'Karla', ui-sans-serif, sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
+      font-family: var(--body);
       background: var(--bg);
       color: var(--text);
-      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 32px 20px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
     }
-    .container {
-      max-width: 400px;
-      text-align: center;
+
+    /* ---------- Ambient layered background ---------- */
+    .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
+    .bg::before, .bg::after {
+      content: '';
+      position: absolute;
+      width: 640px; height: 640px;
+      border-radius: 50%;
+      filter: blur(10px);
+    }
+    .bg::before {
+      left: -200px; top: -240px;
+      background: radial-gradient(circle, rgba(29, 155, 240, 0.16), transparent 65%);
+      animation: drift 16s ease-in-out infinite alternate;
+    }
+    .bg::after {
+      right: -220px; bottom: -260px;
+      background: radial-gradient(circle, rgba(247, 185, 85, 0.11), transparent 65%);
+      animation: drift 19s ease-in-out -6s infinite alternate-reverse;
+    }
+    .bg .grid {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.4px);
+      background-size: 26px 26px;
+      -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 45%, #000 30%, transparent 100%);
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 45%, #000 30%, transparent 100%);
+    }
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(46px, 34px) scale(1.08); }
+    }
+
+    /* ---------- Shell ---------- */
+    .app { width: 100%; max-width: 430px; }
+
+    .reveal {
+      animation: rise 0.6s cubic-bezier(0.22, 0.9, 0.3, 1) backwards;
+      animation-delay: var(--d, 0ms);
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .paw-tile {
+      width: 58px; height: 58px;
+      display: grid; place-items: center;
+      font-size: 29px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #13202e, #1b2c40);
+      border: 1px solid #2b3d52;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 10px 26px -12px rgba(29, 155, 240, 0.45);
+      animation: float 5.5s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-4px); }
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
+      font-family: var(--display);
+      font-size: 1.72rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
     }
-    .subtitle {
-      color: var(--text-muted);
-      margin-bottom: 40px;
-    }
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    a {
-      display: block;
-      background: var(--card-bg);
+    .tagline { color: var(--muted); font-size: 0.82rem; margin-top: 4px; }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+      color: var(--muted);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 6px 11px;
+      border-radius: 999px;
+      white-space: nowrap;
+      margin-top: 4px;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); position: relative; }
+    .dot::after {
+      content: '';
+      position: absolute; inset: -3px;
+      border-radius: 50%;
+      border: 1px solid var(--green);
+      animation: pulse 2s ease-out infinite;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(0.6); opacity: 0.7; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+    body.offline .dot { background: var(--amber); }
+    body.offline .dot::after { display: none; }
+
+    .section-label {
+      font-family: var(--display);
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--muted);
+      margin: 32px 0 12px;
+    }
+
+    .links { display: flex; flex-direction: column; gap: 14px; }
+    .card {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
       color: var(--text);
       text-decoration: none;
-      transition: all 0.2s;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
     }
-    a:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent, var(--blue));
+      box-shadow: 0 12px 32px -14px var(--accent-glow, rgba(29, 155, 240, 0.4));
     }
-    a .title {
+    .card:active { transform: translateY(-1px) scale(0.995); }
+    .badge {
+      flex: 0 0 46px; height: 46px;
+      display: grid; place-items: center;
+      font-size: 22px;
+      border-radius: 12px;
+      background: var(--accent-soft, rgba(29, 155, 240, 0.12));
+    }
+    .meta { min-width: 0; }
+    .title {
+      display: block;
+      font-family: var(--display);
       font-weight: 600;
-      margin-bottom: 4px;
+      font-size: 1.05rem;
     }
-    a .desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
+    .desc {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.45;
+      margin-top: 3px;
     }
-    footer {
-      margin-top: 50px;
-      color: var(--text-muted);
-      font-size: 0.8rem;
+    .arrow {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+      transition: transform 0.22s ease, color 0.22s ease;
+    }
+    .card:hover .arrow { transform: translateX(5px); color: var(--accent, var(--blue)); }
+
+    .install {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(29, 155, 240, 0.45);
+      background: linear-gradient(180deg, rgba(29, 155, 240, 0.18), rgba(29, 155, 240, 0.07));
+      color: #8fd0ff;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .install:hover { transform: translateY(-2px); box-shadow: 0 10px 26px -12px rgba(29, 155, 240, 0.5); }
+    .install:disabled { opacity: 0.75; cursor: default; transform: none; box-shadow: none; }
+
+    .foot {
+      margin-top: 36px;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+    .chip {
+      border: 1px solid rgba(61, 220, 132, 0.3);
+      background: rgba(61, 220, 132, 0.08);
+      color: #7fe0ae;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.66rem;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🐾 Clawd Pages</h1>
-    <p class="subtitle">Auto-generated pages and reports</p>
-    
-    <div class="links">
-      <a href="./x-digest/">
-        <div class="title">📡 X Feed Digest</div>
-        <div class="desc">Daily curated highlights from X/Twitter</div>
+  <div class="bg" aria-hidden="true"><div class="grid"></div></div>
+
+  <main class="app">
+    <header class="top reveal" style="--d: 0ms">
+      <div class="brand">
+        <div class="paw-tile" aria-hidden="true">🐾</div>
+        <div>
+          <h1>Clawd&nbsp;Pages</h1>
+          <p class="tagline">Auto-generated pages &amp; reports</p>
+        </div>
+      </div>
+      <span class="pill"><span class="dot"></span><span id="net-label">Online</span></span>
+    </header>
+
+    <p class="section-label reveal" style="--d: 90ms">Quick launch</p>
+
+    <nav class="links" aria-label="Pages">
+      <a class="card reveal" style="--d: 160ms; --accent: #1d9bf0; --accent-soft: rgba(29,155,240,0.13); --accent-glow: rgba(29,155,240,0.42)" href="./x-digest/">
+        <span class="badge" aria-hidden="true">📡</span>
+        <span class="meta">
+          <span class="title">X Feed Digest</span>
+          <span class="desc">Daily curated highlights from X / Twitter</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
       </a>
-      <a href="./dailybrief/">
-        <div class="title">🗞️ Daily Briefing</div>
-        <div class="desc">Mixed English + 中文 daily briefing across AI, markets, China/US, health, parenting, and travel points</div>
+      <a class="card reveal" style="--d: 240ms; --accent: #f7b955; --accent-soft: rgba(247,185,85,0.13); --accent-glow: rgba(247,185,85,0.4)" href="./dailybrief/">
+        <span class="badge" aria-hidden="true">🗞️</span>
+        <span class="meta">
+          <span class="title">Daily Briefing</span>
+          <span class="desc">Mixed English + 中文 briefing — AI, markets, China/US, health, parenting &amp; travel points</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
       </a>
-    </div>
-    
-    <footer>
-      Generated by Clawd • Powered by OpenClaw
+    </nav>
+
+    <button class="install reveal" style="--d: 320ms" id="install-btn" type="button" hidden>
+      <span id="install-label">⤓ Install app</span>
+    </button>
+
+    <footer class="foot reveal" style="--d: 380ms">
+      <span>Generated by Clawd · Powered by OpenClaw</span>
+      <span class="chip" id="sw-chip" hidden>⚡ offline-ready</span>
     </footer>
-  </div>
+  </main>
+
+  <script>
+    (function () {
+      // ---- Connectivity pill ----
+      var netLabel = document.getElementById('net-label');
+      function paintNet() {
+        var online = navigator.onLine;
+        document.body.classList.toggle('offline', !online);
+        netLabel.textContent = online ? 'Online' : 'Offline';
+      }
+      window.addEventListener('online', paintNet);
+      window.addEventListener('offline', paintNet);
+      paintNet();
+
+      // ---- Service worker ----
+      var chip = document.getElementById('sw-chip');
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('./sw.js').catch(function () {});
+          navigator.serviceWorker.addEventListener('controllerchange', function () {
+            chip.hidden = false;
+          });
+          if (navigator.serviceWorker.controller) chip.hidden = false;
+        });
+      }
+
+      // ---- Install prompt ----
+      var btn = document.getElementById('install-btn');
+      var label = document.getElementById('install-label');
+      var deferred = null;
+
+      function markInstalled() {
+        label.textContent = '✓ Installed';
+        btn.disabled = true;
+      }
+      var standalone =
+        (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+        navigator.standalone;
+      if (standalone) {
+        btn.hidden = false;
+        markInstalled();
+      }
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        deferred = e;
+        btn.hidden = false;
+      });
+      btn.addEventListener('click', function () {
+        if (!deferred) return;
+        deferred.prompt();
+        deferred.userChoice.then(function (choice) {
+          deferred = null;
+          if (choice.outcome === 'accepted') markInstalled();
+          else btn.hidden = true;
+        });
+      });
+      window.addEventListener('appinstalled', function () {
+        deferred = null;
+        markInstalled();
+      });
+    })();
+  </script>
 </body>
 </html>
