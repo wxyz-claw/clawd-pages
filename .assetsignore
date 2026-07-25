@@ -1,0 +1,19 @@
+# Repository and deployment metadata
+.git
+.github
+.gitignore
+.assetsignore
+wrangler.jsonc
+README.md
+CNAME
+
+# Local Wrangler / Node state
+.wrangler
+.dev.vars*
+node_modules
+package.json
+package-lock.json
+npm-debug.log*
+
+# Common local artifacts
+.DS_Store
