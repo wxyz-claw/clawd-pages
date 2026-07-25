@@ -6,7 +6,7 @@
  *  - Google Fonts: stale-while-revalidate.
  * Bump VERSION when shell assets change.
  */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL_CACHE = `clawd-shell-${VERSION}`;
 const RUNTIME_CACHE = `clawd-runtime-${VERSION}`;
 const FONT_CACHE = `clawd-fonts-${VERSION}`;
@@ -19,7 +19,10 @@ const SHELL_ASSETS = [
   './icons/apple-touch-icon.png',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './icons/maskable-512.png'
+  './icons/maskable-512.png',
+  './reading/',
+  './reading/index.html',
+  './reading/reading.json'
 ];
 
 self.addEventListener('install', (event) => {
