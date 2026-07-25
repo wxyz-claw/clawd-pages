@@ -65,7 +65,7 @@ def strip_zw(text):
 
 def fetch_thread(url):
     try:
-        out = subprocess.run([BIRD, "read", url], capture_output=True, text=True, timeout=120)
+        out = subprocess.run([BIRD, "read", url], capture_output=True, text=True, timeout=90)
     except FileNotFoundError:
         sys.exit(f"error: `{BIRD}` CLI not found on PATH")
     except subprocess.TimeoutExpired:
@@ -225,7 +225,7 @@ def openai_compatible_summary(title, by, body, base_url, api_key, models, extra=
             headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
         )
         try:
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=60) as r:
                 resp = json.loads(r.read())
             content = resp["choices"][0]["message"]["content"]
             return normalize_summary(extract_json(content)), model
@@ -239,7 +239,8 @@ def nvidia_summary(title, by, body):
     key = os.environ.get("NVIDIA_API_KEY")
     if not key:
         raise RuntimeError("NVIDIA_API_KEY not set")
-    models = ["meta/llama-3.3-70b-instruct", "meta/llama-3.1-70b-instruct",
+    models = ["meta/llama-3.1-70b-instruct",        # proven fast on this account
+              "meta/llama-3.3-70b-instruct",
               "nvidia/llama-3.1-nemotron-70b-instruct"]
     return openai_compatible_summary(
         title, by, body, "https://integrate.api.nvidia.com/v1/chat/completions", key, models)
@@ -259,7 +260,7 @@ def gemini_summary_raw(title, by, body):
     prompt = SUMMARY_PROMPT.format(title=title, by=by, body=body[:14000])
     proc = subprocess.run(
         [GEMINI, "--approval-mode", "plan", "--prompt", prompt],
-        capture_output=True, text=True, timeout=180,
+        capture_output=True, text=True, timeout=90,
     )
     if proc.returncode != 0:
         raise RuntimeError(proc.stderr.strip()[:300] or f"exit {proc.returncode}")
@@ -295,7 +296,13 @@ def make_summary(title, by, body, llm):
 # ------------------------------------------------------------------ write ---
 def slugify(title):
     slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
-    return (slug or "entry")[:60].rstrip("-")
+    slug = slug or "entry"
+    if len(slug) > 60:
+        slug = slug[:60]
+        cut = slug.rfind("-", 25)          # don't cut mid-word
+        if cut != -1:
+            slug = slug[:cut]
+    return slug.rstrip("-")
 
 
 def read_min(body):
@@ -369,6 +376,11 @@ def push_changes(entry, title):
 
 # ------------------------------------------------------------------- main ---
 def main():
+    try:  # line-buffered so progress shows through pipes
+        sys.stdout.reconfigure(line_buffering=True)
+        sys.stderr.reconfigure(line_buffering=True)
+    except Exception:
+        pass
     ap = argparse.ArgumentParser(description="Ingest an X post/thread into the Reading Stack.")
     ap.add_argument("url", nargs="?", help="X/Twitter post or thread URL")
     ap.add_argument("--thread-file", help="read bird output from a file instead of fetching")
