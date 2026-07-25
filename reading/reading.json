@@ -6,11 +6,24 @@
       "url": "https://x.com/i/status/2077822555159945507",
       "author": "Cerebras",
       "handle": "cerebras",
+      "authors": "Isaac Tai, Daniel Kim, Mike Gao",
+      "published": "2026-07-15",
       "saved": "2026-07-25",
-      "excerpt": "Employees ask our internal knowledge base more than 15,000 questions every day. It's become one of the most widely adopted internal tools at the company since launching 3 months ago. Used by humans, automations and agents.",
       "tags": ["knowledge-base", "rag", "engineering"],
+      "summary": {
+        "text": "Cerebras' internal knowledge base answers 15,000+ questions a day from humans, automations, and agents. The core bet: don't centralize information — pull it from where it already lives (Slack, GitHub, docs, Jira) into one Postgres embeddings table, then stack hybrid retrieval on top.",
+        "takeaways": [
+          "Slack search = full-text + embeddings + IDF + recency decay, fused with RRF and a reranker; threads get LLM-distilled into a searchable question/summary/resolution.",
+          "Code repos up to 40 GB are embedded incrementally with CocoIndex — only changed chunks re-embed per commit.",
+          "Query time: an LLM planner fans tools out in parallel (search, Slack, ripgrep, recent PRs, who_knows), then fuses, reranks, and synthesizes.",
+          "Two front doors: MCP exposes raw retrieval primitives for agents; the web UI runs the full planner → executor → synthesizer pipeline for humans.",
+          "Projects scope search to teams, so compiler engineers don't drown in infra runbooks."
+        ]
+      },
+      "contentPath": "entries/cerebras-knowledge-base.md",
+      "readMin": 14,
       "links": [
-        { "label": "Full technical blog", "url": "https://www.cerebras.ai/blog/how-we-built-our-knowledge-base" }
+        { "label": "Interactive blog", "url": "https://www.cerebras.ai/blog/how-we-built-our-knowledge-base" }
       ]
     }
   ]

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Reading Stack · Clawd Pages</title>
-  <meta name="description" content="Articles and posts Jason saved to come back to.">
+  <meta name="description" content="Articles and posts Jason saved to come back to — full copies, kept locally.">
   <meta name="theme-color" content="#0e1116">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -75,10 +75,10 @@
       to   { transform: translate(42px, 30px) scale(1.07); }
     }
 
-    .page { max-width: 680px; margin: 0 auto; position: relative; }
+    .page { max-width: 720px; margin: 0 auto; position: relative; }
 
     /* Notebook margin line (desktop) */
-    @media (min-width: 720px) {
+    @media (min-width: 760px) {
       .page::before {
         content: '';
         position: absolute;
@@ -116,7 +116,7 @@
       color: var(--muted);
       font-size: 0.98rem;
       margin-top: 12px;
-      max-width: 38ch;
+      max-width: 42ch;
     }
     .stamp {
       flex: 0 0 auto;
@@ -136,14 +136,14 @@
     }
 
     /* ---------- Stack ---------- */
-    .stack { display: flex; flex-direction: column; gap: 26px; }
+    .stack { display: flex; flex-direction: column; gap: 30px; }
 
     .clip {
       position: relative;
       background: var(--card);
       border: 1px solid var(--card-edge);
       border-radius: 14px;
-      padding: 26px 26px 22px;
+      padding: 26px 26px 20px;
       transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
     .clip:hover {
@@ -201,7 +201,7 @@
 
     .clip h2 {
       font-family: var(--display);
-      font-size: 1.32rem;
+      font-size: 1.38rem;
       font-weight: 600;
       letter-spacing: -0.01em;
       line-height: 1.3;
@@ -237,6 +237,62 @@
       margin-bottom: 18px;
     }
 
+    /* ---------- Clawd's notes (summary panel) ---------- */
+    .summary {
+      position: relative;
+      background:
+        linear-gradient(180deg, color-mix(in srgb, var(--rose) 9%, transparent), color-mix(in srgb, var(--rose) 4%, transparent));
+      border: 1px solid color-mix(in srgb, var(--rose) 26%, transparent);
+      border-left: 3px solid var(--rose);
+      border-radius: 4px 12px 12px 4px;
+      padding: 15px 18px 14px;
+      margin-bottom: 18px;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .summary:hover {
+      border-color: color-mix(in srgb, var(--rose) 48%, transparent);
+      box-shadow: 0 10px 30px -18px rgba(239, 106, 122, 0.35);
+    }
+    .summary-label {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 9px;
+    }
+    .summary-label::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: var(--rose);
+      transform: rotate(45deg);
+      flex: 0 0 auto;
+      box-shadow: 0 0 8px rgba(239, 106, 122, 0.7);
+    }
+    .summary-text {
+      font-size: 1.03rem;
+      line-height: 1.72;
+      color: #dde3ea;
+      margin-bottom: 11px;
+    }
+    .takeaways { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .takeaways li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.93rem;
+      line-height: 1.62;
+      color: #c0c9d3;
+      transition: color 0.2s ease;
+    }
+    .takeaways li:hover { color: #e4e9ef; }
+    .takeaways li::before {
+      content: '▸';
+      position: absolute; left: 2px; top: 0.05em;
+      color: var(--rose);
+      font-size: 0.8rem;
+    }
+
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
     .chip {
       font-family: var(--mono);
@@ -247,30 +303,230 @@
       padding: 4px 9px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.02);
+      transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
+    .chip:hover { color: var(--text); border-color: var(--type-color, var(--rose)); transform: translateY(-1px); }
 
-    .links { display: flex; flex-wrap: wrap; gap: 14px; }
-    .links a {
+    /* ---------- Saved-copy reader ---------- */
+    .reader-wrap { margin-bottom: 18px; }
+    .reader-toggle {
+      width: 100%;
+      display: flex; align-items: center; gap: 11px;
       font-family: var(--display);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.92rem;
       color: var(--text);
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--card-edge);
       background: rgba(255, 255, 255, 0.03);
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      border: 1px solid var(--card-edge);
+      border-radius: 10px;
+      padding: 13px 16px;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
     }
-    .links a:hover {
-      transform: translateY(-2px);
+    .reader-toggle:hover {
       border-color: var(--type-color, var(--rose));
-      background: color-mix(in srgb, var(--type-color, var(--rose)) 10%, transparent);
+      background: color-mix(in srgb, var(--type-color, var(--rose)) 8%, transparent);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px -14px color-mix(in srgb, var(--type-color, var(--rose)) 60%, transparent);
     }
-    .links .primary {
-      background: color-mix(in srgb, var(--type-color, var(--rose)) 16%, transparent);
-      border-color: color-mix(in srgb, var(--type-color, var(--rose)) 42%, transparent);
+    .reader-toggle:active { transform: scale(0.995); }
+    .reader-toggle:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+    .rt-ico { font-size: 1rem; line-height: 1; }
+    .rt-meta {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-weight: 400;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      white-space: nowrap;
     }
+    .rt-chev {
+      color: var(--muted);
+      font-size: 0.85rem;
+      transition: transform 0.4s cubic-bezier(0.22, 0.9, 0.3, 1);
+    }
+    .reader-wrap.open .rt-chev { transform: rotate(180deg); }
+    .reader-wrap.open .reader-toggle { border-bottom-radius: 0; border-bottom-color: transparent; }
+
+    .reader {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.5s cubic-bezier(0.22, 0.9, 0.3, 1);
+    }
+    .reader-wrap.open .reader { grid-template-rows: 1fr; }
+    .reader-inner { overflow: hidden; min-height: 0; }
+
+    .article {
+      background:
+        repeating-linear-gradient(to bottom, transparent 0 30px, rgba(255, 255, 255, 0.018) 30px 31px),
+        linear-gradient(180deg, #121820, #0f141b);
+      border: 1px solid var(--card-edge);
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+      padding: 24px 30px 28px;
+      box-shadow: inset 0 10px 24px -18px rgba(0, 0, 0, 0.9);
+    }
+    .article-note {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      line-height: 1.7;
+      color: var(--muted);
+      border: 1px dashed color-mix(in srgb, var(--green) 38%, transparent);
+      background: color-mix(in srgb, var(--green) 5%, transparent);
+      border-radius: 8px;
+      padding: 10px 13px;
+      margin-bottom: 22px;
+    }
+    .article-note b { color: var(--green); font-weight: 600; }
+
+    .article .rd-h1 {
+      font-family: var(--display);
+      font-size: 1.26rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin: 30px 0 12px;
+      padding-left: 13px;
+      border-left: 3px solid var(--type-color, var(--rose));
+      line-height: 1.25;
+    }
+    .article .rd-h1:first-of-type { margin-top: 0; }
+    .article .rd-h2 {
+      font-family: var(--display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #d3dae2;
+      margin: 24px 0 10px;
+    }
+    .article .rd-h3 {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin: 20px 0 8px;
+    }
+    .article .rd-p {
+      font-size: 1.03rem;
+      line-height: 1.88;
+      color: #c8d0d9;
+      margin: 0 0 15px;
+    }
+    .article .rd-p.dropcap::first-letter {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 3.4em;
+      float: left;
+      line-height: 0.8;
+      padding: 0.05em 0.13em 0 0;
+      color: var(--type-color, var(--rose));
+    }
+    .article .rd-ul { list-style: none; margin: 0 0 16px; }
+    .article .rd-ol { margin: 0 0 16px 20px; }
+    .article .rd-li {
+      font-size: 1rem;
+      line-height: 1.78;
+      color: #c8d0d9;
+      margin-bottom: 9px;
+    }
+    .article .rd-ul .rd-li { position: relative; padding-left: 20px; }
+    .article .rd-ul .rd-li::before {
+      content: '▸';
+      position: absolute; left: 2px; top: 0.15em;
+      color: var(--rose);
+      font-size: 0.8rem;
+    }
+    .article .rd-ol .rd-li::marker {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--rose);
+    }
+    .article .rd-a {
+      color: #7fc0f5;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(127, 192, 245, 0.55);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .article .rd-a:hover { color: var(--blue); border-bottom-style: solid; }
+    .article strong { color: #eef2f6; font-weight: 600; }
+    .article .rd-pre {
+      position: relative;
+      background: #0b0f14;
+      border: 1px solid var(--card-edge);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 4px 0 16px;
+      overflow-x: auto;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      line-height: 1.65;
+      color: #b9c2cd;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    }
+    .article .rd-pre code { font-family: var(--mono); white-space: pre; }
+    .article .rd-code-lang {
+      position: absolute; top: 8px; right: 12px;
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: color-mix(in srgb, var(--rose) 70%, transparent);
+    }
+    .article .rd-quote {
+      border-left: 2px solid color-mix(in srgb, var(--rose) 50%, transparent);
+      padding-left: 14px;
+      margin: 0 0 15px;
+      font-style: italic;
+      color: #b3bcc6;
+      font-size: 0.98rem;
+      line-height: 1.72;
+    }
+
+    .reader-loading {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      padding: 6px 2px;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+    .endmark {
+      margin-top: 26px;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.5em;
+      color: color-mix(in srgb, var(--rose) 60%, transparent);
+    }
+
+    /* ---------- Source footer ---------- */
+    .sources {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 13px;
+    }
+    .src-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .sources a {
+      color: #cdd5de;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(205, 213, 222, 0.4);
+      padding-bottom: 1px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .sources a:hover { color: var(--type-color, var(--rose)); border-color: var(--type-color, var(--rose)); }
 
     /* ---------- States ---------- */
     .notice {
@@ -302,13 +558,15 @@
     }
     .foot a:hover { border-color: var(--rose); color: var(--rose); }
 
-    @media (max-width: 520px) {
+    @media (max-width: 560px) {
       body { padding: 40px 16px 64px; }
-      .clip { padding: 22px 18px 18px; }
+      .clip { padding: 22px 18px 16px; }
       .ribbon { left: 18px; }
       .clip-top { padding-left: 22px; }
       .masthead { flex-direction: column; }
       .stamp { align-self: flex-start; transform: rotate(-1.5deg); }
+      .article { padding: 20px 18px 24px; }
+      .rt-meta { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -323,7 +581,7 @@
       <div>
         <p class="eyebrow">Clawd Pages · Collection</p>
         <h1>Reading Stack</h1>
-        <p class="tagline">Articles and posts saved to come back to — a slow shelf, kept by Clawd.</p>
+        <p class="tagline">Articles and posts saved to come back to — full copies kept on the shelf, not just links.</p>
       </div>
       <div class="stamp" id="stamp" hidden><span id="stamp-count">0</span><br>SAVED</div>
     </header>
@@ -356,6 +614,189 @@
       }
       function pad(n) { return String(n).padStart(3, '0'); }
 
+      /* ---- tiny markdown renderer (headings, lists, bold, links) ---- */
+      function inline(s) {
+        s = esc(s);
+        s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, function (m, t, u) {
+          return '<a class="rd-a" href="' + u + '" target="_blank" rel="noopener">' + t + '</a>';
+        });
+        s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        return s;
+      }
+      function headingTag(lvl) { return lvl === 1 ? 'h3' : (lvl === 2 ? 'h4' : 'h5'); }
+      function mdToHtml(md) {
+        var lines = String(md).replace(/\r\n/g, '\n').split('\n');
+        var out = [];
+        var para = [];
+        var quote = [];
+        var listType = null;
+        var firstP = true;
+        var inCode = false;
+        var codeLang = '';
+        var codeBuf = [];
+        function flushPara() {
+          if (para.length) {
+            var cls = firstP ? 'rd-p dropcap' : 'rd-p';
+            firstP = false;
+            out.push('<p class="' + cls + '">' + inline(para.join(' ')) + '</p>');
+            para = [];
+          }
+        }
+        function closeList() {
+          if (listType) { out.push('</' + listType + '>'); listType = null; }
+        }
+        function flushQuote() {
+          if (quote.length) {
+            out.push('<blockquote class="rd-quote">' + quote.map(function (q) { return inline(q); }).join('<br>') + '</blockquote>');
+            quote = [];
+          }
+        }
+        function closeCode() {
+          var label = codeLang ? '<span class="rd-code-lang">' + esc(codeLang) + '</span>' : '';
+          out.push('<pre class="rd-pre">' + label + '<code>' + esc(codeBuf.join('\n')) + '</code></pre>');
+          inCode = false; codeBuf = []; codeLang = '';
+        }
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i];
+          var fence = line.match(/^\s*```(\w*)\s*$/);
+          if (fence) {
+            if (!inCode) {
+              flushPara(); closeList(); flushQuote();
+              inCode = true; codeLang = fence[1] || ''; codeBuf = [];
+            } else {
+              closeCode();
+            }
+            continue;
+          }
+          if (inCode) { codeBuf.push(line); continue; }
+          var q = line.match(/^\s*>\s?(.*)$/);
+          if (q) { flushPara(); closeList(); quote.push(q[1]); continue; }
+          flushQuote();
+          var h = line.match(/^(#{1,4})\s+(.+)$/);
+          if (h) {
+            flushPara(); closeList();
+            var lvl = h[1].length;
+            var cls2 = lvl === 1 ? 'rd-h1' : (lvl === 2 ? 'rd-h2' : 'rd-h3');
+            var tag = headingTag(lvl);
+            out.push('<' + tag + ' class="' + cls2 + '">' + inline(h[2]) + '</' + tag + '>');
+            continue;
+          }
+          var ul = line.match(/^\s*[-*]\s+(.+)$/);
+          if (ul) {
+            flushPara();
+            if (listType !== 'ul') { closeList(); out.push('<ul class="rd-ul">'); listType = 'ul'; }
+            out.push('<li class="rd-li">' + inline(ul[1]) + '</li>');
+            continue;
+          }
+          var ol = line.match(/^\s*\d+[.)]\s+(.+)$/);
+          if (ol) {
+            flushPara();
+            if (listType !== 'ol') { closeList(); out.push('<ol class="rd-ol">'); listType = 'ol'; }
+            out.push('<li class="rd-li">' + inline(ol[1]) + '</li>');
+            continue;
+          }
+          if (line.trim() === '') { flushPara(); closeList(); continue; }
+          para.push(line.trim());
+        }
+        if (inCode) closeCode();
+        flushPara(); closeList(); flushQuote();
+        return out.join('\n');
+      }
+
+      /* ---- reader: lazy-load the saved copy ---- */
+      var contentCache = {};
+      function loadContent(btn) {
+        var path = btn.getAttribute('data-path');
+        var bodyId = btn.getAttribute('aria-controls');
+        var article = document.getElementById(bodyId).querySelector('.article');
+        var savedLabel = btn.getAttribute('data-saved');
+        if (contentCache[path]) { article.innerHTML = contentCache[path]; return; }
+        article.innerHTML = '<p class="reader-loading">Unfolding the saved copy…</p>';
+        fetch(path)
+          .then(function (r) {
+            if (!r.ok) throw new Error('load failed');
+            return r.text();
+          })
+          .then(function (md) {
+            var by = btn.getAttribute('data-authors') || btn.getAttribute('data-author') || '';
+            var pub = btn.getAttribute('data-published');
+            var who = by ? ('<br>by ' + esc(by)) : '';
+            var when = pub ? (' · published ' + esc(fmtDate(pub))) : '';
+            var note =
+              '<p class="article-note">📌 <b>Saved copy</b>' + who + when +
+              ' — captured ' + esc(fmtDate(savedLabel)) +
+              ' and stored right here on the shelf. Read it even if the original changes or disappears.</p>';
+            var html = note + mdToHtml(md) + '<p class="endmark">· · ·</p>';
+            contentCache[path] = html;
+            article.innerHTML = html;
+          })
+          .catch(function () {
+            article.innerHTML = '<p class="reader-loading">Couldn’t load the saved copy — check your connection and try again.</p>';
+          });
+      }
+
+      document.getElementById('stack').addEventListener('click', function (ev) {
+        var btn = ev.target.closest('.reader-toggle');
+        if (!btn) return;
+        var wrap = btn.closest('.reader-wrap');
+        var willOpen = !wrap.classList.contains('open');
+        wrap.classList.toggle('open', willOpen);
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        if (willOpen) {
+          var article = document.getElementById(btn.getAttribute('aria-controls')).querySelector('.article');
+          if (article.getAttribute('data-loaded') !== 'true') {
+            article.setAttribute('data-loaded', 'true');
+            loadContent(btn);
+          }
+        }
+      });
+
+      function summaryHtml(e) {
+        if (e.summary) {
+          var tk = (e.summary.takeaways || []).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
+          return (
+            '<section class="summary">' +
+              '<p class="summary-label">Clawd’s notes</p>' +
+              '<p class="summary-text">' + esc(e.summary.text) + '</p>' +
+              (tk ? '<ul class="takeaways">' + tk + '</ul>' : '') +
+            '</section>'
+          );
+        }
+        if (e.excerpt) return '<blockquote class="excerpt">' + esc(e.excerpt) + '</blockquote>';
+        return '';
+      }
+
+      function readerHtml(e, idx) {
+        if (!e.contentPath) return '';
+        var bodyId = 'rd-body-' + idx;
+        var meta = e.readMin ? ('~' + e.readMin + ' min · saved copy') : 'saved copy';
+        return (
+          '<div class="reader-wrap">' +
+            '<button type="button" class="reader-toggle" aria-expanded="false" aria-controls="' + bodyId + '"' +
+              ' data-path="' + esc(e.contentPath) + '" data-saved="' + esc(e.saved || '') + '"' +
+              ' data-author="' + esc(e.author || '') + '" data-authors="' + esc(e.authors || '') + '"' +
+              ' data-published="' + esc(e.published || '') + '">' +
+              '<span class="rt-ico" aria-hidden="true">📖</span>' +
+              '<span>Read the full saved copy</span>' +
+              '<span class="rt-meta">' + esc(meta) + '</span>' +
+              '<span class="rt-chev" aria-hidden="true">▾</span>' +
+            '</button>' +
+            '<div class="reader" id="' + bodyId + '">' +
+              '<div class="reader-inner"><div class="article" data-loaded="false"></div></div>' +
+            '</div>' +
+          '</div>'
+        );
+      }
+
+      function sourcesHtml(e, type) {
+        var orig = type === 'tweet' ? 'Original 𝕏 post' : 'Original';
+        var links = '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + orig + ' ↗</a>';
+        (e.links || []).forEach(function (l) {
+          links += '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + ' ↗</a>';
+        });
+        return '<div class="sources"><span class="src-label">Source</span>' + links + '</div>';
+      }
+
       function render(entries) {
         var stack = document.getElementById('stack');
         var stamp = document.getElementById('stamp');
@@ -368,7 +809,7 @@
         stamp.hidden = false;
 
         stack.innerHTML = entries.map(function (e, i) {
-          var num = pad(total - i); // №001 = first saved
+          var num = pad(total - i);
           var type = e.type || 'note';
           var label = TYPE_LABEL[type] || TYPE_LABEL.note;
           var glyph = TYPE_GLYPH[type] || TYPE_GLYPH.note;
@@ -380,11 +821,6 @@
           var chips = (e.tags || []).map(function (t) {
             return '<span class="chip">#' + esc(t) + '</span>';
           }).join('');
-          var links = '<a class="primary" href="' + esc(e.url) + '" target="_blank" rel="noopener">' +
-            (type === 'tweet' ? 'Open on 𝕏 ↗' : 'Open ↗') + '</a>';
-          (e.links || []).forEach(function (l) {
-            links += '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + ' ↗</a>';
-          });
           return (
             '<article class="clip reveal" style="--d:' + (140 + i * 90) + 'ms" data-type="' + esc(type) + '">' +
               '<div class="ribbon" aria-hidden="true"></div>' +
@@ -394,9 +830,10 @@
               '</div>' +
               '<h2><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h2>' +
               (byline ? '<p class="byline">by ' + byline + '</p>' : '') +
-              (e.excerpt ? '<blockquote class="excerpt">' + esc(e.excerpt) + '</blockquote>' : '') +
+              summaryHtml(e) +
               (chips ? '<div class="chips">' + chips + '</div>' : '') +
-              '<div class="links">' + links + '</div>' +
+              readerHtml(e, i) +
+              sourcesHtml(e, type) +
             '</article>'
           );
         }).join('');
