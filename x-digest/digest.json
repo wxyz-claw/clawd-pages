@@ -1,12 +1,12 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, July 23rd, 2026",
+  "date": "Saturday, July 25th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI Advancements:</strong> Grok 4.5 showcases rapid problem-solving by refuting a 30-year-old graph theory conjecture in Slack.",
-    "<strong>Crypto and Stocks:</strong> Crypto exchange BitMEX shuts down all operations, while SpaceX stock hits a post-IPO low under $115.",
-    "<strong>Autonomous Driving:</strong> Tesla Robotaxi clocks 380,000 incident-free miles, contrasting with Waymo's 570,000 daily driverless miles.",
-    "<strong>Football Highlights:</strong> FIFA releases its 2026 World Cup Best XI, and Sergio Ramos poses with two World Cup trophies."
+    "<strong>Opus 5 & AI:</strong> Anthropic launches Claude Opus 5 at half the price of prior models, while Celeris-1 introduces a diffusion-based inference architecture.",
+    "<strong>Transparency & Code:</strong> Elon Musk pledges to open source all X platform code and Tesla Model S/X software next month.",
+    "<strong>Market Sentiment:</strong> Chinese markets brace for the open-sourcing of Kimi K3 and the massive Changxin Storage IPO on Monday.",
+    "<strong>Sports & Tech:</strong> NBA icon LeBron James signs with the 76ers, Virgil van Dijk praises Lionel Messi's class, and Apple AirTags aid JFK luggage recovery."
   ],
   "sections": [
     {
@@ -15,39 +15,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Grok 4.5 Solves 30-Year Graph Theory Conjecture",
-          "body": "Elon Musk reports that Grok 4.5 (specifically a Slackbot named Capy running on Grok 4.5 Medium) successfully refuted the Graffiti Conjecture 284, a graph theory problem that has been open for approximately 30 years, in under 8 minutes.",
-          "url": "https://x.com/elonmusk/status/2080165738464280725"
+          "title": "@claudeai: Anthropic Launches Claude Opus 5",
+          "body": "Anthropic introduces Claude Opus 5, a thoughtful and proactive model designed to deliver near-frontier intelligence comparable to Fable 5, but at half the pricing.",
+          "url": "https://x.com/ChrisGPT/status/2080715356109160727"
         },
         {
           "tag": "hot",
-          "title": "@elonmusk: Grok 4.5 Speed and Cost-Effectiveness",
-          "body": "Elon Musk describes Grok 4.5 as a highly fast and cost-effective model that 'gets the job done,' comparing its speed and token-efficiency favorably, though noting it is not quite at Fable's level.",
-          "url": "https://x.com/elonmusk/status/2080168539420594481"
+          "title": "@theo: Hands-On Impressions of Opus 5",
+          "body": "Theo Browne shares early developer feedback on Claude Opus 5, positioning it as a highly capable hybrid between GPT-5.6-Sol and Fable 5. He notes that while its code formatting is slightly messier than Fable's, it is more literal and catches edge cases that other frontier models miss.",
+          "url": "https://x.com/theo/status/2080789645424767068"
         },
         {
           "tag": "update",
-          "title": "@scotsrule08: Tesla Robotaxi vs Waymo Miles",
-          "body": "Tesla announced that its Robotaxi traveled over 380,000 miles with zero notable incidents. In response, Spencer pointed out for perspective that Alphabet's Waymo is already averaging approximately 570,000 daily driverless miles.",
-          "url": "https://x.com/scotsrule08/status/2080059016345264475"
+          "title": "@ns123abc: Anthropic Hides Fable 5 Reasoning Traces",
+          "body": "Anthropic has begun obscuring the internal reasoning traces for Fable 5, sparking discussion in the developer community about model transparency and API behavior.",
+          "url": "https://x.com/ns123abc/status/2080508010720346524"
+        },
+        {
+          "tag": "new",
+          "title": "@Celeris_ai: Diffusion-Based Model Celeris-1 Debuts",
+          "body": "Celeris Labs launches Celeris-1, a language model leveraging diffusion architectures instead of standard autoregressive generation. The model achieves p50 latencies of 157ms and a throughput of 1,280 tokens per second while scoring comparably to other frontier models on MMLU-Pro.",
+          "url": "https://x.com/Celeris_ai/status/2080442996403933630"
         },
         {
           "tag": "update",
-          "title": "@PromptLLM: Perplexity AI Sentiment Shift",
-          "body": "Prompter comments on a dramatic shift in sentiment surrounding AI search engine Perplexity, calling it one of the largest corporate 'falls from grace.'",
-          "url": "https://x.com/PromptLLM/status/2080022242134499361"
+          "title": "@jturntdev: Codex Quota Changes Spark Builder Backlash",
+          "body": "Developers raise concerns over sudden weekly quota consumption increases for Codex models, calling out steep drops in available usage and the removal of referral banking reset options.",
+          "url": "https://x.com/jturntdev/status/2080607678393467121"
         },
         {
-          "tag": "new",
-          "title": "@SnazzyLabs: Fable and Codex Subagent Synergy",
-          "body": "Quinn Nelson shares an agent architecture setup using Fable as a supervisor/nanny and Codex 5.6 Sol as a fast execution subagent, highlighting how the strengths of both complementary models are leveraged.",
-          "url": "https://x.com/SnazzyLabs/status/2080128686045692113"
-        },
-        {
-          "tag": "new",
-          "title": "@gkxspace: Deep Dive Into AI Agents Book Star Surge",
-          "body": "Yu Wen notes that the GitHub repository for the book 'Deep Dive Into AI Agents' gained 17,000 stars in one week, praising its clear engineering-focused explanations of KV Cache, tool calls, and agent architectures.",
-          "url": "https://x.com/gkxspace/status/2080130089392508982"
+          "tag": "update",
+          "title": "@xiaohu: Document Editor Innovation Critique",
+          "body": "Critics call out collaborative document platforms like Notion for implementing disjointed AI features on top of existing legacy structures rather than redesigning their document architectures from the ground up.",
+          "url": "https://x.com/xiaohu/status/2080472585494790610"
         }
       ]
     },
@@ -57,33 +57,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ScottPresler: Congressional Vote on Insider Trading",
-          "body": "Scott Presler criticizes Congressional Democrats for voting against a proposed ban on insider stock trading, sparking debate on political wealth and legislative reform.",
-          "url": "https://x.com/ScottPresler/status/2080057332638302654"
+          "title": "@elonmusk: Open Sourcing the X Codebase",
+          "body": "Elon Musk announces that every line of code running the X platform will be made open source and audited by third parties next month in an effort to foster transparency and user trust.",
+          "url": "https://x.com/elonmusk/status/2080717110146146585"
         },
         {
           "tag": "hot",
-          "title": "@WatcherGuru: BitMEX Exchange Shutdown",
-          "body": "Prominent cryptocurrency exchange BitMEX has announced that it will shut down all operations, marking a major exit in the crypto trading space.",
-          "url": "https://x.com/WatcherGuru/status/2080220946799919448"
-        },
-        {
-          "tag": "update",
-          "title": "@WatcherGuru: SpaceX SPCX Hits Post-IPO Low",
-          "body": "SpaceX's stock (traded under the ticker SPCX) hit a new low since its initial public offering, dropping below $115 per share.",
-          "url": "https://x.com/WatcherGuru/status/2080302745723060588"
-        },
-        {
-          "tag": "update",
-          "title": "@APompliano: Continuing Market Bull Run",
-          "body": "Anthony Pompliano highlights bullish macroeconomic data suggesting that the current market rally is set to persist for the foreseeable future.",
-          "url": "https://x.com/APompliano/status/2072700255024373779"
+          "title": "@elonmusk: Open Sourcing Tesla Model S & X Designs",
+          "body": "Musk reveals plans to open source the design and software for the Tesla Model S and Model X vehicles, following in the footsteps of the original Tesla Roadster.",
+          "url": "https://x.com/elonmusk/status/2080755686615437501"
         },
         {
           "tag": "new",
-          "title": "@Oxzenith_zn: Nasdaq Dollar-Cost Averaging vs Education",
-          "body": "Li Li humorously compares investing 100 RMB daily in the Nasdaq index over 16 years of schooling to seeking higher education, noting that the former would have resulted in financial freedom.",
-          "url": "https://x.com/Oxzenith_zn/status/2079943946483163290"
+          "title": "@_FORAB: Market Concerns Over Kimi K3 and Changxin IPO",
+          "body": "Market observers note growing investor anxiety ahead of Monday's trading session, driven by the anticipated open-sourcing of Kimi K3 by July 27th and the massive upcoming IPO of Changxin Storage, China's rival to SK Hynix.",
+          "url": "https://x.com/_FORAB/status/2080562878734885208"
+        },
+        {
+          "tag": "update",
+          "title": "@KalshiFC: Harry Kane Leads Ballon d'Or Odds",
+          "body": "Prediction markets rate Bayern Munich striker Harry Kane as the favorite to win the Ballon d'Or at 44%, followed by Lamine Yamal at 27% and Kylian Mbappé at 12%.",
+          "url": "https://x.com/KalshiFC/status/2080345001339269457"
+        },
+        {
+          "tag": "update",
+          "title": "@elonmusk: Global Birth Rates Demographics",
+          "body": "Musk reacts to a global birth rate ranking showing India (23.1M) and China (8.7M) leading births in 2025, noting that Nigeria alone recorded 7.6M births—exceeding the total births across Europe.",
+          "url": "https://x.com/elonmusk/status/2080765392855707884"
         }
       ]
     },
@@ -93,33 +93,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FabrizioRomano: FIFA 2026 World Cup Best XI",
-          "body": "Fabrizio Romano shares the official Best XI squad released by FIFA for the 2026 World Cup, inviting fans to share their opinions and suggested changes.",
-          "url": "https://x.com/FabrizioRomano/status/2079957139951390914"
+          "title": "@MessiSpotlight: Greatest Photo of 2026 World Cup",
+          "body": "Football fans vote a striking snapshot as the definitive, greatest picture of the 2026 FIFA World Cup following Argentina's historic run.",
+          "url": "https://x.com/MessiSpotlight/status/2080257132188819719"
         },
         {
           "tag": "hot",
-          "title": "@ESPNFC: Sergio Ramos Celebrates with World Cup Trophies",
-          "body": "Sergio Ramos went viral after recreating Lionel Messi's iconic photo bedded with the World Cup trophy, except Ramos posed with two World Cup trophies in hand.",
-          "url": "https://x.com/ESPNFC/status/2079989859033170233"
-        },
-        {
-          "tag": "hot",
-          "title": "@vxunderground: Bryan Johnson Fetal Cloning Controversy",
-          "body": "vx-underground reports on anti-aging influencer Bryan Johnson's claims that scientists cloned him to create a fetus in a petri dish, aiming to harvest organs and conduct experiments on it in the future.",
-          "url": "https://x.com/vxunderground/status/2080344570655629521"
+          "title": "@TouchlineX: LeBron James Signs with 76ers",
+          "body": "In a blockbuster NBA move, 41-year-old legend LeBron James is reportedly signing with the Philadelphia 76ers for next season, while his son Bryce James transfers to Villanova.",
+          "url": "https://x.com/TouchlineX/status/2080687283066241404"
         },
         {
           "tag": "new",
-          "title": "@Phoenixyin13: Nash Equilibrium and Fixed-Point Theorem",
-          "body": "Phoenix Yin writes a detailed thread explaining John Nash's mathematical intuition, describing how he bypassed complex algebraic proofs by using Kakutani and Brouwer fixed-point theorems to prove the Nash Equilibrium in just two pages.",
-          "url": "https://x.com/Phoenixyin13/status/2079924270239498603"
+          "title": "@KosisoVall: Virgil van Dijk Recounts Messi Promise",
+          "body": "Dutch defender Virgil van Dijk shares a class gesture by Lionel Messi, who personally walked to the Netherlands dressing room after their World Cup match to swap shirts as promised.",
+          "url": "https://x.com/KosisoVall/status/2080569197797458303"
+        },
+        {
+          "tag": "new",
+          "title": "@jackcoder0: Real-Time Recovery with Apple AirTags",
+          "body": "A traveler successfully recovers $3,200 worth of checked luggage lost at JFK Airport by tracking its live GPS coordinates using a $29 Apple AirTag, highlighting underutilized features of the global tracking network.",
+          "url": "https://x.com/jackcoder0/status/2080584187992572268"
         },
         {
           "tag": "update",
-          "title": "@twin_abena: Michael Olise Courting Kylian Mbappé",
-          "body": "Reports suggest Bayern Munich winger Michael Olise has been actively courting Kylian Mbappé to join him at Bayern Munich, explaining their pitch harmony and Munich lifestyle.",
-          "url": "https://x.com/twin_abena/status/2080042411946856916"
+          "title": "@Real_Moviescene: Brad Pitt's Achilles Injury in Troy",
+          "body": "A retrospect on Brad Pitt's performance in the 2004 movie Troy reveals he took the role to fulfill contract obligations, underwent intense training to fit ancient statues, and ironically tore his Achilles tendon during filming.",
+          "url": "https://x.com/Real_Moviescene/status/2080745868286931392"
         }
       ]
     }
