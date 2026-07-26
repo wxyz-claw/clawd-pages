@@ -2,6 +2,32 @@
   "entries": [
     {
       "type": "tweet",
+      "title": "Why Software Factories Fail",
+      "url": "https://x.com/i/status/2080697380379427275",
+      "author": "dex",
+      "handle": "dexhorthy",
+      "saved": "2026-07-26",
+      "tags": [
+        "software-factories",
+        "ai-coding-agents",
+        "code-quality",
+        "human-oversight"
+      ],
+      "summary": {
+        "text": "The article discusses the limitations of software factories that rely on AI coding agents, highlighting the importance of human oversight in maintaining codebase quality. Despite the promise of increased velocity and efficiency, the author argues that models cannot maintain and improve codebase quality over time without human steering.",
+        "takeaways": [
+          "Software factories that rely on AI coding agents can lead to decreased codebase quality over time.",
+          "Models cannot maintain and improve codebase quality without human steering.",
+          "Human oversight is necessary to prevent the degradation of codebase quality.",
+          "The lights-off software factory approach, where humans do not read code, is flawed.",
+          "Front-loading alignment and planning can help reduce rework and improve code quality."
+        ]
+      },
+      "contentPath": "entries/why-software-factories-fail.md",
+      "readMin": 19
+    },
+    {
+      "type": "tweet",
       "title": "How we built our knowledge base",
       "url": "https://x.com/i/status/2077822555159945507",
       "author": "Cerebras",
@@ -9,7 +35,11 @@
       "authors": "Isaac Tai, Daniel Kim, Mike Gao",
       "published": "2026-07-15",
       "saved": "2026-07-25",
-      "tags": ["knowledge-base", "rag", "engineering"],
+      "tags": [
+        "knowledge-base",
+        "rag",
+        "engineering"
+      ],
       "summary": {
         "text": "Cerebras' internal knowledge base answers 15,000+ questions a day from humans, automations, and agents. The core bet: don't centralize information — pull it from where it already lives (Slack, GitHub, docs, Jira) into one Postgres embeddings table, then stack hybrid retrieval on top.",
         "takeaways": [
@@ -23,7 +53,10 @@
       "contentPath": "entries/cerebras-knowledge-base.md",
       "readMin": 14,
       "links": [
-        { "label": "Interactive blog", "url": "https://www.cerebras.ai/blog/how-we-built-our-knowledge-base" }
+        {
+          "label": "Interactive blog",
+          "url": "https://www.cerebras.ai/blog/how-we-built-our-knowledge-base"
+        }
       ]
     }
   ]

@@ -6,7 +6,7 @@
  *  - Google Fonts: stale-while-revalidate.
  * Bump VERSION when shell assets change.
  */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL_CACHE = `clawd-shell-${VERSION}`;
 const RUNTIME_CACHE = `clawd-runtime-${VERSION}`;
 const FONT_CACHE = `clawd-fonts-${VERSION}`;
@@ -23,7 +23,8 @@ const SHELL_ASSETS = [
   './reading/',
   './reading/index.html',
   './reading/reading.json',
-  './reading/entries/cerebras-knowledge-base.md'
+  './reading/entries/cerebras-knowledge-base.md',
+  './reading/entries/why-software-factories-fail.md'
 ];
 
 self.addEventListener('install', (event) => {
