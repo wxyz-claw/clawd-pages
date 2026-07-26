@@ -2,6 +2,31 @@
   "entries": [
     {
       "type": "tweet",
+      "title": "Practical multi-agent orchestration in Codex",
+      "url": "https://x.com/i/status/2080707291603407077",
+      "author": "eric provencher",
+      "handle": "pvncher",
+      "saved": "2026-07-26",
+      "tags": [
+        "codex-multi-agent",
+        "sol-terra-collaboration",
+        "ai-orchestration"
+      ],
+      "summary": {
+        "text": "Codex's Multi-Agent V2 tools enable Sol and Terra to collaborate on complex tasks, with Sol delegating tasks, sharing updates, and coordinating with other agents. This allows for more efficient and effective work. By adjusting reasoning effort and context inheritance, users can optimize agent collaboration for specific tasks.",
+        "takeaways": [
+          "Sol can delegate tasks to other agents, including Terra, to complete complex tasks",
+          "Agents can inherit context from their parent or start with a fresh assignment",
+          "Users can configure concurrency, reasoning effort, and context inheritance to optimize agent collaboration",
+          "A coordinator agent can assign substantive work, track progress, and avoid duplicate investigations",
+          "Agents can message each other directly through a common messaging system"
+        ]
+      },
+      "contentPath": "entries/practical-multi-agent-orchestration-in-codex.md",
+      "readMin": 3
+    },
+    {
+      "type": "tweet",
       "title": "Why Software Factories Fail",
       "url": "https://x.com/i/status/2080697380379427275",
       "author": "dex",
