@@ -528,6 +528,141 @@
     }
     .sources a:hover { color: var(--type-color, var(--rose)); border-color: var(--type-color, var(--rose)); }
 
+    /* ---------- Card actions ---------- */
+    .clip-meta { display: flex; align-items: center; gap: 12px; }
+    .act-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed var(--card-edge);
+      border-radius: 999px;
+      padding: 5px 11px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+    }
+    .act-btn .act-ico { font-size: 0.78rem; line-height: 1; }
+    .act-btn:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+    .act-btn:active { transform: scale(0.96); }
+    .archive-btn { opacity: 0.4; }
+    .clip:hover .archive-btn, .archive-btn:focus-visible { opacity: 1; }
+    .archive-btn:hover {
+      color: var(--amber);
+      border-style: solid;
+      border-color: color-mix(in srgb, var(--amber) 55%, transparent);
+      background: color-mix(in srgb, var(--amber) 8%, transparent);
+      transform: translateY(-1px);
+    }
+    .restore-btn:hover {
+      color: var(--green);
+      border-style: solid;
+      border-color: color-mix(in srgb, var(--green) 50%, transparent);
+      background: color-mix(in srgb, var(--green) 8%, transparent);
+      transform: translateY(-1px);
+    }
+    @media (hover: none) { .archive-btn { opacity: 0.75; } }
+
+    .clip.leaving {
+      opacity: 0 !important;
+      transform: translateX(48px) scale(0.97) !important;
+      transition: opacity 0.3s ease, transform 0.3s ease !important;
+      pointer-events: none;
+    }
+
+    /* ---------- Filed-away drawer ---------- */
+    .archive-zone { margin-top: 48px; }
+    .archive-head {
+      width: 100%;
+      display: flex; align-items: center; gap: 12px;
+      background: none; border: none;
+      padding: 0 0 16px;
+      cursor: pointer;
+      font-family: var(--mono);
+      color: var(--muted);
+    }
+    .az-rule {
+      flex: 1; height: 1px;
+      background: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.13) 0 6px, transparent 6px 12px);
+    }
+    .az-ico { font-size: 0.9rem; }
+    .az-label {
+      font-size: 0.66rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--amber);
+      transition: color 0.2s ease;
+    }
+    .archive-head:hover .az-label { color: color-mix(in srgb, var(--amber) 65%, var(--text)); }
+    .az-count {
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      color: var(--amber);
+      border: 1px solid color-mix(in srgb, var(--amber) 40%, transparent);
+      background: color-mix(in srgb, var(--amber) 8%, transparent);
+      border-radius: 999px;
+      padding: 2px 8px;
+    }
+    .az-chev { font-size: 0.8rem; transition: transform 0.35s cubic-bezier(0.22, 0.9, 0.3, 1); }
+    .archive-zone.open .az-chev { transform: rotate(180deg); }
+    .archived-stack { display: none; }
+    .archive-zone.open .archived-stack { display: flex; }
+    .archived-stack .clip { opacity: 0.72; }
+    .archived-stack .clip .ribbon { filter: grayscale(0.5) brightness(0.8); transition: filter 0.25s ease; }
+    .archived-stack .clip:hover { opacity: 1; }
+    .archived-stack .clip:hover .ribbon { filter: none; }
+
+    /* ---------- Toast ---------- */
+    .toast {
+      position: fixed;
+      left: 50%; bottom: 26px;
+      z-index: 60;
+      transform: translate(-50%, 14px);
+      display: flex; align-items: center; gap: 14px;
+      max-width: calc(100vw - 40px);
+      background: #171d26;
+      border: 1px solid var(--card-edge);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      box-shadow: 0 18px 44px -14px rgba(0, 0, 0, 0.75);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      overflow: hidden;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+    .toast .undo {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      background: transparent;
+      border: 1px solid color-mix(in srgb, var(--rose) 45%, transparent);
+      border-radius: 6px;
+      padding: 5px 11px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .toast .undo:hover { background: color-mix(in srgb, var(--rose) 12%, transparent); }
+    .toast .undo:active { transform: scale(0.96); }
+    .toast-bar {
+      position: absolute; left: 0; bottom: 0;
+      height: 2px; width: 100%;
+      background: var(--rose);
+      opacity: 0.65;
+      transform-origin: left;
+      animation: toastbar 5.2s linear forwards;
+    }
+    @keyframes toastbar { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+
     /* ---------- States ---------- */
     .notice {
       font-family: var(--mono);
@@ -590,11 +725,29 @@
       <div class="notice">Opening the shelf…</div>
     </section>
 
+    <section class="archive-zone" id="archive-zone" hidden>
+      <button type="button" class="archive-head" id="zone-toggle" aria-expanded="false" aria-controls="archived-stack">
+        <span class="az-rule" aria-hidden="true"></span>
+        <span class="az-ico" aria-hidden="true">🗄</span>
+        <span class="az-label">Filed away</span>
+        <span class="az-count" id="zone-count">000</span>
+        <span class="az-chev" aria-hidden="true">▾</span>
+        <span class="az-rule" aria-hidden="true"></span>
+      </button>
+      <div class="stack archived-stack" id="archived-stack"></div>
+    </section>
+
     <footer class="foot reveal" style="--d: 120ms">
       <a href="../">← Clawd Pages</a>
       <span>curated by Clawd 🐾</span>
     </footer>
   </main>
+
+  <div class="toast" id="toast" role="status">
+    <span id="toast-msg">Filed away</span>
+    <button type="button" class="undo" id="toast-undo">Undo</button>
+    <span class="toast-bar" id="toast-bar" aria-hidden="true"></span>
+  </div>
 
   <script>
     (function () {
@@ -797,51 +950,157 @@
         return '<div class="sources"><span class="src-label">Source</span>' + links + '</div>';
       }
 
-      function render(entries) {
+      /* ---- archiving (per-browser, stored in localStorage) ---- */
+      var STORE_KEY = 'clawd-reading:archived';
+      var archived = (function () {
+        try {
+          var raw = JSON.parse(localStorage.getItem(STORE_KEY) || '[]');
+          return new Set(Array.isArray(raw) ? raw : []);
+        } catch (e) { return new Set(); }
+      })();
+      function persistArchived() {
+        try { localStorage.setItem(STORE_KEY, JSON.stringify(Array.from(archived))); } catch (e) {}
+      }
+      function entryKey(e) { return e.url + '|' + (e.contentPath || ''); }
+
+      var allEntries = [];
+      var zoneOpen = false;
+
+      function cardHtml(e, i, isFiled) {
+        var num = pad(allEntries.length - i);
+        var type = e.type || 'note';
+        var label = TYPE_LABEL[type] || TYPE_LABEL.note;
+        var glyph = TYPE_GLYPH[type] || TYPE_GLYPH.note;
+        var byline = e.author ? esc(e.author) : '';
+        if (e.handle) {
+          var profile = type === 'tweet' ? 'https://x.com/' + esc(e.handle) : '#';
+          byline += ' · <a href="' + profile + '" target="_blank" rel="noopener">@' + esc(e.handle) + '</a>';
+        }
+        var chips = (e.tags || []).map(function (t) {
+          return '<span class="chip">#' + esc(t) + '</span>';
+        }).join('');
+        var key = esc(entryKey(e));
+        var action = isFiled
+          ? '<button type="button" class="act-btn restore-btn" data-key="' + key + '"><span class="act-ico" aria-hidden="true">↩</span> Restore</button>'
+          : '<button type="button" class="act-btn archive-btn" data-key="' + key + '" title="File this off the shelf"><span class="act-ico" aria-hidden="true">🗄</span> Archive</button>';
+        return (
+          '<article class="clip reveal" style="--d:' + (140 + Math.min(i, 5) * 80) + 'ms" data-type="' + esc(type) + '">' +
+            '<div class="ribbon" aria-hidden="true"></div>' +
+            '<div class="clip-top">' +
+              '<span class="src"><span class="glyph" aria-hidden="true">' + glyph + '</span>' + label + '</span>' +
+              '<span class="clip-meta">' +
+                '<span class="saved">SAVED ' + fmtDate(e.saved) + ' · № ' + num + '</span>' +
+                action +
+              '</span>' +
+            '</div>' +
+            '<h2><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h2>' +
+            (byline ? '<p class="byline">by ' + byline + '</p>' : '') +
+            summaryHtml(e) +
+            (chips ? '<div class="chips">' + chips + '</div>' : '') +
+            readerHtml(e, i) +
+            sourcesHtml(e, type) +
+          '</article>'
+        );
+      }
+
+      function renderShelf() {
         var stack = document.getElementById('stack');
         var stamp = document.getElementById('stamp');
-        if (!entries || !entries.length) {
+        var zone = document.getElementById('archive-zone');
+        var zoneStack = document.getElementById('archived-stack');
+
+        if (!allEntries.length) {
           stack.innerHTML = '<div class="notice">The shelf is empty — send me something worth keeping.</div>';
+          zone.hidden = true;
           return;
         }
-        var total = entries.length;
-        document.getElementById('stamp-count').textContent = pad(total);
+
+        var active = [], filed = [];
+        allEntries.forEach(function (e, i) {
+          (archived.has(entryKey(e)) ? filed : active).push({ e: e, i: i });
+        });
+
+        document.getElementById('stamp-count').textContent = pad(active.length);
         stamp.hidden = false;
 
-        stack.innerHTML = entries.map(function (e, i) {
-          var num = pad(total - i);
-          var type = e.type || 'note';
-          var label = TYPE_LABEL[type] || TYPE_LABEL.note;
-          var glyph = TYPE_GLYPH[type] || TYPE_GLYPH.note;
-          var byline = e.author ? esc(e.author) : '';
-          if (e.handle) {
-            var profile = type === 'tweet' ? 'https://x.com/' + esc(e.handle) : '#';
-            byline += ' · <a href="' + profile + '" target="_blank" rel="noopener">@' + esc(e.handle) + '</a>';
-          }
-          var chips = (e.tags || []).map(function (t) {
-            return '<span class="chip">#' + esc(t) + '</span>';
-          }).join('');
-          return (
-            '<article class="clip reveal" style="--d:' + (140 + i * 90) + 'ms" data-type="' + esc(type) + '">' +
-              '<div class="ribbon" aria-hidden="true"></div>' +
-              '<div class="clip-top">' +
-                '<span class="src"><span class="glyph" aria-hidden="true">' + glyph + '</span>' + label + '</span>' +
-                '<span class="saved">SAVED ' + fmtDate(e.saved) + ' · № ' + num + '</span>' +
-              '</div>' +
-              '<h2><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h2>' +
-              (byline ? '<p class="byline">by ' + byline + '</p>' : '') +
-              summaryHtml(e) +
-              (chips ? '<div class="chips">' + chips + '</div>' : '') +
-              readerHtml(e, i) +
-              sourcesHtml(e, type) +
-            '</article>'
-          );
-        }).join('');
+        stack.innerHTML = active.length
+          ? active.map(function (r) { return cardHtml(r.e, r.i, false); }).join('')
+          : '<div class="notice">The shelf is clear — everything is filed away below. 🗄</div>';
+
+        document.getElementById('zone-count').textContent = pad(filed.length);
+        zone.hidden = filed.length === 0;
+        zoneStack.innerHTML = filed.map(function (r) { return cardHtml(r.e, r.i, true); }).join('');
       }
+
+      /* ---- filed-away drawer toggle ---- */
+      document.getElementById('zone-toggle').addEventListener('click', function () {
+        zoneOpen = !zoneOpen;
+        document.getElementById('archive-zone').classList.toggle('open', zoneOpen);
+        this.setAttribute('aria-expanded', zoneOpen ? 'true' : 'false');
+      });
+
+      /* ---- toast with undo ---- */
+      var toastTimer = null;
+      var undoFn = null;
+      function showToast(msg, undo) {
+        var toast = document.getElementById('toast');
+        document.getElementById('toast-msg').textContent = msg;
+        undoFn = undo || null;
+        document.getElementById('toast-undo').hidden = !undoFn;
+        toast.classList.add('show');
+        var bar = document.getElementById('toast-bar');
+        bar.style.animation = 'none';
+        void bar.offsetWidth;
+        bar.style.animation = '';
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(hideToast, 5200);
+      }
+      function hideToast() {
+        clearTimeout(toastTimer);
+        document.getElementById('toast').classList.remove('show');
+        undoFn = null;
+      }
+      document.getElementById('toast-undo').addEventListener('click', function () {
+        if (undoFn) undoFn();
+        hideToast();
+      });
+
+      /* ---- archive / restore ---- */
+      document.addEventListener('click', function (ev) {
+        var ab = ev.target.closest('.archive-btn');
+        if (ab) {
+          var card = ab.closest('.clip');
+          var key = ab.getAttribute('data-key');
+          card.classList.add('leaving');
+          setTimeout(function () {
+            archived.add(key);
+            persistArchived();
+            renderShelf();
+            showToast('Filed away — off the shelf.', function () {
+              archived.delete(key);
+              persistArchived();
+              renderShelf();
+            });
+          }, 300);
+          return;
+        }
+        var rb = ev.target.closest('.restore-btn');
+        if (rb) {
+          var key2 = rb.getAttribute('data-key');
+          archived.delete(key2);
+          persistArchived();
+          renderShelf();
+          showToast('Back on the shelf.', function () {
+            archived.add(key2);
+            persistArchived();
+            renderShelf();
+          });
+        }
+      });
 
       fetch('./reading.json', { cache: 'no-cache' })
         .then(function (r) { return r.json(); })
-        .then(function (d) { render(d.entries); })
+        .then(function (d) { allEntries = d.entries || []; renderShelf(); })
         .catch(function () {
           document.getElementById('stack').innerHTML =
             '<div class="notice">Couldn’t open the shelf — try again in a moment.</div>';

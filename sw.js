@@ -6,7 +6,7 @@
  *  - Google Fonts: stale-while-revalidate.
  * Bump VERSION when shell assets change.
  */
-const VERSION = 'v6';
+const VERSION = 'v7';
 const SHELL_CACHE = `clawd-shell-${VERSION}`;
 const RUNTIME_CACHE = `clawd-runtime-${VERSION}`;
 const FONT_CACHE = `clawd-fonts-${VERSION}`;
