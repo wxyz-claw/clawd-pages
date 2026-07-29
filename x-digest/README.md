@@ -2,6 +2,8 @@
 
 Render a full HTML digest page from a JSON payload.
 
+For the recurring publish workflow and runbook, see [`JOB.md`](./JOB.md).
+
 ## Quick start
 ```bash
 cd /Users/jwang/clawd-pages/x-digest

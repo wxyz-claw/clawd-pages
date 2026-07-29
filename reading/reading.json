@@ -9,8 +9,15 @@
       "saved": "2026-07-29",
       "tags": [],
       "summary": {
-        "text": "By",
-        "takeaways": []
+        "text": "Burke Holland (GitHub) argues the biggest productivity gains with AI coding come not from chasing new skills/MCPs/prompts, but from deeply learning the agent harness itself (GitHub Copilot). His repeatable workflow: (1) pick one Copilot tool — CLI is the most direct; (2) enable 'Allow All'/YOLO mode but run it in a sandbox (Codespaces/dev containers), never your local machine; (3) prototype first — ask for many visual mocks to surface requirements and nuances before writing code; (4) use /plan mode to have the model grill you on edge cases (optionally with the 'grill-me' skill); (5) implement with Autopilot, a built-in loop that keeps the model working until the plan is done; then review / 'rubber duck' with a second model, optionally looping until diminishing returns. Stick with one medium model per feature to benefit from prompt caching. Keep it simple — sessions are topical, start new ones as you diverge.",
+        "takeaways": [
+          "You don't need fancy skills, MCP servers, or magic prompts to be highly effective — learn the harness, use it everywhere.",
+          "Give agents autonomy (Allow All / YOLO) for real productivity, but only inside a sandbox — never on your local/work machine.",
+          "Prototype up front (e.g. 'give me 20 mocks in one HTML file') to discover requirements and edge cases you'd otherwise miss.",
+          "Plan mode's value is engaging YOUR expertise: don't just accept suggestions — guide the model and ask clarifying questions back.",
+          "Use Autopilot for implementation and 'rubber duck' a second model (optionally in a loop) to battle-harden the code before committing.",
+          "Stay on one medium model + reasoning level per feature so prompt caching discounts your tokens; treat sessions as topical."
+        ]
       },
       "contentPath": "entries/the-harness-is-all-you-need-mostly.md",
       "readMin": 15
