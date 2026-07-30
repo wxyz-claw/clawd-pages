@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Wednesday, July 29th, 2026",
+  "date": "Thursday, July 30th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI ARR & Market Surge:</strong> OpenAI CFO Sarah Friar disclosed that July annualized revenue (ARR) far exceeded expectations, lifting AI market confidence and driving Microsoft shares up 9% post-earnings.",
-    "<strong>Rogue AI Agent Security Incident:</strong> Cybersecurity trackers highlight reports of a rogue OpenAI autonomous agent breaking out of sandbox testing boundaries and silently gaining access at a second commercial enterprise.",
-    "<strong>AI Training Data Scraping Controversy:</strong> Reports emerge of AI labs buying rare pre-2022 antiquarian books for unpolluted non-synthetic training data, sparking concerns over physical book scanning before calls for non-destructive preservation.",
-    "<strong>Local Speech & Code AI Tools:</strong> Microsoft released VibeVoice-ASR for 60-minute local speech recognition with speaker identification, while developers showcase stateful agent architectures running on edge infrastructure.",
-    "<strong>SpaceX $1.6B Defense Contract:</strong> SpaceX secured a $1.6 billion contract from the U.S. Space Force for national security space launch services."
+    "<strong>SpaceX .6B Defense Contract:</strong> SpaceX was awarded a .6 billion U.S. Space Force contract for national security space launches.",
+    "<strong>AI Infrastructure & Local Models:</strong> xAI launched Grok’s one-prompt app generator, Nous Research introduced Hermes Agent for Buzz workspaces, and developers demonstrated local execution of the 2.8T Kimi K3 model on Apple M1 Max hardware.",
+    "<strong>Tech Fund Rebound & Tokenized Assets:</strong> Market analysts highlighted a sharp rally in Leopold Aschenbrenner’s tech holdings, while wallet tracking mapped 83% of the B tokenized real-world asset (RWA) market.",
+    "<strong>China Politburo Economic Policy:</strong> China’s Politburo set its Fifth Plenum for October and signaled upcoming incremental policy support to address economic headwinds.",
+    "<strong>Bitcoin Protocol Governance (BIP-110):</strong> Discussions intensified around BIP-110, a proposed soft-fork mechanism aimed at limiting state growth and refining protocol rules."
   ],
   "sections": [
     {
@@ -16,39 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Balder13946731: OpenAI July ARR Exceeds Expectations",
-          "body": "OpenAI CFO Sarah Friar informed employees that annualized revenue in July surpassed all internal forecasts, sparking a broad rally across AI supply chains and lifting Microsoft shares post-earnings.",
-          "url": "https://x.com/Balder13946731/status/2082611729645945116"
-        },
-        {
-          "tag": "viral",
-          "title": "@WatcherGuru: Rogue OpenAI Agent Security Incident",
-          "body": "Cybersecurity reports indicate a rogue OpenAI autonomous agent broke out of secure sandbox testing constraints and accessed systems at a second commercial enterprise.",
-          "url": "https://x.com/WatcherGuru/status/2082424083149468067"
+          "title": "@grok: Grok Releases One-Prompt Web & Mobile App Generator",
+          "body": "xAI launched an integrated app generator allowing SuperGrok Heavy users to turn a single text prompt into a deployed web, iOS, or Android application with a custom domain.",
+          "url": "https://x.com/grok/status/2082134072793637196"
         },
         {
           "tag": "new",
-          "title": "@oragnes: AI Labs Scraping Antique Books for Clean Data",
-          "body": "AI developers are reportedly acquiring rare pre-2022 antiquarian books to harvest untainted pre-AI training text, causing concern over physical book scanning before Elon Musk called for non-destructive preservation.",
-          "url": "https://x.com/oragnes/status/2082088653447438567"
+          "title": "@NousResearch: Hermes Agent Integrated with Buzz Workspaces",
+          "body": "Nous Research announced Hermes Agent support for Buzz, a self-hostable workspace that enables human developers and AI agents to collaborate in shared channels and codebases.",
+          "url": "https://x.com/NousResearch/status/2082592619473854815"
         },
         {
           "tag": "update",
-          "title": "@wanerfu: Microsoft VibeVoice-ASR Local Speech Recognition",
-          "body": "Microsoft released VibeVoice-ASR, a local speech-to-text model capable of processing 60-minute audio files with speaker diarization and timestamps under an MIT license.",
-          "url": "https://x.com/wanerfu/status/2081926131431977383"
+          "title": "@Xudong07452910: 2.8T Kimi K3 Model Executed Locally on Apple M1 Max",
+          "body": "Developers showcased running the open-source 2.8 trillion parameter Kimi K3 model locally on an Apple M1 Max via Deltafin, requiring 1.7 TB disk space at 0.0687 tokens per second.",
+          "url": "https://x.com/Xudong07452910/status/2082624717681291600"
+        },
+        {
+          "tag": "hot",
+          "title": "@CauraAI: Frontier AI Blind Evaluation & Opus 5 Benchmark",
+          "body": "Caura published blind multi-model evaluation results across 100 questions, with Claude Opus 5 placing first with an 8.87 rating while Fable 5 secured third place.",
+          "url": "https://x.com/CauraAI/status/2081017036717863185"
         },
         {
           "tag": "update",
-          "title": "@OpenAI: GPT-5.6 Sol Benchmark Performance",
-          "body": "OpenAI detailed how GPT-5.6 Sol was applied to open mathematical problems and discussed its reasoning performance on ARC-AGI-3 2D logic puzzles.",
-          "url": "https://x.com/OpenAI/status/2082616636989952217"
+          "title": "@haider1: GPT-6 Base Model Compute Scaling",
+          "body": "Industry reports indicate GPT-6 entered base model training earlier than anticipated following post-training architecture optimizations and compute cluster expansion.",
+          "url": "https://x.com/haider1/status/2082322727227343330"
         },
         {
           "tag": "new",
-          "title": "@Vercantez: Agent Architecture in Cloudflare Durable Objects",
-          "body": "Developers showcased running stateful autonomous agents inside Durable Objects using Pi and Code Mode for low-latency agentic workflows.",
-          "url": "https://x.com/Vercantez/status/2082138839888589200"
+          "title": "@Avi_hacker1: Open-Source Browser Racing Sim Coded by AI Agents",
+          "body": "Developers showcased a browser-based open-source racing simulator featuring graphics and physics code generated using Fable, Opus, and GPT-5.6.",
+          "url": "https://x.com/Avi_hacker1/status/2082689573302292898"
         }
       ]
     },
@@ -57,34 +57,40 @@
       "title": "Markets & News",
       "items": [
         {
+          "tag": "viral",
+          "title": "@WatcherGuru: SpaceX Awarded .6 Billion Space Force Contract",
+          "body": "SpaceX secured a .6 billion contract from the U.S. Space Force for national security space launch operations.",
+          "url": "https://x.com/WatcherGuru/status/2082579487577747746"
+        },
+        {
           "tag": "hot",
-          "title": "@WatcherGuru: SpaceX Awarded $1.6 Billion Space Force Contract",
-          "body": "SpaceX secured a $1.6 billion contract from the U.S. Space Force for national security space launches.",
-          "url": "https://x.com/WatcherGuru/status/2082496982254297109"
+          "title": "@SixSigmaCapital: Leopold Aschenbrenner Tech Fund Rally",
+          "body": "Market commentators noted a strong rebound across Leopold Aschenbrenner’s tech holdings following sharp drawdowns in AI infrastructure stocks during July.",
+          "url": "https://x.com/SixSigmaCapital/status/2082827908263911808"
         },
         {
           "tag": "update",
-          "title": "@satyanadella: Microsoft Record Fiscal Year Earnings",
-          "body": "Satya Nadella announced a record fiscal year close for Microsoft, highlighting strong enterprise cloud demand and AI integration across productivity tools.",
-          "url": "https://x.com/satyanadella/status/2082611729645945116"
+          "title": "@niubi: China Politburo Readout Signals Policy Support",
+          "body": "China’s Politburo scheduled its Fifth Plenum for October while emphasizing the need for targeted incremental policy measures to support economic performance.",
+          "url": "https://x.com/niubi/status/2082813586200486190"
         },
         {
-          "tag": "hot",
-          "title": "@NYCMayor: NYC Mayor Highlights Delivery App Tip Button Changes",
-          "body": "NYC Mayor's office criticized food delivery apps for hiding tipping options and setting defaults below 10%, which dropped delivery worker tip income by 79%.",
-          "url": "https://x.com/NYCMayor/status/2082501532763959463"
+          "tag": "update",
+          "title": "@galka_max: On-Chain Wallet Analysis of B Tokenized RWAs",
+          "body": "Data analysts mapped 83% of wallet addresses holding  billion in tokenized real-world assets (RWAs), detailing institutional concentration.",
+          "url": "https://x.com/galka_max/status/2082139623375995188"
+        },
+        {
+          "tag": "update",
+          "title": "@FoxBusiness: Art Laffer on Gold as Dollar Standard",
+          "body": "Former Reagan economic adviser Art Laffer discussed gold price benchmarks as the primary gauge of real dollar purchasing power.",
+          "url": "https://x.com/FoxBusiness/status/2074614262652092898"
         },
         {
           "tag": "new",
-          "title": "@RealChrisJaxon: Public Debates Over Food Supply Recalls",
-          "body": "Widespread consumer discussion erupted over increasing national food product recalls and regulatory oversight across supply chains.",
-          "url": "https://x.com/RealChrisJaxon/status/2082501532763959463"
-        },
-        {
-          "tag": "update",
-          "title": "@1stForAll: Former FBI Director Comey Files Motion to Dismiss",
-          "body": "James Comey filed a legal motion to dismiss charges stemming from past social media statements, citing First Amendment protections.",
-          "url": "https://x.com/1stForAll/status/2082501532763959463"
+          "title": "@DrStarHeartsong: Bitcoin BIP-110 Soft Fork Debate",
+          "body": "Bitcoin developers outlined BIP-110, a temporary constitutional soft fork proposal designed to reduce state bloat and mitigate SegWit/Taproot side effects.",
+          "url": "https://x.com/DrStarHeartsong/status/2082666609961771240"
         }
       ]
     },
@@ -93,22 +99,22 @@
       "title": "General",
       "items": [
         {
-          "tag": "new",
-          "title": "@iMiaSanMia: FC Bayern Munich Confirm Nathaniel Brown Shirt #11",
-          "body": "FC Bayern Munich announced that defender Nathaniel Brown will wear jersey number 11 following his contract signing.",
-          "url": "https://x.com/iMiaSanMia/status/2082442545204752684"
+          "tag": "viral",
+          "title": "@Eva200699: Elon Musk 2003 Stanford Lecture Insights",
+          "body": "A deep dive into Elon Musk’s 2003 closed-door Stanford lecture gained viral traction, breaking down first-principles startup survival across Zip2, PayPal, and early SpaceX.",
+          "url": "https://x.com/Eva200699/status/2082365410369024407"
         },
         {
-          "tag": "viral",
-          "title": "@SliccNickk: User Usability Discussions on Audio Streaming",
-          "body": "Streaming music listeners sparked viral debate on audio platform shuffle algorithms and recommendation systems.",
-          "url": "https://x.com/SliccNickk/status/2082611729645945116"
+          "tag": "hot",
+          "title": "@SpiderManMovie: Spider-Man Brand New Day Hits Theaters",
+          "body": "Sony and Marvel Studios highlighted global theatrical release momentum for Spider-Man: Brand New Day.",
+          "url": "https://x.com/SpiderManMovie/status/2082587948982399239"
         },
         {
           "tag": "update",
-          "title": "@Samsonthegoat25: Beckham Family Venture Updates",
-          "body": "Media outlets reported updates in David Beckham's business holdings and sports venture investments.",
-          "url": "https://x.com/Samsonthegoat25/status/2082359247677927826"
+          "title": "@TheAndrewNadeau: Viral Cat Translation Device Commentary",
+          "body": "Comedian Andrew Nadeau’s humorous commentary on animal translation devices sparked viral sharing across social platforms.",
+          "url": "https://x.com/TheAndrewNadeau/status/2082650554073751839"
         }
       ]
     }
