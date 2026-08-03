@@ -1,12 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Sunday, August 2, 2026",
+  "date": "Monday, August 3, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI Price Wars & Frontier Models:</strong> OpenAI slashes prices for GPT-5.6 Luna by 80% and Terra by 20%, while Greg Brockman reflects on human-agent interaction dynamics in Slack.",
-    "<strong>Humanoid Robotics & AI Workflow Tricks:</strong> Unitree unveils the AS2-W Super Athlete humanoid, Victor Taelin shares 20-minute reasoning trace recycling tricks, and Marcos Hernanz publishes a 60B-token AGENTS.md system.",
-    "<strong>Markets & Leasing Mechanics:</strong> Tech analysts break down Apple's zero-fee Mac leasing economics, while market watchers debate 0DTE options risks and Sam Altman responds to Musk's 2036 post-scarcity forecast.",
-    "<strong>Culture, Media & Sports:</strong> Germany celebrates dual World Cup & EuroBasket basketball titles, James Gunn previews the new Superman cast, and viral creators showcase 2026 video aesthetics."
+    "<strong>OpenAI Price Cuts & Sol Acceleration:</strong> OpenAI slashed API pricing for GPT-5.6 Luna by 80% and GPT-5.6 Terra by 20%, while introducing faster inference for GPT-5.6 Sol and extending usage credits in Codex.",
+    "<strong>Autonomous Agent Infra & Claude Code:</strong> Anthropic reported 90% of internal code is now written by Claude Code, while open-source projects like LoopX and Qwen3.8-Max push 200+ hour driftless agent execution and 2.4T parameter coding capabilities.",
+    "<strong>Anthropic Commercial Scale & Culture:</strong> Market reports estimate Anthropic's ARR reached  billion in July with targets toward  billion, even as leadership focuses on mission alignment amidst rapid expansion.",
+    "<strong>Corporate Treasury Moves:</strong> Strategy reported liquidating 1,637 Bitcoin (M), while enterprise Lightning infrastructure providers like LQWD emphasize debt-free treasury structures.",
+    "<strong>Developer Workflows & Open Science:</strong> Vercel's production next-forge template hit 7.5k stars for full-stack Next.js scaffolding, while Lean 4 initiatives like OPH bring formal verification to fundamental physics."
   ],
   "sections": [
     {
@@ -15,87 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: 80% Price Reduction for GPT-5.6 Luna & Terra",
-          "body": "OpenAI announced major price cuts across its frontier model lineup, dropping GPT-5.6 Luna pricing by 80% and GPT-5.6 Terra by 20%, while boosting execution speeds for GPT-5.6 Sol in the API.",
-          "url": "https://x.com/OpenAI/status/2082878156483219672",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/OpenAI/status/2082878156483219672"
-            }
-          ]
-        },
-        {
-          "tag": "update",
-          "title": "@gdb: Human Relationships vs. Automated Slack Agents",
-          "body": "Greg Brockman shared insights from internal OpenAI workflows, noting that employees dislike when coworkers' automated ChatGPT agents message them directly for tasks—reinforcing that AI should enhance human collaboration rather than act as a barrier.",
-          "url": "https://x.com/gdb/status/2083435180392673714",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/gdb/status/2083435180392673714"
-            }
-          ]
-        },
-        {
-          "tag": "new",
-          "title": "@UnitreeRobotics: Unitree AS2-W Super Athlete Humanoid",
-          "body": "Unitree unveiled the AS2-W humanoid robot featuring fluid movement, a continuous 16kg payload capacity, and over 30km of operating range.",
-          "url": "https://x.com/UnitreeRobotics/status/2080549171661295907",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/UnitreeRobotics/status/2080549171661295907"
-            }
-          ]
+          "title": "@OpenAI: GPT-5.6 Price Cuts & Sol API Acceleration",
+          "body": "OpenAI announced major API price reductions for the GPT-5.6 family, cutting GPT-5.6 Luna costs by 80% and GPT-5.6 Terra by 20%. They also launched a faster option for GPT-5.6 Sol and reflected savings across Codex and ChatGPT Work.",
+          "url": "https://x.com/OpenAI/status/2082878156483219672"
         },
         {
           "tag": "hot",
-          "title": "@jenzhuscott: Navigating the DeepSeek Model Kill Zone",
-          "body": "Jen Zhu Scott analyzed the competitive landscape for LLM providers, warning that inferior and expensive models face an immediate survival crisis as top-tier labs drive inference costs down.",
-          "url": "https://x.com/jenzhuscott/status/2083516193743524342",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/jenzhuscott/status/2083516193743524342"
-            }
-          ]
-        },
-        {
-          "tag": "tip",
-          "title": "@VictorTaelin: Reasoning Trace Recycling Prompt Trick",
-          "body": "Taelin shared a novel prompt engineering technique: let a reasoning model think for 20 minutes on a complex problem, abort right before final output, and feed its own detailed thinking trace back into a fresh prompt for self-critique.",
-          "url": "https://x.com/VictorTaelin/status/2084038088448209062",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/VictorTaelin/status/2084038088448209062"
-            }
-          ]
-        },
-        {
-          "tag": "update",
-          "title": "@MarcosHernanz: 60B-Token AGENTS.md Architecture",
-          "body": "Marcos Hernanz published his complete AGENTS.md workflow system refined across 60 billion tokens of agentic execution.",
-          "url": "https://x.com/MarcosHernanz/status/2083954734487212511",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/MarcosHernanz/status/2083954734487212511"
-            }
-          ]
+          "title": "@xiaohu: Anthropic Internal Claude Code & Dev Role Evolution",
+          "body": "Anthropic engineering leaders shared that 90% of internal code is now written by Claude Code. Traditional front/backend roles are evolving into five distinct profiles: Prototyper, Builder, Maintainer, Scaler, and Finisher.",
+          "url": "https://x.com/xiaohu/status/2084089717814129048"
         },
         {
           "tag": "new",
-          "title": "@muellerberndt: OPH Lean 4 Proofs for Spacetime & Quantum Physics",
-          "body": "Bernhard Mueller launched OPH, an open auditable repository utilizing Lean 4 formal proofs and simulations to explore observer-driven spacetime and physics models.",
-          "url": "https://x.com/muellerberndt/status/2079877767416709231",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/muellerberndt/status/2079877767416709231"
-            }
-          ]
+          "title": "@Alibaba_Qwen: Qwen3.8-Max & Open Weights Announcement",
+          "body": "Alibaba Qwen introduced Qwen3.8-Max, a 2.4T parameter model designed for multi-day autonomous coding and complex workflow planning, with open-weights for Qwen3.8-27B releasing soon.",
+          "url": "https://x.com/andrew_n_carr/status/2084104903564410950"
+        },
+        {
+          "tag": "new",
+          "title": "@yifanxu_ephai: LoopX Long-Horizon Agent State Kernel",
+          "body": "ByteDance OpenViking contributors launched LoopX, an open-source lightweight state kernel enabling AI agents to run continuously for 200+ hours without goal drift by managing structured state, authority, and evidence.",
+          "url": "https://x.com/yifanxu_ephai/status/2084040134266404999"
+        },
+        {
+          "tag": "update",
+          "title": "@ValerioCapraro: Math Problem Solving vs Conceptual Jumps in LLMs",
+          "body": "Mathematicians evaluated recent AI milestones solving longstanding open mathematical problems, noting that while LLMs excel at deep logical deduction within known frameworks, conceptual abduction remains human-driven.",
+          "url": "https://x.com/ValerioCapraro/status/2084181313016185205"
+        },
+        {
+          "tag": "update",
+          "title": "@CycleDecoded: Vercel next-forge Production Boilerplate",
+          "body": "Vercel's open-source next-forge project surpassed 7.5k stars, delivering a production-ready Turborepo template integrated with Clerk/Kinde auth, Stripe payments, Resend email, and Prisma/Drizzle ORM.",
+          "url": "https://x.com/CycleDecoded/status/2083807351988170772"
         }
       ]
     },
@@ -104,52 +57,34 @@
       "title": "Markets & News",
       "items": [
         {
-          "tag": "update",
-          "title": "@VadimYuryev: Breakdown of Mac Zero-Interest Lease Economics",
-          "body": "Vadim Yuryev analyzed Apple's 36-month zero-interest hardware lease structure for $2,999 M5 Pro MacBooks, explaining payoff windows, monthly cash flows, and resale value strategy.",
-          "url": "https://x.com/VadimYuryev/status/2083973494019399952",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/VadimYuryev/status/2083973494019399952"
-            }
-          ]
-        },
-        {
-          "tag": "warning",
-          "title": "@Hedgeye: 0DTE Options Risks in Volatile Markets",
-          "body": "Market analysts highlighted warnings from former hedge fund managers regarding high-volume 0DTE (zero days to expiration) options accelerating rapid market selloffs.",
-          "url": "https://x.com/Hedgeye/status/2069802836700115217",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/Hedgeye/status/2069802836700115217"
-            }
-          ]
+          "tag": "hot",
+          "title": "@WatcherGuru: Strategy Sells M in Bitcoin",
+          "body": "Market trackers reported that Michael Saylor's Strategy sold 1,637 Bitcoin worth approximately  million, signaling a notable liquidity event.",
+          "url": "https://x.com/WatcherGuru/status/2084247457140232624"
         },
         {
           "tag": "hot",
-          "title": "@Adams_Tech_AI: Sam Altman Responds to Elon Musk on 2036 Economy",
-          "body": "Sam Altman addressed Elon Musk's prediction that money will become obsolete by 2036 due to universal AI and robotics production capacity.",
-          "url": "https://x.com/Adams_Tech_AI/status/2083864917094859227",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/Adams_Tech_AI/status/2083864917094859227"
-            }
-          ]
+          "title": "@Midnight_Captl: Anthropic ARR Reaches  Billion",
+          "body": "Industry sources indicate Anthropic reached an annualized revenue run-rate (ARR) of  billion by mid-July, putting the company on pace toward B ARR by late summer.",
+          "url": "https://x.com/Midnight_Captl/status/2083970220901961849"
         },
         {
           "tag": "update",
-          "title": "@1stForAll: Legal Challenges Over Pentagon Press Access",
-          "body": "Freedom Forum reported on ongoing legal disputes surrounding Department of Defense newsgathering policies and press credentials.",
-          "url": "https://x.com/1stForAll/status/2082825830477267450",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/1stForAll/status/2082825830477267450"
-            }
-          ]
+          "title": "@VadimYuryev: MacBook Pro Leasing vs Buy-Out Financial Analysis",
+          "body": "Tech commentators analyzed Apple's 36-to-42 month hardware lease option for MacBook Pros, demonstrating how combining low monthly payments with final buy-outs captures strong secondary market equity.",
+          "url": "https://x.com/VadimYuryev/status/2083973494019399952"
+        },
+        {
+          "tag": "update",
+          "title": "@LQWDTech: Enterprise Lightning Network & Treasury Holdings",
+          "body": "LQWD Technologies highlighted its debt-free balance sheet holding 267 Bitcoin alongside operating infrastructure for enterprise Bitcoin Lightning network routing.",
+          "url": "https://x.com/LQWDTech/status/2059750816421196128"
+        },
+        {
+          "tag": "update",
+          "title": "@etnshow: Anthropic Leadership Focuses on Mission Culture",
+          "body": "Reports highlighted internal discussions from Anthropic CEO Dario Amodei regarding candidate mission alignment and maintaining core values through rapid organizational scaling.",
+          "url": "https://x.com/etnshow/status/2084221242614202704"
         }
       ]
     },
@@ -159,51 +94,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@EuroWynner: Germany Holds Dual World Cup & EuroBasket Titles",
-          "body": "Sports analysts celebrated Germany's historic basketball run, holding both the FIBA World Cup and EuroBasket championship titles simultaneously.",
-          "url": "https://x.com/EuroWynner/status/2083608685482254340",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/EuroWynner/status/2083608685482254340"
-            }
-          ]
+          "title": "@TechEmails: Steve Jobs 2007 Palm Email Exchange",
+          "body": "Internal Tech Emails published an August 2007 email from Steve Jobs to Palm's CEO, revealing executive negotiations and competitive strategy following the launch of the original iPhone.",
+          "url": "https://x.com/TechEmails/status/2084071480216936783"
         },
         {
           "tag": "new",
-          "title": "@BuzzFeedCeleb: First Look at James Gunn's Superman Cast",
-          "body": "BuzzFeed spotlighted director James Gunn alongside cast members David Corenswet, Rachel Brosnahan, and Nicholas Hoult ahead of the upcoming Superman premiere.",
-          "url": "https://x.com/BuzzFeedCeleb/status/2066506011608039682",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/BuzzFeedCeleb/status/2066506011608039682"
-            }
-          ]
+          "title": "@muellerberndt: Lean 4 Auditable Physics & Spacetime Verification",
+          "body": "Bernhard Mueller introduced OPH, an open research initiative utilizing Lean 4 interactive theorem proving to formally test whether finite observers necessitate spacetime and Standard Model physics.",
+          "url": "https://x.com/muellerberndt/status/2079877767416709231"
         },
         {
           "tag": "update",
-          "title": "@DerekFeehrer: Next-Gen Screen Recording & UI Aesthetics",
-          "body": "Derek Feehrer showcased high-fidelity presentation techniques and motion-graphics standards for product demos in 2026.",
-          "url": "https://x.com/DerekFeehrer/status/2069213588297044120",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/DerekFeehrer/status/2069213588297044120"
-            }
-          ]
+          "title": "@MarcosHernanz: High-Token AGENTS.md Developer Guidelines",
+          "body": "A software engineer distilled lessons from 60B tokens of AI pair programming into a comprehensive AGENTS.md framework to enhance agent context stability and execution efficiency.",
+          "url": "https://x.com/MarcosHernanz/status/2083954734487212511"
         },
         {
-          "tag": "thought",
-          "title": "@jiangyelab1: Capital Accumulation & Systems Building",
-          "body": "A viral essay revisited core career strategy, framing early life as capital accumulation and later life as building scalable, automated systems.",
-          "url": "https://x.com/jiangyelab1/status/2083832045638181063",
-          "links": [
-            {
-              "label": "View Tweet",
-              "url": "https://x.com/jiangyelab1/status/2083832045638181063"
-            }
-          ]
+          "tag": "update",
+          "title": "@SnozakiSakura: AI App Subscription Payment Guidance",
+          "body": "Community members detailed practical solutions for bypassing iOS gift card restrictions on AI subscriptions, advising users to utilize Google Play or direct web checkout.",
+          "url": "https://x.com/SnozakiSakura/status/2084076853627912293"
         }
       ]
     }
