@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Monday, August 3, 2026",
+  "date": "Monday, August 3rd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI Price Cuts & Sol Acceleration:</strong> OpenAI slashed API pricing for GPT-5.6 Luna by 80% and GPT-5.6 Terra by 20%, while introducing faster inference for GPT-5.6 Sol and extending usage credits in Codex.",
-    "<strong>Autonomous Agent Infra & Claude Code:</strong> Anthropic reported 90% of internal code is now written by Claude Code, while open-source projects like LoopX and Qwen3.8-Max push 200+ hour driftless agent execution and 2.4T parameter coding capabilities.",
-    "<strong>Anthropic Commercial Scale & Culture:</strong> Market reports estimate Anthropic's ARR reached  billion in July with targets toward  billion, even as leadership focuses on mission alignment amidst rapid expansion.",
-    "<strong>Corporate Treasury Moves:</strong> Strategy reported liquidating 1,637 Bitcoin (M), while enterprise Lightning infrastructure providers like LQWD emphasize debt-free treasury structures.",
-    "<strong>Developer Workflows & Open Science:</strong> Vercel's production next-forge template hit 7.5k stars for full-stack Next.js scaffolding, while Lean 4 initiatives like OPH bring formal verification to fundamental physics."
+    "<strong>Model Pricing & Infrastructure Shifts:</strong> OpenAI slashed API prices for GPT-5.6 Luna by 80% and Terra by 20%, while AMD MI355X servers demonstrated 3.8x higher throughput than NVIDIA B200 setups running Kimi K3.",
+    "<strong>AI Paradigm Evolution:</strong> Industry leaders discussed the shift from human source code to AI-generated binaries, while researchers debated LLMs solving open math problems versus true conceptual abduction.",
+    "<strong>Macro Finance & Bond Markets:</strong> US Treasury intervention in USD/JPY and shifting Japanese yields raised concerns over the yen carry trade and long-term US Treasury yields.",
+    "<strong>Autonomous Agent Orchestration:</strong> New open-source frameworks LoopX and reverse-skill emerged to enable multi-day agent execution without state drift and turn complex domain workflows into modular AI skills.",
+    "<strong>Industry & Cultural Highlights:</strong> Zendaya reached top-grossing star status of 2026, while tech leaders debated corporate mission alignment amidst rapid AI industry hiring."
   ],
   "sections": [
     {
@@ -16,39 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: GPT-5.6 Price Cuts & Sol API Acceleration",
-          "body": "OpenAI announced major API price reductions for the GPT-5.6 family, cutting GPT-5.6 Luna costs by 80% and GPT-5.6 Terra by 20%. They also launched a faster option for GPT-5.6 Sol and reflected savings across Codex and ChatGPT Work.",
+          "title": "@elonmusk: Code Beyond Source Files to Direct AI Binaries",
+          "body": "Elon Musk posited that traditional source code is approaching the status of assembly language. He suggested the next architectural evolution is bypassing human-readable source code altogether to generate optimized binaries directly via AI.",
+          "url": "https://x.com/elonmusk/status/2084304083851034949"
+        },
+        {
+          "tag": "new",
+          "title": "@OpenAI: 80% API Price Reduction for GPT-5.6 Luna & Terra",
+          "body": "OpenAI announced price reductions of 80% for GPT-5.6 Luna and 20% for GPT-5.6 Terra, alongside faster API options for GPT-5.6 Sol. The price drops automatically lower usage consumption rates in Codex and ChatGPT Work.",
           "url": "https://x.com/OpenAI/status/2082878156483219672"
         },
         {
+          "tag": "update",
+          "title": "@ChiragAsarpota: AMD MI355X Outperforms NVIDIA B200 on Kimi K3",
+          "body": "Engineers served the 2.78T parameter Kimi K3 model on an 8x AMD MI355X node at 952 tok/s, outperforming 16x NVIDIA B200 setups by 3.8x in aggregate throughput and exceeding B300 performance per dollar due to higher HBM capacity.",
+          "url": "https://x.com/ChiragAsarpota/status/2083864019870634151"
+        },
+        {
           "tag": "hot",
-          "title": "@xiaohu: Anthropic Internal Claude Code & Dev Role Evolution",
-          "body": "Anthropic engineering leaders shared that 90% of internal code is now written by Claude Code. Traditional front/backend roles are evolving into five distinct profiles: Prototyper, Builder, Maintainer, Scaler, and Finisher.",
-          "url": "https://x.com/xiaohu/status/2084089717814129048"
+          "title": "@ValerioCapraro: Induction vs Abduction in LLM Math Reasoning",
+          "body": "Valerio Capraro reflected on OpenAI Astra reportedly solving 10 open mathematical problems (including Gromov's conjecture), distinguishing LLM strength in logical deduction from human conceptual abduction that invents new mathematical paradigms.",
+          "url": "https://x.com/ValerioCapraro/status/2084181313016185205"
         },
         {
           "tag": "new",
-          "title": "@Alibaba_Qwen: Qwen3.8-Max & Open Weights Announcement",
-          "body": "Alibaba Qwen introduced Qwen3.8-Max, a 2.4T parameter model designed for multi-day autonomous coding and complex workflow planning, with open-weights for Qwen3.8-27B releasing soon.",
-          "url": "https://x.com/andrew_n_carr/status/2084104903564410950"
-        },
-        {
-          "tag": "new",
-          "title": "@yifanxu_ephai: LoopX Long-Horizon Agent State Kernel",
-          "body": "ByteDance OpenViking contributors launched LoopX, an open-source lightweight state kernel enabling AI agents to run continuously for 200+ hours without goal drift by managing structured state, authority, and evidence.",
+          "title": "@yifanxu_ephai: LoopX Open-Source Long-Horizon Agent Kernel",
+          "body": "Engineers introduced LoopX, an open-source state kernel for long-horizon AI agents that prevents state drift over 200+ hours of autonomous execution by managing goals, evidence, and authority via a structured agent Kanban.",
           "url": "https://x.com/yifanxu_ephai/status/2084040134266404999"
         },
         {
           "tag": "update",
-          "title": "@ValerioCapraro: Math Problem Solving vs Conceptual Jumps in LLMs",
-          "body": "Mathematicians evaluated recent AI milestones solving longstanding open mathematical problems, noting that while LLMs excel at deep logical deduction within known frameworks, conceptual abduction remains human-driven.",
-          "url": "https://x.com/ValerioCapraro/status/2084181313016185205"
-        },
-        {
-          "tag": "update",
-          "title": "@CycleDecoded: Vercel next-forge Production Boilerplate",
-          "body": "Vercel's open-source next-forge project surpassed 7.5k stars, delivering a production-ready Turborepo template integrated with Clerk/Kinde auth, Stripe payments, Resend email, and Prisma/Drizzle ORM.",
-          "url": "https://x.com/CycleDecoded/status/2083807351988170772"
+          "title": "@Suu766: Reverse-Skill Packages Reverse-Engineering into Agent Skills",
+          "body": "The reverse-skill project encapsulates complex firmware, APK, and binary reverse-engineering domain knowledge into reusable AI skill packages for Claude Code, Cursor, and Codex.",
+          "url": "https://x.com/Suu766/status/2083822324697235928"
         }
       ]
     },
@@ -58,33 +58,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Strategy Sells M in Bitcoin",
-          "body": "Market trackers reported that Michael Saylor's Strategy sold 1,637 Bitcoin worth approximately  million, signaling a notable liquidity event.",
-          "url": "https://x.com/WatcherGuru/status/2084247457140232624"
+          "title": "@_FORAB: US Treasury Intervention & Yen Carry Trade Pressures",
+          "body": "Market analysts highlighted ongoing US Treasury intervention in USD/JPY and the potential unrolling of the global yen carry trade, as rising Japanese bond yields force capital re-pricing across sovereign debt markets.",
+          "url": "https://x.com/_FORAB/status/2084105039883522522"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: US Treasury Crypto Adviser Tyler Williams Resigns",
+          "body": "Tyler Williams, top cryptocurrency adviser to US Treasury Secretary Scott Bessent, stepped down from his role amidst shifting federal financial regulatory developments.",
+          "url": "https://x.com/WatcherGuru/status/2084372750135636083"
         },
         {
           "tag": "hot",
-          "title": "@Midnight_Captl: Anthropic ARR Reaches  Billion",
-          "body": "Industry sources indicate Anthropic reached an annualized revenue run-rate (ARR) of  billion by mid-July, putting the company on pace toward B ARR by late summer.",
-          "url": "https://x.com/Midnight_Captl/status/2083970220901961849"
+          "title": "@Owennfa: The Real Economics of Home Ownership & Property Tax",
+          "body": "A viral discussion highlighted the ongoing financial obligations of homeownership after paying off a 30-year mortgage, pointing out that annual property tax bills retain ongoing state lien dynamics.",
+          "url": "https://x.com/Owennfa/status/2084320192650486036"
         },
         {
           "tag": "update",
-          "title": "@VadimYuryev: MacBook Pro Leasing vs Buy-Out Financial Analysis",
-          "body": "Tech commentators analyzed Apple's 36-to-42 month hardware lease option for MacBook Pros, demonstrating how combining low monthly payments with final buy-outs captures strong secondary market equity.",
-          "url": "https://x.com/VadimYuryev/status/2083973494019399952"
-        },
-        {
-          "tag": "update",
-          "title": "@LQWDTech: Enterprise Lightning Network & Treasury Holdings",
-          "body": "LQWD Technologies highlighted its debt-free balance sheet holding 267 Bitcoin alongside operating infrastructure for enterprise Bitcoin Lightning network routing.",
-          "url": "https://x.com/LQWDTech/status/2059750816421196128"
-        },
-        {
-          "tag": "update",
-          "title": "@etnshow: Anthropic Leadership Focuses on Mission Culture",
-          "body": "Reports highlighted internal discussions from Anthropic CEO Dario Amodei regarding candidate mission alignment and maintaining core values through rapid organizational scaling.",
-          "url": "https://x.com/etnshow/status/2084221242614202704"
+          "title": "@feifan7686: Buy-Borrow-Die Tax Dynamics in US Equity Markets",
+          "body": "An financial commentary detailed how step-up in basis provisions and securities-backed lending encourage long-term equity retention by high-net-worth investors, anchoring equity index market structure.",
+          "url": "https://x.com/feifan7686/status/2083886081100173679"
         }
       ]
     },
@@ -94,27 +88,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@TechEmails: Steve Jobs 2007 Palm Email Exchange",
-          "body": "Internal Tech Emails published an August 2007 email from Steve Jobs to Palm's CEO, revealing executive negotiations and competitive strategy following the launch of the original iPhone.",
-          "url": "https://x.com/TechEmails/status/2084071480216936783"
+          "title": "@Polymarket: Anthropic Mission vs Compensation Alignment",
+          "body": "Reports highlighted internal discussions at Anthropic regarding new hire motivations, balancing financial compensation against commitment to AI safety research goals.",
+          "url": "https://x.com/Polymarket/status/2084289229400502285"
+        },
+        {
+          "tag": "update",
+          "title": "@TheCineprism: Zendaya Leads 2026 Box Office Earnings",
+          "body": "Zendaya officially reached the top position among global film industry actors as the highest-grossing star of 2026 following major box office milestones.",
+          "url": "https://x.com/TheCineprism/status/2084121796257763605"
+        },
+        {
+          "tag": "update",
+          "title": "@didengshengwu: Financial Incentives in Ancient Infantry Tactics",
+          "body": "A historical deep dive explored military logistics and bounty structures in ancient infantry formations, showing how frontline deployment relied on elite compensation and armor rather than raw attrition.",
+          "url": "https://x.com/didengshengwu/status/2084220210119376949"
         },
         {
           "tag": "new",
-          "title": "@muellerberndt: Lean 4 Auditable Physics & Spacetime Verification",
-          "body": "Bernhard Mueller introduced OPH, an open research initiative utilizing Lean 4 interactive theorem proving to formally test whether finite observers necessitate spacetime and Standard Model physics.",
-          "url": "https://x.com/muellerberndt/status/2079877767416709231"
-        },
-        {
-          "tag": "update",
-          "title": "@MarcosHernanz: High-Token AGENTS.md Developer Guidelines",
-          "body": "A software engineer distilled lessons from 60B tokens of AI pair programming into a comprehensive AGENTS.md framework to enhance agent context stability and execution efficiency.",
-          "url": "https://x.com/MarcosHernanz/status/2083954734487212511"
-        },
-        {
-          "tag": "update",
-          "title": "@SnozakiSakura: AI App Subscription Payment Guidance",
-          "body": "Community members detailed practical solutions for bypassing iOS gift card restrictions on AI subscriptions, advising users to utilize Google Play or direct web checkout.",
-          "url": "https://x.com/SnozakiSakura/status/2084076853627912293"
+          "title": "@mranti: Fan Bing Open-Sources Forward Deployment Book",
+          "body": "Author Fan Bing released the full 200,000-word book 'Forward Deployment Engineer' for free, covering methods for bridging product capability with client needs in the AI era.",
+          "url": "https://x.com/mranti/status/2083737030748438835"
         }
       ]
     }
