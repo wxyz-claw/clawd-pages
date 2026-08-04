@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Monday, August 3rd, 2026",
+  "date": "Tuesday, August 4th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Model Pricing & Infrastructure Shifts:</strong> OpenAI slashed API prices for GPT-5.6 Luna by 80% and Terra by 20%, while AMD MI355X servers demonstrated 3.8x higher throughput than NVIDIA B200 setups running Kimi K3.",
-    "<strong>AI Paradigm Evolution:</strong> Industry leaders discussed the shift from human source code to AI-generated binaries, while researchers debated LLMs solving open math problems versus true conceptual abduction.",
-    "<strong>Macro Finance & Bond Markets:</strong> US Treasury intervention in USD/JPY and shifting Japanese yields raised concerns over the yen carry trade and long-term US Treasury yields.",
-    "<strong>Autonomous Agent Orchestration:</strong> New open-source frameworks LoopX and reverse-skill emerged to enable multi-day agent execution without state drift and turn complex domain workflows into modular AI skills.",
-    "<strong>Industry & Cultural Highlights:</strong> Zendaya reached top-grossing star status of 2026, while tech leaders debated corporate mission alignment amidst rapid AI industry hiring."
+    "<strong>Frontier Models & Open Weights:</strong> Alibaba unveiled Qwen3.8-Max alongside open weights for Qwen3.8-27B running on 17GB VRAM, with benchmarkers noting new state-of-the-art coding bug-fixing performance across real-world repositories.",
+    "<strong>Robotics & Autonomous Reasoning:</strong> NVIDIA launched Alpamayo 2 Super for autonomous vehicle spatial reasoning, while new demonstrations showcased rapid physical agility advances across Chinese humanoid robotics divisions.",
+    "<strong>SaaS M&A & Enterprise Portals:</strong> Strategic acquisitions reshaped productivity tools as Airtable reached an agreement for a .285B acquisition, while Tencent positioned WorkBuddy as a third strategic enterprise AI portal.",
+    "<strong>Aerospace & Data Infrastructure News:</strong> SpaceX prepared to report historic financial results post-market close, as US regulators drafted new restrictions targeting Chinese data center component supply chains.",
+    "<strong>Agent Engineering Practices:</strong> Developers distilled lessons from over 60B tokens spent on autonomous coding harnesses, emphasizing structured AGENTS.md rules, batch interactive modes, and cost-effective API routing."
   ],
   "sections": [
     {
@@ -16,39 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Code Beyond Source Files to Direct AI Binaries",
-          "body": "Elon Musk posited that traditional source code is approaching the status of assembly language. He suggested the next architectural evolution is bypassing human-readable source code altogether to generate optimized binaries directly via AI.",
-          "url": "https://x.com/elonmusk/status/2084304083851034949"
+          "title": "@Alibaba_Qwen: Alibaba Unveils Qwen3.8-Max & Open-Weight Qwen3.8-27B",
+          "body": "Alibaba officially introduced Qwen3.8-Max, its most capable flagship model to date, alongside upcoming open weights for Qwen3.8-27B capable of local execution on 17GB RAM/VRAM setups. Early benchmarks on real-world bug benchmark suites show top-tier coding performance across frontier models.",
+          "url": "https://x.com/UnslothAI/status/2084110664789024769"
         },
         {
           "tag": "new",
-          "title": "@OpenAI: 80% API Price Reduction for GPT-5.6 Luna & Terra",
-          "body": "OpenAI announced price reductions of 80% for GPT-5.6 Luna and 20% for GPT-5.6 Terra, alongside faster API options for GPT-5.6 Sol. The price drops automatically lower usage consumption rates in Codex and ChatGPT Work.",
-          "url": "https://x.com/OpenAI/status/2082878156483219672"
+          "title": "@JensenHuang: NVIDIA Launches Alpamayo 2 Super for Autonomous Vehicles",
+          "body": "NVIDIA launched Alpamayo 2 Super, a frontier open reasoning model tailored for autonomous vehicles. Moving beyond simple perception, the architecture performs explicit multi-step spatial and trajectory reasoning under complex driving conditions.",
+          "url": "https://x.com/JensenHuang/status/2084656303046332747"
         },
         {
           "tag": "update",
-          "title": "@ChiragAsarpota: AMD MI355X Outperforms NVIDIA B200 on Kimi K3",
-          "body": "Engineers served the 2.78T parameter Kimi K3 model on an 8x AMD MI355X node at 952 tok/s, outperforming 16x NVIDIA B200 setups by 3.8x in aggregate throughput and exceeding B300 performance per dollar due to higher HBM capacity.",
-          "url": "https://x.com/ChiragAsarpota/status/2083864019870634151"
+          "title": "@fedesimio: Official Agreement to Acquire Airtable for .285B",
+          "body": "Industry leadership announced an official .285 billion acquisition deal for relational database platform Airtable, signaling renewed consolidation and valuation adjustments across cloud productivity software.",
+          "url": "https://x.com/fedesimio/status/2084539635829465266"
         },
         {
           "tag": "hot",
-          "title": "@ValerioCapraro: Induction vs Abduction in LLM Math Reasoning",
-          "body": "Valerio Capraro reflected on OpenAI Astra reportedly solving 10 open mathematical problems (including Gromov's conjecture), distinguishing LLM strength in logical deduction from human conceptual abduction that invents new mathematical paradigms.",
-          "url": "https://x.com/ValerioCapraro/status/2084181313016185205"
+          "title": "@MarcosHernanz: Distilling 60B Tokens into Production AGENTS.md Rules",
+          "body": "After executing over 60 billion tokens across autonomous coding agents, engineers published a curated AGENTS.md framework designed to keep AI agents from redundant file reads and unnecessary custom utility reinvention.",
+          "url": "https://x.com/MarcosHernanz/status/2083954734487212511"
         },
         {
           "tag": "new",
-          "title": "@yifanxu_ephai: LoopX Open-Source Long-Horizon Agent Kernel",
-          "body": "Engineers introduced LoopX, an open-source state kernel for long-horizon AI agents that prevents state drift over 200+ hours of autonomous execution by managing goals, evidence, and authority via a structured agent Kanban.",
-          "url": "https://x.com/yifanxu_ephai/status/2084040134266404999"
+          "title": "@PawelHuryn: Qwen3.8-Max Sets New Coding Benchmark Bar",
+          "body": "Independent evaluations across real-world repositories with 105 hidden bugs demonstrated that Qwen3.8-Max set a new benchmark for automated bug-fixing and code repair, rivaling proprietary frontier models in blind tests.",
+          "url": "https://x.com/PawelHuryn/status/2084345741812580853"
         },
         {
           "tag": "update",
-          "title": "@Suu766: Reverse-Skill Packages Reverse-Engineering into Agent Skills",
-          "body": "The reverse-skill project encapsulates complex firmware, APK, and binary reverse-engineering domain knowledge into reusable AI skill packages for Claude Code, Cursor, and Codex.",
-          "url": "https://x.com/Suu766/status/2083822324697235928"
+          "title": "@mattpocockuk: Accelerated Agent Alignment with Batch /grill-me",
+          "body": "Developers highlighted efficiency gains using the updated batch /grill-me workflow, enabling fast resolution of ambiguous architectural choices and prompt parameters during agent pair programming.",
+          "url": "https://x.com/mattpocockuk/status/2084559156074156252"
         }
       ]
     },
@@ -58,27 +58,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@_FORAB: US Treasury Intervention & Yen Carry Trade Pressures",
-          "body": "Market analysts highlighted ongoing US Treasury intervention in USD/JPY and the potential unrolling of the global yen carry trade, as rising Japanese bond yields force capital re-pricing across sovereign debt markets.",
-          "url": "https://x.com/_FORAB/status/2084105039883522522"
+          "title": "@WatcherGuru: SpaceX to Report First Historic Earnings Post-Close",
+          "body": "SpaceX prepared to release public financial earnings reports for the first time in company history following the market close, marking a significant milestone for private aerospace capital markets.",
+          "url": "https://x.com/WatcherGuru/status/2084641675620561071"
+        },
+        {
+          "tag": "new",
+          "title": "@WatcherGuru: US Drafts Restrictions on Chinese Data Center Hardware",
+          "body": "US regulatory agencies began drafting restrictions aimed at banning Chinese-manufactured data center components from key infrastructure, potentially impacting global hardware supply chains.",
+          "url": "https://x.com/WatcherGuru/status/2084586965861830886"
         },
         {
           "tag": "update",
-          "title": "@WatcherGuru: US Treasury Crypto Adviser Tyler Williams Resigns",
-          "body": "Tyler Williams, top cryptocurrency adviser to US Treasury Secretary Scott Bessent, stepped down from his role amidst shifting federal financial regulatory developments.",
-          "url": "https://x.com/WatcherGuru/status/2084372750135636083"
-        },
-        {
-          "tag": "hot",
-          "title": "@Owennfa: The Real Economics of Home Ownership & Property Tax",
-          "body": "A viral discussion highlighted the ongoing financial obligations of homeownership after paying off a 30-year mortgage, pointing out that annual property tax bills retain ongoing state lien dynamics.",
-          "url": "https://x.com/Owennfa/status/2084320192650486036"
+          "title": "@dougboneparth: Passive Buy-and-Hold Outperforms Active Trading",
+          "body": "Financial commentators pointed out strong long-term returns for disciplined buy-and-hold equity investors, reiterating the market power of low-cost passive index tracking over speculative short-term trading.",
+          "url": "https://x.com/dougboneparth/status/2084629353351041483"
         },
         {
           "tag": "update",
-          "title": "@feifan7686: Buy-Borrow-Die Tax Dynamics in US Equity Markets",
-          "body": "An financial commentary detailed how step-up in basis provisions and securities-backed lending encourage long-term equity retention by high-net-worth investors, anchoring equity index market structure.",
-          "url": "https://x.com/feifan7686/status/2083886081100173679"
+          "title": "@OKavrak: Memory Markets Re-rate on High-Bandwidth Semiconductor Demand",
+          "body": "Market analysts tracked trading spikes in high-bandwidth memory (HBM) suppliers such as SK Hynix, driven by sustained global accelerator deployments and server node hardware expansion.",
+          "url": "https://x.com/OKavrak/status/2078071958663487823"
         }
       ]
     },
@@ -88,27 +88,27 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Polymarket: Anthropic Mission vs Compensation Alignment",
-          "body": "Reports highlighted internal discussions at Anthropic regarding new hire motivations, balancing financial compensation against commitment to AI safety research goals.",
-          "url": "https://x.com/Polymarket/status/2084289229400502285"
+          "title": "@sama: Optimist Execution vs Pessimist Commentary",
+          "body": "Sam Altman reflected on builder mindset in technology, emphasizing that hard work grounded in optimism remains the most productive path for solving complex engineering and societal challenges.",
+          "url": "https://x.com/sama/status/2084663673570971990"
         },
         {
           "tag": "update",
-          "title": "@TheCineprism: Zendaya Leads 2026 Box Office Earnings",
-          "body": "Zendaya officially reached the top position among global film industry actors as the highest-grossing star of 2026 following major box office milestones.",
-          "url": "https://x.com/TheCineprism/status/2084121796257763605"
-        },
-        {
-          "tag": "update",
-          "title": "@didengshengwu: Financial Incentives in Ancient Infantry Tactics",
-          "body": "A historical deep dive explored military logistics and bounty structures in ancient infantry formations, showing how frontline deployment relied on elite compensation and armor rather than raw attrition.",
-          "url": "https://x.com/didengshengwu/status/2084220210119376949"
+          "title": "@alphafox: Rapid Hardware Evolution in Chinese Humanoid Robotics",
+          "body": "Field videos from Chinese robotics divisions demonstrated rapid hardware iterations in balance, force control, and terrain navigation, drawing widespread attention across the robotics engineering community.",
+          "url": "https://x.com/alphafox/status/2084429357234151587"
         },
         {
           "tag": "new",
-          "title": "@mranti: Fan Bing Open-Sources Forward Deployment Book",
-          "body": "Author Fan Bing released the full 200,000-word book 'Forward Deployment Engineer' for free, covering methods for bridging product capability with client needs in the AI era.",
-          "url": "https://x.com/mranti/status/2083737030748438835"
+          "title": "@PMbackttfuture: Tencent Positions WorkBuddy as Enterprise AI Entryway",
+          "body": "Tech strategists detailed Tencent's deployment of WorkBuddy as its third strategic ecosystem entry point after QQ and WeChat, aiming to capture enterprise AI workflow integration.",
+          "url": "https://x.com/PMbackttfuture/status/2084565287551033393"
+        },
+        {
+          "tag": "update",
+          "title": "@williamlong: Corporate PR Dynamics and Community Response",
+          "body": "Public relations experts analyzed recent brand communication missteps, highlighting how restrictive messaging around traditional cultural products can trigger unintended negative public sentiment.",
+          "url": "https://x.com/williamlong/status/2084498765961130492"
         }
       ]
     }
