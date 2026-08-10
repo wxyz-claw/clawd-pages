@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Sunday, August 9th, 2026",
+  "date": "Monday, August 10th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>AI Agent Edge Cases & Developer UX:</strong> Developers share insights on LLM agent behavior in code removal tasks, arXiv paper scoring systems, and offline TOTP authentication mechanics.",
-    "<strong>Sports Trading & Transfer Markets:</strong> Major developments in football transfer windows with Ousmane Diomande's medical tests alongside the nationwide launch of sports prediction trading platform Novig.",
-    "<strong>Crypto Strategy & HODL Dynamics:</strong> Macro discussions highlight the tension between long-term holding strategies and exit discipline in digital asset markets.",
-    "<strong>Cinema Craft & Behind-the-Scenes:</strong> Behind-the-scenes cinema lore highlights Tobey Maguire's 156-take zero-CGI tray catch in Spider-Man and viral Hollywood casting anecdotes.",
-    "<strong>Science & Medical Etymology:</strong> Everyday curiosity viral threads explore smallpox vaccine scar formation and physiological sleep pressure marks."
+    "<strong>Open Weight Models & AI Agent Benchmarks:</strong> Meta opens weights for its 30B dense model Muse Glimmer while developers document autonomous AI coding agents performing complete Python-to-Rust library refactors.",
+    "<strong>Autonomous Aviation & AI Infrastructure:</strong> Archer Aviation executes major strategic acquisitions of Wisk Aero and Insitu from Boeing, integrating autonomous flight control systems into its Zee foundation AI stack.",
+    "<strong>Geopolitics & Energy Corridor Dynamics:</strong> Macro political developments see Iranian officials outline long-term standoff strategies regarding US diplomatic negotiations and Strait of Hormuz maritime routes.",
+    "<strong>Enterprise Hardware & Server Market Forecasts:</strong> Semiconductor forecasts project the global server CPU market to surpass $200 billion by 2030 driven by sustained AI cluster deployments.",
+    "<strong>Sports Trading & Prediction Markets:</strong> Prediction markets highlight shifting Ballon d'Or odds alongside high-profile ownership moves in European football."
   ],
   "sections": [
     {
@@ -16,33 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@IsaacKing314: Claude Code Removal UX Behavior",
-          "body": "A developer humorously captures an AI coding assistant edge case where requesting complete removal of a feature results in the agent deleting the code while proactively adding unit tests to assert the feature's non-existence.",
-          "url": "https://x.com/IsaacKing314/status/2086203785005654022"
+          "title": "@finkd: Meta Releases Open Weights for 30B Muse Glimmer Model",
+          "body": "Meta opens the weights for Muse Glimmer, a 30-billion parameter dense model designed for local deployment, while teasing the upcoming release of its flagship foundation model Muse Spark 1.2.",
+          "url": "https://x.com/finkd/status/2086755195535413696"
+        },
+        {
+          "tag": "update",
+          "title": "@dhh: AI Code Agent Executes Complete Python-to-Rust Library Rewrite",
+          "body": "David Heinemeier Hansson shares how autonomous AI coder Fable rewrote Python's TerminalTextEffects library into Rust, cutting startup latency from 87ms down to 2ms and achieving a 9.6x increase in rendering throughput.",
+          "url": "https://x.com/dhh/status/2086590006898958752"
         },
         {
           "tag": "new",
-          "title": "@Arikalabs: How Google Authenticator Works Offline",
-          "body": "An explanation of Time-based One-Time Password (TOTP) mechanics, illustrating how authentication apps generate valid 6-digit codes in airplane mode without internet connectivity using localized HMAC-SHA1 algorithms and shared secrets.",
-          "url": "https://x.com/Arikalabs/status/2086173721111543836"
+          "title": "@Adidotdev: OpenAI Pre-train Details Surface for Next-Gen Model Astra",
+          "body": "Leaked benchmark details suggest OpenAI's upcoming model Astra was trained on a 10-trillion token pre-training dataset codenamed 'doug', doubling the dataset scale of Sol and demonstrating major leaps in reasoning and text quality.",
+          "url": "https://x.com/Adidotdev/status/2086629520849903746"
         },
         {
           "tag": "update",
-          "title": "@robert_lauko: Automated arXiv Preprint Curation",
-          "body": "Addressing the challenge of filtering 500+ daily academic arXiv preprints, KurateOrg introduces a multi-dimensional scoring framework rating research papers across 16 parameters including rigor, novelty, and practical impact.",
-          "url": "https://x.com/robert_lauko/status/2084753655413006737"
+          "title": "@kimmonismus: OpenAI vs. Anthropic Engineer Code Bench Escalation",
+          "body": "Inside rivalry between OpenAI and Anthropic engineers escalates as developers showcase competing benchmarks and harness tests comparing GPT-5.6 Sol against Anthropic's Fable environment.",
+          "url": "https://x.com/kimmonismus/status/2086196589261898141"
         },
         {
-          "tag": "hot",
-          "title": "@elonmusk: Mathematical Constants & Imaginary Powers",
-          "body": "Elon Musk shares Euler's Identity, reflecting on how fundamental constants e, pi, and imaginary numbers connect across geometry and continuous growth mathematics.",
-          "url": "https://x.com/elonmusk/status/2086327350543720548"
+          "tag": "new",
+          "title": "@flyarcher: Archer Acquires Wisk, SkyGrid, and Insitu to Build Autonomous Aviation Stack",
+          "body": "Archer Aviation announces major strategic acquisitions from Boeing—including autonomous aircraft developer Wisk and drone manufacturer Insitu—combining autonomous flight tech with its Zee foundation AI model for next-generation aerospace.",
+          "url": "https://x.com/flyarcher/status/2086784780952113559"
         },
         {
           "tag": "update",
-          "title": "@elonmusk: Vision to Reality Generation",
-          "body": "A succinct note on generative AI and digital creation capabilities: 'Literally what you imagine can be made real.'",
-          "url": "https://x.com/elonmusk/status/2086337315375345832"
+          "title": "@composio: Benchmarking DeepSeek V4 Flash Across Agentic Frameworks",
+          "body": "Composio evaluates DeepSeek V4 Flash across 30 multi-step agentic tasks using 4 distinct execution harnesses, finding Pi Agent to be both the most cost-effective and highest-performing framework.",
+          "url": "https://x.com/composio/status/2086814488162972027"
         }
       ]
     },
@@ -52,27 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FabrizioRomano: Ousmane Diomande Forest Medical",
-          "body": "Ousmane Diomande lands in England ahead of scheduled medical tests at Nottingham Forest as premier league transfer deadline moves accelerate.",
-          "url": "https://x.com/FabrizioRomano/status/2086528449854779633"
+          "title": "@HormuzReport: Geopolitical Standoff Extends Strait of Hormuz Timeline",
+          "body": "Iranian officials formally reject diplomatic negotiations with the US administration, outlining a strategy of ambiguity and patience while maintaining demands for asset releases and military withdrawals.",
+          "url": "https://x.com/HormuzReport/status/2086808758072840408"
+        },
+        {
+          "tag": "update",
+          "title": "@YahooFinance: AMD Projects $200B Server CPU Market by 2030",
+          "body": "Yahoo Finance highlights AMD executive forecasts pointing to massive expansion in data center compute demand, projecting the global server CPU TAM to exceed $200 billion before the end of the decade.",
+          "url": "https://x.com/YahooFinance/status/2081865966355612116"
         },
         {
           "tag": "new",
-          "title": "@Novig: Nationwide Launch of Sports Prediction Exchange",
-          "body": "Novig officially launches nationwide in the US, opening a commission-free sports trading platform operating on prediction market infrastructure.",
+          "title": "@Novig: US Nationwide Launch of Sports Prediction Exchange",
+          "body": "Novig officially launches nationwide in the US, providing sports trading enthusiasts with a commission-free prediction market exchange platform.",
           "url": "https://x.com/Novig/status/2084670867930263820"
         },
         {
           "tag": "update",
-          "title": "@BlueRoguesBTC: The HODL Paradox in Crypto",
-          "body": "A market reflection on digital asset management: while crypto culture effectively teaches accumulation and long-term holding, it rarely equips investors with structured exit strategies.",
-          "url": "https://x.com/BlueRoguesBTC/status/2086247359063773570"
+          "title": "@KalshiFC: Harry Kane Leads Ballon d'Or Odds on Prediction Markets",
+          "body": "Kalshi prediction market probability data shows Harry Kane surging to a 59% favorite for the upcoming Ballon d'Or, outpacing Lamine Yamal and Kylian Mbappé.",
+          "url": "https://x.com/KalshiFC/status/2086520081920504115"
         },
         {
-          "tag": "update",
-          "title": "@APompliano: Macro Market Bull Data",
-          "body": "Anthony Pompliano highlights macro indicator trends suggesting sustained equity and digital asset momentum despite widespread economic skepticism.",
-          "url": "https://x.com/APompliano/status/2072700255024373779"
+          "tag": "hot",
+          "title": "@WinsLFC: Jeff Bezos Explores Major Investment in Football Ownership",
+          "body": "Reports detail Jeff Bezos acquiring a 30%+ stake in Liverpool FC with ambitious plans to support major squad transfers and expansion.",
+          "url": "https://x.com/WinsLFC/status/2086772848941572391"
         }
       ]
     },
@@ -82,33 +94,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@everymovieplug: Tobey Maguire's 156-Take Spider-Man Catch",
-          "body": "Film history detail notes that Tobey Maguire spent 16 hours and 156 takes executing the famous cafeteria tray catch scene in Spider-Man completely practical without CGI.",
-          "url": "https://x.com/everymovieplug/status/2086521402463510971"
-        },
-        {
-          "tag": "update",
-          "title": "@Rainonnmeee: Smallpox Vaccine Scar Physiology",
-          "body": "A scientific breakdown of why historical smallpox vaccinations left distinctive circular scars, explaining the bifurcated needle technique and localized skin immune reaction.",
-          "url": "https://x.com/Rainonnmeee/status/2086324216220336276"
-        },
-        {
-          "tag": "update",
-          "title": "@Deltissd24: Dakota Fanning's First Award Moment",
-          "body": "A retrospective clip of seven-year-old Dakota Fanning accepting her first major acting award for 'I Am Sam', standing on a box to reach the microphone.",
+          "title": "@Deltissd24: Viral Hollywood Retrospective of Dakota Fanning's First Award",
+          "body": "A nostalgic film clip resurfaces showing seven-year-old Dakota Fanning receiving her first major acting award for 'I Am Sam', standing on a stool while presenter Orlando Bloom held her at the microphone.",
           "url": "https://x.com/Deltissd24/status/2086247705303802077"
         },
         {
-          "tag": "update",
-          "title": "@Tiana_Celine_23: Maleficent Casting Backstory",
-          "body": "Angelina Jolie reveals her daughter Vivienne was cast as young Aurora in Maleficent simply because she was the only child actor not terrified by Jolie in full costume.",
-          "url": "https://x.com/Tiana_Celine_23/status/2086284995291959515"
+          "tag": "new",
+          "title": "@muellerberndt: Open Proof Project Uses Lean 4 for Spacetime & Quantum Physics",
+          "body": "Bernhard Mueller launches OPH, an open auditable initiative inviting physics and formal logic contributors to verify Lean 4 proofs modeling observer constraints on spacetime and quantum mechanics.",
+          "url": "https://x.com/muellerberndt/status/2079877767416709231"
         },
         {
           "tag": "update",
-          "title": "@yankeedraft: Nap Marks vs Sleep Physiology",
-          "body": "A viral discussion exploring why daytime naps often leave pronounced mattress skin impressions compared to overnight sleep, tied to sleep stage movement frequency.",
-          "url": "https://x.com/yankeedraft/status/2086338970988712141"
+          "title": "@fw_kulture: Cinema Craft Comparison of 35MM vs. IMAX Formats",
+          "body": "Film enthusiasts highlight visual frame differences between native 35mm film stock and expanded IMAX ratio presentations in modern blockbuster cinematography.",
+          "url": "https://x.com/fw_kulture/status/2086714002533429377"
+        },
+        {
+          "tag": "hot",
+          "title": "@TheFigen_: Viral Movie Extra Blooper Trend",
+          "body": "A viral comedy clip captures a hilarious film background extra attempting to act natural while accidentally staring straight into the camera lens during a take.",
+          "url": "https://x.com/TheFigen_/status/2086492477750497785"
+        },
+        {
+          "tag": "update",
+          "title": "@firstwefeast: Daniel Radcliffe Tackles Spicy Wings on Hot Ones",
+          "body": "Actor Daniel Radcliffe takes on the famous 'Da Bomb' wing challenge on First We Feast, sharing behind-the-scenes stories from his theater and screen career.",
+          "url": "https://x.com/firstwefeast/status/2081831995055706602"
         }
       ]
     }
