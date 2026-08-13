@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Wednesday, August 12th, 2026",
+  "date": "Thursday, August 13th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Next-Gen Model Progress:</strong> Elon Musk announced Grok 4.7 training is complete with a 3-4 week launch target, xAI released Grok Voice Think Fast 2.0, and Qwen confirmed its 27B model drops this week.",
-    "<strong>Developer Tooling Expansion:</strong> OpenAI delivered native Linux support for ChatGPT Desktop and Codex, while ZCode celebrated reaching 1 million users by resetting coding usage limits.",
-    "<strong>Model Efficiency Benchmarks:</strong> Industry analysis highlighted how 1.5T parameter models match 10T frontier architectures, significantly lowering production inference costs.",
-    "<strong>Macro & Policy Debates:</strong> Commentators discussed rising H-1B visa backlogs affecting 1.2 million high-skilled workers and ongoing risk-management strategies.",
-    "<strong>Sports & Media Highlights:</strong> Harry Kane's Ballon d'Or odds hit a record 60% on prediction markets, while Bayern Munich installed anti-spying privacy screens at training grounds."
+    "<strong>Linux Developer Workflows:</strong> OpenAI released preview versions of the ChatGPT desktop application and Codex integration natively for Linux environments.",
+    "<strong>Enterprise AI Protocol Expansion:</strong> Box launched an official Model Context Protocol (MCP) server, enabling secure AI agent access to governed enterprise files.",
+    "<strong>Capital Markets & Secondary Sales:</strong> Reports indicate Anthropic is designing an innovative employee stock sale framework following its upcoming public debut.",
+    "<strong>Autonomous Inference & Agent Harnesses:</strong> Hardware and platform providers, including DigitalOcean and NVIDIA, unveiled specialized execution platforms tailored for long-horizon AI agent workloads.",
+    "<strong>Entertainment & Culture Highlights:</strong> Previews for major 2026 feature films including 'Verity' and 'Spider-Man: Brand New Day' generated widespread audience engagement."
   ],
   "sections": [
     {
@@ -16,39 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Grok 4.7 Model Development Timeline",
-          "body": "Elon Musk announced that Grok 4.7 has completed initial training and will ship in 3-4 weeks, promising significant performance upgrades over version 4.6.",
-          "url": "https://x.com/elonmusk/status/2087604711767896527"
-        },
-        {
-          "tag": "new",
-          "title": "@QwenDevs: Qwen 27B Model Release Update",
-          "body": "The Qwen developer team confirmed that the upcoming Qwen 27B model will launch this week, expanding open-weights options for developers.",
-          "url": "https://x.com/QwenDevs/status/2087154835741364507"
-        },
-        {
-          "tag": "update",
-          "title": "@thsottiaux: OpenAI Codex & ChatGPT Desktop Native Linux Release",
-          "body": "OpenAI expanded its desktop ecosystem by shipping native Linux support for Codex and ChatGPT desktop clients, bringing AI coding tools to Linux workstations.",
+          "title": "@thsottiaux: ChatGPT & Codex Desktop Apps Arrive on Linux",
+          "body": "OpenAI previewed official ChatGPT desktop application binaries for Linux environments, bringing global shortcuts, native file integration, and local Codex developer workflows.",
           "url": "https://x.com/thsottiaux/status/2087254026232775052"
         },
         {
-          "tag": "hot",
-          "title": "@SpaceXAI: Grok Voice Think Fast 2.0 Announcement",
-          "body": "xAI unveiled Grok Voice Think Fast 2.0, introducing enhanced conversational reasoning, lower latency, and higher speech transcription accuracy.",
-          "url": "https://x.com/SpaceXAI/status/2082529280341553209"
+          "tag": "new",
+          "title": "@Box: Box Launches Official Model Context Protocol (MCP) Server",
+          "body": "Box released its enterprise Model Context Protocol server, allowing any AI assistant to securely query corporate documents while strictly enforcing existing organization permissions.",
+          "url": "https://x.com/Box/status/2081772011844682237"
         },
         {
           "tag": "update",
-          "title": "@jun_song: Frontier AI Model Efficiency & Parameter Scaling Analysis",
-          "body": "AI researcher Jun Song analyzes parameter efficiency across DeepSeek-V4-Pro (1.6T) and Grok-4.6 (1.5T), highlighting how smaller architectures match 10T-parameter models at lower cost.",
-          "url": "https://x.com/jun_song/status/2087576927343411403"
+          "title": "@digitalocean: Serverless Qwen 3.8 2.4T on NVIDIA B300 GPUs",
+          "body": "DigitalOcean launched serverless inference for Alibaba Cloud's Qwen 3.8 model (2.4T parameter variant) with a 1M token context window powered by NVIDIA HGX B300 hardware.",
+          "url": "https://x.com/digitalocean/status/2087557468226265126"
         },
         {
           "tag": "new",
-          "title": "@ZixuanLi_: ZCode Hits 1 Million Users & Limit Reset",
-          "body": "ZCode crossed 1 million active users, prompting GLM to reset daily usage quotas across all coding subscription tiers to celebrate the milestone.",
-          "url": "https://x.com/ZixuanLi_/status/2087030721739186373"
+          "title": "@NVIDIAEU: Nemotron 3.5 Lightning for Long-Running AI Agents",
+          "body": "NVIDIA detailed Nemotron 3.5 Lightning, a model optimized specifically for multi-step agent execution, tool verification, and autonomous task delegation.",
+          "url": "https://x.com/NVIDIAEU/status/2087310775002017967"
+        },
+        {
+          "tag": "update",
+          "title": "@coderabbitai: Granular Review Profiles for Automated Code Review",
+          "body": "CodeRabbit introduced customizable review profiles (Quiet, Chill, and Assertive) to give developer teams control over automated pull request feedback density.",
+          "url": "https://x.com/coderabbitai/status/2075353977575883020"
+        },
+        {
+          "tag": "hot",
+          "title": "@TonyZ278264: Recreating Gemini Luminous UI in SwiftUI via Grok 4.5",
+          "body": "Developer Tony Z demonstrated a complete native SwiftUI recreation of Google's Gemini Luminous UI, built in 3 days using Grok 4.5 without prior iOS development experience.",
+          "url": "https://x.com/TonyZ278264/status/2087357127480213560"
         }
       ]
     },
@@ -58,27 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@KeithMcCullough: Macro Investing Blueprint & Process Review",
-          "body": "Macro strategist Keith McCullough published a comprehensive 52-page guide detailing risk-management and portfolio allocation frameworks for volatile markets.",
-          "url": "https://x.com/KeithMcCullough/status/1846614136303559130"
+          "title": "@theinformation: Anthropic Explores Employee Secondary Sales Structure",
+          "body": "Reports indicate Anthropic is structuring a novel secondary equity program for early employees following its public offering to balance talent retention with liquidity.",
+          "url": "https://x.com/theinformation/status/2087115400664474075"
         },
         {
           "tag": "new",
-          "title": "@iMiaSanMia: Bayern Munich Installs Anti-Spying Privacy Screens",
-          "body": "Bayern Munich installed specialized privacy shielding around its Säbener Straße practice facility at manager Vincent Kompany's request to protect tactical sessions.",
-          "url": "https://x.com/iMiaSanMia/status/2087458733202788608"
+          "title": "@AlphaSenseInc: SuperAnalyst Multi-Step Research Agent Debut",
+          "body": "AlphaSense introduced SuperAnalyst, an autonomous AI research agent designed to perform multi-step market intelligence, company analysis, and automated monitoring.",
+          "url": "https://x.com/AlphaSenseInc/status/2065175840304865517"
         },
         {
           "tag": "update",
-          "title": "@MontyBennett: High-Skilled Immigration & Green Card Backlog Debates",
-          "body": "Analysis of US immigration policy highlights growing backlogs projected to hit 2 million by 2030 for high-skilled H-1B visa holders and tech talent.",
-          "url": "https://x.com/MontyBennett/status/2086938900396724286"
+          "title": "@APompliano: Macro Indicators Support Sustained Bull Market",
+          "body": "Investor Anthony Pompliano highlighted market indicators suggesting sustained upside momentum across broader equity and digital asset markets.",
+          "url": "https://x.com/APompliano/status/2072700255024373779"
         },
         {
-          "tag": "hot",
-          "title": "@KalshiSports: Ballon d'Or Odds Spike to 60% for Harry Kane",
-          "body": "Prediction market data on Kalshi shows Harry Kane's implied probability of winning the Ballon d'Or soaring to a record 60% after dominant goalscoring performances.",
-          "url": "https://x.com/KalshiSports/status/2087543566117503392"
+          "tag": "new",
+          "title": "@castle_tech_: Modeling Corporate Exposure to Macro Events",
+          "body": "Castle Technologies published a macro framework detailing how modern enterprises operate as implicit financial wrappers around underlying energy commodities and tax credits.",
+          "url": "https://x.com/castle_tech_/status/2087886946525741510"
+        },
+        {
+          "tag": "update",
+          "title": "@Codie_Sanchez: Building Autonomous Middle-Market Businesses",
+          "body": "Entrepreneur Codie Sanchez shared key operational frameworks used to scale cash-flowing enterprises that run independently of day-to-day founder management.",
+          "url": "https://x.com/Codie_Sanchez/status/2086130468802678822"
         }
       ]
     },
@@ -88,27 +94,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@TomKlingenstein: Reflections on Moral Foundations and National Identity",
-          "body": "An essay exploring the Declaration of Independence as a unifying moral framework for modern governance and public discourse.",
-          "url": "https://x.com/TomKlingenstein/status/2085183598408163589"
-        },
-        {
-          "tag": "new",
-          "title": "@Variety: Sadie Sink Comments on Spider-Man Set Experience",
-          "body": "Actress Sadie Sink discusses joining the cast of 'Spider-Man: Brand New Day' and collaborating with the production crew in a new Variety interview.",
-          "url": "https://x.com/Variety/status/2081951298698740177"
+          "title": "@TheCinesthetic: First Look at Hathaway & Johnson in 'Verity' (2026)",
+          "body": "Initial production stills were released for the upcoming feature film adaptation of Colleen Hoover's psychological thriller 'Verity', starring Anne Hathaway and Dakota Johnson.",
+          "url": "https://x.com/TheCinesthetic/status/2087660379828797797"
         },
         {
           "tag": "update",
-          "title": "@realBrandonGill: Perspectives from Congressional Leadership",
-          "body": "Representative Brandon Gill reflects on taking office as the youngest Republican member of Congress and legislative priorities for the upcoming session.",
-          "url": "https://x.com/realBrandonGill/status/2076755083946062255"
+          "title": "@Variety: Sadie Sink Joins 'Spider-Man: Brand New Day' Cast",
+          "body": "Actress Sadie Sink discussed joining Marvel Studios' upcoming 'Spider-Man: Brand New Day', sharing insights into production and working on set.",
+          "url": "https://x.com/Variety/status/2081951298698740177"
         },
         {
           "tag": "hot",
-          "title": "@jaymefranklin16: Viral Moment Sparks Social Media Conversation",
-          "body": "A lighthearted clarifying post addressing online speculation quickly went viral across X timeline feeds.",
-          "url": "https://x.com/jaymefranklin16/status/2087396416670912601"
+          "title": "@Vfynn_: Zlatan Ibrahimovic Comments on Transfer Market Valuations",
+          "body": "Zlatan Ibrahimovic offered commentary on escalating Premier League transfer fees as Paris Saint-Germain evaluates mega-offers for emerging talent.",
+          "url": "https://x.com/Vfynn_/status/2087819921895956980"
+        },
+        {
+          "tag": "update",
+          "title": "@Starlink: Constellation Expansion & Enterprise Latency Upgrades",
+          "body": "Starlink highlighted ongoing orbital constellation deployments, achieving lower latency for global streaming, remote enterprise operations, and video communications.",
+          "url": "https://x.com/Starlink/status/2080392509671534884"
+        },
+        {
+          "tag": "new",
+          "title": "@books_bros_pod: Exploring Colin Woodard's 'American Nations'",
+          "body": "A deep dive into cultural geography breaks down Colin Woodard's historical framework mapping North America into eleven distinct regional cultures.",
+          "url": "https://x.com/books_bros_pod/status/2086907942536679660"
         }
       ]
     }
