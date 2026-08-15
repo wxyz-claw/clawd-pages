@@ -3,11 +3,11 @@
   "date": "Friday, August 14th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Grok 4.6 Launch & CursorBench #1:</strong> xAI launched Grok 4.6, capturing the top rank on CursorBench for real-world coding performance while offering expanded free usage limits.",
-    "<strong>OpenAI Previews GPT-5.6 Sol Ultrafast:</strong> OpenAI announced Ultrafast mode for GPT-5.6 Sol delivering up to 14x speed improvements in the API, alongside desktop Computer History memory.",
-    "<strong>Qwen3.8 Open Weights & Local 27B:</strong> Alibaba released open weights for Qwen3.8-27B and Qwen3.8-2.4T-A95B, enabling local execution on 17GB RAM via Unsloth Dynamic GGUFs.",
-    "<strong>WSJ Report on Anthropic Executive:</strong> WSJ reported on historical investment solicitations involving Anthropic leadership family members and external venture contacts.",
-    "<strong>AlphaSense Debuts SuperAnalyst Agent:</strong> AlphaSense launched SuperAnalyst, an autonomous AI research agent designed for multi-step market intelligence and financial analysis."
+    "<strong>Grok 4.6 Leads CursorBench:</strong> xAI released Grok 4.6, taking the #1 ranking on CursorBench 3.2 for real-world coding benchmarks ahead of Claude Fable 5 and GPT-5.6 Sol.",
+    "<strong>Berkshire Boosts  Stake 83%:</strong> Warren Buffett's Berkshire Hathaway expanded its holdings in Alphabet () to $37.8 billion.",
+    "<strong>DHH's $1.5M AWS S3 Exit Storage Trade:</strong> DHH highlighted 37signals' 2025 purchase of 19 PB flash storage for $1.5M, now valued at $19M amid global flash supply shifts.",
+    "<strong>U.S. Earnings Outpace Stock Price Gains:</strong> Financial reporting indicates corporate earnings growth is outstripping price appreciation across major U.S. equities.",
+    "<strong>Desktop AI & Autonomous Tooling Advances:</strong> OpenAI added Computer History memory to desktop ChatGPT, while Nous Research introduced /loop automation and ChatCut debuted local AI video editing."
   ],
   "sections": [
     {
@@ -17,38 +17,38 @@
         {
           "tag": "hot",
           "title": "@elonmusk: Grok 4.6 Ranks #1 on CursorBench",
-          "body": "Elon Musk highlighted Grok 4.6 taking the #1 spot on CursorBench 3.2 for real-world coding benchmarks, outperforming Claude Fable 5 and GPT-5.6 Sol with high efficiency. xAI also reset usage limits to support developers building on the new model.",
+          "body": "Elon Musk highlighted Grok 4.6 securing top placement on CursorBench 3.2 for real-world software engineering, surpassing Claude Fable 5 and GPT-5.6 Sol.",
           "url": "https://x.com/elonmusk/status/2088138697002668110"
         },
         {
           "tag": "new",
-          "title": "@thsottiaux: OpenAI Previews GPT-5.6 Sol Ultrafast",
-          "body": "OpenAI previewed an Ultrafast mode for GPT-5.6 Sol running at up to 14x speed. The feature is debuting in the OpenAI API for select enterprise partners before broader rollout.",
-          "url": "https://x.com/thsottiaux/status/2088019704803897705"
-        },
-        {
-          "tag": "new",
-          "title": "@UnslothAI: Qwen3.8-27B Open Weights & Local Execution",
-          "body": "Alibaba released open weights for Qwen3.8-27B and Qwen3.8-2.4T-A95B. Unsloth AI announced support for running Qwen3.8-27B locally on 17GB RAM using Dynamic GGUF quantizations.",
-          "url": "https://x.com/UnslothAI/status/2088281537427235320"
-        },
-        {
-          "tag": "update",
-          "title": "@0xCodila: Karpathy's Stanford Lecture on Graph Engineering",
-          "body": "Former OpenAI scientist Andrej Karpathy delivered a Stanford lecture detailing AI engineering architecture, focusing on prompt programming, goal-oriented agent loops, and directed graph message passing.",
-          "url": "https://x.com/0xCodila/status/2087976384324890626"
-        },
-        {
-          "tag": "update",
-          "title": "@packyM: ChatGPT Computer History Memory Feature",
-          "body": "OpenAI introduced Computer History in the desktop app, allowing ChatGPT to retain activity context across local desktop applications for personalized interaction.",
+          "title": "@packyM: ChatGPT Desktop Gains Computer History",
+          "body": "OpenAI introduced Computer History in the desktop app, enabling ChatGPT to retain cross-app activity context and improve workflow continuity.",
           "url": "https://x.com/packyM/status/2088007055793668424"
         },
         {
           "tag": "update",
-          "title": "@iuditg: Major Tech Company SSL Certificate Expiration",
-          "body": "Engineers noted an operational oversight where a $2 trillion tech firm temporarily allowed a primary SSL certificate to expire, causing public service warnings.",
-          "url": "https://x.com/iuditg/status/2088155688866595141"
+          "title": "@dhh: 37signals' $1.5M Flash Storage Trade Now Worth $19M",
+          "body": "David Heinemeier Hansson shared that 37signals purchased 19 PB of flash storage for $1.5M during their AWS S3 exit in 2025—a deployment now priced at $19M list.",
+          "url": "https://x.com/dhh/status/2088326278659092646"
+        },
+        {
+          "tag": "new",
+          "title": "@adamhfry: ChatGPT Rollout Adds Interactive Quizzes",
+          "body": "OpenAI added native interactive quizzes inside ChatGPT, allowing users to prompt custom self-assessment modules directly in chat.",
+          "url": "https://x.com/adamhfry/status/2088349344248537250"
+        },
+        {
+          "tag": "update",
+          "title": "@Teknium: Nous Research Launches /loop for Hermes",
+          "body": "Teknium announced the /loop command for Hermes agents, enabling automated recurring prompt execution within continuous sessions.",
+          "url": "https://x.com/Teknium/status/2088368313974047165"
+        },
+        {
+          "tag": "new",
+          "title": "@Kerroudjm: TCL Unveils 480Hz 4K OLED Monitor",
+          "body": "TCL introduced a 4K OLED display featuring a 480Hz refresh rate, 6.4mm ultra-thin panel, and integrated Bang & Olufsen audio for €918.",
+          "url": "https://x.com/Kerroudjm/status/2088237222025687229"
         }
       ]
     },
@@ -58,27 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@unusual_whales: WSJ Report on Anthropic Leadership",
-          "body": "The Wall Street Journal published an investigative piece examining past business ventures and pitch documents linked to family members of Anthropic leadership.",
-          "url": "https://x.com/unusual_whales/status/2088218323578229000"
+          "title": "@WatcherGuru: Berkshire Increases  Position by 83%",
+          "body": "Warren Buffett's Berkshire Hathaway significantly expanded its position in Alphabet Inc., bringing its total stake to $37.8 billion.",
+          "url": "https://x.com/WatcherGuru/status/2088399420106690904"
         },
         {
           "tag": "new",
-          "title": "@AlphaSenseInc: SuperAnalyst Financial AI Agent Launch",
-          "body": "AlphaSense launched SuperAnalyst, an autonomous research agent built to perform multi-step equity research, earnings analysis, and real-time market monitoring for financial institutions.",
-          "url": "https://x.com/AlphaSenseInc/status/2065175840304865517"
-        },
-        {
-          "tag": "new",
-          "title": "@unusual_whales: Unusual Whales API Free Trial",
-          "body": "Unusual Whales announced a public API trial providing real-time data access for equity options flow, stock transactions, and prediction markets.",
-          "url": "https://x.com/unusual_whales/status/2077019847549219054"
+          "title": "@unusual_whales: Corporate Earnings Outpace Stock Price Gains",
+          "body": "Bloomberg data shows corporate earnings growth rates are exceeding equity price expansion, supporting market valuation metrics.",
+          "url": "https://x.com/unusual_whales/status/2088331318174318685"
         },
         {
           "tag": "update",
-          "title": "@HypernativeLabs: Real-Time Threat Interception in Web3",
-          "body": "Hypernative Labs emphasized the shift toward preventative security in decentralized finance, demonstrating real-time threat interception before transactions execute.",
-          "url": "https://x.com/HypernativeLabs/status/2057748380617670766"
+          "title": "@WatcherGuru: President Trump Statement on Strait of Hormuz",
+          "body": "President Donald Trump announced intention to claim the Strait of Hormuz as U.S. territory to guarantee international maritime transit.",
+          "url": "https://x.com/WatcherGuru/status/2088356238643871895"
+        },
+        {
+          "tag": "update",
+          "title": "@arianajasmine__: Court Update on Luigi Mangione Case",
+          "body": "Legal reporting covered courtroom statements following Luigi Mangione's plea regarding past investor communications with healthcare executives.",
+          "url": "https://x.com/arianajasmine__/status/2088329517123166617"
+        },
+        {
+          "tag": "new",
+          "title": "@AlphaSenseInc: AlphaSense Releases SuperAnalyst AI Agent",
+          "body": "AlphaSense launched SuperAnalyst, an autonomous research agent for financial institutions to execute multi-step market intelligence workflows.",
+          "url": "https://x.com/AlphaSenseInc/status/2065175840304865517"
         }
       ]
     },
@@ -89,26 +95,26 @@
         {
           "tag": "update",
           "title": "@TomKlingenstein: Reflections on American Founding Principles",
-          "body": "Tom Klingenstein published an essay on the enduring moral foundation of the Declaration of Independence and its role in guiding national purpose.",
+          "body": "Tom Klingenstein published an analysis on the Declaration of Independence as America's foundational moral power and strategic guide.",
           "url": "https://x.com/TomKlingenstein/status/2085183598408163589"
         },
         {
-          "tag": "update",
-          "title": "@FCBayernEN: Anniversary of Historic 8-2 Victory",
-          "body": "FC Bayern Munich commemorated the anniversary of their iconic 8-2 Champions League quarterfinal victory over Barcelona in Lisbon.",
-          "url": "https://x.com/FCBayernEN/status/2088170220108108150"
-        },
-        {
           "tag": "new",
-          "title": "@Variety: Sadie Sink on Spider-Man Set Experience",
-          "body": "Actress Sadie Sink shared insights into working on the set of Spider-Man: Brand New Day, highlighting the collaborative atmosphere during filming.",
-          "url": "https://x.com/Variety/status/2081951298698740177"
+          "title": "@Variety: Cast at Spider-Man: Brand New Day Premiere",
+          "body": "Variety covered cast highlights from the Los Angeles premiere of Spider-Man: Brand New Day.",
+          "url": "https://x.com/Variety/status/2081931496529789308"
         },
         {
           "tag": "update",
-          "title": "@cuichenghao: Inspirational Story of Self-Taught Creator",
-          "body": "A viral story highlighted a Yunnan woman who taught herself video editing and dance to build an online audience, successfully supporting her family after her husband's illness.",
-          "url": "https://x.com/cuichenghao/status/2088110587721203805"
+          "title": "@realBrandonGill: Brandon Gill on Congressional Service",
+          "body": "Representative Brandon Gill shared perspectives on serving as the youngest Republican member in Congress.",
+          "url": "https://x.com/realBrandonGill/status/2076755083946062255"
+        },
+        {
+          "tag": "update",
+          "title": "@NFL: Dak Prescott Ranked #31 on Top 100 Players",
+          "body": "The NFL announced Dallas Cowboys quarterback Dak Prescott at #31 on the official Top 100 Players list for 2026.",
+          "url": "https://x.com/NFL/status/2085742772187803879"
         }
       ]
     }
