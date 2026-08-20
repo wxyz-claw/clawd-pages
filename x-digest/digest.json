@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Wednesday, August 19th, 2026",
+  "date": "Thursday, August 20th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Moderna Phase 3 Cancer Vaccine Breakout:</strong> Moderna ($MRNA) stock skyrocketed over +110% following positive Phase 3 results showing its personalized mRNA melanoma cancer vaccine significantly reduces disease recurrence.",
-    "<strong>OpenAI Zero Data Retention Commitment:</strong> OpenAI reaffirmed Zero Data Retention for enterprise frontier models while previewing Private Safety Processing to enforce safety filters without server-side prompt logging.",
-    "<strong>Unitree Robotics $20B IPO Debut:</strong> Humanoid robotics maker Unitree Robotics debuted on public markets with a valuation exceeding $20 billion, triggering intense debate over humanoid commercialization timelines.",
-    "<strong>Terminal-Code VS Code CLI Launch:</strong> Developers unveiled terminal-code, bringing native VS Code extension compatibility and SSH integration directly into command-line terminal environments.",
-    "<strong>OpenCode Go Quota & Model Upgrades:</strong> OpenCode expanded usage limits for Muse Spark 1.2 and Hy3 models on OpenCode Go subscriptions, enabling sustained high-effort reasoning workflows."
+    "<strong>OpenAI Astra Release Imminent:</strong> OpenAI reported to employees that frontier multimodal model Astra will release within weeks featuring real-world task execution demos.",
+    "<strong>Tesla Cybercab & Robotaxi v15 Acceleration:</strong> JPMorgan's Tesla report highlights management confidence in Cybercab mass production, targeting fleet expansion in late 2026 with FSD v15.",
+    "<strong>Walmart Earnings Reveal Resilient US Consumer:</strong> Walmart (WMT) posted +3.4% comp sales growth, confirming stable consumer demand despite lower average basket spend.",
+    "<strong>Galbot ET1 Humanoid Robot Debut:</strong> Galaxy General Robotics unveiled its ET1 bipedal humanoid robot at the Beijing Robotics Conference, demonstrating smooth locomotion and manipulation.",
+    "<strong>CZ Shares Voluntarily Facing US Proceedings:</strong> Changpeng Zhao (CZ) publicly detailed why he chose to resolve US regulatory cases directly rather than relying on non-extradition status."
   ],
   "sections": [
     {
@@ -16,39 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@OpenAI: Zero Data Retention & Private Safety Processing",
-          "body": "OpenAI reaffirmed its commitment to Zero Data Retention for enterprise frontier models while introducing Private Safety Processing, allowing real-time safety enforcement without server-side prompt logging.",
-          "url": "https://x.com/OpenAI/status/2090165328290701800"
+          "title": "@synthwavedd: OpenAI Prepares 'Astra' Model Launch",
+          "body": "OpenAI informed employees it plans to launch frontier multimodal model Astra within weeks, showcasing live demonstrations of real-world task execution and autonomous agent interactions.",
+          "url": "https://x.com/synthwavedd/status/2090438712610242609"
         },
         {
           "tag": "hot",
-          "title": "@RobKnight__: Terminal-Code Brings VS Code to Terminal CLI",
-          "body": "Developer Rob Pruzan released terminal-code, a CLI tool that runs VS Code environments natively inside terminal sessions over SSH with full extension compatibility and theme synchronization.",
-          "url": "https://x.com/RobKnight__/status/2090106928668041363"
+          "title": "@alexgetmancom: Codex Quota & Tier Adjustments Analyzed",
+          "body": "Developer analytics platform NerfTrack published telemetry suggesting adjustments to Codex API limits on ChatGPT Plus tiers, sparking discussions around high-volume developer usage.",
+          "url": "https://x.com/alexgetmancom/status/2090432031578571137"
         },
         {
           "tag": "new",
-          "title": "@thdxr: OpenCode Expands Muse Spark 1.2 & Hy3 Quotas",
-          "body": "OpenCode announced 8x usage capacity for Hy3 and expanded access to Muse Spark 1.2 on OpenCode Go subscriptions, enabling sustained high-effort reasoning runs.",
+          "title": "@CryptoDoggyCN: Galbot ET1 Humanoid Robot Debuts in Beijing",
+          "body": "Galaxy General Robotics presented its ET1 bipedal humanoid robot at the World Robot Conference in Beijing, highlighting fluid motion control and preparation for industrial application.",
+          "url": "https://x.com/CryptoDoggyCN/status/2090372011931668673"
+        },
+        {
+          "tag": "update",
+          "title": "@CMhOeNnExY: LLM Prompt Caching Architecture Explained",
+          "body": "AI infrastructure engineers published a breakdown of KV cache reuse and prompt caching, demonstrating how prefix matching reduces latency and GPU compute cost in remote agent workflows.",
+          "url": "https://x.com/CMhOeNnExY/status/2090381293196611730"
+        },
+        {
+          "tag": "update",
+          "title": "@yanhua1010: Claude Code System Persona & Execution Modes",
+          "body": "Developers shared operational insights on Claude Code output styles (Default vs Proactive), detailing how system prompt persona switches optimize code refactoring vs automated test writing.",
+          "url": "https://x.com/yanhua1010/status/2090249970159157752"
+        },
+        {
+          "tag": "new",
+          "title": "@thdxr: OpenRouter Expands High-Reasoning Token Capacity",
+          "body": "OpenRouter announced expanded token quotas for Muse Spark and Hy3 models following its acquisition update, boosting high-effort reasoning capacity for developer workloads.",
           "url": "https://x.com/thdxr/status/2090162219275207009"
-        },
-        {
-          "tag": "update",
-          "title": "@goan999999: Codex 5.6 Optimization & Profile Configuration",
-          "body": "Developers shared essential configuration strategies for Codex 5.6 using ~/.codex/config.toml, detailing custom reasoning effort tiers, task-specific profiles, and lifecycle hooks.",
-          "url": "https://x.com/goan999999/status/2090076819815026918"
-        },
-        {
-          "tag": "update",
-          "title": "@huxlab: Stanford 2.5-Hour LLM Architecture Masterclass",
-          "body": "A popular Stanford lecture breaking down LLM engineering end-to-end went viral, covering tokenization, BPE algorithms, Transformer layers, and pre-training to next-token decoding pipelines.",
-          "url": "https://x.com/huxlab/status/2089918735318757675"
-        },
-        {
-          "tag": "new",
-          "title": "@bstaples: Detailed GitHub to GitLab Repository Migration Guide",
-          "body": "Bill Staples published a comprehensive migration guide for engineering teams transitioning source control repositories, CI/CD pipelines, and access controls from GitHub to GitLab.",
-          "url": "https://x.com/bstaples/status/2089759758400237751"
         }
       ]
     },
@@ -58,33 +58,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@_FORAB: Moderna Personalized mRNA Cancer Vaccine Succeeds in Phase 3",
-          "body": "Moderna ($MRNA) stock rallied over +110% as Phase 3 clinical trial results confirmed its personalized mRNA melanoma vaccine, co-developed with Merck, substantially prevents disease recurrence.",
-          "url": "https://x.com/_FORAB/status/2090051286347698207"
+          "title": "@XieJackie: JPMorgan Tesla Report Highlights Cybercab & FSD v15",
+          "body": "JPMorgan released a Tesla research note detailing management's confidence in scaling Cybercab production, projecting Robotaxi fleet expansion to accelerate in late 2026 with FSD v15 testing.",
+          "url": "https://x.com/XieJackie/status/2090363120292364353"
         },
         {
           "tag": "hot",
-          "title": "@gelunding: Unitree Robotics $20B IPO Sparks Valuation Debate",
-          "body": "Unitree Robotics went public with a valuation exceeding $20 billion, drawing intense scrutiny over market expectations for commercial humanoid robots vs current manufacturing unit economics.",
-          "url": "https://x.com/gelunding/status/2089952080241050041"
+          "title": "@Franktradinglog: Walmart (WMT) Earnings Breakdown",
+          "body": "Financial analysts dissected Walmart's earnings results, noting +3.4% core comp sales growth driven by steady grocery demand, reflecting a resilient US consumer adapting to pricing pressures.",
+          "url": "https://x.com/Franktradinglog/status/2090421311457886262"
         },
         {
           "tag": "update",
-          "title": "@etrade: Morgan Stanley E*TRADE Launches On-Platform Crypto Trading",
-          "body": "E*TRADE from Morgan Stanley opened crypto asset trading for platform users, offering integrated portfolio tracking, expert market insights, and low-cost execution.",
-          "url": "https://x.com/etrade/status/2070151677773242440"
+          "title": "@web3annie: CZ Addresses Voluntary US Settlement",
+          "body": "Binance co-founder Changpeng Zhao (CZ) publicly discussed his decision to resolve US regulatory proceedings directly, emphasizing long-term stability for BNB holders and industry compliance.",
+          "url": "https://x.com/web3annie/status/2090363393920385417"
         },
         {
           "tag": "update",
-          "title": "@_FORAB: Baidu Netdisk Referral Rewards Trigger Tax Reporting Issues",
-          "body": "Baidu Netdisk users reported receiving tax filing notifications for 89.1 RMB under income tax declarations after sharing referral membership links.",
-          "url": "https://x.com/_FORAB/status/2089914194267373792"
+          "title": "@pritipatelfgoo: Price-Volume Alignment Quant Factor Analysis",
+          "body": "Quantitative traders shared backtest data on Price-Volume Alignment (PVA) factors, illustrating how volume-price divergence signals short-term market mean reversion.",
+          "url": "https://x.com/pritipatelfgoo/status/2090415206438735962"
         },
         {
           "tag": "new",
-          "title": "@crypto_daha: Long-Term Real Estate Asset Allocation Case Study",
-          "body": "A financial retrospective analyzed a 2002 mortgage-backed residential property purchase in Shanghai that appreciated 9x over 17 years, illustrating long-term real estate wealth creation.",
-          "url": "https://x.com/crypto_daha/status/2089960805135732977"
+          "title": "@williamlong: Box Office Success for Independent Animated Feature",
+          "body": "Industry box office trackers reported independent animated film 'Niu Lai' surpassing 21M RMB in initial receipts, with projections forecasting final distribution earnings near 135M RMB.",
+          "url": "https://x.com/williamlong/status/2090436279251132782"
         }
       ]
     },
@@ -94,33 +94,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@iMiaSanMia: Harry Kane Praises Vincent Kompany's Impact at Bayern",
-          "body": "Bayern Munich striker Harry Kane highlighted Vincent Kompany's managerial approach, crediting the manager with elevating his tactical output and offensive movement.",
-          "url": "https://x.com/iMiaSanMia/status/2090169103872917673"
+          "title": "@FabrizioRomano: João Palhinha Agrees to Benfica Transfer",
+          "body": "Fabrizio Romano reported a verbal agreement between FC Bayern and Benfica for midfielder João Palhinha in a deal valued at €14m plus €5m in performance add-ons.",
+          "url": "https://x.com/FabrizioRomano/status/2090436984019771778"
         },
         {
           "tag": "hot",
-          "title": "@WWE: Rey Fenix Spectacular Ring Entrance at WWE Event",
-          "body": "WWE shared video highlights of Rey Fenix's high-flying ring entrance, capturing widespread fan engagement across social channels.",
-          "url": "https://x.com/WWE/status/2089512639928131771"
+          "title": "@soumatheuzin: Viral Red Carpet & Public Appearances",
+          "body": "Social media users shared viral highlights from recent London media events featuring Tom Holland and Zendaya, generating widespread fan engagement.",
+          "url": "https://x.com/soumatheuzin/status/2090233879785304524"
         },
         {
           "tag": "update",
-          "title": "@wjf110: Culinary Philosophy of Cantonese White-Cut Chicken",
-          "body": "A viral culinary post explored the cultural philosophy behind Cantonese white-cut chicken, noting how unseasoned prep demands peak ingredient freshness.",
-          "url": "https://x.com/wjf110/status/2089982414659711324"
+          "title": "@iMiaSanMia: Football Brand Valuation Rankings Released",
+          "body": "Brand Finance published its annual world football brand report, ranking FC Bayern Munich as the 4th most valuable football club brand globally.",
+          "url": "https://x.com/iMiaSanMia/status/2090359729134473554"
         },
         {
           "tag": "update",
-          "title": "@perfectionviera: Michael Olise & Bradley Barcola Interaction",
-          "body": "Football fans shared viral clips of Bayern's Michael Olise and PSG's Bradley Barcola during team training and media interactions.",
-          "url": "https://x.com/perfectionviera/status/2089937380283171135"
+          "title": "@Stanleysobest: Community Retail Operations at Pang Dong Lai",
+          "body": "Retailing case studies highlighted customer loyalty metrics and operational transparent practices at regional supermarket operator Pang Dong Lai.",
+          "url": "https://x.com/Stanleysobest/status/2090290405451636808"
         },
         {
           "tag": "new",
-          "title": "@BiaNeuroscience: Bia Sleep Headphones Launch Neurofeedback Tech",
-          "body": "Neuroscience hardware startup Bía announced sleep monitoring headphones utilizing real-time brainwave feedback and AI coaching to optimize sleep cycles.",
-          "url": "https://x.com/BiaNeuroscience/status/2006430451855188226"
+          "title": "@RomzyUnited: Premier League Squad Dynamics Analysis",
+          "body": "Football analysts discussed squad depth strategies and media coverage surrounding Manchester City and Everton player transfers ahead of the new season.",
+          "url": "https://x.com/RomzyUnited/status/2090186109766771079"
         }
       ]
     }
