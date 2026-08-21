@@ -1,126 +1,126 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, August 20th, 2026",
+  "date": "Friday, August 21st, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI Zero Data Retention & Private Safety:</strong> OpenAI previewed Private Safety Processing to enforce safety filters across frontier models without logging customer prompts or response content.",
-    "<strong>Terminal-Code Brings VS Code to CLI:</strong> Developers unveiled terminal-code, a CLI tool enabling native VS Code extension compatibility and terminal theme sync over SSH.",
-    "<strong>OpenCode & OpenRouter Launch Ox Alpha:</strong> OpenCode and OpenRouter introduced Ox Alpha, a 1M-context multimodal stealth model with expanded usage limits for developers.",
-    "<strong>Justin Sun Wins Court Ruling vs World Liberty:</strong> Federal judge denied World Liberty Financial's bid to force Justin Sun's multi-hundred-million-dollar lawsuit into secret arbitration.",
-    "<strong>Student Loan & Housing Cost Debates Go Viral:</strong> Detailed financial breakdowns exposed systemic interest compounding on decade-old student loans and unexpected property tax escrow surges."
+    "<strong>Claude Academy Launches & Caura MCP:</strong> Anthropic introduced Claude Academy for structured learning paths, while Caura launched single-command MCP memory for AI agent fleets.",
+    "<strong>DeepSeek v4 Flash Compute Bottleneck:</strong> OpenCode reported DeepSeek v4 Flash volume spiked 6x to 18T tokens/day before capacity limits forced a 5x price hike, leaving a 10T token/day gap.",
+    "<strong>OpenAI Releases GPT-Image-2 & Banked Quota Reset:</strong> OpenAI launched transparent image generation in ChatGPT/API and offered banked quota resets as Codex hit 20M active weekly users.",
+    "<strong>Marvell Breaks Broadcom\u2019s TPU Monopoly:</strong> Google officially announced a partnership with Marvell for custom AI chips, challenging Broadcom\u2019s historic TPU monopoly.",
+    "<strong>FIFA Issues Major Suspensions & GTA VI Netflix Special:</strong> FIFA handed down 10-match bans following the Argentina-Spain clash, while Rockstar announced a GTA VI Netflix preview for Aug 27."
   ],
   "sections": [
     {
-      "emoji": "🤖",
+      "emoji": "\ud83e\udd16",
       "title": "AI & Tech",
       "items": [
         {
           "tag": "hot",
-          "title": "@thsottiaux: OpenAI Previews Private Safety Processing for ZDR",
-          "body": "OpenAI previewed Private Safety Processing, enabling automated safety enforcement across frontier models while preserving Zero Data Retention without OpenAI personnel viewing prompt content.",
-          "url": "https://x.com/thsottiaux/status/2090173536010957128"
+          "title": "@claudeai: Claude Academy Officially Launches",
+          "body": "Anthropic released Claude Academy, offering structured, interactive learning pathways tailored for both beginners and experienced developers.",
+          "url": "https://x.com/claudeai/status/2090518650251804742"
         },
         {
           "tag": "hot",
-          "title": "@aidenybai: Terminal-Code Integrates VS Code with CLI Terminals",
-          "body": "Developer Rob Pruzan released terminal-code, a CLI utility bringing native VS Code extension support, SSH connectivity, and terminal theme synchronization into command-line environments.",
-          "url": "https://x.com/aidenybai/status/2090194135445885141"
+          "title": "@jayair: DeepSeek v4 Flash Surges to 18T Tokens/Day Before Price Hike",
+          "body": "OpenCode analysis detailed how DeepSeek v4 Flash grew 6x in 2 weeks to 18T tokens/day before GPU constraints forced a 5x peak price hike, creating a massive 10T token/day void in low-cost inference.",
+          "url": "https://x.com/jayair/status/2090596382306361380"
         },
         {
           "tag": "new",
-          "title": "@thdxr: OpenCode & OpenRouter Introduce Ox Alpha Stealth Model",
-          "body": "OpenCode expanded usage quotas for Muse Spark 1.2 and Hy3 models while joining OpenRouter to release Ox Alpha, a 1M-context multimodal model built for sustained agentic work.",
-          "url": "https://x.com/thdxr/status/2090545052783120429"
+          "title": "@thsottiaux: OpenAI Introduces Transparent Image Support in GPT-Image-2",
+          "body": "OpenAI lead Tibo announced native alpha channel transparency support for image creation across ChatGPT and the GPT-Image-2 API.",
+          "url": "https://x.com/thsottiaux/status/2090631723302469995"
         },
         {
           "tag": "update",
-          "title": "@ClaudeDevs: Claude Platform GA Release for Computer Use & Skills API",
-          "body": "Anthropic announced general availability for Computer Use, browser automation, Skills API, and Files API, enabling low-latency multi-step agentic workflows.",
-          "url": "https://x.com/ClaudeDevs/status/2090540270219567575"
+          "title": "@MaxForAI: OpenAI Codex Crosses 20M Users and Grants Banked Quota Resets",
+          "body": "OpenAI Codex reached 20M weekly active users, prompting OpenAI to issue selectable banked quota resets for ChatGPT Work and Codex subscribers following rate-limit feedback.",
+          "url": "https://x.com/MaxForAI/status/2090780266495402355"
         },
         {
-          "tag": "update",
-          "title": "@OpenAIDevs: OpenAI Releases Open-Source Codex Harness",
-          "body": "OpenAI published its open-source Codex harness, allowing developers to embed autonomous coding agent loops, context management, and sandbox controls into custom developer tools.",
-          "url": "https://x.com/OpenAIDevs/status/2090230646497251387"
+          "tag": "hot",
+          "title": "@davis7: Ox Alpha Reaches 80% Solve Rate on DeepSWE Benchmark",
+          "body": "Evaluations on real-world software engineering tasks showed Ox Alpha achieving an 80% success rate on DeepSWE, outperforming Fable 5 Max and GLM-5.3.",
+          "url": "https://x.com/davis7/status/2090655207831298095"
         },
         {
           "tag": "new",
-          "title": "@cline: FrontierCode Benchmark Insights on Thinking Tiers",
-          "body": "Cline published benchmark findings showing Opus 5 on medium thinking effort outperformed extra-high thinking mode by 10% while cutting task execution costs by 50%.",
-          "url": "https://x.com/cline/status/2090537101611966844"
+          "title": "@CauraAI: Caura Ships Single-Command Agent Fleet Memory for Claude",
+          "body": "Caura launched a single-line MCP command letting entire agent fleets share structured, permissioned memory with full origin provenance.",
+          "url": "https://x.com/CauraAI/status/2090680989072630215"
         }
       ]
     },
     {
-      "emoji": "📈",
+      "emoji": "\ud83d\udcc8",
       "title": "Markets & News",
       "items": [
         {
           "tag": "hot",
-          "title": "@justinsuntron: Federal Court Rules Justin Sun Lawsuit Stays Open",
-          "body": "A federal judge ruled that Justin Sun's lawsuit against World Liberty Financial over token freezes and $450M initial investment terms will proceed in open court rather than secret arbitration.",
-          "url": "https://x.com/justinsuntron/status/2090535890749915282"
+          "title": "@Balder13946731: Google Taps Marvell for Custom AI Chips, Breaking Broadcom Monopoly",
+          "body": "Google officially announced a custom AI chip partnership with Marvell (MRVL), challenging Broadcom\u2019s (AVGO) decade-long dominance over Google TPU supply.",
+          "url": "https://x.com/Balder13946731/status/2090796672251232738"
+        },
+        {
+          "tag": "update",
+          "title": "@maitian99: Citadel CEO Internal Email Leaked",
+          "body": "An internal memo from Citadel\u2019s CEO leaked, confirming recent strategic positioning and macro equity market exposure shifts.",
+          "url": "https://x.com/maitian99/status/2090827458215817402"
+        },
+        {
+          "tag": "update",
+          "title": "@PIF_en: Saudi Public Investment Fund Releases 2025 Financial Report",
+          "body": "Saudi Arabia\u2019s PIF published its annual report highlighting robust portfolio returns and expanded allocations into global tech and energy infrastructure.",
+          "url": "https://x.com/PIF_en/status/2089351481895850256"
         },
         {
           "tag": "hot",
-          "title": "@Owennfa: Decade-Long Student Loan Balance Calculation Sparks Outrage",
-          "body": "A borrower highlighted how paying $55,000 over 11 years on an original $32,000 student loan principal resulted in a remaining balance of $28,900 due to compounding interest structures.",
-          "url": "https://x.com/Owennfa/status/2090549433695912397"
-        },
-        {
-          "tag": "update",
-          "title": "@Leonajardinho: Fixed-Rate Mortgage Escrow & Tax Increases Breakdown",
-          "body": "A homeowner case study illustrated how property tax reassessments and skyrocketing insurance premiums increased monthly mortgage obligations by $700 overnight despite fixed principal rates.",
-          "url": "https://x.com/Leonajardinho/status/2090491585608011859"
-        },
-        {
-          "tag": "update",
-          "title": "@web3annie: CZ Reflects on Voluntary Legal Process & Industry Accountability",
-          "body": "Binance co-founder CZ publicly addressed his decision to voluntarily resolve US regulatory charges without seeking non-extradition protection, emphasizing long-term ecosystem responsibility.",
-          "url": "https://x.com/web3annie/status/2090363393920385417"
+          "title": "@StrongandSafeNY: New York Energy Bill & Escrow Hikes Spark Debate",
+          "body": "Policy analysts highlighted growing voter concern over 48 consecutive energy rate adjustments and rising property tax burdens across New York State.",
+          "url": "https://x.com/StrongandSafeNY/status/2090441079099097192"
         },
         {
           "tag": "new",
-          "title": "@pritipatelfgoo: Price-Volume Alignment Factor in Quantitative Trading",
-          "body": "Quantitative research detailed a price-volume alignment factor engineered to capture market crowding and trade mean-reversion when asset prices diverge from volume trends.",
-          "url": "https://x.com/pritipatelfgoo/status/2090415206438735962"
+          "title": "@AYi_AInotes: OpenAI API Proxy Crackdown Triggers User Debate",
+          "body": "Strict enforcement against Sub2API proxying brought anti-abuse measures and seat-licensing restrictions into focus among developer teams.",
+          "url": "https://x.com/AYi_AInotes/status/2090775707349643706"
         }
       ]
     },
     {
-      "emoji": "🌍",
+      "emoji": "\ud83c\udf0d",
       "title": "General",
       "items": [
         {
           "tag": "hot",
-          "title": "@theMadridZone: Toni Kroos Endorses Kvaratskhelia for Ballon d'Or",
-          "body": "Toni Kroos stated that Khvicha Kvaratskhelia deserves top honors for the Ballon d'Or, praising his consistent game-changing influence at the club level throughout the season.",
-          "url": "https://x.com/theMadridZone/status/2090569916680462337"
+          "title": "@FabrizioRomano: FIFA Hands Down 10-Game Ban After Argentina-Spain Clash",
+          "body": "FIFA officially announced disciplinary bans following the Argentina vs Spain match, suspending Leandro Paredes for 10 games and Nahuel Molina for 7.",
+          "url": "https://x.com/FabrizioRomano/status/2090809110677582064"
         },
         {
           "tag": "hot",
-          "title": "@oooodjdjd: Zhang Yiming's Career Principles Speech for Graduates",
-          "body": "A viral transcript of ByteDance founder Zhang Yiming detailed early career lessons at Kuxun, emphasizing borderless ownership, curiosity, and resisting premature gratification.",
-          "url": "https://x.com/oooodjdjd/status/2090319146156445988"
+          "title": "@RockstarGames: Grand Theft Auto VI Extended Look Set for Netflix Premiere",
+          "body": "Rockstar Games revealed that \"Grand Theft Auto VI: An Extended Look\" will premiere on Netflix on Thursday, August 27 at 3:00 PM ET.",
+          "url": "https://x.com/RockstarGames/status/2090187149090193916"
         },
         {
           "tag": "update",
-          "title": "@Footballera0: Man City & Spurs Reach Verbal Agreement for Savinho",
-          "body": "Manchester City and Tottenham reached a verbal agreement for the transfer of winger Savinho in a deal valued over £75m as talks continue for Omar Marmoush.",
-          "url": "https://x.com/Footballera0/status/2090577304866931196"
+          "title": "@FCBayernEN: FC Bayern Tributes Lewandowski Birthday & Olise Highlight",
+          "body": "Bayern Munich celebrated former star striker Robert Lewandowski\u2019s birthday alongside viral highlights from Michael Olise\u2019s post-match interview.",
+          "url": "https://x.com/FCBayernEN/status/2090747582666412199"
         },
         {
           "tag": "update",
-          "title": "@iMiaSanMia: Uli Hoeneß on Jürgen Klopp's DFB Appointment",
-          "body": "Bayern Munich honorary president Uli Hoeneß commented on Jürgen Klopp becoming Germany's national team manager, urging supporters to afford him tactical development time.",
-          "url": "https://x.com/iMiaSanMia/status/2090350886375633061"
+          "title": "@MLB: Tarik Skubal Records First Strikeout in Dodgers Uniform",
+          "body": "Major League Baseball showcased high-speed camera footage of Cy Young contender Tarik Skubal\u2019s dominant first strikeout for Los Angeles.",
+          "url": "https://x.com/MLB/status/2084799662238613739"
         },
         {
           "tag": "new",
-          "title": "@jiangyelab1: Retrospective on Personal Growth & Domain Mastery Tipping Points",
-          "body": "A viral career analysis outlined pivotal cognitive turning points around age 29 and 34, discussing domain-specific problem solving and multi-angle execution.",
-          "url": "https://x.com/jiangyelab1/status/2090472715824267353"
+          "title": "@oooodjdjd: ByteDance Founder\u2019s Career Principles Gain Traction",
+          "body": "A viral breakdown of ByteDance founder Zhang Yiming\u2019s early career speeches resurfaced, highlighting ownership mindset and problem-solving depth.",
+          "url": "https://x.com/oooodjdjd/status/2090319146156445988"
         }
       ]
     }
