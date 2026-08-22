@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Friday, August 21st, 2026",
+  "date": "Saturday, August 22nd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI Banked Quota Resets After Codex Backlash:</strong> OpenAI announced selectable banked quota resets for ChatGPT Work and Codex subscribers following community frustration over rate limits.",
-    "<strong>Linus Torvalds Patches Linux Kernel Bug via AI:</strong> Linus Torvalds successfully diagnosed and fixed a complex GPU driver bug in the Linux kernel with substantial assistance from AI coding models.",
-    "<strong>Apple Grants Free PCC Model Access to Small Devs:</strong> Apple introduced zero-cost Private Cloud Compute (PCC) infrastructure for qualifying developers using Apple Foundation Models.",
-    "<strong>Mystery 'Ox Alpha' Unmasked as GLM-5.3 / Kimi K3.1:</strong> Evals revealed 'Ox Alpha' on OpenRouter is a stealth test run for GLM-5.3 Flash, scoring near 80% on DeepSWE benchmarks.",
-    "<strong>GTA VI Netflix Preview & EU AI Act Enforcement:</strong> Rockstar Games announced a GTA VI Netflix extended look for Aug 27, as EU AI Act content transparency rules became enforceable."
+    "<strong>Linus Torvalds Weighs In on \"Vibe Coding\" & Kernel Maintenance:</strong> Linus Torvalds commented on AI-assisted coding, warning that while prompt-based generation works well for disposable scripts, long-term codebase maintenance like the Linux kernel requires human comprehension.",
+    "<strong>Ox-Alpha Model Mystery Sparks Benchmark & Evals Debate:</strong> AI researchers and eval teams are actively debating the mysterious \"Ox-Alpha\" model on OpenRouter and OpenCode, with mixed benchmarking results against frontier coding models.",
+    "<strong>Cursor Founders Reach Multi-Billionaire Status Post-SpaceX Deal:</strong> Market reports highlight all four Cursor founders becoming multi-billionaires following SpaceX's B expansion into dedicated AI development infrastructure.",
+    "<strong>Fabrizio Romano Confirms Leon Goretzka to Aston Villa Move:</strong> Football insider Fabrizio Romano issued his signature \"here we go\" confirmation for German midfielder Leon Goretzka's verbal agreement to join Aston Villa.",
+    "<strong>Rockstar Games Previews GTA VI Extended Look on Netflix:</strong> Rockstar Games officially scheduled \"Grand Theft Auto VI: An Extended Look\" for a global Netflix premiere on Thursday, August 27 at 3 PM ET."
   ],
   "sections": [
     {
@@ -16,39 +16,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@thsottiaux: OpenAI Rolls Out Banked Quota Resets for Codex & Work",
-          "body": "OpenAI lead Tibo announced that selectable banked quota resets are deploying to all ChatGPT Work and Codex subscribers by 8 PM PST following rate-limit feedback.",
-          "url": "https://x.com/thsottiaux/status/2090947196107764189"
+          "title": "@JeffLia12309881: Linus Torvalds Comments on \"Vibe Coding\" & Kernel Maintenance",
+          "body": "Linux creator Linus Torvalds noted that AI prompt-based \"vibe coding\" is great for throwaway scripts, but serious projects requiring decades of maintenance still demand deep developer comprehension.",
+          "url": "https://x.com/JeffLia12309881/status/2091104261925138519"
         },
         {
           "tag": "hot",
-          "title": "@mark_k: Linus Torvalds Fixes Linux GPU Bug with AI Assistance",
-          "body": "Developer highlights a real-world milestone where Linus Torvalds resolved a complex GPU bug in the Linux kernel using AI-assisted code analysis.",
-          "url": "https://x.com/mark_k/status/2090842540870074806"
+          "title": "@altryne: Mysterious \"Ox-Alpha\" Model Deploys Free Across Top AI Providers",
+          "body": "Alex Volkov and AI researchers reported that the stealth \"Ox-Alpha\" model is now available with free tier usage across OpenRouter, OpenCode, and Nous Research.",
+          "url": "https://x.com/altryne/status/2090913538932129874"
+        },
+        {
+          "tag": "update",
+          "title": "@bindureddy: Abacus AI Evals Team Benchmarks Ox-Alpha Model Capabilities",
+          "body": "Bindu Reddy shared detailed eval suite findings showing Ox-Alpha underperforming on complex multi-step reasoning tasks compared to prior-generation frontier benchmarks.",
+          "url": "https://x.com/bindureddy/status/2090949366165152213"
+        },
+        {
+          "tag": "hot",
+          "title": "@linasbeliunas: Cursor Founders Achieve Billionaire Status Following SpaceX AI Deal",
+          "body": "Linas Beliūnas highlighted the milestone of Cursor's MIT dropout co-founders attaining multi-billionaire status amid SpaceX's  billion valuation and software tooling expansion.",
+          "url": "https://x.com/linasbeliunas/status/2090892783028449309"
         },
         {
           "tag": "new",
-          "title": "@Lonely__MH: Apple Offers Free PCC Infrastructure for Small Devs",
-          "body": "Apple announced zero cloud API fees on Private Cloud Compute (PCC) for eligible small developers running Apple Foundation Models.",
-          "url": "https://x.com/Lonely__MH/status/2090743675936502159"
+          "title": "@opencode: OpenCode Dethrones DeepSeek After 56-Day Streak at #1",
+          "body": "OpenCode announced that DeepSeek's 56-consecutive-day run at the top of its developer usage charts has ended as new open-weight and agentic models surge.",
+          "url": "https://x.com/opencode/status/2090861665084383701"
         },
         {
-          "tag": "hot",
-          "title": "@Adidotdev: Mystery 'Ox Alpha' Model Identified as GLM-5.3 Flash",
-          "body": "Benchmarking teams confirmed that OpenRouter's unlisted 'Ox Alpha' model is GLM-5.3 Flash, showcasing competitive coding performance against top frontier models.",
-          "url": "https://x.com/Adidotdev/status/2090833298713096241"
-        },
-        {
-          "tag": "update",
-          "title": "@ClaudeDevs: Anthropic Ships Reliability Patch for Claude Remote Control",
-          "body": "The Claude developer team released performance and connection reliability updates for Claude Remote Control based on user feedback.",
-          "url": "https://x.com/ClaudeDevs/status/2090933155847143498"
+          "tag": "new",
+          "title": "@LinearUncle: Darkbloom Launches Mac Idle Compute Rental for AI Inference",
+          "body": "LinearUncle showcased Darkbloom, a platform enabling Mac owners to rent out idle NPU/GPU compute to serve open-source MoE models via OpenRouter.",
+          "url": "https://x.com/LinearUncle/status/2091066390090564063"
         },
         {
           "tag": "update",
-          "title": "@Box: Gemini 3.7 Flash Benchmark Scores Released by Box",
-          "body": "Box enterprise evals showed Google DeepMind's Gemini 3.7 Flash running 37% faster with higher overall accuracy on complex analytical tasks.",
-          "url": "https://x.com/Box/status/2088024229904294298"
+          "title": "@wei_wang: Hermes CLI Offers Zero-Config Free AI Agent Tool Calling",
+          "body": "Developer Wei Wang introduced Hermes, a terminal tool providing instant zero-config access to free AI models with native function calling and tool execution.",
+          "url": "https://x.com/wei_wang/status/2090923405419716895"
         }
       ]
     },
@@ -58,33 +64,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@bhaskardeo1: EU AI Act & California SB 942 Rules Become Enforceable",
-          "body": "Regulatory experts note that transparency obligations for AI-generated and distributed content are now officially enforceable across the EU and California.",
-          "url": "https://x.com/bhaskardeo1/status/2090858775226044574"
+          "title": "@FabrizioRomano: Leon Goretzka Agrees to Aston Villa Transfer (\"Here We Go!\")",
+          "body": "Fabrizio Romano confirmed a verbal agreement for Bayern Munich midfielder Leon Goretzka to join Premier League side Aston Villa following direct manager talks.",
+          "url": "https://x.com/FabrizioRomano/status/2091150937788223622"
         },
         {
           "tag": "update",
-          "title": "@r0ck3t23: Elon Musk Tesla Memo Empowers Engineers Over Managers",
-          "body": "A leaked Tesla internal memo reveals Elon Musk stripped middle management approval roadblocks to give individual engineers direct decision-making authority.",
-          "url": "https://x.com/r0ck3t23/status/2090901321054371872"
+          "title": "@APompliano: Anthony Pompliano Outlines AI Offense vs Bitcoin Defense",
+          "body": "Anthony Pompliano framed AI as the ultimate productivity offense and Bitcoin as capital defense against monetary dilution in the evolving digital economy.",
+          "url": "https://x.com/APompliano/status/2086828572866474177"
         },
         {
-          "tag": "hot",
-          "title": "@StrongandSafeNY: New York Energy Rate Increases Trigger Political Debate",
-          "body": "Policy groups highlight public frustration over 48 consecutive utility rate adjustments across New York State.",
+          "tag": "update",
+          "title": "@StrongandSafeNY: New York Energy Rate Hikes Spark Public Accountability Debate",
+          "body": "New York policy coalition Strong & Safe NY called for state government accountability following consecutive utility rate hikes impacting residents across the state.",
           "url": "https://x.com/StrongandSafeNY/status/2090441079099097192"
         },
         {
-          "tag": "update",
-          "title": "@peter_c_earle: Treasury Market Fiscal Risk Premium Analysis",
-          "body": "Financial analysts debate US Treasury yield dynamics, pointing to long-standing fiscal risk discounts and debt supply factors.",
-          "url": "https://x.com/peter_c_earle/status/2090897383445889332"
+          "tag": "hot",
+          "title": "@XieJackie: Tesla Model Y A-Pillar Crash Performance Goes Viral in Shanghai",
+          "body": "A high-speed Shanghai Model Y collision into a trailer showed the vehicle's left A-pillar withstanding severe impact, allowing the driver to exit unharmed.",
+          "url": "https://x.com/XieJackie/status/2091041425794158891"
         },
         {
           "tag": "new",
-          "title": "@TheSixFiveMedia: Enterprise AI Leaders Gear Up for Six Five Summit 2026",
-          "body": "Technology leaders gather for 30+ sessions covering AI infrastructure, custom silicon, and enterprise cybersecurity advancements.",
-          "url": "https://x.com/TheSixFiveMedia/status/2090584903306080764"
+          "title": "@HOUSEPORN___: Bugatti Unveils Luxury Smart Television Line",
+          "body": "Luxury automotive manufacturer Bugatti expanded into consumer electronics with the official launch of its bespoke smart television line.",
+          "url": "https://x.com/HOUSEPORN___/status/2090985809218351178"
         }
       ]
     },
@@ -94,33 +100,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RockstarGames: GTA VI Extended Look Set for Netflix Premiere",
-          "body": "Rockstar Games announced that 'Grand Theft Auto VI: An Extended Look' will premiere on Netflix on Thursday, August 27 at 3:00 PM ET.",
+          "title": "@RockstarGames: GTA VI Extended Look Premieres on Netflix August 27",
+          "body": "Rockstar Games announced that \"Grand Theft Auto VI: An Extended Look\" will stream exclusively on Netflix on Thursday, August 27 at 3:00 PM ET.",
           "url": "https://x.com/RockstarGames/status/2090187149090193916"
         },
         {
           "tag": "update",
-          "title": "@FCBayernEN: FC Bayern Celebrates Lewandowski & Olise Highlight",
-          "body": "Bayern Munich honored Robert Lewandowski's birthday while sharing viral clips of Michael Olise's post-match interview.",
+          "title": "@FCBayernEN: FC Bayern Honors Lewandowski Birthday & Olise Post-Match Clip",
+          "body": "Bayern Munich celebrated striker Robert Lewandowski's birthday while sharing viral clips of Michael Olise's ultra-concise post-match interview.",
           "url": "https://x.com/FCBayernEN/status/2090473584816718216"
         },
         {
-          "tag": "update",
-          "title": "@Schwarzenegger: Arnold Schwarzenegger Updates Fitness App Accessibility",
-          "body": "Arnold Schwarzenegger announced workout app updates designed to make structured strength training accessible for all ages and experience levels.",
-          "url": "https://x.com/Schwarzenegger/status/2089831059739619397"
-        },
-        {
-          "tag": "hot",
-          "title": "@dunkmanofficial: Shaq Dunk Exhibition Highlight Goes Viral",
-          "body": "Basketball legend Shaquille O'Neal opened the night with a powerful dunk, sparking nostalgia across sports fans.",
-          "url": "https://x.com/dunkmanofficial/status/2085009570808656067"
-        },
-        {
           "tag": "new",
-          "title": "@yesnicksearcy: Actor Nick Searcy Issues Clarification & Apology",
-          "body": "Actor Nick Searcy posted a public apology to podcast host Dan Bongino after resolving a misunderstanding over recent online comments.",
-          "url": "https://x.com/yesnicksearcy/status/2090845572538249518"
+          "title": "@IGN: DoorDash Expands App with Dedicated Gaming Storefront",
+          "body": "DoorDash launched an in-app gaming hub offering instant delivery of video games, gaming consoles, controllers, and game-night supplies.",
+          "url": "https://x.com/IGN/status/2089738635121775047"
+        },
+        {
+          "tag": "update",
+          "title": "@vahphor: Shakira Shares Closure Regarding Past Communication with Piqué",
+          "body": "Entertainment outlets covered Shakira's latest interview reflecting on personal closure and recent conversations with former partner Gerard Piqué.",
+          "url": "https://x.com/vahphor/status/2091082239341740521"
+        },
+        {
+          "tag": "update",
+          "title": "@TomKlingenstein: Tom Klingenstein Reflects on America's Foundational Principles",
+          "body": "Author Tom Klingenstein delivered remarks on the Declaration of Independence as a moral and guiding compass for American civic life.",
+          "url": "https://x.com/TomKlingenstein/status/2085183598408163589"
         }
       ]
     }
