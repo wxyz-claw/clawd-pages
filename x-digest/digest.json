@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Sunday, August 23rd, 2026",
+  "date": "Monday, August 24th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Stanford & SIMILE AI Open-Source 535B LLM:</strong> Percy Liang announced live public training of Marin 535B-A23B MoE model across 792 Nvidia GB200 GPUs.",
-    "<strong>OpenAI Codex Rate Limits & Efficiency Fixes:</strong> Tibo (@thsottiaux) confirmed usage optimizations and propagated rate limit resets to developer accounts.",
-    "<strong>Starship Material Engineering Breakthrough:</strong> Elon Musk detailed SpaceX's shift from 301 stainless steel to custom in-house alloys for Starship fabrication.",
-    "<strong>GTA VI Extended Look Premiere:</strong> Rockstar Games confirmed an exclusive 'Grand Theft Auto VI: An Extended Look' broadcast streaming August 27th on Netflix.",
-    "<strong>Creator Economy & Production Economics:</strong> Financial analysis of MrBeast's $3M–$4M per-video budget models and brand monetization strategy."
+    "<strong>Trump Admin Proposes $103K H-1B Visa Fee:</strong> Polymarket reports an executive proposal to increase new H-1B application fees to $103,265, up from typical $2K–$5K ranges.",
+    "<strong>Anthropic Prepares Opus 5.1 & Sonnet 5.1 Release:</strong> Bindu Reddy shared upcoming Anthropic model rollout plans designed to resolve recent prompt regressions.",
+    "<strong>Open-Source 1.6T LongCat 2.0 Released:</strong> OpenCode launched LongCat-2.0 in Go featuring a 1M token context window and open model weights.",
+    "<strong>Decentralized Qwen Node Economics:</strong> Tech creators detail local Apple Silicon hardware math showing used M1 Pro chips generating $150/mo serving Qwen inference.",
+    "<strong>Domestic AI Accelerator Fabrication Progress:</strong> The Economist evaluates reports of Chinese semiconductor breakthroughs aimed at mass-producing AI chips."
   ],
   "sections": [
     {
@@ -16,38 +16,44 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@thsottiaux: OpenAI Codex Usage Fixes & Rate Limit Resets",
-          "body": "OpenAI Codex engineer Tibo (@thsottiaux) announced that rate limit resets have propagated to accounts alongside session compaction fixes, resolving recent usage bottlenecks.",
-          "url": "https://x.com/thsottiaux/status/2091688655828246890"
-        },
-        {
-          "tag": "new",
-          "title": "@MaxForAI: Stanford & SIMILE Open-Source Live 535B MoE LLM Training",
-          "body": "Stanford Professor Percy Liang and SIMILE AI launched live public training of Marin 535B-A23B, an open 535B-parameter MoE model trained on 18.75T tokens using 792 Nvidia GB200 GPUs.",
-          "url": "https://x.com/MaxForAI/status/2091270116067750089"
+          "title": "@Polymarket: Trump Administration Moves to Impose $103K Fee on H-1B Visas",
+          "body": "The Trump administration has proposed raising fees on new H-1B worker visas to $103,265 (up from $2,000–$5,000), sparking widespread debate across the technology and AI research sector.",
+          "url": "https://x.com/Polymarket/status/2091895557098787022"
         },
         {
           "tag": "hot",
-          "title": "@elonmusk: SpaceX In-House Stainless Steel Alloys for Starship",
-          "body": "Elon Musk explained the engineering rationale behind Starship's stainless steel design, revealing SpaceX developed proprietary in-house alloys to replace standard 301 steel.",
-          "url": "https://x.com/elonmusk/status/2091617925669245333"
-        },
-        {
-          "tag": "update",
-          "title": "@thsottiaux: Model Efficiency & Infrastructure Reliability in 2026",
-          "body": "AI infrastructure engineers highlight how enterprise focus is pivoting toward inference efficiency, latency control, and deterministic reliability as LLMs become core compute stacks.",
-          "url": "https://x.com/thsottiaux/status/2091581575108653374"
+          "title": "@bindureddy: Anthropic Preparing Opus 5.1 & Sonnet 5.1 Releases",
+          "body": "Multiple new Anthropic models (Opus 5.1, Sonnet 5.1, and Fable 5.1) are set to launch shortly, addressing model regressions and improving long-context task performance.",
+          "url": "https://x.com/bindureddy/status/2091646922201432352"
         },
         {
           "tag": "new",
-          "title": "@esandurrani: Honen AI Context & Workflow Training",
-          "body": "Esan Durrani launched Honen in partnership with NVIDIA, transforming company context and internal codebase knowledge into self-improving interactive learning modules.",
-          "url": "https://x.com/esandurrani/status/2072083052109635633"
+          "title": "@opencode: OpenCode Releases LongCat-2.0 in Go",
+          "body": "OpenCode released LongCat-2.0, a 1.6T/48B MoE open-weights model supporting a 1 million token context window natively in Go.",
+          "url": "https://x.com/opencode/status/2091886759298654383"
         },
         {
           "tag": "update",
-          "title": "@TheEconomist: China's Advanced Semiconductor Fabrication Progress",
-          "body": "Economic analysts evaluate Chinese semiconductor scaling, investigating reports of novel domestic lithography strategies for frontier AI accelerator chips.",
+          "title": "@rickmanelius: Economics of Serving Qwen Locally on Used Mac Hardware",
+          "body": "Hardware tech breakdown shows how a used Apple M1 Pro (32GB) purchased for $900 can generate ~$150/month serving Qwen model inference locally.",
+          "url": "https://x.com/rickmanelius/status/2091688235235680505"
+        },
+        {
+          "tag": "new",
+          "title": "@Saboo_Shubham_: Gemini 3.7 Flash Tops Benchmarks on Artificial Analysis",
+          "body": "Artificial Analysis benchmarks show Gemini 3.7 Flash outperforming rival models across agentic evaluation tasks.",
+          "url": "https://x.com/Saboo_Shubham_/status/2091626053118914817"
+        },
+        {
+          "tag": "new",
+          "title": "@GoSailGlobal: Zoetrope Visualizer for Claude Code Workflows",
+          "body": "Developers released Zoetrope, an open-source terminal visualization tool that graphs Claude Code agent executions, tool calls, and subagent trees in real time.",
+          "url": "https://x.com/GoSailGlobal/status/2091691986977980789"
+        },
+        {
+          "tag": "update",
+          "title": "@TheEconomist: China's Advanced AI Semiconductor Scaling",
+          "body": "Economic analysis details Chinese domestic semiconductor lithography advances aiming to produce millions of high-performance AI accelerator chips.",
           "url": "https://x.com/TheEconomist/status/2079493101840949676"
         }
       ]
@@ -58,33 +64,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@aakashgupta: Breakdown of MrBeast's $3M–$4M Video Economics",
-          "body": "Product executive Aakash Gupta analyzed the unit economics of MrBeast's multi-million dollar productions, explaining how high-cost viral stunts function as loss leaders for long-term brand equity.",
-          "url": "https://x.com/aakashgupta/status/2091326807551488399"
+          "title": "@Polymarket: Executive Order Proposal Sparks Tech Industry Visa Debate",
+          "body": "Corporate policy analysts and tech executives react to the proposed $103,265 H-1B visa application fee, assessing its potential impact on international talent recruitment.",
+          "url": "https://x.com/Polymarket/status/2091895557098787022"
         },
         {
           "tag": "update",
-          "title": "@HooverInst: Strategic Analysis of US-China Economic Relations",
-          "body": "The Hoover Institution published policy analysis evaluating bilateral trade negotiations, technology controls, and supply chain realignments between Washington and Beijing.",
+          "title": "@HooverInst: US-China Economic & Technology Strategy Analysis",
+          "body": "The Hoover Institution published strategic review papers analyzing trade policies, technology export controls, and bilateral relations between the US and China.",
           "url": "https://x.com/HooverInst/status/2070195635022884895"
         },
         {
-          "tag": "update",
-          "title": "@StrongandSafeNY: Policy Debates Surrounding Regional Energy Infrastructure",
-          "body": "Civic advocates discuss New York state utility pricing, grid reliability, and policy accountability amid rising residential power rates.",
-          "url": "https://x.com/StrongandSafeNY/status/2090441079099097192"
+          "tag": "new",
+          "title": "@AlphaSenseInc: AlphaSense Launches SuperAnalyst AI Agent",
+          "body": "AlphaSense announced SuperAnalyst, an autonomous AI research agent designed for continuous financial market intelligence, SEC filing analysis, and deal tracking.",
+          "url": "https://x.com/AlphaSenseInc/status/2065175840304865517"
         },
         {
           "tag": "update",
-          "title": "@EpochTimes: Global Healthcare & Organ Transplantation Logistics",
-          "body": "Medical policy researchers discuss international organ waitlists, donor matching protocols, and cross-border healthcare logistical hurdles.",
-          "url": "https://x.com/EpochTimes/status/2077681931190517859"
+          "title": "@Wang__xiaolong: Strategic Principles for Capital Preservation & Tech Readiness",
+          "body": "Financial analyst Wang Xiaolong outlines key rules for personal capital preservation, global hardware choices, and anti-fragile asset allocation.",
+          "url": "https://x.com/Wang__xiaolong/status/2091395005676228727"
         },
         {
           "tag": "update",
-          "title": "@Mario_Sneh: Legal Debates on Marital Property & Asset Division",
-          "body": "Legal commentators discuss court precedents surrounding inheritance division and pre-marital property rights during divorce proceedings.",
-          "url": "https://x.com/Mario_Sneh/status/2091399783017546006"
+          "title": "@cxjwin: Xiaopeng Motors Synthesizes 630K Work Logs into Enterprise Knowledge",
+          "body": "XPeng Motors converted 630,000 internal work recordings into a searchable AI knowledge base, achieving an 80% resolution accuracy rate for employee queries.",
+          "url": "https://x.com/cxjwin/status/2091714361114911201"
         }
       ]
     },
@@ -94,33 +100,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RockstarGames: GTA VI Extended Look Premieres August 27 on Netflix",
-          "body": "Rockstar Games announced that 'Grand Theft Auto VI: An Extended Look' will stream globally on Netflix on Thursday, August 27 at 3:00 PM ET.",
-          "url": "https://x.com/RockstarGames/status/2090187149090193916"
-        },
-        {
-          "tag": "hot",
-          "title": "@FabrizioRomano: Hansi Flick Updates on Alejandro Balde & Barca Squad",
-          "body": "Football insider Fabrizio Romano reported FC Barcelona manager Hansi Flick's squad selection decisions and tactical preparations for upcoming fixtures.",
-          "url": "https://x.com/FabrizioRomano/status/2091598877774303517"
+          "title": "@GhostSoldierMov: Jim Caviezel Stars in 'Ghost Soldier' Exclusive Theatrical Release",
+          "body": "Official announcement trailer drops for 'Ghost Soldier', featuring Jim Caviezel in an upcoming theatrical action-thriller.",
+          "url": "https://x.com/GhostSoldierMov/status/2090451420155670580"
         },
         {
           "tag": "update",
-          "title": "@Schwarzenegger: Arnold Schwarzenegger on Lifelong Fitness & Longevity",
-          "body": "Arnold Schwarzenegger shared fitness encouragement for all ages, emphasizing consistency and strength training regardless of training gaps.",
+          "title": "@Schwarzenegger: Arnold Schwarzenegger on Lifelong Strength Training",
+          "body": "Arnold Schwarzenegger shared fitness encouragement for all ages, emphasizing consistency and strength training regardless of current fitness level or age.",
           "url": "https://x.com/Schwarzenegger/status/2089831059739619397"
         },
         {
           "tag": "update",
-          "title": "@TomKlingenstein: Essay on American Founding Principles & National Identity",
-          "body": "Civic writer Tom Klingenstein published an essay on constitutional jurisprudence, discussing the enduring influence of the Declaration of Independence.",
-          "url": "https://x.com/TomKlingenstein/status/2085183598408163589"
+          "title": "@iMiaSanMia: Bryan Zaragoza Completes Loan Move to Espanyol",
+          "body": "Bayern Munich winger Bryan Zaragoza agrees to a season-long loan deal with Espanyol, including an €8m obligation to buy next summer.",
+          "url": "https://x.com/iMiaSanMia/status/2091848143335768381"
+        },
+        {
+          "tag": "hot",
+          "title": "@Mci_tony_: Erling Haaland Signature Knee Slide Goes Viral",
+          "body": "Manchester City striker Erling Haaland's flawless pitch celebration gains viral attention across football media.",
+          "url": "https://x.com/Mci_tony_/status/2091805923484307873"
         },
         {
           "tag": "new",
-          "title": "@ADILXFCB: European Football Matchday Reactions & Fan Debates",
-          "body": "Football commentators and fans react to high-drama moments and emotional player reactions during opening weekend league action.",
-          "url": "https://x.com/ADILXFCB/status/2091633708008894918"
+          "title": "@dabit3: Legendary Community Note Sets X Engagement Record",
+          "body": "Developer Nader Dabit highlights a viral Community Note response breaking social media engagement records.",
+          "url": "https://x.com/dabit3/status/2091830778896511413"
         }
       ]
     }
