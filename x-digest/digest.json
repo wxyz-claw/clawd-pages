@@ -3,11 +3,11 @@
   "date": "Monday, August 24th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Trump Admin Proposes $103K H-1B Visa Fee:</strong> Polymarket reports an executive proposal to increase new H-1B application fees to $103,265, up from typical $2K–$5K ranges.",
-    "<strong>Anthropic Prepares Opus 5.1 & Sonnet 5.1 Release:</strong> Bindu Reddy shared upcoming Anthropic model rollout plans designed to resolve recent prompt regressions.",
-    "<strong>Open-Source 1.6T LongCat 2.0 Released:</strong> OpenCode launched LongCat-2.0 in Go featuring a 1M token context window and open model weights.",
-    "<strong>Decentralized Qwen Node Economics:</strong> Tech creators detail local Apple Silicon hardware math showing used M1 Pro chips generating $150/mo serving Qwen inference.",
-    "<strong>Domestic AI Accelerator Fabrication Progress:</strong> The Economist evaluates reports of Chinese semiconductor breakthroughs aimed at mass-producing AI chips."
+    "<strong>Nvidia Employee Wealth Milestone:</strong> Financial reports indicate over 50% of Nvidia ($NVDA) employees now hold a net worth exceeding $25 million following historical AI hardware demand.",
+    "<strong>Porsche Signs $1.5B Enterprise AI Deal:</strong> Porsche finalized a $1.5 billion enterprise agreement with an Indian IT consulting firm to deploy automated AI workflows company-wide.",
+    "<strong>Apple Silicon NPU Inference Yield Testing:</strong> Developers begin benchmark testing local Mac clusters (from M1 Pro to M5 Max) for decentralized Qwen model inference revenue yield.",
+    "<strong>Philips Historical Semiconductor Stakes:</strong> Financial analysis highlights Philips previously owning 100% of ASML and 28% of TSMC, contrasting its current $27B valuation against their combined $2.6T market caps.",
+    "<strong>GTA VI Extended Look Confirmed for Netflix:</strong> Rockstar Games officially announced \"Grand Theft Auto VI: An Extended Look\" will stream globally on Netflix on Thursday, August 27th at 3 PM ET."
   ],
   "sections": [
     {
@@ -16,45 +16,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Polymarket: Trump Administration Moves to Impose $103K Fee on H-1B Visas",
-          "body": "The Trump administration has proposed raising fees on new H-1B worker visas to $103,265 (up from $2,000–$5,000), sparking widespread debate across the technology and AI research sector.",
-          "url": "https://x.com/Polymarket/status/2091895557098787022"
+          "title": "@unusual_whales: Over 50% of Nvidia Employees Surpass $25M Net Worth",
+          "body": "Financial data reveals that over half of Nvidia ($NVDA) employees have achieved a net worth exceeding $25 million amidst sustained global AI compute expansion.",
+          "url": "https://x.com/unusual_whales/status/2091962998315225163"
         },
         {
-          "tag": "hot",
-          "title": "@bindureddy: Anthropic Preparing Opus 5.1 & Sonnet 5.1 Releases",
-          "body": "Multiple new Anthropic models (Opus 5.1, Sonnet 5.1, and Fable 5.1) are set to launch shortly, addressing model regressions and improving long-context task performance.",
-          "url": "https://x.com/bindureddy/status/2091646922201432352"
+          "tag": "update",
+          "title": "@MickaelV79228: Benchmark Testing Apple Silicon NPU Inference Networks",
+          "body": "Developers benchmark local Mac hardware yields (from M1 Pro to M5 Max) serving Qwen 35B inference over Darkbloom, testing real yield data against viral claims.",
+          "url": "https://x.com/MickaelV79228/status/2091851566412132834"
         },
         {
           "tag": "new",
+          "title": "@ZengTan81325: Tutti · VM Shared File-System Workspace for Local AI Agents",
+          "body": "Former collaboration tools engineer Tan Zeng launched Tutti · VM, placing humans and local AI agents into a single persistent, shared file-system workspace.",
+          "url": "https://x.com/ZengTan81325/status/2091917563869680067"
+        },
+        {
+          "tag": "new",
+          "title": "@danscan: Mobile CLI Bridge for Local Computer AI Agents",
+          "body": "Developer @danscan released a free iOS utility pairing mobile devices directly with local computer agents to trigger remote system commands and coding workflows.",
+          "url": "https://x.com/danscan/status/2091912243587776952"
+        },
+        {
+          "tag": "hot",
           "title": "@opencode: OpenCode Releases LongCat-2.0 in Go",
-          "body": "OpenCode released LongCat-2.0, a 1.6T/48B MoE open-weights model supporting a 1 million token context window natively in Go.",
+          "body": "OpenCode launched LongCat-2.0, a 1.6T MoE open model featuring native Go execution and a 1 million token context window.",
           "url": "https://x.com/opencode/status/2091886759298654383"
         },
         {
           "tag": "update",
-          "title": "@rickmanelius: Economics of Serving Qwen Locally on Used Mac Hardware",
-          "body": "Hardware tech breakdown shows how a used Apple M1 Pro (32GB) purchased for $900 can generate ~$150/month serving Qwen model inference locally.",
-          "url": "https://x.com/rickmanelius/status/2091688235235680505"
-        },
-        {
-          "tag": "new",
-          "title": "@Saboo_Shubham_: Gemini 3.7 Flash Tops Benchmarks on Artificial Analysis",
-          "body": "Artificial Analysis benchmarks show Gemini 3.7 Flash outperforming rival models across agentic evaluation tasks.",
-          "url": "https://x.com/Saboo_Shubham_/status/2091626053118914817"
-        },
-        {
-          "tag": "new",
-          "title": "@GoSailGlobal: Zoetrope Visualizer for Claude Code Workflows",
-          "body": "Developers released Zoetrope, an open-source terminal visualization tool that graphs Claude Code agent executions, tool calls, and subagent trees in real time.",
+          "title": "@GoSailGlobal: Zoetrope Visualizer for Claude Code Execution Trees",
+          "body": "Open-source developers introduced Zoetrope, a terminal UI visualizer graphing Claude Code subagent trees and tool call sequences in real time.",
           "url": "https://x.com/GoSailGlobal/status/2091691986977980789"
         },
         {
           "tag": "update",
-          "title": "@TheEconomist: China's Advanced AI Semiconductor Scaling",
-          "body": "Economic analysis details Chinese domestic semiconductor lithography advances aiming to produce millions of high-performance AI accelerator chips.",
-          "url": "https://x.com/TheEconomist/status/2079493101840949676"
+          "title": "@Saboo_Shubham_: Gemini 3.7 Flash Tops Benchmarks on Artificial Analysis",
+          "body": "Artificial Analysis benchmarks place Gemini 3.7 Flash at the top of overall leaderboards for agentic coding and reasoning efficiency.",
+          "url": "https://x.com/Saboo_Shubham_/status/2091626053118914817"
         }
       ]
     },
@@ -64,33 +64,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Polymarket: Executive Order Proposal Sparks Tech Industry Visa Debate",
-          "body": "Corporate policy analysts and tech executives react to the proposed $103,265 H-1B visa application fee, assessing its potential impact on international talent recruitment.",
+          "title": "@Polymarket: Porsche Signs $1.5 Billion Enterprise AI Deployment Deal",
+          "body": "Automaker Porsche finalized a landmark $1.5 billion enterprise AI contract with an Indian technology consulting firm to integrate AI models across corporate operations.",
+          "url": "https://x.com/Polymarket/status/2091890446481916286"
+        },
+        {
+          "tag": "hot",
+          "title": "@nikiscevak: Historical Retrospective on Philips' ASML and TSMC Holdings",
+          "body": "Venture capitalist Niki Scevak notes Philips previously owned 100% of ASML ($687B) and 28% of TSMC ($1.95T), contrasting with Philips' current market valuation of $27B.",
+          "url": "https://x.com/nikiscevak/status/2091626312662487521"
+        },
+        {
+          "tag": "update",
+          "title": "@Polymarket: Executive Proposal on $103K H-1B Visa Application Fee",
+          "body": "Tech industry leadership evaluates proposed executive policy shifts raising initial H-1B visa application fees to $103,265.",
           "url": "https://x.com/Polymarket/status/2091895557098787022"
         },
         {
-          "tag": "update",
-          "title": "@HooverInst: US-China Economic & Technology Strategy Analysis",
-          "body": "The Hoover Institution published strategic review papers analyzing trade policies, technology export controls, and bilateral relations between the US and China.",
-          "url": "https://x.com/HooverInst/status/2070195635022884895"
-        },
-        {
           "tag": "new",
-          "title": "@AlphaSenseInc: AlphaSense Launches SuperAnalyst AI Agent",
-          "body": "AlphaSense announced SuperAnalyst, an autonomous AI research agent designed for continuous financial market intelligence, SEC filing analysis, and deal tracking.",
-          "url": "https://x.com/AlphaSenseInc/status/2065175840304865517"
+          "title": "@N_Sportelli: Clay Launches Wedge Startup GTM Accelerator",
+          "body": "Clay GTM leader Natalie Sportelli announced Wedge, a 2-week accelerator supporting early-stage venture startups in building automated customer acquisition engines.",
+          "url": "https://x.com/N_Sportelli/status/2091906097896473021"
         },
         {
           "tag": "update",
-          "title": "@Wang__xiaolong: Strategic Principles for Capital Preservation & Tech Readiness",
-          "body": "Financial analyst Wang Xiaolong outlines key rules for personal capital preservation, global hardware choices, and anti-fragile asset allocation.",
-          "url": "https://x.com/Wang__xiaolong/status/2091395005676228727"
-        },
-        {
-          "tag": "update",
-          "title": "@cxjwin: Xiaopeng Motors Synthesizes 630K Work Logs into Enterprise Knowledge",
-          "body": "XPeng Motors converted 630,000 internal work recordings into a searchable AI knowledge base, achieving an 80% resolution accuracy rate for employee queries.",
-          "url": "https://x.com/cxjwin/status/2091714361114911201"
+          "title": "@APompliano: Gen Z Shift Toward Financial Literacy & Risk Awareness",
+          "body": "Investor Anthony Pompliano analyzes survey data showing Gen Z retail investors adopting disciplined risk management strategies due to early access to digital financial education.",
+          "url": "https://x.com/APompliano/status/2085395725865591229"
         }
       ]
     },
@@ -100,33 +100,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@GhostSoldierMov: Jim Caviezel Stars in 'Ghost Soldier' Exclusive Theatrical Release",
-          "body": "Official announcement trailer drops for 'Ghost Soldier', featuring Jim Caviezel in an upcoming theatrical action-thriller.",
-          "url": "https://x.com/GhostSoldierMov/status/2090451420155670580"
-        },
-        {
-          "tag": "update",
-          "title": "@Schwarzenegger: Arnold Schwarzenegger on Lifelong Strength Training",
-          "body": "Arnold Schwarzenegger shared fitness encouragement for all ages, emphasizing consistency and strength training regardless of current fitness level or age.",
-          "url": "https://x.com/Schwarzenegger/status/2089831059739619397"
-        },
-        {
-          "tag": "update",
-          "title": "@iMiaSanMia: Bryan Zaragoza Completes Loan Move to Espanyol",
-          "body": "Bayern Munich winger Bryan Zaragoza agrees to a season-long loan deal with Espanyol, including an €8m obligation to buy next summer.",
-          "url": "https://x.com/iMiaSanMia/status/2091848143335768381"
+          "title": "@RockstarGames: Grand Theft Auto VI: An Extended Look Premiering on Netflix",
+          "body": "Rockstar Games confirmed that 'Grand Theft Auto VI: An Extended Look' will stream globally on Netflix on Thursday, August 27 at 3:00 PM ET.",
+          "url": "https://x.com/RockstarGames/status/2090187149090193916"
         },
         {
           "tag": "hot",
-          "title": "@Mci_tony_: Erling Haaland Signature Knee Slide Goes Viral",
-          "body": "Manchester City striker Erling Haaland's flawless pitch celebration gains viral attention across football media.",
-          "url": "https://x.com/Mci_tony_/status/2091805923484307873"
+          "title": "@elonmusk: Elon Musk Reflects on Original Tesla Roadster Space Launch",
+          "body": "Elon Musk shared back-story on launching his personal Tesla Roadster into orbit, noting the payload decision was driven by high test flight risk profile.",
+          "url": "https://x.com/elonmusk/status/2091944733396631770"
+        },
+        {
+          "tag": "update",
+          "title": "@metrofive5: Keanu Reeves Recreates Iconic Photo After 24 Years",
+          "body": "Actor Keanu Reeves went viral after reuniting with a restaurant owner to recreate a photograph originally taken 24 years earlier.",
+          "url": "https://x.com/metrofive5/status/2091770136696905881"
         },
         {
           "tag": "new",
-          "title": "@dabit3: Legendary Community Note Sets X Engagement Record",
-          "body": "Developer Nader Dabit highlights a viral Community Note response breaking social media engagement records.",
-          "url": "https://x.com/dabit3/status/2091830778896511413"
+          "title": "@safaricheung: YouTube Deploys Dynamic Localized Thumbnail Swapping",
+          "body": "Tech creators highlight YouTube's automated thumbnail localization feature that dynamically swaps video art assets based on viewer region and language.",
+          "url": "https://x.com/safaricheung/status/2091742180478276037"
+        },
+        {
+          "tag": "update",
+          "title": "@Schwarzenegger: Arnold Schwarzenegger Encourages Lifelong Strength Training",
+          "body": "Arnold Schwarzenegger published fitness guidance reinforcing that strength training benefits individuals at all age levels regardless of prior experience.",
+          "url": "https://x.com/Schwarzenegger/status/2089831059739619397"
         }
       ]
     }
