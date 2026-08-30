@@ -1,126 +1,126 @@
 {
   "title": "Clawd X Digest",
-  "date": "Saturday, August 29th, 2026",
+  "date": "Sunday, August 30th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI Codex Allowance Reset:</strong> OpenAI engineer Tibo (@thsottiaux) announces usage resets for paid Codex & ChatGPT Work users, with bug fixes increasing effective token allowances by up to 50%.",
-    "<strong>15GW Compute Power Wall:</strong> Elon Musk (@elonmusk) highlights industry estimates that ~15 gigawatts of 2027 AI compute production won't be able to turn on due to global energy grid bottlenecks.",
-    "<strong>GLM-5.3 Local on Mac Silicon:</strong> Pipe Network (@pipenetwork) releases MLX builds of 744B GLM-5.3 running offline on Apple Silicon at 60 tokens/sec on Mac Studio M5 Ultra.",
-    "<strong>Defense Procurement Disparity:</strong> Defense observer James Watson (@JmWatson16) exposes military contractor markups comparing a ,000 3D-printed anti-drone net gun against a  equivalent.",
-    "<strong>Gen Z Financial Literacy Shift:</strong> Anthony Pompliano (@APompliano) shares data showing Gen Z retail investors exhibit higher risk awareness and long-term discipline than previous generations."
+    "<strong>Elon Musk on 15GW AI Compute Bottleneck:</strong> Musk highlights that ~15GW of AI compute capacity produced in 2027 cannot be turned on immediately due to physical infrastructure constraints in transformers, cooling, and chillers.",
+    "<strong>Anthropic Claude Rate Limit & DevRel Dynamics:</strong> Developer Theo (@theo) responds to Anthropic's Claude Code rate limit modifications, highlighting best practices for compute communication and developer trust.",
+    "<strong>OpenAI Compute & Codex Milestone Tease:</strong> OpenAI engineer Tibo teases upcoming Codex updates as developers evaluate compute allocations and model scaling across major AI labs.",
+    "<strong>Guardiola Endorses Harry Kane for Ballon d'Or:</strong> Pep Guardiola praises Harry Kane's remarkable goal-scoring consistency and team impact, stating Kane deserves football's top individual honor.",
+    "<strong>Macro Markets & Hawkish Fed Signals:</strong> Analysis of recent Fed policy signals from Jackson Hole shows rising bond yields and US dollar strength impacting cloud tech valuations."
   ],
   "sections": [
     {
-      "emoji": "\ud83e\udd16",
+      "emoji": "🤖",
       "title": "AI & Tech",
       "items": [
         {
           "tag": "hot",
-          "title": "@thsottiaux: OpenAI Codex Resets Allowances & Fixes Wasted Usage",
-          "body": "OpenAI engineer Tibo announces a complete usage reset for all paid Codex and ChatGPT Work users alongside critical bug fixes that extend effective usage limits by 10% to 50%.",
-          "url": "https://x.com/thsottiaux/status/2093801758665715784"
-        },
-        {
-          "tag": "hot",
-          "title": "@elonmusk: 15GW AI Compute Built in 2027 Face Grid Power Shortages",
-          "body": "Elon Musk warns that industry consensus projects ~15 gigawatts of AI compute manufactured in 2027 will fail to come online on schedule due to severe power generation and grid interconnect delays.",
+          "title": "@elonmusk: 15GW AI Compute Bottleneck Beyond Power Generation",
+          "body": "Elon Musk highlights that ~15GW of AI compute capacity produced in 2027 won't be able to turn on due to complex physical infrastructure bottlenecks in transformers, high-capacity wiring, liquid-cooling systems, and chillers.",
           "url": "https://x.com/elonmusk/status/2093810234141634702"
         },
         {
-          "tag": "new",
-          "title": "@pipenetwork: GLM-5.3 744B Runs Offline at 60 t/s on Apple Silicon",
-          "body": "Pipe Network releases optimized MLX builds of the 744B parameter GLM-5.3 model for Apple Silicon, achieving 60 tokens/sec offline performance on Mac Studio hardware while resolving a 2K token corruption bug.",
-          "url": "https://x.com/pipenetwork/status/2093691186561143118"
+          "tag": "hot",
+          "title": "@theo: Anthropic Rate Limit Restructuring & Developer Communications",
+          "body": "Developer Theo (@t3dotgg) addresses Anthropic's rate limit modifications on Claude Code, demonstrating how AI providers can balance compute constraints with transparent developer relations.",
+          "url": "https://x.com/theo/status/2093855759532765397"
         },
         {
           "tag": "new",
-          "title": "@ThriveCMD: IDE Harness & Context Emerge as AI Tooling Moats",
-          "body": "Analysis of OpenAI cutting Cursor model access following SpaceX's acquisition shows 95% of users rely on non-OpenAI models, demonstrating that repo indexing, memory, and context harnesses outweigh raw model supremacy.",
-          "url": "https://x.com/ThriveCMD/status/2093818658208248078"
+          "title": "@thsottiaux: OpenAI Codex & Engineering Milestone Tease",
+          "body": "OpenAI engineer Tibo teases upcoming Codex platform updates as the engineering team accelerates development on core developer tools and assistant features.",
+          "url": "https://x.com/thsottiaux/status/2093811840258293947"
         },
         {
           "tag": "update",
-          "title": "@bstaples: Anthropic SDLC Playbook & Beyond-Code Bottlenecks",
-          "body": "Bill Staples reflects on Anthropic's AI-Native SDLC playbook, asserting that as code generation becomes abundant, trust, verification, context, and governance become the true engineering bottlenecks.",
+          "title": "@TheEconomist: China's Advanced Chip Manufacturing Milestones",
+          "body": "The Economist analyzes reports indicating Chinese semiconductor fabricators may have developed scalable workarounds to produce advanced AI chips despite global export controls.",
+          "url": "https://x.com/TheEconomist/status/2079493101840949676"
+        },
+        {
+          "tag": "update",
+          "title": "@scottstts: AI Model Inference Capacity & Compute Allocation",
+          "body": "Industry analysis compares operational compute clusters between OpenAI and Anthropic, detailing how user scale and inference allocation affect model availability.",
+          "url": "https://x.com/scottstts/status/2093652515409567792"
+        },
+        {
+          "tag": "new",
+          "title": "@bstaples: The AI-Native SDLC Playbook & Code Bottleneck Shifts",
+          "body": "Analysis of Anthropic's AI-Native Software Development Lifecycle playbook, discussing how automated code generation shifts engineering bottlenecks from syntax writing to system design.",
           "url": "https://x.com/bstaples/status/2091961256043581828"
-        },
-        {
-          "tag": "update",
-          "title": "@poteto: xAI Grok Bot Android App Enters Pre-Registration",
-          "body": "The xAI Grok Bot engineering team confirms its native Android application is nearing release and open for pre-registration on the Google Play Store.",
-          "url": "https://x.com/poteto/status/2093063044062650744"
         }
       ]
     },
     {
-      "emoji": "\ud83d\udcc8",
+      "emoji": "📈",
       "title": "Markets & News",
       "items": [
         {
           "tag": "hot",
-          "title": "@APompliano: Gen Z Retail Investors Display Heightened Risk Discipline",
-          "body": "Anthony Pompliano highlights financial market research showing Gen Z investors exhibit significantly greater risk awareness and long-term discipline than prior generations, driven by expanded digital financial education.",
-          "url": "https://x.com/APompliano/status/2085395725865591229"
-        },
-        {
-          "tag": "new",
-          "title": "@FLINTKYA: Senate AI AGENT Act Sparks Liability Debates",
-          "body": "Tech policy advocate FLINT warns that Senator Warner's proposed AI AGENT Act (S. 5051) attempts to apply 200-year-old common law principles to autonomous AI agents, risking unintended legal friction for software developers.",
-          "url": "https://x.com/FLINTKYA/status/2093362387625914617"
-        },
-        {
-          "tag": "new",
-          "title": "@JmWatson16: Defense Procurement Markup: ,000 vs  Anti-Drone Net Gun",
-          "body": "Defense observer James Watson details a contractor demo featuring a ,000 3D-printed anti-drone net gun, contrasting it with a  Ukrainian military equivalent offering equal or superior effectiveness.",
-          "url": "https://x.com/JmWatson16/status/2093739934616309884"
+          "title": "@Balder13946731: Hawkish Fed Outlook & Market Disconnect",
+          "body": "Market analysis of Fed Chair remarks at Jackson Hole, detailing why bond yields and the US dollar jumped while cloud giants (, , ) diverged from broader growth equities.",
+          "url": "https://x.com/Balder13946731/status/2093495283770446177"
         },
         {
           "tag": "update",
-          "title": "@Skjones24_: NBA Player Outlines Discipline Behind M Salary Allocation",
-          "body": "Spencer Jones breaks down his M annual NBA earnings (.3M post-tax), allocating 20% to venture, capping living expenses at K, and putting the remaining .5M+ into index funds and savings.",
-          "url": "https://x.com/Skjones24_/status/2093740277773029839"
+          "title": "@szslg: Macro Liquidity & Policy Execution Horizons",
+          "body": "Economic analysis evaluating Treasury strategy, bond supply management, and foreign exchange stability heading into mid-term policy windows.",
+          "url": "https://x.com/szslg/status/2093901655272276247"
         },
         {
           "tag": "update",
-          "title": "@TheEconomist: China Advanced Chip Fabrication Capability Gains",
-          "body": "The Economist examines US intelligence reports suggesting Chinese semiconductor manufacturers may have unlocked scalable domestic production techniques for advanced AI microchips.",
-          "url": "https://x.com/TheEconomist/status/2079493101840949676"
+          "title": "@HooverInst: US-China Diplomatic Strategy Review",
+          "body": "Hoover Institution retrospective exploring trade policies, technology controls, and diplomatic framework shifts between the US and China.",
+          "url": "https://x.com/HooverInst/status/2070195635022884895"
+        },
+        {
+          "tag": "new",
+          "title": "@sinotalks: China Technology Talent Exit Rules Effective Sept 15",
+          "body": "Legal breakdown of China's newly announced regulations governing scientific and technical personnel exit controls, taking effect September 15.",
+          "url": "https://x.com/sinotalks/status/2092604367241388232"
+        },
+        {
+          "tag": "new",
+          "title": "@PIF_en: Saudi Public Investment Fund 2025 Milestones",
+          "body": "Saudi Arabia's Public Investment Fund outlines strategic capital allocation and infrastructure achievements across energy, real estate, and tech sectors.",
+          "url": "https://x.com/PIF_en/status/2089335520765612378"
         }
       ]
     },
     {
-      "emoji": "\ud83c\udf0d",
+      "emoji": "🌍",
       "title": "General",
       "items": [
         {
           "tag": "hot",
-          "title": "@andrew_n_carr: Dimethyl Mercury Exposure Incident Reported at MIT",
-          "body": "Researcher Andrew Carr reports on a grave chemical safety incident on the MIT campus involving direct student exposure to dimethyl mercury.",
-          "url": "https://x.com/andrew_n_carr/status/2093524390390694232"
+          "title": "@TomKlingenstein: The Declaration as America's Moral Anchor",
+          "body": "A widely engaged philosophical perspective on how America's founding principles provide an indispensable compass for civic life and governance.",
+          "url": "https://x.com/TomKlingenstein/status/2085183598408163589"
+        },
+        {
+          "tag": "hot",
+          "title": "@Bayern_PR: Guardiola Endorses Harry Kane for Ballon d'Or",
+          "body": "Manchester City manager Pep Guardiola commends Harry Kane's extraordinary consistency and goal scoring at Bayern Munich, asserting he fully merits the Ballon d'Or.",
+          "url": "https://x.com/Bayern_PR/status/2094026377481589219"
+        },
+        {
+          "tag": "viral",
+          "title": "@James315389: Viral FIFA Sportsmanship Moment",
+          "body": "A humorous online gaming story goes viral after an online FIFA player intentionally drops a match to help his opponent impress a date.",
+          "url": "https://x.com/James315389/status/2093795162078298585"
         },
         {
           "tag": "new",
-          "title": "@Samuel_Gregson: Debunking Quantum Physics Misconceptions on Discrete Space",
-          "body": "Physicist Sam Gregson addresses common quantum mechanics myths, clarifying that physical space is not pixelated and the Planck length represents a measurement scale rather than a grid limit.",
-          "url": "https://x.com/Samuel_Gregson/status/2093774825076474335"
-        },
-        {
-          "tag": "new",
-          "title": "@mrrasmulan: Medical Career Humor Goes Viral",
-          "body": "Creator Rasmulan shares viral medical dialogue humor: \"Doctor: 'I became a doctor today.' Patient: 'Congratulations! Now, what is the bad news?'\"",
-          "url": "https://x.com/mrrasmulan/status/2093717385467351259"
+          "title": "@Salmonbro: Desert Afforestation Legacy & Grassroots Conservation",
+          "body": "An inspiring tribute detailing 40 years of grassroots desert reforestation in China's Mu Us Desert, highlighting real environmental impact over empty slogans.",
+          "url": "https://x.com/Salmonbro/status/2093757573442773255"
         },
         {
           "tag": "update",
-          "title": "@PGATOUR: Scottie Scheffler Televised Hole-Out Highlights",
-          "body": "The PGA TOUR releases a video compilation showcasing Scottie Scheffler's 56 televised career hole-outs.",
-          "url": "https://x.com/PGATOUR/status/2090091420065608115"
-        },
-        {
-          "tag": "update",
-          "title": "@SamuelRome97104: Postgres Emerges as Dominant Backend Database Standard",
-          "body": "Tech breakdown highlights Postgres powering core infrastructure across major consumer platforms including Instagram, Reddit, Twitch, Notion, Figma, and ChatGPT.",
-          "url": "https://x.com/SamuelRome97104/status/2093575372604661868"
+          "title": "@SoonCrush: Fan Zhendong's Professional Career Expansion in Germany",
+          "body": "Table tennis champion Fan Zhendong's smooth transition to Germany's professional league highlights elite athlete support systems and cross-cultural appreciation.",
+          "url": "https://x.com/SoonCrush/status/2093749009492099165"
         }
       ]
     }
