@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Wednesday, September 2nd, 2026",
+  "date": "Thursday, September 3rd, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Stanford 'Modern Software Developer' 2026 Syllabus:</strong> Mihail Eric announced the Fall 2026 update for Stanford's software developer course, overhauling 85% of content to focus on AI-native engineering, coding agents (Claude Opus 4.5, Cursor, Claude Code), MCP portals, and open-source contributions.",
-    "<strong>Sam Altman on ChatGPT Energy & Water Usage:</strong> OpenAI CEO Sam Altman shared that running 38,000 ChatGPT queries consumes equivalent water to producing a single California almond.",
-    "<strong>US–Venezuela 65B Barrel Oil Deal Signed:</strong> The US and Venezuela officially finalized an energy agreement giving America majority operational control over 65 billion barrels of crude reserves.",
-    "<strong>US Treasury on Strait of Hormuz Bypass:</strong> US Treasury Secretary Scott Bessent stated that strategic bypass routes will render the Strait of Hormuz virtually irrelevant for global oil transit within 2 years.",
-    "<strong>Grok Android Release & Image 2.0:</strong> xAI opened Google Play pre-registration for the official Grok Android app alongside the rollout of Grok Image 2.0 with multi-image compositing and style controls."
+    "<strong>OpenAI Unveils GPT-6 'Astra' Model:</strong> OpenAI officially released GPT-6 Astra, demonstrating autonomous computer-use capabilities, Lean formal proofing, and achieving a 66% score on ARC-AGI-3 (nearing 100% with continuous conversation harnesses).",
+    "<strong>US Senators Propose AI Pause Bill:</strong> Senators Bernie Sanders and Greg Casar introduced the 'Ban Artificial Superintelligence Act', calling for a nationwide halt on AI systems matching or exceeding human cognitive performance.",
+    "<strong>Broadcom Outlines $350B AI Chip Target & Q3 Beat:</strong> Broadcom ($AVGO) reported Q3 revenue of $29.6B (+86% YoY) and projected $350B in total AI semiconductor shipments over the next 2 years.",
+    "<strong>Meta Releases Muse Spark 1.3 Coding Model:</strong> Meta introduced Muse Spark 1.3, achieving an 88.8 score on Terminal-Bench 2.1 and matching GPT-5.6 Sol coding capabilities.",
+    "<strong>Antigravity Resets Gemini 3.8 Flash Quotas:</strong> Antigravity co-founder Varun Mohan announced quota resets for Google's Gemini 3.8 Flash, citing heavy TPU cluster usage following the model's launch."
   ],
   "sections": [
     {
@@ -16,45 +16,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@mihail_eric: Stanford Course 'The Modern Software Developer' 2026 Update",
-          "body": "Mihail Eric announced the Fall 2026 syllabus for Stanford's CS course, discarding 85% of prior material to focus on AI-native software engineering, MCP portals, agentic code review, and PR contributions to top OSS repos (Browserbase, CopilotKit, Vercel, Semgrep).",
-          "url": "https://x.com/mihail_eric/status/2095166860740174273"
+          "title": "@OpenAI: OpenAI Releases GPT-6 Astra for General Computer Use",
+          "body": "OpenAI introduced GPT-6 Astra, designed to automate complex desktop and web software workflows fast and autonomously across full computing environments.",
+          "url": "https://x.com/OpenAI/status/2095595741528125780"
+        },
+        {
+          "tag": "hot",
+          "title": "@fchollet: François Chollet Analyzes GPT-6 Astra on ARC-AGI-3 Benchmark",
+          "body": "François Chollet reported that GPT-6 Astra scored 66% on ARC-AGI-3 using standard evaluation and nearly 100% with continuous compaction harnesses, displaying symbolic world modeling behavior.",
+          "url": "https://x.com/fchollet/status/2095598451115614371"
+        },
+        {
+          "tag": "hot",
+          "title": "@AndrewCurran_: US Lawmakers Introduce Ban Artificial Superintelligence Act",
+          "body": "Senators Bernie Sanders and Greg Casar introduced legislation calling for a pause on frontier AI development and banning systems exceeding human cognitive performance.",
+          "url": "https://x.com/AndrewCurran_/status/2095541502827233325"
         },
         {
           "tag": "update",
-          "title": "@unusual_whales: Sam Altman Compares ChatGPT Query Footprint to Almond Production",
-          "body": "Sam Altman highlighted AI resource efficiency, noting that 38,000 ChatGPT queries consume the same amount of water used to grow a single California almond.",
-          "url": "https://x.com/unusual_whales/status/2095263244449354054"
+          "title": "@_mohansolo: Antigravity Resets Gemini 3.8 Flash API Quotas Amid TPU Spike",
+          "body": "Antigravity co-founder Varun Mohan announced TPU quota resets for developers building on Google's newly released Gemini 3.8 Flash model.",
+          "url": "https://x.com/_mohansolo/status/2095568203799806235"
         },
         {
           "tag": "new",
-          "title": "@poteto: Grok Android App Opens Google Play Pre-Registration",
-          "body": "The Grok team announced that the official Grok Android app is nearing launch, opening pre-registration for users on the Google Play Store.",
-          "url": "https://x.com/poteto/status/2093063044062650744"
+          "title": "@ClaudeDevs: Anthropic Previews Function Hooks for Claude Code Customization",
+          "body": "Anthropic's developer team showcased upcoming Function Hooks in Claude Code, enabling developers to customize and automate internal agent behaviors.",
+          "url": "https://x.com/ClaudeDevs/status/2095572891941351550"
         },
         {
           "tag": "update",
-          "title": "@grok: xAI Rolls Out Grok Image 2.0 for High-Fidelity Synthesis",
-          "body": "xAI introduced Grok Image 2.0, featuring advanced style controls, multi-image compositing capabilities, and fast iterative visual generation.",
-          "url": "https://x.com/grok/status/2089714736355070453"
+          "title": "@nasqret: Mathematician Demonstrates Real-Time Lean Proofs with GPT-6 Astra",
+          "body": "Researcher Bartosz Naskręcki demonstrated using GPT-6 Astra to formalize mathematical proofs live in Lean alongside Codex code generation.",
+          "url": "https://x.com/nasqret/status/2095620909583274335"
         },
         {
           "tag": "new",
-          "title": "@rahulbais136: Google NotebookLM Expands into Autonomous AI Workflow Engine",
-          "body": "Updates to Google NotebookLM transform it beyond PDF summarization into a multi-format AI execution system with automated data processing pipelines.",
-          "url": "https://x.com/rahulbais136/status/2094966081270218881"
-        },
-        {
-          "tag": "update",
-          "title": "@QwenDevs: Qwen Developers Release Technical Deep Dive on Local Search",
-          "body": "Qwen Devs published 'From rg to zg: Local Search Beyond Keywords', detailing semantic and structural code search techniques for developer tools.",
-          "url": "https://x.com/QwenDevs/status/2095157452904018263"
-        },
-        {
-          "tag": "update",
-          "title": "@Supermicro: Supermicro & NVIDIA Expand Enterprise AI Factory Solutions",
-          "body": "Supermicro showcased turnkey AI infrastructure pairing high-density GPU computing with liquid-cooled server architectures for enterprise LLM clusters.",
-          "url": "https://x.com/Supermicro/status/2089863103563649120"
+          "title": "@lennysan: Lenny Rachitsky Partners with SpaceX AI for Grok Bot Access",
+          "body": "Lenny Rachitsky announced a partnership offering annual newsletter subscribers free access to Grok Bot for productivity workflows.",
+          "url": "https://x.com/lennysan/status/2092386630397255796"
         }
       ]
     },
@@ -64,39 +64,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: US & Venezuela Sign Deal for Control Over 65 Billion Barrels of Oil",
-          "body": "The United States and Venezuela signed a bilateral energy agreement establishing US majority management over 65 billion barrels of Venezuelan oil reserves.",
-          "url": "https://x.com/WatcherGuru/status/2095189210349138098"
+          "title": "@amitisinvesting: Broadcom ($AVGO) Projects $350B AI Chip Shipments Through FY28",
+          "body": "Broadcom reported Q3 revenue of $29.6B (+86% YoY) and outlined guidance forecasting $230B in annual AI semiconductor revenue by FY28.",
+          "url": "https://x.com/amitisinvesting/status/2095329815767175320"
         },
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Treasury Secretary Bessent Predicts Strait of Hormuz Bypass in 2 Years",
-          "body": "US Treasury Secretary Scott Bessent announced plans and infrastructure timeline to bypass the Strait of Hormuz within 2 years, neutralizing its global oil bottleneck role.",
-          "url": "https://x.com/WatcherGuru/status/2094784647465251128"
+          "title": "@amitisinvesting: Meta Launches Muse Spark 1.3 Coding Model Matching GPT-5.6 Sol",
+          "body": "Meta released Muse Spark 1.3, achieving an 88.8 score on Terminal-Bench 2.1 and expanding open coding capabilities for developers.",
+          "url": "https://x.com/amitisinvesting/status/2095329815767175320"
         },
         {
           "tag": "new",
-          "title": "@WatcherGuru: US Mint Releases 2026 President Trump $1 Coin into Circulation",
-          "body": "The US Mint officially released the 2026 President Donald Trump $1 commemorative circulation coin across federal banking channels.",
-          "url": "https://x.com/WatcherGuru/status/2095145153157808635"
+          "title": "@amitisinvesting: Neocloud Nscale Targets IPO with $103B Contracted Revenue Pipeline",
+          "body": "Nvidia-backed GPU cloud provider Nscale presented IPO materials citing $103 billion in long-term compute contracts, including a $45B agreement with Anthropic.",
+          "url": "https://x.com/amitisinvesting/status/2095329815767175320"
         },
         {
           "tag": "update",
-          "title": "@unusual_whales: Zoom Appoints Former Oracle CFO Jeffrey E. Epstein to Board",
-          "body": "Zoom Video Communications added former Oracle CFO Jeffrey E. Epstein to its Board of Directors to guide enterprise financial expansion.",
-          "url": "https://x.com/unusual_whales/status/2095278030289879230"
+          "title": "@WatcherGuru: 15-Year Asset Returns Highlight Bitcoin and Nvidia Growth",
+          "body": "Financial market overview noted that a $1,000 investment made 15 years ago would equal $8.97M in Bitcoin, $735K in Nvidia, and $231K in Tesla.",
+          "url": "https://x.com/WatcherGuru/status/2095282521759953341"
         },
         {
           "tag": "update",
-          "title": "@Apple: Apple Formally Announces Fall Keynote for September 9",
-          "body": "Apple sent official invitations for its annual fall hardware keynote scheduled for September 9 at 10:00 AM PT at Apple Park.",
+          "title": "@saylor: Michael Saylor Declares Market Turning Point for Bitcoin",
+          "body": "MicroStrategy Chairman Michael Saylor issued a bullish note to market bears as Bitcoin consolidated key resistance levels.",
+          "url": "https://x.com/saylor/status/2095524315936530834"
+        },
+        {
+          "tag": "update",
+          "title": "@Apple: Apple Invites Media to Fall Event Scheduled for September 9",
+          "body": "Apple confirmed its annual fall product keynote set for September 9 at Apple Park to announce new hardware and Apple Intelligence features.",
           "url": "https://x.com/Apple/status/2095205673071948066"
-        },
-        {
-          "tag": "update",
-          "title": "@TheEconomist: Semiconductor Report Highlights China's AI Fabrication Progress",
-          "body": "Industry analysis details how Chinese semiconductor foundries are scaling production techniques to supply domestic AI data centers with high-density chips.",
-          "url": "https://x.com/TheEconomist/status/2079493101840949676"
         }
       ]
     },
@@ -106,27 +106,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ChinaTruth: Story of Okinawa Teacher Keiko Mori Rescues 30 Students in 1945",
-          "body": "Historical retrospective shared the story of 22-year-old Okinawa teacher Keiko Mori, who defied 1945 military suicide orders to protect 30 young students in a cave until Allied forces arrived.",
-          "url": "https://x.com/ChinaTruth/status/2095023198702354765"
+          "title": "@FabrizioRomano: José Mourinho Criticizes Raúl Asencio's Off-Pitch Conduct",
+          "body": "Fenerbahçe manager José Mourinho publicly addressed Real Madrid defender Raúl Asencio, praising his training dedication while calling out off-pitch behavior.",
+          "url": "https://x.com/FabrizioRomano/status/2095457259862270383"
         },
         {
-          "tag": "update",
-          "title": "@FabrizioRomano: Major European Football Free Agents Tracker",
-          "body": "Fabrizio Romano compiled a high-profile list of unattached global football stars currently available as free agents, including Pogba, Sancho, Carvajal, and Ramos.",
-          "url": "https://x.com/FabrizioRomano/status/2095090843912708550"
-        },
-        {
-          "tag": "update",
-          "title": "@MarioNawfal: Travel Creator Shares Experience at Nigerian Checkpoints",
-          "body": "A viral travel report documented a Chinese creator passing through 20 regional checkpoints in Nigeria, highlighting travel safety discussions.",
-          "url": "https://x.com/MarioNawfal/status/2095013854216335845"
+          "tag": "hot",
+          "title": "@FabrizioRomano: Liverpool Excludes Federico Chiesa and Wataru Endo from Champions League",
+          "body": "Liverpool officially left Federico Chiesa and Wataru Endo out of their registered squad for the upcoming UEFA Champions League stage.",
+          "url": "https://x.com/FabrizioRomano/status/2095626769160126957"
         },
         {
           "tag": "new",
-          "title": "@NFL: Jaxon Smith-Njigba Voted #5 Player on NFL Top 100",
-          "body": "Seattle Seahawks wide receiver Jaxon Smith-Njigba was voted the #5 overall player in the NFL Top 100 Players of 2026 player rankings.",
-          "url": "https://x.com/NFL/status/2094424971841802735"
+          "title": "@GBC_Press: Former President Obama Responds to Foreign Policy Heckler",
+          "body": "During a public appearance, former President Barack Obama responded to a heckler, noting he is no longer in office and does not direct current US foreign policy.",
+          "url": "https://x.com/GBC_Press/status/2095584880788910505"
+        },
+        {
+          "tag": "update",
+          "title": "@NFL: Josh Allen Voted #2 on NFL Top 100 Players of 2026",
+          "body": "Buffalo Bills quarterback Josh Allen was voted #2 overall in the NFL Top 100 Players of 2026 player rankings.",
+          "url": "https://x.com/NFL/status/2095512134348410904"
+        },
+        {
+          "tag": "update",
+          "title": "@cuichenghao: Chinese Influencer Xiaohei Zhuming Arrives in San Francisco",
+          "body": "Popular Chinese content creator Xiaohei Zhuming arrived in San Francisco, joining fellow commentators Yuan Tengfei and Liang Hongda in the US.",
+          "url": "https://x.com/cuichenghao/status/2095392701164449892"
         }
       ]
     }
