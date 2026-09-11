@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Friday, September 11th, 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Friday, September 11th, 2026</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>OpenAI Retiring GPT-5.3-Codex-Spark & Pausing Pro Subscriptions:</strong> OpenAI announced plans to retire the GPT-5.3-Codex-Spark model next week while maintaining a signup pause on $200 Pro plans to manage inference load on new frontier models.</li>
+      <li><strong>DeepSeek V4.1 Flash Architecture Released:</strong> DeepSeek introduced V4.1 Flash featuring a 552B MoE backbone with 196B conditional memory parameters, boasting 33x to 133x lower inference costs compared to competing models.</li>
+      <li><strong>Anthropic Exposes Security Risks of LLM API Relays:</strong> Security reports highlighted major risks from unencrypted Chinese LLM proxy/relay services leaking corporate codebase tokens, cloud API keys, and internal prompt data.</li>
+      <li><strong>Apple Reportedly Paying Samsung $250/Screen for iPhone Duo OLEDs:</strong> Industry reports indicate Apple is sourcing foldable OLED displays from Samsung for the upcoming iPhone Duo at $250 per display module.</li>
+      <li><strong>UEFA Champions League Kickoff & Ballon d'Or Speculation:</strong> Bayern Munich extended their historic 39-game home unbeaten streak in Champions League group/league play as Declan Rice and Vincent Kompany backed Harry Kane and Michael Olise for Ballon d'Or contention.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>AI &amp; Tech</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hot">Hot</span> @thsottiaux: OpenAI Retiring GPT-5.3-Codex-Spark &amp; Managing Pro Plan Capacity</div>
+    <div class="item-body">OpenAI engineer Tibo Sottiaux announced the retirement of GPT-5.3-Codex-Spark next week to free up server infrastructure, following the recent subscription pause on $200 Pro plans.</div>
+    <div class="item-meta">
+      <a href="https://x.com/thsottiaux/status/2098300998968357218" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag new">New</span> @onusoz: DeepSeek Unveils V4.1 Flash with Engram Conditional Memory</div>
+    <div class="item-body">DeepSeek released V4.1 Flash featuring 16B active parameters out of 552B MoE total and a 4x smaller KV cache, drastically reducing token costs by two orders of magnitude.</div>
+    <div class="item-meta">
+      <a href="https://x.com/onusoz/status/2098080151737389546" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag update">Update</span> @lidangzzz &amp; @jessyshen: Security Alarm Over LLM API Relay Data Leaks</div>
+    <div class="item-body">Industry commentary centered on security findings showing commercial API proxy relay services leaking confidential codebase tokens, cloud credentials, and internal AI queries.</div>
+    <div class="item-meta">
+      <a href="https://x.com/lidangzzz/status/2098358352887574929" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag new">New</span> @tldraw: tldraw Responds to OpenAI&#x27;s New @Sketch Feature</div>
+    <div class="item-body">Canvas tool tldraw challenged OpenAI&#x27;s newly announced @Sketch drawing capability inside ChatGPT, offering live visual prototyping alternatives.</div>
+    <div class="item-meta">
+      <a href="https://x.com/tldraw/status/2097722028165840900" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag update">Update</span> @poteto: Grok Android App Enters Google Play Pre-Registration</div>
+    <div class="item-body">The Grok team announced their Android companion application is nearing launch, opening pre-registration for users on the Google Play Store.</div>
+    <div class="item-meta">
+      <a href="https://x.com/poteto/status/2093063044062650744" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag update">Update</span> @ErfanEbrahimnia: Shopify Shifts Mobile Architecture Back to Native</div>
+    <div class="item-body">Developer discussions highlighted Shopify&#x27;s strategic shift moving core app infrastructure away from React Native in favor of native platform frameworks.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ErfanEbrahimnia/status/2098145097334379001" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tip">Tip</span> @trq212: Context-Building Prompting Technique for LLM Memory</div>
+    <div class="item-body">A viral prompt pattern suggests leveraging interactive interview mode to build comprehensive long-term context profiles within Claude and ChatGPT.</div>
+    <div class="item-meta">
+      <a href="https://x.com/trq212/status/2098157600361861579" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📈</span>
+      <h2>Markets &amp; News</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hot">Hot</span> @WatcherGuru: Apple Sourcing Samsung Foldable OLED Displays for iPhone Duo</div>
+    <div class="item-body">Reports surfaced that Apple will pay Samsung $250 per unit for foldable OLED screens intended for the anticipated iPhone Duo launch.</div>
+    <div class="item-meta">
+      <a href="https://x.com/WatcherGuru/status/2098401560980283846" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag update">Update</span> @WatcherGuru: US Inflation Holds Steady at 3.4%</div>
+    <div class="item-body">Bureau of Labor Statistics data confirmed US CPI inflation remained at 3.4% year-over-year, keeping macroeconomic monetary policy expectations unchanged.</div>
+    <div class="item-meta">
+      <a href="https://x.com/WatcherGuru/status/2098388617492394118" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag new">New</span> @theo: High Sentiment Surrounds Current Y Combinator Batch</div>
+    <div class="item-body">Y Combinator community discussions noted the current YC startup cohort is among the highest quality and most undervalued in recent history.</div>
+    <div class="item-meta">
+      <a href="https://x.com/theo/status/2098248404195578342" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🌍</span>
+      <h2>General &amp; Sports</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hot">Hot</span> @FabrizioRomano &amp; @TouchlineX: UEFA UCL Team of the Week &amp; Ballon d&#x27;Or Criteria</div>
+    <div class="item-body">UEFA released the Team of the Week following Champions League Matchday 1, while official Ballon d&#x27;Or voting guidelines emphasizing individual performance and team success were highlighted.</div>
+    <div class="item-meta">
+      <a href="https://x.com/FabrizioRomano/status/2098427779909841169" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag update">Update</span> @FCBayernEN &amp; @iMiaSanMia: Bayern Munich Extends 39-Game Unbeaten UCL Home Streak</div>
+    <div class="item-body">Bayern Munich maintained their record 39-match unbeaten streak in home UCL group/league matches as Vincent Kompany publicly supported Harry Kane and Michael Olise for Ballon d&#x27;Or recognition.</div>
+    <div class="item-meta">
+      <a href="https://x.com/FCBayernEN/status/2098353067838066855" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag new">New</span> @NOT_MOTD &amp; @CFC_Janty: Michael Olise Post-Match Demeanor Sparks Fan Debate</div>
+    <div class="item-body">Michael Olise&#x27;s calm and reserved post-match interview style triggered widespread debate across football media and fan communities.</div>
+    <div class="item-meta">
+      <a href="https://x.com/NOT_MOTD/status/2098286290768736476" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
