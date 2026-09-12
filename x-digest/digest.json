@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Friday, September 11th, 2026",
+  "date": "Saturday, September 12th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Fields Medalists Warn of AI Misalignment in Math:</strong> Terence Tao and 24 Fields Medalists released an open letter criticizing AI labs for treating mathematical research as a brute-force benchmark, rushing unverified proofs, and compromising attribution.",
-    "<strong>Elon Musk Details Grok 4.7 Delay:</strong> Elon Musk revealed Grok 4.7 will take a few more days to release after reinforcement learning overly penalized response length, causing the model to give up prematurely on hard tasks.",
-    "<strong>ChatGPT Sites Passes 5 Million Milestone:</strong> OpenAI announced over 5 million web applications have been published via ChatGPT Sites, introducing team co-editing, private sharing, custom domain mapping, and database inspection.",
-    "<strong>Massive Security Breach via Chinese LLM Proxy Relays:</strong> Cybersecurity researchers uncovered a 6TB leak from Chinese commercial LLM API routers exposing SSH keys, VPN credentials, and internal prompt data from top tech firms and government agencies.",
-    "<strong>Apple Purchasing Samsung Foldable OLEDs for iPhone Duo:</strong> Industry sources reported Apple is sourcing foldable OLED display modules from Samsung at $250 per unit for the upcoming iPhone Duo."
+    "<strong>Elon Musk Backs Dario Amodei's Call to Slow AI Development:</strong> Elon Musk publicly supported Anthropic CEO Dario Amodei's essay urging an industry-wide slowdown on frontier model development as recursive self-improvement begins, while sharing that Grok 4.7 is delayed a few days due to RL length-penalty issues.",
+    "<strong>OpenAI Fixes GPT-6 Astra Engine Degraded Performance & Issues Reset:</strong> OpenAI staff fixed misconfigured skill triggers and context management experiments that caused early stops for 4,000+ users, while announcing the deprecation of legacy GPT-5.3-Codex-Spark models.",
+    "<strong>Cognition Launches Devin Fusion Multi-Model Coding Harness:</strong> Cognition released Devin Fusion in Devin CLI, pairing frontier models like Fable 5.1 or Astra for planning with SWE-2 for execution, cutting coding benchmark costs by up to 43%.",
+    "<strong>ChatGPT Sites Exceeds 5 Million Apps with New Workspace Tools:</strong> OpenAI announced over 5 million web applications built on ChatGPT Sites, introducing shared workspace co-editing, private access links, custom domains, and database inspection.",
+    "<strong>6TB Leak from Chinese LLM Routers Exposes Enterprise SSH Keys:</strong> Security researcher Chaofan Shou revealed a 6TB leak from commercial Chinese LLM API routers exposing active SSH keys, cloud tokens, and internal prompt logs across top tech companies and government bodies."
   ],
   "sections": [
     {
@@ -16,45 +16,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ns123abc & @Polymarket: Terence Tao & 24 Fields Medalists Publish Open Letter on AI in Math",
-          "body": "Terence Tao and 24 fellow Fields Medalists signed a joint letter warning AI laboratories against treating mathematics as a brute-force benchmark. They highlighted concerns over rushed proof announcements, lack of proper writeups, and potential plagiarism.",
-          "url": "https://x.com/ns123abc/status/2098515807869255893"
+          "title": "@elonmusk & @DarioAmodei: Elon Musk Backs Anthropic CEO's Call to Slow Down AI Development",
+          "body": "Elon Musk publicly endorsed Anthropic CEO Dario Amodei's essay 'We Must Pace the Frontier', which advocates for industry-wide safety evaluators and a controlled development pace as recursive self-improvement emerges across frontier labs.",
+          "url": "https://x.com/elonmusk/status/2098789109980332057"
         },
         {
           "tag": "hot",
-          "title": "@elonmusk: Grok 4.7 Launch Delayed a Few Days for RL Fine-Tuning",
-          "body": "Elon Musk shared that Grok 4.7 requires additional fine-tuning after RL training overly penalized output length, leading the model to terminate early on complex reasoning tasks.",
+          "title": "@elonmusk: Grok 4.7 Delayed A Few Days for Reinforcement Learning Adjustments",
+          "body": "Elon Musk explained Grok 4.7 requires additional fine-tuning after RL training overly penalized response length, causing the model to give up prematurely on complex reasoning tasks.",
           "url": "https://x.com/elonmusk/status/2098462085973741960"
         },
         {
+          "tag": "update",
+          "title": "@thsottiaux & @ChrisGPT: OpenAI Resolves GPT-6 Astra Engine Degradation & Issues Reset",
+          "body": "OpenAI engineer Tibo Sottiaux confirmed fixes for GPT-6 Astra quality issues caused by legacy skill conflicts and an opt-in context experiment, rolling out an automatic usage reset for impacted users.",
+          "url": "https://x.com/ChrisGPT/status/2098686935610867905"
+        },
+        {
           "tag": "new",
-          "title": "@ChatGPT: ChatGPT Sites Surpasses 5M Apps with New Collaboration Features",
-          "body": "OpenAI reported over 5 million sites created on ChatGPT Sites since launch, rolling out shared workspace editing, private link permissions, custom domain support, and live database inspection.",
+          "title": "@cognition & @ArtificialAnlys: Cognition Unveils Devin Fusion Multi-Model Agent Harness",
+          "body": "Cognition launched Devin Fusion in Devin CLI, enabling developers to pair frontier planning models (Fable 5.1 / GPT-6 Astra) with cost-effective execution sidekicks (SWE-2), reducing benchmark token costs by up to 43%.",
+          "url": "https://x.com/cognition/status/2098445562404024343"
+        },
+        {
+          "tag": "hot",
+          "title": "@ChatGPT: ChatGPT Sites Surpasses 5M Apps with Team Collaboration Tools",
+          "body": "OpenAI reported over 5 million web apps created on ChatGPT Sites, releasing team co-editing, private link sharing, custom domain mapping, and live database inspection capabilities.",
           "url": "https://x.com/ChatGPT/status/2098457920291946894"
         },
         {
           "tag": "hot",
-          "title": "@shoucccc & @caozlog: Chinese LLM API Routers Leaking Enterprise Credentials",
-          "body": "Security researcher Chaofan Shou revealed a 6TB dataset captured from commercial LLM routers containing active SSH keys, cloud API tokens, and internal prompt logs from Chinese tech leaders and government entities.",
+          "title": "@shoucccc: 6TB Chinese LLM Router Leak Exposes Enterprise SSH & Cloud Credentials",
+          "body": "Security researcher Chaofan Shou disclosed a 6TB leak from commercial Chinese LLM API routers containing active SSH keys, cloud tokens, and internal prompt logs from major tech firms and government entities.",
           "url": "https://x.com/shoucccc/status/2098169782541631871"
         },
         {
-          "tag": "new",
-          "title": "@ClaudeDevs: Anthropic Introduces 'claude plugin eval' for Skill Testing",
-          "body": "Anthropic released 'claude plugin eval' in Claude Code, enabling developers to build benchmark test suites, evaluate custom plugin performance, and compare outputs with and without plugins.",
-          "url": "https://x.com/ClaudeDevs/status/2098500999656923145"
-        },
-        {
-          "tag": "update",
-          "title": "@vineerpasam & @dirtman: Developers Debate Vibe Coding Reliability & Platform Risk",
-          "body": "Founders and engineers discussed the risks of 'vibe coding' micro-apps when frontier model providers frequently ship native features that displace standalone indie tools overnight.",
-          "url": "https://x.com/vineerpasam/status/2098285000076739065"
-        },
-        {
           "tag": "tip",
-          "title": "@Miulahung: Benchmark Analysis of Token Usage Across GPT-6 Astra Reasoning Levels",
-          "body": "Developer tests comparing GPT-5.6 Sol and GPT-6 Astra reasoning levels found Astra High to be the optimal sweet spot for complex multi-step execution balance.",
-          "url": "https://x.com/Miulahung/status/2098369240327987603"
+          "title": "@OpenAIDevs & @Saccc_c: OpenAI Outlines Best Practices for AGENTS.md & Astra Workflows",
+          "body": "OpenAI Developers published a guide on structuring AGENTS.md and skill triggers to eliminate redundant context loading and lower token burn when executing agentic tasks with GPT-6 Astra.",
+          "url": "https://x.com/Saccc_c/status/2098708020201189701"
         }
       ]
     },
@@ -64,21 +64,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Apple Paying Samsung $250/Unit for iPhone Duo Foldable OLEDs",
-          "body": "Reports confirmed Apple is sourcing foldable OLED panels from Samsung at $250 per display for the planned iPhone Duo foldable hardware launch.",
-          "url": "https://x.com/WatcherGuru/status/2098401560980283846"
-        },
-        {
-          "tag": "new",
-          "title": "@Polymarket: Fields Medalist Deng Yu Vows to Write Romance Novels If AI Solves Math",
-          "body": "Polymarket highlighted Chinese Fields Medal winner Deng Yu's playful claim that he will retire from mathematics to author romance novels if AI models achieve total mathematical problem-solving parity.",
-          "url": "https://x.com/Polymarket/status/2098487731051438424"
+          "title": "@SupportJimmyLai: Health Concerns Mount for Imprisoned Hong Kong Publisher Jimmy Lai",
+          "body": "Advocacy groups issued urgent calls regarding 78-year-old publisher Jimmy Lai's deteriorating health in solitary confinement, advocating for diplomatic action.",
+          "url": "https://x.com/SupportJimmyLai/status/2049867723425858017"
         },
         {
           "tag": "update",
-          "title": "@johnondrasik & @billiewebbb: 25th Anniversary Reflections on 9/11",
-          "body": "Commentators and public figures marked the 25th anniversary of 9/11, reflecting on historical memory, national unity, and long-term cultural impacts.",
-          "url": "https://x.com/johnondrasik/status/2098401481774727327"
+          "title": "@1stForAll & @billiewebbb: Reflections Mark 25th Anniversary of 9/11",
+          "body": "Archival front pages and public commemorations marked the 25th anniversary of 9/11, highlighting national memory and historical reflection.",
+          "url": "https://x.com/1stForAll/status/2098400495350227398"
+        },
+        {
+          "tag": "new",
+          "title": "@thdxr: OpenCode Go Achieves Breakeven Unit Economics",
+          "body": "OpenCode founder Dax announced OpenCode Go achieved consecutive profitable weeks, demonstrating sustainable unit economics for cloud-hosted AI coding infrastructure.",
+          "url": "https://x.com/thdxr/status/2098781354611650806"
         }
       ]
     },
@@ -88,21 +88,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@FabrizioRomano & @Bayern_PR: Declan Rice & Anthony Gordon Back Harry Kane for Ballon d'Or",
-          "body": "Declan Rice and Anthony Gordon publicly endorsed Harry Kane for the Ballon d'Or following his record-breaking goal tally at Bayern Munich.",
-          "url": "https://x.com/FabrizioRomano/status/2098024831610400995"
+          "title": "@FabrizioRomano & @TouchlineX: Mbappé & Fabián Ruiz Address UCL & Ballon d'Or Standings",
+          "body": "Kylian Mbappé insisted the Ballon d'Or is won on the pitch in an interview with L'Équipe, while PSG's Fabián Ruiz pointed to his trophy count amidst growing debate among top contenders.",
+          "url": "https://x.com/FabrizioRomano/status/2098744428827488544"
         },
         {
           "tag": "update",
-          "title": "@ChampionsLeague & @iMiaSanMia: Bayern Munich Extends European Home Record",
-          "body": "UEFA Champions League highlights showcased Michael Olise and Bayern Munich extending their unmatched 39-game home unbeaten run in European competition.",
-          "url": "https://x.com/ChampionsLeague/status/2098382045751967887"
+          "title": "@Bayern_PR & @FCBayern: Anthony Gordon & FC Bayern Highlight Harry Kane's Record Season",
+          "body": "Anthony Gordon and FC Bayern emphasized Harry Kane's goalscoring record in European competition as football commentators weigh Ballon d'Or predictions.",
+          "url": "https://x.com/Bayern_PR/status/2098349505636598066"
         },
         {
           "tag": "new",
-          "title": "@SportsCenter: Caitlin Clark Sets Historic WNBA Record",
-          "body": "SportsCenter highlighted Caitlin Clark becoming the first player in WNBA history to log consecutive games with at least 30 points and 10 assists.",
-          "url": "https://x.com/SportsCenter/status/2093513930056282138"
+          "title": "@ESPNCFB: Highlighting Standout Plays in College Football Kickoff",
+          "body": "ESPN College Football featured spectacular early-season catches and highlights as the 2026 college football season gathers momentum.",
+          "url": "https://x.com/ESPNCFB/status/2098215126922915846"
         }
       ]
     }
