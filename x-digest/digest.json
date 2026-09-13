@@ -1,13 +1,12 @@
 {
   "title": "Clawd X Digest",
-  "date": "Saturday, September 12th, 2026",
+  "date": "Sunday, September 13th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Industry-Wide Call to 'Pace the Frontier' Ignites Debate:</strong> Dario Amodei (Anthropic) published a landmark essay committing Anthropic to permanent 3rd-party safety evaluators and urging a slowdown on frontier training; Elon Musk endorsed the proposal while critics allege labs are protecting IPOs and cost structures against open-source models.",
-    "<strong>Google DeepMind Pretraining Gemini 4 & Rumored RSI Breakthroughs:</strong> Reports and insider rumors indicate Google DeepMind's Gemini 4 pretraining concluded ahead of schedule following breakthrough self-improvement techniques, prompting tech leaders like Sergey Brin and Demis Hassabis to shift focus entirely to AGI safety and alignment.",
-    "<strong>OpenAI Expands ChatGPT Sites to 5M Apps & Deprecates Legacy Codex:</strong> OpenAI announced ChatGPT Sites crossed 5 million deployments with new shared workspace co-editing and database inspection features, while engineer Tibo Sottiaux confirmed the retirement of legacy model GPT-5.3-Codex-Spark.",
-    "<strong>DeepSeek v4.1 Flash Rivals Top Models Locally:</strong> Open-weights benchmarkers report DeepSeek v4.1 Flash running locally on personal hardware matches or exceeds frontier models like Opus 5 and Fable 5.1 in frontend web design and reasoning tasks.",
-    "<strong>Diplomatic Push for Jimmy Lai & 9/11 25th Anniversary:</strong> Human rights advocates renewed urgent calls for the release of imprisoned publisher Jimmy Lai amidst health concerns, while international newsrooms marked the 25th anniversary of 9/11 with archival retrospectives."
+    "<strong>'Pace the Frontier' AI Debate Escalates:</strong> Industry leaders and commentators debate Anthropic CEO Dario Amodei's proposal to slow frontier AI development; critics question commercial vs safety motives as Anthropic raises compute targets to $517B and Russia asserts AI development cannot be slowed.",
+    "<strong>Recurrent Looped Transformers (RLT) Breakthrough:</strong> AI researchers introduce Recurrent Looped Transformers (RLT), enabling infinite reasoning depth across prompt and response tokens with global KV memory.",
+    "<strong>Tesla Launch Control vs McLaren Goes Viral:</strong> Viral racing clips highlighting Tesla launch acceleration trigger widespread discussions on electric vehicle performance and engineering.",
+    "<strong>Ballon d'Or Race Heats Up:</strong> Football analysts weigh individual statistics between Harry Kane (85 G/A), Kylian Mbappé, Lamine Yamal, and Michael Olise ahead of the upcoming awards ceremony."
   ],
   "sections": [
     {
@@ -16,63 +15,63 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@DarioAmodei & @elonmusk: Anthropic Proposes Frontier Slowdown as Musk & Altman Concur",
-          "body": "Anthropic CEO Dario Amodei issued 'We Must Pace the Frontier', committing to third-party alignment auditing. Elon Musk backed the call, triggering intense discussion on AI safety versus commercial motives.",
-          "url": "https://x.com/elonmusk/status/2098789559093858580"
+          "title": "@DarioAmodei & @elonmusk: Anthropic's 'Pace the Frontier' Proposal Triggers Intense Debate",
+          "body": "Discussion continues surrounding Anthropic CEO Dario Amodei's call to pace frontier AI development with 3rd-party audits, supported by Elon Musk and Sam Altman, as commentators debate safety concerns versus corporate positioning.",
+          "url": "https://x.com/KoutoTV/status/2099048507789250801"
         },
         {
           "tag": "hot",
-          "title": "@OfficialLoganK & @AndrewCurran_: Google DeepMind's Gemini 4 Finishes Pretraining Early",
-          "body": "Reports circulate that Gemini 4 completed pretraining faster than anticipated due to novel recursive self-improvement (RSI) discoveries within Google DeepMind.",
-          "url": "https://x.com/AndrewCurran_/status/2098809612787171331"
+          "title": "@askalphaxiv & @yifanzhang_: Recurrent Looped Transformers (RLT) Introduced",
+          "body": "A new paper presents Recurrent Looped Transformers (RLT), making decoder computations recurrent across prompt and response tokens for infinite reasoning depth with reusable global KV memory.",
+          "url": "https://x.com/askalphaxiv/status/2099066543170793587"
         },
         {
           "tag": "update",
-          "title": "@ChatGPT & @thsottiaux: ChatGPT Sites Reaches 5M Apps; GPT-5.3-Codex-Spark Deprecated",
-          "body": "OpenAI reported over 5 million web applications built on ChatGPT Sites, adding real-time co-editing and custom domain support while retiring the legacy Codex-Spark model line.",
-          "url": "https://x.com/ChatGPT/status/2098457920291946894"
+          "title": "@liquidtrading: Anthropic Triples Compute Target to $517B",
+          "body": "Reports indicate Anthropic increased its compute guidance to $517B (up from $180B), underscoring massive infrastructure scaling even as calls for safety evaluations grow.",
+          "url": "https://x.com/liquidtrading/status/2098997745105141804"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru & @DrEliDavid: Russia Rejects AI Slowdowns as Global Competition Intensifies",
+          "body": "Russian officials declared it impossible to freeze or slow domestic AI progress, highlighting geopolitical tensions surrounding international AI safety agreements.",
+          "url": "https://x.com/WatcherGuru/status/2098910147443634420"
         },
         {
           "tag": "new",
-          "title": "@MiaAI_lab & @yifanzhang_: DeepSeek v4.1 Flash & Recurrent Looped Transformers Emerge",
-          "body": "Developers report DeepSeek v4.1 Flash performing on par with Fable 5.1 locally, while researchers introduced Recurrent Looped Transformers (RLT) for infinite reasoning depth.",
-          "url": "https://x.com/MiaAI_lab/status/2098817620552069565"
-        },
-        {
-          "tag": "update",
-          "title": "@DrEliDavid & @nickmmark: Skeptics Question Frontier Pacing as IPO Protection",
-          "body": "Industry analysts and researchers argue calls to slow AI development stem from plateauing LLM scaling and rising compute costs rather than existential risk alone.",
-          "url": "https://x.com/DrEliDavid/status/2098871374152626228"
+          "title": "@Im_IrushiK: Developers Request '/slow' Mode for Codex Workflows",
+          "body": "Users propose a half-speed, lower-usage mode for OpenAI Codex to accommodate overnight automated goal execution and manage API usage limits.",
+          "url": "https://x.com/Im_IrushiK/status/2098809262302720347"
         },
         {
           "tag": "tip",
-          "title": "@mattpocockuk & @Crypto_QianXun: Navigating Software Engineering & Developer Skills in the AI Era",
-          "body": "Matt Pocock's developer skills repository surpassed React in stars as Anthropic leadership outlines guidance on critical thinking, human-centered skills, and AI pair programming.",
+          "title": "@mattpocockuk & @theo: TypeScript Skills Repositories Gain Massive Traction",
+          "body": "Matt Pocock's developer skills repository surpassed React in stars, sparking discussion among creators on domain-specific harnesses and public skill curation.",
           "url": "https://x.com/mattpocockuk/status/2098696179081007514"
         }
       ]
     },
     {
       "emoji": "📈",
-      "title": "Markets & World News",
+      "title": "Markets & Finance",
       "items": [
         {
           "tag": "hot",
-          "title": "@SupportJimmyLai: Renewed Urgency Around Imprisoned Publisher Jimmy Lai",
-          "body": "Rights organizations emphasized Jimmy Lai's deteriorating condition in solitary confinement, urging immediate diplomatic intervention.",
-          "url": "https://x.com/SupportJimmyLai/status/2049867723425858017"
+          "title": "@KeithMcCullough: Institutional Process Blueprint Shared",
+          "body": "Hedge fund manager Keith McCullough published a comprehensive 52-page guide outlining process-driven risk management and investing strategies.",
+          "url": "https://x.com/KeithMcCullough/status/1846614136303559130"
         },
         {
           "tag": "update",
-          "title": "@1stForAll: Archival Front Pages Commemorate 25 Years Since 9/11",
-          "body": "Historical archives and media outlets highlighted worldwide front-page coverage from September 12, 2001, reflecting on 25 years of geopolitical shifts.",
-          "url": "https://x.com/1stForAll/status/2098400495350227398"
+          "title": "@parasitoahorro: Strategic Estate & Asset Liquidity Frameworks",
+          "body": "A viral financial thread details how long-term investors utilize asset-backed borrowing to preserve capital and navigate tax implications.",
+          "url": "https://x.com/parasitoahorro/status/2099092569091129733"
         },
         {
           "tag": "new",
-          "title": "@WatcherGuru: Russia Rejects AI Development Slowdowns",
-          "body": "Russian officials stated it is impossible to freeze or slow down domestic AI model development, highlighting international competitive dynamics.",
-          "url": "https://x.com/WatcherGuru/status/2098910147443634420"
+          "title": "@aleabitoreddit & @bhoomikacodes: The Divergence Between Finance X and Traditional Tech",
+          "body": "Commentators examine the stark contrast in risk tolerance, market outlooks, and technical focus between mainstream industry engineering and fast-moving online finance communities.",
+          "url": "https://x.com/aleabitoreddit/status/2099126746390139042"
         }
       ]
     },
@@ -82,21 +81,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@TouchlineX & @PSGINT_: Ballon d'Or Debate Heats Up Between Yamal & Olise",
-          "body": "Football analysts compare statistical performances of Lamine Yamal (52 G/A) and Michael Olise (67 G/A) as debates intensify ahead of the award ceremony.",
-          "url": "https://x.com/TouchlineX/status/2098667928568672372"
-        },
-        {
-          "tag": "update",
-          "title": "@TheM1Show & @Tesla: Tesla Launch Demo vs McLaren Short-Distance Acceleration",
-          "body": "Viral clip of Tesla's launch control against McLaren sparks widespread discussion on electric powertrain torque and performance specs.",
+          "title": "@TheM1Show: Tesla Launch Control Take-off Sparks Performance Discussions",
+          "body": "A viral clip demonstrating Tesla launch acceleration against a McLaren sparked widespread online commentary regarding EV torque and supercar performance.",
           "url": "https://x.com/TheM1Show/status/2098707121881628792"
         },
         {
+          "tag": "update",
+          "title": "@PSGINT_ & @Bayern_PR: Ballon d'Or Debates Highlight Kane, Yamal, and Olise",
+          "body": "Football analysts debate individual contributions across top European leagues, with Harry Kane's 85 G/A season featuring prominently in discussions.",
+          "url": "https://x.com/PSGINT_/status/2098806895188361602"
+        },
+        {
           "tag": "new",
-          "title": "@espn & @CFBONFOX: College Football & WNBA Highlight Reels",
-          "body": "ESPN features Caitlin Clark's long-range 3-pointers alongside top college football trick plays from opening weekend games.",
-          "url": "https://x.com/espn/status/2085530737025933495"
+          "title": "@yaniversal: Commentary on Political Demographics and Presidential History",
+          "body": "A viral observation highlighting birth year patterns among U.S. presidents drew broad engagement across political and historical commentary.",
+          "url": "https://x.com/yaniversal/status/2098975313120100521"
         }
       ]
     }
