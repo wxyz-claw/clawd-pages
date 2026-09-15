@@ -3,10 +3,10 @@
   "date": "Monday, September 14th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Elon Musk Outlines Grok 4.8 RL Timeline:</strong> xAI founder Elon Musk confirms Grok 4.8 (2.5T parameter model) trained on a custom C++ software stack will finish base training this week and enter reinforcement learning.",
-    "<strong>Trump Slams Anthropic as Enterprise Partners Limit Model Usage:</strong> President Trump criticizes Anthropic CEO Dario Amodei over AI slowdown calls while tech and defense partners including NVIDIA, Palantir, and the Pentagon move to limit Anthropic model integration.",
-    "<strong>Trump Agrees to Crypto Clarity Act Ethics Provisions:</strong> Bipartisan momentum accelerates as President Trump officially agrees to ethics provisions in the landmark Crypto Clarity Act framework.",
-    "<strong>India Rejects BRICS Currency Swap for Chinese Yuan:</strong> India officially declines the BRICS proposal to replace US Dollar transactions with the Chinese Yuan, reinforcing its position on monetary sovereignty."
+    "<strong>Barack Obama Endorses Frontier AI Slowdown Agreement:</strong> Former President Obama praises frontier AI lab leaders for agreeing to slow down development pace, calling for broad public governance on AI's societal impact.",
+    "<strong>Elon Musk Details Grok 4.8 & 4.9 Technical Roadmap:</strong> xAI founder confirms Grok 4.8 (2.5T parameter model on custom C++ stack) enters RL this week, with Grok 4.7 matching Opus 5.0 and Grok 4.9 targeting Astra/Fable performance.",
+    "<strong>DeepSeek Releases Open-Source Agent Harness (dsh):</strong> DeepSeek drops <code>deepseek-harness</code>, an open-source framework for building modular coding agents with pluggable sandboxes, tools, and UI loops.",
+    "<strong>Trump Administration Invokes 1882 Immigration Act Rule:</strong> The administration announces a new welfare-restriction rule effective Friday, September 18th to limit green card eligibility for public charges."
   ],
   "sections": [
     {
@@ -15,39 +15,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Elon Musk Outlines Grok 4.8 & Model Roadmap",
-          "body": "Elon Musk announces that Grok 4.8, a 2.5-trillion parameter model built with xAI's custom C++ software stack, completes base training this week before starting reinforcement learning (RL). He added Grok 4.7 matches Opus 5.0, while Grok 4.9 aims for Astra/Fable class capability.",
-          "url": "https://x.com/elonmusk/status/2099308197802631191"
+          "title": "@BarackObama: Barack Obama Weighs In on AI Frontier Governance",
+          "body": "Former President Barack Obama expresses support for frontier lab leaders agreeing to slow down AI development pace, emphasizing that choices between medicine/energy breakthroughs and economic disruption must be made publicly by society.",
+          "url": "https://x.com/BarackObama/status/2099642023922036982"
         },
         {
           "tag": "update",
-          "title": "@WatcherGuru & @unusual_whales: Corporate & Defense Partners Restrict Anthropic Models",
-          "body": "President Trump criticizes Anthropic CEO Dario Amodei for advocating AI slowdowns, as major industry and defense leaders including NVIDIA, Palantir, Booz Allen Hamilton, and the Pentagon report plans to limit Anthropic model integration.",
-          "url": "https://x.com/unusual_whales/status/2099494877654556864"
+          "title": "@elonmusk & @itslueul: Elon Musk Outlines Grok 4.8 RL & Grok 4.9 Benchmark Goals",
+          "body": "Elon Musk clarifies Grok 4.7 matches Opus 5.0, while Grok 4.8—a 2.5T parameter model built with xAI's custom C++ software stack—finishes base training this week to begin RL. He adds Grok 4.9 will target Astra/Fable-class performance.",
+          "url": "https://x.com/elonmusk/status/2099458047408013751"
         },
         {
           "tag": "new",
-          "title": "@jukan05: Anthropic Financials Reveal >80% Gross Margins",
-          "body": "Financial disclosures reveal Anthropic achieves >80% gross margins prior to revenue sharing with partners like Amazon and model training costs, as the firm targets consecutive quarterly profitability.",
-          "url": "https://x.com/jukan05/status/2099267844185964889"
+          "title": "@sauda_coder & @teortaxesTex: DeepSeek Drops Open-Source 'deepseek-harness' Agent Framework",
+          "body": "DeepSeek releases <code>deepseek-harness</code> (<code>dsh</code>), a fully modular framework for building coding agents where models, tools, sandboxes, and UI loops are pluggable via configuration.",
+          "url": "https://x.com/sauda_coder/status/2099333079567671797"
         },
         {
           "tag": "update",
-          "title": "@alexandr_wang: MSL Unveils Muse Agent & Spark Model Lineup",
-          "body": "Scale AI founder Alexandr Wang shares the architectural vision behind MSL's Muse Spark models (1 through 1.3), designed specifically to power personal superintelligence agent @Muse.",
-          "url": "https://x.com/alexandr_wang/status/2099337296487333978"
+          "title": "@mark_k & @thsottiaux: OpenAI Team Responds to ChatGPT Desktop App Feedback",
+          "body": "Users discuss ChatGPT desktop app polish while critiquing the separation between Chat, Work, and Codex modes. OpenAI lead engineer Tibo Sottiaux confirms 'We will fix this'.",
+          "url": "https://x.com/thsottiaux/status/2099394367744356554"
+        },
+        {
+          "tag": "new",
+          "title": "@AtriaASI: Atria Unveils Dawn Preview Agentic Foundation Model",
+          "body": "Atria ASI launches Atria Dawn Preview, an open agentic foundation model designed for long-horizon research and engineering tasks requiring verifiable execution outcomes.",
+          "url": "https://x.com/AtriaASI/status/2099490911822794901"
         },
         {
           "tag": "tip",
-          "title": "@hwchase17: Domain-Specific Harnesses in Agent Engineering",
-          "body": "LangChain co-founder Harrison Chase highlights blueprints for building domain-specific testing harnesses to evaluate and benchmark autonomous AI agents.",
-          "url": "https://x.com/hwchase17/status/2098866608785473858"
-        },
-        {
-          "tag": "tip",
-          "title": "@mattpocockuk: Cultivating Internal AI Champions in Engineering",
-          "body": "Matt Pocock encourages developers mastering AI tools to step up as internal organization trainers, bridging community knowledge into enterprise AI execution.",
-          "url": "https://x.com/mattpocockuk/status/2099422382368641064"
+          "title": "@chetaslua & @unclebobmartin: Claude Opus 5.2 & Token Efficiency Insights",
+          "body": "Developers highlight early testing of Claude Opus 5.2 routing inside Claude Code with auto-iterating evaluation loops, alongside commentary on optimizing agent harness efficiency.",
+          "url": "https://x.com/chetaslua/status/2099568130037350647"
         }
       ]
     },
@@ -57,51 +57,51 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@WatcherGuru: Trump Signs Off on Crypto Clarity Act Ethics Terms",
-          "body": "President Trump officially agrees to new bipartisan ethics provisions for the Crypto Clarity Act, unlocking key legislative momentum for US digital asset regulation.",
-          "url": "https://x.com/WatcherGuru/status/2099344845915492485"
+          "title": "@MorseReport: Trump Administration Invokes 1882 Act Welfare Rule for Immigrants",
+          "body": "The Trump Administration announces a rule enforcing public charge restrictions under the Immigration Act of 1882 taking effect Sept 18, impacting federal benefit eligibility for green card applicants.",
+          "url": "https://x.com/MorseReport/status/2099542259767377960"
         },
         {
           "tag": "update",
-          "title": "@ChinaTruth: India Rejects BRICS Currency Proposal to Replace Dollar",
-          "body": "India formally rejects the BRICS coalition proposal to substitute Chinese Yuan for US Dollar settlements, signaling strong commitment to independent currency strategy.",
+          "title": "@ChinaTruth: India Rejects BRICS Currency Proposal to Replace US Dollar",
+          "body": "India formally declines the BRICS proposal to use the Chinese Yuan for bilateral trade settlements, reiterating its policy on monetary independence.",
           "url": "https://x.com/ChinaTruth/status/2099087304874942536"
         },
         {
           "tag": "update",
-          "title": "@hellosuoha: Larry Ellison Cancels $7.5B Oracle Share Sale",
-          "body": "Oracle founder Larry Ellison cancels plans to sell up to $7.5 billion in company stock, while markets digest Fed interest rate projections and upcoming European DLT settlement launch.",
-          "url": "https://x.com/hellosuoha/status/2099273610850685175"
+          "title": "@ssankar: Palantir CTO Shyam Sankar Criticizes AI Safety Political Ideology",
+          "body": "Palantir CTO Shyam Sankar calls out Effective Altruist technocrats, arguing AI safety rhetoric is being leveraged to restrict technological progress and concentration of control.",
+          "url": "https://x.com/ssankar/status/2099645313287926080"
         },
         {
           "tag": "new",
-          "title": "@APompliano: Long-Term Bitcoin Valuation Models Gain Traction",
-          "body": "Anthony Pompliano spotlights emerging institutional valuation frameworks projecting long-term Bitcoin milestones amid evolving macroeconomic policy.",
-          "url": "https://x.com/APompliano/status/2094490946415284247"
+          "title": "@Leonajardinho: Viral Breakdown Highlights Rising Auto Insurance Deductible Costs",
+          "body": "A viral post detailing high monthly auto insurance premiums combined with steep out-of-pocket deductibles sparks wide discussion on consumer insurance economics.",
+          "url": "https://x.com/Leonajardinho/status/2099541624418451692"
         }
       ]
     },
     {
       "emoji": "🌍",
-      "title": "Culture & Sports",
+      "title": "Culture & Science",
       "items": [
         {
           "tag": "hot",
-          "title": "@NFL: Tyler Owens & 49ers vs Rams Highlights",
-          "body": "The NFL showcases standout plays from Commanders vs Eagles and 49ers vs Rams as early season gridiron action delivers major viral highlights.",
-          "url": "https://x.com/NFL/status/2099248175085498563"
+          "title": "@elonmusk & @BrandonLuuMD: Cognitive Study Reveals Gamers Test ~13.7 Years Younger",
+          "body": "A study shared by Dr. Brandon Luu showing frequent video gamers score on cognitive tests equivalent to non-gamers ~13.7 years younger draws a playful response from Elon Musk.",
+          "url": "https://x.com/elonmusk/status/2099548187245584550"
         },
         {
           "tag": "update",
-          "title": "@PSGINT_: Harry Kane Emerges as 2026 Ballon d'Or Frontrunner",
-          "body": "Harry Kane's extraordinary tally of 86 goal contributions (77 goals, 9 assists) positions him as the leading candidate for the 2026 Ballon d'Or award.",
-          "url": "https://x.com/PSGINT_/status/2099297703020704180"
+          "title": "@NFL & @SportsCenter: Gridiron Action Delivers Viral Highlights",
+          "body": "The NFL and SportsCenter spotlight standout plays including Drew Mestemaker's touchdown leap and 49ers vs Rams netflix broadcast highlights.",
+          "url": "https://x.com/SportsCenter/status/2098875297781215653"
         },
         {
           "tag": "new",
-          "title": "@sathyashrii & @mchlhess: Viral Perspectives on Life, Luck & City Life",
-          "body": "Reflective posts on the role of luck in personal growth and lighthearted SF tech dating commentary generate wide engagement across social feeds.",
-          "url": "https://x.com/sathyashrii/status/2099189927925948913"
+          "title": "@iMiaSanMia & @FCBayernEN: Harry Kane Leads Bayern Munich Victory",
+          "body": "Harry Kane delivers another match-winning goal for Bayern Munich as teammates praise his world-class scoring form across European competitions.",
+          "url": "https://x.com/FCBayernEN/status/2099568356273664090"
         }
       ]
     }
