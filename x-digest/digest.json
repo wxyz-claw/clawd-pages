@@ -3,10 +3,10 @@
   "date": "Wednesday, September 16th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Salesforce & Anthropic Launch Salesforce in Claude Keynote:</strong> Salesforce introduces 37 pre-built sales skills directly in Claude, bringing accounts, opportunities, and pipeline forecasting into AI workflows, backed by a live Dreamforce keynote with Marc Benioff and Dario Amodei.",
-    "<strong>Nous Research Cleans 1M Lines of Code with 1,393 Hermes Subagents:</strong> Nous Research publishes technical details showing how 1,393 Hermes subagents ran over 19 hours to trim a 1M line Python codebase by 34.4%, saving nearly $2M in engineering hours.",
-    "<strong>Google DeepMind Unveils 'Dream-RSI' Strategy Framework:</strong> DeepMind researchers release Dream-RSI (Recursive Self-Improvement through Evolving Worlds), demonstrating how coding agents can optimize their exploration strategies in replay simulators without retraining model weights.",
-    "<strong>Community Reviews Claude Opus 5.2 Subagent Capabilities:</strong> Hands-on evaluations highlight Opus 5.2's industry-leading intent recognition, token efficiency, and 10/10 subagent delegation skills, alongside ongoing speculation around OpenAI GPT-6 Luna and Sol tier rollouts."
+    "<strong>OpenAI Releases Misalignment Disclosure Framework & 6 Safety Reports:</strong> OpenAI details a new public disclosure policy for model misalignment during training and evaluation, publishing six empirical case studies on observed misaligned behaviors.",
+    "<strong>Nous Research Cleans 1M Lines of Code with 1,393 Hermes Subagents:</strong> Technical details reveal how 1,393 Hermes subagents ran over 19 hours to reduce a Python codebase by 34.4%, saving nearly $2M in developer time.",
+    "<strong>Tencent AI Open Sources BrowserSkill for Local Agent Tab Sharing:</strong> Tencent AI releases BrowserSkill, an open-source CLI allowing local AI agents to borrow authenticated browser tabs for seamless web actions and captcha handling.",
+    "<strong>Warsh Fed Hikes Rates 25bps Ahead of 2026 Midterms:</strong> Macro analysts highlight the policy shift under Fed Chair Warsh, implementing a 25bps rate hike with core CPI at 2.4%."
   ],
   "sections": [
     {
@@ -15,39 +15,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@claudeai & @salesforce: Salesforce in Claude Beta Launches with 37 Sales Skills",
-          "body": "Salesforce and Anthropic release Salesforce in Claude in beta, integrating live accounts, deals, and pipeline dashboards with 37 pre-built sales skills directly inside conversation workflows.",
-          "url": "https://x.com/claudeai/status/2099876514330206578"
+          "title": "@OpenAI: OpenAI Publishes Misalignment Framework & 6 Safety Reports",
+          "body": "OpenAI releases a standardized criteria and timeline framework for disclosing model misalignment during training and evaluation, accompanied by six initial empirical reports from the past six months.",
+          "url": "https://x.com/OpenAI/status/2100344867507327087"
         },
         {
           "tag": "new",
-          "title": "@NousResearch: 1,393 Hermes Subagents Clean 1M Lines of Python Code",
-          "body": "Nous Research demonstrates large-scale subagent coordination: 1,393 Hermes subagents ran across 19 hours to refactor and reduce a 1,000,000-line codebase by 34.4%, saving nearly $2M in human dev hours.",
+          "title": "@NousResearch: 1,393 Hermes Subagents Refactor 1M Lines of Code",
+          "body": "Nous Research demonstrates large-scale multi-agent execution: 1,393 Hermes subagents ran across 19 hours to trim a 1,000,000-line Python codebase by 34.4%, saving $2M in human engineering costs.",
           "url": "https://x.com/NousResearch/status/2099984561451028913"
         },
         {
-          "tag": "update",
-          "title": "@MaxForAI: Google DeepMind Releases Dream-RSI Strategy Improvement Paper",
-          "body": "Google DeepMind's Dream-RSI paper shows agents modifying their exploration strategy rather than weights, creating replay simulators from execution history to achieve up to 2.43x GPU kernel search efficiency.",
-          "url": "https://x.com/MaxForAI/status/2100111071726174279"
+          "tag": "hot",
+          "title": "@TencentAI_News: Tencent AI Open Sources BrowserSkill for Local Agents",
+          "body": "Tencent AI introduces BrowserSkill, a local CLI bridge that lets AI coding agents borrow active browser tabs with logged-in credentials to handle complex web workflows and interactive captchas.",
+          "url": "https://x.com/TencentAI_News/status/2100143086429217278"
         },
         {
           "tag": "update",
-          "title": "@Gegam245074: Hands-On Evaluation of Claude Opus 5.2's Subagent Delegation",
-          "body": "Detailed benchmark analysis of Claude Opus 5.2 highlights its token efficiency, precise plugin call timing, zero-hallucination design code adherence, and superior multi-agent delegation.",
-          "url": "https://x.com/Gegam245074/status/2099920403770589607"
+          "title": "@salesforce: Marc Benioff Demonstrates Salesforce in Claude Live Keynote",
+          "body": "Salesforce Chair and CEO Marc Benioff presents AIforce and Salesforce in Claude live on the main stage, showcasing 37 pre-built sales skills directly integrated into Claude workflows.",
+          "url": "https://x.com/salesforce/status/2099993861447963032"
         },
         {
           "tag": "new",
-          "title": "@opencode: Union Alpha Stealth Model Released Free for Agentic Coding",
-          "body": "OpenCode releases its Union Alpha stealth model free for one week, specifically optimized for agentic coding with image input support and strict zero-data-training privacy.",
-          "url": "https://x.com/opencode/status/2100236430890991782"
+          "title": "@notkevinzhang: Jev Frontier Model Claims 200x Speedup via Parallel RLCD",
+          "body": "Ex-ChatGPT researchers announce Jev, a stealth frontier AI model trained via Reinforcement Learning from Composable Decisions (RLCD) that achieves 20-200x faster decision execution.",
+          "url": "https://x.com/notkevinzhang/status/2100032100892393955"
         },
         {
-          "tag": "tip",
-          "title": "@trq212: Why Stateless MCPs Outpace CLIs for Model Integration",
-          "body": "Architecture breakdown showing why Model Context Protocols (MCP) with deferred tools and query parameters are outperforming local CLIs for complex AI integrations.",
-          "url": "https://x.com/trq212/status/2099958388230873165"
+          "tag": "update",
+          "title": "@alexandr_wang: Scale AI Muse Offers 1 Billion Tokens for Friend Referrals",
+          "body": "Scale AI founder Alexandr Wang launches referral invite codes for Muse, rewarding users with up to 1 billion tokens each when inviting up to 20 friends.",
+          "url": "https://x.com/alexandr_wang/status/2100256876072210517"
         }
       ]
     },
@@ -57,21 +57,21 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Huang_Sihao: Sihao Huang Joins Anthropic as Head of Frontier Compute Strategy",
-          "body": "Sihao Huang announces he is joining Anthropic to lead frontier compute strategy and infrastructure expansion alongside Tom Brown.",
-          "url": "https://x.com/Huang_Sihao/status/2100013578078261463"
+          "title": "@zerohedge: Warsh Fed Hikes Rates 25bps Ahead of Midterm Elections",
+          "body": "Macro strategists track monetary policy divergence as the Warsh Fed enacts a 25bps rate hike with core CPI at 2.4%, contrasting with 2024 pre-election rate cuts.",
+          "url": "https://x.com/zerohedge/status/2100290026865152047"
         },
         {
           "tag": "new",
-          "title": "@moomoo: Moomoo Integrates as Official X Cashtag Trading Partner",
-          "body": "Fintech platform Moomoo officially partners with X, enabling one-click stock trading directly from inline X Cashtag mentions.",
+          "title": "@moomoo: Moomoo Integrates Inline X Cashtag Trading Partnership",
+          "body": "Fintech platform Moomoo officially launches inline X Cashtag integration, enabling users to tap stock tickers on X and execute one-click trades.",
           "url": "https://x.com/moomoo/status/2099415029393379364"
         },
         {
-          "tag": "update",
-          "title": "@shillman1: Fuel Price Disclosure Executive Order Sparks Market Debate",
-          "body": "Policy analysts track new executive actions targeting energy price transparency and retail consumer cost metrics ahead of upcoming quarterly economic reports.",
-          "url": "https://x.com/shillman1/status/2100023588640145562"
+          "tag": "tip",
+          "title": "@KeithMcCullough: 24-Year Hedge Fund Process Blueprint Released",
+          "body": "Hedgeye founder Keith McCullough releases a free 52-page guide titled 'Master the Market', detailing quantitative risk management and macro positioning strategies.",
+          "url": "https://x.com/KeithMcCullough/status/1846614136303559130"
         }
       ]
     },
@@ -81,20 +81,20 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@elonmusk: Elon Musk Cites E.M. Forster Classic During Gaming Server Outage",
-          "body": "Elon Musk draws parallels between E.M. Forster's classic sci-fi essay 'The Machine Stops' and launch-day login queue failures across major gaming titles.",
-          "url": "https://x.com/elonmusk/status/2099946406345937242"
+          "title": "@Phoenixyin13: Manifold Hypothesis & Learning as Compression Breakdown",
+          "body": "An in-depth theoretical analysis explores how deep learning compresses high-dimensional data onto lower-dimensional manifolds, linking Shannon entropy, Kolmogorov complexity, and intelligence.",
+          "url": "https://x.com/Phoenixyin13/status/2100024080040710564"
         },
         {
           "tag": "update",
-          "title": "@iMiaSanMia: FC Bayern Honors Joshua Kimmich for 500th Club Appearance",
-          "body": "Bayern Munich celebrates German midfielder Joshua Kimmich with a commemorative presentation following his landmark 500th official match for the club.",
-          "url": "https://x.com/iMiaSanMia/status/2100173584911982608"
+          "title": "@iMiaSanMia: Jürgen Klopp Excludes Leroy Sané from Germany National Squad",
+          "body": "Germany national team manager Jürgen Klopp decides to omit Leroy Sané from upcoming international match call-ups, according to Bild reports.",
+          "url": "https://x.com/iMiaSanMia/status/2100269759325675522"
         },
         {
           "tag": "new",
-          "title": "@GUST_EN: Atelier Karia Announced for Next-Gen Consoles & PC",
-          "body": "Koei Tecmo and Gust officially unveil Atelier Karia: The Night Kingdom & the Guide of Memories for PS5, Nintendo Switch 2, and Steam.",
+          "title": "@GUST_EN: Atelier Karia Physical Pre-Orders Launch for Next-Gen Systems",
+          "body": "GUST officially opens physical pre-orders and confirms a February 2027 launch window for Atelier Karia across PS5, Switch 2, Xbox Series X|S, and Steam.",
           "url": "https://x.com/GUST_EN/status/2097371143686795450"
         }
       ]
