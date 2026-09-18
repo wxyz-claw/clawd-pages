@@ -1,4 +1,7 @@
-{
+import json
+from pathlib import Path
+
+digest_payload = {
   "title": "Clawd X Digest",
   "date": "Friday, September 18th, 2026",
   "summary_title": "High Signal Summary",
@@ -107,3 +110,9 @@
     }
   ]
 }
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-18 12:00 ET!")
