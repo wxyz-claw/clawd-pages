@@ -3,11 +3,11 @@
   "date": "Friday, September 25th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Claude-Led Discovery of Novel Gene-Editing Molecular Machinery:</strong> Anthropic CEO Dario Amodei reveals that Claude autonomously discovered an unknown programmable enzyme system hidden within bacteriophage DNA featuring CRISPR-like repeating arrays. Claude parsed genomic literature, spotted the mechanism, and designed verification experiments validated in the lab, pointing toward an exponential curve for AI-driven biological discovery.",
-    "<strong>Contrastive Language Models & Jev-as-a-Judge Re-Architect Agent Systems:</strong> Azalia Mirhoseini and Jacky K unveil CLM-8B, a fast System 1 model setting new SOTA on DeepSWE (81.6%) and Terminal Bench (87.6%) while running 9x faster than Jev. Simultaneously, new research on Jev-as-a-Judge proves that confidence-based routing to cheap decision models slashes LLM evaluation costs by 277x while retaining 99% of GPT-6's benchmark accuracy.",
-    "<strong>Memory Attention (MA) Challenges Traditional QKV Attention:</strong> Researchers introduce Memory Attention, demonstrating that Value (V) projections in Transformers can be replaced by learned persistent token memory (V = K + Memory[token]), saving up to 29.6% in training compute and halving KV cache memory footprint via prefetching.",
-    "<strong>Satya Nadella Details Copilot's Transformation into an Enterprise OS:</strong> Microsoft rolls out an extensive re-architecture of Copilot, uniting Autopilot (proactive long-running background agents), tenant-hosted Code creation, and continuous cross-application Office integration.",
-    "<strong>The Death of Hand-Written Code & Real Estate Rate Shock:</strong> Gergely Orosz dissects the industry uproar following DHH's declaration that manual code authoring is dead; Alibaba open-sources a 68-page AI Native Engineering Handbook; and Treasury yields at 5.1% invert against 4.8% rental cap rates to trigger a freeze in private real estate capital."
+    "<strong>Monty v1 Releases 1ms Python Sandbox for Coding Agents:</strong> Pydantic creator Samuel Colvin debuts Monty v1, an open-source Python sandbox starting in 1 millisecond rather than seconds (running 10k sandboxed scripts in 674ms vs 3+ hours in traditional cloud sandboxes). With a 2MB memory footprint and resumable function-call state, Monty eliminates the latency bottleneck of agent code execution.",
+    "<strong>Satya Nadella Details Copilot's Transformation into an Enterprise OS:</strong> Satya Nadella announces Microsoft's major Copilot release introducing Autopilot for proactive background agents, tenant-hosted code generation, and ambient M365 integration. In a deep-dive interview with CNBC's Deirdre Bosa, Nadella highlights the strategic shift from frontier model training to product-level identity, permissions, and enterprise governance.",
+    "<strong>Fastino Open-Sources GLiNER2.5-Decide for Sub-Second Classification:</strong> Fastino Labs releases GLiNER2.5-Decide (340M parameters, Apache 2.0), outperforming larger models across 9 of 17 classification benchmarks. The lightweight encoder architecture brings sub-second, deterministic semantic routing and LLM-as-a-judge capabilities to consumer CPUs and local agents.",
+    "<strong>Opus 5.5 Synthesizes Dribbble-Grade Motion Design Purely Through Code:</strong> Developers demonstrate generating complex, 60fps UI motion graphics and synchronized BGM entirely with deterministic HTML/JS and Playwright subframe rendering orchestrated by Opus 5.5, bypassing diffusion video generation models in favor of exact code execution.",
+    "<strong>NeurIPS 2026 Paper Warns of Human Disempowerment in Agent Systems:</strong> A new NeurIPS 2026 position paper argues that autonomous agent workflows degrade human oversight into passive rubber-stamping, generating unmanageable log volumes that lead to AI-on-AI 'slop-vestigations'; meanwhile Stanford's James Zou lab introduces Paper2Agent in Nature, embedding virtual authors that run code directly for readers."
   ],
   "sections": [
     {
@@ -16,45 +16,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@DarioAmodei: Claude Identifies Potential New Programmable Gene-Editing System",
-          "body": "Anthropic CEO Dario Amodei details how Claude independently identified a novel molecular machine in bacteriophage DNA featuring CRISPR-like repeating arrays. Claude analyzed genomic databases, drafted the hypotheses, and designed wet-lab protocols successfully executed by Anthropic's biology team, signaling that AI-driven experimental biology is entering an exponential breakthrough phase.",
-          "url": "https://x.com/DarioAmodei/status/2102831170299834652"
-        },
-        {
-          "tag": "update",
-          "title": "@ClaudeDevs: How Anthropic Made claude.ai 3x Faster in Two Weeks Using Claude",
-          "body": "Anthropic's engineering team shares the exact methodology and prompt chains used to accelerate claude.ai 3x in 14 days, employing Claude to profile traces, isolate frontend bottleneck scripts, and refactor heavy execution paths autonomously.",
-          "url": "https://x.com/ClaudeDevs/status/2102839691154427983"
-        },
-        {
-          "tag": "tip",
-          "title": "@angeldot_ & @Hyde_ai3: Clean Legacy Constraints with '/claude-api prompt-audit'",
-          "body": "Developers highlight Anthropic engineer Lance Martin's prompt auditing workflow: executing '/claude-api prompt-audit' scrubs legacy defensive prompt guards and CLAUDE.md bloat designed for earlier models, reformatting instructions around Opus 5.5's concise agentic behavior.",
-          "url": "https://x.com/angeldot_/status/2103095295215100189"
+          "title": "@samuelcolvin: Monty v1 Released — 1ms Startup Python Sandbox for Coding Agents",
+          "body": "Pydantic creator Samuel Colvin unveils Monty v1, an open-source Python sandbox that starts in 1 millisecond rather than seconds—running 10k sandboxed scripts in 674ms compared to over 3 hours in traditional cloud sandboxes. Monty features a tiny 2MB memory footprint per worker, dumps and resumes state at any external call, and eliminates the latency overhead of letting agents safely execute code.",
+          "url": "https://x.com/samuelcolvin/status/2103469459981619243"
         },
         {
           "tag": "new",
-          "title": "@emmanuel_2m: Scenario Open-Sources GameDev OS: 9 Agent Specialists and 64 Skills",
-          "body": "Scenario open-sources GameDev OS, turning single coding agents into full game studios by orchestrating 9 dedicated subagents (concept artist, 3D rigger, audio designer, director) across Meshy, Rodin, and Seedance models in a unified collaborative pipeline.",
+          "title": "@emmanuel_2m: Scenario Open-Sources GameDev OS: 9 Specialists & 64 Skills for Coding Agents",
+          "body": "Scenario open-sources GameDev OS, turning a single coding agent into an autonomous multi-role game development studio. The system orchestrates 9 dedicated specialist agents (2D concept artist, 3D rigger, sound designer, environment artist, art director, video producer) across models like Seedance, Meshy, and Rodin in a unified production pipeline.",
           "url": "https://x.com/emmanuel_2m/status/2103097017073361137"
         },
         {
-          "tag": "tip",
-          "title": "@anshnanda & @hassanazharkhan: Eliminating Tautological Unit Tests in Favor of E2E Verification",
-          "body": "Engineers advocate removing LLM-generated unit tests that merely assert trivial string constants or freeze implementation details. Following OpenClaw's deletion of 400k lines of automated unit tests, teams are shifting AGENTS.md rules toward high-signal end-to-end integration specs.",
-          "url": "https://x.com/anshnanda/status/2103157336164683847"
+          "tag": "hot",
+          "title": "@twoclipping & @VincentWei93: Opus 5.5 Generates Dribbble-Grade Motion Graphics via Pure Code",
+          "body": "Engineers showcase complex UI motion graphics, liquid tab morphs, and audio-synchronized video generated with zero After Effects using Opus 5.5. The workflow relies on deterministic HTML/JS seek(t) time functions, closed-form springs, and 4x Playwright subframe rendering at 60fps, signaling that code-driven video synthesis has reached professional animation quality.",
+          "url": "https://x.com/twoclipping/status/2103273003555402193"
         },
         {
           "tag": "new",
-          "title": "@aheritier: Docker Releases Official Skills Suite for Coding Agents",
-          "body": "Docker publishes its first official collection of agent skills, giving coding agents verified, context-efficient commands for container building, multi-stage debugging, and compose orchestration without hallucinated CLI arguments.",
-          "url": "https://x.com/aheritier/status/2103188909350084627"
+          "title": "@Docker & @aheritier: Docker and Linux Foundation Standardize Agent Sandboxing",
+          "body": "Docker and the Linux Foundation announce the Docker Sandbox Kit Specification under Apache 2.0, establishing an open industry standard for declaring what autonomous coding agents can touch and execute. In tandem, Docker launched its first official suite of verified CLI skills for coding agents.",
+          "url": "https://x.com/Docker/status/2103235572676403617"
         },
         {
-          "tag": "hot",
-          "title": "@twoclipping & @VincentWei93: Pure Code Motion Graphics and Video Generation on Opus 5.5",
-          "body": "Developers demonstrate generating complex UI motion design, SVG morphing, and synchronized BGM video entirely via deterministic HTML/JS code orchestrated by Opus 5.5, bypassing diffusion video generation models in favor of exact, frame-accurate Playwright code execution.",
-          "url": "https://x.com/twoclipping/status/2103273003555402193"
+          "tag": "tip",
+          "title": "@swadeshkumar_ & @hassanazharkhan: The Anatomy of an AI-Native Repo & Moving Beyond Tautological Tests",
+          "body": "Engineering leads outline architectural standards for repositories optimized for coding agents: lean CLAUDE.md memory files paired with modular skills, progressive context docs, and automated hooks. Simultaneously, teams advocate eliminating LLM-generated tautological unit tests in favor of rigorous end-to-end integration specifications.",
+          "url": "https://x.com/swadeshkumar_/status/2103311773390807428"
+        },
+        {
+          "tag": "new",
+          "title": "@eliasstravik: Herdr Introduces /autoproject Handsfree Agent Ratchet Loops",
+          "body": "Herdr releases /autoproject, applying Karpathy's autoresearch concept to application development. A maker agent generates iterative codebase improvements while an independent reviewer agent evaluates changes blind against hidden rubrics, automatically merging passing PRs and reverting regressions across hundreds of cycles.",
+          "url": "https://x.com/eliasstravik/status/2103188486677500155"
         }
       ]
     },
@@ -64,45 +58,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@Azaliamirh & @jackyk02: CLM-8B Sets New SOTA on DeepSWE (81.6%) and Terminal-Bench (87.6%)",
-          "body": "Researchers introduce Contrastive Language Models (CLMs), an ultra-fast System 1 architecture mapping states directly to action distributions. CLM-8B outperforms Jev on coding benchmarks while running up to 9x faster, disaggregating state-action embeddings to reuse cached state representations continuously.",
-          "url": "https://x.com/Azaliamirh/status/2102958024323428362"
-        },
-        {
-          "tag": "hot",
-          "title": "@dair_ai & @askalphaxiv: Jev-as-a-Judge Cascades Retain 99% Accuracy at 277x Lower Eval Cost",
-          "body": "A new paper reveals that using TypeSafe AI's Jev as a first-pass probability judge and escalating only uncertain predictions to GPT-6 retains 99% of frontier evaluation accuracy on preference benchmarks while cutting evaluation spend by 277x ($0.044 vs $12.18 per 1,000 judgments).",
-          "url": "https://x.com/dair_ai/status/2103147453717545278"
-        },
-        {
-          "tag": "new",
-          "title": "@NVIDIAAI: NVIDIA Open-Sources Nemotron 3 Diarization Model on Hugging Face",
-          "body": "NVIDIA AI releases a 100M-parameter Nemotron 3 Diarization checkpoint capable of isolating overlapping speakers in real-time conversations with up to 8 distinct speakers, eliminating messy transcript interleaving in agentic voice workflows.",
-          "url": "https://x.com/NVIDIAAI/status/2102775666366435450"
-        },
-        {
-          "tag": "new",
-          "title": "@MaxForAI: Memory Attention (MA) Drops Value Projections to Slash KV Cache and Compute",
-          "body": "A novel Transformer architecture replaces per-token Value projections with learned persistent token memories (V = K + Memory[token]). The design eliminates dynamic V matrix multiplications, cuts training token consumption by up to 29.6%, and enables offline KV cache reconstruction.",
-          "url": "https://x.com/MaxForAI/status/2103372329984442572"
-        },
-        {
-          "tag": "update",
-          "title": "@satyanadella: Microsoft Unveils Copilot OS Update: Autopilot, Cloud Code, and Ambient Workspace",
-          "body": "Satya Nadella announces Microsoft Copilot's biggest architectural release yet, introducing Autopilot for persistent enterprise agent loops, integrated tenant-level coding workspaces, and proactive 'Today' context retrieval across the M365 ecosystem.",
+          "title": "@satyanadella & @dee_bosa: Microsoft Positions Copilot as an Enterprise OS Driven by Autopilot",
+          "body": "Satya Nadella announces Microsoft's major architectural release for Copilot, introducing Autopilot for persistent, long-running enterprise agents, tenant-hosted code generation, and ambient M365 integration. In a feature interview with CNBC's Deirdre Bosa, Nadella emphasized that enterprise AI dominance will be decided by product integration, identity, and governance rather than raw model weights.",
           "url": "https://x.com/satyanadella/status/2103455884366188544"
         },
         {
-          "tag": "tip",
-          "title": "@HowToPrompt__: IBM STAIR Hierarchical Retrieval Cuts Production RAG Hallucinations to <0.05%",
-          "body": "IBM introduces STAIR, a generative retrieval technique that addresses documents using natural structural tables of contents rather than arbitrary vector chunking, reaching 82.6% Recall@1 and reducing factual hallucination rates to virtually zero.",
-          "url": "https://x.com/HowToPrompt__/status/2103153354755248489"
+          "tag": "new",
+          "title": "@fastinoAI & @MaximeRivest: Fastino Open-Sources GLiNER2.5-Decide 340M for Sub-Second Semantic Routing",
+          "body": "Fastino Labs releases GLiNER2.5-Decide, an open-weight 340M encoder-based decision model released on Hugging Face under Apache 2.0. Tailored for fast tool routing, triage, and LLM-as-a-judge classification, the model leads in 9 of 17 benchmarks while running efficiently on consumer CPUs.",
+          "url": "https://x.com/fastinoAI/status/2103188985292157353"
+        },
+        {
+          "tag": "hot",
+          "title": "@0xwhrrari & @askalphaxiv: Jev Decision Architectures Slash Model Evaluation Costs by 277x",
+          "body": "Architects publish a 10-step blueprint for wrapping LLMs in bounded semantic decision filters using Jev (Choice, Score, Noul). New alphaXiv research demonstrates that routing evaluations through Jev and escalating only uncertain verdicts to frontier LLMs preserves 99% of GPT-6 benchmark accuracy while reducing evaluation costs by 277x.",
+          "url": "https://x.com/0xwhrrari/status/2103157617715491278"
+        },
+        {
+          "tag": "update",
+          "title": "@Ryrenz: NVIDIA Open-Sources Model-Optimizer to Compress Frontier LLMs into VRAM",
+          "body": "NVIDIA releases Model-Optimizer on GitHub, providing a unified Python toolkit for FP4 quantization, pruning, distillation, and speculative decoding. Tested on DeepSeek-R1 and Llama-3.1-405B, the tool enables direct deployment to vLLM, SGLang, and TensorRT-LLM, compressing models from 355B down to 260B.",
+          "url": "https://x.com/Ryrenz/status/2103288882078929095"
         },
         {
           "tag": "new",
-          "title": "@OpenAI: OpenAI Open-Sources MentalHealthBench with 80+ Clinicians",
-          "body": "OpenAI releases MentalHealthBench, an evaluation suite built alongside clinical psychologists to test model safety, grounding, and empathetic conversation guardrails in sensitive behavioral healthcare interactions.",
-          "url": "https://x.com/OpenAI/status/2102837574092161102"
+          "title": "@muellerberndt: Cadence Proposes an Architecture for Continuous Streaming Intelligence",
+          "body": "Bernhard Mueller unveils Cadence, a new system architecture designed for continuous and efficient streaming intelligence, moving beyond bursty context recalculations toward a continuous token-efficient reasoning stream.",
+          "url": "https://x.com/muellerberndt/status/2103403575829549518"
+        },
+        {
+          "tag": "tip",
+          "title": "@HowToPrompt__: IBM STAIR Slashes Production RAG Hallucinations to Under 0.05%",
+          "body": "IBM researchers present STAIR, a generative retrieval architecture that indexes enterprise documents using their inherent structural Table of Contents rather than arbitrary vector chunking, achieving 82.6% Recall@1 and driving factual hallucination rates down to virtually zero.",
+          "url": "https://x.com/HowToPrompt__/status/2103153354755248489"
+        },
+        {
+          "tag": "tip",
+          "title": "@ZhihuFrontier: FullLLM Implements KV Caching and PPO Alignment in 260K Parameters",
+          "body": "Zhihu contributors open-source FullLLM, a clean PyTorch implementation adapting Karpathy's llama2.c with grouped-query attention, KV caching, and full PPO reinforcement learning loops, training a story-generating model in 10 minutes on a single A100.",
+          "url": "https://x.com/ZhihuFrontier/status/2103433751946780821"
         }
       ]
     },
@@ -112,39 +106,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@GergelyOrosz: The Industry Backlash to DHH Declaring Manual Coding Over",
-          "body": "Gergely Orosz analyzes the fierce debate sparked by DHH publicly asserting that hand-written coding is officially obsolete for commercial software engineering, noting that developers paying close attention to frontier models have quietly crossed that threshold months ago.",
-          "url": "https://x.com/GergelyOrosz/status/2103074862310809843"
+          "title": "@evijit: NeurIPS 2026 Paper Warns AI Agents Push Humans Out of the Loop",
+          "body": "A new NeurIPS 2026 position paper warns that current autonomous agent architectures degrade human oversight into passive rubber-stamping. As agents output massive volumes of complex action traces, humans lose the cognitive capacity for meaningful postmortems, resulting in unmanageable 'slop-vestigations' and diminished system safety.",
+          "url": "https://x.com/evijit/status/2103197109025693799"
         },
         {
           "tag": "new",
-          "title": "@shao__meng: Alibaba Releases 68-Page Enterprise AI Native Engineering Handbook",
-          "body": "Alibaba debuts a comprehensive architectural guide at the Apsara Conference detailing lessons learned transitioning internal teams to AI-native engineering—covering agent harnesses, sandboxes, MCP tool connectivity, guardrails, and organizational change.",
-          "url": "https://x.com/shao__meng/status/2103332060513665133"
+          "title": "@mylifcc: Stanford's Paper2Agent Embeds Interactive Virtual Authors in Nature Papers",
+          "body": "Stanford University's James Zou lab introduces Paper2Agent in Nature, equipping published scientific papers with autonomous 'virtual corresponding authors.' Readers can query the agent to inspect methodology, run experiments interactively, and reproduce computational pipelines directly.",
+          "url": "https://x.com/mylifcc/status/2103422759766216908"
+        },
+        {
+          "tag": "new",
+          "title": "@GoogleResearch: Multi-Agent Framework Solves Visual Drift in Generative Video Narratives",
+          "body": "Google Research reveals a unified multi-agent architecture designed to generate temporally consistent, long-form video narratives. By dividing narrative progression, character consistency, and scene continuity across specialized subagents, the framework mitigates visual drift and pipeline error propagation.",
+          "url": "https://x.com/GoogleResearch/status/2103208899650437286"
         },
         {
           "tag": "update",
-          "title": "@_The_Prophet__ & @KobeissiLetter: 5.1% Treasury Yields Trigger Negative Leverage in Real Estate",
-          "body": "Financial analysts highlight how 5.1% 10-year Treasury yields have surpassed average 4.8% rental cap rates, creating a 50% plunge in real estate transaction volumes as risk-free government paper becomes a relentless hurdle rate across private asset markets.",
-          "url": "https://x.com/_The_Prophet__/status/2103175847700308214"
+          "title": "@OpenAI: OpenAI Releases MentalHealthBench Developed with 80+ Clinicians",
+          "body": "OpenAI open-sources MentalHealthBench, an evaluation suite built in collaboration with over 80 clinical psychologists. The benchmark provides open evaluation tools to measure grounding, empathy, and conversational boundaries across frontier models in realistic mental health interactions.",
+          "url": "https://x.com/OpenAI/status/2102837574092161102"
+        },
+        {
+          "tag": "update",
+          "title": "@thsottiaux & @opencode: DevDay Momentum Surges as OpenCode Permanently Funds DeepSeek v4.1",
+          "body": "OpenAI's Tibo hints at major releases for Tuesday's DevDay conference, while OpenCode launches Operation Cheepseek Phase 2, permanently allocating $60 in usage credits for DeepSeek v4.1 Flash to support open developer ecosystems.",
+          "url": "https://x.com/thsottiaux/status/2103375711797211460"
         },
         {
           "tag": "tip",
-          "title": "@lumenxbt: The Napkin Framework Behind Matt Abrahams' Stanford Lecture",
-          "body": "A viral breakdown revisits Matt Abrahams' legendary Stanford lecture 'Think Fast, Talk Smart,' arguing that unscripted spontaneous conversational skills ('What, So What, Now What') carry 90% of career decision weight while over-coached presentations fall flat.",
-          "url": "https://x.com/lumenxbt/status/2103172611723432215"
-        },
-        {
-          "tag": "hot",
-          "title": "@FundamentEdge: Opus 5.5 Passes Institutional Hedge Fund Financial Modeling Test",
-          "body": "Hedge fund investor Brett Caughran reports that Opus 5.5 is the first model capable of one-shot updating complex, multi-decade quarterly financial models with deep analytical scenario tabs, freeing analysts to focus on proprietary qualitative insights.",
-          "url": "https://x.com/FundamentEdge/status/2103136854962819363"
-        },
-        {
-          "tag": "update",
-          "title": "@riba2534: Measuring True Token Quotas: Claude Code MAX 20x Delivers 3x ChatGPT Allocations",
-          "body": "Benchmark tests comparing top-tier developer subscriptions reveal that Claude Code MAX 20x provides roughly 6B weekly tokens under xhigh reasoning compared to 1.5–2B for GPT-6 Astra, giving developers significantly greater sustained throughput.",
-          "url": "https://x.com/riba2534/status/2103363198997180859"
+          "title": "@AYi_AInotes & @cZKz939: The Realities of Personal Agent Ops & Grounded Daily Action",
+          "body": "Practitioners share field lessons on deploying personal background agents like Meta's Muse, emphasizing that strict system boundaries, structured document outputs, and restricted permissions are essential to prevent hallucinated tasks. Commentators connect this to Zeng Guofan's action philosophy—building confidence through steady, verifiable daily execution rather than ungrounded ambition.",
+          "url": "https://x.com/AYi_AInotes/status/2103341238338408579"
         }
       ]
     }
