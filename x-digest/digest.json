@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Monday, September 21st, 2026",
+  "date": "Friday, September 25th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Xiaomi MiMo-V2.6 Pro & Flash Take #1 Open-Source Intelligence Crown:</strong> Xiaomi releases open-weights MiMo-V2.6-Pro (1.02T total / 42B active MoE) scoring 46 on the Artificial Analysis Intelligence Index—matching Claude Opus 5 and GPT-5.6 Sol on agent benchmarks at an aggressive $0.435/$0.87 per million tokens ($0.13/task Pareto frontier), accompanied by the CodeMidas RL training framework and open datasets.",
-    "<strong>OpenAI Internal Model Cracks 100+ Open Math Problems in 24 Days:</strong> Mathematical luminaries Edward Witten, Timothy Gowers, and Martin Hairer convene on an independent advisory panel as OpenAI reveals an internal reasoning model resolved over 100 open problems across mathematics within 24 days of training, catching internal researchers off guard.",
-    "<strong>Diogo Almeida Unveils 10-Step Jev Blueprint as Agent Memory Ecosystem Grows:</strong> TypeSafe AI founder Diogo Almeida shares an architectural blueprint ('Meta-attention') for rebuilding coding agents without static KV cache penalties, while community projects like Beacon (cross-harness self-improving memory) and AgentRun (90% enterprise cost reduction) operationalize calibrated decision layers across Claude Code and Codex.",
-    "<strong>Google AX & Open-Source Agent Infrastructure Accelerate:</strong> Google open-sources AX, an orchestrator positioned as 'Kubernetes for agent execution,' while Nous Research's Hermes Agent ships official Claude SDK plugin integration, and EvoOntology demonstrates up to +26.7 benchmark gains by serving dynamic ontologies via MCP.",
-    "<strong>Apple Hardware Divide, Zero-Setup Cloudflare Tunnels & Sol vs Astra Debate:</strong> Ben Thompson reviews the iPhone 18 Pro Max and iPhone Air form-factor split; Cloudflare debuts Quick Tunnels for instant zero-config localhost exposure; and developer evaluations critique OpenAI's verifier-focused benchmark alignment versus Claude Fable's intuitive open-ended reasoning."
+    "<strong>Claude-Led Discovery of Novel Gene-Editing Molecular Machinery:</strong> Anthropic CEO Dario Amodei reveals that Claude autonomously discovered an unknown programmable enzyme system hidden within bacteriophage DNA featuring CRISPR-like repeating arrays. Claude parsed genomic literature, spotted the mechanism, and designed verification experiments validated in the lab, pointing toward an exponential curve for AI-driven biological discovery.",
+    "<strong>Contrastive Language Models & Jev-as-a-Judge Re-Architect Agent Systems:</strong> Azalia Mirhoseini and Jacky K unveil CLM-8B, a fast System 1 model setting new SOTA on DeepSWE (81.6%) and Terminal Bench (87.6%) while running 9x faster than Jev. Simultaneously, new research on Jev-as-a-Judge proves that confidence-based routing to cheap decision models slashes LLM evaluation costs by 277x while retaining 99% of GPT-6's benchmark accuracy.",
+    "<strong>Memory Attention (MA) Challenges Traditional QKV Attention:</strong> Researchers introduce Memory Attention, demonstrating that Value (V) projections in Transformers can be replaced by learned persistent token memory (V = K + Memory[token]), saving up to 29.6% in training compute and halving KV cache memory footprint via prefetching.",
+    "<strong>Satya Nadella Details Copilot's Transformation into an Enterprise OS:</strong> Microsoft rolls out an extensive re-architecture of Copilot, uniting Autopilot (proactive long-running background agents), tenant-hosted Code creation, and continuous cross-application Office integration.",
+    "<strong>The Death of Hand-Written Code & Real Estate Rate Shock:</strong> Gergely Orosz dissects the industry uproar following DHH's declaration that manual code authoring is dead; Alibaba open-sources a 68-page AI Native Engineering Handbook; and Treasury yields at 5.1% invert against 4.8% rental cap rates to trigger a freeze in private real estate capital."
   ],
   "sections": [
     {
@@ -16,45 +16,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@CompleteSkeptic & @0xMovez: Diogo Almeida's 10-Step Blueprint for Jev Coding Agent Harnesses",
-          "body": "TypeSafe AI founder Diogo Almeida releases a 12-page architectural guide on building high-performance coding agent harnesses. By replacing static, ballooning KV cache histories with dynamic turn-by-turn context reconstitution ('Meta-attention'), tiered tool disclosure, and condition-loaded instructions, the design cuts agent token costs by up to 400x and speeds up execution by 200x.",
-          "url": "https://x.com/CompleteSkeptic/status/2101894250401271876"
-        },
-        {
-          "tag": "new",
-          "title": "@_avichawla: Beacon Brings Cross-Harness Self-Improving Agent Memory via Jev",
-          "body": "Beacon by Asymptote Labs open-sources an autonomous learning layer that unifies sessions across Claude Code, Codex, Cursor, and OpenCode. Rather than hoarding raw command histories, Jev continuously evaluates run traces for genuine debugging lessons and human corrections, promoting distilled patterns into reusable project skills shared across all harnesses.",
-          "url": "https://x.com/_avichawla/status/2101966536798040332"
-        },
-        {
-          "tag": "new",
-          "title": "@arpit_bhayani: Google Open-Sources AX Agentic Orchestration Framework",
-          "body": "Google open-sources AX, an agentic execution orchestrator engineered as a 'Kubernetes for agents.' It introduces resilient scheduling, execution tracing, and distributed coordination primitives to supervise multi-agent workflows at scale.",
-          "url": "https://x.com/arpit_bhayani/status/2102045239917850785"
+          "title": "@DarioAmodei: Claude Identifies Potential New Programmable Gene-Editing System",
+          "body": "Anthropic CEO Dario Amodei details how Claude independently identified a novel molecular machine in bacteriophage DNA featuring CRISPR-like repeating arrays. Claude analyzed genomic databases, drafted the hypotheses, and designed wet-lab protocols successfully executed by Anthropic's biology team, signaling that AI-driven experimental biology is entering an exponential breakthrough phase.",
+          "url": "https://x.com/DarioAmodei/status/2102831170299834652"
         },
         {
           "tag": "update",
-          "title": "@Teknium: Hermes Agent Integrates Official Claude SDK Plugin",
-          "body": "Nous Research's Teknium releases an official Claude SDK plugin for Hermes Agent, allowing developers to route through their existing Claude Code subscriptions natively without API tier markups or loss of harness features.",
-          "url": "https://x.com/Teknium/status/2102093483788107792"
+          "title": "@ClaudeDevs: How Anthropic Made claude.ai 3x Faster in Two Weeks Using Claude",
+          "body": "Anthropic's engineering team shares the exact methodology and prompt chains used to accelerate claude.ai 3x in 14 days, employing Claude to profile traces, isolate frontend bottleneck scripts, and refactor heavy execution paths autonomously.",
+          "url": "https://x.com/ClaudeDevs/status/2102839691154427983"
         },
         {
           "tag": "tip",
-          "title": "@omarsar0: EvoOntology Paper Demonstrates +26.7 Accuracy Jump via Evolving MCP Schema Layers",
-          "body": "A new research paper introduces EvoOntology, showing that serving an agent with a dedicated, self-evolving ontology over MCP improves GPT-5.5 accuracy by 26.7 points on DDR-Bench and 7.4 points on BIRD. The ontology is iteratively updated via paired evaluations, outperforming both static prompts and manual schema annotations.",
-          "url": "https://x.com/omarsar0/status/2102099298716660223"
+          "title": "@angeldot_ & @Hyde_ai3: Clean Legacy Constraints with '/claude-api prompt-audit'",
+          "body": "Developers highlight Anthropic engineer Lance Martin's prompt auditing workflow: executing '/claude-api prompt-audit' scrubs legacy defensive prompt guards and CLAUDE.md bloat designed for earlier models, reformatting instructions around Opus 5.5's concise agentic behavior.",
+          "url": "https://x.com/angeldot_/status/2103095295215100189"
+        },
+        {
+          "tag": "new",
+          "title": "@emmanuel_2m: Scenario Open-Sources GameDev OS: 9 Agent Specialists and 64 Skills",
+          "body": "Scenario open-sources GameDev OS, turning single coding agents into full game studios by orchestrating 9 dedicated subagents (concept artist, 3D rigger, audio designer, director) across Meshy, Rodin, and Seedance models in a unified collaborative pipeline.",
+          "url": "https://x.com/emmanuel_2m/status/2103097017073361137"
         },
         {
           "tag": "tip",
-          "title": "@dani_avila7: Dynamic Jev Skill Injection Keeps Claude Code Context Lean",
-          "body": "A new Claude Code mod uses the Jev decision API to evaluate user intent and inject only matching skill definitions on demand, eliminating the context window bloat of having dozens of idle skill prompts loaded by default.",
-          "url": "https://x.com/dani_avila7/status/2101885477158547753"
+          "title": "@anshnanda & @hassanazharkhan: Eliminating Tautological Unit Tests in Favor of E2E Verification",
+          "body": "Engineers advocate removing LLM-generated unit tests that merely assert trivial string constants or freeze implementation details. Following OpenClaw's deletion of 400k lines of automated unit tests, teams are shifting AGENTS.md rules toward high-signal end-to-end integration specs.",
+          "url": "https://x.com/anshnanda/status/2103157336164683847"
+        },
+        {
+          "tag": "new",
+          "title": "@aheritier: Docker Releases Official Skills Suite for Coding Agents",
+          "body": "Docker publishes its first official collection of agent skills, giving coding agents verified, context-efficient commands for container building, multi-stage debugging, and compose orchestration without hallucinated CLI arguments.",
+          "url": "https://x.com/aheritier/status/2103188909350084627"
         },
         {
           "tag": "hot",
-          "title": "@_aj: AgentRun Harness Slashes Enterprise Knowledge Work Costs by 90%",
-          "body": "AJ Asver unveils AgentRun, a specialized harness leveraging Jev to learn repetitive operational workflows as they run. By compiling solved LLM decision steps into executable deterministic code, processing 100,000 compliance alerts plummeted from over $290,000 on Opus 5 to under $26,000.",
-          "url": "https://x.com/_aj/status/2102061534956662818"
+          "title": "@twoclipping & @VincentWei93: Pure Code Motion Graphics and Video Generation on Opus 5.5",
+          "body": "Developers demonstrate generating complex UI motion design, SVG morphing, and synchronized BGM video entirely via deterministic HTML/JS code orchestrated by Opus 5.5, bypassing diffusion video generation models in favor of exact, frame-accurate Playwright code execution.",
+          "url": "https://x.com/twoclipping/status/2103273003555402193"
         }
       ]
     },
@@ -64,39 +64,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@XiaomiMiMo & @ArtificialAnlys: Xiaomi MiMo-V2.6 Pro Claims #1 Open-Weights Spot on Intelligence Index",
-          "body": "Xiaomi open-sources MiMo-V2.6 (1.02T MoE / 42B active parameters), debuting atop the Artificial Analysis Intelligence Index with a score of 46—matching Claude Opus 5 and GPT-5.6 Sol across agent benchmarks. Priced at $0.435 input / $0.87 output per 1M tokens ($0.13 per task), it establishes a new Pareto efficiency frontier, complete with open weights, RL code, and the CodeMidas dataset.",
-          "url": "https://x.com/XiaomiMiMo/status/2102138559952290106"
+          "title": "@Azaliamirh & @jackyk02: CLM-8B Sets New SOTA on DeepSWE (81.6%) and Terminal-Bench (87.6%)",
+          "body": "Researchers introduce Contrastive Language Models (CLMs), an ultra-fast System 1 architecture mapping states directly to action distributions. CLM-8B outperforms Jev on coding benchmarks while running up to 9x faster, disaggregating state-action embeddings to reuse cached state representations continuously.",
+          "url": "https://x.com/Azaliamirh/status/2102958024323428362"
         },
         {
           "tag": "hot",
-          "title": "@choblin29 & @OpenAI: OpenAI Internal Model Solves Over 100 Open Mathematics Problems in 24 Days",
-          "body": "OpenAI convenes an independent advisory board including Fields Medalists and mathematicians Edward Witten, Timothy Gowers, and Martin Hairer to evaluate breakthroughs from an internal model that resolved over 100 long-standing open problems across mathematics within 24 days of training.",
-          "url": "https://x.com/choblin29/status/2102095044543160555"
+          "title": "@dair_ai & @askalphaxiv: Jev-as-a-Judge Cascades Retain 99% Accuracy at 277x Lower Eval Cost",
+          "body": "A new paper reveals that using TypeSafe AI's Jev as a first-pass probability judge and escalating only uncertain predictions to GPT-6 retains 99% of frontier evaluation accuracy on preference benchmarks while cutting evaluation spend by 277x ($0.044 vs $12.18 per 1,000 judgments).",
+          "url": "https://x.com/dair_ai/status/2103147453717545278"
         },
         {
           "tag": "new",
-          "title": "@RohOnChain: Sub-100ms Autonomous Trading Engine Built on Jev and TradingView",
-          "body": "Roan open-sources a 24/7 trading framework combining real-time TradingView technical indicators with Jev's typed probability layer. By evaluating condensed numeric state snapshots (<400 tokens) in 81ms, the system enables Kelly-sized position entry without generative LLM hallucination.",
-          "url": "https://x.com/RohOnChain/status/2102082148866130323"
+          "title": "@NVIDIAAI: NVIDIA Open-Sources Nemotron 3 Diarization Model on Hugging Face",
+          "body": "NVIDIA AI releases a 100M-parameter Nemotron 3 Diarization checkpoint capable of isolating overlapping speakers in real-time conversations with up to 8 distinct speakers, eliminating messy transcript interleaving in agentic voice workflows.",
+          "url": "https://x.com/NVIDIAAI/status/2102775666366435450"
         },
         {
-          "tag": "hot",
-          "title": "@ScarletKc: Benchmark Overfitting vs Exploratory Intuition: Why Astra and Fable Diverge",
-          "body": "A viral critique contrasts GPT-6 Astra's rigid, test-driven validation habits with Claude Fable's fluid capability for open-ended problem exploration, arguing that frontier models overtrained on verifier-based test suites lose the ability to navigate ambiguous, real-world development tasks.",
-          "url": "https://x.com/ScarletKc/status/2101815661752459497"
+          "tag": "new",
+          "title": "@MaxForAI: Memory Attention (MA) Drops Value Projections to Slash KV Cache and Compute",
+          "body": "A novel Transformer architecture replaces per-token Value projections with learned persistent token memories (V = K + Memory[token]). The design eliminates dynamic V matrix multiplications, cuts training token consumption by up to 29.6%, and enables offline KV cache reconstruction.",
+          "url": "https://x.com/MaxForAI/status/2103372329984442572"
+        },
+        {
+          "tag": "update",
+          "title": "@satyanadella: Microsoft Unveils Copilot OS Update: Autopilot, Cloud Code, and Ambient Workspace",
+          "body": "Satya Nadella announces Microsoft Copilot's biggest architectural release yet, introducing Autopilot for persistent enterprise agent loops, integrated tenant-level coding workspaces, and proactive 'Today' context retrieval across the M365 ecosystem.",
+          "url": "https://x.com/satyanadella/status/2103455884366188544"
         },
         {
           "tag": "tip",
-          "title": "@Fei2411: Deconstructing Actual Token Quotas and Pricing Traps in GPT vs Claude '20x' Tiers",
-          "body": "A deep data breakdown analyzes actual weekly allocations in Pro/Max subscriptions: while OpenAI provides an exact 20x multiplier on base limits, Claude's higher base Opus quota delivers significantly more absolute tokens despite Fable being capped at half-quota.",
-          "url": "https://x.com/Fei2411/status/2102068603323666900"
+          "title": "@HowToPrompt__: IBM STAIR Hierarchical Retrieval Cuts Production RAG Hallucinations to <0.05%",
+          "body": "IBM introduces STAIR, a generative retrieval technique that addresses documents using natural structural tables of contents rather than arbitrary vector chunking, reaching 82.6% Recall@1 and reducing factual hallucination rates to virtually zero.",
+          "url": "https://x.com/HowToPrompt__/status/2103153354755248489"
         },
         {
           "tag": "new",
-          "title": "@TungaBayrak: Freya AI Releases 'Adam & Eve' Ultra-Realistic Speech Synthesis",
-          "body": "Freya AI launches its Adam and Eve speech models, taking the #1 ranking on AudioRealismBench. The models cross the uncanny valley with nuanced respiratory cadence, micro-pauses, and natural conversation dynamics.",
-          "url": "https://x.com/TungaBayrak/status/2102069626762932680"
+          "title": "@OpenAI: OpenAI Open-Sources MentalHealthBench with 80+ Clinicians",
+          "body": "OpenAI releases MentalHealthBench, an evaluation suite built alongside clinical psychologists to test model safety, grounding, and empathetic conversation guardrails in sensitive behavioral healthcare interactions.",
+          "url": "https://x.com/OpenAI/status/2102837574092161102"
         }
       ]
     },
@@ -106,39 +112,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@benthompson: Ben Thompson's iPhone 18 Pro Max Review: The iPhone Air Dilemma",
-          "body": "Stratechery's Ben Thompson weighs in on Apple's latest hardware lineup with a succinct warning: testing the razor-thin iPhone Air makes returning to traditional flagship chassis virtually impossible.",
-          "url": "https://x.com/benthompson/status/2102167616743702950"
-        },
-        {
-          "tag": "update",
-          "title": "@dallairedemers: Breakthroughs Reported Against Chinese Post-Quantum Cryptography Candidates",
-          "body": "Cryptographic researchers report rapid cryptanalytic progress breaking multiple Chinese post-quantum cryptography (PQC) algorithms in rapid succession, intensifying debate around global lattice-based cryptography standards.",
-          "url": "https://x.com/dallairedemers/status/2102021269747376247"
+          "title": "@GergelyOrosz: The Industry Backlash to DHH Declaring Manual Coding Over",
+          "body": "Gergely Orosz analyzes the fierce debate sparked by DHH publicly asserting that hand-written coding is officially obsolete for commercial software engineering, noting that developers paying close attention to frontier models have quietly crossed that threshold months ago.",
+          "url": "https://x.com/GergelyOrosz/status/2103074862310809843"
         },
         {
           "tag": "new",
-          "title": "@xiaohu: Cloudflare Quick Tunnels Enable Single-Command Localhost Exposure",
-          "body": "Cloudflare introduces Quick Tunnels, enabling developers to expose local development ports to the public internet via globally authenticated HTTPS URLs instantly with a single CLI command—requiring zero accounts, configs, or port-forwarding.",
-          "url": "https://x.com/xiaohu/status/2101877033517379832"
-        },
-        {
-          "tag": "tip",
-          "title": "@0xSilver_Time: Automated AI Prospecting Engine Turns Google Maps Gaps into High-Margin Contracts",
-          "body": "A case study outlines how an entrepreneur built a recurring $20,000/month agency by scanning Google Maps for highly rated businesses lacking websites, programmatically drafting live demo sites in minutes, and executing automated targeted outreach.",
-          "url": "https://x.com/0xSilver_Time/status/2101860297170706821"
-        },
-        {
-          "tag": "tip",
-          "title": "@AndyL5cc: Autonomous Growth Operations: Managing Red Book Distribution with Codex",
-          "body": "Andy L documents 5-day results using Codex as an autonomous marketing agent, generating 3.07 million impressions and 2,000 targeted followers across topic discovery, automated copy formulation, and audience feedback loops.",
-          "url": "https://x.com/AndyL5cc/status/2101499000990179392"
+          "title": "@shao__meng: Alibaba Releases 68-Page Enterprise AI Native Engineering Handbook",
+          "body": "Alibaba debuts a comprehensive architectural guide at the Apsara Conference detailing lessons learned transitioning internal teams to AI-native engineering—covering agent harnesses, sandboxes, MCP tool connectivity, guardrails, and organizational change.",
+          "url": "https://x.com/shao__meng/status/2103332060513665133"
         },
         {
           "tag": "update",
-          "title": "@corndogjpn2: Instant-Solubility Food Science: Deconstructing Meiji Savas Cold-Water Dispersion",
-          "body": "A viral deep-dive into food processing engineering examines the physical and chemical mechanics behind Meiji's Savas protein powder, highlighting fluidized bed agglomeration and lecithin dispersion techniques that eliminate clumping.",
-          "url": "https://x.com/corndogjpn2/status/2101914474336899402"
+          "title": "@_The_Prophet__ & @KobeissiLetter: 5.1% Treasury Yields Trigger Negative Leverage in Real Estate",
+          "body": "Financial analysts highlight how 5.1% 10-year Treasury yields have surpassed average 4.8% rental cap rates, creating a 50% plunge in real estate transaction volumes as risk-free government paper becomes a relentless hurdle rate across private asset markets.",
+          "url": "https://x.com/_The_Prophet__/status/2103175847700308214"
+        },
+        {
+          "tag": "tip",
+          "title": "@lumenxbt: The Napkin Framework Behind Matt Abrahams' Stanford Lecture",
+          "body": "A viral breakdown revisits Matt Abrahams' legendary Stanford lecture 'Think Fast, Talk Smart,' arguing that unscripted spontaneous conversational skills ('What, So What, Now What') carry 90% of career decision weight while over-coached presentations fall flat.",
+          "url": "https://x.com/lumenxbt/status/2103172611723432215"
+        },
+        {
+          "tag": "hot",
+          "title": "@FundamentEdge: Opus 5.5 Passes Institutional Hedge Fund Financial Modeling Test",
+          "body": "Hedge fund investor Brett Caughran reports that Opus 5.5 is the first model capable of one-shot updating complex, multi-decade quarterly financial models with deep analytical scenario tabs, freeing analysts to focus on proprietary qualitative insights.",
+          "url": "https://x.com/FundamentEdge/status/2103136854962819363"
+        },
+        {
+          "tag": "update",
+          "title": "@riba2534: Measuring True Token Quotas: Claude Code MAX 20x Delivers 3x ChatGPT Allocations",
+          "body": "Benchmark tests comparing top-tier developer subscriptions reveal that Claude Code MAX 20x provides roughly 6B weekly tokens under xhigh reasoning compared to 1.5–2B for GPT-6 Astra, giving developers significantly greater sustained throughput.",
+          "url": "https://x.com/riba2534/status/2103363198997180859"
         }
       ]
     }
