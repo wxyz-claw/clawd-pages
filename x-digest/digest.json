@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Friday, September 25th, 2026",
+  "date": "Saturday, September 26th, 2026",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Anthropic Launches Official Claude Plugin Portal as MCP Usage Surges 110x:</strong> Anthropic rolls out a dedicated portal for submitting plugins, tracking review status, and monitoring analytics. With plugins unifying Model Context Protocol (MCP) servers and skills, Boris Cherny reveals that Claude Tag in Slack now authors >50% of internal PRs and runs end-to-end bug reproduction through personal enterprise connectors.",
-    "<strong>Exa Debuts Agent Ultra for Swarm-Driven Deep Research:</strong> Exa AI Labs releases Agent Ultra, orchestrating coordinated agent swarms capable of navigating thousands of web sources and synthesizing comprehensive reports, setting a new benchmark for automated deep technical investigation.",
-    "<strong>Alexandr Wang Details the Autonomous Vision Behind Muse:</strong> Scale AI founder Alexandr Wang shares the architectural rationale for Muse, detailing the transition from prompt-and-response interfaces to persistent, ambient background agents with continuous memory and autonomous task coordination.",
-    "<strong>Respan Span-01 and JEV-as-a-Judge Slash Decision Latency & Cost:</strong> Respan introduces Span-01, a hyper-parallel reasoning classifier beating Jev by 18% at 2x lower cost and matching GPT-6 Luna at 700x lower cost. Concurrently, new JEV-as-a-Judge research proves routing evaluations through fast semantic filters cuts LLM auditing expenses by up to 277x while preserving 99% benchmark fidelity.",
-    "<strong>Monty v1 Releases 1ms Python Sandbox for Coding Agents:</strong> Pydantic creator Samuel Colvin unveils Monty v1, executing 10,000 sandboxed scripts in 674ms with a 2MB memory footprint, while Microsoft publishes Taste-Bench to diagnose and train decision-point intuition in recursive agent loops."
+    "<strong>Xiaomi Open-Sources MiMo-V2.6 Agentic RL Stack & 7.7k+ Environments:</strong> Xiaomi releases the full reinforcement learning training pipeline (verl + mini-swe-agent) alongside 7,780 verified software engineering, security, and web tasks with 750,000 real trajectories, openly publishing the multi-million-dollar training infrastructure that boosted SWE-bench from 48.8 to 65.7.",
+    "<strong>Cline Debuts Free Stealth Model 'Pixel Canary' Matching GPT-6 Astra:</strong> Coding assistant Cline releases Pixel Canary for free across its extension, matching GPT-6 Astra and beating Kimi K3 on realistic Next.js web and mobile engineering benchmarks.",
+    "<strong>OpenAI Leaks Point to 'Aeon' Long-Horizon Agent for DevDay:</strong> Ahead of Tuesday's DevDay, details surface of Aeon, an autonomous multi-day agent environment built on Astra in cloud sandboxes, as OpenAI engineers announce platform usage resets.",
+    "<strong>NVIDIA & Stanford Propose Contrastive Language Models for 9x Faster Tool Routing:</strong> Researchers introduce CLM, turning System-1 agent decision routing into vector retrieval over frozen embeddings to cut tool-selection latency by up to 9x compared to autoregressive generation.",
+    "<strong>Jensen Huang Addresses the AI Homework Paradox on NYT:</strong> In a feature interview with Ezra Klein on research showing student exam scores dropped 24% despite faster homework completion with AI, Jensen Huang argues that relinquishing manual arithmetic is the inevitable cost of moving up to high-dimensional systems thinking."
   ],
   "sections": [
     {
@@ -16,45 +16,45 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@ClaudeDevs: Anthropic Launches Plugin Portal as Claude MCP Usage Surges 110x",
-          "body": "Anthropic releases an official developer portal to submit Claude plugins, track reviews, and monitor analytics. Plugins package Model Context Protocol (MCP) servers and agent skills into distributable modules, with Anthropic reporting a 110x year-over-year surge in MCP usage across its product line.",
-          "url": "https://x.com/ClaudeDevs/status/2103577007938228300"
-        },
-        {
-          "tag": "new",
-          "title": "@bcherny: Claude Tag in Slack Generates >50% of PRs via Personal Connectors",
-          "body": "Boris Cherny details internal workflows where Claude Tag in Slack executes over 50% of pull requests and the vast majority of data analysis and bug triage. Leveraging Opus 5.5 and Fable 5.1 alongside newly enabled personal connectors (Google Drive, Salesforce, warehouse databases), agents autonomously reproduce bug reports end-to-end, execute multi-million token diagnostic workflows, and post verified fixes.",
-          "url": "https://x.com/bcherny/status/2103538666597691552"
-        },
-        {
-          "tag": "new",
-          "title": "@ExaAILabs: Agent Ultra Orchestrates Swarms for Thousand-Source Deep Research",
-          "body": "Exa AI Labs unveils Agent Ultra, an advanced research harness that orchestrates swarms of autonomous agents to conduct exhaustive web investigations, synthesize vast source corpuses, and compile verified data across thousands of citations with state-of-the-art benchmark accuracy.",
-          "url": "https://x.com/ExaAILabs/status/2103526510355517826"
-        },
-        {
-          "tag": "hot",
-          "title": "@samuelcolvin: Monty v1 Open-Sources 1ms Python Sandbox for Coding Agents",
-          "body": "Pydantic creator Samuel Colvin open-sources Monty v1, a lightweight Python execution sandbox that initializes in 1 millisecond (executing 10k sandboxed scripts in 674ms vs 3+ hours in traditional cloud sandboxes). With 2MB per-worker memory footprints and snapshot-and-resume support at any external call, Monty eliminates agent runtime latency bottlenecks.",
-          "url": "https://x.com/samuelcolvin/status/2103469459981619243"
+          "title": "@cline: Pixel Canary Stealth Model Launches Free in Cline, Matching GPT-6 Astra",
+          "body": "Cline introduces Pixel Canary, an unannounced stealth model made available for free inside the extension. On Next.js Agent Evals—which benchmarks realistic full-stack web and mobile tasks—Pixel Canary ties GPT-6 Astra and outperforms Kimi K3, giving developers frontier agent coding performance at zero cost.",
+          "url": "https://x.com/cline/status/2103636639038026093"
         },
         {
           "tag": "tip",
-          "title": "@twoclipping & @VincentWei93: Opus 5.5 Synthesizes Dribbble-Grade Motion Graphics via Pure Code",
-          "body": "Developers release prompt templates and workflows for generating fluid 60fps UI motion design and synchronized audio entirely through deterministic HTML/JS seek(t) time functions and Playwright subframe rendering orchestrated by Opus 5.5, bypassing diffusion video models in favor of exact mathematical code execution.",
-          "url": "https://x.com/twoclipping/status/2103273003555402193"
-        },
-        {
-          "tag": "tip",
-          "title": "@bil0090 & @charliejhills: Claude Code Power Tips: /low-priority and /claude-api prompt-audit",
-          "body": "Power users highlight high-impact Claude Code features: the `/low-priority` flag allows continuous development after hitting tier rate limits during off-peak capacity windows, while `/claude-api prompt-audit` automatically audits CLAUDE.md files and custom skills to eliminate legacy prompt bloat.",
-          "url": "https://x.com/bil0090/status/2103224547897983468"
+          "title": "@rexan_wong: Production Playbook for Opus 5.5 Motion Graphics Video Synthesis",
+          "body": "Rexan Wong outlines the complete architecture for high-end motion graphics with Opus 5.5. Moving beyond fragile 'one-prompt' scripts, the proven pipeline combines curated reference videos, Remotion or HyperFrames for code-to-MP4 scene rendering, @21st_dev UI design components, and still-frame storyboard reviews before applying director camera prompts.",
+          "url": "https://x.com/rexan_wong/status/2103707054108299437"
         },
         {
           "tag": "new",
-          "title": "@shiri_shh: Automated Repo-to-Motion Graphics Teaser Generator in Claude Code",
-          "body": "Engineers release a Claude Code skill that analyzes any software repository and autonomously outputs a complete motion-graphics teaser video complete with typography, timing, sound design, and launch marketing copy in a single execution run.",
-          "url": "https://x.com/shiri_shh/status/2103521939134550246"
+          "title": "@CodexResets1 & @thsottiaux: OpenAI Prepares Long-Horizon Agent 'Aeon' Ahead of DevDay",
+          "body": "Ahead of DevDay on Tuesday, reports indicate OpenAI will unveil 'Aeon,' a persistent agent engineered to work across hours, days, or weeks on complex projects. Running in hosted cloud sandboxes with multi-agent orchestration, Aeon builds on Astra's long-horizon capabilities, while OpenAI engineers reset usage quotas across Codex and ChatGPT.",
+          "url": "https://x.com/CodexResets1/status/2103761776995135637"
+        },
+        {
+          "tag": "new",
+          "title": "@lxfater: Open-Source Reverse-Engineering Skill Turns Agents into Android APK Analysts",
+          "body": "Security developers open-source an Android reverse-engineering skill for Claude Code and Codex. The skill autonomously decompiles DEX files, signs repackaged binaries, analyzes native libraries, and unpacks Flutter Dart AOT code by installing Frida, JADX, and Blutter on the fly.",
+          "url": "https://x.com/lxfater/status/2103771581499543640"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk: Zero-Latency CODING_STANDARDS.md Maintenance via /retro",
+          "body": "Developer Matt Pocock recommends treating CODING_STANDARDS.md as a live contract that should never remain empty: instantly capture styling slips, omitted validation rules, and improper primitives using /retro after agent execution runs to prevent recurring errors.",
+          "url": "https://x.com/mattpocockuk/status/2103748049906397613"
+        },
+        {
+          "tag": "new",
+          "title": "@supermemory: Supermemory Open-Sources Multiplayer Slack 'Company Brain'",
+          "body": "Supermemory open-sources its company brain harness, providing a self-hostable multi-agent coworker inside Slack equipped with persistent frontier memory that team members can deploy in five minutes.",
+          "url": "https://x.com/supermemory/status/2103668795843973538"
+        },
+        {
+          "tag": "update",
+          "title": "@hfcorriez: Google ARTEMIS Enables Cross-App Autonomous Android Execution",
+          "body": "Engineers highlight Google's open-source ARTEMIS framework, which allows Codex and Claude Code to drive mobile test devices and interact with native Android applications via goal-based execution without fragile hardcoded scripts.",
+          "url": "https://x.com/hfcorriez/status/2103537069972939099"
         }
       ]
     },
@@ -64,45 +64,39 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@RespanAI: Span-01 Launches Hyper-Parallel Reasoning Classifiers at 700x Lower Cost",
-          "body": "Respan debuts Span-01, a hyper-parallel reasoning classifier engineered for reinforcement learning from AI feedback (RLAIF) on unseen distribution shifts. Testing 18% higher than Jev on the Behavior Benchmark while running 2x cheaper, and outperforming GPT-6 Luna by 4% at 700x lower cost, Span-01 brings frontier reasoning speeds to classifier-level latency.",
-          "url": "https://x.com/RespanAI/status/2103530005720637860"
+          "title": "@NFT_Chen & @iScienceLuvr: Xiaomi Open-Sources MiMo-V2.6 Agentic RL Stack & 7,780 Environments",
+          "body": "Xiaomi releases its end-to-end reinforcement learning infrastructure for MiMo-V2.6, providing 7,780 executable Docker environments across software engineering, security, and web tasks. The release includes full training code (verl + mini-swe-agent), rule-based verifiable reward systems, and 750k trajectory logs from live 3.7B token batch training runs.",
+          "url": "https://x.com/NFT_Chen/status/2103674566816272693"
         },
         {
           "tag": "new",
-          "title": "@omarsar0: Microsoft Taste-Bench Evaluates Agent Decision-Point Intuition",
-          "body": "Microsoft researchers introduce Taste-Bench, measuring how often frontier autonomous agents make optimal fork choices during open-ended research and engineering trajectories. With top models making correct decisions only 59.7% of the time—and scaling compute failing on late-arriving feedback—researchers demonstrate that distilling outcome judgment into student models substantially boosts SWE-bench Pro completion rates.",
-          "url": "https://x.com/omarsar0/status/2103478384584278502"
+          "title": "@akshay_pachaar: NVIDIA & Stanford Debut Contrastive Language Models for 9x Faster Tool Routing",
+          "body": "Researchers from NVIDIA and Stanford introduce Contrastive Language Models (CLM), treating agent tool calling and system-one routing as vector retrieval over frozen embeddings rather than autoregressive token generation. By caching action embeddings and training state projections via InfoNCE, CLM matches Jev accuracy while cutting latency up to 9x.",
+          "url": "https://x.com/akshay_pachaar/status/2103483160382386234"
         },
         {
           "tag": "tip",
-          "title": "@askalphaxiv & @0xCodila: JEV-as-a-Judge Cascades Slash LLM Evaluation Costs up to 277x",
-          "body": "Researchers demonstrate that routing LLM evaluation tasks through fast, calibrated decision models like Jev—accepting high-confidence verdicts and escalating ambiguous queries to frontier models—preserves 99% of GPT-6 benchmark evaluation accuracy while driving evaluation expenses down by 63x to 277x across 44 standardized benchmarks.",
-          "url": "https://x.com/askalphaxiv/status/2103368968014848400"
-        },
-        {
-          "tag": "new",
-          "title": "@interfaze_ai: Lev Open-Sources 4B System-One Reasoning Model on Qwen Backbone",
-          "body": "Interfaze releases Lev, an open-source 4B parameter System One reasoning model built on the Qwen architecture. Engineered for high-throughput, low-latency decision routing, Lev delivers state-of-the-art accuracy for its compact weight class.",
-          "url": "https://x.com/interfaze_ai/status/2103523046774771805"
+          "title": "@imryven: Graph Engineering: Strict Context Isolation Between Workers and Verifiers",
+          "body": "Architect Ryven breaks down failure modes in multi-agent graph pipelines, demonstrating that sequential straight-line chains introduce artificial delays. Crucially, verifiers must never share context with worker agents—giving a verifier the worker's thread creates confirmation bias rather than true adversarial verification.",
+          "url": "https://x.com/imryven/status/2103596797063242013"
         },
         {
           "tag": "update",
-          "title": "@k2sbhai & @pengsonal: NVIDIA Unlocks Free API Endpoints for Frontier Chinese Models",
-          "body": "NVIDIA opens unified, free OpenAI-compatible API access without credit card requirements to 4 leading models: DeepSeek V4.1 Flash, GLM 5.3, GLM 5.3 Flash, and Kimi K3, accelerating multi-model testing for developers worldwide.",
-          "url": "https://x.com/k2sbhai/status/2103509769512489201"
+          "title": "@lqiao: Fireworks AI Completes $132M Employee Tender Offer Led by Atreides",
+          "body": "Fireworks AI co-founder Lin Qiao announces a $132M tender offer for employees led by Atreides, allowing early team members to realize value while accelerating development of enterprise-tailored production inference engines.",
+          "url": "https://x.com/lqiao/status/2103558879087116474"
         },
         {
-          "tag": "update",
-          "title": "@opencode: Operation Cheepseek Makes $60 DeepSeek v4.1 Flash Credits Permanent",
-          "body": "OpenCode makes its $60 usage tier for DeepSeek v4.1 Flash permanent for all developers, continuing the aggressive price commoditization of frontier inference and empowering multi-agent loops to run continuous background tasks.",
-          "url": "https://x.com/opencode/status/2103505541871907109"
+          "tag": "insight",
+          "title": "@lidangzzz: Frontier LLM Generalization Disrupts Handcrafted Robotics Architectures",
+          "body": "Commentators highlight an unexpected development in robotics: while specialized teams spent years training dedicated Vision-Language-Action (VLA) models, general reasoning models like GPT-6 Astra paired with raw tool calling and gamepad inputs are succeeding at complex pick-and-place tasks via general reasoning.",
+          "url": "https://x.com/lidangzzz/status/2103804274777936034"
         },
         {
-          "tag": "update",
-          "title": "@cerebras: Cerebras Demonstrates 20x Faster Grok Bot Execution",
-          "body": "Cerebras showcases a 20x speedup running Grok Bot on wafer-scale hardware, highlighting the massive throughput advantages of dedicated wafer-scale architectures for conversational agents.",
-          "url": "https://x.com/cerebras/status/2103506859709858175"
+          "tag": "resource",
+          "title": "@baseten: Baseten Publishes 264-Page Textbook on Production Inference Engineering",
+          "body": "Infrastructure platform Baseten releases a free 264-page textbook and companion audiobook covering production inference engineering, GPU memory optimization, and high-throughput model serving architectures.",
+          "url": "https://x.com/baseten/status/2101880441573884311"
         }
       ]
     },
@@ -112,45 +106,33 @@
       "items": [
         {
           "tag": "hot",
-          "title": "@alexandr_wang: Why I'm Building Muse — The Vision for Persistent Personal Agents",
-          "body": "Scale AI founder Alexandr Wang outlines the architectural philosophy behind Muse, arguing that the future of personal productivity lies not in transactional chat prompts but in autonomous, ambient background agents that maintain continuous memory, coordinate specialized sub-tasks, and proactively execute work across digital surfaces.",
-          "url": "https://x.com/alexandr_wang/status/2103551714536439951"
+          "title": "@mylifcc: Jensen Huang on NYT: Cognitive Abstraction and the 'Loss of Fundamentals'",
+          "body": "In a 1h47m interview with Ezra Klein, NVIDIA CEO Jensen Huang responds to a study of 26,000 students showing homework scores rose 18% with AI while exam scores fell 24%. Huang argues that forgetting calculation mechanics—from long division to transistor-level tracing—is the inevitable tradeoff as humans ascend to higher-level system architecture and abstraction.",
+          "url": "https://x.com/mylifcc/status/2103741862481948811"
         },
         {
           "tag": "new",
-          "title": "@jochenmadler: 'The Shape of Slop' Classifies AI-Generated Blog Posts with 98% Accuracy",
-          "body": "Researchers publish structural classifiers capable of differentiating human vs AI-written technical essays with 98% accuracy (failing on only 19 out of 1,740 unseen articles), isolating predictable syntactical signatures and template cadence that define LLM-generated prose.",
-          "url": "https://x.com/jochenmadler/status/2103530162318901673"
+          "title": "@taozi0929: Local AI Presenter Generator Lanshu Surges Past 20k GitHub Stars",
+          "body": "The open-source lanshu-create-ai-presenter-video project trends on GitHub, automating end-to-end 1080p talking-head videos with accurate lip-sync and auto-captioning entirely on local machines from a single portrait and text script.",
+          "url": "https://x.com/taozi0929/status/2103709398325727546"
         },
         {
-          "tag": "new",
-          "title": "@mylifcc: Stanford's Paper2Agent Embeds Virtual Interactive Authors in Nature Papers",
-          "body": "Stanford University's James Zou lab introduces Paper2Agent in Nature, equipping published scientific papers with autonomous 'virtual corresponding authors.' Readers can query the agent to inspect methodology, run experiments interactively, and reproduce computational pipelines directly.",
-          "url": "https://x.com/mylifcc/status/2103422759766216908"
-        },
-        {
-          "tag": "new",
-          "title": "@GoogleResearch: Multi-Agent Framework Solves Visual Drift in Generative Video Narratives",
-          "body": "Google Research reveals a unified multi-agent architecture designed to generate temporally consistent, long-form video narratives. By dividing narrative progression, character consistency, and scene continuity across specialized subagents, the framework mitigates visual drift and pipeline error propagation.",
-          "url": "https://x.com/GoogleResearch/status/2103208899650437286"
+          "tag": "opinion",
+          "title": "@jayledev: DHH on Software Artisanship and the Practical Future of AI Coding",
+          "body": "Developers examine DHH's candid reflections on handcrafted code vs AI code generation, emphasizing that maintaining architectural taste and understanding system mechanics will distinguish elite software artisans from pure prompt operators.",
+          "url": "https://x.com/jayledev/status/2103758369123426518"
         },
         {
           "tag": "tip",
-          "title": "@OhansEmmanuel: Architecture Governance in the Era of 2,500 Monthly Agent PRs",
-          "body": "As engineers ship thousands of agent-authored pull requests per month using tools like Cursor and Grok Bot, engineering leads emphasize the necessity of maintaining deep mental models and structural documentation to prevent codebases from decaying into unmaintainable black boxes.",
-          "url": "https://x.com/OhansEmmanuel/status/2103526276489515177"
+          "title": "@ashen_one: Headless Desktop Compute + Tailscale Workstation Architecture",
+          "body": "Engineers detail productivity setups leveraging lightweight laptops paired with high-memory headless desktops (like a 256GB Mac Studio) via Tailscale, offloading heavy agent compilation, local model inference, and background tasks seamlessly over Wi-Fi.",
+          "url": "https://x.com/ashen_one/status/2103757218621653040"
         },
         {
-          "tag": "new",
-          "title": "@davepl1968: Task Manager Author Dave Plummer Releases TMOG 1.0 System Diagnostics",
-          "body": "Dave Plummer, original author of Windows Task Manager, open-sources TMOG 1.0 across Windows, Mac, and Linux. Plummer demonstrates how traditional CPU-based process sorting misdiagnoses performance bottlenecks, offering a modern holistic diagnostic model across power, memory, disk, and compute.",
-          "url": "https://x.com/davepl1968/status/2103174918452244696"
-        },
-        {
-          "tag": "tip",
-          "title": "@grgerwcwetwet: WeChatBridge Feeds Desktop Chat Records Directly into Coding Agents",
-          "body": "A new open-source macOS utility leverages native forward-to-app features to feed selected WeChat conversation archives directly into Codex, Claude, and Obsidian without database tampering, binary injection, or credential exposure.",
-          "url": "https://x.com/grgerwcwetwet/status/2103457758590943299"
+          "tag": "resource",
+          "title": "@goan999999: Practical OSINT Tooling and Open-Source Playbooks Draw Viral Interest",
+          "body": "Open-source community compendiums for digital investigation tooling (SpiderFoot, Maigret, Aliens Eye) and pragmatic life strategies gain tens of thousands of stars on GitHub as developers compile structured, actionable checklists.",
+          "url": "https://x.com/goan999999/status/2103751407463784884"
         }
       ]
     }
