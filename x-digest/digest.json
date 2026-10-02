@@ -1,162 +1,144 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, October 1st, 2026 — 9:00 PM ET",
+  "date": "Friday, October 2nd, 2026 — 12:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Claude Code Launches Promptable 'Mods' Architecture:</strong> Anthropic introduces user-promptable mods for Claude Code (/plugin), empowering developers to customize agent behavior, restyle CLI/desktop interfaces, and inject automated guardrails (progress preservation, process watchdogs, and auto-eval hillclimbing) with minimal TypeScript or natural language.",
-    "<strong>OpenAI Dots Fallout Sparks Open-Source 'OpenDots' & Engineering Control Planes:</strong> Facing developer backlash over locked-down consumer environments, halved $200 plan limits, and missing integrations, the community launches OpenDots (self-hostable with Computer Use and AG-UI), while OpenAI engineering leads clarify dual-mode local and cloud orchestration roadmaps.",
-    "<strong>Artificial Analysis Releases Coding Agent Index: Sonnet 5.5 Wins Quality, Sol Dominates Cost:</strong> The inaugural index ranks Claude Sonnet 5.5 in Claude Code at #1 (score 68, $14.19/task), Gemini 4 Argon in Antigravity at 64 ($5.84/task), and GPT-6.1 Sol in Codex at 63 ($1.04/task)—revealing a 14x cost reduction for near-parity coding scores.",
-    "<strong>Decision-Layer Expansion: Cloudflare Open-Sources 'Clef' to Rival Jev:</strong> Cloudflare releases Apache 2.0 decision models Clef and Clef-flash on Hugging Face to compete with TypeSafe's Jev, as Stanford researchers publish a two-gate RAG loop that eliminates 90%+ of expensive frontier LLM calls.",
-    "<strong>Karpathy on Discardable Software & a16z Tracks Historic AI Capex:</strong> Andrej Karpathy urges developers to leverage abundant intelligence for disposable interactive HTML artifacts and custom explainer videos, as a16z data shows AI infrastructure investment has surpassed historical railroad buildouts as a percentage of GDP."
+    "<strong>Claude App Slashes Multi-Modal Conversation Usage by 50% & Code Mods Expand:</strong> Anthropic launches a two-week promotion cutting downstream token usage by 50% for threads started in Claude Docs, Slides, or Designs, as Boris Cherny and community builders detail promptable mods and /teams swarm patterns (Opus 5.5 architect + Sonnet 5.5 workers + Fable 5.1 adversary).",
+    "<strong>OpenAI Dots Faces Post-DevDay Reality Check & Usability Critique:</strong> Developer sentiment cools following DevDay's hyped 'six-month leap,' with builders flagging Dots' fragmented scheduling, missing voice call transcripts, desktop app sandboxing hurdles, and steep tiering ($500 plan offering only 25% more usage for 2.5x the cost).",
+    "<strong>Apple MLR Unveils LoopCD for Looped Transformers:</strong> Apple researchers introduce LoopCD, a training-free inference decoding method that extracts early-state guidance from looped architectures (like rumored GPT-6 Astra and Gemini 4), lifting AIME24 pass@1 from 61.9% to 73.3% while cutting forward FLOPs by up to 48%.",
+    "<strong>Agent Harnesses Standardize on Durable Runtimes & Open Decision Layers:</strong> LangChain's Harrison Chase highlights persistent execution runtimes as mandatory infrastructure (Pi-Durable and LangGraph), while Cloudflare open-sources Clef models under Apache 2.0 to provide sub-20ms policy routing for multi-agent swarms.",
+    "<strong>Karpathy on Compression Evals, Aerospace Anti-Slop & Historic Capex:</strong> Andrej Karpathy demonstrates LLMs reconstructing global landmass maps from raw coordinate text, while Aakash Gupta explores aerospace's ASD-STE100 spec as an anti-slop prompting standard and a16z tracks AI capex surpassing 19th-century railroad investments as a % of GDP."
   ],
   "sections": [
     {
       "emoji": "🧩",
-      "title": "Claude Code 'Mods' Ecosystem & Autonomous Developer Tooling",
+      "title": "Claude Ecosystem: Promptable Mods, 50% Usage Discounts & /teams Swarms",
       "items": [
         {
+          "tag": "announcement",
+          "title": "@claudeai: Claude App Offers 50% Usage Discount for Conversation Workflows Starting in Docs & Slides",
+          "body": "Anthropic introduces a two-week promotion where conversations initiated inside Claude Docs, Slides, or Design consume 50% less of a user's rate limits for all subsequent turns. Anthropic highlights Claude Sonnet 5.5's visual composition and layout generation, producing publication-ready presentations and one-pagers with minimal post-editing.",
+          "url": "https://x.com/claudeai/status/2105721630051692804"
+        },
+        {
           "tag": "ecosystem",
-          "title": "@bcherny: Claude Code Ships 'Mods' — Custom Behavior & UI via Natural Language",
-          "body": "Boris Cherny highlights the rollout of Claude Code Mods, allowing developers to overhaul CLI and desktop agent behavior, UI layouts, and tool pipelines with plain English prompts or brief TypeScript snippets. Bundled directly into plugins installable via '/plugin', mods turn Claude into a personalized, self-modifying developer environment.",
+          "title": "@bcherny & @Layton_Gott: Claude Code Mods Enable Natural Language & TypeScript Agent Customization",
+          "body": "Boris Cherny and developers unpack Claude Code's mod system distributed via '/plugin'. Users can prompt custom UI components, restyle terminal outputs, or inject System-1 guardrails—including persistent specialist harnesses, Hermes-like memory layers, and pre-commit architecture verification gates.",
           "url": "https://x.com/bcherny/status/2105756563302723721"
         },
         {
-          "tag": "tooling",
-          "title": "@Av1dlive: Self-Healing Mods Detect Loops, Compaction Loss & Orphan Processes",
-          "body": "Avid demonstrates prompt-driven Claude Code mods designed to resolve common agentic failure modes: automated progress saving prior to context compaction, watchdog triggers for runaway background tasks, loop detectors for failed shell retries, and automated session auditing that extracts repeatable instructions into memory.",
-          "url": "https://x.com/Av1dlive/status/2105757532790903192"
-        },
-        {
-          "tag": "evals",
-          "title": "@HamelHusain: Anthropic Ships Auto Eval Plugin for Autonomous Capability Hillclimbing",
-          "body": "Hamel Husain reviews Anthropic's new Auto Eval plugin for Claude Code. The framework allows agents to autonomously synthesize assertion suites, run regression loops against codebase changes, and optimize prompts and skills via automated evaluation hillclimbing.",
-          "url": "https://x.com/HamelHusain/status/2105471347736682953"
+          "tag": "architecture",
+          "title": "@mirku21: Autonomous Team Orchestration with /teams Pins Opus Architect, Sonnet Workers & Fable Adversary",
+          "body": "Anthropic workflows converge on multi-agent swarm patterns: Claude Code users run Opus 5.5 as high-effort system architect, dispatch Sonnet 5.5 across isolated git worktrees for parallel feature execution, and assign Fable 5.1 to monitor peer-to-peer buses as an adversary validating payload schemas and edge regressions.",
+          "url": "https://x.com/mirku21/status/2105764769479455043"
         },
         {
           "tag": "creative",
-          "title": "@0xMovez: Single-Prompt Opus 5.5 Workflows Challenge Dedicated Motion Design Stacks",
-          "body": "Creators showcase automated motion graphics production using Claude Opus 5.5, bypassing traditional editing suites like After Effects and DaVinci. Single structured prompts guide the model through concept generation, storyboarding, WebGPU shader transitions, and synchronized audio cueing.",
+          "title": "@0xMovez & @humzaakhalid: Single-Prompt Opus 5.5 Motion Workflows Challenge Dedicated Design Stacks",
+          "body": "Designers demonstrate full motion graphics production in Claude Opus 5.5, bypassing After Effects, DaVinci, and Premiere Pro. Structured prompts direct concept storyboarding, camera transitions, WebGPU shaders, and synchronized sound cues directly from programmatic code.",
           "url": "https://x.com/0xMovez/status/2105768550711558491"
         }
       ]
     },
     {
       "emoji": "🤖",
-      "title": "OpenAI Dots Backlash, OpenDots & Engineering Orchestration",
+      "title": "OpenAI Dots Post-DevDay Reality: Integration Friction, Pricing Fatigue & Sol Benchmarks",
       "items": [
         {
-          "tag": "open-source",
-          "title": "@ataiiam: OpenDots Drops Self-Hostable, Harness-Agnostic Coworkers",
-          "body": "Atai Barkai and the CopilotKit team unveil OpenDots, an open-source alternative to OpenAI Dots. Built with AG-UI and computer-use capabilities across terminal, browser, and local files, OpenDots connects to any agent backend and integrates into Slack, Teams, and desktop environments without proprietary cloud lock-in.",
-          "url": "https://x.com/ataiiam/status/2105710796198322659"
-        },
-        {
-          "tag": "architecture",
-          "title": "@TheRohanVarma: OpenAI Outlines Dual-Mode Engineering Control Planes for Dots",
-          "body": "OpenAI engineer Rohan Varma clarifies Dots' roadmap for technical teams: local desktop connectivity enabling Computer Use Agent (CUA) control over local Codex and browser instances, and a cloud developer environment where Dots dynamically spin up containerized workspaces to orchestrate parallel tasks.",
-          "url": "https://x.com/TheRohanVarma/status/2105476962596917572"
+          "tag": "critique",
+          "title": "@rynorhn & @bentossell: Community Questions Pre-DevDay 'Six-Month Leap' Marketing Amid Dots Friction",
+          "body": "Developers express frustration over the gap between OpenAI's pre-DevDay hype and the delivered reality of Dots. Users cite early execution friction, disconnected browser environments, and slow model responses despite leadership claims of accelerated six-month capability leaps.",
+          "url": "https://x.com/rynorhn/status/2106000290952417488"
         },
         {
           "tag": "ux",
-          "title": "@rileybrown: 24 Hours with Dots Reveals Voice Brilliance but Workspace Friction",
-          "body": "Riley Brown reviews 24 hours of continuous usage with OpenAI's 'Bluey' Dot. While praising voice responsiveness as industry-leading, he flags confusing multi-browser abstractions ('my VM browser vs Codex browser vs Chrome') and calls for replacing the rigid 'Projects' model with fluid subagent thread visualization.",
-          "url": "https://x.com/rileybrown/status/2105670426378535406"
+          "title": "@koltregaskes & @KPGilmore: Detailed Telemetry Flags Disconnected Schedules, Missing Transcripts & Ringing UX",
+          "body": "User testing reveals key architectural gaps in ChatGPT Dots: tasks remain disconnected from calendar schedules, voice mode sessions lack persistent transcripts, desktop apps cannot unify cloud and local sessions, and calling Dots via phone-like ringing creates unnecessary UX latency.",
+          "url": "https://x.com/koltregaskes/status/2105982630932173141"
         },
         {
-          "tag": "critique",
-          "title": "@giadotai & @0xrwu: DevDay Pricing Tiers & Sandboxing Trigger Consumer Pushback",
-          "body": "Frustration surfaces across the developer community following DevDay tier changes. Users cite the halving of effective limits on legacy $200 plans, high premiums on the new $500 tier, missing native payment integrations, and sandboxing friction compared to unified agent competitors.",
-          "url": "https://x.com/giadotai/status/2105610718125158656"
+          "tag": "pricing",
+          "title": "@rohit3a & @DavidOndrej1: Developers Push Back on $500 Pro Plan Tiering vs Claude Code Value",
+          "body": "Subscribers note that OpenAI's new $500 Pro tier provides only 25x usage compared to 20x on the legacy $200 plan—demanding 2.5x the price for 25% more headroom. Meanwhile, engineering benchmarks indicate Claude Code's $200 plan delivers 16-24x greater effective throughput than Codex.",
+          "url": "https://x.com/rohit3a/status/2105935951591772283"
         },
-        {
-          "tag": "speculation",
-          "title": "@cherry_mx_reds: Speculation Mounts Over Dots as Software Layer for Jony Ive Hardware",
-          "body": "Hardware and AI analysts hypothesize that Dots' cloud persistence, unified personal context, and background task execution represent the software operating system being designed for OpenAI's upcoming joint hardware device with Jony Ive.",
-          "url": "https://x.com/cherry_mx_reds/status/2105688157433811241"
-        }
-      ]
-    },
-    {
-      "emoji": "📊",
-      "title": "Frontier Coding Leaderboards, Economics & Telemetry",
-      "items": [
         {
           "tag": "benchmark",
-          "title": "@ArtificialAnlys: Coding Agent Index Confirms Sonnet Quality Lead vs Sol Cost Supremacy",
-          "body": "Artificial Analysis publishes its updated Coding Agent Index evaluating full model-harness systems. Claude Sonnet 5.5 in Claude Code claims #1 with a score of 68 at $14.19 per task; Gemini 4 Argon in Antigravity scores 64 at $5.84; and GPT-6.1 Sol in Codex achieves 63 at an industry-low $1.04 per task—a 14x cost reduction.",
-          "url": "https://x.com/ArtificialAnlys/status/2105814318294114720"
+          "title": "@morganlinton: VulcanBench Frontier v4 Confirms GPT-6.1 Sol Excels at Low Effort for Daily Coding",
+          "body": "Morgan Linton tests GPT 5.6, 6.0, and 6.1 Sol across effort levels on VulcanBench Frontier v4. While older Sol versions struggled significantly at Low effort, GPT-6.1 Sol achieves robust accuracy at low compute settings, making it an exceptionally cost-effective daily driver.",
+          "url": "https://x.com/morganlinton/status/2105809675975639152"
         },
         {
-          "tag": "models",
-          "title": "@cursor_ai: GLM 5.3 & Flash Arrive in Cursor, Claiming Top Open-Weight Benchmark",
-          "body": "Cursor integrates GLM 5.3 and GLM 5.3 Flash into its editor, highlighting that GLM 5.3 Max has captured the top open-weight spot on CursorBench 4.0, offering developers another high-performance alternative for in-IDE autocomplete and agent edits.",
-          "url": "https://x.com/cursor_ai/status/2105787358557999585"
-        },
-        {
-          "tag": "capacity",
-          "title": "@kr0der & @thsottiaux: OpenAI Doubles GPT-6.1 Sol Inference Capacity Amid Heavy Load",
-          "body": "OpenAI Head of Product Tibo reports massive demand for GPT-6.1 Sol across API and subscriptions, confirming teams brought substantial new GPU capacity online to nearly double baseline generation speeds and alleviate community bottlenecks in ChatGPT and Codex.",
-          "url": "https://x.com/kr0der/status/2105553048483627454"
-        },
-        {
-          "tag": "quota",
-          "title": "@Codexresets_ & @ai_funss: Sol Quota Efficiency Tested Against Claude Pro Token Volumes",
-          "body": "Telemetry accounts report that Codex Plus users running GPT-6.1 Sol Medium consumed only 5% of their 5-hour limit during intense multi-hour sessions, contrasting with debates over Claude Pro's generous 3B monthly token allocation at 90 tok/s vs Sol's baseline throughput.",
-          "url": "https://x.com/Codexresets_/status/2105380982220034180"
+          "tag": "operations",
+          "title": "@hugospdx & @thsottiaux: Global Quota Resets Issued Following Initial Sol Load Spikes",
+          "body": "OpenAI Product Lead Tibo announces global quota resets for paid ChatGPT accounts after heavy launch traffic caused initial latency bottlenecks on GPT-6.1 Sol, confirming infrastructure teams stabilized baseline generation speeds.",
+          "url": "https://x.com/hugospdx/status/2105844830194839706"
         }
       ]
     },
     {
       "emoji": "⚡",
-      "title": "The Decision-Layer Revolution: Cloudflare Clef & System-1 Routing",
+      "title": "Frontier Architecture: Looped Transformers, Durable Runtimes & Fast Decision Layers",
       "items": [
         {
+          "tag": "research",
+          "title": "@onloglogn: Apple MLR Introduces LoopCD Guidance for Looped Transformers",
+          "body": "Apple Machine Learning Research publishes LoopCD, a training-free decoding technique that harvests latent guidance signals from earlier iterations of looped transformer models (such as architectures rumored in GPT-6 Astra and Gemini 4). LoopCD lifts AIME24 pass@1 from 61.9% to 73.3% while cutting forward FLOPs by up to 48.2%.",
+          "url": "https://x.com/onloglogn/status/2105919307364663546"
+        },
+        {
+          "tag": "infrastructure",
+          "title": "@hwchase17: LangChain Highlights Durable Execution Runtimes as Mandatory Agent Infrastructure",
+          "body": "Harrison Chase emphasizes that every reliable agent harness requires a durable runtime layer to survive network failures and long-running steps, pointing to Pi 1.0 shipping Pi-Durable alongside LangGraph's persistent state checkpointing.",
+          "url": "https://x.com/hwchase17/status/2105791360796397954"
+        },
+        {
           "tag": "open-source",
-          "title": "@steipete & @victormustar: Cloudflare Releases Open-Weight 'Clef' Models to Hugging Face",
-          "body": "Cloudflare open-sources Clef and Clef-flash under Apache 2.0, providing specialized, lightweight decision models trained for sub-second agent routing. Peter Steinberger remarks on the unprecedented adoption velocity of dedicated decision layers decoupling routine policy choices from massive frontier LLMs.",
+          "title": "@steipete & @victormustar: Cloudflare Open-Sources Clef & Clef-flash Sub-Second Policy Models",
+          "body": "Cloudflare releases Clef and Clef-flash on Hugging Face under Apache 2.0. The models offer lightweight, low-latency decision routing to handle mechanical policy choices, tool selection, and retry gates in under 20ms, preventing wasteful frontier model invocations.",
           "url": "https://x.com/steipete/status/2105778011635400949"
         },
         {
-          "tag": "rag",
-          "title": "@N01ennn: Stanford Research Blueprint Introduces Two-Gate Jev Decision Loops to RAG",
-          "body": "Stanford researchers release an optimized retrieval-augmented generation architecture. Rather than streaming bulky passages into expensive frontier LLMs, a single sub-second Jev pass filters injection and answerability across top-20 chunks, followed by a second verification gate to guarantee factual grounding with zero token waste.",
-          "url": "https://x.com/N01ennn/status/2105606036639932433"
+          "tag": "tooling",
+          "title": "@mattpocockuk: GitHub Actions Emerge as Turnkey Sandboxes for Agent Software Factories",
+          "body": "Matt Pocock details how engineering teams use GitHub Actions as zero-overhead software factories: GitHub Issues function as task queues, label automation triggers agent loops and pull request synthesis, and native CI logs provide turnkey observability.",
+          "url": "https://x.com/mattpocockuk/status/2105947776236376475"
         },
         {
-          "tag": "swarms",
-          "title": "@polydao: TypeSafe Details 9 Micro-Decision Tasks for 300-Agent Swarms",
-          "body": "TypeSafe highlights nine operational patterns where sub-second System One decision models replace costly frontier calls—including intent classification, schema validation, tool selection, and retry arbitration—reducing latency and inference expenses by up to 100x.",
-          "url": "https://x.com/polydao/status/2105596331934785999"
+          "tag": "evals",
+          "title": "@KLieret: SWE-sweep Benchmark Evaluates Proactive Bug Discovery Across 4,000 Real-World Defects",
+          "body": "Kilian Lieret introduces SWE-sweep, testing whether autonomous coding agents can discover and patch repository bugs without user issue descriptions. Evaluated across 100 repositories and 22 programming languages, top frontier models currently resolve under 5% of unprompted bugs.",
+          "url": "https://x.com/KLieret/status/2105670833574465933"
         }
       ]
     },
     {
       "emoji": "🔭",
-      "title": "Frontier Paradigms: Discardable Software & Silicon Infrastructure",
+      "title": "Intelligence Compression, Anti-Slop Standards & Infrastructure Economics",
       "items": [
         {
-          "tag": "paradigm",
-          "title": "@karpathy: Abundant Intelligence Makes Large Software Artifacts Discardable",
-          "body": "Andrej Karpathy details emerging strategies for consuming agentic output as models handle deeper autonomy: constrained technical prose (ASD-STE100), interactive HTML artifacts, and bespoke 3b1b-style video narration. He emphasizes that with code generation commoditized, complex custom software artifacts can now be treated as disposable.",
-          "url": "https://x.com/karpathy/status/2105819303471976479"
+          "tag": "evals",
+          "title": "@karpathy: Probing World Compression in LLMs with Pure Lat/Long Coordinate Evals",
+          "body": "Andrej Karpathy shares an evocative evaluation demonstrating internet compression: asking Claude models 'Land or Water?' across 16,200 latitude/longitude coordinate pairs faithfully reconstructs global continental geography entirely from textual model weights.",
+          "url": "https://x.com/karpathy/status/2105909609487872075"
         },
         {
-          "tag": "infrastructure",
-          "title": "@sameenkarim: GitHub Releases Async Merge API for Agentic Engineering Fleets",
-          "body": "GitHub rolls out a dedicated asynchronous merge API. The endpoint enables autonomous coding agents to resolve and merge pull requests programmatically in CI/CD without blocking executions or suffering merge-queue race conditions.",
-          "url": "https://x.com/sameenkarim/status/2105751711482876197"
+          "tag": "prompting",
+          "title": "@aakashgupta: Aerospace Standard ASD-STE100 Emerges as Ultimate LLM Anti-Slop Constraint",
+          "body": "Analyzing Andrej Karpathy's recommendation to prompt models in ASD-STE100 (Simplified Technical English), Aakash Gupta traces how the 1986 aircraft maintenance specification—restricting text to 900 unambiguous words and 20-word active sentences—effectively strips out LLM hedging, corporate fluff, and synonym-cycling.",
+          "url": "https://x.com/aakashgupta/status/2105884986138411482"
         },
         {
           "tag": "macro",
           "title": "@a16z: AI Infrastructure Capex Eclipses Railroads as % of GDP in State of Markets II",
-          "body": "a16z publishes its State of Markets II report, breaking down AI capital allocation ($50 chips, $20 power, $15 networking, $15 physical cooling/facilities per $100 invested). The firm notes supply-side buildouts have surpassed the historic railroad boom as a share of US GDP, heralding an enterprise 'agent work period'.",
+          "body": "a16z publishes State of Markets II, showing that AI capital investment has officially surpassed 19th-century railroad expansion as a percentage of US GDP. The report breaks down every $100 invested into $50 chips, $20 power, $15 networking, and $15 cooling and real estate.",
           "url": "https://x.com/a16z/status/2105752116757422375"
         },
         {
-          "tag": "markets",
-          "title": "@LeopoldTracker_: Leopold Aschenbrenner Closes Short Hedges with $315M Call Spread",
-          "body": "Portfolio disclosures show Leopold Aschenbrenner closed all semiconductor put hedges, committing ~$315M into call options across memory and compute infrastructure (AMD, Bloom Energy, CoreWeave, SK Hynix, SanDisk, Intel) alongside multi-billion-dollar private stakes in Anthropic.",
-          "url": "https://x.com/LeopoldTracker_/status/2105682337291743550"
+          "tag": "security",
+          "title": "@jpschroeder: The Irony of Sandboxing vs Root Access in the Agent Era",
+          "body": "Security engineers highlight the paradox of agent adoption: after years spent designing strict container sandboxes, enterprise and personal users are now eagerly granting autonomous agent swarms root access across local filesystems and operating systems.",
+          "url": "https://x.com/jpschroeder/status/2106011435855941677"
         }
       ]
     }
