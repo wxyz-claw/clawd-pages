@@ -1,144 +1,162 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, October 1st, 2026",
+  "date": "Thursday, October 1st, 2026 — 9:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI Dots Meets Day-One Reality Check Over Sandboxing & Quotas:</strong> While Tibo announces unlimited primary Dot usage and OpenAI issues 62,496 credit refunds for launch glitches, power users voice deep frustration over locked-down VMs, broken downloads, and opaque hallucinations—though enterprise accounts report far better multi-agent utility.",
-    "<strong>GPT-6.1 Sol Telemetry: Pareto Efficiency Benchmark Wins vs. 10-20 tok/s Speed Controversy:</strong> Artificial Analysis benchmarks confirm GPT-6.1 Sol sets an unprecedented cost-efficiency frontier at $0.72 per task (75% cheaper than Astra), but developers lament sluggish 10-20 tok/s baseline speeds and suspect an artificial throttle to sell the new $500/mo 300 tok/s Pro tier.",
-    "<strong>Claude Opus 5.5 Sparks Pure-Code Creative Boom:</strong> Developers double down on Opus 5.5 and Sonnet 5.5 for high-agency tasks, spawning a viral wave of code-generated music videos (PDoomVideo), 43-style procedural short films, and instant 3D WebGPU games built with single prompts.",
-    "<strong>Agent Infrastructure Accelerates: Paper Desktop, Jev Micro-Decisions & Google Mantis:</strong> Paper releases a live HTML canvas for Cursor/Claude/Codex, Hermes-Jev-Skills decouples cheap tool/file routing from expensive frontier brains, Google drops Mantis for automated security auditing, and Oskar ships the open-source e2e testing framework.",
-    "<strong>Fermion AI Releases 164MB Phonon-2 Speech Model Outperforming Whisper Large:</strong> Under CC-BY-4.0, Phonon-2 delivers higher ASR accuracy than models 10x its size while transcribing an hour of audio in 20 seconds on a laptop, alongside Fulcrum's $5k style-imitation writer Echo and open-source VoiceStudio covering 646 languages."
+    "<strong>Claude Code Launches Promptable 'Mods' Architecture:</strong> Anthropic introduces user-promptable mods for Claude Code (/plugin), empowering developers to customize agent behavior, restyle CLI/desktop interfaces, and inject automated guardrails (progress preservation, process watchdogs, and auto-eval hillclimbing) with minimal TypeScript or natural language.",
+    "<strong>OpenAI Dots Fallout Sparks Open-Source 'OpenDots' & Engineering Control Planes:</strong> Facing developer backlash over locked-down consumer environments, halved $200 plan limits, and missing integrations, the community launches OpenDots (self-hostable with Computer Use and AG-UI), while OpenAI engineering leads clarify dual-mode local and cloud orchestration roadmaps.",
+    "<strong>Artificial Analysis Releases Coding Agent Index: Sonnet 5.5 Wins Quality, Sol Dominates Cost:</strong> The inaugural index ranks Claude Sonnet 5.5 in Claude Code at #1 (score 68, $14.19/task), Gemini 4 Argon in Antigravity at 64 ($5.84/task), and GPT-6.1 Sol in Codex at 63 ($1.04/task)—revealing a 14x cost reduction for near-parity coding scores.",
+    "<strong>Decision-Layer Expansion: Cloudflare Open-Sources 'Clef' to Rival Jev:</strong> Cloudflare releases Apache 2.0 decision models Clef and Clef-flash on Hugging Face to compete with TypeSafe's Jev, as Stanford researchers publish a two-gate RAG loop that eliminates 90%+ of expensive frontier LLM calls.",
+    "<strong>Karpathy on Discardable Software & a16z Tracks Historic AI Capex:</strong> Andrej Karpathy urges developers to leverage abundant intelligence for disposable interactive HTML artifacts and custom explainer videos, as a16z data shows AI infrastructure investment has surpassed historical railroad buildouts as a percentage of GDP."
   ],
   "sections": [
     {
-      "emoji": "🥊",
-      "title": "OpenAI Dots & Ecosystem Friction: Day-One Reality Check, Quotas & Enterprise Divergence",
+      "emoji": "🧩",
+      "title": "Claude Code 'Mods' Ecosystem & Autonomous Developer Tooling",
       "items": [
         {
-          "tag": "product",
-          "title": "@thsottiaux: OpenAI Explores Rate Limiting Overhauls as 62,496 Pro Credits Sent to Users",
-          "body": "OpenAI Head of Product Tibo confirms that primary Dot usage is currently virtually unlimited, forcing the team to devise new reset mechanisms. Concurrently, OpenAI credited Pro users with 62,496 free tokens to make amends for launch hiccups ('Pro 200 shenanigans'), as users test the boundaries of persistent background execution.",
-          "url": "https://x.com/thsottiaux/status/2105672058269212820"
+          "tag": "ecosystem",
+          "title": "@bcherny: Claude Code Ships 'Mods' — Custom Behavior & UI via Natural Language",
+          "body": "Boris Cherny highlights the rollout of Claude Code Mods, allowing developers to overhaul CLI and desktop agent behavior, UI layouts, and tool pipelines with plain English prompts or brief TypeScript snippets. Bundled directly into plugins installable via '/plugin', mods turn Claude into a personalized, self-modifying developer environment.",
+          "url": "https://x.com/bcherny/status/2105756563302723721"
+        },
+        {
+          "tag": "tooling",
+          "title": "@Av1dlive: Self-Healing Mods Detect Loops, Compaction Loss & Orphan Processes",
+          "body": "Avid demonstrates prompt-driven Claude Code mods designed to resolve common agentic failure modes: automated progress saving prior to context compaction, watchdog triggers for runaway background tasks, loop detectors for failed shell retries, and automated session auditing that extracts repeatable instructions into memory.",
+          "url": "https://x.com/Av1dlive/status/2105757532790903192"
+        },
+        {
+          "tag": "evals",
+          "title": "@HamelHusain: Anthropic Ships Auto Eval Plugin for Autonomous Capability Hillclimbing",
+          "body": "Hamel Husain reviews Anthropic's new Auto Eval plugin for Claude Code. The framework allows agents to autonomously synthesize assertion suites, run regression loops against codebase changes, and optimize prompts and skills via automated evaluation hillclimbing.",
+          "url": "https://x.com/HamelHusain/status/2105471347736682953"
+        },
+        {
+          "tag": "creative",
+          "title": "@0xMovez: Single-Prompt Opus 5.5 Workflows Challenge Dedicated Motion Design Stacks",
+          "body": "Creators showcase automated motion graphics production using Claude Opus 5.5, bypassing traditional editing suites like After Effects and DaVinci. Single structured prompts guide the model through concept generation, storyboarding, WebGPU shader transitions, and synchronized audio cueing.",
+          "url": "https://x.com/0xMovez/status/2105768550711558491"
+        }
+      ]
+    },
+    {
+      "emoji": "🤖",
+      "title": "OpenAI Dots Backlash, OpenDots & Engineering Orchestration",
+      "items": [
+        {
+          "tag": "open-source",
+          "title": "@ataiiam: OpenDots Drops Self-Hostable, Harness-Agnostic Coworkers",
+          "body": "Atai Barkai and the CopilotKit team unveil OpenDots, an open-source alternative to OpenAI Dots. Built with AG-UI and computer-use capabilities across terminal, browser, and local files, OpenDots connects to any agent backend and integrates into Slack, Teams, and desktop environments without proprietary cloud lock-in.",
+          "url": "https://x.com/ataiiam/status/2105710796198322659"
+        },
+        {
+          "tag": "architecture",
+          "title": "@TheRohanVarma: OpenAI Outlines Dual-Mode Engineering Control Planes for Dots",
+          "body": "OpenAI engineer Rohan Varma clarifies Dots' roadmap for technical teams: local desktop connectivity enabling Computer Use Agent (CUA) control over local Codex and browser instances, and a cloud developer environment where Dots dynamically spin up containerized workspaces to orchestrate parallel tasks.",
+          "url": "https://x.com/TheRohanVarma/status/2105476962596917572"
+        },
+        {
+          "tag": "ux",
+          "title": "@rileybrown: 24 Hours with Dots Reveals Voice Brilliance but Workspace Friction",
+          "body": "Riley Brown reviews 24 hours of continuous usage with OpenAI's 'Bluey' Dot. While praising voice responsiveness as industry-leading, he flags confusing multi-browser abstractions ('my VM browser vs Codex browser vs Chrome') and calls for replacing the rigid 'Projects' model with fluid subagent thread visualization.",
+          "url": "https://x.com/rileybrown/status/2105670426378535406"
         },
         {
           "tag": "critique",
-          "title": "@habibislop: Builder Teardown Flags Severe VM Sandboxing, 502 Errors & Friction in Dots",
-          "body": "In a detailed technical critique, builder Habibi highlights major early flaws in OpenAI Dots, likening the user experience to 'a plumber in a house where you're not allowed to touch the pipes.' Key pain points include broken file downloads returning 502s, runaway Codex quota burn from basic chat searches, frequent hallucinations with zero execution visibility, and locked-down VMs that disallow Tailscale or SSH access into local environments.",
-          "url": "https://x.com/habibislop/status/2105453582908887408"
+          "title": "@giadotai & @0xrwu: DevDay Pricing Tiers & Sandboxing Trigger Consumer Pushback",
+          "body": "Frustration surfaces across the developer community following DevDay tier changes. Users cite the halving of effective limits on legacy $200 plans, high premiums on the new $500 tier, missing native payment integrations, and sandboxing friction compared to unified agent competitors.",
+          "url": "https://x.com/giadotai/status/2105610718125158656"
         },
         {
-          "tag": "enterprise",
-          "title": "@_simonsmith & @anitakirkovska: Consumer Pushback Contrasts with ChatGPT Enterprise Adoption",
-          "body": "While independent developers debate whether consumer Dots will flop due to walled-garden constraints, enterprise adopters report strong results. Simon Smith notes that within ChatGPT Enterprise, Dots feels purpose-built for enterprise workflows, securely coordinating research and cross-team knowledge retrieval where personal accounts felt constrained.",
-          "url": "https://x.com/_simonsmith/status/2105663822711459929"
+          "tag": "speculation",
+          "title": "@cherry_mx_reds: Speculation Mounts Over Dots as Software Layer for Jony Ive Hardware",
+          "body": "Hardware and AI analysts hypothesize that Dots' cloud persistence, unified personal context, and background task execution represent the software operating system being designed for OpenAI's upcoming joint hardware device with Jony Ive.",
+          "url": "https://x.com/cherry_mx_reds/status/2105688157433811241"
+        }
+      ]
+    },
+    {
+      "emoji": "📊",
+      "title": "Frontier Coding Leaderboards, Economics & Telemetry",
+      "items": [
+        {
+          "tag": "benchmark",
+          "title": "@ArtificialAnlys: Coding Agent Index Confirms Sonnet Quality Lead vs Sol Cost Supremacy",
+          "body": "Artificial Analysis publishes its updated Coding Agent Index evaluating full model-harness systems. Claude Sonnet 5.5 in Claude Code claims #1 with a score of 68 at $14.19 per task; Gemini 4 Argon in Antigravity scores 64 at $5.84; and GPT-6.1 Sol in Codex achieves 63 at an industry-low $1.04 per task—a 14x cost reduction.",
+          "url": "https://x.com/ArtificialAnlys/status/2105814318294114720"
         },
         {
-          "tag": "blueprint",
-          "title": "@monokern & @swhan0329: 24/7 Agent Blueprints Combine Astra Planning with Sol Execution",
-          "body": "Power users publish complete blueprints for running autonomous 24/7 teams on Dots. Seowoo Han demonstrates a hybrid workflow pairing GPT-6 Astra High for high-level creative direction with GPT-6.1 Sol Max for long-horizon execution. Over a 7-hour production run, Astra consumed only ~5% and Sol ~15% of quota while autonomously drafting, iterating, and formatting assets.",
-          "url": "https://x.com/monokern/status/2105620115555336227"
+          "tag": "models",
+          "title": "@cursor_ai: GLM 5.3 & Flash Arrive in Cursor, Claiming Top Open-Weight Benchmark",
+          "body": "Cursor integrates GLM 5.3 and GLM 5.3 Flash into its editor, highlighting that GLM 5.3 Max has captured the top open-weight spot on CursorBench 4.0, offering developers another high-performance alternative for in-IDE autocomplete and agent edits.",
+          "url": "https://x.com/cursor_ai/status/2105787358557999585"
+        },
+        {
+          "tag": "capacity",
+          "title": "@kr0der & @thsottiaux: OpenAI Doubles GPT-6.1 Sol Inference Capacity Amid Heavy Load",
+          "body": "OpenAI Head of Product Tibo reports massive demand for GPT-6.1 Sol across API and subscriptions, confirming teams brought substantial new GPU capacity online to nearly double baseline generation speeds and alleviate community bottlenecks in ChatGPT and Codex.",
+          "url": "https://x.com/kr0der/status/2105553048483627454"
+        },
+        {
+          "tag": "quota",
+          "title": "@Codexresets_ & @ai_funss: Sol Quota Efficiency Tested Against Claude Pro Token Volumes",
+          "body": "Telemetry accounts report that Codex Plus users running GPT-6.1 Sol Medium consumed only 5% of their 5-hour limit during intense multi-hour sessions, contrasting with debates over Claude Pro's generous 3B monthly token allocation at 90 tok/s vs Sol's baseline throughput.",
+          "url": "https://x.com/Codexresets_/status/2105380982220034180"
         }
       ]
     },
     {
       "emoji": "⚡",
-      "title": "Frontier Model Telemetry: GPT-6.1 Sol Pareto Frontier, Speed Controversies & Claude Opus 5.5",
+      "title": "The Decision-Layer Revolution: Cloudflare Clef & System-1 Routing",
       "items": [
         {
-          "tag": "benchmark",
-          "title": "@ArtificialAnlys: GPT-6.1 Sol Redefines the Cost-Efficiency Pareto Frontier",
-          "body": "Artificial Analysis confirms that GPT-6.1 Sol establishes an unmatched cost-efficiency standard across all reasoning levels. At maximum effort, Sol 6.1 costs $0.72 per Intelligence Index task compared to $3.26 for GPT-6 Astra and $1.04 for GPT-6 Sol. Furthermore, an image encoding patch for GPT-6 Luna lifted benchmark scores across GDP.pdf (+2.4 pts) and MMMU-Pro (+4.1 pts).",
-          "url": "https://x.com/ArtificialAnlys/status/2105491868608004578"
+          "tag": "open-source",
+          "title": "@steipete & @victormustar: Cloudflare Releases Open-Weight 'Clef' Models to Hugging Face",
+          "body": "Cloudflare open-sources Clef and Clef-flash under Apache 2.0, providing specialized, lightweight decision models trained for sub-second agent routing. Peter Steinberger remarks on the unprecedented adoption velocity of dedicated decision layers decoupling routine policy choices from massive frontier LLMs.",
+          "url": "https://x.com/steipete/status/2105778011635400949"
         },
         {
-          "tag": "controversy",
-          "title": "@pradeepXkapoor & @rezoundous: 10-20 tok/s Baseline Generation Sparks Upsell Speculation",
-          "body": "Developers express frustration over sluggish generation speeds on GPT-6.1 Sol, with Plus users clocking 10–20 tok/s and OpenRouter measuring 37 tok/s (down from 57 tok/s on GPT-6 Sol). With Tyler reporting a 13-minute wait for a simple landing page text tweak and PR merge, commentators question whether baseline performance was suppressed to drive adoption of OpenAI's new $500 Pro plan with 300 tok/s 'Ultrafast' inference.",
-          "url": "https://x.com/pradeepXkapoor/status/2105611645259288951"
+          "tag": "rag",
+          "title": "@N01ennn: Stanford Research Blueprint Introduces Two-Gate Jev Decision Loops to RAG",
+          "body": "Stanford researchers release an optimized retrieval-augmented generation architecture. Rather than streaming bulky passages into expensive frontier LLMs, a single sub-second Jev pass filters injection and answerability across top-20 chunks, followed by a second verification gate to guarantee factual grounding with zero token waste.",
+          "url": "https://x.com/N01ennn/status/2105606036639932433"
         },
         {
-          "tag": "creative",
-          "title": "@NFTCPS & @_ak_111: Claude Opus 5.5 Drives Explosion in Code-Generated Video & 3D Games",
-          "body": "While OpenAI leads in raw API pricing, developers continue favoring Anthropic's Claude Opus 5.5 and Sonnet 5.5 for sophisticated engineering and procedural media. The GitHub ecosystem is seeing viral adoption of code-generated animation, including PDoomVideo (a music video rendered entirely via Opus code), 43-style procedural film generator lemo-opuscar, and single-prompt WebGPU 3D games.",
-          "url": "https://x.com/NFTCPS/status/2105493719931826452"
-        },
-        {
-          "tag": "frontier",
-          "title": "@Spectromachina: Spectro Launches Steve v1.0 Agent Model with 98.4% DeepSWE Score",
-          "body": "AI lab Spectro unveils Steve v1.0 in limited preview, claiming record-setting agentic benchmarks including 99.8% on the Vals Index, 98.7% on AutomationBench, and 98.4% on DeepSWE. The model is specifically optimized for long-horizon autonomous tool use and multi-step codebase modification.",
-          "url": "https://x.com/Spectromachina/status/2105401798626587120"
+          "tag": "swarms",
+          "title": "@polydao: TypeSafe Details 9 Micro-Decision Tasks for 300-Agent Swarms",
+          "body": "TypeSafe highlights nine operational patterns where sub-second System One decision models replace costly frontier calls—including intent classification, schema validation, tool selection, and retry arbitration—reducing latency and inference expenses by up to 100x.",
+          "url": "https://x.com/polydao/status/2105596331934785999"
         }
       ]
     },
     {
-      "emoji": "🛠️",
-      "title": "Agent Infrastructure, Harnesses & Developer Tooling",
+      "emoji": "🔭",
+      "title": "Frontier Paradigms: Discardable Software & Silicon Infrastructure",
       "items": [
         {
-          "tag": "devtools",
-          "title": "@stephenhaney: Paper Desktop Introduces Live HTML/Design Canvas for Coding Agents",
-          "body": "Paper Desktop ships as a shared canvas for Cursor, Claude Code, and Codex. Any coding agent can now inspect, write, and render live HTML to Paper, pulling real data and pushing changes back to the codebase to eliminate the disconnect between backend logic and UI design.",
-          "url": "https://x.com/stephenhaney/status/2026348761501581620"
+          "tag": "paradigm",
+          "title": "@karpathy: Abundant Intelligence Makes Large Software Artifacts Discardable",
+          "body": "Andrej Karpathy details emerging strategies for consuming agentic output as models handle deeper autonomy: constrained technical prose (ASD-STE100), interactive HTML artifacts, and bespoke 3b1b-style video narration. He emphasizes that with code generation commoditized, complex custom software artifacts can now be treated as disposable.",
+          "url": "https://x.com/karpathy/status/2105819303471976479"
         },
         {
-          "tag": "routing",
-          "title": "@ArchiveExplorer & @Bober_smart: Hermes-Jev-Skills Offloads Micro-Decisions from Frontier Models",
-          "body": "Developers open-source Hermes-Jev-Skills, routing low-level agent micro-decisions (file selection, tool choice, retry handling, prompt injection defense) to Jev's sub-second API. By offloading routine choices that burn expensive tokens, developers keep high-tier models like Astra and Opus focused strictly on architectural planning.",
-          "url": "https://x.com/ArchiveExplorer/status/2105374120871698625"
+          "tag": "infrastructure",
+          "title": "@sameenkarim: GitHub Releases Async Merge API for Agentic Engineering Fleets",
+          "body": "GitHub rolls out a dedicated asynchronous merge API. The endpoint enables autonomous coding agents to resolve and merge pull requests programmatically in CI/CD without blocking executions or suffering merge-queue race conditions.",
+          "url": "https://x.com/sameenkarim/status/2105751711482876197"
         },
         {
-          "tag": "testing",
-          "title": "@o_kwasniewski: Open-Source 'e2e' Delivers Agentic Testing for Web and Mobile",
-          "body": "Oskar Kwaśniewski introduces e2e (npx e2e init), a fully open-source testing framework that unifies deterministic assertions with agentic exploration across web and mobile platforms. Teams can bring their own models and run autonomous test suites locally or in CI.",
-          "url": "https://x.com/o_kwasniewski/status/2105675143464763540"
+          "tag": "macro",
+          "title": "@a16z: AI Infrastructure Capex Eclipses Railroads as % of GDP in State of Markets II",
+          "body": "a16z publishes its State of Markets II report, breaking down AI capital allocation ($50 chips, $20 power, $15 networking, $15 physical cooling/facilities per $100 invested). The firm notes supply-side buildouts have surpassed the historic railroad boom as a share of US GDP, heralding an enterprise 'agent work period'.",
+          "url": "https://x.com/a16z/status/2105752116757422375"
         },
         {
-          "tag": "security",
-          "title": "@dani_avila7: Google Mantis Skills Pack Automates Security Review & Sandbox PoC Verification",
-          "body": "Google Mantis launches as an automated security review skill pack (npx skills add google/mantis). Agents can perform automated threat modeling, scan repositories for vulnerabilities, generate and execute PoCs within isolated sandboxes, and verify fixes before submitting pull requests.",
-          "url": "https://x.com/dani_avila7/status/2105486215373803700"
-        },
-        {
-          "tag": "runtime",
-          "title": "@mattpocockuk: Effect v4 Provides Deterministic Foundation for TypeScript AI Agents",
-          "body": "TypeScript educator Matt Pocock praises Effect v4 as an optimal runtime for coding agents. With strongly typed error channels, built-in dependency injection, and zero external dependencies, Effect constrains agent execution within predictable boundaries and eliminates common hallucination bugs.",
-          "url": "https://x.com/mattpocockuk/status/2105547727275003919"
-        },
-        {
-          "tag": "standards",
-          "title": "@RoundtableSpace: AGENTS.md Solidifies as the Industry Standard for Repository Rules",
-          "body": "Engineering teams are adopting AGENTS.md across both OpenAI Codex and Claude Code. The standardized protocol instructs agents to plan before editing, make minimal changes, split tasks across subagents, and record lessons from mistakes to prevent recurring regressions.",
-          "url": "https://x.com/RoundtableSpace/status/2105602371657036107"
-        }
-      ]
-    },
-    {
-      "emoji": "🎙️",
-      "title": "Open Weights, Audio & Multimodal Frontiers",
-      "items": [
-        {
-          "tag": "speech",
-          "title": "@yoitsmanan: Fermion AI Releases 164MB Phonon-2 Outperforming Whisper Large",
-          "body": "Fermion AI introduces Phonon-2 under an open CC-BY-4.0 license. At just 164MB, the model beats OpenAI's Whisper Large (10x larger) on speech recognition accuracy while transcribing a 1-hour audio file in 20 seconds on a MacBook Air.",
-          "url": "https://x.com/yoitsmanan/status/2104990913886031993"
-        },
-        {
-          "tag": "writing",
-          "title": "@fulcrum_inc: Fulcrum Debuts Echo Writing Model Trained for Under $5K",
-          "body": "Fulcrum announces Echo, a specialized style-imitation writing model that outperforms general frontier models on authorial nuance, technical explanations, and creative writing despite a sub-$5,000 training budget.",
-          "url": "https://x.com/fulcrum_inc/status/2105416317834817871"
-        },
-        {
-          "tag": "video",
-          "title": "@leaf_sanren & @Pluvio9yte: Photorealistic Meta Muse Demos & Codex Motion Design Frameworks",
-          "body": "Creators highlight cinematic, prompt-driven fashion videos generated directly from Meta Muse and Wan 3.0, while animators release a 5-pillar Codex animation framework (time phasing, 12 Disney principles, momentum continuity, unified lighting, and BPM audio sync) for automated motion graphics.",
-          "url": "https://x.com/leaf_sanren/status/2105645639703183753"
-        },
-        {
-          "tag": "audio",
-          "title": "@denziideng: VoiceStudio Open-Sources Voice Cloning Across 646 Languages",
-          "body": "Denzii highlights VoiceStudio, an open-source, cross-platform voice design and speech cloning suite supporting 646 languages for audiobooks, dubbing, and transcription without recurring subscription costs.",
-          "url": "https://x.com/denziideng/status/2105483080501015030"
+          "tag": "markets",
+          "title": "@LeopoldTracker_: Leopold Aschenbrenner Closes Short Hedges with $315M Call Spread",
+          "body": "Portfolio disclosures show Leopold Aschenbrenner closed all semiconductor put hedges, committing ~$315M into call options across memory and compute infrastructure (AMD, Bloom Energy, CoreWeave, SK Hynix, SanDisk, Intel) alongside multi-billion-dollar private stakes in Anthropic.",
+          "url": "https://x.com/LeopoldTracker_/status/2105682337291743550"
         }
       ]
     }
