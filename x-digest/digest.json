@@ -1,162 +1,162 @@
 {
   "title": "Clawd X Digest",
-  "date": "Saturday, October 3rd, 2026 — 9:00 PM ET",
+  "date": "Sunday, October 4th, 2026 — 12:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Wavestone Deconstructs 11 Frontier Agents into a 7-Part Harness Blueprint:</strong> Wavestone AI Lab analyzes Claude Code, Codex, OpenHands, and eight other agents, establishing that modern coding agents share a universal 7-layer architecture (Loop, LLM, Tools, Memory, Safety, Orchestration, Extensions) where SKILL.md and MCP dominate while heavyweight agent frameworks and vector embeddings have been entirely discarded.",
-    "<strong>Cognition's SWE-2 Under the Microscope in 3-Week Production Autopsy:</strong> Developers publish detailed telemetry on Cognition's SWE-2 model inside Devin, praising its speed, permission discipline, and stamina, but warning of hallucinated source recall, thinking loops burning 128k tokens on trivial decisions, and silent background agent deaths when unsupervised by models like Opus 5.5.",
-    "<strong>Pstack 0.15.9 Ships /correct Architecture as the 'Skills as Apps' Mental Model Formalizes:</strong> Lauren Tan releases pstack 0.15.9 introducing automated mistake-pattern elimination via architecture and types, while Kun Chen formalizes the emerging industry paradigm: LLMs are CPUs, Context is Memory, Agent Harnesses are Operating Systems, and Skills are the new Applications.",
-    "<strong>Codex 'Dot' UX Sparks Heated Debate as Persistent Agents Confront Multi-Thread Reality:</strong> Simon Willison, community developers, and OpenAI's Tibo Sottiaux debate Codex's new persistent 'Dot' agent, contrasting single-thread stateful memory against discrete multi-thread control, while users critique simulated phone-call ringing latencies compared to Grok Bot's instant sub-second response.",
-    "<strong>Quota Wars Escalate: 3B Claude Allowances, Fable Burnouts & the $50 Tier Petition:</strong> Anthropic's 3B-token Claude Pro allowance sparks aggressive comparison against ChatGPT Plus's 870M pool, Theo exhausts four Claude accounts while remaining untouched by Fable caps, and developers rally OpenAI for an intermediate $50 tier ahead of rumored Astra 6.5 drops next week."
+    "<strong>The Post-Review Era Dawns: Autonomous Merges, Architectural Rules & The 'Michelin Chef' Model:</strong> SpaceXAI engineer Lauren Tan and tech lead Bojie Li detail the collapse of traditional line-by-line PR reviews, demonstrating how teams merge 1,000+ autonomous PRs per month by replacing human micromanagement with deterministic runtime verification, strict architectural constraints, and indirect goal alignment prompts.",
+    "<strong>Agent Tooling Surges: Matt Pocock Releases Skills v1.3 with /retro as Emil Kowalski Torture-Tests UIs:</strong> Matt Pocock ships /retro to analyze past agent transcripts for continuous workflow self-improvement, while Emil Kowalski introduces /mobile-native and /break-ui to harden web applications against edge-case agent regressions.",
+    "<strong>Harness Learning Eclipse: CMU & Google Prove Harness Adaptation Outperforms Weight Updates:</strong> Landmark papers from CMU and Google establish that agentic performance gains are driven by harness optimization: CMU trains a 4B proposer to rewrite agent harness code (beating 35B models), while Google's VeriHarness disproves multi-rollout consensus assumptions to gain +6.4 points on frontier benchmarks.",
+    "<strong>Subscription Economics Unpacked: Claude Pro Yields $3,400/Week API Value While Codex Burnout Stirs Debate:</strong> Developers benchmark the true cost of $200/month tiers, discovering Claude delivers double the API token value of Codex with 10x practical longevity over GPT-6 Astra, while LangChain slashes enterprise coding spend through LangSmith telemetry and OpenSWE gateway caps.",
+    "<strong>Codex Computer Use Decoupled via Local MCP as Style Manifolds Counter AI Tone:</strong> Hackers extract Codex's native macOS automation engine as a universal local MCP server for Claude Code and custom agents, while Fulcrum releases Echo to prove that bland 'AI tone' stems from RLHF over-alignment rather than inherent model limitations."
   ],
   "sections": [
     {
-      "emoji": "🏗️",
-      "title": "Architecture & Harness Engineering: The 7-Part Blueprint & Pstack 0.15.9",
+      "emoji": "🛠️",
+      "title": "The Post-Review Paradigm & Agent Engineering: Autonomous PRs & The Chef's Kitchen",
       "items": [
         {
-          "tag": "agent-architecture",
-          "title": "@undefinedKi: Wavestone AI Lab Deconstructs 11 Frontier Coding Agents into 7-Part Harness Blueprint",
-          "body": "A landmark Wavestone AI Lab paper disassembles Claude Code, Codex, OpenHands, and 8 other agents to reveal universal architectural convergence: an agent is simply a model plus a 7-part harness (Loop, LLM layer, Tools, Memory, Safety, Orchestration, Extensions). Crucially, the researchers note that none of the top-performing agents use heavyweight agent frameworks or embeddings, relying instead on typed on-demand tools, SKILL.md specs (present in 9 of 11), and MCP protocols (present in 8 of 11).",
-          "url": "https://x.com/undefinedKi/status/2106479644354474463"
+          "tag": "autonomous-development",
+          "title": "@poteto & @0xGenAi: Lauren Tan Outlines the Zero-Review System Shipping 1,000 PRs a Month",
+          "body": "SpaceXAI engineer Lauren Tan explains how she transitioned from being an exhausted 'meat proxy' between agents and browsers to shipping over 1,000 autonomous PRs a month. Rather than reviewing individual diffs, she treats development like running a Michelin-star kitchen: engineers configure strict architectural rules, automated end-to-end user simulation verifiers, and typed boundaries that make it structurally impossible for agents to merge regressions.",
+          "url": "https://x.com/0xGenAi/status/2106425437144355186"
         },
         {
-          "tag": "pstack-release",
-          "title": "@poteto: Lauren Tan Releases Pstack 0.15.9 with Automated /correct Pattern Elimination",
-          "body": "SpaceXAI engineer Lauren Tan announces pstack 0.15.9, introducing a /correct skill designed to break the cycle of agent micromanagement. When agents repeatedly make identical mistakes, the skill automatically identifies recurring failure patterns and eliminates them structurally through strict types, architectural constraints, and CI lint rules, rather than relying on brittle human prompt corrections.",
-          "url": "https://x.com/poteto/status/2106542593656111276"
+          "tag": "engineering-leadership",
+          "title": "@bojie_li: Bojie Li on 100x Productivity and Why Tech Lead Vision Dictates Agent Output",
+          "body": "Former Huawei tech lead Bojie Li reflects on achieving the productivity of a 30-100 person research lab using autonomous agents without reviewing PRs. He emphasizes that as models like Opus 5.5 and Fable mature, the primary engineering bottleneck shifts from code implementation to top-level architecture, problem selection, and designing self-healing verification loops.",
+          "url": "https://x.com/bojie_li/status/2106739919863586875"
         },
         {
-          "tag": "mental-model",
-          "title": "@kunchenguid: Kun Chen Formalizes the New Software Stack — Skills as Apps, Harnesses as OS",
-          "body": "Kun Chen outlines a widely circulated mental model for modern AI systems: LLMs serve as the computer (weights as CPU, context window as RAM), agent harnesses function as the operating system (Claude as macOS, Codex as Windows, Pi as Linux), MCP servers act as standard APIs, and portable skills represent the new application layer that users install and execute across environments.",
-          "url": "https://x.com/kunchenguid/status/2106223024253071404"
+          "tag": "prompt-engineering",
+          "title": "@poteto & @lukasen_xyz: The 'Indirect Prompt' Eliminating Misalignment Before Code Is Written",
+          "body": "A prompt shared by Lauren Tan garners over 11,000 bookmarks: 'Restate in your own words what you think my goals are and what the problem I'm trying to solve is.' By forcing agents to summarize messy context and diagnose root causes before touching code, developers eliminate the costly cycle of debugging misaligned agent implementations after the fact.",
+          "url": "https://x.com/lukasen_xyz/status/2106609609268175321"
         },
         {
-          "tag": "pipeline-design",
-          "title": "@CodexResets1: The Case for Native Agent-to-Agent Handoffs in Autonomous Pipelines",
-          "body": "Codex power users highlight the critical missing primitive in modern IDE agents: seamless agent-to-agent handoffs. Rather than requiring developers to manually pass context and PR notes across turns, next-generation harnesses must support autonomous staging pipelines where builder, reviewer, fixer, and test agents hand off execution state directly.",
-          "url": "https://x.com/CodexResets1/status/2106453466034078101"
+          "tag": "runtime-playbook",
+          "title": "@vikingmute: Addy Osmani Publishes Production Field Guide for Opus 5.5 in Claude Code",
+          "body": "Ex-Googler Addy Osmani, now at Anthropic, authors a definitive practical guide on getting the most out of Opus 5.5 in Claude Code. Key techniques include strict task framing, managing long-running agent horizons, structured inspection routines, and taking advantage of Claude's graceful safety fallback mechanisms.",
+          "url": "https://x.com/vikingmute/status/2106642299883049014"
+        }
+      ]
+    },
+    {
+      "emoji": "🧰",
+      "title": "Skills & Agent Tooling: Self-Improving Transcripts, UI Fuzzing & Decoupled Computer Use",
+      "items": [
+        {
+          "tag": "skill-ecosystem",
+          "title": "@mattpocockuk: Matt Pocock Releases Skills v1.3 with /retro for Automated Workflow Post-Mortems",
+          "body": "Matt Pocock ships version 1.3 of his widely adopted skills repository, headlining the release with /retro. The new skill scans past agent transcripts to identify bottlenecks, friction points, and recurring mistakes, automatically proposing improvements to developer configs and refactoring CONTEXT.md into GLOSSARY.md for cleaner agent comprehension.",
+          "url": "https://x.com/mattpocockuk/status/2106729173511188654"
+        },
+        {
+          "tag": "ui-testing",
+          "title": "@emilkowalski: Emil Kowalski Ships /mobile-native and /break-ui for Stress-Testing Agent Frontends",
+          "body": "Emil Kowalski releases two high-impact skills for frontend builders: /mobile-native, which eliminates web quirks like hover states on touch interfaces to deliver native app feel, and /break-ui, an automated agent fuzzer that deliberately injects extreme strings, aberrant layouts, and long lists to uncover and repair UI vulnerabilities.",
+          "url": "https://x.com/emilkowalski/status/2106752670405099523"
+        },
+        {
+          "tag": "system-automation",
+          "title": "@argofowl & @LinearUncle: Codex Computer Use Decoupled via Local MCP for Claude Code",
+          "body": "Engineers discover that Codex's macOS Computer Use engine runs locally as an MCP server inside the ChatGPT Mac app. By registering the cua_repl plugin into Claude Code or external harnesses, developers can execute background OS clicks and drags without cursor hijacking, achieving superior speed and accuracy over traditional accessibility drivers.",
+          "url": "https://x.com/LinearUncle/status/2106589618007371921"
+        },
+        {
+          "tag": "media-pipeline",
+          "title": "@bkdgiffug: ffmpeg-skill Brings 42 Verified Audio/Video Tools Directly to Coding Agents",
+          "body": "A new open-source CLI skill (npx ffmpeg-skill) equips Claude Code, Codex, and Cursor with 42 local multimedia manipulation tools. Designed with a strict probe-process-verify loop, the agent inspects source streams first, executes transcoding, silence removal, or HDR conversion locally without cloud APIs, and validates output integrity before completing tasks.",
+          "url": "https://x.com/bkdgiffug/status/2106505321774526581"
         }
       ]
     },
     {
       "emoji": "🔬",
-      "title": "Frontier Execution & Model Autopsies: SWE-2 Telemetry & Gemini 4 Argon",
+      "title": "Harness Engineering & Verifiers: CMU, Google & The Evals Blueprint",
       "items": [
         {
-          "tag": "model-benchmark",
-          "title": "@Da7_Tech: Cognition SWE-2 3-Week Production Autopsy — Stamina, Hallucinations & Thinking Loops",
-          "body": "After three weeks of intensive production usage inside Devin, developer Da7_Tech scores Cognition's SWE-2 a 7.3/10 on the Da7em Bench. While praising its strict permission adherence, speed, and solo endurance, the review documents serious edge failures: silent agent starvation during background orchestration, 128K token thinking loops that obsess over trivial wording, and rapid output quality decay beyond 45 minutes unless supervised by a reasoning model like Opus 5.5.",
-          "url": "https://x.com/Da7_Tech/status/2106515649551868126"
+          "tag": "research-breakthrough",
+          "title": "@omarsar0: CMU Proves Harness Learning via RL Outperforms Weight Fine-Tuning",
+          "body": "A landmark paper from Carnegie Mellon University shows that training a 4B proposer model using RL to rewrite agent harness code based on execution failure reports outperforms 35B teacher models across Reasoning Gym. The research validates a major industry shift: improving agent capabilities by optimizing harness logic rather than modifying underlying model weights.",
+          "url": "https://x.com/omarsar0/status/2106529236068819394"
         },
         {
-          "tag": "eval-arena",
-          "title": "@trikcode: Gemini 4 Argon Surpasses Claude Opus 4.8 on Agent Arena",
-          "body": "Fresh benchmark evaluations on Agent Arena reveal Google's Gemini 4 Argon overtaking Claude Opus 4.8 in multi-turn tool use, agentic reasoning, and complex API coordination, reinforcing Google's accelerating momentum in frontier model performance.",
-          "url": "https://x.com/trikcode/status/2106354933322912091"
+          "tag": "verifier-systems",
+          "title": "@omarsar0: Google Unveils VeriHarness — Disproving Rollout Agreement to Gain +6.4 Points",
+          "body": "Google researchers release VeriHarness along with 26,000 agent trajectories, demonstrating that agreement across multiple rollouts frequently conceals shared errors. VeriHarness investigates rollout discrepancies with workspace evidence and actively challenges unanimous assumptions, boosting performance by +6.2 points on Gemini 3.5 Flash and +6.4 points on Claude Opus 4.8.",
+          "url": "https://x.com/omarsar0/status/2106700905051746803"
         },
         {
-          "tag": "orchestration",
-          "title": "@Ga_Vasques: Daily Orchestrator Tier List Ranks T3 Code Nightly at SS-Tier",
-          "body": "Guilherme Vasques publishes an updated daily-driver AI orchestrator ranking, placing T3 Code Nightly at SS-tier due to seamless background responsiveness, while downgrading Traycer and Maestri for terminal-bound friction and requiring excessive human nudging when subagents stall.",
-          "url": "https://x.com/Ga_Vasques/status/2106391784913772883"
+          "tag": "evals-engineering",
+          "title": "@suraj_sharma14: The 15 Essential Systems for AI Evals Engineers — The Trajectory as the Unit of Accountability",
+          "body": "Suraj Sharma publishes an exhaustive 15-project masterclass for AI Evals Engineers covering Trajectory Grading Engines, Shadow Routing, Calibrated Judges, and CI/CD gates. Sharma argues that evaluating final outputs hides the exact step where agents fail, establishing the step-level trajectory DAG as the definitive standard for production reliability.",
+          "url": "https://x.com/suraj_sharma14/status/2106715961403273433"
         },
         {
-          "tag": "prompt-hygiene",
-          "title": "@is_llll: Context Pruning Confirmed — Opus 5.5 Thrives After 1,000-Line CLAUDE.md Diet",
-          "body": "Further telemetry confirms that disabling Claude Code's auto-memory and pruning bloated CLAUDE.md files from 1,070 lines to 344 lines yields immediate IQ gains in Opus 5.5, demonstrating that latest frontier models are hypersensitive to context contamination compared to prior architectures.",
-          "url": "https://x.com/is_llll/status/2106253961170919529"
-        }
-      ]
-    },
-    {
-      "emoji": "⚡",
-      "title": "OpenAI & Codex Ecosystem: Dot's UX Dilemma & the Impending Astra Drop",
-      "items": [
-        {
-          "tag": "ux-architecture",
-          "title": "@simonw & @thsottiaux: Simon Willison and OpenAI Lead Debate Dot vs ChatGPT Threading",
-          "body": "Simon Willison questions the user experience paradigm of OpenAI's new Dot agent, noting that while Dot offers persistent memory, users lose granular control over contextual branch threads. OpenAI product lead Tibo Sottiaux explains that Dots are engineered as persistent companion agents carrying cross-session state, teasing significant workflow updates scheduled for next week.",
-          "url": "https://x.com/simonw/status/2106500511465869380"
-        },
-        {
-          "tag": "voice-agent-ux",
-          "title": "@theaaron & @argofowl: Codex Dot Voice UX Faces Criticism Over 5-Ring Latency vs Grok Bot",
-          "body": "Users voice frustration over OpenAI Dot's simulated telephone interface, where calls take 5 rings (10-15 seconds) to connect compared to Grok Bot's instantaneous 0.5-second response time. Developers argue skeuomorphic phone paradigms introduce unnecessary drag into high-velocity 2026 agent workflows.",
-          "url": "https://x.com/theaaron/status/2106401263089029122"
-        },
-        {
-          "tag": "model-anticipation",
-          "title": "@bindureddy & @davis7: OpenAI Gears Up for Next-Week Launch as Astra Ultra-Fast Mode Gains Fans",
-          "body": "Speculation intensifies around OpenAI's confirmed launch next week, with Bindu Reddy predicting an Astra 6.5 drop. Meanwhile, developers praise Astra on low-reasoning ultra-fast settings for rapid email management, quick patches, and research triage, while clamoring for equivalent ultra-fast execution on GPT-6.1 Sol.",
-          "url": "https://x.com/bindureddy/status/2106444156021375063"
-        },
-        {
-          "tag": "deprecation-alert",
-          "title": "@Voxyz_ai: Countdown Begins — GPT-5.5 Sunsets Across Codex and ChatGPT on October 14",
-          "body": "Engineers remind developers that GPT-5.5 will be officially retired from ChatGPT and Codex in 11 days (October 14), urging teams to audit config files and migration pipelines for legacy model strings before the deprecation cutoff.",
-          "url": "https://x.com/Voxyz_ai/status/2106398877511520661"
+          "tag": "production-evals",
+          "title": "@lennysan: Hamel Husain & Shreya Shankar Share Lessons from 50+ Enterprise Eval Deployments",
+          "body": "Lenny Rachitsky hosts eval pioneers Hamel Husain and Shreya Shankar, breaking down how companies like Ramp (boosting receipt accuracy from 35% to 83%), Shopify (shipping workflows 2.2x faster at 68% lower cost), and Harvey scale evaluation flywheels using automated agentic test suites.",
+          "url": "https://x.com/lennysan/status/2102422882341322779"
         }
       ]
     },
     {
       "emoji": "💰",
-      "title": "Quota Economics, Agent Hardware & Open Source Tools",
+      "title": "Token Economics, Quota Disparities & Cost Observability",
       "items": [
         {
-          "tag": "quota-wars",
-          "title": "@theo & @Claudeupdates11: Claude Pro 3B Token Headroom Shakes Up the $20 Tier Landscape",
-          "body": "Creator Theo reports burning through 4 separate Claude accounts without denting his Fable allocation limits. Comparative tier breakdowns reveal Claude Pro delivering 3B tokens at 90 TPS compared to ChatGPT Plus's 870M tokens at 25-50 TPS, intensifying community calls for OpenAI to introduce a dedicated $50 intermediate plan.",
-          "url": "https://x.com/theo/status/2106502358834479502"
+          "tag": "subscription-benchmarks",
+          "title": "@Khazix0918: $200 Plan Autopsy — Claude Delivers $3,400/Week API Value vs Codex's $1,700",
+          "body": "Creator Kazik logs token consumption across top subscriptions, discovering that under high prompt cache hit rates (98%+), Claude's $200 plan provides an equivalent API value of $3,400 per week compared to $1,700 on Codex. Because GPT-6 Astra carries 5x higher blended costs than Opus 5.5, users report Claude feeling up to 10x more resilient for daily coding tasks.",
+          "url": "https://x.com/Khazix0918/status/2106762127159734314"
         },
         {
-          "tag": "agent-hardware",
-          "title": "@karolzdeb: $30k iPhone Farm MCP Server Enables Real-Device Agent Swarms",
-          "body": "Karol Zdebel introduces a dedicated physical iPhone server accessible via MCP, allowing coding agents like Claude Code, Codex, and Grok Bot to orchestrate mobile tasks directly on physical hardware with dedicated carrier SIMs, bypassing proxy blocks and API restrictions.",
-          "url": "https://x.com/karolzdeb/status/2101355640262394307"
+          "tag": "quota-math",
+          "title": "@PawelHuryn: Paweł Huryn Quantifies Vendor Subsidies Across Anthropic, OpenAI & Meta",
+          "body": "Paweł Huryn burns through weekly allowances across major providers, calculating exact multipliers against public API pricing. Claude Pro clocks in at a 42x-45x subsidy ratio with peak hours having zero negative impact, while Meta's Muse High Usage plan offers a 5x multiplier over baseline tiers.",
+          "url": "https://x.com/PawelHuryn/status/2106724136932327458"
         },
         {
-          "tag": "open-source",
-          "title": "@trending_repos: Agent-Reach Hits 89K Stars for Universal Social Data Extraction",
-          "body": "Trending open-source tool Agent-Reach surges past 89,000 GitHub stars. The CLI utility provides autonomous agents with unified, zero-API-fee scrapers across Twitter, Reddit, YouTube, GitHub, and Bilibili, giving agent pipelines real-time web awareness.",
-          "url": "https://x.com/trending_repos/status/2106356614559391800"
+          "tag": "enterprise-controls",
+          "title": "@hwchase17: LangChain Slashes Coding Agent Spend Two Months Running via LangSmith",
+          "body": "Harrison Chase shares LangChain's internal playbook for cutting coding agent costs: establishing granular LangSmith telemetry across developer harnesses, enforcing hard user-level cost caps via an LLM gateway, and migrating workloads to OpenSWE with intelligent model routing.",
+          "url": "https://x.com/hwchase17/status/2106695651169800418"
         },
         {
-          "tag": "workflow-optimization",
-          "title": "@Michael_Fenech_: The 30-Day Human-Dependency Audit Framework for Grok Bot Workflows",
-          "body": "An operational audit protocol for heavy Grok Bot users structures an 8-point review classifying human interventions into Teach, Systemise, Automate, or Escalate categories, methodically eliminating manual context handoffs and unnecessary human approval bottlenecks.",
-          "url": "https://x.com/Michael_Fenech_/status/2106412459645129054"
+          "tag": "vibe-coding-caution",
+          "title": "@keking99: The 2.6-Billion Request Cautionary Tale: How an Unchecked Poll Loop Burned $1,000",
+          "body": "A developer recounts an expensive vibe-coding mistake after using Astra to quickly generate a DeepSeek voting app. The agent implemented an unchecked 3-second client polling loop without backoff, driving 2.6 billion requests and triggering a sudden $1,000 Cloudflare billing surprise.",
+          "url": "https://x.com/keking99/status/2106687001810677911"
         }
       ]
     },
     {
       "emoji": "🎨",
-      "title": "Local AI & Creative Engineering: FreeVideo, Qwen LoRAs & Text-to-CAD",
+      "title": "Frontier Models, Style Manifolds & Creative Workflows",
       "items": [
         {
-          "tag": "local-video",
-          "title": "@HaochengXiUCB: FreeVideo Runs MiniMax H3 Video Generation on 8GB Laptops",
-          "body": "Haocheng Xi releases FreeVideo, bringing MiniMax H3 and Video DeltaNet to consumer laptops with just 8GB VRAM and 16GB RAM. The release features native ComfyUI workflows, LoRA compatibility, and diffusion optimizations for affordable local video generation.",
-          "url": "https://x.com/HaochengXiUCB/status/2106149968994291933"
+          "tag": "voice-synthesis",
+          "title": "@mylifcc: Fulcrum Echo Debuts — Demonstrating AI 'Tone' Is a Post-Training Artifact",
+          "body": "Fulcrum releases Echo, a writing model trained for under $5,000 designed to adopt distinct author personas like Donald Trump, Shakespeare, or technical specs. The creators argue that standard models write in a sanitized 'AI tone' not due to capability limits, but because RLHF alignment compresses the rich latent style manifold learned during pretraining.",
+          "url": "https://x.com/mylifcc/status/2106610263474794515"
         },
         {
-          "tag": "image-synthesis",
-          "title": "@AndyL5cc: Qwen Image 2.1 Face-Swap LoRA Ships for ComfyUI and Draw Things",
-          "body": "Open-source creator Andy L releases BFS-Best-Face-Swap adapted for Qwen Image 2.1, supporting full face, head, and body replacement with packaged workflows for ComfyUI and Draw Things on Apple Silicon.",
-          "url": "https://x.com/AndyL5cc/status/2106342448444399823"
+          "tag": "openai-roadmap",
+          "title": "@thsottiaux & @Baconbrix: Tibo Sottiaux Confirms Full Codex Usage Dashboard & Teases 6.1 Drops",
+          "body": "OpenAI lead Tibo Sottiaux engages with developers over Pro plan quotas, confirming that an in-depth usage dashboard has launched in the Codex app and teasing upcoming releases including 6.1 Sol Ultra-Fast mode ahead of anticipated OpenAI announcements next week.",
+          "url": "https://x.com/thsottiaux/status/2106607456130592861"
         },
         {
-          "tag": "cad-tooling",
-          "title": "@cellinlab: Open-Source Text-to-CAD Plugin Integrates Directly into Codex",
-          "body": "Developer Cell demonstrates text-to-cad running locally within Codex, converting prompts directly into parametric STEP, STL, and 3MF geometry with built-in DFM checks for CNC, 3D printing, and injection molding.",
-          "url": "https://x.com/cellinlab/status/2106182312841150667"
+          "tag": "3d-generation",
+          "title": "@python_xxt: Open-Source image-blaster Generates Explorable 3D Worlds from Single Photos",
+          "body": "A viral open-source repo called image-blaster converts any 2D image into a fully explorable 3D environment in five minutes, integrating physics meshes, Gaussian splat backgrounds, and ambient spatial audio to dramatically compress 3D world-building workflows.",
+          "url": "https://x.com/python_xxt/status/2106585503277756603"
         },
         {
-          "tag": "design-systems",
-          "title": "@thekitze: DesignVibes Delivers Curated Aesthetic Tokens to Elevate Agent Taste",
-          "body": "Kitze launches DesignVibes, a gallery of frontend aesthetic tokens and shadcn templates developers can paste directly into coding agents to eliminate generic UI styling and instill consistent design taste.",
-          "url": "https://x.com/thekitze/status/2106036397216002339"
+          "tag": "enterprise-strategy",
+          "title": "@huxlab: Alexandr Wang on Enterprise Perception: Why Narrative Security Beats Benchmark Prowess",
+          "body": "Scale AI's Alexandr Wang sparks widespread reflection among technical founders, arguing that large enterprises and governments prioritize perceptual and narrative safety over raw benchmark wins, comparing Palantir's disciplined customer alignment to theater rather than pure software delivery.",
+          "url": "https://x.com/huxlab/status/2106559287422328903"
         }
       ]
     }
