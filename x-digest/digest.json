@@ -1,144 +1,150 @@
 {
   "title": "Clawd X Digest",
-  "date": "Tuesday, October 6th, 2026 — 12:00 PM ET",
+  "date": "Tuesday, October 6th, 2026 — 9:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Meta Open-Sources Rebalancer & Microsoft Confirms Looped Transformers in GPT-6:</strong> Meta engineering open-sources Rebalancer, its foundational assignment solver powering infrastructure resource allocation for nine years across 40M daily problems. Concurrently, Microsoft publicly confirms Looped Transformers in OpenAI's GPT-6 series (GPT-6.1 Sol executing two passes instead of three), while Apple researchers showcase contrastive decoding across intermediate looped states—cutting compute by 47% and lifting pass@1 from 61% to 73% with zero training cost.",
-    "<strong>OpenAI Deploys EU Text Watermarking as Pricing Limits Disappear from Public Tiers:</strong> Complying with the EU AI Act, OpenAI expands provenance tracking to text across ChatGPT and Codex while opening global API toggles. Meanwhile, developers notice OpenAI has quietly scrubbed explicit usage numbers from ChatGPT subscription pages as community benchmarks continue to highlight Claude Max's 5.6x token throughput edge over halved Pro tiers.",
-    "<strong>Andrew Chen Deconstructs Agent Network Effects & The Impending Moat War:</strong> a16z partner Andrew Chen pens a comprehensive essay analyzing whether consumer and developer agents (Muse, Town, Instinct, Grokbot) possess natural network effects. Chen argues agents function like interchangeable email clients by default, but warns a fierce platform battle will emerge as horizontal agents attempt to internalize proprietary viral artifacts, identity, and trust graphs.",
-    "<strong>Agent Engineering Evolves: 30-Agent /pstack Fleets, Interactive HTML Plans & In-Thread Canvas:</strong> Senior engineering workflows shift from 1:1 agent babysitting to fleet management. SpaceXAI engineers demonstrate running 30+ autonomous agents in loops via /pstack to land hundreds of PRs overnight, Claude Code ships an interactive html-plan decision viewer, T3 Code adds in-thread dynamic visualizations, and Cognition standardizes Devin's cross-session memory compaction via 'Dreaming'.",
-    "<strong>Systems, Reverse Engineering & Scientific AIDD: x64dbg MCP, Shaders WebGPU, and Biological Foundries:</strong> The developer stack expands with a pure-Zig x64dbg MCP server enabling conversational binary debugging in Claude, Shaders open-sourcing 200+ WebGPU components, and LlamaIndex replacing static parsers with agentic OCR loops. In bio-tech, Freda Duan and Frank map out the AIDD 'bottleneck trade', where frontier AI labs turn wet labs into continuous biological data foundries."
+    "<strong>OpenAI Releases 722 AI-Written Math Papers with Claims on Quasi-Riemann & Unique Games:</strong> OpenAI, alongside Sam Altman, unveils a monumental batch of 722 research papers authored by an internal frontier reasoning model and guided by the Institute for Advanced Study's Advisory Group. Community analyses highlight historic claimed breakthroughs with Lean-verified proofs, including zero-free strips for the Quasi-Riemann hypothesis, the Unique Games Conjecture, and free group factor isomorphisms.",
+    "<strong>Google Open-Sources EmbeddingGemma 2 with Apache 2.0 & Sub-70ms WebGPU Inference:</strong> Google and DeepMind introduce EmbeddingGemma 2, a unified 740M parameter multimodal embedding model spanning text, code, image, video, and audio in a shared vector space. With Matryoshka Representation Learning (768 to 128 dim) and 8k context, practitioners demonstrate instant 20–70ms on-device browser inference via WebGPU on 0.5GB RAM—rendering single-modality transcription-first RAG pipelines obsolete.",
+    "<strong>Meta & Sierra Debut Personal Agent Protocol (PAP) as Toolhouse Raises $7.7M for API Aggregation:</strong> Bret Taylor announces PAP, an open standard co-developed by Meta, Sierra, Shopify, Stripe, and Walmart defining how personal agents authenticate and transact with enterprises. Meanwhile, Toolhouse secures $7.7M as an 'OpenRouter for agent tools' offering pay-per-call runtime access to 2,500 APIs, reinforcing an industry shift away from flat $20/month subscriptions toward agentic finance and affiliate interchange.",
+    "<strong>Claude Enters Google Workspace, Launches Dedicated Cloud Sessions & Coworker Prompting:</strong> Anthropic natively integrates Claude into Google Docs, Sheets, and Slides for in-place contextual editing with approval gates, while ClaudeDevs rolls out persistent headless Cloud Sessions. Claude creator Boris Cherny publishes a simplified coworker prompting blueprint focusing on goal clarity, effort budgeting, and automated verification over brittle prompt scaffolding.",
+    "<strong>OpenAI Devs Ship Decisions API as Engineers Shift to Outer-Loop 'Factory Gardening':</strong> OpenAI releases Decisions API in public beta, providing lightweight categorical decision routing 10x faster than GPT-6 Luna. Systems teams (Lauren Tan, Ben Holmes) outline the transition to 'outer-loop' software factory engineering, where autonomous supervisor agents audit tool usage, score agent traces, and automatically refine codebase skills."
   ],
   "sections": [
     {
       "emoji": "🔬",
-      "title": "Frontier Architecture: Looped Transformers, Zeroth-Order Pretraining & Infrastructure Solvers",
+      "title": "Frontier Mathematics & Core Architecture: OpenAI 722 Math Papers, Quasi-Riemann & Looped Models",
       "items": [
         {
-          "tag": "architecture-leak",
-          "title": "@Algorithon & @mylifcc: Microsoft Confirms Looped Transformers in GPT-6 as Apple Slashes Pass Overhead 47%",
-          "body": "Microsoft documentation publicly confirms OpenAI's use of Looped Transformers across the GPT-6 line, verifying that GPT-6.1 Sol runs two inference passes instead of three. Building on looped transformer mechanics, Apple researchers publish 'Decoding Looped Transformers Better for (Almost) Free', showing that contrastive decoding over intermediate states cuts compute by 47% and raises math pass@1 from 61% to 73% with zero training cost.",
-          "url": "https://x.com/Algorithon/status/2107287650881208694"
+          "tag": "frontier-discovery",
+          "title": "@OpenAI & @sama: OpenAI Releases 722 AI-Written Math Papers via Frontier Reasoning Model",
+          "body": "OpenAI publicly releases a massive collection of 722 mathematical research papers generated entirely by an internal frontier reasoning model. Produced in consultation with the independent Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study (IAS), Sam Altman remarks that 'we are entering a new era of discovery now' as the lab shares proofs across long-standing open problems.",
+          "url": "https://x.com/OpenAI/status/2107596713791767021"
         },
         {
-          "tag": "infrastructure",
-          "title": "@Meta_Engineers: Meta Open-Sources Rebalancer — Assignment Solver Handling 40M Daily Problems",
-          "body": "Meta open-sources Rebalancer, the core assignment solver behind its infrastructure resource allocation for nine years. Decoupling problem specification from solving and debugging, Rebalancer combines optimal MIP solvers with parallelized local search to resolve hardware placement, task scheduling, and traffic routing across 30+ problem formulations with a P99 solve time of 12 seconds for 265k objects and 3.2k bins.",
-          "url": "https://x.com/Meta_Engineers/status/2107472235350962351"
+          "tag": "math-breakthroughs",
+          "title": "@imjustnewatai & @cap_violet: Deconstructing OpenAI's 4 Monumental Math Proofs — Quasi-Riemann to Unique Games",
+          "body": "Independent researchers break down OpenAI's four biggest mathematical claims: (1) Quasi-Riemann hypothesis (establishing that the zeta function has no zeros with real part above 7/8, backed by a Lean proof), (2) Unique Games Conjecture (proving computer hardness of approximation for problems like Max-Cut, with Lean proof), (3) Hodge conjecture for CM abelian varieties, and (4) Free group factor isomorphisms dating back to the 1940s. Academic mathematicians report being astonished by the density of formal verification.",
+          "url": "https://x.com/imjustnewatai/status/2107601711032373333"
         },
         {
-          "tag": "zeroth-order",
-          "title": "@industriaalist: Dust Pretrains Transformers via Parallel Perturbations Beyond Backprop",
-          "body": "Samip and collaborators unveil Dust, the first zeroth-order optimization algorithm capable of pretraining transformer architectures at scale. By leveraging virtual populations to perturb activations in parallel, Dust operates 1,000x to 10,000x more compute-efficiently than evolutionary strategies like EGGROLL, proving that overparameterized models exhibit emergent backprop-aligned gradients across runs up to 1B tokens.",
-          "url": "https://x.com/industriaalist/status/2107194534501433804"
+          "tag": "looped-diffusion",
+          "title": "@arankomatsuzaki & @mylifcc: Amazon AGI Unveils Adaptively Looped Diffusion Language Models",
+          "body": "Amazon AGI researchers present Adaptively Looped Diffusion Language Models (DLMs), demonstrating superior benchmark performance over both standard DLMs and autoregressive baselines. The release coincides with Apple's breakthrough on contrastive decoding over intermediate looped transformer states, which slashes compute overhead by 47% and raises math reasoning accuracy without retraining.",
+          "url": "https://x.com/arankomatsuzaki/status/2107473674211328010"
         },
         {
-          "tag": "world-models",
-          "title": "@LingYang_PU & @Charles_Y_Wu: JEPA-Anything Unifies World Modeling Across Seven Physical Domains",
-          "body": "Ling Yang and Charles Wu demonstrate JEPA-Anything, a universal predictive representation architecture that steps toward general-purpose world models. The open code and paper show unified spatio-temporal dynamics modeling across molecules, cellular biology, fluid dynamics, clinical patient trajectories, robotics, and global weather systems.",
-          "url": "https://x.com/LingYang_PU/status/2107330331795980761"
+          "tag": "rl-post-training",
+          "title": "@qingke_ai: Unifying RL Post-Training — Mathematical Equivalence of BPO and Score Centering",
+          "body": "Qingke AI provides an exact mathematical unification of BPO (Policy Mirror Descent + Bellman reformulation) and Score Centering (off-policy drift correction). The derivation proves that both frameworks share an identical full-vocabulary token gradient without importance sampling weight explosion, formalizing sampling drift as unintended distillation toward stale samplers and providing practical JAX implementations.",
+          "url": "https://x.com/qingke_ai/status/2107456957372334091"
         }
       ]
     },
     {
-      "emoji": "⚖️",
-      "title": "Platform Shifts, Watermarking & Subscription Economics",
+      "emoji": "🌐",
+      "title": "Multimodal Foundations & Edge Deployment: EmbeddingGemma 2 & On-Device RAG",
       "items": [
         {
-          "tag": "provenance",
-          "title": "@OpenAI: OpenAI Deploys Text Watermarking in EU to Meet AI Act Compliance",
-          "body": "OpenAI announces the expansion of content provenance tooling to text. Starting in the EU over coming weeks to comply with the EU AI Act, ChatGPT and Codex will watermark eligible generated text, while API customers worldwide gain toggleable text watermarking controls across select frontier models.",
-          "url": "https://x.com/OpenAI/status/2107164650249101695"
+          "tag": "multimodal-open",
+          "title": "@sundarpichai & @googlegemma: Google Releases EmbeddingGemma 2 — Open Multimodal Embeddings in 740M Parameters",
+          "body": "Google releases EmbeddingGemma 2 under a commercially permissive Apache 2.0 license. The lightweight 740M parameter model maps text, code, images, video, and audio into a single unified embedding space using modular encoders (270M text, 170M vision, 300M audio), Matryoshka Representation Learning (flexible 768 down to 128 dimensions), and an expanded 8K context window.",
+          "url": "https://x.com/sundarpichai/status/2107501975671890211"
         },
         {
-          "tag": "pricing-transparency",
-          "title": "@rezoundous & @scaling01: OpenAI Pulls Specific Usage Limits from Pricing Page as Value Benchmark Continues",
-          "body": "Tyler highlights that OpenAI has officially scrubbed specific token usage allowances from the public ChatGPT pricing page following the recent DevDay Pro quota reduction. Community benchmarks continue to contrast Opus 5.5 and GPT-6.1 Sol, noting that Claude Max plans yield ~5.6x higher task completions at equivalent pricing tiers.",
-          "url": "https://x.com/rezoundous/status/2107360959157436462"
+          "tag": "webgpu-inference",
+          "title": "@victormustar & @MiaAI_lab: EmbeddingGemma 2 on WebGPU: Sub-70ms On-Device Multimodal Search Without Servers",
+          "body": "Engineers showcase EmbeddingGemma 2 running entirely inside client web browsers via WebGPU at 20–70ms per query on just 0.5GB of RAM. The unified vector space eliminates brittle multi-step pipelines (audio transcription -> image captioning -> text embeddings), allowing users to directly query video segments or voice memos with text while keeping all data strictly private on-device.",
+          "url": "https://x.com/victormustar/status/2107521244870615416"
         },
         {
-          "tag": "strategy-analysis",
-          "title": "@andrewchen: Do Agents Have Network Effects? The Emerging Moat & Distribution War",
-          "body": "a16z partner Andrew Chen publishes an in-depth breakdown exploring network effects across consumer and horizontal agents (Muse, Town, Instinct, Grokbot). Chen argues that agents are interchangeable tools like email clients by default, but predicts a battle as horizontal agents build proprietary viral artifact generation, centralized trust, and private context graphs to prevent vertical commoditization.",
-          "url": "https://x.com/andrewchen/status/2107339817713623253"
+          "tag": "consumer-moe",
+          "title": "@taiyanghere: Qwen3.8-Flash-Next Runs at 50+ tok/s on Consumer Gaming PCs via Strata MoE Loader",
+          "body": "Community developer Niko1221 releases Strata, enabling local execution of the 125B parameter Qwen3.8-Flash-Next model (activating only 6B parameters per token via sparse MoE) on standard consumer desktop hardware. Benchmarks show sustained 50+ tok/s inference speeds on consumer NVIDIA GPUs, offering zero-cost private inference for local developer pipelines.",
+          "url": "https://x.com/taiyanghere/status/2107335777956794557"
+        }
+      ]
+    },
+    {
+      "emoji": "🤝",
+      "title": "Protocols, Standards & The Agentic Economy: Personal Agent Protocol & Toolhouse",
+      "items": [
+        {
+          "tag": "agent-standards",
+          "title": "@btaylor: Meta & Sierra Launch Personal Agent Protocol (PAP) Across Commerce & Enterprise Leaders",
+          "body": "Bret Taylor announces the Personal Agent Protocol (PAP), an open industry standard spearheaded by Meta and Sierra alongside Genesys, Instinct, RocketOTD, Shopify, Stripe, and Walmart. PAP establishes a common communication specification for consumer AI agents to authenticate, interact with, and complete transactions across commercial platforms and business APIs.",
+          "url": "https://x.com/btaylor/status/2107535182119244176"
         },
         {
-          "tag": "bio-bottleneck",
-          "title": "@qinbafrank & @FredaDuan: AI Drug Discovery Becomes the New Semiconductor-Style 'Bottleneck Trade'",
-          "body": "Freda Duan and Frank analyze the regime change in AI Drug Discovery (AIDD). With Anthropic, OpenAI (GPT-Rosalind), Anew Labs, and Isomorphic piling in, wet labs are transforming from drug makers into biological data foundries, shifting downstream demand to DNA synthesis (Twist Bioscience) and protein production (GenScript) with daily validation throughput doubling.",
-          "url": "https://x.com/qinbafrank/status/2107092468756062686"
+          "tag": "runtime-tools",
+          "title": "@shengkunye: Toolhouse Secures $7.7M to Build the 'OpenRouter for Agent Tools'",
+          "body": "Toolhouse announces a $7.7M funding round to eliminate fragmented tool subscriptions for autonomous agents. The runtime platform enables AI agents to discover, execute, and pay for over 2,500 APIs (enrichment, SEO, voice/image generation, telephony, and financial data) through a single unified connection with pay-per-call micro-billing.",
+          "url": "https://x.com/shengkunye/status/2107555480658923945"
+        },
+        {
+          "tag": "agentic-commerce",
+          "title": "@defyneric & @a16z: Agentic Finance & The Death of the $20/Month SaaS Subscription",
+          "body": "Analysis outlines why consumer AI agents will transition from flat subscription models to backend transaction monetization via merchant revenue-sharing, negotiated bulk discounting, and interchange fees. Meanwhile, a16z data reveals the top 1% of AI power users spend $903/month, allocating budget primarily to autonomous automation and pipeline tooling (n8n, fal, Manus).",
+          "url": "https://x.com/defyneric/status/2107539194490826947"
         }
       ]
     },
     {
       "emoji": "🤖",
-      "title": "Agent Orchestration, Skills & Fleet Engineering",
+      "title": "Workspace Integration & Agentic Fleet Engineering: Claude in Google Docs, Cloud VMs & Coworker Prompting",
       "items": [
         {
-          "tag": "fleet-workflows",
-          "title": "@sheemamoto & @poteto: Running 30+ Agent Fleets with /pstack — Moving from Babysitter to Orchestrator",
-          "body": "SpaceXAI engineer Lauren Tan details operating 30+ concurrent agents in loops using /pstack, shipping over 1,000 PRs per month with dozens landing autonomously overnight. The paradigm shift redefines the engineer's role from babysitting a single chat box to acting as the coordinator and architect of an autonomous agent swarm.",
-          "url": "https://x.com/sheemamoto/status/2107220153117393404"
+          "tag": "workspace-integration",
+          "title": "@claudeai & @ClaudeDevs: Claude Integrates Directly into Google Docs, Sheets & Slides Alongside Dedicated Cloud Sessions",
+          "body": "Anthropic launches in-place editing for Google Workspace, embedding Claude in an interactive sidebar that reads active documents and proposes atomic inline edits for user approval. Simultaneously, ClaudeDevs releases Cloud Sessions for Claude Code, spawning persistent headless virtual machines that execute multi-hour development tasks independently in the cloud.",
+          "url": "https://x.com/claudeai/status/2107522596845822135"
         },
         {
-          "tag": "interactive-plans",
-          "title": "@trq212 & @davekiss: Claude Code html-plan Converts Markdown Plans into Click-Through Decision Mockups",
-          "body": "Anthropic engineer Thariq and Dave Kiss showcase `html-plan`, a community skill for Claude Code (`claude plugin install html-plan@claude-community`) that renders agent plans as interactive, clickable HTML mockups. By leveraging component states and visual diagrams, the approach drastically reduces token overhead while simplifying human approval.",
-          "url": "https://x.com/trq212/status/2107294499282293017"
+          "tag": "prompt-engineering",
+          "title": "@bcherny: Prompt Claude Like a Coworker — Shifting from Prescriptive Scaffolding to Effort & Verification",
+          "body": "Claude Code creator Boris Cherny details modern agent prompting philosophy: ditching over-engineered prompt scaffolding in favor of conversational coworker collaboration. With modern models, prompt clarity boils down to defining: (1) what you want done, (2) how much compute/effort to allocate, and (3) explicit verification criteria.",
+          "url": "https://x.com/bcherny/status/2107565388250874193"
         },
         {
-          "tag": "prompt-refinement",
-          "title": "@mattpocockuk: Slashing AGENTS.md Inefficiency with Progressive Disclosure & Post-Session Retros",
-          "body": "Matt Pocock shares prompt patterns to optimize agent context windows, introducing `/writing-for-agents` to purge no-ops and enforce progressive disclosure in bloated AGENTS.md files. Pocock also emphasizes `/retro` as an essential workflow tool to uncover workarounds and friction points even after nominally successful runs.",
-          "url": "https://x.com/mattpocockuk/status/2107433940638457866"
+          "tag": "software-factories",
+          "title": "@poteto & @BHolmesDev: From Product Engineering to Software Factory Gardening — Scaling Agent Fleets with Grok & Cursor",
+          "body": "Lauren Tan and Ben Holmes dissect outer-loop agent architecture: separating 'product engineering' (inner-loop agents writing feature code) from 'factory engineering' or 'gardening' (supervisor agents auditing tool call efficiency, scoring conversation traces, and continuously self-refining team skill definitions). Poteto shares a production Grok Bot -> Linear -> Cursor cloud agent automated loop.",
+          "url": "https://x.com/poteto/status/2107510472601985336"
         },
         {
-          "tag": "thread-visualization",
-          "title": "@davis7 & @theo: T3 Code Ships In-Thread Visualizations Inspired by Codex Desktop",
-          "body": "Theo and Ben Davis introduce rich in-app thread visualization inside T3 Code. Adapting a long-overlooked capability from Codex desktop, agents can now render live mockups, charts, images, and interactive tables directly within conversation threads during development sessions.",
-          "url": "https://x.com/davis7/status/2107327447427698801"
-        },
-        {
-          "tag": "durable-memory",
-          "title": "@dabit3 & @cognition: Devin Releases Persistent Cross-Session Memory & Nightly 'Dreaming' Pruning",
-          "body": "Nader Dabit and Cognition announce Memory and Dreaming in Devin. Across sessions, Devin builds a persistent memory graph of working preferences and runs an asynchronous nightly pruning routine to remove stale records, releasing the implementation as an open-source standard under Agent Memory Repo.",
-          "url": "https://x.com/dabit3/status/2107255152008949951"
+          "tag": "durable-learning",
+          "title": "@swadeshkumar_ & @gippp69: AGENT_LEARNINGS.md & Dynamic Cost Routing Across Claude Opus & Sonnet",
+          "body": "Engineers highlight Anthropic's internal pattern of self-updating AGENT_LEARNINGS.md memory files that accumulate anti-patterns and solutions across sessions without model retraining. Gipp demonstrates self-routing agent harnesses that default to Sonnet 5.5 for low-cost execution and dynamically escalate to Opus 5.5 only when rigorous verification checks fail.",
+          "url": "https://x.com/swadeshkumar_/status/2107293262017110231"
         }
       ]
     },
     {
-      "emoji": "💻",
-      "title": "Systems, Reverse Engineering & Developer Primitives",
+      "emoji": "⚡",
+      "title": "Bounded Decision Primitives, Speedups & Autonomous Security",
       "items": [
         {
-          "tag": "reverse-engineering",
-          "title": "@mylifcc: Zig-Powered x64dbg MCP Server Brings Conversational Debugging to AI Agents",
-          "body": "Developer Lifcc showcases `x64dbg-mcp-server`, a pure Zig bridge that exposes 80+ Windows debugging APIs to Claude and Codex over SSE/HTTP without external runtime dependencies. Agents can set breakpoints, single-step through assembly, inspect memory registers, and extract decrypted strings via simple natural language instructions.",
-          "url": "https://x.com/mylifcc/status/2107335290352546158"
+          "tag": "decision-apis",
+          "title": "@thsottiaux & @akshay_pachaar: OpenAI Devs Launch Decisions API — 10x Faster Bounded Judgment Over Open Generation",
+          "body": "OpenAI rolls out Decisions API in public beta, offering low-latency, real-time categorical decision routing up to 10x faster than GPT-6 Luna. Practitioners detail six core production patterns for bounded decision models (Jev, GLiDE, Decisions API): guardrails, input model routing, reranking, tool-call gating, confidence verification, and agent output evaluation without verbose text output overhead.",
+          "url": "https://x.com/thsottiaux/status/2107574912349303197"
         },
         {
-          "tag": "graphics-engine",
-          "title": "@npm_i_shaders: Shaders Open-Sources 200+ WebGPU Visual Components for Framework-Agnostic Apps",
-          "body": "Shaders makes its entire suite of 200+ WebGPU UI and animation components open source. The library allows front-end developers and autonomous code-generation agents to drop hardware-accelerated shaders and dynamic visuals into client applications across any modern framework.",
-          "url": "https://x.com/npm_i_shaders/status/2107467668009963819"
+          "tag": "ci-infrastructure",
+          "title": "@github & @JinjingLiang: GitHub Unveils Parallel CI Actions as Infrastructure Gears Up for Agent-Scale Development",
+          "body": "GitHub announces specialized Git infrastructure to support agentic coding swarms, while developers discover recently introduced parallel actions in GitHub CI that yield instant 2x build and test speedups without infrastructure changes.",
+          "url": "https://x.com/github/status/2107589127051063771"
         },
         {
-          "tag": "document-parsing",
-          "title": "@llama_index: Agentic OCR Loops Replace Single-Pass Parsers for Complex Multimodal Documents",
-          "body": "LlamaIndex Head of Open Source Logan Markewich diagnoses the limitations of traditional single-pass OCR, introducing Agentic OCR. By incorporating layout-aware reading loops, intelligent routing of complex elements to specialized models, and multi-pass verification, agentic parsers reliably preserve tables, charts, and multi-column hierarchies.",
-          "url": "https://x.com/llama_index/status/2107180957757268252"
+          "tag": "agent-security",
+          "title": "@UberEng & @TheBlockChainer: Uber Publishes Persona Guardrail Defense Framework as Autonomous Audit Agents Dominate Competitions",
+          "body": "Uber Engineering researchers release Persona Guardrail, an open defense framework designed to keep production autonomous agents focused on designated system roles while thwarting adversarial prompt injection. Concurrently, security researcher Bloqarl showcases a semi-autonomous audit agent workflow capturing top placements and critical bounties across Immunefi competitions.",
+          "url": "https://x.com/UberEng/status/2107546431854707085"
         },
         {
-          "tag": "state-management",
-          "title": "@Passenger0522: Architectural Blueprint for Long-Horizon Consistency & Cascading Conflict Scans",
-          "body": "Passenger0522 evaluates state management across five open-source AI novel engines (oh-story, MuMuAINovel, Ani Book Skill, ainovel-cli, Webnovel Writer v6). The analysis highlights authoritative JSON state locking, strict role knowledge isolation, and cascading conflict verification as essential prerequisites for preventing narrative hallucination over 100k+ words.",
-          "url": "https://x.com/Passenger0522/status/2107374585658388660"
-        },
-        {
-          "tag": "system-optimization",
-          "title": "@mylifcc: RemoveMacAI Strips Apple Intelligence Background Daemons to Recover 12GB RAM",
-          "body": "Developer Lifcc releases RemoveMacAI, a macOS CLI utility that cleanly disables Apple Intelligence background processes using official Apple Configuration Profiles without modifying /System or disabling SIP. By redirecting model fetch endpoints, the tool frees up 12GB of unified memory and eliminates fan noise for local LLM inference.",
-          "url": "https://x.com/mylifcc/status/2107079606255686016"
+          "tag": "agent-financial-skills",
+          "title": "@_zheergen: Open-Source Multi-Market Financial Data Layer Engineered Directly as Agent Skills",
+          "body": "Quant researcher open-sources unified Python market data layers (a-stock-data and global-stock-data) covering real-time quotes, SEC EDGAR XBRL filings, and option chains. Packaged natively as callable skills for Claude Code and Codex, the tools allow agents to independently pull financial filings and execute algorithmic backtests on demand.",
+          "url": "https://x.com/_zheergen/status/2107342582808289410"
         }
       ]
     }
