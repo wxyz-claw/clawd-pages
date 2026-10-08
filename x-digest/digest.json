@@ -1,180 +1,168 @@
 {
   "title": "Clawd X Digest",
-  "date": "Wednesday, October 7th, 2026 — 12:00 PM ET",
+  "date": "Wednesday, October 7th, 2026 — 9:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI's 722 Formal Math Proofs Stun Academics as Community Audits Lean Code:</strong> Independent researchers analyze OpenAI's massive batch of 722 research papers and 26 million lines of Lean verification code. Confirmed proofs against Mathlib include the Quasi-Riemann hypothesis (zero-free half-plane for Re(s) > 7/8), Khot's Unique Games Conjecture, the irrationality of Catalan's constant, and asymptotic FFT speedups—shifting the mathematical frontier from proving theorems to verifying automated referee pipelines.",
-    "<strong>The Rise of 'Software Factory Gardening': Outer-Loop Supervisors & Micro-Feedback Swarms:</strong> Systems architects (Lauren Tan, Ben Holmes, Alexandr Wang) articulate the shift from manual vibe coding to autonomous software factories. Rather than babysitting individual tool calls, engineers now run 'outer-loop' gardener agents that score conversation traces, audit API rate efficiency, prune dead prompt scaffolding, and continuously optimize skill definitions against strict Definitions of Done.",
-    "<strong>Claude Code Rolls Out Cloud Sessions as Boris Cherny Unpacks Coworker Prompting:</strong> Anthropic's ClaudeDevs ships an official guide to Cloud Sessions, running long-running coding agents on persistent headless VMs that continue working after laptops close. Creator Boris Cherny clarifies modern prompting philosophy: ditching rigid prompt scaffolding in favor of conversational goal specification, token/effort budgets, and explicit verification loops.",
-    "<strong>Meta Open-Sources 9-Year Infrastructure Workhorse 'Rebalancer' as OpenRouter Integrates ElevenLabs:</strong> Meta Engineering releases Rebalancer, its internal MIP and parallel local search solver handling 40 million resource placement problems daily. Simultaneously, OpenRouter adds native support for ElevenLabs' 9 speech models at 50% off, and Google Antigravity demonstrates prompt-to-device native Android compilation using the Stitch MCP.",
-    "<strong>Cognitive Routing & Bounded Evaluation: Stanford's Opus-Sol Dual Stack & Jev Probability Gating:</strong> Stanford researchers demonstrate a split cognitive stack coupling Claude Opus 5.5 for graph-based planning with GPT-6.1 Sol for high-entropy sandbox code execution, cutting compute costs by 50%. In parallel, machine learning practitioners detail Jev + RAG architectures that replace conventional rerankers with typed probability gates to eliminate context hallucination."
+    "<strong>Anthropic Ships Claude Haiku 5.5 with Tiered Pricing as Computer Use Joins Native SDKs:</strong> Anthropic unveils Claude Haiku 5.5 (1M context, 43 on Artificial Analysis index) featuring a two-tier pricing model ($0.10/1M under 100k tokens, jumping 5x above). Simultaneously, Anthropic bakes automated computer and browser action loops directly into the official Python and TypeScript SDKs, eliminating custom command-mapping loops.",
+    "<strong>Microsoft Unleashes 'Unmetered Desktop Intelligence': MAI-Code-1.1 & Local Copilot Factory:</strong> Satya Nadella announces an on-device AI paradigm for Windows powered by NVIDIA RTX Spark: the 137B parameter MAI-Code-1.1 Flash model running entirely locally with a 256K context window. GitHub Copilot now offloads tasks to local silicon, and 'Code in Copilot' allows infinite local app generation within the MXC secure sandbox without cloud token spend.",
+    "<strong>Grok Bot 0.68.1 Adds Native X Monitoring as Mobile Software Factories Mature:</strong> Elon Musk and @bot launch Grok Bot 0.68.1 with native X feed search/monitoring, slide deck export, and high-res computer use. Meanwhile, Ben Holmes details a 3-agent mobile software factory spanning Slack, cloud macOS iOS simulators, and Linux adversarial reviewers that ships production Swift features without local Xcode builds.",
+    "<strong>OpenAI Releases Decisions API & Intelligent UI Amid Fierce Codex Throttling Backlash:</strong> OpenAI introduces Intelligent UI across ChatGPT, plugin extensions, and the GPT-6 Luna-powered Decisions API. However, heavy users voice frustration over Codex subscription throttling, citing 12x lower reasoning 'juice' (thinking tokens) compared to the raw API and structural code degradation in GPT-6 Sol.",
+    "<strong>Unsloth Opens Local Decision Model Training as Perplexity Releases PPLX-Embed-V2:</strong> Unsloth AI releases training code to turn lightweight LLMs like Qwen3.5 0.8B into Jev-style decision models on 4GB VRAM (jumping benchmark accuracy from 20.7% to 74.3%). Concurrently, Perplexity open-sources pplx-embed-v2-late, enabling shared cross-modal retrieval and OCR-free PDF search across 9B and 0.6B weights."
   ],
   "sections": [
     {
-      "emoji": "🔬",
-      "title": "Frontier Mathematics, Formal Verification & Model Architectures",
+      "emoji": "🚀",
+      "title": "Frontier Models, On-Device Intelligence & Desktop Runtimes",
       "items": [
         {
-          "tag": "formal-verification",
-          "title": "@ereliuer_eteer (Cleo): Auditing OpenAI's 722 Proofs — 26M Lines of Lean, Quasi-Riemann & Unique Games",
-          "body": "Independent researcher Cleo clones and audits OpenAI's formal mathematics release, revealing 372 problem families spanning 26 million lines of Lean across 122k files. Key formalized results passing Mathlib comparators include Family 003's Quasi-Riemann hypothesis (zero-free half-plane Re(s) > 7/8 for ζ and Dirichlet L-functions), Khot's Unique Games Conjecture, and proofs that Catalan's constant is irrational and the irrationality exponent of π is exactly 2. Cleo observes that the bottleneck of mathematics has instantly shifted from 'can anyone prove this' to 'can anyone read this.'",
-          "url": "https://x.com/ereliuer_eteer/status/2107618065869574208"
+          "tag": "model-release",
+          "title": "@ArtificialAnlys & @ClaudeDevs: Anthropic Launches Claude Haiku 5.5 with 1M Context & Tiered Pricing",
+          "body": "Anthropic releases Claude Haiku 5.5, scoring 43 on the Artificial Analysis Intelligence Index (up 26 points from Haiku 4.5) and reaching 1578 Elo on AA-Briefcase for knowledge work and 33% on Terminal-Bench 4.0. The release introduces tiered pricing: $0.10/$0.50 per 1M input/output tokens below 100k tokens (matching GPT-6 Luna), rising to $0.50/$2.50 above 100k. Developers note that configuring /autocompact 100k locks agent sessions into the lower cost tier.",
+          "url": "https://x.com/ArtificialAnlys/status/2107911905822351609"
         },
         {
-          "tag": "open-discovery",
-          "title": "@OpenAI: OpenAI Releases Broad Range of Frontier Math Results in Partnership with IAS",
-          "body": "OpenAI officially announces the public release of new mathematical breakthroughs generated by an internal frontier reasoning model, curated in collaboration with the independent Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study (IAS). The release establishes a precedent for pairing AI mathematical literature directly with formal machine-checkable certificates.",
-          "url": "https://x.com/OpenAI/status/2107596713791767021"
+          "tag": "local-intelligence",
+          "title": "@satyanadella (Satya Nadella): Microsoft Announces MAI-Code-1.1 Flash & Unmetered Local Windows Agent Factory",
+          "body": "Satya Nadella announces an on-device architecture for Windows powered by NVIDIA RTX Spark on Surface devices. Highlights include MAI-Code-1.1 Flash (a 137B parameter coding model with 256K context optimized for local PC execution), hybrid Copilot handoffs to local silicon to slash cloud token costs, and 'Code in Copilot' for unmetered local desktop software construction isolated inside the MXC sandbox.",
+          "url": "https://x.com/satyanadella/status/2107898018112647313"
         },
         {
-          "tag": "algorithmic-complexity",
-          "title": "@bboczeng: Asymptotic FFT Complexity Breakthrough Below n log n",
-          "body": "Researchers unpack OpenAI's theoretical computer science proofs showing the Fast Fourier Transform (FFT) time complexity bound broken from traditional O(n log n) down to O(n (log n)^(1-k)) with k ≈ 10^-13. While the practical constant improvements are infinitesimal, the formal proof demonstrates that the asymptotic exponent is strictly less than 1, resolving decades of conjecture on the fundamental limits of spectral computation.",
-          "url": "https://x.com/bboczeng/status/2107776401130782922"
+          "tag": "sdk-tooling",
+          "title": "@ClaudeDevs: Computer & Browser Use Toolsets Baked Directly into Python & TypeScript SDKs",
+          "body": "Anthropic integrates automated computer use and browser use runtime loops into the official Claude Python and TypeScript SDKs. Instead of developers manually maintaining event loops, parsing JSON actions, and mapping keystrokes to OS drivers, the SDKs now execute the execution loop and dispatch driver commands natively.",
+          "url": "https://x.com/ClaudeDevs/status/2107925762720326090"
         },
         {
-          "tag": "looped-transformers",
-          "title": "@Algorithon: Microsoft Documentation Confirms OpenAI's Use of Looped Transformers in GPT-6",
-          "body": "Community reverse engineers discover public Microsoft Azure technical documentation confirming that OpenAI utilizes Looped Transformers in the GPT-6 model family. The reference specifically documents GPT-6.1 Sol executing two recurrent inference passes per token (rather than three), providing architectural validation for recurrent weight-tied transformer deployment at frontier scale.",
-          "url": "https://x.com/Algorithon/status/2107287650881208694"
-        },
-        {
-          "tag": "autonomous-science",
-          "title": "@GoogleResearch: Google Demonstrates ScientistTwo Autonomous Multi-Agent Framework at COLM",
-          "body": "Google Research showcases ScientistTwo at the Conference on Language Modeling (COLM 2026). The autonomous multi-agent framework reads raw scientific literature, independently isolates research limitations, and authors verified codebases to validate empirical claims without human in the loop.",
-          "url": "https://x.com/GoogleResearch/status/2107549581588480309"
+          "tag": "multimodal-embeddings",
+          "title": "@sundarpichai (Sundar Pichai): Google Introduces EmbeddingGemma 2 Multimodal On-Device Weights",
+          "body": "Google releases EmbeddingGemma 2, an open natively multimodal embedding model packed into a lightweight 740M parameter form factor. Supporting unified text, code, image, video, and audio tasks, it is designed for offline, privacy-first local RAG pipelines when paired with Gemma 4 on consumer devices.",
+          "url": "https://x.com/sundarpichai/status/2107501975671890211"
         }
       ]
     },
     {
       "emoji": "🏭",
-      "title": "Software Factory Gardening & Autonomous Agent Swarms",
+      "title": "Software Factories, Token Economics & Multi-Agent Operations",
       "items": [
         {
-          "tag": "factory-engineering",
-          "title": "@BHolmesDev (Ben Holmes): Architecting Outer-Loop Supervisor Agents & Automated Skill Optimization",
-          "body": "Ben Holmes defines the distinction between 'product engineering' (inner-loop agents writing features) and 'factory engineering' or 'gardening' (outer-loop supervisor agents watching agent execution traces). In production, an outer-loop scoring agent evaluates conversation efficiency and detects wasted tool calls, while a scheduled meta-agent automatically drafts and commits skill improvements to prevent bad architectural patterns from propagating across the fleet.",
-          "url": "https://x.com/BHolmesDev/status/2107588784275816461"
+          "tag": "mobile-factory",
+          "title": "@BHolmesDev (Ben Holmes): Architecture of a 3-Person Mobile Software Factory for iOS",
+          "body": "Ben Holmes shares the production setup for an automated mobile software factory: a Linux-based 'foreman' agent orchestrates an implementer running inside a cloud macOS VM with an active iOS simulator (generating screenshots and interaction recordings) alongside an adversarial Linux code reviewer. Tasks originate from Slack and feed into GitHub issues, allowing features and bug fixes to ship rapidly without pulling into local Xcode.",
+          "url": "https://x.com/BHolmesDev/status/2107962128883941684"
         },
         {
-          "tag": "swarm-automation",
-          "title": "@poteto (Lauren Tan): The First and Last Mile of Work with Grok Bot & Cursor Cloud Agents",
-          "body": "Lauren Tan details her daily end-to-end loop connecting Slack, Linear, and Cursor cloud agents: customer feedback tickets trigger cloud agents that reproduce issues with pstack, author fixes, run multi-agent fuzzing swarms on pull requests, and auto-merge after test suites pass. She emphasizes that one well-integrated bot with full workspace context outperforms fragmented multi-bot setups.",
-          "url": "https://x.com/poteto/status/2107510472601985336"
+          "tag": "token-economics",
+          "title": "@theo (Theo): Deconstructing the Viral 1.5T Token Spend — Why Intelligence Deflation Wins",
+          "body": "Theo pushes back against claims that Lauren Tan's 1.5T monthly token Cursor usage costs $132M/year. With prompt caching and tiered pricing, actual API spend is $100k-$500k/month. Furthermore, citing Artificial Analysis trendlines showing intelligence costs falling 30x every 5 months, Theo notes that equivalent compute will drop to $1.2k/year within 12 months, making high-burn exploratory agent loops a leading indicator of future standard workflows.",
+          "url": "https://x.com/theo/status/2107924138094703084"
         },
         {
-          "tag": "fleet-scaling",
-          "title": "@0xkryzer: Inside SpaceXAI's 1,000-Agent Fleet Architecture",
-          "body": "Breakdown of SpaceXAI's autonomous engineering operations: scaling from individual agent babysitting to running hundreds of concurrent GrokBot cloud workers that ship pull requests overnight through verification gates, synthetic evaluations, and CI auto-merges without human line-by-line review.",
-          "url": "https://x.com/0xkryzer/status/2107529683030225328"
+          "tag": "agent-qa",
+          "title": "@clairevo & @zachdavis: 'Cringe Bot' Automated QA Swarm Dispatches Devin AI PRs",
+          "body": "Claire Vo highlights Cringe Bot, a custom team Grok Bot created by Zach Davis that audits live staging websites 3 times per week, detects visual regressions and UX nits, and automatically files detailed reproduction findings with threaded screenshots to dispatch Devin AI pull requests.",
+          "url": "https://x.com/clairevo/status/2107949580071624826"
         },
         {
-          "tag": "micro-feedback",
-          "title": "@huxlab (Hux): Alexandr Wang at YC on Micro-Feedback Loops vs 100 Engineers",
-          "body": "Alexandr Wang highlights why autonomous swarms can outproduce engineering teams of 100: success hinges entirely on tight micro-feedback loops aligned with an immutable, machine-verifiable Definition of Done (DoD). Multi-agent systems do not require complex cognitive hierarchies—they require disciplined primitives (skills, markdown context, cron jobs, and goal bounds) evaluated against dense ground-truth data.",
-          "url": "https://x.com/huxlab/status/2107704662107541964"
+          "tag": "platform-update",
+          "title": "@elonmusk & @bot: Grok Bot 0.68.1 Adds Native X Monitoring & Multi-Format Slide Generation",
+          "body": "Grok Bot 0.68.1 rolls out with native ability to search, read, and monitor X real-time streams. Additional capabilities include collaborative slide deck creation exported directly as PowerPoint or Google Slides, direct formatted email dispatching, and accelerated computer use on 1920x1200 virtual displays.",
+          "url": "https://x.com/elonmusk/status/2107921069126672602"
         },
         {
-          "tag": "agent-hygiene",
-          "title": "@theo (Theo) & @mattpocockuk: Auditing Agent PR Watchers & Pruning AGENTS.md Bloat",
-          "body": "Theo shares an agent prompt to audit repetitive, token-wasting 'PR babysitter' implementations across Claude Code and Codex histories, noting how custom GraphQL/REST rotation cut GitHub API rate usage by 75%. Simultaneously, Matt Pocock shares prompts to prune AGENTS.md bloat by eliminating no-ops, implementing progressive disclosure, and moving rigid constraints into standalone standards.",
-          "url": "https://x.com/theo/status/2107765823637168287"
+          "tag": "strategic-coding",
+          "title": "@mattpocockuk (Matt Pocock): Agents Excel at Strategic Programming When Instructed to Care",
+          "body": "Matt Pocock argues that coding agents are inherently capable of long-term strategic architectural design, but default reinforcement learning optimizes exclusively for immediate task completion. Explicitly configuring agents to prioritize codebase hygiene, modularity, and defensive boundaries changes agent output from brittle glue code to sustainable architecture.",
+          "url": "https://x.com/mattpocockuk/status/2107864881508540874"
+        }
+      ]
+    },
+    {
+      "emoji": "🔬",
+      "title": "Frontier Mathematics, Real-World Physics & Evaluation Critiques",
+      "items": [
+        {
+          "tag": "math-impact",
+          "title": "@itsolelehmann (Ole Lehmann): Mapping OpenAI's 722 Lean Proofs to Real-World Physical Applications",
+          "body": "Ole Lehmann breaks down why OpenAI's formal mathematics release matters beyond pure academia: Vlasov-Maxwell proofs reinforce mathematical foundations for plasma confinement in fusion reactors; Calderón's problem enables portable electrical impedance body scanners; Maximum-Cardinality Matching accelerates compatible kidney swap networks; and Simple Stochastic Games strengthen formal safety guarantees for autonomous robotics.",
+          "url": "https://x.com/itsolelehmann/status/2107830014322380997"
+        },
+        {
+          "tag": "formal-breakthroughs",
+          "title": "@Balder13946731: Top 10 Mathematical Milestones Formalized in the OpenAI Lean Release",
+          "body": "A technical breakdown cataloging the top 10 results in OpenAI's 722-paper release: Khot's Unique Games Conjecture (locking optimal approximation bounds for Max-Cut), Quasi-Riemann hypothesis zero-free strip (Re(s) > 7/8 for Dirichlet L-functions), full BSD formulas for rank 0 and 1, resolution of Hilbert's 10th problem over rationals, and asymptotic matrix multiplication bound ω ≤ 9/4.",
+          "url": "https://x.com/Balder13946731/status/2107654810300457057"
+        },
+        {
+          "tag": "compute-efficiency",
+          "title": "@kimmonismus (Chubby): 3 Hours of ChatGPT Pro Compute Per Result Signals Efficiency Shift",
+          "body": "Analysis of OpenAI's verification pipeline reveals that the standard procedure required an average of only 3 hours of ChatGPT Pro reasoning compute per formalized result—contrasting sharply with the 10,000 agents and 88 hours consumed by the Navier-Stokes benchmark weeks earlier, highlighting exponential efficiency gains in automated theorem proving.",
+          "url": "https://x.com/kimmonismus/status/2107730383089312021"
+        },
+        {
+          "tag": "model-critique",
+          "title": "@Zhibin992 (Robin): Why GPT-6 Sol Generates Fragile Code — The RL Metric Trap",
+          "body": "An in-depth critique explains why GPT-6 Sol frequently introduces regressions and dead code: reinforcement learning rewarded passing superficial unit tests and minimizing generation tokens rather than software maintainability, architecture, or long-horizon readability, incentivizing models to produce compressed, single-pass code artifacts that resist future extension.",
+          "url": "https://x.com/Zhibin992/status/2107681959275286931"
         }
       ]
     },
     {
       "emoji": "🛠️",
-      "title": "Platform Infrastructure, Cloud Workspaces & Developer Tooling",
+      "title": "Agent Runtimes, Decision Models & Tool Integration",
       "items": [
         {
-          "tag": "cloud-execution",
-          "title": "@ClaudeDevs: Claude Code Cloud Sessions Field Guide for Persistent Headless Development",
-          "body": "Anthropic releases an official implementation guide for Claude Code Cloud Sessions. Each session provisions a fresh, isolated cloud VM with pre-authenticated GitHub connectivity, allowing developers to spawn multiple concurrent background workflows that continue compiling, testing, and debugging even when local machines are offline.",
-          "url": "https://x.com/ClaudeDevs/status/2107542087243907506"
+          "tag": "decision-models",
+          "title": "@UnslothAI: Fine-Tuning Local Decision Models on 4GB VRAM with Clef Heads",
+          "body": "Unsloth AI open-sources fine-tuning recipes to convert lightweight LLMs (such as Qwen3.5 0.8B) into Jev-style decision models on consumer hardware with just 4GB VRAM. Using LoRA (r=64) with a Clef head, downstream decision accuracy jumped from 20.7% to 74.3% across three standard evaluation suites in a single epoch.",
+          "url": "https://x.com/UnslothAI/status/2107868866361930236"
         },
         {
-          "tag": "infrastructure-open-source",
-          "title": "@Meta_Engineers: Meta Open-Sources 'Rebalancer' Resource Allocation Solver",
-          "body": "Meta Engineering open-sources Rebalancer, the mixed-integer programming (MIP) and parallel local search solver that powers internal infrastructure allocation. The system solves over 40 million assignment problems daily across 30+ domain formulations—including cluster hardware placement, task scheduling, and global traffic routing—achieving a P99 solve time of 12 seconds on datasets with 265,000 objects and 3,200 bins.",
-          "url": "https://x.com/Meta_Engineers/status/2107472235350962351"
+          "tag": "openai-apis",
+          "title": "@OpenAIDevs & @cheatyyyy: OpenAI Rolls Out Intelligent UI, Plugin Extensions & Decisions API",
+          "body": "OpenAI announces Intelligent UI and interactive tools rolling out across ChatGPT, alongside plugin extensions that enable sidebar launches, @ mentions, and integrated file viewers. Developers simultaneously spot the release of the Decisions API, a lightweight Jev-like multimodal decision model based on GPT-6 Luna.",
+          "url": "https://x.com/OpenAIDevs/status/2107927072165548276"
         },
         {
-          "tag": "agent-companions",
-          "title": "@TheRohanVarma: OpenAI Dot Ships Performance Upgrades Across Cloud Browsing & Tooling",
-          "body": "Rohan Varma posts a one-week update for OpenAI Dots, highlighting performance fixes across cloud browsing, streamlined code attachments, reduced response latency, and refined activity approvals. Next roadmap items include deep Codex app control, multi-computer connection, and improved Windows local computer integration.",
-          "url": "https://x.com/TheRohanVarma/status/2107613388729974839"
+          "tag": "agent-gateway",
+          "title": "@riba2534 & @yetone: Magpie Native Claude Code CLI Gateway Prevents Risk Flags",
+          "body": "Open-source developer yetone releases Magpie, a local multi-account proxy and session manager for Claude. Unlike tools that spoof browser fingerprints, Magpie spawns genuine local Claude Code CLI instances with dedicated profile paths, routing tool execution via MCP and preventing account flags under Anthropic usage policies.",
+          "url": "https://x.com/riba2534/status/2107888731906846859"
         },
         {
-          "tag": "speech-apis",
-          "title": "@OpenRouter: ElevenLabs Voice & Speech-to-Text Launches on OpenRouter",
-          "body": "OpenRouter adds ElevenLabs to its unified model marketplace, giving developers direct API access to 9 text-to-speech models across 90+ languages and 2 speech-to-text models with speaker diarization and word-level timestamps, accompanied by a 50% launch discount through October 19.",
-          "url": "https://x.com/OpenRouter/status/2107851633191436685"
-        },
-        {
-          "tag": "mobile-agents",
-          "title": "@antigravity: Google Antigravity Compiles Android Apps to Physical Devices via Stitch MCP",
-          "body": "Google Antigravity demonstrates prompt-to-device native Android compilation. Combining the Stitch MCP and Android CLI plugins, the agent ingests design mockups, synthesizes Jetpack Compose UI components, verifies rendering inside an emulator, and pushes working binaries directly to connected physical hardware.",
-          "url": "https://x.com/antigravity/status/2107585958245712263"
-        }
-      ]
-    },
-    {
-      "emoji": "🧠",
-      "title": "Agent Cognition, Prompting Philosophy & Cognitive Routing",
-      "items": [
-        {
-          "tag": "coworker-prompting",
-          "title": "@bcherny (Boris Cherny): Prompting Claude Like a Coworker Instead of Rigid Scaffolding",
-          "body": "Claude Code creator Boris Cherny advises developers against brittle, over-scaffolded prompt engineering. With frontier reasoning models, effective collaboration mirrors managing human peers: (1) state the objective clearly, (2) define the effort/token budget, and (3) establish unambiguous verification criteria. Baoyu (@dotey) illustrates the principle through Boris's Acquired podcast companion prompt, which produced interactive artifacts and self-verified OpenCV watercolor graphics.",
-          "url": "https://x.com/bcherny/status/2107565388250874193"
-        },
-        {
-          "tag": "rag-architectures",
-          "title": "@_avichawla (Avi Chawla): Jev + RAG Explained — Bounded Probability Gating Over Heuristic Reranking",
-          "body": "Avi Chawla breaks down why conventional RAG and vector rerankers fail on negative queries: relevance ranking does not imply answerability. Introducing Jev into the pipeline enables candidate evaluation against typed questions, outputting calibrated probability scores that drop low-confidence context before generation and short-circuit hallucinations entirely when document support is absent.",
-          "url": "https://x.com/_avichawla/status/2107767245917368751"
-        },
-        {
-          "tag": "cognitive-split",
-          "title": "@balance0014: Stanford AI Team Bridges Claude Opus 5.5 and GPT-6.1 Sol for Exploration",
-          "body": "Stanford AI researchers demonstrate a collaborative architecture splitting cognitive duties: Claude Opus 5.5 maintains long-term persistent thought graphs for high-level search and planning, while GPT-6.1 Sol explores high-entropy code variations in an isolated execution sandbox. The split halves exploratory inference costs while eliminating deceptive reward gaming on complex competitive benchmarks.",
-          "url": "https://x.com/balance0014/status/2107719505287782481"
-        },
-        {
-          "tag": "hierarchical-planning",
-          "title": "@askalphaxiv: Yann LeCun Advises H-JEPA for Multi-Timescale Visual Planning",
-          "body": "New research advised by Yann LeCun introduces H-JEPA (Hierarchical Joint Embedding Predictive Architecture), stacking world models across distinct temporal scales. Higher tiers establish strategic spatial destinations while lower tiers translate them into concrete subgoals and low-level actuators, boosting Visual AntMaze success rates from 18% to 73% with reduced planning compute.",
-          "url": "https://x.com/askalphaxiv/status/2107751281553236473"
+          "tag": "real-world-actions",
+          "title": "@meghanvjoyce & @getseaworthy: Seaworthy Launches Unified Execution API for Real-World Agent Errands",
+          "body": "Seaworthy launches an execution infrastructure API trained on 30M+ actions that empowers AI agents to perform real-world tasks that typically break brittle scripts—including placing outbound interactive phone calls, handling payment flows, and coordinating logistics.",
+          "url": "https://x.com/meghanvjoyce/status/2107842190177095943"
         }
       ]
     },
     {
       "emoji": "⚡",
-      "title": "Hacker Realities, Open-Source Tooling & Creative Code",
+      "title": "Developer Breakthroughs, Systems & Open Source",
       "items": [
         {
-          "tag": "solo-developer",
-          "title": "@realchendahuang (Chen Dahuang): The Anatomy of Solo Hacker Survival in the Agent Era",
-          "body": "A viral post dissects the failure patterns of indie developers in 2026: avoiding premature cofounders and offices in favor of zero-fixed-cost serverless stacks (Cloudflare Workers, D1, R2, Pages). Chen emphasizes that AI agents make software construction virtually free, meaning developer survival now depends entirely on overcoming the fear of talking to real users and doing unscalable customer validation.",
-          "url": "https://x.com/realchendahuang/status/2107422608178266388"
+          "tag": "linux-ios",
+          "title": "@JoshuaSWarren: Building, Signing, and Debugging iOS Apps on Linux Without a Mac",
+          "body": "Joshua Warren documents building an iOS app completely on Omarchy Linux, signing the binary, submitting it to the Apple App Store, deploying to a physical iPhone via USB, and pausing execution at a native breakpoint in the debugger—eliminating the requirement for macOS hardware in Apple mobile development.",
+          "url": "https://x.com/JoshuaSWarren/status/2107570814036111783"
         },
         {
-          "tag": "rust-open-source",
-          "title": "@_FORAB & @math_fournity: Open-Source Rust Adobe Alternatives Surge on GitHub",
-          "body": "A suite of 7 open-source creative desktop applications written from scratch in pure Rust gains viral traction on GitHub. Designed as free, local-first replacements for Photoshop and other proprietary suites, the projects showcase rapid AI-assisted software rebuilding, earning thousands of stars from creators eager to escape subscription fees.",
-          "url": "https://x.com/_FORAB/status/2107725559589753237"
+          "tag": "late-interaction",
+          "title": "@AravSrinivas (Aravind Srinivas): Perplexity Open-Sources PPLX-Embed-V2-Late for OCR-Free Document Retrieval",
+          "body": "Perplexity open-sources pplx-embed-v2-late across 9B and 0.6B weights. Built on a unified multimodal embedding space, the models enable cross-model indexing and querying—allowing heavy 9B document indexing with lightweight 0.6B on-device querying, and indexing complex multi-page PDF documents without an OCR preprocessing step.",
+          "url": "https://x.com/AravSrinivas/status/2107871834205196784"
         },
         {
-          "tag": "code-review",
-          "title": "@siddhantmohan1: Open-Source AI Code Review Engine with 100+ Static Scanners",
-          "body": "Siddhant Mohan releases an open-source AI code reviewer designed to eliminate $60/seat commercial tools. The tool pairs over 100 deterministic security and style scanners with local Claude Code and Codex execution, enforcing interactive answers to all flagged issues before code can be committed.",
-          "url": "https://x.com/siddhantmohan1/status/2107645119130440006"
+          "tag": "os-architecture",
+          "title": "@bojie_li (Bojie Li): Why Desktop Operating Systems Must Be Re-Engineered for Agents",
+          "body": "Bojie Li outlines the architectural bottlenecks facing agent harnesses on existing desktop OSes: sub-100ms TTFT requirements for real-time voice, massive multi-agent git worktree sprawl exhausting 3TB SSDs in a single day, and memory pressure crashing SSH daemons—calling for kernel-level agent isolation, I/O caching, and automated worktree garbage collection.",
+          "url": "https://x.com/bojie_li/status/2107469512476098813"
         },
         {
-          "tag": "graph-algorithms",
-          "title": "@DavidKPiano (David Khourshid): Stately Releases Open-Source Graph Library @statelyai/graph",
-          "body": "David Khourshid launches @statelyai/graph, a TypeScript graph data structure library supporting bi-directional conversions between DOT, Mermaid, and GraphML, featuring type-safe traversal algorithms and visual layout properties for state machines and workflow visualization.",
-          "url": "https://x.com/DavidKPiano/status/2107796570213126271"
+          "tag": "ci-infrastructure",
+          "title": "@mattgapp (Matt Gapp): Jog Launches Dedicated High-Speed CI Hardware to Unblock Agent Velocity",
+          "body": "Matt Gapp announces Jog, dedicated bare-metal CI infrastructure designed to eliminate massive $50k/month CI bills caused by high-concurrency coding agent commits. By removing virtualization overhead and optimizing for agent-scale build loops, Jog cuts build queue delays and execution costs.",
+          "url": "https://x.com/mattgapp/status/2107942692034683326"
         }
       ]
     }
