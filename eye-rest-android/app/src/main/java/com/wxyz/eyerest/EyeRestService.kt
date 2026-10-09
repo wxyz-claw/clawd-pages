@@ -113,10 +113,10 @@ class EyeRestService : Service() {
     override fun onBind(intent: Intent?): IBinder? = null
 
     override fun onDestroy() {
-        handler.removeCallbacksAndMessages(null)
         releaseWakeLock()
         breakMusicPlayer.close()
         voiceGuide.close()
+        handler.removeCallbacksAndMessages(null)
         releaseAudioFocus()
         if (noisyRegistered) unregisterReceiver(noisyReceiver)
         super.onDestroy()

@@ -35,6 +35,7 @@ class VoiceGuide(
     private var tts: TextToSpeech? = null
     private var ready = false
     private var closed = false
+    private var activeSpeech = false
     private var generation = 0
     private var pending: Pair<Int, VoicePrompt>? = null
     private var tone: ToneGenerator? = null
@@ -50,7 +51,7 @@ class VoiceGuide(
         val token = generation
         if (chimeEnabled && prompt in listOf(VoicePrompt.REST_START, VoicePrompt.WORK_START)) chime(prompt)
         if (!voiceEnabled) return
-        onSpeechActive(true)
+        setSpeechActive(true)
         val next = MediaPlayer()
         player = next
         try {
@@ -66,7 +67,7 @@ class VoiceGuide(
             }
             next.prepareAsync()
             // Covers silent decoder/TTS failures without allowing stale audio to linger.
-            handler.postDelayed({ if (generation == token && (player != null || pending != null)) {
+            handler.postDelayed({ if (generation == token && activeSpeech) {
                 cancel(); onUnavailable()
             } }, 8_000L)
         } catch (_: Exception) {
@@ -82,7 +83,7 @@ class VoiceGuide(
         releasePlayer()
         tts?.stop()
         tone?.stopTone()
-        onSpeechActive(false)
+        setSpeechActive(false)
     }
 
     fun close() {
@@ -92,9 +93,11 @@ class VoiceGuide(
         tts?.shutdown(); tts = null; ready = false
     }
 
+    private fun setSpeechActive(value: Boolean) { activeSpeech = value; onSpeechActive(value) }
+
     private fun current(token: Int, candidate: MediaPlayer) = !closed && generation == token && player === candidate
     private fun releasePlayer() { player?.release(); player = null }
-    private fun finish() { releasePlayer(); pending = null; onSpeechActive(false) }
+    private fun finish() { releasePlayer(); pending = null; setSpeechActive(false) }
 
     private fun fallback(prompt: VoicePrompt, token: Int) {
         if (closed || token != generation) return
@@ -107,7 +110,7 @@ class VoiceGuide(
                 val engine = tts ?: return@post
                 if (status != TextToSpeech.SUCCESS) {
                     val failedCurrent = pending?.first == generation
-                    pending = null; engine.shutdown(); tts = null; onSpeechActive(false)
+                    pending = null; engine.shutdown(); tts = null; setSpeechActive(false)
                     if (failedCurrent) onUnavailable()
                     return@post
                 }
@@ -131,7 +134,7 @@ class VoiceGuide(
     }
 
     private fun speak(prompt: VoicePrompt, token: Int) {
-        onSpeechActive(true)
+        setSpeechActive(true)
         if (tts?.speak(prompt.text, TextToSpeech.QUEUE_FLUSH, Bundle(), "speech-$token") != TextToSpeech.SUCCESS) {
             finish(); onUnavailable()
         }

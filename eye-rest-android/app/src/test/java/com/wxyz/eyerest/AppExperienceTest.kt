@@ -27,6 +27,7 @@ import org.robolectric.annotation.GraphicsMode
 import org.robolectric.shadows.ShadowMediaPlayer
 import org.robolectric.util.ReflectionHelpers
 import java.io.File
+import java.time.Duration
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [26, 35], qualifiers = "w360dp-h800dp-mdpi")
@@ -77,6 +78,18 @@ class AppExperienceTest {
         assertNull(ReflectionHelpers.getField<Any?>(guide, "player"))
         guide.play(VoicePrompt.THREE, true, false)
         assertNull(ReflectionHelpers.getField<Any?>(guide, "player"))
+        guide.close()
+    }
+
+    @Test fun stalledDecoderTimesOutAndCancelsSound() {
+        var unavailable = 0
+        val guide = VoiceGuide(context, onUnavailable = { unavailable++ })
+        guide.play(VoicePrompt.REST_START, true, false)
+        assertNotNull(ReflectionHelpers.getField<Any?>(guide, "player"))
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofSeconds(8))
+        assertEquals(1, unavailable)
+        assertNull(ReflectionHelpers.getField<Any?>(guide, "player"))
+        assertFalse(ReflectionHelpers.getField<Boolean>(guide, "activeSpeech"))
         guide.close()
     }
 
