@@ -6,231 +6,134 @@ import android.media.AudioManager
 import android.media.MediaPlayer
 import android.media.ToneGenerator
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
-import android.speech.tts.Voice
-import java.io.File
 import java.util.Locale
 
-
-enum class VoicePrompt(val cacheId: String, val text: String) {
-    REST_START(
-        "rest_start",
-        "It's time to rest your eyes. Look into the distance, and let your gaze soften."
-    ),
-    HALFWAY(
-        "halfway",
-        "Keep looking far away. Breathe slowly, and relax your eyes."
-    ),
-    FIVE_SECONDS(
-        "five_seconds",
-        "Five seconds left. Keep your eyes soft."
-    ),
-    THREE("three", "Three."),
-    TWO("two", "Two."),
-    ONE("one", "One."),
-    WORK_START(
-        "work_start",
-        "Nice work. Your eye break is complete. You can return to your screen."
-    )
+enum class VoicePrompt(val recording: Int, val text: String) {
+    REST_START(R.raw.rest_start, "Take a moment. Look into the distance."),
+    HALFWAY(R.raw.halfway, "Let your eyes relax. Blink gently."),
+    FIVE_SECONDS(R.raw.five_seconds, "Just a few more seconds."),
+    THREE(0, ""), TWO(0, ""), ONE(0, ""),
+    WORK_START(R.raw.work_start, "All set. Ease back into your day.")
 }
 
-class VoiceGuide(
-    context: Context,
-    private val onSpeechActive: (Boolean) -> Unit = {}
-) {
+/** Bundled narration is the offline default. TTS is only a playback-error fallback. */
+class VoiceGuide(context: Context, private val onSpeechActive: (Boolean) -> Unit = {}) {
     private val appContext = context.applicationContext
-    private val cacheRoot = File(appContext.cacheDir, "eye-rest-voice-v3").apply { mkdirs() }
-    private val audioAttributes = AudioAttributes.Builder()
+    private val handler = Handler(Looper.getMainLooper())
+    private val attributes = AudioAttributes.Builder()
         .setUsage(AudioAttributes.USAGE_MEDIA)
-        .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
-        .build()
-
-    private var textToSpeech: TextToSpeech? = null
-    private var ready = false
-    private var pendingPrompt: VoicePrompt? = null
+        .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build()
     private var player: MediaPlayer? = null
-    private var toneGenerator: ToneGenerator? = null
-    private var voiceCacheKey = "default"
+    private var tts: TextToSpeech? = null
+    private var ready = false
+    private var closed = false
+    private var generation = 0
+    private var pending: Pair<Int, VoicePrompt>? = null
+    private var tone: ToneGenerator? = null
 
-    fun prepare() {
-        if (textToSpeech != null) return
-        textToSpeech = TextToSpeech(appContext) { status ->
-            val engine = textToSpeech
-            if (status == TextToSpeech.SUCCESS && engine != null) {
-                configure(engine)
-                ready = true
-                synthesizeMissing(engine)
-                pendingPrompt?.also {
-                    pendingPrompt = null
-                    speakDirect(it)
-                }
+    fun play(prompt: VoicePrompt, voiceEnabled: Boolean, chimeEnabled: Boolean) {
+        if (closed) return
+        // Countdown is a quiet, optional chime, never overlapping spoken numbers.
+        if (prompt.recording == 0) {
+            if (chimeEnabled) chime(prompt)
+            return
+        }
+        cancel()
+        val token = generation
+        if (chimeEnabled && prompt in listOf(VoicePrompt.REST_START, VoicePrompt.WORK_START)) chime(prompt)
+        if (!voiceEnabled) return
+        onSpeechActive(true)
+        val next = MediaPlayer()
+        player = next
+        try {
+            next.setAudioAttributes(attributes)
+            appContext.resources.openRawResourceFd(prompt.recording).use {
+                next.setDataSource(it.fileDescriptor, it.startOffset, it.length)
             }
+            next.setOnPreparedListener { if (current(token, next)) it.start() }
+            next.setOnCompletionListener { if (current(token, next)) finish() }
+            next.setOnErrorListener { _, _, _ ->
+                if (current(token, next)) { releasePlayer(); fallback(prompt, token) }
+                true
+            }
+            next.prepareAsync()
+            // Covers silent decoder/TTS failures without allowing stale audio to linger.
+            handler.postDelayed({ if (generation == token) cancel() }, 8_000L)
+        } catch (_: Exception) {
+            releasePlayer()
+            fallback(prompt, token)
         }
     }
 
-    fun play(prompt: VoicePrompt, voiceEnabled: Boolean, chimeEnabled: Boolean) {
-        if (chimeEnabled) playChime(prompt)
-        if (!voiceEnabled) return
-
-        if (!ready) {
-            pendingPrompt = prompt
-            prepare()
-            return
-        }
-
-        stopActiveSpeech()
-        val file = promptFile(prompt)
-        if (file.isFile && file.length() > 44L) {
-            if (!playCached(file)) speakDirect(prompt)
-        } else {
-            speakDirect(prompt)
-            textToSpeech?.let { synthesizePrompt(it, prompt) }
-        }
+    fun cancel() {
+        generation++
+        pending = null
+        handler.removeCallbacksAndMessages(null)
+        releasePlayer()
+        tts?.stop()
+        tone?.stopTone()
+        onSpeechActive(false)
     }
 
     fun close() {
-        pendingPrompt = null
-        stopActiveSpeech()
-        toneGenerator?.release()
-        toneGenerator = null
-        textToSpeech?.shutdown()
-        textToSpeech = null
-        ready = false
-        onSpeechActive(false)
+        cancel()
+        closed = true
+        tone?.release(); tone = null
+        tts?.shutdown(); tts = null; ready = false
     }
 
-    private fun configure(engine: TextToSpeech) {
-        engine.language = Locale.US
-        engine.setSpeechRate(0.94f)
-        engine.setPitch(1.01f)
-        engine.setAudioAttributes(audioAttributes)
+    private fun current(token: Int, candidate: MediaPlayer) = !closed && generation == token && player === candidate
+    private fun releasePlayer() { player?.release(); player = null }
+    private fun finish() { releasePlayer(); pending = null; onSpeechActive(false) }
 
-        val selectedVoice = engine.voices
-            ?.asSequence()
-            ?.filter { it.locale.language.equals("en", ignoreCase = true) }
-            ?.maxByOrNull(::voiceScore)
-
-        if (selectedVoice != null) {
-            engine.voice = selectedVoice
-            voiceCacheKey = selectedVoice.name.hashCode().toUInt().toString(16)
-        }
-
-        engine.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-            override fun onStart(utteranceId: String?) {
-                if (utteranceId?.startsWith("speak-") == true) onSpeechActive(true)
+    private fun fallback(prompt: VoicePrompt, token: Int) {
+        if (closed || token != generation) return
+        if (ready) { speak(prompt, token); return }
+        pending = token to prompt
+        if (tts != null) return
+        tts = TextToSpeech(appContext) { status ->
+            handler.post {
+                if (closed) return@post
+                val engine = tts ?: return@post
+                if (status != TextToSpeech.SUCCESS) {
+                    pending = null; engine.shutdown(); tts = null; onSpeechActive(false)
+                    return@post
+                }
+                engine.language = Locale.US
+                engine.voices?.filter { it.locale.language == "en" && !it.isNetworkConnectionRequired }
+                    ?.maxByOrNull { it.quality * 2 - it.latency }?.let { engine.voice = it }
+                engine.setSpeechRate(.94f); engine.setPitch(1f); engine.setAudioAttributes(attributes)
+                engine.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
+                    override fun onStart(id: String?) = Unit
+                    override fun onDone(id: String?) { handler.post { if (id == "speech-$generation") finish() } }
+                    @Deprecated("Deprecated in Java")
+                    override fun onError(id: String?) { handler.post { if (id == "speech-$generation") finish() } }
+                })
+                ready = true
+                pending?.let { (epoch, cue) -> if (epoch == generation) speak(cue, epoch) }
+                pending = null
             }
-
-            override fun onDone(utteranceId: String?) {
-                if (utteranceId?.startsWith("speak-") == true) onSpeechActive(false)
-            }
-
-            @Deprecated("Deprecated in Java")
-            override fun onError(utteranceId: String?) {
-                if (utteranceId?.startsWith("speak-") == true) onSpeechActive(false)
-            }
-        })
-    }
-
-    private fun voiceScore(voice: Voice): Int {
-        val name = voice.name.lowercase(Locale.US)
-        var score = voice.quality * 2 - voice.latency
-
-        score += when (voice.locale.country.uppercase(Locale.US)) {
-            "US" -> 80
-            "CA", "GB", "AU", "NZ" -> 45
-            else -> 10
-        }
-
-        if (voice.isNetworkConnectionRequired) score += 45
-        if ("natural" in name) score += 180
-        if ("neural" in name) score += 180
-        if ("wavenet" in name) score += 170
-        if ("studio" in name) score += 160
-        if ("premium" in name) score += 150
-        if ("enhanced" in name) score += 120
-        if ("network" in name) score += 50
-        if ("compact" in name || "legacy" in name) score -= 100
-
-        return score
-    }
-
-    private fun synthesizeMissing(engine: TextToSpeech) {
-        VoicePrompt.entries.forEach { prompt ->
-            val file = promptFile(prompt)
-            if (!file.isFile || file.length() <= 44L) synthesizePrompt(engine, prompt)
         }
     }
 
-    private fun synthesizePrompt(engine: TextToSpeech, prompt: VoicePrompt) {
-        val file = promptFile(prompt)
-        file.parentFile?.mkdirs()
-        runCatching {
-            engine.synthesizeToFile(
-                prompt.text,
-                Bundle(),
-                file,
-                "cache-${prompt.cacheId}"
-            )
-        }
-    }
-
-    private fun speakDirect(prompt: VoicePrompt) {
-        textToSpeech?.speak(
-            prompt.text,
-            TextToSpeech.QUEUE_FLUSH,
-            Bundle(),
-            "speak-${prompt.cacheId}"
-        )
-    }
-
-    private fun playCached(file: File): Boolean = runCatching {
+    private fun speak(prompt: VoicePrompt, token: Int) {
         onSpeechActive(true)
-        val nextPlayer = MediaPlayer().apply {
-            setAudioAttributes(audioAttributes)
-            setDataSource(file.absolutePath)
-            setOnCompletionListener { completed ->
-                completed.release()
-                if (player === completed) player = null
-                onSpeechActive(false)
-            }
-            setOnErrorListener { failed, _, _ ->
-                failed.release()
-                if (player === failed) player = null
-                onSpeechActive(false)
-                true
-            }
-            prepare()
-            start()
-        }
-        player = nextPlayer
-        true
-    }.getOrElse {
-        onSpeechActive(false)
-        false
+        if (tts?.speak(prompt.text, TextToSpeech.QUEUE_FLUSH, Bundle(), "speech-$token") != TextToSpeech.SUCCESS) finish()
     }
 
-    private fun stopActiveSpeech() {
-        player?.release()
-        player = null
-        textToSpeech?.stop()
-        onSpeechActive(false)
-    }
-
-    private fun playChime(prompt: VoicePrompt) {
-        val tone = when (prompt) {
-            VoicePrompt.REST_START -> ToneGenerator.TONE_PROP_BEEP2
-            VoicePrompt.WORK_START -> ToneGenerator.TONE_PROP_ACK
-            else -> ToneGenerator.TONE_PROP_BEEP
-        }
+    private fun chime(prompt: VoicePrompt) {
         runCatching {
-            val generator = toneGenerator ?: ToneGenerator(AudioManager.STREAM_MUSIC, 45).also {
-                toneGenerator = it
+            val generator = tone ?: ToneGenerator(AudioManager.STREAM_MUSIC, 25).also { tone = it }
+            val kind = when (prompt) {
+                VoicePrompt.REST_START -> ToneGenerator.TONE_PROP_BEEP2
+                VoicePrompt.WORK_START -> ToneGenerator.TONE_PROP_ACK
+                else -> ToneGenerator.TONE_PROP_BEEP
             }
-            generator.startTone(tone, 110)
+            generator.startTone(kind, 80)
         }
     }
-
-    private fun promptFile(prompt: VoicePrompt): File =
-        File(File(cacheRoot, voiceCacheKey), "${prompt.cacheId}.wav")
 }

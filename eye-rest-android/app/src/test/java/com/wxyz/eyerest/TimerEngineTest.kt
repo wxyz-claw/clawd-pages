@@ -76,9 +76,6 @@ class TimerEngineTest {
         assertEquals(2, result.snapshot.completedRests)
         assertEquals(
             listOf<TimerEvent>(
-                TimerEvent.PhaseStarted(TimerPhase.WORK),
-                TimerEvent.PhaseStarted(TimerPhase.REST),
-                TimerEvent.PhaseStarted(TimerPhase.WORK),
                 TimerEvent.PhaseStarted(TimerPhase.REST),
                 TimerEvent.FiveSeconds
             ),
@@ -122,7 +119,7 @@ class TimerEngineTest {
     }
 
     @Test
-    fun delayedRestTickEmitsEveryCrossedCountdownCue() {
+    fun delayedRestTickEmitsOnlyCurrentCountdownCue() {
         val timer = engine(restSeconds = 40)
         timer.start()
         now = 35_000
@@ -131,12 +128,43 @@ class TimerEngineTest {
 
         assertEquals(
             listOf<TimerEvent>(
-                TimerEvent.Countdown(3),
-                TimerEvent.Countdown(2),
                 TimerEvent.Countdown(1)
             ),
             timer.tick().events
         )
+    }
+
+    @Test
+    fun processRecreationRetainsOriginalDeadline() {
+        val timer = engine(restSeconds = 10, workSeconds = 20)
+        timer.start()
+        now = 5_000
+        val stored = timer.tick().snapshot
+        now = 15_000
+        val restored = TimerEngine(TimerConfig(10, 20), stored) { now }
+        assertEquals(TimerPhase.WORK, restored.tick().snapshot.phase)
+        assertEquals(15, restored.snapshot().remainingSeconds)
+        assertEquals(1, restored.snapshot().completedRests)
+    }
+
+    @Test
+    fun delayedTickDoesNotReplayHalfwayOrFiveSecondPrompts() {
+        val timer = engine()
+        timer.start()
+        now = 39_000
+        assertEquals(listOf<TimerEvent>(TimerEvent.Countdown(1)), timer.tick().events)
+    }
+
+    @Test
+    fun durationChangePreservesCurrentPhaseAndAppliesToNext() {
+        val timer = engine()
+        timer.start()
+        now = 5_000
+        timer.tick()
+        timer.updateConfig(TimerConfig(60, 120))
+        assertEquals(35, timer.snapshot().remainingSeconds)
+        now = 40_000
+        assertEquals(120, timer.tick().snapshot.remainingSeconds)
     }
 
     @Test

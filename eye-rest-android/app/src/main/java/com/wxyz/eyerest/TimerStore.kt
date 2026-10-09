@@ -1,6 +1,7 @@
 package com.wxyz.eyerest
 
 import android.content.Context
+import android.provider.Settings
 
 object TimerStore {
     private const val PREFS = "eye_rest_timer_state"
@@ -9,6 +10,8 @@ object TimerStore {
     private const val REMAINING = "remaining"
     private const val TOTAL = "total"
     private const val COMPLETED_RESTS = "completed_rests"
+    private const val DEADLINE = "deadline_millis"
+    private const val BOOT_COUNT = "boot_count"
 
     fun save(context: Context, snapshot: TimerSnapshot) {
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
@@ -18,6 +21,8 @@ object TimerStore {
             .putInt(REMAINING, snapshot.remainingSeconds)
             .putInt(TOTAL, snapshot.totalSeconds)
             .putInt(COMPLETED_RESTS, snapshot.completedRests)
+            .putLong(DEADLINE, snapshot.deadlineMillis)
+            .putInt(BOOT_COUNT, Settings.Global.getInt(context.contentResolver, Settings.Global.BOOT_COUNT, -1))
             .apply()
     }
 
@@ -31,10 +36,12 @@ object TimerStore {
 
         return TimerSnapshot(
             phase = phase,
-            running = prefs.getBoolean(RUNNING, false),
+            running = prefs.getBoolean(RUNNING, false) &&
+                prefs.getInt(BOOT_COUNT, -1) == Settings.Global.getInt(context.contentResolver, Settings.Global.BOOT_COUNT, -1),
             remainingSeconds = remaining.coerceAtMost(total),
             totalSeconds = total,
-            completedRests = prefs.getInt(COMPLETED_RESTS, 0).coerceAtLeast(0)
+            completedRests = prefs.getInt(COMPLETED_RESTS, 0).coerceAtLeast(0),
+            deadlineMillis = prefs.getLong(DEADLINE, 0L)
         )
     }
 }

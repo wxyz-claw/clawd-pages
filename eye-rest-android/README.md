@@ -1,59 +1,36 @@
-# Eye Rest Android Prototype
+# Eye Rest for Android — 0.3.0 review candidate
 
-Native Android companion for the Eye Rest PWA. It uses a foreground media service and partial wake lock so the timer, music, chimes, and spoken prompts can continue while the phone is locked.
+A small native companion for the Eye Rest PWA. Start with 40 seconds away from your screen, then 20 minutes of focus. The cycle repeats until you stop it. Timing and audio use the original foreground media service and partial wake lock for screen-off operation.
 
-## Current behavior
+## This update
 
-- 40-second rest and 20-minute work defaults
-- Repeating rest/work cycle
-- Prefers the highest-quality English natural, neural, premium, or network TTS voice installed on the phone
-- Versioned speech cache so upgraded voices replace older robotic recordings
-- Locally generated gentle ambient music during eye-rest periods
-- Music automatically ducks while voice guidance speaks
-- Persistent lock-screen notification
-- Pause/Resume, Skip, and Stop notification actions
-- Editable durations
-- Independent voice, chime, and break-music toggles
-- Android 8.0 / API 26 minimum
+- Four bundled, short English narration clips use the approved Heart voice, generated offline with Kokoro. Normal speech needs neither a network nor a device TTS engine. Android offline TTS remains a playback-error fallback.
+- Guidance leaves room for silence. The last three seconds use optional quiet chimes, rather than cutting off spoken countdown numbers.
+- Pause, Stop, Skip, voice-off, interrupted audio focus, and headphone disconnection cancel sound. Old decoder callbacks cannot affect the next prompt. Focus denial pauses with an explanation; resuming is explicit.
+- Optional local ambient music plays only during rest, fades in, and ducks while speech plays.
+- A pale mint screen, leaf mark, circular progress dial and one primary action preserve the minimalist direction. Options begin collapsed; there are no test-voice or diagnostic controls.
+- Controls have 48dp minimum targets, phase changes announce politely, the ticking clock does not repeatedly interrupt TalkBack, and the screen scrolls at large font sizes. System-bar insets and rotation are supported.
+- Existing settings keys and app identity are preserved. Loading an activity no longer overwrites independent audio preferences. Duration changes apply to the next phase.
+- Monotonic deadlines survive service recreation on the same boot. A reboot never resumes a saved active session. Late callbacks use current cues instead of replaying expired phases.
 
-## Install the prototype
+## Personal sideload testing
 
-1. Download `app-debug.apk` from the `eye-rest-android-debug-apk` GitHub Actions artifact.
-2. Open the APK on the Android phone.
-3. Allow installation from the browser or file manager when Android asks.
-4. Open **Eye Rest** and allow notifications.
-5. Tap **Start timer**, then lock the phone.
+The existing GitHub Actions workflow builds a debug APK and retains test/lint reports and native view renders. This is a review candidate, not a store release. Device-specific screen-off behavior, calls/Bluetooth routing, listening quality and TalkBack still require physical-device evaluation; simulated tests are labeled separately in `QUALITY.md`.
 
-The APK is debug-signed for personal sideload testing. It is not Play Store–ready.
+**Keep the installed app and its data.** A debug APK can update it only if its signing certificate matches the installed APK. The original workflow generated ephemeral debug keys; this checkout contains no recoverable old signing key. Do not uninstall or clear data to bypass a signature mismatch. Compare signing certificates before upgrading, and use the original signing key if it becomes available.
 
-## Voice quality
+Android 8.0/API26 minimum, target/compile SDK35. English only. No reboot auto-start, account, paid voice service, analytics or new Android permissions.
 
-The app selects the best English voice reported by the phone's TTS engine. It strongly prefers voices whose names indicate natural, neural, WaveNet, studio, premium, or enhanced quality. A network voice may be selected when available, so the first prompt can benefit from an internet connection. The app falls back to the best locally installed voice.
+## Audio provenance
 
-Android voice quality still depends on the TTS engine and voice packages installed on the phone. On Pixel devices, keeping **Speech Services by Google** and its English voice data updated generally provides the best result.
-
-## Break music
-
-Break music is synthesized locally by the app as a quiet, slowly changing ambient chord progression. It requires no download or streaming, runs only during the rest phase, and becomes much quieter while a spoken prompt is active.
-
-## Reliability notes
-
-- An ongoing notification remains visible while the service is active.
-- The app holds a partial wake lock only while the timer is running.
-- Pause releases the wake lock and stops the music; Stop removes the notification and terminates the service.
-- The first spoken prompt may use direct TTS while fixed prompts are being cached.
-- The prototype does not automatically restart after a phone reboot.
+See `third-party/narration-provenance.json` for text, hashes and durations, and `third-party/Kokoro-APACHE-2.0.txt` for license attribution. The app bundles WAV clips, not a synthesis model/runtime. [Official Kokoro-82M model](https://huggingface.co/hexgrad/Kokoro-82M), fixed revision `f3ff3571791e39611d31c381e3a41a3af07b4987`, voice `af_heart`, speed0.94. Total bundled PCM is about507KB. Naturalness is a listening judgment; successful generation/decode does not certify it.
 
 ## Build
 
-The repository workflow installs Android SDK 35 and runs:
+Use the original pinned Gradle8.10.2, Java21 and Android SDK35 toolchain:
 
-```bash
-gradle testDebugUnitTest assembleDebug --stacktrace --no-daemon
+```sh
+gradle testDebugUnitTest lintDebug assembleDebug --stacktrace --no-daemon
 ```
 
-The debug APK is produced at:
-
-```text
-app/build/outputs/apk/debug/app-debug.apk
-```
+APK: `app/build/outputs/apk/debug/app-debug.apk`. The existing public GitHub workflow can provide this toolchain without installing an SDK or emulator on the user's Mac.

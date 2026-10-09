@@ -7,6 +7,8 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.BroadcastReceiver
+import android.content.IntentFilter
 import android.content.pm.ServiceInfo
 import android.graphics.Color
 import android.os.Build
@@ -15,6 +17,9 @@ import android.os.IBinder
 import android.os.Looper
 import android.os.PowerManager
 import android.os.SystemClock
+import android.media.AudioAttributes
+import android.media.AudioFocusRequest
+import android.media.AudioManager
 
 class EyeRestService : Service() {
     private val handler = Handler(Looper.getMainLooper())
@@ -25,6 +30,20 @@ class EyeRestService : Service() {
     private var settings = UserSettings()
     private var foregroundActive = false
     private var lastPublishedSecond = -1
+    private lateinit var audioManager: AudioManager
+    private lateinit var focusRequest: AudioFocusRequest
+    private var hasAudioFocus = false
+    private var speechActive = false
+    private var pauseReason = ""
+    private var noisyRegistered = false
+    private val noisyReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY && engine.snapshot().running) {
+                pauseReason = "Audio disconnected. Resume when you're ready."
+                pause()
+            }
+        }
+    }
 
     private val ticker = object : Runnable {
         override fun run() {
@@ -40,14 +59,32 @@ class EyeRestService : Service() {
         super.onCreate()
         createNotificationChannel()
         settings = AppSettings.load(this)
+        audioManager = getSystemService(AudioManager::class.java)
+        focusRequest = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK)
+            .setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build())
+            .setOnAudioFocusChangeListener({ change ->
+                if (change < 0 && engine.snapshot().running) {
+                    pauseReason = "Audio interrupted. Resume when you're ready."
+                    pause()
+                }
+            }, handler).build()
+        if (Build.VERSION.SDK_INT >= 33) registerReceiver(noisyReceiver,
+            IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY), Context.RECEIVER_NOT_EXPORTED)
+        else registerReceiver(noisyReceiver, IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY))
+        noisyRegistered = true
         engine = TimerEngine(
             initialConfig = settings.timerConfig(),
             initialSnapshot = TimerStore.load(this)
         ) { SystemClock.elapsedRealtime() }
         breakMusicPlayer = BreakMusicPlayer()
         voiceGuide = VoiceGuide(this) { speechActive ->
+            this.speechActive = speechActive
             breakMusicPlayer.setDucked(speechActive)
-        }.also { it.prepare() }
+            handler.post {
+                if (!this.speechActive && !(engine.snapshot().running && engine.snapshot().phase == TimerPhase.REST && settings.breakMusicEnabled)) releaseAudioFocus()
+            }
+        }
         val powerManager = getSystemService(PowerManager::class.java)
         wakeLock = powerManager.newWakeLock(
             PowerManager.PARTIAL_WAKE_LOCK,
@@ -56,6 +93,8 @@ class EyeRestService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // A sticky service restart restores an active session, never resumes a pause.
+        if (intent == null && !engine.snapshot().running) { stopSelf(); return START_NOT_STICKY }
         when (intent?.action ?: ACTION_START_OR_RESUME) {
             ACTION_START_OR_RESUME -> startOrResume()
             ACTION_PAUSE -> pause()
@@ -63,7 +102,7 @@ class EyeRestService : Service() {
             ACTION_STOP -> stopSession()
             ACTION_REFRESH_SETTINGS -> refreshSettings()
         }
-        return START_STICKY
+        return if (engine.snapshot().running) START_STICKY else START_NOT_STICKY
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
@@ -73,10 +112,13 @@ class EyeRestService : Service() {
         releaseWakeLock()
         breakMusicPlayer.close()
         voiceGuide.close()
+        releaseAudioFocus()
+        if (noisyRegistered) unregisterReceiver(noisyReceiver)
         super.onDestroy()
     }
 
     private fun startOrResume() {
+        pauseReason = ""
         settings = AppSettings.load(this)
         engine.updateConfig(settings.timerConfig())
         val result = engine.start()
@@ -94,11 +136,14 @@ class EyeRestService : Service() {
         handler.removeCallbacks(ticker)
         releaseWakeLock()
         breakMusicPlayer.stop()
+        voiceGuide.cancel()
+        releaseAudioFocus()
         ensureForeground(snapshot)
         publish(snapshot, force = true)
     }
 
     private fun skip() {
+        voiceGuide.cancel()
         val result = engine.skip()
         ensureForeground(result.snapshot)
         if (result.snapshot.running) {
@@ -117,6 +162,8 @@ class EyeRestService : Service() {
         handler.removeCallbacks(ticker)
         releaseWakeLock()
         breakMusicPlayer.stop()
+        voiceGuide.cancel()
+        releaseAudioFocus()
         val snapshot = engine.stop()
         publish(snapshot, force = true)
         stopForeground(STOP_FOREGROUND_REMOVE)
@@ -126,9 +173,11 @@ class EyeRestService : Service() {
 
     private fun refreshSettings() {
         settings = AppSettings.load(this)
+        if (!settings.voiceEnabled) voiceGuide.cancel()
         val snapshot = engine.updateConfig(settings.timerConfig())
         syncBreakMusic(snapshot)
-        if (foregroundActive) publish(snapshot, force = true)
+        publish(snapshot, force = true)
+        if (!foregroundActive) stopSelf()
     }
 
     private fun syncBreakMusic(snapshot: TimerSnapshot) {
@@ -137,14 +186,20 @@ class EyeRestService : Service() {
             snapshot.running &&
             snapshot.phase == TimerPhase.REST
         ) {
-            breakMusicPlayer.start()
+            if (requestAudioFocus()) runCatching { breakMusicPlayer.start() }.onFailure {
+                handler.post {
+                    if (engine.snapshot().running) { pauseReason = "Audio unavailable. Resume when you're ready."; pause() }
+                }
+            }
         } else {
             breakMusicPlayer.stop()
+            if (!speechActive) releaseAudioFocus()
         }
     }
 
     private fun handleEvents(events: List<TimerEvent>) {
-        events.forEach { event ->
+        // Only the newest relevant cue may speak after a delayed callback.
+        events.takeLast(1).forEach { event ->
             val prompt = when (event) {
                 is TimerEvent.PhaseStarted -> when (event.phase) {
                     TimerPhase.REST -> VoicePrompt.REST_START
@@ -158,11 +213,13 @@ class EyeRestService : Service() {
                     else -> VoicePrompt.ONE
                 }
             }
+            if ((settings.voiceEnabled || settings.chimeEnabled) && !requestAudioFocus()) return
             voiceGuide.play(
                 prompt = prompt,
                 voiceEnabled = settings.voiceEnabled,
                 chimeEnabled = settings.chimeEnabled
             )
+            if (!speechActive && !settings.breakMusicEnabled) releaseAudioFocus()
         }
     }
 
@@ -178,6 +235,7 @@ class EyeRestService : Service() {
                 .putExtra(EXTRA_REMAINING, snapshot.remainingSeconds)
                 .putExtra(EXTRA_TOTAL, snapshot.totalSeconds)
                 .putExtra(EXTRA_COMPLETED_RESTS, snapshot.completedRests)
+                .putExtra(EXTRA_PAUSE_REASON, pauseReason)
         )
         if (foregroundActive) {
             getSystemService(NotificationManager::class.java)
@@ -213,7 +271,7 @@ class EyeRestService : Service() {
             .setSmallIcon(R.drawable.ic_eye_rest)
             .setColor(Color.rgb(44, 114, 94))
             .setContentTitle("Eye Rest")
-            .setContentText(notificationText(snapshot))
+            .setContentText(pauseReason.ifEmpty { notificationText(snapshot) })
             .setContentIntent(openApp)
             .setCategory(Notification.CATEGORY_SERVICE)
             .setVisibility(Notification.VISIBILITY_PUBLIC)
@@ -270,6 +328,22 @@ class EyeRestService : Service() {
         if (!wakeLock.isHeld) wakeLock.acquire()
     }
 
+    private fun requestAudioFocus(): Boolean {
+        if (hasAudioFocus) return true
+        hasAudioFocus = audioManager.requestAudioFocus(focusRequest) == AudioManager.AUDIOFOCUS_REQUEST_GRANTED
+        if (!hasAudioFocus && engine.snapshot().running) {
+            handler.post {
+                if (engine.snapshot().running) { pauseReason = "Audio unavailable. Resume when you're ready."; pause() }
+            }
+        }
+        return hasAudioFocus
+    }
+
+    private fun releaseAudioFocus() {
+        if (hasAudioFocus) audioManager.abandonAudioFocusRequest(focusRequest)
+        hasAudioFocus = false
+    }
+
     private fun releaseWakeLock() {
         if (::wakeLock.isInitialized && wakeLock.isHeld) wakeLock.release()
     }
@@ -287,6 +361,7 @@ class EyeRestService : Service() {
         const val EXTRA_REMAINING = "remaining"
         const val EXTRA_TOTAL = "total"
         const val EXTRA_COMPLETED_RESTS = "completed_rests"
+        const val EXTRA_PAUSE_REASON = "pause_reason"
 
         private const val CHANNEL_ID = "eye_rest_timer"
         private const val NOTIFICATION_ID = 202020
