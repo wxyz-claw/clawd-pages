@@ -10,7 +10,6 @@ import android.os.Handler
 import android.os.Looper
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
-import java.util.Locale
 
 enum class VoicePrompt(val recording: Int, val text: String) {
     REST_START(R.raw.rest_start, "Take a moment. Look into the distance."),
@@ -54,6 +53,10 @@ class VoiceGuide(
         setSpeechActive(true)
         val next = MediaPlayer()
         player = next
+        // Covers both a stalled decoder and a TTS engine that never initializes.
+        handler.postDelayed({ if (generation == token && activeSpeech) {
+            cancel(); onUnavailable()
+        } }, 8_000L)
         try {
             next.setAudioAttributes(attributes)
             appContext.resources.openRawResourceFd(prompt.recording).use {
@@ -66,10 +69,6 @@ class VoiceGuide(
                 true
             }
             next.prepareAsync()
-            // Covers silent decoder/TTS failures without allowing stale audio to linger.
-            handler.postDelayed({ if (generation == token && activeSpeech) {
-                cancel(); onUnavailable()
-            } }, 8_000L)
         } catch (_: Exception) {
             releasePlayer()
             fallback(prompt, token)
@@ -114,9 +113,16 @@ class VoiceGuide(
                     if (failedCurrent) onUnavailable()
                     return@post
                 }
-                engine.language = Locale.US
-                engine.voices?.filter { it.locale.language == "en" && !it.isNetworkConnectionRequired }
-                    ?.maxByOrNull { it.quality * 2 - it.latency }?.let { engine.voice = it }
+                val offlineVoice = engine.voices?.filter {
+                    it.locale.language == "en" && !it.isNetworkConnectionRequired &&
+                        TextToSpeech.Engine.KEY_FEATURE_NOT_INSTALLED !in it.features
+                }?.maxByOrNull { it.quality * 2 - it.latency }
+                if (offlineVoice == null || engine.setVoice(offlineVoice) != TextToSpeech.SUCCESS) {
+                    val failedCurrent = pending?.first == generation
+                    pending = null; engine.shutdown(); tts = null; setSpeechActive(false)
+                    if (failedCurrent) onUnavailable()
+                    return@post
+                }
                 engine.setSpeechRate(.94f); engine.setPitch(1f); engine.setAudioAttributes(attributes)
                 engine.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
                     override fun onStart(id: String?) = Unit

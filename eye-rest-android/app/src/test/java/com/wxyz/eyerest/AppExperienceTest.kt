@@ -15,6 +15,10 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ScrollView
 import android.widget.EditText
+import android.speech.tts.TextToSpeech
+import android.speech.tts.Voice
+import org.robolectric.shadows.ShadowTextToSpeech
+import java.util.Locale
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -91,6 +95,38 @@ class AppExperienceTest {
         assertEquals(1, unavailable)
         assertNull(ReflectionHelpers.getField<Any?>(guide, "player"))
         assertFalse(ReflectionHelpers.getField<Boolean>(guide, "activeSpeech"))
+        guide.close()
+    }
+
+    @Test fun failedPlaybackDoesNotUseNetworkOnlyTtsFallback() {
+        ShadowMediaPlayer.setMediaInfoProvider { throw IllegalArgumentException("decoder unavailable") }
+        ShadowTextToSpeech.addVoice(Voice("network", Locale.US, Voice.QUALITY_VERY_HIGH,
+            Voice.LATENCY_NORMAL, true, emptySet()))
+        var unavailable = 0
+        val guide = VoiceGuide(context, onUnavailable = { unavailable++ })
+        guide.play(VoicePrompt.REST_START, true, false)
+        val tts = ReflectionHelpers.getField<TextToSpeech>(guide, "tts")
+        shadowOf(tts).onInitListener.onInit(TextToSpeech.SUCCESS)
+        shadowOf(Looper.getMainLooper()).idle()
+        assertEquals(1, unavailable)
+        assertNull(shadowOf(tts).lastSpokenText)
+        assertTrue(shadowOf(tts).isShutdown)
+        guide.close()
+    }
+
+    @Test fun failedPlaybackUsesInstalledOfflineEnglishVoice() {
+        ShadowMediaPlayer.setMediaInfoProvider { throw IllegalArgumentException("decoder unavailable") }
+        val offline = Voice("offline", Locale.US, Voice.QUALITY_HIGH, Voice.LATENCY_NORMAL, false, emptySet())
+        ShadowTextToSpeech.addVoice(offline)
+        ShadowTextToSpeech.addVoice(Voice("network", Locale.US, Voice.QUALITY_VERY_HIGH,
+            Voice.LATENCY_NORMAL, true, emptySet()))
+        val guide = VoiceGuide(context)
+        guide.play(VoicePrompt.REST_START, true, false)
+        val tts = ReflectionHelpers.getField<TextToSpeech>(guide, "tts")
+        shadowOf(tts).onInitListener.onInit(TextToSpeech.SUCCESS)
+        shadowOf(Looper.getMainLooper()).idle()
+        assertEquals(offline, shadowOf(tts).currentVoice)
+        assertEquals(VoicePrompt.REST_START.text, shadowOf(tts).lastSpokenText)
         guide.close()
     }
 
