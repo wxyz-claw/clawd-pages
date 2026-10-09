@@ -76,6 +76,10 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
+          if [ "${{ inputs.baseline }}" != "true" ]; then
+            gradle testPreviewUnitTest lintPreview assemblePreview --stacktrace --no-daemon 2>&1 | tee preview-build.log
+            cp -r app/build/screenshots app/build/preview-screenshots
+          fi
           gradle testDebugUnitTest lintDebug assembleDebug --stacktrace --no-daemon 2>&1 | tee build.log
 
       - name: Upload tests, lint, and native view renders
@@ -87,6 +91,7 @@ jobs:
             eye-rest-android/app/build/reports
             eye-rest-android/app/build/test-results
             eye-rest-android/app/build/screenshots
+            eye-rest-android/app/build/preview-screenshots
           if-no-files-found: warn
 
       - name: Verify APK integrity and signing certificate
@@ -95,6 +100,32 @@ jobs:
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk > apk-signature.txt
           sha256sum app/build/outputs/apk/debug/app-debug.apk > apk-sha256.txt
           unzip -t app/build/outputs/apk/debug/app-debug.apk > apk-integrity.txt
+
+      - name: Verify preview isolation, integrity and signature
+        if: success() && !inputs.baseline
+        run: |
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/preview/app-preview.apk > apk-preview-signature.txt
+          sha256sum app/build/outputs/apk/preview/app-preview.apk > apk-preview-sha256.txt
+          unzip -t app/build/outputs/apk/preview/app-preview.apk > apk-preview-integrity.txt
+          for variant in debug preview; do
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "app/build/outputs/apk/$variant/app-$variant.apk" > "apk-$variant-manifest.txt"
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump permissions "app/build/outputs/apk/$variant/app-$variant.apk" > "apk-$variant-permissions.txt"
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump xmltree "app/build/outputs/apk/$variant/app-$variant.apk" AndroidManifest.xml > "apk-$variant-tree.txt"
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          normal = Path('apk-debug-manifest.txt').read_text()
+          preview = Path('apk-preview-manifest.txt').read_text()
+          assert normal.startswith("package: name='com.wxyz.eyerest' ")
+          assert preview.startswith("package: name='com.wxyz.eyerest.preview' ")
+          assert "application-label:'Eye Rest'" in normal
+          assert "application-label:'Eye Rest Preview'" in preview
+          def permissions(variant):
+              return {s for s in Path(f'apk-{variant}-permissions.txt').read_text().splitlines() if s.startswith('uses-permission:')}
+          assert permissions('debug') == permissions('preview')
+          assert all('sharedUserId' not in Path(f'apk-{v}-tree.txt').read_text() for v in ['debug', 'preview'])
+          Path('apk-preview-isolation.txt').write_text('Normal: com.wxyz.eyerest / Eye Rest\nPreview: com.wxyz.eyerest.preview / Eye Rest Preview\nDifferent application IDs; no sharedUserId; same Android permissions. Separate Android app sandboxes and settings.\n')
+          PY
 
       - name: Upload APK verification
         if: success()
@@ -109,7 +140,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: eye-rest-android-build-log
-          path: eye-rest-android/build.log
+          path: |
+            eye-rest-android/build.log
+            eye-rest-android/preview-build.log
           if-no-files-found: error
 
       - name: Upload debug APK
@@ -118,4 +151,12 @@ jobs:
         with:
           name: eye-rest-android-debug-apk
           path: eye-rest-android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Upload side-by-side preview APK
+        if: success() && !inputs.baseline
+        uses: actions/upload-artifact@v4
+        with:
+          name: eye-rest-android-preview-apk
+          path: eye-rest-android/app/build/outputs/apk/preview/app-preview.apk
           if-no-files-found: error
