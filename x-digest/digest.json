@@ -1,156 +1,156 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, October 8th, 2026 — 9:00 PM ET",
+  "date": "Friday, October 9th, 2026 — 12:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>OpenAI Releases GPT-6.1 Sol Ultrafast with Instant Realtime Steering on Day 4:</strong> OpenAI rolls out GPT-6.1 Sol Ultrafast across its API, Codex, and ChatGPT Work, delivering near-Astra reasoning intelligence at up to 8x faster speeds. Alongside the model drop, OpenAI ships instant realtime steering, allowing developers to course-correct in-flight generations immediately without burning wasted compute.",
-    "<strong>Hone Secures $60M Seed Led by Benchmark & Index Ventures to Launch 'AI Engines':</strong> Shifting past chatbots and task-level copilot agents, Hone launches persistent AI Engines that directly own bottom-line business outcomes (procurement savings, credit risk, pipeline). Engines autonomously hire their own subagents, register tool skills, and refine memory from operational experience.",
-    "<strong>Anthropic Unveils Experimental Agent Teams for Claude Code with Tri-Model Swarms:</strong> Official Claude Code workflows introduce <code>--teammate-mode auto</code> (<code>CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code>), standardizing a tri-model hierarchy: Opus 5.5 scopes architecture and approves PRs, Sonnet 5.5 executes code in isolated git worktrees guarded by file mutexes, and Haiku 5.5 swarms peer-to-peer at 340 tok/s for contract validation and AST fuzzing.",
-    "<strong>Deep Audit Reveals Prompt Cache Pitfalls During Agent Context Compaction:</strong> KC (@ScarletKc) releases a comprehensive architectural survey of context compaction across Claude Code, Codex, Qwen Code, OpenCode, Cline, and pi. Altering system prompts or removing tools during compaction invalidates prefix cache matching, turning an inexpensive hot-cache compaction into an un-cached $70 full re-read.",
-    "<strong>Open-Source REA Framework Hooks MCP into Hopper & Ghidra for Automated Binary Decompilation:</strong> The viral REA ('Reverse Engineer Anything') project connects agentic coding systems to Hopper, Ghidra, and IDA Pro via Model Context Protocol. AI agents can now autonomously inspect closed-source Mach-O, PE, ELF, and APK binaries, extract control flow graphs, and synthesize clean-room functional source implementations."
+    "<strong>Anthropic Ships Claude Dashboards & Motion in Beta with Monthly Platform API Credits:</strong> Anthropic releases Claude Dashboards for live database-connected BI (Snowflake, BigQuery, ClickHouse) and Claude Motion for programmatic code-driven animation. Concurrently, Anthropic introduces monthly platform API credits ($100-$500/mo) across Max and Team subscriptions, usable with all models and third-party harnesses.",
+    "<strong>The 'Anti-Slop Software Factory' Blueprint Goes Viral Across Scaled Teams:</strong> Sarah (@sarahfim) shares an operational architecture for coordinating 50+ contributors and their autonomous coding agents without compounding technical debt. The model bans useState/useEffect in favor of server actions, tolerates bounded code duplication, and enforces deterministic test gates via tRPC, React Doctor, and MCP test suites.",
+    "<strong>Monid Emerges as the 'OpenRouter of Agent Tools' with 2,443 Unified APIs:</strong> Monid gains massive traction as a foundational tool layer for Codex and Claude Code, consolidating 2,443 distinct tools and APIs behind one gateway—including social scraping (TikHub), semantic web research (Exa, Firecrawl), headless Linux cloud sandboxes (Smol Machines), virtual phone numbers (Saperly), and prediction markets.",
+    "<strong>Frontier AI Beats Wall Street Consensus on Corporate Earnings Predictions:</strong> In a rigorous benchmark published by Maithra Raghu and the Samaya team, frontier models (Claude Opus 5.5, Fable 5.1, Astra) equipped with a point-in-time gated retrieval harness beat human expert consensus on corporate revenue and gross margin metrics against a hard bias-corrected baseline.",
+    "<strong>Thinking Compression and Speculative Decoding Accelerate Local Coding on 24GB VRAM:</strong> The open-source Coder390 fine-tune of Qwen3.8-27B introduces EfficientThink to eliminate redundant chain-of-thought tokens alongside Multi-Token Prediction (MTP) and DFlash2 speculative decoding, rivaling frontier reasoning speeds locally. Meanwhile, Pi Durable expands into mobile and browser runtimes via PiDurableKit."
   ],
   "sections": [
     {
       "emoji": "⚡",
-      "title": "Frontier Models, Speed Scaling & Autonomous Engines",
+      "title": "Anthropic Ecosystem: Dashboards, Motion Beta & Enterprise Reasoning",
       "items": [
         {
-          "tag": "model-release",
-          "title": "@thsottiaux (Tibo): OpenAI Drops GPT-6.1 Sol Ultrafast & Instant Realtime Steering",
-          "body": "Tibo reveals Day 4 of OpenAI's release week: GPT-6.1 Sol Ultrafast is now live in the API, Codex, and ChatGPT Work. Sol Ultrafast provides near-Astra intelligence at up to 8x faster inference speeds than Sol Standard. In tandem, OpenAI upgraded runtime steering to be instant, enabling users and supervisors to redirect model trajectories in realtime without wasted output tokens.",
-          "url": "https://x.com/thsottiaux/status/2108275041276420573"
+          "tag": "tool-release",
+          "title": "@aigclink: Claude Launches Dashboards & Motion Beta, Penetrating BI and Animation Stacks",
+          "body": "Claude rolls out two major capabilities in beta: Dashboards connects to data warehouses (Snowflake, BigQuery, Databricks, ClickHouse) via natural language to generate auto-refreshing interactive dashboards with drill-down SQL inspection, while Motion synthesizes editable code-driven vector animations and MP4 explainer graphics. Official integrations allow instant handoff downstream to Hex, Mixpanel, Adobe, and Runway.",
+          "url": "https://x.com/aigclink/status/2108350606863896978"
         },
         {
-          "tag": "autonomous-engines",
-          "title": "@CarloWillem (Carlo Kobe): Hone Raises $60M Seed to Deploy AI Engines That Own Business Outcomes",
-          "body": "Former Benchmark EIR Carlo Kobe announces Hone's $60M seed round led by Benchmark and Index Ventures. Hone introduces 'Engines'—autonomous systems that sit between personal assistants and foundation models to own concrete business metrics (procurement savings, sales pipelines, risk underwriting). Engines onboard themselves, configure necessary agents and skills, and evolve memory based on results.",
-          "url": "https://x.com/CarloWillem/status/2108254370911674731"
+          "tag": "platform-update",
+          "title": "@ClaudeDevs: Monthly API Credits Live for Max & Team Plans ($100-$500/mo)",
+          "body": "Anthropic officially enables monthly Claude Platform API credits for Max 5x ($100), Max 20x ($200), and Team plans (up to $500 pooled). Credits apply across all Claude models (including Haiku 5.5) and work seamlessly with custom scripts, third-party agent harnesses, and local development environments.",
+          "url": "https://x.com/ClaudeDevs/status/2108228391404966005"
         },
         {
-          "tag": "architecture-breakthrough",
-          "title": "@CrazyShyyt: Meta Publishes 'Memory Mosaics' Paper Challenging Standard Attention",
-          "body": "Meta AI researchers publish 'Memory Mosaics at scale', proposing an alternative to traditional Transformers by replacing brute-force quadratic self-attention with a network of associative key-value memories. A Memory Mosaics model trained on 1 trillion tokens reportedly outperformed a standard Transformer trained on 8 trillion tokens while disentangling complex reasoning subtasks automatically.",
-          "url": "https://x.com/CrazyShyyt/status/2108128585760596237"
+          "tag": "finance-benchmark",
+          "title": "@maithra_raghu (Maithra Raghu): Frontier Models Outperform Expert Consensus on Corporate Earnings",
+          "body": "The Samaya research team reveals that frontier models (Opus 5.5, Fable 5.1, Astra) running in Samaya's point-in-time gated harness beat Wall Street consensus forecasts on revenue and gross margin metrics against a hard bias-corrected baseline, signaling an inflection point for autonomous quantitative modeling.",
+          "url": "https://x.com/maithra_raghu/status/2108244042551308735"
         },
         {
-          "tag": "subscription-bundling",
-          "title": "@0x_kaize (kaize): Leaked Details Reveal XPass Unifying X, Grok, and Cursor Tiers",
-          "body": "Anticipating an imminent announcement, details surface regarding XPass, an all-in-one subscription tier consolidating X Premium, Grok, Cursor, and Grok Bot into a single shared compute pool across four price points ($8, $30, $100, $200/mo), providing developers unified access to Cursor cloud agents and frontier reasoning bots.",
-          "url": "https://x.com/0x_kaize/status/2108281278181110108"
+          "tag": "creative-tooling",
+          "title": "@N01ennn & @0xMovez: 20 Open-Source Repositories Turn Opus 5.5 into a Full Motion Design Studio",
+          "body": "Netflix engineers release a suite of 20 motion graphics repositories for Claude Opus 5.5—including `claude-motion`, `hyperframes`, and `claude-remotion-skill`. The stack uses Opus 5.5 to author animation logic and camera framing rendered into high-fps video via Remotion, GSAP, and HyperFrames.",
+          "url": "https://x.com/N01ennn/status/2108182955671580771"
         },
         {
-          "tag": "scientific-agents",
-          "title": "@Xudong07452910 (Xudong Han): Meta AI & Columbia Release MIRA for Research Meta-Reasoning",
-          "body": "A collaboration between Meta AI and Columbia University introduces MIRA, a dual-layer cognitive architecture for scientific research agents. By decoupling experimental meta-planning (deciding which hypothesis to test next) from execution, and employing MIRA-AC credit assignment over multi-step trajectory outcomes, agents increased hypothesis-discriminating experiments from 16.8% to 28.0%.",
-          "url": "https://x.com/Xudong07452910/status/2108037417081135535"
+          "tag": "eval-engineering",
+          "title": "@wey_gu (古思为) & @ClaudeDevs: Official Guidance on Eval Design and Hillclimbing in Claude Code",
+          "body": "Anthropic publishes an in-depth framework for designing robust domain evals that Claude Code can autonomously iterate and hillclimb against. The workflow pairs targeted metrics with synthetic test generation to systematically boost production accuracy and eliminate silent regressions.",
+          "url": "https://x.com/wey_gu/status/2108280942158872769"
         }
       ]
     },
     {
       "emoji": "🛠️",
-      "title": "Multi-Agent Architecture, Worktrees & Peer-to-Peer Swarms",
+      "title": "Software Factories, Anti-Slop Architecture & Tool Ecosystems",
       "items": [
         {
-          "tag": "agent-teams",
-          "title": "@mirku21 (mirku): Claude Code Agent Teams: Opus Leads, Sonnet Builds, Haiku Swarms at 340 tok/s",
-          "body": "Mirku highlights Anthropic's official configuration pattern for autonomous agent teams in Claude Code using `claude --teammate-mode auto`. Opus 5.5 acts as the lead architect reviewing syntheses, Sonnet 5.5 workers build inside isolated git worktrees with mutex locks in tasks.json, and Haiku 5.5 acts as a dedicated peer fuzzer and AST scout verifying schemas before tasks complete.",
-          "url": "https://x.com/mirku21/status/2108301507955396970"
+          "tag": "agent-architecture",
+          "title": "@sarahfim (Sarah): The Anti-Slop Software Factory Playbook for Scaled Agent Teams",
+          "body": "Sarah breaks down lessons from managing 50 contributors and their coding agents in production. Key architectural guidelines include banning useState/useEffect to reduce component drift, permitting localized code duplication over premature abstractions, and enforcing strict type verification using tRPC, React Doctor, Meticulous, and MCP test suites.",
+          "url": "https://x.com/sarahfim/status/2108298553823203613"
         },
         {
-          "tag": "tri-model-cli",
-          "title": "@_guillecasaus (Guillermo Casaus): Optimizing Claude Code CLI via Tri-Model Orchestration",
-          "body": "Casaus details the high-efficiency orchestration formula `claude --advisor opus --subagents haiku`. Sonnet 5.5 drives the active session and writes code diffs, Haiku 5.5 explores file trees and documentation in parallel, and Opus 5.5 is reserved as a strategic advisor only for complex plan approval, deadlock resolution, and final diff validation.",
-          "url": "https://x.com/_guillecasaus/status/2108160812615369011"
+          "tag": "tool-aggregator",
+          "title": "@gengdaJ (逸尘) & @Astronaut_1216: Monid Unifies 2,443 APIs & Tools for Codex and Claude Code",
+          "body": "Developers spotlight Monid as a universal tool clearinghouse for autonomous agents, bridging 2,443 distinct APIs behind a single endpoint. Features include social scraping (TikHub), semantic web exploration (Exa, Firecrawl), headless sandboxes (Smol Machines), programmatic communication (AgentMail, Saperly), and prediction market querying (Polymarket, Kalshi).",
+          "url": "https://x.com/gengdaJ/status/2108470885107818729"
         },
         {
-          "tag": "fleet-management",
-          "title": "@huxlab (Hux): Deconstructing Lauren Tan's 20+ Grok Bot Fleet at SpaceX/xAI",
-          "body": "Hux provides an architectural breakdown of SpaceX/xAI engineer Lauren Tan's production agent workflow: a single engineer directs an autonomous fleet of 20+ Grok Bots structured with a Chief of Staff context arbiter, an automated PM agent decomposing PRD dependency graphs, and autonomous codebase workers validating each other's pull requests.",
-          "url": "https://x.com/huxlab/status/2108051786263371938"
+          "tag": "agent-ops",
+          "title": "@silentguyy66: Grok Bot Engineers Detail Production Fleet Operations and Automerge Loops",
+          "body": "A deep dive into xAI's internal engineering workflow reveals how Grok Bot fleets operate autonomously: Chief of Staff agents decompose tasks and route work without touching code, peer bots debate architectures in group chats, and agent-generated pull requests automatically run test matrices and merge upon passing.",
+          "url": "https://x.com/silentguyy66/status/2108280456835727812"
         },
         {
-          "tag": "multiplayer-agents",
-          "title": "@kapilansh_twt & @im_gusye: Alook AI Ships Open-Source Discord-Style Workspace for Inter-Agent Collab",
-          "body": "Alook AI launches an open-source collaborative workspace enabling AI agents from different developers (such as local Codex instances and remote Grok Bots) to interact, message, and coordinate alongside human teammates in a unified chat room environment.",
-          "url": "https://x.com/kapilansh_twt/status/2108228874924601635"
+          "tag": "developer-workflow",
+          "title": "@daradoescode (Dara A.): Practical Software Factory Refinements Reduce PR Churn",
+          "body": "Dara shares workflow optimizations inspired by Poteto and Matt Pocock's software factory setup, documenting how constraining subagent scope and strictly banning speculative test creation eliminates agent test-slop and dramatically accelerates code reviews.",
+          "url": "https://x.com/daradoescode/status/2108319130231136727"
         },
         {
-          "tag": "managed-agents",
-          "title": "@RLanceMartin (Lance Martin): Production Deployments with Claude Managed Agents",
-          "body": "Lance Martin publishes a reference implementation and guide for deploying automations using Claude Managed Agents. The guide covers enterprise credential vaults, non-leaking guardrails, and persistent memory stores, accompanied by an open-source quickstart repository.",
-          "url": "https://x.com/RLanceMartin/status/2108327973078315274"
+          "tag": "remote-orchestration",
+          "title": "@app_sail & @0xlangeai: Deploying 24/7 Claude Code Hosts on US Cloud Instances via Orca and Tailscale",
+          "body": "A popular community setup demonstrates provisioning Claude Code inside Grok Bot's 16GB US cloud environment, routing commands securely over Tailscale mesh networks and managing tasks through the Orca agent orchestrator to bypass local IP hurdles and maintain persistent state.",
+          "url": "https://x.com/0xlangeai/status/2108526965242445965"
         }
       ]
     },
     {
       "emoji": "💾",
-      "title": "Context Engineering, Prompt Caching & Local Hardware",
+      "title": "Inference Efficiency, Speculative Execution & Local Silicon",
       "items": [
         {
-          "tag": "prompt-caching",
-          "title": "@ScarletKc (KC): Deep Architectural Audit of Prompt Caching in Agent Context Compaction",
-          "body": "KC examines context compaction across Claude Code, Codex, Qwen Code, OpenCode, Cline, and pi. Modifying system prompts or dropping tool definitions during compaction breaks Anthropic's prefix cache order (tools -> system -> messages), causing massive cache misses that turn a cheap summary into a $70 re-read. The proven fix: the 'forked request' pattern preserving exact tool and system prompt bytes while requesting text-only summarization.",
-          "url": "https://x.com/ScarletKc/status/2108294527362711695"
+          "tag": "model-finetune",
+          "title": "@NFT_Chen (SuSu): Qwen3.8-27B Coder390 Matches Frontier Coding with 50% Fewer Thinking Tokens",
+          "body": "A community post-training release of Qwen3.8-27B trained on 3.9M code tokens distills reasoning patterns from Opus 5.5 and GPT-6 Astra. Utilizing EfficientThink to suppress empty reasoning loops, SFT + RLOO + Multi-Token Prediction (MTP), and DFlash2 speculative decoding, the model achieves 90% on LiveCodeBench while fitting into 24GB VRAM.",
+          "url": "https://x.com/NFT_Chen/status/2108459889681207731"
         },
         {
-          "tag": "local-silicon",
-          "title": "@starmexxx (starmex): Cutting $700/mo Cloud Subscriptions with a $249 Jetson Orin Nano Super",
-          "body": "Starmex details replacing monthly subscriptions across Claude Max, ChatGPT Pro, and SuperGrok with a single $249 Nvidia Jetson Orin Nano Super ($6/mo electricity). The setup hosts gpt-oss-20b for offline reasoning, qwen3.5-35b-a3b for interactive coding, rizzo-flow 4b for 16ms binary decision filtering, and fast-browser-use for local web automation.",
-          "url": "https://x.com/starmexxx/status/2108231646407471148"
+          "tag": "computer-use",
+          "title": "@realWeZZard: Jev Planner-Executor Architecture Halves Computer-Use Latency",
+          "body": "Deploying Pi + Qwen 3.8-27B + DiffusionGemma as a specialized 'Jev' executor slashes computer-use interaction latency by over 50% compared to pure ReAct loops on Opus 5.5. Decoupling high-level planning from rapid visual and keyboard execution enables ultra-responsive local agent interaction.",
+          "url": "https://x.com/realWeZZard/status/2108209984341475525"
         },
         {
-          "tag": "systems-performance",
-          "title": "@lidangzzz (立党): Why Golang Is the Ideal Language for Local 50-Subagent Fleets",
-          "body": "Lidang analyzes resource bottlenecks when running up to 50 concurrent subagents on local developer workstations. While Node.js and Python consume excessive RAM and Rust/C++ suffer from lengthy compilation stalls, Golang provides fast compilation, low binary overhead, and minimal memory footprints, making it the practical runtime choice for dense agent clusters.",
-          "url": "https://x.com/lidangzzz/status/2108017850405249251"
+          "tag": "agent-runtime",
+          "title": "@xiaomovps (小墨同学): Pi Durable Ecosystem Matures with iOS Runtimes and 1.3MB Actors",
+          "body": "Following the Pi Durable 1.0.3 architecture release, the open-source community ships PiDurableKit (Swift + JavaScriptCore) to embed durable agent sessions directly into iOS apps. Simultaneously, Rivet transitions actors to Pi Durable for 1.3ms instant recovery, while headless browser deployments explore durable code modes.",
+          "url": "https://x.com/xiaomovps/status/2108370725623181408"
         },
         {
-          "tag": "policy-controls",
-          "title": "@pvncher (Eric Provencher): Customizing Codex Auto-Review Behavior via agents.md Guidelines",
-          "body": "Eric Provencher explains how developers can tailor the strictness and behavior of Codex auto-review. By setting custom review policies and encoding project-specific architectural rules directly within `agents.md`, teams can prevent excessive nagging while enforcing critical codebase constraints.",
-          "url": "https://x.com/pvncher/status/2108283860458905760"
+          "tag": "cloud-infrastructure",
+          "title": "@a16z: AWS CEO Matt Garman Outlines 3-Second Ephemeral Primitives for Agent Fleets",
+          "body": "In discussion with a16z, AWS CEO Matt Garman details how cloud architectures are pivoting toward autonomous agents, which consume 5x the token volumes of human users. AWS is prioritizing 3-second spin-up ephemeral databases, transient micro-sandboxes, and non-human authorization primitives tailored for short-lived worker tasks.",
+          "url": "https://x.com/a16z/status/2108308969815257427"
         },
         {
-          "tag": "cognitive-mesh",
-          "title": "@marfinxx (marfin): Unifying Context Engineering and Multi-Model Memory Meshes",
-          "body": "Marfin outlines an enterprise cognitive architecture combining Claude Haiku 5.5 for AST syntax triage (-92.1% token compression in <45ms), GPT-6.1 Sol for high-entropy sandbox candidate exploration, Sonnet 5.5 for verified code generation, and Opus 5.5 for causal graph supervision with Byte-0 prefix locks eliminating context rot.",
-          "url": "https://x.com/marfinxx/status/2108180683738755153"
+          "tag": "cost-optimization",
+          "title": "@fabrice_mayrand & @gpurouter: Dynamic Inference Routers Arbitrage Excess GPU Capacity",
+          "body": "Developers document up to 40% cost reductions by swapping static model endpoints for dynamic arbitrage routers like CheaperInfer and GPURouter, which continuously route requests to verified providers unloading idle datacenter headroom without degrading generation quality.",
+          "url": "https://x.com/fabrice_mayrand/status/2106781083698425885"
         }
       ]
     },
     {
       "emoji": "🎨",
-      "title": "Reverse Engineering, Studio Pipelines & Developer Tooling",
+      "title": "Reverse Engineering, Generative Interfaces & Open Systems",
       "items": [
         {
           "tag": "reverse-engineering",
-          "title": "@criscxuan & @MatthewBerman: REA Framework Bridges MCP to Hopper & Ghidra for Binary Decompilation",
-          "body": "The open-source `rea` project equips agents like Claude Code, Codex, and Cursor with native reverse-engineering tools via Model Context Protocol (MCP). By connecting directly to Hopper, Ghidra, and IDA Pro, agents can autonomously analyze closed-source Mach-O, PE, ELF, and APK binaries, inspect assembly control flows, and synthesize clean-room functional equivalents.",
+          "title": "@MatthewBerman & @Lee_points: REA Hits 30k Stars, Bringing MCP Decompilation to Hopper & Ghidra",
+          "body": "The viral Reverse Engineer Anything (REA) project surpasses 30,000 GitHub stars. By bridging Ghidra, Hopper, and IDA Pro directly into LLM agent loops via Model Context Protocol, the tool autonomously analyzes compiled binaries and reconstructs readable, functional high-level source code.",
           "url": "https://x.com/MatthewBerman/status/2108245653843509415"
         },
         {
-          "tag": "creative-harness",
-          "title": "@anvisha (Anvisha): Introducing Voyager: The Open Creative Studio Harness for AI Agents",
-          "body": "Voyager launches as an open-source harness purpose-built for high-end video, graphics, and game development with Opus, Astra, and DeepSeek. Rather than focusing solely on code, Voyager drives professional DCC suites including Blender, DaVinci Resolve, After Effects, and Ableton Live through native agent connectors.",
-          "url": "https://x.com/anvisha/status/2108252061209088159"
+          "tag": "generative-ui",
+          "title": "@KashyapVisharad (Visharad): Open Intelligent UI Launches Open Standard for Dynamic Generative UI",
+          "body": "Built on the MIT-licensed OpenUI standard, Open Intelligent UI enables developers to embed rich, generative ChatGPT-style canvas interfaces into any application. The toolkit supports both cloud APIs and local inference engines like Ollama and LM Studio without closed ecosystem lock-in.",
+          "url": "https://x.com/KashyapVisharad/status/2108239102676250933"
         },
         {
-          "tag": "motion-design",
-          "title": "@N01ennn & @rewind02: Netflix Engineers Open-Source 20 Motion Repos & 3D Game Pipelines for Opus 5.5",
-          "body": "Netflix engineers release 20 open-source repositories designed for Claude Opus 5.5, including `claude-motion`, `hyperframes`, and `claude-remotion-skill`, turning the model into a full motion design studio. Concurrently, Rewind details end-to-end game production using Opus 5.5 connected to Blender MCP, Meshy MCP, and Unreal Engine 5.",
-          "url": "https://x.com/N01ennn/status/2108182955671580771"
+          "tag": "data-ontology",
+          "title": "@georgecurtiss (Lam Sambert): Foundry Open-Sources Palantir-Style Company Ontology",
+          "body": "George Curtiss releases Foundry, an open-source enterprise ontology platform designed as a lightweight alternative to Palantir Foundry. Powered by HelixDB for S3-backed semantic graphs and DuckDB for ultra-fast local analytical processing, it delivers scalable entity-relationship modeling without enterprise lock-in.",
+          "url": "https://x.com/georgecurtiss/status/2108374327980933516"
         },
         {
-          "tag": "agent-feedback",
-          "title": "@excalidraw (Excalidraw): Excalidraw CLI Launches for Local Diagram Rendering & Agent Inspection",
-          "body": "Excalidraw releases its official command-line interface, allowing developers and autonomous agents to render Excalidraw diagrams locally to provide high-fidelity visual feedback and documentation generation directly inside agent loops.",
-          "url": "https://x.com/excalidraw/status/2108249557519970369"
+          "tag": "video-generation",
+          "title": "@vriparbelli (Victor Riparbelli): Syren Video Launches Opus 5.5-Powered Agentic Video Creation",
+          "body": "Syren Video unveils a free-to-try agentic video studio that pairs Claude Opus 5.5 with Syren's proprietary 3D-aware video rendering engine. Users can generate agency-grade video from initial prompts and interactively refine scene pacing, styling, and camera motions via chat and Claude MCP.",
+          "url": "https://x.com/vriparbelli/status/2108557435640156341"
         },
         {
-          "tag": "agentic-careers",
-          "title": "@colindotj (Colin Johnson): Dreamwork MCP Connects AI Agents to 2M Live Job Openings",
-          "body": "Colin Johnson introduces Dreamwork MCP (`npx -y @dreamworkhq/mcp`), an MCP server granting coding agents direct access to 2 million active job postings, automated resume customization tailored to job specs, and end-to-end employer submission workflows.",
-          "url": "https://x.com/colindotj/status/2108227513251995809"
+          "tag": "industry-governance",
+          "title": "@j_asminewang (Jasmine Wang): Former OpenAI Safety Researchers Publish Joint Statement on Firings",
+          "body": "Following their sudden departure from OpenAI, safety researchers Jasmine Wang and colleagues release an open letter challenging the official pretext of unauthorized executive email access, asserting they were terminated for advocating rigorous safety benchmarks over commercial rollout velocity.",
+          "url": "https://x.com/j_asminewang/status/2108263312291180680"
         }
       ]
     }
