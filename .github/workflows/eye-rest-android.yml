@@ -13,6 +13,11 @@ on:
       - eye-rest-android/**
       - .github/workflows/eye-rest-android.yml
   workflow_dispatch:
+    inputs:
+      baseline:
+        description: Verify original prototype source using the repaired toolchain
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -28,6 +33,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.baseline && 'feature/eye-rest-android-prototype' || github.ref }}
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -37,6 +44,9 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
 
       - name: Install Android SDK 35
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
