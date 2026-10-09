@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.ScrollView
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -160,6 +161,18 @@ class AppExperienceTest {
             file.outputStream().use { image.compress(Bitmap.CompressFormat.PNG, 100, it) }
             assertTrue(file.length() > 1_000)
             assertTrue(descendants(view).filterIsInstance<Button>().first { it.text == "Start timer" }.height >= 48)
+            descendants(view).filterIsInstance<Button>().first { it.text == "Options  +" }.performClick()
+            view.measure(View.MeasureSpec.makeMeasureSpec(360, View.MeasureSpec.EXACTLY),
+                View.MeasureSpec.makeMeasureSpec(800, View.MeasureSpec.EXACTLY))
+            view.layout(0, 0, 360, 800)
+            val scroll = descendants(view).filterIsInstance<ScrollView>().single()
+            scroll.scrollTo(0, scroll.getChildAt(0).height)
+            val optionsImage = Bitmap.createBitmap(360, 800, Bitmap.Config.ARGB_8888)
+            view.draw(Canvas(optionsImage))
+            File("build/screenshots/options-${scale}.png").outputStream().use {
+                optionsImage.compress(Bitmap.CompressFormat.PNG, 100, it)
+            }
+            assertTrue(descendants(view).filterIsInstance<CheckBox>().all { it.height >= 48 })
             controller.pause().stop().destroy()
         }
         RuntimeEnvironment.setFontScale(1f)
