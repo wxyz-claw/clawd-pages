@@ -13,6 +13,11 @@ on:
       - eye-rest-android/**
       - .github/workflows/eye-rest-android.yml
   workflow_dispatch:
+    inputs:
+      baseline:
+        description: Verify original prototype source using the repaired toolchain
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -28,6 +33,24 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.baseline && 'dc8d0b7760d1af5e3c0f7f219d1110ac9b9cc601' || github.ref }}
+
+      - name: Add test-only baseline renderer
+        if: inputs.baseline
+        shell: bash
+        run: |
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git show "$GITHUB_SHA:eye-rest-android/verification/BaselineRenderTest.kt" > app/src/test/java/com/wxyz/eyerest/BaselineRenderTest.kt
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('app/build.gradle.kts')
+          text = p.read_text().replace('unitTests.isReturnDefaultValues = true', 'unitTests.isReturnDefaultValues = true\n        unitTests.isIncludeAndroidResources = true')
+          text = text.replace('testImplementation("junit:junit:4.13.2")', 'testImplementation("junit:junit:4.13.2")\n    testImplementation("org.robolectric:robolectric:4.14.1")')
+          p.write_text(text)
+          with Path('gradle.properties').open('a') as f:
+              f.write('\nandroid.useAndroidX=true\n')
+          PY
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -37,6 +60,9 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
 
       - name: Install Android SDK 35
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
@@ -50,14 +76,73 @@ jobs:
         shell: bash
         run: |
           set -o pipefail
-          gradle testDebugUnitTest assembleDebug --stacktrace --no-daemon 2>&1 | tee build.log
+          if [ "${{ inputs.baseline }}" != "true" ]; then
+            gradle testPreviewUnitTest lintPreview assemblePreview --stacktrace --no-daemon 2>&1 | tee preview-build.log
+            cp -r app/build/screenshots app/build/preview-screenshots
+          fi
+          gradle testDebugUnitTest lintDebug assembleDebug --stacktrace --no-daemon 2>&1 | tee build.log
+
+      - name: Upload tests, lint, and native view renders
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eye-rest-android-verification
+          path: |
+            eye-rest-android/app/build/reports
+            eye-rest-android/app/build/test-results
+            eye-rest-android/app/build/screenshots
+            eye-rest-android/app/build/preview-screenshots
+          if-no-files-found: warn
+
+      - name: Verify APK integrity and signing certificate
+        if: success()
+        run: |
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk > apk-signature.txt
+          sha256sum app/build/outputs/apk/debug/app-debug.apk > apk-sha256.txt
+          unzip -t app/build/outputs/apk/debug/app-debug.apk > apk-integrity.txt
+
+      - name: Verify preview isolation, integrity and signature
+        if: success() && !inputs.baseline
+        run: |
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/preview/app-preview.apk > apk-preview-signature.txt
+          sha256sum app/build/outputs/apk/preview/app-preview.apk > apk-preview-sha256.txt
+          unzip -t app/build/outputs/apk/preview/app-preview.apk > apk-preview-integrity.txt
+          for variant in debug preview; do
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "app/build/outputs/apk/$variant/app-$variant.apk" > "apk-$variant-manifest.txt"
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump permissions "app/build/outputs/apk/$variant/app-$variant.apk" > "apk-$variant-permissions.txt"
+            "$ANDROID_HOME/build-tools/35.0.0/aapt" dump xmltree "app/build/outputs/apk/$variant/app-$variant.apk" AndroidManifest.xml > "apk-$variant-tree.txt"
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          normal = Path('apk-debug-manifest.txt').read_text()
+          preview = Path('apk-preview-manifest.txt').read_text()
+          assert normal.startswith("package: name='com.wxyz.eyerest' ")
+          assert preview.startswith("package: name='com.wxyz.eyerest.preview' ")
+          assert "application-label:'Eye Rest'" in normal
+          assert "application-label:'Eye Rest Preview'" in preview
+          def permissions(variant):
+              return {s for s in Path(f'apk-{variant}-permissions.txt').read_text().splitlines() if s.startswith('uses-permission:')}
+          assert permissions('debug') == permissions('preview')
+          assert all('sharedUserId' not in Path(f'apk-{v}-tree.txt').read_text() for v in ['debug', 'preview'])
+          Path('apk-preview-isolation.txt').write_text('Normal: com.wxyz.eyerest / Eye Rest\nPreview: com.wxyz.eyerest.preview / Eye Rest Preview\nDifferent application IDs; no sharedUserId; same Android permissions. Separate Android app sandboxes and settings.\n')
+          PY
+
+      - name: Upload APK verification
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eye-rest-android-apk-verification
+          path: eye-rest-android/apk-*.txt
+          if-no-files-found: error
 
       - name: Upload Gradle build log
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: eye-rest-android-build-log
-          path: eye-rest-android/build.log
+          path: |
+            eye-rest-android/build.log
+            eye-rest-android/preview-build.log
           if-no-files-found: error
 
       - name: Upload debug APK
@@ -66,4 +151,12 @@ jobs:
         with:
           name: eye-rest-android-debug-apk
           path: eye-rest-android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Upload side-by-side preview APK
+        if: success() && !inputs.baseline
+        uses: actions/upload-artifact@v4
+        with:
+          name: eye-rest-android-preview-apk
+          path: eye-rest-android/app/build/outputs/apk/preview/app-preview.apk
           if-no-files-found: error

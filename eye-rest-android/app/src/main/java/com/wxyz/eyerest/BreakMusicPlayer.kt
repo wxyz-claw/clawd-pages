@@ -85,7 +85,7 @@ class BreakMusicPlayer {
                     val timeSeconds = sampleIndex.toDouble() / SAMPLE_RATE
                     val targetDuckGain = if (ducked) 0.18 else 1.0
                     duckGain += (targetDuckGain - duckGain) * DUCK_SMOOTHING
-                    val sample = ambientSample(timeSeconds) * duckGain
+                    val sample = ambientSample(timeSeconds) * duckGain * (timeSeconds / 1.2).coerceAtMost(1.0)
                     buffer[index] = (sample.coerceIn(-0.92, 0.92) * Short.MAX_VALUE).toInt().toShort()
                     sampleIndex += 1
                 }
@@ -98,6 +98,8 @@ class BreakMusicPlayer {
                 )
                 if (written < 0) break
             }
+        } catch (_: IllegalStateException) {
+            // An audio route can disappear while a blocking write is in progress.
         } finally {
             runCatching { localTrack.stop() }
             runCatching { localTrack.release() }

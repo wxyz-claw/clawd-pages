@@ -18,7 +18,8 @@ data class TimerSnapshot(
     val running: Boolean,
     val remainingSeconds: Int,
     val totalSeconds: Int,
-    val completedRests: Int
+    val completedRests: Int,
+    val deadlineMillis: Long = 0L
 )
 
 sealed interface TimerEvent {
@@ -44,7 +45,10 @@ class TimerEngine(
     private var totalSeconds = initialSnapshot?.totalSeconds ?: durationFor(phase)
     private var remainingSeconds = initialSnapshot?.remainingSeconds ?: totalSeconds
     private var completedRests = initialSnapshot?.completedRests ?: 0
-    private var endAtMillis = if (running) nowMillis() + remainingSeconds * 1_000L else 0L
+    private var endAtMillis = if (running) {
+        initialSnapshot?.deadlineMillis?.takeIf { it > 0L }
+            ?: (nowMillis() + remainingSeconds * 1_000L)
+    } else 0L
     private var previousRemaining = remainingSeconds
     private var phaseHasStarted = initialSnapshot?.let {
         it.running || it.completedRests > 0 || it.remainingSeconds < it.totalSeconds
@@ -55,7 +59,8 @@ class TimerEngine(
         running = running,
         remainingSeconds = remainingSeconds,
         totalSeconds = totalSeconds,
-        completedRests = completedRests
+        completedRests = completedRests,
+        deadlineMillis = endAtMillis
     )
 
     fun start(): TickResult {
@@ -128,6 +133,12 @@ class TimerEngine(
             switchPhase(now, carryEndTime = true, events = events)
         }
 
+        // A late callback must never replay phases that have already ended.
+        if (events.isNotEmpty()) {
+            events.clear()
+            events += TimerEvent.PhaseStarted(phase)
+        }
+
         val currentRemaining = secondsUntil(endAtMillis, now)
         if (phase == TimerPhase.REST) {
             appendRestGuidance(previousRemaining, currentRemaining, totalSeconds, events)
@@ -179,16 +190,14 @@ class TimerEngine(
         events: MutableList<TimerEvent>
     ) {
         val halfway = total / 2
-        if (halfway > 5 && previous > halfway && current <= halfway) {
+        if (halfway > 5 && previous > halfway && current in 6..halfway) {
             events += TimerEvent.Halfway
         }
-        if (previous > 5 && current <= 5) {
+        if (previous > 5 && current in 4..5) {
             events += TimerEvent.FiveSeconds
         }
-        for (second in 3 downTo 1) {
-            if (previous > second && current <= second) {
-                events += TimerEvent.Countdown(second)
-            }
+        if (current in 1..3 && previous > current) {
+            events += TimerEvent.Countdown(current)
         }
     }
 }
