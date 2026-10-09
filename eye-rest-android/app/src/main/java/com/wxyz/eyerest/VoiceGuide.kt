@@ -21,7 +21,11 @@ enum class VoicePrompt(val recording: Int, val text: String) {
 }
 
 /** Bundled narration is the offline default. TTS is only a playback-error fallback. */
-class VoiceGuide(context: Context, private val onSpeechActive: (Boolean) -> Unit = {}) {
+class VoiceGuide(
+    context: Context,
+    private val onUnavailable: () -> Unit = {},
+    private val onSpeechActive: (Boolean) -> Unit = {}
+) {
     private val appContext = context.applicationContext
     private val handler = Handler(Looper.getMainLooper())
     private val attributes = AudioAttributes.Builder()
@@ -62,7 +66,9 @@ class VoiceGuide(context: Context, private val onSpeechActive: (Boolean) -> Unit
             }
             next.prepareAsync()
             // Covers silent decoder/TTS failures without allowing stale audio to linger.
-            handler.postDelayed({ if (generation == token) cancel() }, 8_000L)
+            handler.postDelayed({ if (generation == token && (player != null || pending != null)) {
+                cancel(); onUnavailable()
+            } }, 8_000L)
         } catch (_: Exception) {
             releasePlayer()
             fallback(prompt, token)
@@ -100,7 +106,9 @@ class VoiceGuide(context: Context, private val onSpeechActive: (Boolean) -> Unit
                 if (closed) return@post
                 val engine = tts ?: return@post
                 if (status != TextToSpeech.SUCCESS) {
+                    val failedCurrent = pending?.first == generation
                     pending = null; engine.shutdown(); tts = null; onSpeechActive(false)
+                    if (failedCurrent) onUnavailable()
                     return@post
                 }
                 engine.language = Locale.US
@@ -122,7 +130,9 @@ class VoiceGuide(context: Context, private val onSpeechActive: (Boolean) -> Unit
 
     private fun speak(prompt: VoicePrompt, token: Int) {
         onSpeechActive(true)
-        if (tts?.speak(prompt.text, TextToSpeech.QUEUE_FLUSH, Bundle(), "speech-$token") != TextToSpeech.SUCCESS) finish()
+        if (tts?.speak(prompt.text, TextToSpeech.QUEUE_FLUSH, Bundle(), "speech-$token") != TextToSpeech.SUCCESS) {
+            finish(); onUnavailable()
+        }
     }
 
     private fun chime(prompt: VoicePrompt) {

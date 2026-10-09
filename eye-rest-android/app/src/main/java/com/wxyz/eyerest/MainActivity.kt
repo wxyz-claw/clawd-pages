@@ -150,7 +150,8 @@ class MainActivity : Activity() {
             setOnApplyWindowInsetsListener { view, insets ->
                 if (Build.VERSION.SDK_INT >= 30) {
                     val safe = insets.getInsets(WindowInsets.Type.systemBars() or WindowInsets.Type.displayCutout())
-                    view.setPadding(safe.left, safe.top, safe.right, safe.bottom)
+                    val keyboard = insets.getInsets(WindowInsets.Type.ime()).bottom
+                    view.setPadding(safe.left, safe.top, safe.right, maxOf(safe.bottom, keyboard))
                 } else {
                     @Suppress("DEPRECATION")
                     view.setPadding(insets.systemWindowInsetLeft, insets.systemWindowInsetTop,

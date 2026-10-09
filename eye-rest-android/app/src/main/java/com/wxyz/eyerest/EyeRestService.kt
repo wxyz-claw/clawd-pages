@@ -78,12 +78,16 @@ class EyeRestService : Service() {
             initialSnapshot = TimerStore.load(this)
         ) { SystemClock.elapsedRealtime() }
         breakMusicPlayer = BreakMusicPlayer()
-        voiceGuide = VoiceGuide(this) { speechActive ->
+        voiceGuide = VoiceGuide(this, onUnavailable = {
+            handler.post {
+                if (engine.snapshot().running) { pauseReason = "Voice unavailable. Resume with voice off in Options."; pause() }
+            }
+        }) { speechActive ->
             this.speechActive = speechActive
             breakMusicPlayer.setDucked(speechActive)
-            handler.post {
+            handler.postDelayed({
                 if (!this.speechActive && !(engine.snapshot().running && engine.snapshot().phase == TimerPhase.REST && settings.breakMusicEnabled)) releaseAudioFocus()
-            }
+            }, 150L)
         }
         val powerManager = getSystemService(PowerManager::class.java)
         wakeLock = powerManager.newWakeLock(
@@ -219,7 +223,9 @@ class EyeRestService : Service() {
                 voiceEnabled = settings.voiceEnabled,
                 chimeEnabled = settings.chimeEnabled
             )
-            if (!speechActive && !settings.breakMusicEnabled) releaseAudioFocus()
+            if (!speechActive && !settings.breakMusicEnabled) handler.postDelayed({
+                if (!speechActive && !(engine.snapshot().running && engine.snapshot().phase == TimerPhase.REST && settings.breakMusicEnabled)) releaseAudioFocus()
+            }, 150L)
         }
     }
 
@@ -365,7 +371,7 @@ class EyeRestService : Service() {
 
         private const val CHANNEL_ID = "eye_rest_timer"
         private const val NOTIFICATION_ID = 202020
-        private const val TICK_MILLIS = 250L
+        private const val TICK_MILLIS = 1_000L
 
         fun intent(context: Context, action: String): Intent =
             Intent(context, EyeRestService::class.java).setAction(action)
