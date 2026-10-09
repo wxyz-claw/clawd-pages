@@ -119,7 +119,9 @@ class VoiceGuide(
                     override fun onStart(id: String?) = Unit
                     override fun onDone(id: String?) { handler.post { if (id == "speech-$generation") finish() } }
                     @Deprecated("Deprecated in Java")
-                    override fun onError(id: String?) { handler.post { if (id == "speech-$generation") finish() } }
+                    override fun onError(id: String?) { handler.post {
+                        if (id == "speech-$generation") { finish(); onUnavailable() }
+                    } }
                 })
                 ready = true
                 pending?.let { (epoch, cue) -> if (epoch == generation) speak(cue, epoch) }

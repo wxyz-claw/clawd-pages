@@ -73,6 +73,21 @@ jobs:
             eye-rest-android/app/build/screenshots
           if-no-files-found: warn
 
+      - name: Verify APK integrity and signing certificate
+        if: success()
+        run: |
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk > apk-signature.txt
+          sha256sum app/build/outputs/apk/debug/app-debug.apk > apk-sha256.txt
+          unzip -t app/build/outputs/apk/debug/app-debug.apk > apk-integrity.txt
+
+      - name: Upload APK verification
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eye-rest-android-apk-verification
+          path: eye-rest-android/apk-*.txt
+          if-no-files-found: error
+
       - name: Upload Gradle build log
         if: always()
         uses: actions/upload-artifact@v4

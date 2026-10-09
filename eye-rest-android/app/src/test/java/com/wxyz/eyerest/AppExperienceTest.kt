@@ -86,10 +86,26 @@ class AppExperienceTest {
         service.onStartCommand(EyeRestService.intent(service, EyeRestService.ACTION_START_OR_RESUME), 0, 1)
         val guide = ReflectionHelpers.getField<VoiceGuide>(service, "voiceGuide")
         assertNotNull(ReflectionHelpers.getField<Any?>(guide, "player"))
+        val music = ReflectionHelpers.getField<BreakMusicPlayer>(service, "breakMusicPlayer")
+        assertTrue(ReflectionHelpers.getField<Boolean>(music, "ducked"))
         service.onStartCommand(EyeRestService.intent(service, EyeRestService.ACTION_PAUSE), 0, 2)
         assertNull(ReflectionHelpers.getField<Any?>(guide, "player"))
+        assertFalse(ReflectionHelpers.getField<Boolean>(music, "ducked"))
         assertFalse(ReflectionHelpers.getField<PowerManager.WakeLock>(service, "wakeLock").isHeld)
         assertFalse(TimerStore.load(context)!!.running)
+        controller.destroy()
+    }
+
+    @Test fun switchingVoiceOffCancelsCurrentSpeechWithoutStoppingTimer() {
+        AppSettings.save(context, UserSettings(breakMusicEnabled = false, chimeEnabled = false))
+        val controller = Robolectric.buildService(EyeRestService::class.java).create()
+        val service = controller.get()
+        service.onStartCommand(EyeRestService.intent(service, EyeRestService.ACTION_START_OR_RESUME), 0, 1)
+        AppSettings.save(context, UserSettings(voiceEnabled = false, breakMusicEnabled = false, chimeEnabled = false))
+        service.onStartCommand(EyeRestService.intent(service, EyeRestService.ACTION_REFRESH_SETTINGS), 0, 2)
+        val guide = ReflectionHelpers.getField<VoiceGuide>(service, "voiceGuide")
+        assertNull(ReflectionHelpers.getField<Any?>(guide, "player"))
+        assertTrue(TimerStore.load(context)!!.running)
         controller.destroy()
     }
 

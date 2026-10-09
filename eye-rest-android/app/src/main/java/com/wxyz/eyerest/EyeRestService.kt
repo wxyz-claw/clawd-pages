@@ -38,7 +38,8 @@ class EyeRestService : Service() {
     private var noisyRegistered = false
     private val noisyReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
-            if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY && engine.snapshot().running) {
+            if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY && engine.snapshot().running &&
+                (settings.voiceEnabled || settings.chimeEnabled || settings.breakMusicEnabled)) {
                 pauseReason = "Audio disconnected. Resume when you're ready."
                 pause()
             }
@@ -177,6 +178,7 @@ class EyeRestService : Service() {
 
     private fun refreshSettings() {
         settings = AppSettings.load(this)
+        if (engine.snapshot().running && !foregroundActive) startOrResume()
         if (!settings.voiceEnabled) voiceGuide.cancel()
         val snapshot = engine.updateConfig(settings.timerConfig())
         syncBreakMusic(snapshot)

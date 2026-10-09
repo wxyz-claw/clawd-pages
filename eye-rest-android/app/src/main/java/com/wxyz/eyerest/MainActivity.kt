@@ -92,6 +92,8 @@ class MainActivity : Activity() {
         )
     }
 
+    // API33+ uses NOT_EXPORTED; the legacy overload is reachable only on older Android.
+    @android.annotation.SuppressLint("UnspecifiedRegisterReceiverFlag")
     override fun onStart() {
         super.onStart()
         if (!receiverRegistered) {
