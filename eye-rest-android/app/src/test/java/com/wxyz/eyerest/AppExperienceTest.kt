@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ScrollView
+import android.widget.EditText
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -184,6 +185,7 @@ class AppExperienceTest {
             view.measure(View.MeasureSpec.makeMeasureSpec(360, View.MeasureSpec.EXACTLY),
                 View.MeasureSpec.makeMeasureSpec(800, View.MeasureSpec.EXACTLY))
             view.layout(0, 0, 360, 800)
+            view.viewTreeObserver.dispatchOnPreDraw()
             val image = Bitmap.createBitmap(360, 800, Bitmap.Config.ARGB_8888)
             view.draw(Canvas(image))
             val file = File("build/screenshots/ready-${scale}.png").apply { parentFile.mkdirs() }
@@ -196,6 +198,8 @@ class AppExperienceTest {
             view.layout(0, 0, 360, 800)
             val scroll = descendants(view).filterIsInstance<ScrollView>().single()
             scroll.scrollTo(0, scroll.getChildAt(0).height)
+            view.viewTreeObserver.dispatchOnPreDraw()
+            assertEquals(listOf("40", "20"), descendants(view).filterIsInstance<EditText>().map { it.text.toString() })
             val optionsImage = Bitmap.createBitmap(360, 800, Bitmap.Config.ARGB_8888)
             view.draw(Canvas(optionsImage))
             File("build/screenshots/options-${scale}.png").outputStream().use {
