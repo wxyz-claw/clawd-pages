@@ -513,7 +513,14 @@ class MainActivity : Activity() {
         setSelectAllOnFocus(true)
         maxLines = 1
         imeOptions = android.view.inputmethod.EditorInfo.IME_ACTION_DONE
-        setOnEditorActionListener { _, _, _ -> clearFocus(); true }
+        setOnEditorActionListener { _, action, _ ->
+            if (action == android.view.inputmethod.EditorInfo.IME_ACTION_DONE) {
+                clearFocus()
+                getSystemService(android.view.inputmethod.InputMethodManager::class.java)
+                    .hideSoftInputFromWindow(windowToken, 0)
+                true
+            } else false
+        }
         background = roundedBackground("#F9FCF9", 14f, "#D7E5DB")
         setPadding(dp(10), 0, dp(10), 0)
     }

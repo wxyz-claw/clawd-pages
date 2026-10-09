@@ -61,6 +61,30 @@ class AppExperienceTest {
         assertEquals(original, AppSettings.load(context))
     }
 
+    @Test fun durationEditingWithImeDoneSavesClampsAndSurvivesRecreation() {
+        val controller = Robolectric.buildActivity(MainActivity::class.java).setup()
+        val view = controller.get().window.decorView
+        descendants(view).filterIsInstance<Button>().first { it.text == "Options  +" }.performClick()
+        val fields = descendants(view).filterIsInstance<EditText>()
+        fields[0].requestFocus(); fields[0].setText("55")
+        fields[0].onEditorAction(android.view.inputmethod.EditorInfo.IME_ACTION_DONE)
+        assertEquals(55, AppSettings.load(context).restSeconds)
+        fields[1].requestFocus(); fields[1].setText("12")
+        fields[1].onEditorAction(android.view.inputmethod.EditorInfo.IME_ACTION_DONE)
+        assertEquals(12, AppSettings.load(context).workMinutes)
+        fields[0].requestFocus(); fields[0].setText("")
+        fields[0].onEditorAction(android.view.inputmethod.EditorInfo.IME_ACTION_DONE)
+        assertEquals("55", fields[0].text.toString())
+        fields[1].requestFocus(); fields[1].setText("999")
+        fields[1].onEditorAction(android.view.inputmethod.EditorInfo.IME_ACTION_DONE)
+        assertEquals("180", fields[1].text.toString())
+        controller.pause().stop().destroy()
+        val recreated = Robolectric.buildActivity(MainActivity::class.java).setup()
+        assertEquals(listOf("55", "180"), descendants(recreated.get().window.decorView)
+            .filterIsInstance<EditText>().map { it.text.toString() })
+        recreated.pause().stop().destroy()
+    }
+
     @Test fun bundledVoiceNeedsNoTtsAndStaleCompletionCannotUnduckNewSpeech() {
         val states = mutableListOf<Boolean>()
         val guide = VoiceGuide(context) { states += it }
@@ -128,6 +152,45 @@ class AppExperienceTest {
         assertEquals(offline, shadowOf(tts).currentVoice)
         assertEquals(VoicePrompt.REST_START.text, shadowOf(tts).lastSpokenText)
         guide.close()
+    }
+
+    @Test fun delayedFallbackFailureCannotUnduckReplacementRecording() {
+        listOf(TextToSpeech.ERROR, TextToSpeech.SUCCESS).forEach { status ->
+            ShadowMediaPlayer.setMediaInfoProvider { throw IllegalArgumentException("decoder unavailable") }
+            var unavailable = 0
+            val states = mutableListOf<Boolean>()
+            val guide = VoiceGuide(context, onUnavailable = { unavailable++ }, onSpeechActive = { states += it })
+            guide.play(VoicePrompt.REST_START, true, false)
+            val oldEngine = ReflectionHelpers.getField<TextToSpeech>(guide, "tts")
+            ShadowMediaPlayer.setMediaInfoProvider { ShadowMediaPlayer.MediaInfo(3_000, -1) }
+            guide.play(VoicePrompt.HALFWAY, true, false)
+            val replacement = ReflectionHelpers.getField<MediaPlayer>(guide, "player")
+            shadowOf(oldEngine).onInitListener.onInit(status)
+            shadowOf(Looper.getMainLooper()).idle()
+            assertSame(replacement, ReflectionHelpers.getField<MediaPlayer>(guide, "player"))
+            assertTrue(ReflectionHelpers.getField<Boolean>(guide, "activeSpeech"))
+            assertTrue(states.last())
+            assertEquals(0, unavailable)
+            guide.close()
+        }
+    }
+
+    @Test fun silentCountdownDoesNotRequestDeniedAudioFocusOrPauseTimer() {
+        AppSettings.save(context, UserSettings(breakMusicEnabled = false, chimeEnabled = false))
+        val controller = Robolectric.buildService(EyeRestService::class.java).create()
+        val service = controller.get()
+        service.onStartCommand(EyeRestService.intent(service, EyeRestService.ACTION_START_OR_RESUME), 0, 1)
+        val guide = ReflectionHelpers.getField<VoiceGuide>(service, "voiceGuide")
+        guide.cancel()
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(150))
+        val audio = shadowOf(service.getSystemService(AudioManager::class.java))
+        audio.setNextFocusRequestResponse(AudioManager.AUDIOFOCUS_REQUEST_FAILED)
+        ReflectionHelpers.callInstanceMethod<Void>(service, "handleEvents",
+            ReflectionHelpers.ClassParameter.from(List::class.java, listOf(TimerEvent.Countdown(3))))
+        shadowOf(Looper.getMainLooper()).idle()
+        assertTrue(TimerStore.load(context)!!.running)
+        assertEquals("", ReflectionHelpers.getField<String>(service, "pauseReason"))
+        controller.destroy()
     }
 
     @Test fun pauseStopsSpeechAndReleasesWakeLock() {

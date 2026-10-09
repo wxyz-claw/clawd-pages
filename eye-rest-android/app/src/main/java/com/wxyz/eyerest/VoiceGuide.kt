@@ -36,6 +36,7 @@ class VoiceGuide(
     private var closed = false
     private var activeSpeech = false
     private var generation = 0
+    private var engineGeneration = 0
     private var pending: Pair<Int, VoicePrompt>? = null
     private var tone: ToneGenerator? = null
 
@@ -89,6 +90,7 @@ class VoiceGuide(
         cancel()
         closed = true
         tone?.release(); tone = null
+        engineGeneration++
         tts?.shutdown(); tts = null; ready = false
     }
 
@@ -103,14 +105,15 @@ class VoiceGuide(
         if (ready) { speak(prompt, token); return }
         pending = token to prompt
         if (tts != null) return
+        val initialization = ++engineGeneration
         tts = TextToSpeech(appContext) { status ->
             handler.post {
-                if (closed) return@post
+                if (closed || initialization != engineGeneration) return@post
                 val engine = tts ?: return@post
                 if (status != TextToSpeech.SUCCESS) {
                     val failedCurrent = pending?.first == generation
-                    pending = null; engine.shutdown(); tts = null; setSpeechActive(false)
-                    if (failedCurrent) onUnavailable()
+                    pending = null; engine.shutdown(); tts = null; ready = false
+                    if (failedCurrent) { setSpeechActive(false); onUnavailable() }
                     return@post
                 }
                 val offlineVoice = engine.voices?.filter {
@@ -119,8 +122,8 @@ class VoiceGuide(
                 }?.maxByOrNull { it.quality * 2 - it.latency }
                 if (offlineVoice == null || engine.setVoice(offlineVoice) != TextToSpeech.SUCCESS) {
                     val failedCurrent = pending?.first == generation
-                    pending = null; engine.shutdown(); tts = null; setSpeechActive(false)
-                    if (failedCurrent) onUnavailable()
+                    pending = null; engine.shutdown(); tts = null; ready = false
+                    if (failedCurrent) { setSpeechActive(false); onUnavailable() }
                     return@post
                 }
                 engine.setSpeechRate(.94f); engine.setPitch(1f); engine.setAudioAttributes(attributes)

@@ -34,7 +34,23 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.baseline && 'feature/eye-rest-android-prototype' || github.ref }}
+          ref: ${{ inputs.baseline && 'dc8d0b7760d1af5e3c0f7f219d1110ac9b9cc601' || github.ref }}
+
+      - name: Add test-only baseline renderer
+        if: inputs.baseline
+        shell: bash
+        run: |
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git show "$GITHUB_SHA:eye-rest-android/verification/BaselineRenderTest.kt" > app/src/test/java/com/wxyz/eyerest/BaselineRenderTest.kt
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('app/build.gradle.kts')
+          text = p.read_text().replace('unitTests.isReturnDefaultValues = true', 'unitTests.isReturnDefaultValues = true\n        unitTests.isIncludeAndroidResources = true')
+          text = text.replace('testImplementation("junit:junit:4.13.2")', 'testImplementation("junit:junit:4.13.2")\n    testImplementation("org.robolectric:robolectric:4.14.1")')
+          p.write_text(text)
+          with Path('gradle.properties').open('a') as f:
+              f.write('\nandroid.useAndroidX=true\n')
+          PY
 
       - name: Set up Java
         uses: actions/setup-java@v4

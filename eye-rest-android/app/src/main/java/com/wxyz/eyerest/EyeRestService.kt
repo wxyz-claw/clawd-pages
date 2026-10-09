@@ -221,7 +221,10 @@ class EyeRestService : Service() {
                     else -> VoicePrompt.ONE
                 }
             }
-            if ((settings.voiceEnabled || settings.chimeEnabled) && !requestAudioFocus()) return
+            val speaks = settings.voiceEnabled && prompt.recording != 0
+            val chimes = settings.chimeEnabled && (prompt.recording == 0 ||
+                prompt == VoicePrompt.REST_START || prompt == VoicePrompt.WORK_START)
+            if ((speaks || chimes) && !requestAudioFocus()) return
             voiceGuide.play(
                 prompt = prompt,
                 voiceEnabled = settings.voiceEnabled,
