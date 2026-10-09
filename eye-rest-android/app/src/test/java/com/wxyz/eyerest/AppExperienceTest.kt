@@ -135,6 +135,22 @@ class AppExperienceTest {
         controller.destroy()
     }
 
+    @Test fun healthyTimerRenewsBoundedWakeLockButPauseNeverRenewsIt() {
+        AppSettings.save(context, UserSettings(voiceEnabled = false, chimeEnabled = false, breakMusicEnabled = false))
+        val controller = Robolectric.buildService(EyeRestService::class.java).create()
+        val service = controller.get()
+        service.onStartCommand(EyeRestService.intent(service, EyeRestService.ACTION_START_OR_RESUME), 0, 1)
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMinutes(12))
+        val lock = ReflectionHelpers.getField<PowerManager.WakeLock>(service, "wakeLock")
+        assertTrue(lock.isHeld)
+        service.onStartCommand(EyeRestService.intent(service, EyeRestService.ACTION_PAUSE), 0, 2)
+        val paused = TimerStore.load(context)
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMinutes(11))
+        assertFalse(lock.isHeld)
+        assertEquals(paused, TimerStore.load(context))
+        controller.destroy()
+    }
+
     @Test fun interruptionAndHeadphoneDisconnectPauseWithoutAutomaticResume() {
         AppSettings.save(context, UserSettings(breakMusicEnabled = false, chimeEnabled = false))
         val controller = Robolectric.buildService(EyeRestService::class.java).create()

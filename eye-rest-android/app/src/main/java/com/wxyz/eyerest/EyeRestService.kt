@@ -36,6 +36,7 @@ class EyeRestService : Service() {
     private var speechActive = false
     private var pauseReason = ""
     private var noisyRegistered = false
+    private var renewWakeAtMillis = 0L
     private val noisyReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY && engine.snapshot().running &&
@@ -49,6 +50,7 @@ class EyeRestService : Service() {
     private val ticker = object : Runnable {
         override fun run() {
             val result = engine.tick()
+            if (result.snapshot.running) acquireWakeLock()
             syncBreakMusic(result.snapshot)
             handleEvents(result.events)
             publish(result.snapshot)
@@ -333,7 +335,12 @@ class EyeRestService : Service() {
     }
 
     private fun acquireWakeLock() {
-        if (!wakeLock.isHeld) wakeLock.acquire()
+        val now = SystemClock.elapsedRealtime()
+        if (!wakeLock.isHeld || now >= renewWakeAtMillis) {
+            // Renew only while ticks are healthy; a stalled service cannot hold it forever.
+            wakeLock.acquire(10 * 60 * 1_000L)
+            renewWakeAtMillis = now + 5 * 60 * 1_000L
+        }
     }
 
     private fun requestAudioFocus(): Boolean {
@@ -354,6 +361,7 @@ class EyeRestService : Service() {
 
     private fun releaseWakeLock() {
         if (::wakeLock.isInitialized && wakeLock.isHeld) wakeLock.release()
+        renewWakeAtMillis = 0L
     }
 
     companion object {

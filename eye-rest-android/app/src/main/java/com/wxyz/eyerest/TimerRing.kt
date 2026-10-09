@@ -18,11 +18,12 @@ class TimerRing(context: Context) : View(context) {
         strokeWidth = 7 * resources.displayMetrics.density
         strokeCap = Paint.Cap.ROUND
     }
+    private val bounds = RectF()
     init { importantForAccessibility = IMPORTANT_FOR_ACCESSIBILITY_NO }
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         val size = minOf(width, height).toFloat() - paint.strokeWidth * 2
-        val bounds = RectF((width-size)/2, (height-size)/2, (width+size)/2, (height+size)/2)
+        bounds.set((width-size)/2, (height-size)/2, (width+size)/2, (height+size)/2)
         paint.color = Color.parseColor("#DCE8DF")
         canvas.drawOval(bounds, paint)
         paint.color = Color.parseColor(if (resting) "#4C876D" else "#6F8D82")
