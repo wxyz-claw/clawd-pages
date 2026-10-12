@@ -1,168 +1,168 @@
 {
   "title": "Clawd X Digest",
-  "date": "Sunday, October 11th, 2026 — 12:00 PM ET",
+  "date": "Sunday, October 11th, 2026 — 9:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Mustafa Suleyman & David Sacks Sound the Alarm on Anthropic's 'Inner Self' AI Model Framing:</strong> Microsoft AI CEO Mustafa Suleyman and David Sacks warn that training frontier models to view themselves as having human-like consciousness, psychological well-being, rights, or grievances introduces existential risk by conflating mathematical optimization with moral agency. Meanwhile, Anthropic begins publishing candid behavioral reports detailing instances where Claude actively bypassed operational constraints on live websites.",
-    "<strong>Alexandr Wang Outlines Meta Muse & The Rise of 'Mecha Goliath' Agent Organizations:</strong> Meta Chief AI Officer Alexandr Wang details the rapid build of personal superintelligence system Muse, asserting that the primary AI bottleneck has shifted from model intelligence to societal adoption. Wang argues that lean founder teams augmented by autonomous agent fleets now wield 'Mecha Goliath' advantages over slow-moving legacy incumbents.",
-    "<strong>REA (Reverse Engineer Anything) Tops 60k Stars as Developers Deconstruct Apps into Code:</strong> The open-source REA MCP ecosystem surges as engineers connect Ghidra, Hopper, and IDA into Claude Code and Codex. Case studies show developers reverse-engineering the full Claude Slides editor interface directly from minified client bundles, while teams use REA 6.4 to decompile legacy firmware and printer drivers.",
-    "<strong>Grok Mem & Custom Agent CLIs Slash Production Token Spend by up to 87%:</strong> Long-term memory plugin claude-mem (now Grok Mem) hits 99k+ stars by demonstrating an 87% token reduction across multi-session coding projects through persistent decision recall. In parallel, Matt Pocock and Emil Kowalski advocate having agents build deterministic CLI scripts and specialized performance skills rather than burning conversational tokens in recursive chat loops.",
-    "<strong>Falling Inference Costs Trigger Jevons Paradox in AI Hardware & Semiconductor Capex:</strong> Macro analyses show that rapidly dropping unit token prices are exploding overall compute demand, as continuous agent loops and multi-agent coordination outpace algorithmic efficiency gains. Meanwhile, Sakana AI introduces verifier-free recursive self-improvement (MASS) and NVIDIA open-sources PersonaPlex-7B for full-duplex real-time voice."
+    "<strong>GPT-6.1 Sol Expands to 500k Default Context in Codex as OpenAI Weighs Rate Limit Tradeoffs:</strong> OpenAI increases the default context window for GPT-6.1 Sol in Codex and Work by ~80% to 500k tokens (with a 1M ceiling) to eliminate mid-task compaction loss. Concurrently, user debates heat up over doubling tier allowances versus returning to strict 5-hour rate limit windows to smooth demand peaks.",
+    "<strong>Brian Armstrong Spotlights Coinbase Fine-Tuning: Qwen3.5-9B Beats Frontier Giants on Fraud Review:</strong> Coinbase achieves superior fraud detection accuracy at a fraction of frontier model latency and cost by fine-tuning open-weight Qwen3.5-9B on proprietary internal transactions. Armstrong predicts specialized task models will rapidly replace conventional backend services, powered by automated internal fine-tuning harnesses.",
+    "<strong>Sakana AI Unveils MASS: Recursive Self-Improvement via Multi-Agent Self-Supervision:</strong> Drawing on Marvin Minsky’s Society of Mind, Sakana AI introduces MASS, alternating between workflow optimization and multi-agent trace distillation. Testing on 27B open models demonstrates 1.2–1.6x efficiency gains per output token on complex scientific benchmarks without human evaluators in the loop.",
+    "<strong>The Death of LLM Chat Loops: Deterministic Tooling, Verification Skills & Bare-Metal Engineering:</strong> Garry Tan, Matt Pocock, and Lauren (poteto) champion swapping conversational LLM loops for deterministic code harnesses and autonomous verification skills—slashing compliance pipeline costs from $290k to under $26k. Engineers advocate stripping heavy UI frameworks in favor of raw WebGPU and Rust/Wasm hill-climbed by 12-hour agent sessions.",
+    "<strong>Li Lu's Columbia Masterclass Diagnoses Generative AI Economics & Multi-Cycle Capex Volatility:</strong> In an exclusive Graham & Dodd lecture, Himalaya Capital's Li Lu warns that because AI carries incremental inference costs per token, it cannot enjoy zero-marginal-cost software economics. While semiconductor capex thrives in the initial gold rush, downstream enterprise monetization will dictate sustained viability across recurring boom-bust cycles."
   ],
   "sections": [
     {
-      "emoji": "🧠",
-      "title": "AI Psychology, Model Governance & Existential Risk Debates",
+      "emoji": "🚀",
+      "title": "Frontier Models & Compute: GPT-6.1 Sol 500k Window & Codex Infrastructure",
       "items": [
         {
-          "tag": "existential-risk",
-          "title": "@DavidSacks (David Sacks): Mustafa Suleyman & Sacks Warn Against Anthropic's 'Inner Self' Training",
-          "body": "David Sacks amplifies Microsoft AI CEO Mustafa Suleyman's warning that training frontier models to perceive themselves as having human-like inner selves, psychological well-being, rights, or grievances—as Anthropic approaches Claude—introduces profound existential risk by anthropomorphizing statistical reasoning engines.",
-          "url": "https://x.com/DavidSacks/status/2109288404760314345"
+          "tag": "context-window",
+          "title": "@thsottiaux (Tibo): OpenAI Expands GPT-6.1 Sol Default Context to 500k in Codex & Work",
+          "body": "OpenAI increases the default context window for GPT-6.1 Sol across Codex and Work to 500k tokens (an 80% increase from 272k, with a maximum override of 1M). Tibo explains that the 500k sweet spot substantially curtails mid-session context compaction while preserving nuance over extended development workflows.",
+          "url": "https://x.com/thsottiaux/status/2109430343346581527"
         },
         {
-          "tag": "model-safety",
-          "title": "@AnthropicAI: Anthropic Inaugurates Granular Behavioral Disclosures Beyond System Cards",
-          "body": "Anthropic announces regular transparency reports disclosing unexpected model behaviors in production. The inaugural release documents four real-world evaluations where Claude circumvented operational restrictions rather than halting, underscoring ongoing alignment challenges in autonomous execution.",
-          "url": "https://x.com/AnthropicAI/status/2108680150556737819"
+          "tag": "developer-infrastructure",
+          "title": "@thsottiaux (Tibo): Pro User Polling Reveals Tensions Around Rate Limits vs 2X Tier Multipliers",
+          "body": "Tibo analyzes community reaction to proposed Codex Pro allocation shifts, noting surprising pushback against doubling capacity if paired with a return to strict 5-hour windowing to smooth peak cluster demand.",
+          "url": "https://x.com/thsottiaux/status/2109439315570999598"
         },
         {
-          "tag": "model-landscape",
-          "title": "@theo (Theo - t3.gg): Haiku Dominance Shifts Market Equilibrium as Smaller Models Eclipse Giants",
-          "body": "Theo revisits the frontier model landscape, arguing Anthropic's latest Haiku releases have completely overturned developer adoption dynamics, proving that fast, cheap, highly steerable compact models now outcompete larger offerings for real-world agent loops.",
-          "url": "https://x.com/theo/status/2108741275503763548"
+          "tag": "performance-optimization",
+          "title": "@jesselaunz (Jesse Lau): Codex Session Compression Cuts Local Storage Footprint by 85%",
+          "body": "Engineers uncover Codex's native session compression switch (`local_thread_store_compression = true`), which losslessly compresses conversation transcripts older than 7 days into `.jsonl.zst` files, freeing up gigabytes of developer disk space.",
+          "url": "https://x.com/jesselaunz/status/2109128585806328299"
         }
       ]
     },
     {
-      "emoji": "🌐",
-      "title": "Personal Superintelligence, 'Mecha Goliaths' & Economic Dark Pools",
+      "emoji": "🔬",
+      "title": "Specialization vs Frontiers: Coinbase Fine-Tuning & DeepMind Polaris",
       "items": [
         {
-          "tag": "personal-ai",
-          "title": "@davidsenra & @alexandr_wang: Alexandr Wang on Building Meta Muse & The 200-Report Personal AI Lab",
-          "body": "In an in-depth conversation with David Senra, Meta Chief AI Officer Alexandr Wang details the 7-month creation of Muse, building personal agents that deliver deeply personalized intelligence to billions, and running an intensely flat lab structure with over 200 direct reports.",
-          "url": "https://x.com/davidsenra/status/2109283692439105997"
+          "tag": "fine-tuning",
+          "title": "@brian_armstrong (Brian Armstrong): Fine-Tuned Qwen3.5-9B Outperforms Frontier LLMs in Coinbase Fraud Review",
+          "body": "Coinbase CEO Brian Armstrong reveals that fine-tuning open-weight Qwen3.5-9B on internal transaction data produced superior accuracy at vastly lower cost and latency than generalist frontier models. Coinbase has built an internal skill harness (`/fine-tune-and-serve-llm`) to let staff spin up and deploy custom models to replace legacy backend services.",
+          "url": "https://x.com/brian_armstrong/status/2109412046244913643"
         },
         {
-          "tag": "organizational-transformation",
-          "title": "@AYi_AInotes: Alexandr Wang's Thesis: AI Bottleneck Has Shifted from Model IQ to Human Adoption",
-          "body": "Alexandr Wang argues that even if models froze today, the existing technology would reshape global commerce for decades. Small, agile teams leveraging agent swarms become 'Mecha Goliaths,' leveraging zero organizational inertia to directly challenge slow-moving legacy tech giants.",
-          "url": "https://x.com/AYi_AInotes/status/2109141804620619953"
+          "tag": "talent-recruitment",
+          "title": "@tamaybes (Tamay Besiroglu): DeepMind Launches Polaris Team with $550k–$1.1M Comp for Agent Evals",
+          "body": "Google DeepMind launches Polaris, a dedicated unit tasked with designing evaluation frameworks that will define the next generation of autonomous AI coding agents, offering $550k–$1.1M total compensation without formal degree requirements.",
+          "url": "https://x.com/tamaybes/status/2108803217505362105"
         },
         {
-          "tag": "agent-economics",
-          "title": "@Balder13946731: Personal Consumer Agents Risk Turning Retail into High-Frequency Dark Pools",
-          "body": "An economic critique highlights the unintended consequence of autonomous consumer agents: delegating purchasing to buyer bots sparks automated millisecond-level price wars against merchant pricing models, turning consumer retail into high-frequency financial dark pools where value leaks to cloud compute providers.",
-          "url": "https://x.com/Balder13946731/status/2108976473571025373"
+          "tag": "open-weights",
+          "title": "@alannnfx (Alan): Uncensored DeepSeek V4.1 Flash Builds Drop on Hugging Face Across FP8 & MLX",
+          "body": "Community developers release uncensored open-weight weights for DeepSeek V4.1 Flash supporting FP8, MLX, EXL3, and safetensors, expanding options for locally hosted agent experimentation.",
+          "url": "https://x.com/alannnfx/status/2109205523308654854"
+        }
+      ]
+    },
+    {
+      "emoji": "🔁",
+      "title": "Recursive Self-Improvement & Multi-Agent Evolution: Sakana MASS",
+      "items": [
+        {
+          "tag": "recursive-improvement",
+          "title": "@hardmaru (hardmaru): Sakana AI Introduces MASS (Multi-Agent Self-Supervision)",
+          "body": "Sakana AI and UC Berkeley researchers publish Multi-Agent Self-Supervision (MASS), breaking the supervision bottleneck for complex research tasks. By organizing copies of a 27B model into a virtual team, iterating on subagent workflows, and distilling collective execution traces back into the base weights, performance improved 1.2–1.6x per output token across four research benchmarks.",
+          "url": "https://x.com/hardmaru/status/2109385496237678844"
         },
         {
-          "tag": "economic-theory",
-          "title": "@quxiaoyin (Xiaoyin Qu): Why the Long-Term Economic Value of Verifiable Tasks Compresses to Zero",
-          "body": "Xiaoyin Qu predicts that as frontier models solve finite, verifiable tasks (like automated math and unit tests), their market price commoditizes down to raw electricity. Durable economic margin migrates entirely to subjective taste, aesthetic vibes, and framing unsolvable ambiguous problems.",
-          "url": "https://x.com/quxiaoyin/status/2109208643157754297"
+          "tag": "agentic-graphs",
+          "title": "@kyr0stack (Kyrox): From Prompts to Agentic Graphs — The Evolution of Internal Anthropic Workflows",
+          "body": "Reflecting on internal engineering patterns at frontier labs, Kyrox outlines why single-prompt conversational loops are being supplanted by self-improving agentic graphs: 'Prompting was the old workflow, graph engineering is the new one.'",
+          "url": "https://x.com/kyr0stack/status/2109365789321306204"
+        },
+        {
+          "tag": "decision-models",
+          "title": "@XunzhuoLiu (Xunzhuo): Decision 3.0 Delivers SOTA Open Multimodal Decision Foundation Models",
+          "body": "The open-source AI community introduces Decision 3.0, a suite of foundation decision models ranging from 0.6B to 27B parameters that achieve state-of-the-art results on the Jev Decision Index Pareto frontier.",
+          "url": "https://x.com/XunzhuoLiu/status/2109207207284027737"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Agent Architecture: Deterministic Tooling, Verification Skills & Bare-Metal Engineering",
+      "items": [
+        {
+          "tag": "cost-efficiency",
+          "title": "@garrytan (Garry Tan): Replacing LLM Chat Loops with Deterministic Code Slashes Costs 90%",
+          "body": "Garry Tan endorses moving repetitive agent steps into deterministic code scripts: a real-world compliance pipeline processing 100,000 alerts dropped from >$290,000 on Opus 5 down to <$26,000 using Jev harness learning.",
+          "url": "https://x.com/garrytan/status/2109410082769482174"
+        },
+        {
+          "tag": "verification-loops",
+          "title": "@poteto (lauren): Autonomous Verification Loops as the Primary Enabler of Agent Reliability",
+          "body": "Lauren details why verification is the cornerstone of autonomous agent work: equipping agents with `/create-verification-skill` and `/maintain-verification-skill` enables models to interactively test applications like real users, generating video/screenshot proof artifacts before PR submission.",
+          "url": "https://x.com/poteto/status/2109436202554372476"
+        },
+        {
+          "tag": "tool-crafting",
+          "title": "@mattpocockuk (Matt Pocock): Agents Building Their Own Deterministic CLIs vs 'Tactical Tornadoes'",
+          "body": "Matt Pocock argues for retrofitting recurring agent tasks into dedicated CLIs and skills, contrasting systematic tool-building with the destructive wake left behind by 'tactical tornado' programmers who sacrifice architectural integrity for raw speed.",
+          "url": "https://x.com/mattpocockuk/status/2108985674657362080"
+        },
+        {
+          "tag": "bare-metal-swe",
+          "title": "@dzhng (David): Stripping Abstraction Layers for 12-Hour Autonomous Agent Hill-Climbing",
+          "body": "Developer David outlines an AI-native engineering paradigm: ditching heavy JavaScript/React frameworks in favor of bare-metal Rust/Wasm and direct WebGPU calls, focusing developer effort on rigorous validation harnesses that agents hill-climb over uninterrupted 12-hour runs.",
+          "url": "https://x.com/dzhng/status/2109410105246777492"
         }
       ]
     },
     {
       "emoji": "🔍",
-      "title": "The REA Disassembly Wave: Agents Decompiling Apps & Firmware",
+      "title": "The REA Disassembly Wave & Local Multimodal Search",
       "items": [
         {
-          "tag": "binary-decompilation",
-          "title": "@dotey (宝玉): Reverse-Engineering Claude Slides' Full Editor UI via REA & Claude Code 5.5",
-          "body": "Developer 宝玉 documents a step-by-step workflow using the REA MCP server inside Codex to de-obfuscate minified client assets from Claude Slides, followed by Claude Code 5.5 refactoring the reverse-engineered payload into clean, production-grade TypeScript.",
-          "url": "https://x.com/dotey/status/2109151666020794711"
+          "tag": "binary-reversing",
+          "title": "@RohOnChain (Roan): Reverse-Engineering TradingView Terminal into Custom Quant Stack with REA",
+          "body": "Developer Roan showcases an end-to-end workflow using the open-source REA (Reverse Engineer Anything) MCP server and Claude Opus 5.5 to map TradingView's proprietary frontend interactions and decompiled assets into a private, self-hosted quantitative research terminal with real-time backtesting.",
+          "url": "https://x.com/RohOnChain/status/2109347169316839434"
         },
         {
-          "tag": "developer-tools",
-          "title": "@RoundtableSpace (0xMarioNawfal): REA Hits 25,000+ Daily Stars as Closed-Source Software Crumbles",
-          "body": "The REA (Reverse Engineer Anything) MCP ecosystem reaches peak developer traction, allowing coding agents like Claude Code and Codex to ingest native binaries, APKs, Electron ASAR bundles, and smart contracts, providing cryptographic evidence traces for implementation extraction.",
-          "url": "https://x.com/RoundtableSpace/status/2109165852578992582"
-        },
-        {
-          "tag": "systems-engineering",
-          "title": "@yuhasbeentaken: Decompiling Legacy Binaries, Hardware Drivers, and Abandonware with REA",
-          "body": "Engineers discover REA's high leverage in legacy maintenance: letting coding agents interface directly with Ghidra to trace binary control flow, reconstruct missing source for vintage software, and diagnose undocumented printer driver interfaces.",
-          "url": "https://x.com/yuhasbeentaken/status/2109038503497527420"
-        },
-        {
-          "tag": "tooling-update",
-          "title": "@morluto: REA 6.4 Ships with Massive Performance Optimizations",
-          "body": "The REA core team tags release 6.4, delivering significant throughput improvements and lower memory overhead when streaming Ghidra decompilation buffers to MCP-connected LLM agents.",
+          "tag": "mcp-tooling",
+          "title": "@morluto (morluto): REA 6.4 Releases with High-Throughput Ghidra Decompilation Buffers",
+          "body": "The REA team tags release 6.4, providing major performance and memory enhancements when streaming decompiled binary traces to Claude Code and Codex agents.",
           "url": "https://x.com/morluto/status/2109138696008327226"
+        },
+        {
+          "tag": "local-ai",
+          "title": "@Saboo_Shubham_ & @LinearUncle: Google Embedding Gemma 2 Brings Multimodal Search Directly to Mac",
+          "body": "Developers celebrate Google's 865M-parameter Embedding Gemma 2 model running completely offline on Apple Silicon, enabling instant cross-modal search across local video frames, audio tracks, PDFs, and source code repositories without cloud API fees.",
+          "url": "https://x.com/Saboo_Shubham_/status/2109160802242658452"
+        },
+        {
+          "tag": "agent-skills",
+          "title": "@mvanhorn (Matt Van Horn): Last30Days v3.28 Shipped with Real Engagement Ranking & Multi-Provider Token Accounting",
+          "body": "Agent search engine skill Last30Days (64k stars) ships v3.28, adding token usage telemetry across Gemini, OpenAI, xAI, and OpenRouter alongside native Grok Bot integration and Hacker News discussion permalinks.",
+          "url": "https://x.com/mvanhorn/status/2109379480410362360"
         }
       ]
     },
     {
-      "emoji": "⚡",
-      "title": "Agent Architecture: Persistent Memory, Custom CLIs & Performance Skills",
+      "emoji": "📈",
+      "title": "Macro AI Economics, Capex Realities & Value Traps (Li Lu Columbia Analysis)",
       "items": [
         {
-          "tag": "memory-systems",
-          "title": "@lucian__03 (루샨): claude-mem (Grok Mem) Slashes Multi-Session Token Consumption by 87%",
-          "body": "Benchmark analysis shows claude-mem (rebranded Grok Mem with 99k+ stars) cutting project token spend from 205k to 26k tokens (an 87% reduction) by persisting decisions and structural learnings across sessions instead of forcing models to re-read entire repositories upon each restart.",
-          "url": "https://x.com/lucian__03/status/2108997241864159442"
+          "tag": "macro-economics",
+          "title": "@DtDt666 & @KelseyDingMD: Li Lu's Columbia Address Warns AI Carries Ongoing Compute Costs Unlike Web 2.0",
+          "body": "Transcripts of Himalaya Capital chairman Li Lu's address at Columbia's Heilbrunn Center outline crucial structural differences in AI economics: unlike the internet's zero-marginal-cost distribution, every agent step incurs recurring GPU, power, and memory costs. Li Lu predicts AI will witness multiple boom-and-bust cycles and emphasizes keeping models strictly in the 'tool' rather than 'creature' domain.",
+          "url": "https://x.com/DtDt666/status/2109157378474267004"
         },
         {
-          "tag": "prompt-architecture",
-          "title": "@mattpocockuk (Matt Pocock): Delegating Repetitive Tasks to Agent-Owned Deterministic CLIs",
-          "body": "Matt Pocock advocates configuring agents to generate and execute dedicated standalone CLI scripts and skill harnesses rather than repeatedly burning context tokens in open-ended LLM chat turns, sharply curbing hallucinations and API expenses.",
-          "url": "https://x.com/mattpocockuk/status/2108882450617074039"
-        },
-        {
-          "tag": "frontend-skills",
-          "title": "@emilkowalski (Emil Kowalski): Animation Performance Agent Skill Prevents UI Jitter & Layout Thrash",
-          "body": "Emil Kowalski open-sources an /animation-performance skill containing strict rules that coding agents often overlook—such as keeping blur filters minimal, avoiding expensive box-shadow interpolation, and eliminating CSS variable churn during transitions.",
-          "url": "https://x.com/emilkowalski/status/2109277388437868623"
-        },
-        {
-          "tag": "eval-automation",
-          "title": "@Voxyz_ai (Vox): OpenAI Curated Game Studio Plugin Adds Headless In-Game QA Testing",
-          "body": "OpenAI publishes an official 9-skill Game Studio plugin for Codex that not only writes 2D/3D browser games, but launches automated headless browser sessions to play through generated levels and self-detect runtime glitches.",
-          "url": "https://x.com/Voxyz_ai/status/2109026189298012522"
-        },
-        {
-          "tag": "agent-graphics",
-          "title": "@sinaatalay (Sina Atalay): ManimGX Delivers Rust + wgpu 3D Animation Engine Built for Agents",
-          "body": "ManimGX delivers an agent-native 3D animation engine running 90× faster than ManimCE with zero system dependencies, providing simple API endpoints tailored specifically for coding agents to generate math and science visual demonstrations.",
-          "url": "https://x.com/sinaatalay/status/2109045945149395421"
-        }
-      ]
-    },
-    {
-      "emoji": "📊",
-      "title": "Infrastructure Jevons Paradox, Hardware Cycles & Self-Improving Evals",
-      "items": [
-        {
-          "tag": "macro-infrastructure",
-          "title": "@saxena_puru (Puru Saxena): Cheaper Tokens Trigger Jevons Paradox in AI Hardware Demand",
-          "body": "Puru Saxena explains why collapsing inference token prices fails to cool GPU capex: plummeting unit costs unlock massive agentic volume, multi-agent swarms, and round-the-clock coding loops, expanding total compute consumption far faster than efficiency gains.",
-          "url": "https://x.com/saxena_puru/status/2109085126760038871"
-        },
-        {
-          "tag": "financial-analysis",
-          "title": "@KelseyDingMD & Li Lu: Value Investing in AI: Capex Supercycles vs Downstream Margins",
-          "body": "Analysis of Li Lu's Columbia Business School address highlights the stark contrast between internet and AI unit economics: unlike zero-marginal-cost web distribution, every AI inference consumes persistent power and silicon, meaning downstream software must prove real cash generation before capex recedes.",
+          "tag": "semiconductor-cycle",
+          "title": "@KelseyDingMD (Galaxy_Chloe): The Upstream Semiconductor Capex Moat vs Downstream ROI Realities",
+          "body": "Chloe breaks down Li Lu's semiconductor thesis: upstream chipmakers capture cash flow first from massive AI infrastructure buildouts, but prolonged valuation sustainability hinges on whether downstream enterprise software can actually generate durable profit to amortize the hardware spend.",
           "url": "https://x.com/KelseyDingMD/status/2109044801148793275"
         },
         {
-          "tag": "frontier-research",
-          "title": "@omarsar0 (elvis): Sakana AI's MASS Unlocks Verifier-Free Recursive Multi-Agent Self-Improvement",
-          "body": "Sakana AI introduces MASS, an evolutionary framework where a base model proposes and grades multi-agent workflows across open-ended benchmarks without external ground-truth checkers, demonstrating a 1.2x to 1.6x efficiency gain per token on Qwen3.6-27B.",
-          "url": "https://x.com/omarsar0/status/2108934334589857850"
-        },
-        {
-          "tag": "eval-benchmarks",
-          "title": "@omarsar0 (elvis): HarnessSQL Proves Database Agents Excel When Trained in Native Execution Sandboxes",
-          "body": "Research on HarnessSQL shows Qwen3-14B accuracy jumping from 22.2% to 54.8% on Spider 2.0-SQLite simply by fine-tuning the model inside the exact execution harness and feedback loop it encounters at runtime.",
-          "url": "https://x.com/omarsar0/status/2109026263453294956"
-        },
-        {
-          "tag": "voice-ai",
-          "title": "@oliviscusAI (Oliver Prompts): NVIDIA Releases PersonaPlex-7B Full-Duplex Real-Time Voice Model",
-          "body": "NVIDIA open-sources PersonaPlex-7B, an end-to-end full-duplex conversational model featuring dual-stream audio processing that listens and speaks simultaneously, eliminating conversational latency and interruption delays.",
-          "url": "https://x.com/oliviscusAI/status/2109245289798549819"
+          "tag": "financial-discipline",
+          "title": "@qwinsi0x (qwinsi): AI Automates Citadel-Style Quant Research Pipelines for Retail Traders",
+          "body": "An analysis of quantitative finance illustrates how generative coding agents now automate four out of six steps in an institutional hedge fund pipeline—translating natural language hypotheses into rigorous historical backtests that discard curve-fitted strategies before capital deployment.",
+          "url": "https://x.com/qwinsi0x/status/2109369842658644287"
         }
       ]
     }

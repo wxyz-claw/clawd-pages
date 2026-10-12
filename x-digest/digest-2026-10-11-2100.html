@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Sunday, October 11th, 2026 — 9:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Sunday, October 11th, 2026 — 9:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>GPT-6.1 Sol Expands to 500k Default Context in Codex as OpenAI Weighs Rate Limit Tradeoffs:</strong> OpenAI increases the default context window for GPT-6.1 Sol in Codex and Work by ~80% to 500k tokens (with a 1M ceiling) to eliminate mid-task compaction loss. Concurrently, user debates heat up over doubling tier allowances versus returning to strict 5-hour rate limit windows to smooth demand peaks.</li>
+      <li><strong>Brian Armstrong Spotlights Coinbase Fine-Tuning: Qwen3.5-9B Beats Frontier Giants on Fraud Review:</strong> Coinbase achieves superior fraud detection accuracy at a fraction of frontier model latency and cost by fine-tuning open-weight Qwen3.5-9B on proprietary internal transactions. Armstrong predicts specialized task models will rapidly replace conventional backend services, powered by automated internal fine-tuning harnesses.</li>
+      <li><strong>Sakana AI Unveils MASS: Recursive Self-Improvement via Multi-Agent Self-Supervision:</strong> Drawing on Marvin Minsky’s Society of Mind, Sakana AI introduces MASS, alternating between workflow optimization and multi-agent trace distillation. Testing on 27B open models demonstrates 1.2–1.6x efficiency gains per output token on complex scientific benchmarks without human evaluators in the loop.</li>
+      <li><strong>The Death of LLM Chat Loops: Deterministic Tooling, Verification Skills & Bare-Metal Engineering:</strong> Garry Tan, Matt Pocock, and Lauren (poteto) champion swapping conversational LLM loops for deterministic code harnesses and autonomous verification skills—slashing compliance pipeline costs from $290k to under $26k. Engineers advocate stripping heavy UI frameworks in favor of raw WebGPU and Rust/Wasm hill-climbed by 12-hour agent sessions.</li>
+      <li><strong>Li Lu's Columbia Masterclass Diagnoses Generative AI Economics & Multi-Cycle Capex Volatility:</strong> In an exclusive Graham & Dodd lecture, Himalaya Capital's Li Lu warns that because AI carries incremental inference costs per token, it cannot enjoy zero-marginal-cost software economics. While semiconductor capex thrives in the initial gold rush, downstream enterprise monetization will dictate sustained viability across recurring boom-bust cycles.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>Frontier Models &amp; Compute: GPT-6.1 Sol 500k Window &amp; Codex Infrastructure</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag context-window">Context-Window</span> @thsottiaux (Tibo): OpenAI Expands GPT-6.1 Sol Default Context to 500k in Codex &amp; Work</div>
+    <div class="item-body">OpenAI increases the default context window for GPT-6.1 Sol across Codex and Work to 500k tokens (an 80% increase from 272k, with a maximum override of 1M). Tibo explains that the 500k sweet spot substantially curtails mid-session context compaction while preserving nuance over extended development workflows.</div>
+    <div class="item-meta">
+      <a href="https://x.com/thsottiaux/status/2109430343346581527" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag developer-infrastructure">Developer-Infrastructure</span> @thsottiaux (Tibo): Pro User Polling Reveals Tensions Around Rate Limits vs 2X Tier Multipliers</div>
+    <div class="item-body">Tibo analyzes community reaction to proposed Codex Pro allocation shifts, noting surprising pushback against doubling capacity if paired with a return to strict 5-hour windowing to smooth peak cluster demand.</div>
+    <div class="item-meta">
+      <a href="https://x.com/thsottiaux/status/2109439315570999598" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag performance-optimization">Performance-Optimization</span> @jesselaunz (Jesse Lau): Codex Session Compression Cuts Local Storage Footprint by 85%</div>
+    <div class="item-body">Engineers uncover Codex&#x27;s native session compression switch (`local_thread_store_compression = true`), which losslessly compresses conversation transcripts older than 7 days into `.jsonl.zst` files, freeing up gigabytes of developer disk space.</div>
+    <div class="item-meta">
+      <a href="https://x.com/jesselaunz/status/2109128585806328299" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔬</span>
+      <h2>Specialization vs Frontiers: Coinbase Fine-Tuning &amp; DeepMind Polaris</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag fine-tuning">Fine-Tuning</span> @brian_armstrong (Brian Armstrong): Fine-Tuned Qwen3.5-9B Outperforms Frontier LLMs in Coinbase Fraud Review</div>
+    <div class="item-body">Coinbase CEO Brian Armstrong reveals that fine-tuning open-weight Qwen3.5-9B on internal transaction data produced superior accuracy at vastly lower cost and latency than generalist frontier models. Coinbase has built an internal skill harness (`/fine-tune-and-serve-llm`) to let staff spin up and deploy custom models to replace legacy backend services.</div>
+    <div class="item-meta">
+      <a href="https://x.com/brian_armstrong/status/2109412046244913643" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag talent-recruitment">Talent-Recruitment</span> @tamaybes (Tamay Besiroglu): DeepMind Launches Polaris Team with $550k–$1.1M Comp for Agent Evals</div>
+    <div class="item-body">Google DeepMind launches Polaris, a dedicated unit tasked with designing evaluation frameworks that will define the next generation of autonomous AI coding agents, offering $550k–$1.1M total compensation without formal degree requirements.</div>
+    <div class="item-meta">
+      <a href="https://x.com/tamaybes/status/2108803217505362105" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag open-weights">Open-Weights</span> @alannnfx (Alan): Uncensored DeepSeek V4.1 Flash Builds Drop on Hugging Face Across FP8 &amp; MLX</div>
+    <div class="item-body">Community developers release uncensored open-weight weights for DeepSeek V4.1 Flash supporting FP8, MLX, EXL3, and safetensors, expanding options for locally hosted agent experimentation.</div>
+    <div class="item-meta">
+      <a href="https://x.com/alannnfx/status/2109205523308654854" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔁</span>
+      <h2>Recursive Self-Improvement &amp; Multi-Agent Evolution: Sakana MASS</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag recursive-improvement">Recursive-Improvement</span> @hardmaru (hardmaru): Sakana AI Introduces MASS (Multi-Agent Self-Supervision)</div>
+    <div class="item-body">Sakana AI and UC Berkeley researchers publish Multi-Agent Self-Supervision (MASS), breaking the supervision bottleneck for complex research tasks. By organizing copies of a 27B model into a virtual team, iterating on subagent workflows, and distilling collective execution traces back into the base weights, performance improved 1.2–1.6x per output token across four research benchmarks.</div>
+    <div class="item-meta">
+      <a href="https://x.com/hardmaru/status/2109385496237678844" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag agentic-graphs">Agentic-Graphs</span> @kyr0stack (Kyrox): From Prompts to Agentic Graphs — The Evolution of Internal Anthropic Workflows</div>
+    <div class="item-body">Reflecting on internal engineering patterns at frontier labs, Kyrox outlines why single-prompt conversational loops are being supplanted by self-improving agentic graphs: &#x27;Prompting was the old workflow, graph engineering is the new one.&#x27;</div>
+    <div class="item-meta">
+      <a href="https://x.com/kyr0stack/status/2109365789321306204" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag decision-models">Decision-Models</span> @XunzhuoLiu (Xunzhuo): Decision 3.0 Delivers SOTA Open Multimodal Decision Foundation Models</div>
+    <div class="item-body">The open-source AI community introduces Decision 3.0, a suite of foundation decision models ranging from 0.6B to 27B parameters that achieve state-of-the-art results on the Jev Decision Index Pareto frontier.</div>
+    <div class="item-meta">
+      <a href="https://x.com/XunzhuoLiu/status/2109207207284027737" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛠️</span>
+      <h2>Agent Architecture: Deterministic Tooling, Verification Skills &amp; Bare-Metal Engineering</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cost-efficiency">Cost-Efficiency</span> @garrytan (Garry Tan): Replacing LLM Chat Loops with Deterministic Code Slashes Costs 90%</div>
+    <div class="item-body">Garry Tan endorses moving repetitive agent steps into deterministic code scripts: a real-world compliance pipeline processing 100,000 alerts dropped from &gt;$290,000 on Opus 5 down to &lt;$26,000 using Jev harness learning.</div>
+    <div class="item-meta">
+      <a href="https://x.com/garrytan/status/2109410082769482174" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag verification-loops">Verification-Loops</span> @poteto (lauren): Autonomous Verification Loops as the Primary Enabler of Agent Reliability</div>
+    <div class="item-body">Lauren details why verification is the cornerstone of autonomous agent work: equipping agents with `/create-verification-skill` and `/maintain-verification-skill` enables models to interactively test applications like real users, generating video/screenshot proof artifacts before PR submission.</div>
+    <div class="item-meta">
+      <a href="https://x.com/poteto/status/2109436202554372476" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tool-crafting">Tool-Crafting</span> @mattpocockuk (Matt Pocock): Agents Building Their Own Deterministic CLIs vs &#x27;Tactical Tornadoes&#x27;</div>
+    <div class="item-body">Matt Pocock argues for retrofitting recurring agent tasks into dedicated CLIs and skills, contrasting systematic tool-building with the destructive wake left behind by &#x27;tactical tornado&#x27; programmers who sacrifice architectural integrity for raw speed.</div>
+    <div class="item-meta">
+      <a href="https://x.com/mattpocockuk/status/2108985674657362080" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag bare-metal-swe">Bare-Metal-Swe</span> @dzhng (David): Stripping Abstraction Layers for 12-Hour Autonomous Agent Hill-Climbing</div>
+    <div class="item-body">Developer David outlines an AI-native engineering paradigm: ditching heavy JavaScript/React frameworks in favor of bare-metal Rust/Wasm and direct WebGPU calls, focusing developer effort on rigorous validation harnesses that agents hill-climb over uninterrupted 12-hour runs.</div>
+    <div class="item-meta">
+      <a href="https://x.com/dzhng/status/2109410105246777492" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔍</span>
+      <h2>The REA Disassembly Wave &amp; Local Multimodal Search</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag binary-reversing">Binary-Reversing</span> @RohOnChain (Roan): Reverse-Engineering TradingView Terminal into Custom Quant Stack with REA</div>
+    <div class="item-body">Developer Roan showcases an end-to-end workflow using the open-source REA (Reverse Engineer Anything) MCP server and Claude Opus 5.5 to map TradingView&#x27;s proprietary frontend interactions and decompiled assets into a private, self-hosted quantitative research terminal with real-time backtesting.</div>
+    <div class="item-meta">
+      <a href="https://x.com/RohOnChain/status/2109347169316839434" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag mcp-tooling">Mcp-Tooling</span> @morluto (morluto): REA 6.4 Releases with High-Throughput Ghidra Decompilation Buffers</div>
+    <div class="item-body">The REA team tags release 6.4, providing major performance and memory enhancements when streaming decompiled binary traces to Claude Code and Codex agents.</div>
+    <div class="item-meta">
+      <a href="https://x.com/morluto/status/2109138696008327226" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag local-ai">Local-Ai</span> @Saboo_Shubham_ &amp; @LinearUncle: Google Embedding Gemma 2 Brings Multimodal Search Directly to Mac</div>
+    <div class="item-body">Developers celebrate Google&#x27;s 865M-parameter Embedding Gemma 2 model running completely offline on Apple Silicon, enabling instant cross-modal search across local video frames, audio tracks, PDFs, and source code repositories without cloud API fees.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Saboo_Shubham_/status/2109160802242658452" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag agent-skills">Agent-Skills</span> @mvanhorn (Matt Van Horn): Last30Days v3.28 Shipped with Real Engagement Ranking &amp; Multi-Provider Token Accounting</div>
+    <div class="item-body">Agent search engine skill Last30Days (64k stars) ships v3.28, adding token usage telemetry across Gemini, OpenAI, xAI, and OpenRouter alongside native Grok Bot integration and Hacker News discussion permalinks.</div>
+    <div class="item-meta">
+      <a href="https://x.com/mvanhorn/status/2109379480410362360" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📈</span>
+      <h2>Macro AI Economics, Capex Realities &amp; Value Traps (Li Lu Columbia Analysis)</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag macro-economics">Macro-Economics</span> @DtDt666 &amp; @KelseyDingMD: Li Lu&#x27;s Columbia Address Warns AI Carries Ongoing Compute Costs Unlike Web 2.0</div>
+    <div class="item-body">Transcripts of Himalaya Capital chairman Li Lu&#x27;s address at Columbia&#x27;s Heilbrunn Center outline crucial structural differences in AI economics: unlike the internet&#x27;s zero-marginal-cost distribution, every agent step incurs recurring GPU, power, and memory costs. Li Lu predicts AI will witness multiple boom-and-bust cycles and emphasizes keeping models strictly in the &#x27;tool&#x27; rather than &#x27;creature&#x27; domain.</div>
+    <div class="item-meta">
+      <a href="https://x.com/DtDt666/status/2109157378474267004" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag semiconductor-cycle">Semiconductor-Cycle</span> @KelseyDingMD (Galaxy_Chloe): The Upstream Semiconductor Capex Moat vs Downstream ROI Realities</div>
+    <div class="item-body">Chloe breaks down Li Lu&#x27;s semiconductor thesis: upstream chipmakers capture cash flow first from massive AI infrastructure buildouts, but prolonged valuation sustainability hinges on whether downstream enterprise software can actually generate durable profit to amortize the hardware spend.</div>
+    <div class="item-meta">
+      <a href="https://x.com/KelseyDingMD/status/2109044801148793275" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag financial-discipline">Financial-Discipline</span> @qwinsi0x (qwinsi): AI Automates Citadel-Style Quant Research Pipelines for Retail Traders</div>
+    <div class="item-body">An analysis of quantitative finance illustrates how generative coding agents now automate four out of six steps in an institutional hedge fund pipeline—translating natural language hypotheses into rigorous historical backtests that discard curve-fitted strategies before capital deployment.</div>
+    <div class="item-meta">
+      <a href="https://x.com/qwinsi0x/status/2109369842658644287" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
