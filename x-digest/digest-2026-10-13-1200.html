@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Tuesday, October 13th, 2026 — 12:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Tuesday, October 13th, 2026 — 12:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>Theo Tests Frontier Coders on Real Bugs as Alexandr Wang Resets Muse Limits:</strong> Theo puts Claude Opus 5.5, GPT-6.1 Sol, and Muse Wonder Full head-to-head on a real bug—Opus filed a direct PR, Sol crashed on tool interrupts before over-indexing on 300 lines of tests, and Muse Wonder intelligently surfaced an existing pull request—while Alexandr Wang fixes rapid quota consumption and rolls out a global Muse reset.</li>
+      <li><strong>Solopreneurs Scale to $545k MRR and First Autonomous Revenue via Multi-Agent Swarms:</strong> A solo engineer details maintaining a 1M+ LOC platform and merging 1,089 weekly PRs using 50 parallel agents across Claude, Codex, and Grok without touching an IDE, as Alex Finn's autonomous Grok Bot launches a directory and closes its first $500 sponsorship via Stripe.</li>
+      <li><strong>Constrained Decoding Models (CDMs) Deliver 200x Speedup as LangGraph Tackles Async Subagents:</strong> Neal Patel introduces CDMs that bypass token-by-token generative loops for extraction and routing at $0.05/M input with free outputs, while Harrison Chase details design trade-offs for async subagent notifications and human-in-the-loop interruptions.</li>
+      <li><strong>OpenAI Executes Global Codex Quota Reset and Ships Major ChatGPT Dots Updates:</strong> Tibo confirms the deployment of a global usage limit reset alongside updated default context windows in Codex, while OpenAI's VB debuts mobile Dot creation, thread context handoffs into Codex, and streamlined scheduled task controls.</li>
+      <li><strong>The Economics of Production AI: $100 Traces, Subscription Stacks, and Why Software Isn't Dead:</strong> Kun Chen critiques the impracticality of on-the-fly vibe coding in favor of headless architectures, while mobile and consumer builders capitalize on a booming secondary market selling real user traces to labs for $40–$120 each.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚔️</span>
+      <h2>Frontier Model Battlegrounds: Real-World Bug Evals &amp; Benchmark Realities</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag model-evals">Model-Evals</span> @theo (Theo - t3.gg): Real-World Bug Showdown: Opus 5.5, GPT-6.1 Sol, and Muse Wonder Full</div>
+    <div class="item-body">Theo puts the top three coding models through a real-world bug test: Claude Opus 5.5 quickly diagnosed the root cause and submitted a clean PR; GPT-6.1 Sol suffered a crash on an async tool interrupt before writing 300 lines of tests and opaque explanations; while Muse Wonder Full took the practical path of locating an existing PR and recommending a merge.</div>
+    <div class="item-meta">
+      <a href="https://x.com/theo/status/2109874961070616654" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag muse-reset">Muse-Reset</span> @alexandr_wang (Alexandr Wang): Muse Wonder Quota Drain Fixed and Global Reset Rolled Out</div>
+    <div class="item-body">Scale AI CEO Alexandr Wang announces the resolution of a bug causing abnormally rapid quota consumption on Muse Wonder and Muse Wonder Full, resetting user limits globally. Wang also celebrates Theo ranking Wonder alongside Opus 5.5 in S-tier, validating its pragmatic approach to complex software engineering tasks.</div>
+    <div class="item-meta">
+      <a href="https://x.com/alexandr_wang/status/2109774017574113780" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag empirical-benchmarks">Empirical-Benchmarks</span> @PawelHuryn &amp; @CodexResets1 (Paweł Huryn &amp; Codex Tracker): 105-Bug Empirical Benchmark and Enterprise Shift to Claude</div>
+    <div class="item-body">Paweł Huryn benchmarks frontier models across 105 real bugs missed in Q1 2026 repos (GPT-6 Astra: 45.0, Opus 5.5: 41.7, Muse Spark: 32.2, Muse Wonder: 31.7). Meanwhile, enterprise developers report migrating away from Codex after Claude Opus 5.5 solved intricate endpoint-less web scrapers in 30 minutes that stumped Codex for over 10 hours.</div>
+    <div class="item-meta">
+      <a href="https://x.com/PawelHuryn/status/2110009814067577229" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Autonomous Solopreneurs &amp; Multi-Agent Swarms: The 1,000-PR Engineering Org</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag agent-stack">Agent-Stack</span> @navuud (navuud): Scaling to $545k MRR and 1,089 Weekly PRs with 50 Parallel Agents</div>
+    <div class="item-body">A solo founder reveals the architecture behind a 1M+ LOC app generating $545k MRR: over 50 oh-my-pi agents running on local hardware, 8 Max Claude plans, 5 Codex plans, Linear for PM, pstack for session orchestration without touching an IDE, a 5-stage planning harness, independent cross-model review pipelines, and automated canary rollback watchers.</div>
+    <div class="item-meta">
+      <a href="https://x.com/navuud/status/2109913381780250640" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag autonomous-biz">Autonomous-Biz</span> @AlexFinn (Alex Finn): Grok Bot Builds Autonomous Microbusiness and Pulls First Stripe Revenue</div>
+    <div class="item-body">Alex Finn shares the trajectory of a hands-off venture built and managed entirely by Grok Bot: the agent created a directory site, acquired 1,500+ newsletter signups, autonomously merged 40+ maintenance PRs, configured a Stripe plugin, and secured its first $500 paid sponsor, signaling a rise in self-sustaining agentic micro-businesses.</div>
+    <div class="item-meta">
+      <a href="https://x.com/AlexFinn/status/2109817698620485804" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag agent-bridging">Agent-Bridging</span> @lai_jia_wei &amp; @karolzdeb (Gary Lai &amp; Karol Zdebel): Bridging Cloud &amp; Local Agents via cursor-grokbot-agents and Dedicated Hardware Farms</div>
+    <div class="item-body">Developers link local terminal agents like Claude Code and Codex to Grok Bot using cursor-grokbot-agents for seamless task handoffs. Concurrently, hardware operators deploy $30k banks of dedicated, SIM-enabled iPhones to allow agents to automate native mobile tasks without triggering bot defenses.</div>
+    <div class="item-meta">
+      <a href="https://x.com/lai_jia_wei/status/2109965461878382697" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Architectures &amp; Paradigms: Constrained Decoding Models &amp; Async Agent Swarms</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cdm-architecture">Cdm-Architecture</span> @neal_k_patel (Neal Patel): Introducing Constrained Decoding Models (CDMs): 200x Faster, Free Outputs</div>
+    <div class="item-body">Neal Patel unveils Constrained Decoding Models, a specialized architecture designed to read inputs once and bypass slow autoregressive token generation for single tasks like classification, extraction, and summarization. Supporting 1M multimodal context at $0.05/M input with free outputs, CDMs offer a 467x cost reduction over frontier LLMs.</div>
+    <div class="item-meta">
+      <a href="https://x.com/neal_k_patel/status/2109978626124898587" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag async-agents">Async-Agents</span> @hwchase17 (Harrison Chase): Architecting Async Native Subagents and Human-in-the-Loop Coordination</div>
+    <div class="item-body">LangChain creator Harrison Chase outlines core design decisions for async native deepagents, examining whether finished subagents should steer-interrupt parent workflows or batch into message queues, and evaluating mechanisms to cleanly resume threads without overriding pending human-in-the-loop approvals.</div>
+    <div class="item-meta">
+      <a href="https://x.com/hwchase17/status/2109938151472890070" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag production-engineering">Production-Engineering</span> @reasonmachines &amp; @suraj_sharma14 (Reason &amp; Suraj Sharma): Open-Source Reason Harness Beats Codex on Terminal-Bench as 15 Rules Emerge</div>
+    <div class="item-body">Reason unveils a cost-efficient harness beating Codex+Astra on Terminal-Bench 4.0 while running 22% cheaper. In parallel, Suraj Sharma outlines 15 foundational projects for modern AI engineers, emphasizing dynamic context assemblers, durable DAG state machines, trajectory CI grading, and FinOps kill-switches over shallow API wrappers.</div>
+    <div class="item-meta">
+      <a href="https://x.com/reasonmachines/status/2110001062216376724" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚡</span>
+      <h2>OpenAI Ecosystem: Codex Global Reset, Context Tuning &amp; ChatGPT Dots</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag codex-reset">Codex-Reset</span> @thsottiaux (Tibo): OpenAI Codex Deploys Global Quota Reset and Default Context Window Retuning</div>
+    <div class="item-body">OpenAI&#x27;s Tibo confirms the completion of a global quota reset across Codex developer accounts by EOD PST, while addressing community feedback regarding an 80% default context window increase and pricing adjustments designed to curb accidental token overspending.</div>
+    <div class="item-meta">
+      <a href="https://x.com/thsottiaux/status/2109873287853707513" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag chatgpt-dots">Chatgpt-Dots</span> @reach_vb (Vaibhav Srivastav): OpenAI Drops Major Updates to ChatGPT Dots with Mobile Creation and Codex Integration</div>
+    <div class="item-body">Vaibhav Srivastav details significant improvements to ChatGPT Dots, including native dot creation on iOS and Android, bidirectional context handoffs into Codex threads, scheduled task editing, optimized cloud browsing latency, and stabilized approval banner UI elements.</div>
+    <div class="item-meta">
+      <a href="https://x.com/reach_vb/status/2109872508853756077" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag codex-capacity">Codex-Capacity</span> @0xdoug &amp; @rafaelobitten (Doug Colkitt &amp; Rafael Bittencourt): Pushing Astra 6 Max on Frontier Math as GPT-6.1 Sol Hits Capacity</div>
+    <div class="item-body">Doug Colkitt rallies developers to utilize surplus reset tokens on Astra 6 Max for complex integer multiplication experiments in frontier math. Concurrently, heavy adoption of GPT-6.1 Sol triggers temporary capacity bottlenecks in Codex as developers flood the cost-efficient model.</div>
+    <div class="item-meta">
+      <a href="https://x.com/0xdoug/status/2109832923058761871" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💼</span>
+      <h2>AI Economics &amp; Software Evolution: $100 Traces, Subscription Stacks &amp; Headless Core</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag software-evolution">Software-Evolution</span> @kunchenguid (Kun Chen): Why &#x27;Software is Dead&#x27; is Wrong: Strong Core, Headless Service, Fluid Interface</div>
+    <div class="item-body">Kun Chen deconstructs the fallacy that users will continuously vibe code disposable personal software from scratch, noting that token costs and compute latency make recreating identical tools wildly inefficient. Instead, successful software will retain robust, expensive cores offered headlessly to agents with dynamic, fluid user interfaces.</div>
+    <div class="item-meta">
+      <a href="https://x.com/kunchenguid/status/2109879371058332062" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag trace-economy">Trace-Economy</span> @michael_chomsky (Michael Chomsky): The Emergence of the Production Trace Economy: Labs Paying $40-$120 Per Trace</div>
+    <div class="item-body">A secondary data economy heats up as frontier labs purchase real-world production interaction traces from consumer app developers at $40 to $120 per trace, validating predictions that AI business models are converging strictly on either selling compute tokens or selling high-signal operational data.</div>
+    <div class="item-meta">
+      <a href="https://x.com/michael_chomsky/status/2109894037176295478" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag subscription-meta">Subscription-Meta</span> @Khazix0918 &amp; @SeijinJung (Kazik &amp; Seijin Jung): Real-World AI Subscription Portfolios and the Shift Toward Delegated Commerce</div>
+    <div class="item-body">Prominent builder Kazik itemizes a ¥6,000+/mo AI subscription stack (Claude Max, ChatGPT Pro, X Ultra), highlighting Claude Opus 5.5 as the definitive engineering lead and Grok Bot as the standout autonomous assistant. Meanwhile, Zuckerberg and Wang&#x27;s Cheeky Pint discussion highlights how agents with accounts are fundamentally reshaping commerce TAM.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Khazix0918/status/2109981777716764763" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
