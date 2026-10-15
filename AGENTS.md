@@ -14,3 +14,9 @@ Use synthetic local fixtures and temporary output paths. Do not invoke bird,
 summary providers or live sources. Run `python3 -m unittest discover -s tests -v`
 and `node tests/test_cache_ownership.cjs`. Tests do not establish hosted behavior.
 See [review ledger](docs/reviews/2026-10-15.md) for coverage and rollback boundaries.
+
+Read-only provider checks on 2026-10-15 confirmed active GitHub Pages legacy
+publishing from main. The user authorized preservation on the separate
+`review/six-area-20261015` branch after checking branch triggers. Do not merge
+that branch to main or alter hosting/schedules as part of archive maintenance.
+See [publication evidence](docs/reviews/2026-10-15-publication.md).
