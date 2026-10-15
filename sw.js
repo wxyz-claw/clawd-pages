@@ -44,7 +44,7 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) =>
-        Promise.all(keys.filter((key) => !CURRENT_CACHES.has(key)).map((key) => caches.delete(key)))
+        Promise.all(keys.filter((key) => /^clawd-(shell|runtime|fonts)-/.test(key) && !CURRENT_CACHES.has(key)).map((key) => caches.delete(key)))
       )
       .then(() => self.clients.claim())
   );
