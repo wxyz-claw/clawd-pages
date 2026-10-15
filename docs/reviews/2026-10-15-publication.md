@@ -91,3 +91,57 @@ The original local main contains the earlier maintenance commits; **do not push
 local main**. Remote main and production remain at the baseline archive commit.
 This follow-up preserves maintenance on the review branch without disabling or
 reviving production publishing.
+
+## Explicitly approved maintenance publication
+
+The user explicitly confirmed merging, pushing and publishing the reviewed
+maintenance candidate `acadee9e4be232d59e9b447e1effb86a7730b098` to this
+repository's existing public website on 2026-10-15. This resolves the earlier
+missing-publication-approval hold for this exact action. It does not broaden
+content, sharing, hosting, schedules or provider access. The daily briefing
+responsibility remains retired here. Only the reviewed safeguards, synthetic
+tests and sanitized maintenance/release documentation are in scope.
+
+Fresh read-only preflight confirms remote main and the latest successful Pages
+build remain `7fa4c4fe5c11454189a202e97cc65e3a6d26af18`, deployment
+`7081111235`, with source main at `/` and public destination
+`https://wxyz-claw.github.io/clawd-pages/`. The endpoint responds HTTP 200; both
+served service-worker files match that baseline. The candidate's ten-file diff
+contains no HTML editions or digest/reading JSON changes. Added-line checks
+found no high-confidence credential, signed URL, private-site identifier or
+personal-path pattern; this scoped check is not a universal secret guarantee.
+
+The connected Cloudflare account was rechecked: all three Pages projects and
+both Workers have no matching repository/domain linkage; both Worker build
+trigger lists return HTTP 200 with zero triggers, and the historical custom
+domain has no matching Worker mapping. Other accounts and out-of-band triggers
+remain unverified. Repository hooks are empty; main's active dynamic Pages
+workflow is the intended publisher. No Wrangler command, workflow dispatch,
+hosting/configuration change or provider-permission request is needed.
+
+Integrate with a normal merge whose first parent is the baseline above, then
+push normally to main and let the existing Pages publisher run. The intended
+live changes are `/sw.js` and `/eye-rest/sw.js` cache-deletion ownership; the
+Python importer remains static source on Pages and rejects unsupported CLI
+publication modes locally. All other historical page/asset bytes are preserved.
+Verify deployment SHA/status, both served worker identities, root, reading,
+eye-rest, digest and historical archive routes. Do not run any generator or
+personal-source/provider call to test this release.
+
+Rollback is a normal `git revert -m 1 <maintenance-merge>` followed by the same
+authorized main/Pages path, restoring baseline tracked source without rewriting
+history or editions. A later documentation-only release record can be reverted
+separately. Retain baseline `7fa4c4fe5c11454189a202e97cc65e3a6d26af18` and
+deployment `7081111235`. Rollback is not executed as a test. Existing browser
+registrations may update only when checked by their browser; deleted caches
+cannot be reconstructed by a source revert. Restoring the old workers would
+also restore their broader cache-deletion behavior. No cache purge, unregister,
+client-storage reset, recovery or irreversible cleanup is part of this release.
+
+Release preflight reran both Python retirement regressions (two tests, 0.006s)
+and the Node test of the real worker activation handlers: all pass. Syntax/diff
+checks and the ten-file added-line scope/privacy check pass. Historical HTML,
+JSON, manifests, styles, XML, `.nojekyll` and hosting configuration are unchanged.
+These fixtures do not prove browser update timing, installation/offline behavior
+or live provider access. HTTP deployment/route/worker verification follows the
+approved push; no generator, provider or source-ingestion call is involved.

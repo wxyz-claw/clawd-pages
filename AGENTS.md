@@ -5,7 +5,8 @@ briefings, private records, private-site identifiers or credentials. Preserve
 existing editions.
 
 The daily briefing publishing responsibility has retired from this repository.
-Do not dispatch Pages/Worker deployment, revive scheduled jobs, run digest
+Do not dispatch Pages/Worker deployment without explicit maintenance-publication
+approval, revive scheduled jobs, run digest
 generators or use the reading importer to write/push new content. Existing HTML
 and configuration are retained for provenance, not deployment instructions.
 
@@ -17,6 +18,12 @@ See [review ledger](docs/reviews/2026-10-15.md) for coverage and rollback bounda
 
 Read-only provider checks on 2026-10-15 confirmed active GitHub Pages legacy
 publishing from main. The user authorized preservation on the separate
-`review/six-area-20261015` branch after checking branch triggers. Do not merge
-that branch to main or alter hosting/schedules as part of archive maintenance.
+`review/six-area-20261015` branch after checking branch triggers. The user then
+explicitly approved merging/pushing its reviewed maintenance candidate
+`acadee9e4be232d59e9b447e1effb86a7730b098` to the existing public website on
+2026-10-15. This permits that bounded maintenance publication through the normal
+main/Pages path, including sanitized release evidence. It does not permit new
+briefing editions, private content, configuration/access changes, a separate
+Worker deployment or restarted schedules. Future publication requires its own
+applicable authorization.
 See [publication evidence](docs/reviews/2026-10-15-publication.md).
