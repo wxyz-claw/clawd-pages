@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Wednesday, October 14th, 2026 — 9:00 PM ET</title>
+  <title>Clawd X Digest — Thursday, October 15th, 2026 — 7:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Wednesday, October 14th, 2026 — 9:00 PM ET</div>
+    <div class="date">Thursday, October 15th, 2026 — 7:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,94 +179,122 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>ChatGPT Space Debuts Amid Desktop App Backlash as Builders Confront the 'Fried Brain Effect':</strong> OpenAI rolls out ChatGPT Space for multi-user document collaboration, but power users hit out at desktop client fragmentation and UI lag, while multi-agent practitioners voice exhaustion over managing 10 concurrent agents under perpetual shipping pressure.</li>
-      <li><strong>Enterprise AI Evolves from Task Bots to Outcome Ownership Across the 'Relay Race':</strong> a16z analyzes how long-running agents managing weeks-long customer journeys (mortgages, injury claims) are shifting software pricing from hourly seat savings to business outcomes, while Factory rolls out on-prem OpenCompute sandboxes.</li>
-      <li><strong>Agent Fleets Force Modern Infrastructure Rewrites from Git to Distributed Apple Silicon:</strong> Carter Tran open-sources Scion—a Rust rewrite of Anthropic’s 30,000-commit/day agent version control system—while Apple researchers unveil Minions to pool idle corporate Macs into high-speed GPU clusters.</li>
-      <li><strong>Frontier Model Engineering Matures Around Gemini 4 Argon Background Execution and First-Principles Prompts:</strong> DeepMind highlights server-side background execution (`background=True`) for long reasoning traces in Gemini 4 Argon, while Anthropic engineering leaders break down how structured first-principles prompting transforms Claude Opus 5.5 workflows.</li>
-      <li><strong>Generative Workflows Cross into Physical Robotics and 3D Production as RoboSimStudio Launches:</strong> UC Berkeley drops RoboSimStudio to turn casual phone video into dynamic Real2Sim digital twins within an hour, alongside proof-of-concepts of solo developers shipping complete 3D WebGPU narrative games in 16 days.</li>
+      <li><strong>Microsoft MAI Ships 3T-Parameter Base Models Built In-House:</strong> Mustafa Suleyman says MAI now has state-of-the-art pre-trained base models in the 3-trillion-parameter weight class with post-training results to follow, and outside analysts are already dissecting the sparse hybrid-attention architecture and its scaling ladder.</li>
+      <li><strong>Anthropic Takes Opus 5.5 Fast Mode GA and Adds Enterprise Code Review:</strong> Fast mode exits research preview with the waitlist removed—same Opus 5.5 but up to 2.5x faster at $8 / $40 per million tokens and available in Microsoft Foundry—while Code Review reaches general availability for Team and Enterprise plans with selectable review depth.</li>
+      <li><strong>Interpretability Flips the Polysemanticity Assumption as Agent Benchmarks Heat Up:</strong> A widely shared result argues neural networks are not tangled knots and that 90% of neurons in Qwen-32B have a single job, landing alongside Xiaomi's MiMo V2.6 Pro taking the top open-model slot in the Agent Arena.</li>
+      <li><strong>Agent Harness Work Migrates to Infrastructure Primitives:</strong> LangChain's Harrison Chase argues the most interesting harness work now lives at the harness/infra intersection—dreaming, async subagents, heartbeats, and agent-scheduled reminders—as Instinct launches a YC-backed frontier harness for individual traders.</li>
+      <li><strong>Grok Bot Anchors a Bundled Consumer Agent Ecosystem:</strong> X moves to unify Grok, Cursor, and X Premium under one subscription and Grok Bot gains bookmark-driven 'second brain' workflows and a connector roadmap spanning Apple, WhatsApp, and Bitwarden.</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
-      <span class="emoji">💥</span>
-      <h2>Workspace Bloat &amp; The &#x27;Fried Brain Effect&#x27;: Human Toll in Multi-Agent Loops</h2>
+      <span class="emoji">🧠</span>
+      <h2>Frontier Model Releases: In-House 3T-Scale Base Models &amp; Faster Flagship Modes</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag desktop-bloat">Desktop-Bloat</span> @davis7 (Ben Davis) &amp; @ChatGPT: ChatGPT Space Debuts as Power Users Slam Desktop App Fragmentation</div>
-    <div class="item-body">OpenAI announces ChatGPT Space for real-time collaborative document creation with agents across Pro and Enterprise tiers. However, creators like Ben Davis criticize the desktop app as an uncoordinated &#x27;dumpster fire,&#x27; noting that 30+ unpolished DevDay features have created severe UI lag and disjointed workflows without a coherent unifying product vision.</div>
+    <div class="item-title"><span class="tag mai-3t">Mai-3T</span> @mustafasuleyman (Mustafa Suleyman) &amp; @eliebakouch: Microsoft MAI Ships 3T-Parameter Base Models Trained Entirely In-House</div>
+    <div class="item-body">Suleyman announces that MAI now holds state-of-the-art pre-trained base models in the 3T-parameter weight class, built entirely in-house, with post-training results and a technical blog post to follow. Independent analysts highlight a sparser design than Kimi K3 (80B active parameters), a sliding-window hybrid attention pattern with more KV heads, a shared expert, and a scaling ladder that drops the earlier interleaved MoE/Dense pattern.</div>
     <div class="item-meta">
-      <a href="https://x.com/davis7/status/2110460933470580831" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag human-limits">Human-Limits</span> @sleepy0x13 &amp; @tibo_maker: The &#x27;Fried Brain Effect&#x27;: Why 10 Parallel Agents Drain Human Energy Instead of Saving It</div>
-    <div class="item-body">A viral essay examines agentic burnout: juggling up to 10 simultaneous coding, bug-fixing, and refactoring agents forces hundreds of context switches every day. Instead of freeing builders, hyper-efficient agent workflows trigger intense cognitive fatigue and an insidious guilt over ever stepping away from the keyboard.</div>
-    <div class="item-meta">
-      <a href="https://x.com/sleepy0x13/status/2110383864757862642" target="_blank">View Tweet</a>
+      <a href="https://x.com/mustafasuleyman/status/2110766651344146564" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag sprint-fatigue">Sprint-Fatigue</span> @nathanclark (Nathan Clark) &amp; @mylifcc: Sprint Fatigue: Disk Footprint Shrinks 60% as Users Tire of Daily Resets</div>
-    <div class="item-body">OpenAI engineers roll out optimizations reducing ChatGPT desktop disk usage by 60% during Day 9 of their sprint, but public reaction turns increasingly critical. Observers note that continuous product overhauls and daily feature releases are exhausting power users and creating messaging turbulence.</div>
+    <div class="item-title"><span class="tag opus-fast-ga">Opus-Fast-Ga</span> @ClaudeDevs: Opus 5.5 Fast Mode Goes GA — Waitlist Removed, Up to 2.5x Faster at $8 / $40 per Million Tokens</div>
+    <div class="item-body">Anthropic&#x27;s ClaudeDevs account says fast mode in the Claude Platform is out of research preview and the waitlist is gone. It is the same Opus 5.5, up to 2.5x faster, priced at $8 input / $40 output per million tokens, and now available in Microsoft Foundry (hosted on Azure) with Google Cloud coming soon. Fast mode in Claude Code is unchanged and draws on extra usage credits.</div>
     <div class="item-meta">
-      <a href="https://x.com/nathanclark/status/2110278117407543699" target="_blank">View Tweet</a>
+      <a href="https://x.com/ClaudeDevs/status/2110825294655562048" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag muse-cursor">Muse-Cursor</span> @cursor_ai (Cursor): Meta Superintelligence Labs&#x27; Muse Wonder Lands in Cursor at 46.1% CursorBench</div>
+    <div class="item-body">Cursor announces that Muse Wonder from Meta Superintelligence Labs is now available in Cursor. It scores 46.1% on CursorBench at default effort—the highest of any Muse model—and is priced at $4 per million input tokens and $20 per million output tokens.</div>
+    <div class="item-meta">
+      <a href="https://x.com/cursor_ai/status/2110867556693430293" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🏢</span>
-      <h2>Enterprise Agents Shift to Outcomes: The &#x27;Relay Race&#x27; &amp; Private Sandboxes</h2>
+      <span class="emoji">🛠️</span>
+      <h2>Agent Harness Moves to Infrastructure: Dreaming, Subagents &amp; the Verification Deficit</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag outcome-pricing">Outcome-Pricing</span> @a16z (Dan Haber): Winning the Relay Race: Evolving from Task-Based Assistants to Outcome-Driven Long-Running Agents</div>
-    <div class="item-body">a16z&#x27;s Dan Haber outlines the shift in enterprise software economics: whereas early assistants handled single interactions billed to software budgets, long-running agents now own end-to-end multi-week workflows (such as personal injury claims or loan origination), allowing vendors to monetize verified outcomes rather than saved hours.</div>
+    <div class="item-title"><span class="tag harness-infra">Harness-Infra</span> @hwchase17 (Harrison Chase): The Cutting Edge of Agent Harnesses Is Really Infrastructure</div>
+    <div class="item-body">LangChain&#x27;s Harrison Chase argues that most of the interesting agent-harness work now happens at the intersection of harness and infrastructure, naming four primitives: dreaming, async subagents, heartbeats, and letting agents schedule their own reminders. He frames this as the core reason he is bullish on managed agent platforms.</div>
     <div class="item-meta">
-      <a href="https://x.com/a16z/status/2110430504860401675" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag private-sandboxes">Private-Sandboxes</span> @FactoryAI: OpenCompute Launches: Self-Hosted Sandboxes Keep Autonomous Agent Fleets in Private VPCs</div>
-    <div class="item-body">Factory releases OpenCompute, an open-source orchestration runtime designed for enterprises that cannot risk exposing sensitive codebases to public multi-tenant clouds. The platform allows security teams to deploy and scale fleets of autonomous software agents entirely within their own private VPC infrastructure.</div>
-    <div class="item-meta">
-      <a href="https://x.com/FactoryAI/status/2110403273903808988" target="_blank">View Tweet</a>
+      <a href="https://x.com/hwchase17/status/2110813795245249018" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag automated-support">Automated-Support</span> @cognition: Devin Embeds into Pylon: Autonomous Support Engineers Resolve Bug Tickets with $15k Pilot Credits</div>
-    <div class="item-body">Cognition integrates Devin directly into Pylon&#x27;s customer support and issue-tracking pipeline. Devin autonomously picks up customer tickets, investigates reproduction steps, and opens verified pull requests, slashing median time to fix (MTTF) backed by $15,000 in onboarding credits.</div>
+    <div class="item-title"><span class="tag instinct-trader">Instinct-Trader</span> @instinct_xyz: Instinct Launches a Frontier Agent Harness to Give Individual Traders Institutional Capacity</div>
+    <div class="item-body">Backed by Y Combinator, Instinct releases what it calls the first frontier agent harness built to hand individual traders the capabilities of an investment firm. The pitch: for decades institutional edge came from organizing talented people around large pools of capital, and Instinct aims to make that organizational capacity available to individuals.</div>
     <div class="item-meta">
-      <a href="https://x.com/cognition/status/2110408060799963471" target="_blank">View Tweet</a>
+      <a href="https://x.com/instinct_xyz/status/2110439790961442825" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag verification-deficit">Verification-Deficit</span> @jolestar: The &#x27;Verification Deficit&#x27; — AI Speeds Up Writing Code Faster Than Teams Can Accept It</div>
+    <div class="item-body">Drawing on a discussion with a technical team, jolestar describes the &#x27;verification deficit&#x27;: AI clearly speeds up individual developer output, but in team settings code is produced faster than it can be reviewed, leaving a &#x27;wrote it fast, but no one dares merge it&#x27; gap where generation outruns verification. The proposed fix is to push agents out of single-machine chat boxes and into scheduled, event-driven continuous verification pipelines.</div>
+    <div class="item-meta">
+      <a href="https://x.com/jolestar/status/2110585806469337101" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🏗️</span>
-      <h2>Agent-Scale Infrastructure: Scion Version Control &amp; Distributed Apple Silicon</h2>
+      <span class="emoji">🔍</span>
+      <h2>Interpretability, Agent Benchmarks &amp; Model Quality Signals</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag agent-vcs">Agent-Vcs</span> @cartertran_: Scion Drops: Open-Source Rust Implementation of Anthropic’s Agent-Scale Source Control</div>
-    <div class="item-body">Following Anthropic&#x27;s revelation that their engineering org outgrew Git after reaching 30,000 commits per day, Carter Tran releases Scion—a clean-room Rust implementation of the architecture featuring server-side commits, sparse checkouts, and gRPC history streaming built specifically for agent fleets.</div>
+    <div class="item-title"><span class="tag neuron-hypothesis">Neuron-Hypothesis</span> @deedydas (Deedy): &#x27;Polysemanticity Is Wrong&#x27; — 90% of Neurons in Qwen-32B Have a Single Job</div>
+    <div class="item-body">A result that Deedy calls &#x27;one of the most important results in AI&#x27; argues that neural networks are not tangled knots and that their own neurons can be studied directly without first unfolding them with a second model—90% of neurons in Qwen-32B have one job. He notes the work comes from Nick Cammarata, who started OpenAI&#x27;s interpretability team and is now at Goodfire, and stresses the rising stakes for understanding and aligning model behavior.</div>
     <div class="item-meta">
-      <a href="https://x.com/cartertran_/status/2110450865366614489" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag silicon-pooling">Silicon-Pooling</span> @0xkydo (Kydo): From Apple&#x27;s Minions to Darkbloom: Pooling Idle Apple Silicon into Distributed Enterprise GPU Clouds</div>
-    <div class="item-body">Apple researchers publish &#x27;Minions,&#x27; demonstrating how federating idle corporate Macs into a distributed GPU cluster reduced internal inference queue times from 10+ hours to minutes without buying new hardware; Darkbloom announces an open-network implementation addressing trust and verification.</div>
-    <div class="item-meta">
-      <a href="https://x.com/0xkydo/status/2110460168857334178" target="_blank">View Tweet</a>
+      <a href="https://x.com/deedydas/status/2110785912074277221" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag company-os">Company-Os</span> @yoheinakajima (Yohei): The &#x27;CompanyOS&#x27; Architecture: Why Dynamic Playbooks Beat Monolithic AI Brains</div>
-    <div class="item-body">Yohei Nakajima argues that the future of enterprise multi-agent collaboration lies in a modular &#x27;CompanyOS&#x27; rather than a centralized knowledge base. Instead of static playbooks, the OS acts as an operational layer storing live decision rules, tool protocols, and updated workflows that agents adjust in real time.</div>
+    <div class="item-title"><span class="tag agent-arena">Agent-Arena</span> @arena (Arena.ai): Xiaomi&#x27;s MiMo V2.6 Pro Takes the #1 Open-Model Slot in the Agent Arena</div>
+    <div class="item-body">Arena.ai reports a new leader among open models in the Agent Arena: MiMo V2.6 Pro by Xiaomi lands the top spot with a +3.8% net improvement. The update follows the team&#x27;s evolution of the Bash Recovery signal in Agent Arena earlier in the week.</div>
     <div class="item-meta">
-      <a href="https://x.com/yoheinakajima/status/2110499885099393171" target="_blank">View Tweet</a>
+      <a href="https://x.com/arena/status/2110815995950731340" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag nemotron-researcher">Nemotron-Researcher</span> @AlexGDimakis (Alex Dimakis): NVIDIA Nemotron-3.5-Super-VL Post-Trained into an Autonomous ML Researcher</div>
+    <div class="item-body">Dimakis and team announce they post-trained NVIDIA Nemotron-3.5-Super-VL to act as an autonomous ML researcher, reporting that their model moves from 28% to 35% on AutoResearchExam, matching Qwen 3.8 Max—a model with roughly 20x the total parameters.</div>
+    <div class="item-meta">
+      <a href="https://x.com/AlexGDimakis/status/2110788484759990755" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🖥️</span>
+      <h2>Frontier Programs: Gemini 4 Argon Rollout, Rosalind for Labs &amp; Enterprise Code Review</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag argon-antigravity">Argon-Antigravity</span> @_mohansolo &amp; @Google: Gemini 4 Argon Goes Live in Antigravity for Paid Pro Subscribers</div>
+    <div class="item-body">Google&#x27;s _mohansolo says Gemini 4 Argon is live in Antigravity for paid Pro subscribers, and that Pro members get a separate weekly quota so the model does not consume their Flash quota. A companion demo from the Antigravity team shows Gemini 4 Argon plus multi-agent workflows calibrating natural translations across 17 languages in two days.</div>
+    <div class="item-meta">
+      <a href="https://x.com/_mohansolo/status/2110866446020710657" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag rosalind-academic">Rosalind-Academic</span> @OpenAI: GPT-Rosalind Academic Plan Expands Model Access for Research Labs</div>
+    <div class="item-body">OpenAI announces it is expanding access to GPT-Rosalind for academic research. The new Rosalind Academic Plan helps scientific labs bring AI into understanding biology, exploring ideas, and deciding what to test next, with sponsored access for eligible labs at U.S. universities.</div>
+    <div class="item-meta">
+      <a href="https://x.com/OpenAI/status/2110841898076418336" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag code-review-ga">Code-Review-Ga</span> @ClaudeDevs: Code Review Is Generally Available for Claude Team and Enterprise Plans</div>
+    <div class="item-body">Anthropic&#x27;s ClaudeDevs announces Code Review is now generally available for Claude Team and Enterprise plans. Reviews are faster, catch more of the bugs that matter, and admins can select Quick, Standard, or Deep review levels per repository.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ClaudeDevs/status/2110866210573386065" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -274,55 +302,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">⚡</span>
-      <h2>Frontier Model Practice: Gemini 4 Argon Patterns &amp; Claude Prompt Engineering</h2>
+      <h2>Grok Bot &amp; the Bundled Consumer Agent Ecosystem</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag argon-patterns">Argon-Patterns</span> @clmt (Clement Farabet) &amp; @Google: Gemini 4 Argon Deployment Playbook: Server-Side Background Execution for Deep Reasoning</div>
-    <div class="item-body">Google DeepMind&#x27;s Clement Farabet shares key engineering patterns for Gemini 4 Argon, emphasizing server-side background execution (`background=True`) via the Interactions API to handle multi-minute reasoning traces and 1M token outputs without blocking client connections during legacy codebase migrations.</div>
+    <div class="item-title"><span class="tag grok-bookmarks">Grok-Bookmarks</span> @free_ai_guides &amp; @elonmusk: Grok Bot Turns X Bookmarks into a &#x27;Second Brain&#x27;</div>
+    <div class="item-body">A widely shared guide highlights that Grok Bot can now read your X bookmarks and turn the posts you never reread into a searchable second brain, with a set of starter prompts for connecting your account. Elon Musk&#x27;s own terse &#x27;Grok @Bot&#x27; post helped push the bot into the timeline&#x27;s top engagement tier.</div>
     <div class="item-meta">
-      <a href="https://x.com/clmt/status/2110368195106275341" target="_blank">View Tweet</a>
+      <a href="https://x.com/free_ai_guides/status/2110641876625981758" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag prompt-craft">Prompt-Craft</span> @felixrieseberg &amp; @thorstenball: Deconstructing Ambitious Prompting: First-Principles Engineering from Anthropic&#x27;s Claude Team</div>
-    <div class="item-body">Anthropic eng lead Felix Rieseberg&#x27;s tutorial on framing ambitious prompt instructions receives widespread analysis, with developers highlighting how anchoring prompts in first-principles leadership review standards extracts significantly deeper architectural reasoning from Claude Opus 5.5.</div>
+    <div class="item-title"><span class="tag x-subscription">X-Subscription</span> @SpaceXSI: &#x27;The X Subscription&#x27; Unifies Grok, Cursor, and X Premium Under One Plan</div>
+    <div class="item-body">A high-engagement post announces that plans across Grok, Cursor, and X Premium have been unified into a single &#x27;X Subscription,&#x27; bundling the company&#x27;s assistant, coding tool, and social products under one billing relationship.</div>
     <div class="item-meta">
-      <a href="https://x.com/thorstenball/status/2110501399041823219" target="_blank">View Tweet</a>
+      <a href="https://x.com/SpaceXSI/status/2109783335296008414" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag hermes-agent">Hermes-Agent</span> @Teknium (Nous Research): Hermes Agent v0.22.0 Ships: Zero-Config Onboarding and Stable Channels for Autonomous Workers</div>
-    <div class="item-body">Nous Research rolls out Hermes Agent v0.22.0, adding friction-free onboarding without manual provider configuration, one-click app connectors, and a thoroughly tested stable release channel for enterprise environments requiring rock-solid predictability over bleeding-edge commits.</div>
+    <div class="item-title"><span class="tag grok-connectors">Grok-Connectors</span> @ericzakariasson: Grok Bot Connector Roadmap — Apple, WhatsApp, Bitwarden, Apple Health, Meta Ads</div>
+    <div class="item-body">Grok Bot&#x27;s Eric Zakariasson asks which connectors users want next, listing the most-requested targets so far: Apple services (iCloud Mail, Calendar, Reminders, iMessage), WhatsApp, Bitwarden, Apple Health, and Meta Ads—signaling how the bot plans to reach beyond X data into personal productivity and ad accounts.</div>
     <div class="item-meta">
-      <a href="https://x.com/Teknium/status/2110387396823163357" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🎮</span>
-      <h2>Autonomous Creation &amp; Robotics: 16-Day 3D Game Dev &amp; Real2Sim Digital Twins</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag robotics-sim">Robotics-Sim</span> @keplerccccc &amp; @Ken_Goldberg: RoboSimStudio Debuts: Phone Videos Transformed into Dynamics-Rich Digital Twins in 1 Hour</div>
-    <div class="item-body">UC Berkeley robotics researchers introduce RoboSimStudio, an interactive agentic toolkit that enables vision-language agents to convert standard smartphone video of physical tasks into full-dynamics simulation environments for complex deformable objects like sponges, cables, and cloth.</div>
-    <div class="item-meta">
-      <a href="https://x.com/keplerccccc/status/2110405269171921243" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag indie-gaming">Indie-Gaming</span> @Astronaut_1216 &amp; @Saccc_c: Solo 3D Game Creation in 16 Days: The Claude Opus 5.5 + Tripo AI + Blender Pipeline</div>
-    <div class="item-body">Indie developer Saccc_c unveils a complete 3D narrative game based on The Little Prince built in just 16 days. The workflow chained Claude Opus 5.5 for logic and dialogue, Tripo AI for rapid asset modeling, and Blender/Unity for staging and interactive WebGPU export.</div>
-    <div class="item-meta">
-      <a href="https://x.com/Astronaut_1216/status/2110303799298642415" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag memory-harness">Memory-Harness</span> @LangChain: Deep Agents Memory Harness: Offloading Context Bloat Without Sacrificing Reasoning Accuracy</div>
-    <div class="item-body">LangChain details its Deep Agents memory architecture, addressing performance degradation in long-running agent workflows by systematically pruning historical tool outputs and intermediary artifacts from the active token window while keeping them accessible via indexed retrieval.</div>
-    <div class="item-meta">
-      <a href="https://x.com/LangChain/status/2110449692144509184" target="_blank">View Tweet</a>
+      <a href="https://x.com/ericzakariasson/status/2110858269225103685" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
