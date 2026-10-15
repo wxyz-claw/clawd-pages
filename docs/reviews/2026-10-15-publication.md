@@ -75,3 +75,19 @@ future configuration changes are not proven absent. The safety conclusion is
 limited to the inspected repository, current provider configuration and connected
 Cloudflare account. This read does not establish that old digest-generation jobs
 are stopped. No claim of a universal or permanent no-deployment guarantee.
+
+## Remote preservation verified
+
+Published review source commit:
+`f1cad3c5c20eb23a43bc21146296445e22c6c51e` on
+[`review/six-area-20261015`](https://github.com/wxyz-claw/clawd-pages/tree/review/six-area-20261015).
+A fresh fetch matched its complete tree and SHA-256 for all ten changed files.
+No HTML edition or JSON digest payload changed. Python and Node regressions pass.
+Post-push GitHub reads showed zero Actions runs for the review branch; Pages
+still selected main and its latest deployment remained `7081111235` for
+`7fa4c4fe5c11454189a202e97cc65e3a6d26af18`. No PR was created.
+
+The original local main contains the earlier maintenance commits; **do not push
+local main**. Remote main and production remain at the baseline archive commit.
+This follow-up preserves maintenance on the review branch without disabling or
+reviving production publishing.
