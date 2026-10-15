@@ -392,6 +392,11 @@ def main():
                     help="summary provider (default: auto = custom→nvidia→gemini→excerpt)")
     args = ap.parse_args()
 
+    # This checkout is a historical public archive. Never fetch personal sources,
+    # invoke a summary provider, or publish through the retired CLI by default.
+    if not args.dry_run or not args.thread_file or not (args.no_summary or args.summary_file or args.llm == 'none'):
+        ap.error('Historical archive: only --dry-run --thread-file with --no-summary, --llm none or --summary-file is supported; writing and publishing are retired')
+
     if not args.url and not args.thread_file:
         ap.error("an X URL is required (or use --thread-file with a URL for the source link)")
 
