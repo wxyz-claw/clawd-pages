@@ -1,132 +1,132 @@
 {
   "title": "Clawd X Digest",
-  "date": "Thursday, October 15th, 2026 — 7:00 PM ET",
+  "date": "Thursday, October 15th, 2026 — 9:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Microsoft MAI Ships 3T-Parameter Base Models Built In-House:</strong> Mustafa Suleyman says MAI now has state-of-the-art pre-trained base models in the 3-trillion-parameter weight class with post-training results to follow, and outside analysts are already dissecting the sparse hybrid-attention architecture and its scaling ladder.",
-    "<strong>Anthropic Takes Opus 5.5 Fast Mode GA and Adds Enterprise Code Review:</strong> Fast mode exits research preview with the waitlist removed—same Opus 5.5 but up to 2.5x faster at $8 / $40 per million tokens and available in Microsoft Foundry—while Code Review reaches general availability for Team and Enterprise plans with selectable review depth.",
-    "<strong>Interpretability Flips the Polysemanticity Assumption as Agent Benchmarks Heat Up:</strong> A widely shared result argues neural networks are not tangled knots and that 90% of neurons in Qwen-32B have a single job, landing alongside Xiaomi's MiMo V2.6 Pro taking the top open-model slot in the Agent Arena.",
-    "<strong>Agent Harness Work Migrates to Infrastructure Primitives:</strong> LangChain's Harrison Chase argues the most interesting harness work now lives at the harness/infra intersection—dreaming, async subagents, heartbeats, and agent-scheduled reminders—as Instinct launches a YC-backed frontier harness for individual traders.",
-    "<strong>Grok Bot Anchors a Bundled Consumer Agent Ecosystem:</strong> X moves to unify Grok, Cursor, and X Premium under one subscription and Grok Bot gains bookmark-driven 'second brain' workflows and a connector roadmap spanning Apple, WhatsApp, and Bitwarden."
+    "<strong>Muse Spark Open Weights Drop and Run Great on New Mac Studios:</strong> @finkd says the Muse Spark Open weights are releasing today and run well on new Mac Studios thanks to work with @johnternus and Apple, with @alexandr_wang framing the release as the reason 2026 will not look like 1984.",
+    "<strong>Microsoft's 3T-Parameter Base Models Go In-House:</strong> Mustafa Suleyman says MAI now holds state-of-the-art pre-trained base models in the 3-trillion-parameter weight class built entirely in-house, as @eliebakouch pulls rare scaling-law and architecture details out of the accompanying technical blog.",
+    "<strong>Agent Infrastructure Pivots to Sandboxes and Payments:</strong> Perplexity open-sources the SPACE sandbox platform behind Perplexity Computer, while Self Labs launches Agent Vault for agent logins and credit-card payments and @inflight ships a prototype-feedback layer that turns comments into next steps for Claude.",
+    "<strong>Musk Floats an Amazon Competitor as Google Touts Quantum:</strong> Elon Musk's one-line \"maybe we should start a competitor to Amazon\" tops the timeline at ~142K likes, alongside OpenAI's Rosalind Academic Plan and a Google announcement of a major quantum-computing advancement.",
+    "<strong>Research Culture Turns Industrial as the Distillation Debate Brews:</strong> A widely shared Terence Tao quote argues math is leaving its \"age of heroes\" for a large-team industrial era, while a viral theory ties a slowdown in Chinese model releases to Anthropic blocking distillation."
   ],
   "sections": [
     {
       "emoji": "🧠",
-      "title": "Frontier Model Releases: In-House 3T-Scale Base Models & Faster Flagship Modes",
+      "title": "Open Weights Land: Muse Spark & In-House 3T Base Models",
       "items": [
         {
-          "tag": "mai-3t",
-          "title": "@mustafasuleyman (Mustafa Suleyman) & @eliebakouch: Microsoft MAI Ships 3T-Parameter Base Models Trained Entirely In-House",
-          "body": "Suleyman announces that MAI now holds state-of-the-art pre-trained base models in the 3T-parameter weight class, built entirely in-house, with post-training results and a technical blog post to follow. Independent analysts highlight a sparser design than Kimi K3 (80B active parameters), a sliding-window hybrid attention pattern with more KV heads, a shared expert, and a scaling ladder that drops the earlier interleaved MoE/Dense pattern.",
+          "tag": "muse-spark-weights",
+          "title": "@finkd: Muse Spark Open Weights Release, Tuned for New Mac Studios",
+          "body": "finkd says \"Muse Spark Open\" weights are releasing today and that the model runs great on new Mac Studios, crediting work with @johnternus and Apple. The post landed as one of the highest-engagement technical items on the timeline for the day.",
+          "url": "https://x.com/finkd/status/2110778025629347999"
+        },
+        {
+          "tag": "muse-spark-1984",
+          "title": "@alexandr_wang: 'Muse Spark Open' Arrives — 'Why 2026 Won't Be Like 1984'",
+          "body": "alexandr_wang amplifies the same Muse Spark Open release with the line \"muse spark open.\" and the framing \"why 2026 won't be like 1984,\" following up with \"great doing business with you john apple.\" The pairing of the release with Apple's hardware push dominated the afternoon timeline.",
+          "url": "https://x.com/alexandr_wang/status/2110780784051474666"
+        },
+        {
+          "tag": "mai-3t-base",
+          "title": "@mustafasuleyman (Mustafa Suleyman): MAI Ships State-of-the-Art 3T-Parameter Base Models Built In-House",
+          "body": "Suleyman announces that MAI now has state-of-the-art pre-trained base models in the 3T-parameter weight class, built entirely in-house, with post-training results to follow and full details in a technical blog post.",
           "url": "https://x.com/mustafasuleyman/status/2110766651344146564"
+        }
+      ]
+    },
+    {
+      "emoji": "🔬",
+      "title": "Scaling Laws, Quantization & Decision Models",
+      "items": [
+        {
+          "tag": "3t-scaling-ladder",
+          "title": "@eliebakouch (Elie Bakouch): Rare Scaling-Law Details from Microsoft's 3T Pre-Training Blog",
+          "body": "Bakouch walks through Microsoft's new 3T pre-training write-up, calling the architecture sparser than Kimi K3 (80B active parameters, same sliding-window hybrid pattern with more KV heads), noting a shared expert and the removal of the earlier interleaved MoE/Dense design. He highlights predicted-vs-final loss being almost identical, 'very nice' scaling laws for weight decay and learning rate expressed as functions of tokens per parameter and steps, a switch to Muon with activation gradient clipping, and a training horizon of roughly 40T text tokens (20T unique) plus a new 10T multimodal set.",
+          "url": "https://x.com/eliebakouch/status/2110779696296472999"
         },
         {
-          "tag": "opus-fast-ga",
-          "title": "@ClaudeDevs: Opus 5.5 Fast Mode Goes GA — Waitlist Removed, Up to 2.5x Faster at $8 / $40 per Million Tokens",
-          "body": "Anthropic's ClaudeDevs account says fast mode in the Claude Platform is out of research preview and the waitlist is gone. It is the same Opus 5.5, up to 2.5x faster, priced at $8 input / $40 output per million tokens, and now available in Microsoft Foundry (hosted on Azure) with Google Cloud coming soon. Fast mode in Claude Code is unchanged and draws on extra usage credits.",
-          "url": "https://x.com/ClaudeDevs/status/2110825294655562048"
+          "tag": "strata-local-inference",
+          "title": "@QwenAIFans: Strata Runs the 125B Qwen3.8-Flash-Next on a 12GB Gaming GPU",
+          "body": "QwenAIFans reports that Strata runs the 125B-parameter Qwen3.8-Flash-Next on a 12GB gaming GPU plus 32GB of RAM, measuring 94 tok/s at Q2 and 53 tok/s at IQ3_S on an RTX 5070. They caution that Q2 is a heavy quantization and users should check quality on their own tasks, while noting the project already has 25K GitHub stars.",
+          "url": "https://x.com/QwenAIFans/status/2110742987164852646"
         },
         {
-          "tag": "muse-cursor",
-          "title": "@cursor_ai (Cursor): Meta Superintelligence Labs' Muse Wonder Lands in Cursor at 46.1% CursorBench",
-          "body": "Cursor announces that Muse Wonder from Meta Superintelligence Labs is now available in Cursor. It scores 46.1% on CursorBench at default effort—the highest of any Muse model—and is priced at $4 per million input tokens and $20 per million output tokens.",
-          "url": "https://x.com/cursor_ai/status/2110867556693430293"
+          "tag": "liquid-d1-ultra",
+          "title": "@liquidai: d1-ultra Decision Model Tops the Artificial Analysis Decision Index",
+          "body": "Liquid AI releases d1-ultra, which it calls its most powerful decision model: built for hard decision problems, multimodal, supporting 44 languages, ranking #1 on the @ArtificialAnlys Decision Index (65) and leading all eight categories of its 112-evaluation suite.",
+          "url": "https://x.com/liquidai/status/2110777964489285875"
         }
       ]
     },
     {
       "emoji": "🛠️",
-      "title": "Agent Harness Moves to Infrastructure: Dreaming, Subagents & the Verification Deficit",
+      "title": "Agent Infrastructure: Open Sandboxes, Agent Payments & Feedback Loops",
       "items": [
         {
-          "tag": "harness-infra",
-          "title": "@hwchase17 (Harrison Chase): The Cutting Edge of Agent Harnesses Is Really Infrastructure",
-          "body": "LangChain's Harrison Chase argues that most of the interesting agent-harness work now happens at the intersection of harness and infrastructure, naming four primitives: dreaming, async subagents, heartbeats, and letting agents schedule their own reminders. He frames this as the core reason he is bullish on managed agent platforms.",
-          "url": "https://x.com/hwchase17/status/2110813795245249018"
+          "tag": "perplexity-space",
+          "title": "@AravSrinivas (Aravind Srinivas): Perplexity Open-Sources the SPACE Sandbox Platform",
+          "body": "Srinivas argues that while sandboxes are a commodity, serving millions of them under production-grade traffic takes real engineering, and says Perplexity is open-sourcing SPACE—the sandbox platform that powers all of Perplexity Computer—to support the ecosystem of scaling agents for businesses and consumers.",
+          "url": "https://x.com/AravSrinivas/status/2110785848958759165"
         },
         {
-          "tag": "instinct-trader",
-          "title": "@instinct_xyz: Instinct Launches a Frontier Agent Harness to Give Individual Traders Institutional Capacity",
-          "body": "Backed by Y Combinator, Instinct releases what it calls the first frontier agent harness built to hand individual traders the capabilities of an investment firm. The pitch: for decades institutional edge came from organizing talented people around large pools of capital, and Instinct aims to make that organizational capacity available to individuals.",
-          "url": "https://x.com/instinct_xyz/status/2110439790961442825"
+          "tag": "self-agent-vault",
+          "title": "@selfxyz (Self Labs): Agent Vault Gives Agents Secure Logins and Card Payments",
+          "body": "Self Labs says it has used agents since day one and that its agentic web identity and privacy stack is already used by companies like Google. It is now launching the missing piece: Agent Vault, a secure way for agents to log in and make credit-card payments.",
+          "url": "https://x.com/selfxyz/status/2110771542825304257"
         },
         {
-          "tag": "verification-deficit",
-          "title": "@jolestar: The 'Verification Deficit' — AI Speeds Up Writing Code Faster Than Teams Can Accept It",
-          "body": "Drawing on a discussion with a technical team, jolestar describes the 'verification deficit': AI clearly speeds up individual developer output, but in team settings code is produced faster than it can be reviewed, leaving a 'wrote it fast, but no one dares merge it' gap where generation outruns verification. The proposed fix is to push agents out of single-machine chat boxes and into scheduled, event-driven continuous verification pipelines.",
-          "url": "https://x.com/jolestar/status/2110585806469337101"
+          "tag": "inflight-feedback",
+          "title": "@ridd_design: @inflight Ships a Feedback Layer That Feeds Prototype Comments Back to Claude",
+          "body": "rui (ridd_design) introduces @inflight as \"the missing feedback layer for prototypes\": it works with any agent, supports pinned comments plus video, and turns feedback directly into next steps for Claude.",
+          "url": "https://x.com/ridd_design/status/2110748819847630872"
         }
       ]
     },
     {
-      "emoji": "🔍",
-      "title": "Interpretability, Agent Benchmarks & Model Quality Signals",
+      "emoji": "🏢",
+      "title": "Corporate Moves & Frontier Programs",
       "items": [
         {
-          "tag": "neuron-hypothesis",
-          "title": "@deedydas (Deedy): 'Polysemanticity Is Wrong' — 90% of Neurons in Qwen-32B Have a Single Job",
-          "body": "A result that Deedy calls 'one of the most important results in AI' argues that neural networks are not tangled knots and that their own neurons can be studied directly without first unfolding them with a second model—90% of neurons in Qwen-32B have one job. He notes the work comes from Nick Cammarata, who started OpenAI's interpretability team and is now at Goodfire, and stresses the rising stakes for understanding and aligning model behavior.",
-          "url": "https://x.com/deedydas/status/2110785912074277221"
-        },
-        {
-          "tag": "agent-arena",
-          "title": "@arena (Arena.ai): Xiaomi's MiMo V2.6 Pro Takes the #1 Open-Model Slot in the Agent Arena",
-          "body": "Arena.ai reports a new leader among open models in the Agent Arena: MiMo V2.6 Pro by Xiaomi lands the top spot with a +3.8% net improvement. The update follows the team's evolution of the Bash Recovery signal in Agent Arena earlier in the week.",
-          "url": "https://x.com/arena/status/2110815995950731340"
-        },
-        {
-          "tag": "nemotron-researcher",
-          "title": "@AlexGDimakis (Alex Dimakis): NVIDIA Nemotron-3.5-Super-VL Post-Trained into an Autonomous ML Researcher",
-          "body": "Dimakis and team announce they post-trained NVIDIA Nemotron-3.5-Super-VL to act as an autonomous ML researcher, reporting that their model moves from 28% to 35% on AutoResearchExam, matching Qwen 3.8 Max—a model with roughly 20x the total parameters.",
-          "url": "https://x.com/AlexGDimakis/status/2110788484759990755"
-        }
-      ]
-    },
-    {
-      "emoji": "🖥️",
-      "title": "Frontier Programs: Gemini 4 Argon Rollout, Rosalind for Labs & Enterprise Code Review",
-      "items": [
-        {
-          "tag": "argon-antigravity",
-          "title": "@_mohansolo & @Google: Gemini 4 Argon Goes Live in Antigravity for Paid Pro Subscribers",
-          "body": "Google's _mohansolo says Gemini 4 Argon is live in Antigravity for paid Pro subscribers, and that Pro members get a separate weekly quota so the model does not consume their Flash quota. A companion demo from the Antigravity team shows Gemini 4 Argon plus multi-agent workflows calibrating natural translations across 17 languages in two days.",
-          "url": "https://x.com/_mohansolo/status/2110866446020710657"
+          "tag": "musk-amazon",
+          "title": "@elonmusk (Elon Musk): 'Maybe We Should Start a Competitor to Amazon'",
+          "body": "A single, terse Musk post—\"Maybe we should start a competitor to Amazon\" with a thinking emoji—became the most-liked item on the timeline by an order of magnitude, drawing roughly 142K likes and ~17.8K replies.",
+          "url": "https://x.com/elonmusk/status/2110715556328579219"
         },
         {
           "tag": "rosalind-academic",
           "title": "@OpenAI: GPT-Rosalind Academic Plan Expands Model Access for Research Labs",
-          "body": "OpenAI announces it is expanding access to GPT-Rosalind for academic research. The new Rosalind Academic Plan helps scientific labs bring AI into understanding biology, exploring ideas, and deciding what to test next, with sponsored access for eligible labs at U.S. universities.",
+          "body": "OpenAI is expanding access to GPT-Rosalind for academic research. The new Rosalind Academic Plan helps scientific labs bring AI into understanding biology, exploring ideas, and deciding what to test next, with sponsored access for eligible labs at U.S. universities.",
           "url": "https://x.com/OpenAI/status/2110841898076418336"
         },
         {
-          "tag": "code-review-ga",
-          "title": "@ClaudeDevs: Code Review Is Generally Available for Claude Team and Enterprise Plans",
-          "body": "Anthropic's ClaudeDevs announces Code Review is now generally available for Claude Team and Enterprise plans. Reviews are faster, catch more of the bugs that matter, and admins can select Quick, Standard, or Deep review levels per repository.",
-          "url": "https://x.com/ClaudeDevs/status/2110866210573386065"
+          "tag": "google-quantum",
+          "title": "@WatcherGuru: Google $GOOGL Announces a Major Advancement in Quantum Computing",
+          "body": "WatcherGuru flags a breaking announcement that Google has made a major advancement in quantum computing, without further detail in the post itself.",
+          "url": "https://x.com/WatcherGuru/status/2110818958077014501"
         }
       ]
     },
     {
-      "emoji": "⚡",
-      "title": "Grok Bot & the Bundled Consumer Agent Ecosystem",
+      "emoji": "🔭",
+      "title": "Research Culture, Engineering Lore & the Distillation Question",
       "items": [
         {
-          "tag": "grok-bookmarks",
-          "title": "@free_ai_guides & @elonmusk: Grok Bot Turns X Bookmarks into a 'Second Brain'",
-          "body": "A widely shared guide highlights that Grok Bot can now read your X bookmarks and turn the posts you never reread into a searchable second brain, with a set of starter prompts for connecting your account. Elon Musk's own terse 'Grok @Bot' post helped push the bot into the timeline's top engagement tier.",
-          "url": "https://x.com/free_ai_guides/status/2110641876625981758"
+          "tag": "tao-industrial-math",
+          "title": "@haider1: Terence Tao on the End of the 'Romantic Era' of Mathematics",
+          "body": "A widely shared quote from mathematician Terence Tao argues \"we're seeing the end of the romantic era of mathematics, the age of heroes. we're moving into an industrial era where math becomes large-scale, done in big teams like the other sciences,\" adding that we are entering, \"rather unwillingly,\" a new era where exciting things are possible but some things are being lost.",
+          "url": "https://x.com/haider1/status/2110797855879471162"
         },
         {
-          "tag": "x-subscription",
-          "title": "@SpaceXSI: 'The X Subscription' Unifies Grok, Cursor, and X Premium Under One Plan",
-          "body": "A high-engagement post announces that plans across Grok, Cursor, and X Premium have been unified into a single 'X Subscription,' bundling the company's assistant, coding tool, and social products under one billing relationship.",
-          "url": "https://x.com/SpaceXSI/status/2109783335296008414"
+          "tag": "git-lore",
+          "title": "@GithubProjects: Five Months vs. Ten Days — Anthropic's Git Replacement Draws a Torvalds Comparison",
+          "body": "A high-engagement quip notes that Anthropic, with Claude's help, spent five months building a replacement for Git, while Linus Torvalds built Git single-handedly in just ten days—an item that circulated widely as an engineering-effort comparison.",
+          "url": "https://x.com/GithubProjects/status/2110521086656098437"
         },
         {
-          "tag": "grok-connectors",
-          "title": "@ericzakariasson: Grok Bot Connector Roadmap — Apple, WhatsApp, Bitwarden, Apple Health, Meta Ads",
-          "body": "Grok Bot's Eric Zakariasson asks which connectors users want next, listing the most-requested targets so far: Apple services (iCloud Mail, Calendar, Reminders, iMessage), WhatsApp, Bitwarden, Apple Health, and Meta Ads—signaling how the bot plans to reach beyond X data into personal productivity and ad accounts.",
-          "url": "https://x.com/ericzakariasson/status/2110858269225103685"
+          "tag": "distillation-theory",
+          "title": "@elshayib_: Theory Ties the Pause in Chinese Model Releases to Blocked Distillation",
+          "body": "elshayib_ floats a theory that since Anthropic started blocking distillation and patched most exploits, Chinese models have slowed down—possibly explaining why there have been no major new releases since GLM 5.3 and Kimi K3.",
+          "url": "https://x.com/elshayib_/status/2110799095015084422"
         }
       ]
     }

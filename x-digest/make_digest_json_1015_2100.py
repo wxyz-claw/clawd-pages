@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Thursday, October 15th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Muse Spark Open Weights Drop and Run Great on New Mac Studios:</strong> @finkd says the Muse Spark Open weights are releasing today and run well on new Mac Studios thanks to work with @johnternus and Apple, with @alexandr_wang framing the release as the reason 2026 will not look like 1984.",
+        "<strong>Microsoft's 3T-Parameter Base Models Go In-House:</strong> Mustafa Suleyman says MAI now holds state-of-the-art pre-trained base models in the 3-trillion-parameter weight class built entirely in-house, as @eliebakouch pulls rare scaling-law and architecture details out of the accompanying technical blog.",
+        "<strong>Agent Infrastructure Pivots to Sandboxes and Payments:</strong> Perplexity open-sources the SPACE sandbox platform behind Perplexity Computer, while Self Labs launches Agent Vault for agent logins and credit-card payments and @inflight ships a prototype-feedback layer that turns comments into next steps for Claude.",
+        "<strong>Musk Floats an Amazon Competitor as Google Touts Quantum:</strong> Elon Musk's one-line \"maybe we should start a competitor to Amazon\" tops the timeline at ~142K likes, alongside OpenAI's Rosalind Academic Plan and a Google announcement of a major quantum-computing advancement.",
+        "<strong>Research Culture Turns Industrial as the Distillation Debate Brews:</strong> A widely shared Terence Tao quote argues math is leaving its \"age of heroes\" for a large-team industrial era, while a viral theory ties a slowdown in Chinese model releases to Anthropic blocking distillation."
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "Open Weights Land: Muse Spark & In-House 3T Base Models",
+            "items": [
+                {
+                    "tag": "muse-spark-weights",
+                    "title": "@finkd: Muse Spark Open Weights Release, Tuned for New Mac Studios",
+                    "body": "finkd says \"Muse Spark Open\" weights are releasing today and that the model runs great on new Mac Studios, crediting work with @johnternus and Apple. The post landed as one of the highest-engagement technical items on the timeline for the day.",
+                    "url": "https://x.com/finkd/status/2110778025629347999"
+                },
+                {
+                    "tag": "muse-spark-1984",
+                    "title": "@alexandr_wang: 'Muse Spark Open' Arrives — 'Why 2026 Won't Be Like 1984'",
+                    "body": "alexandr_wang amplifies the same Muse Spark Open release with the line \"muse spark open.\" and the framing \"why 2026 won't be like 1984,\" following up with \"great doing business with you john apple.\" The pairing of the release with Apple's hardware push dominated the afternoon timeline.",
+                    "url": "https://x.com/alexandr_wang/status/2110780784051474666"
+                },
+                {
+                    "tag": "mai-3t-base",
+                    "title": "@mustafasuleyman (Mustafa Suleyman): MAI Ships State-of-the-Art 3T-Parameter Base Models Built In-House",
+                    "body": "Suleyman announces that MAI now has state-of-the-art pre-trained base models in the 3T-parameter weight class, built entirely in-house, with post-training results to follow and full details in a technical blog post.",
+                    "url": "https://x.com/mustafasuleyman/status/2110766651344146564"
+                }
+            ]
+        },
+        {
+            "emoji": "🔬",
+            "title": "Scaling Laws, Quantization & Decision Models",
+            "items": [
+                {
+                    "tag": "3t-scaling-ladder",
+                    "title": "@eliebakouch (Elie Bakouch): Rare Scaling-Law Details from Microsoft's 3T Pre-Training Blog",
+                    "body": "Bakouch walks through Microsoft's new 3T pre-training write-up, calling the architecture sparser than Kimi K3 (80B active parameters, same sliding-window hybrid pattern with more KV heads), noting a shared expert and the removal of the earlier interleaved MoE/Dense design. He highlights predicted-vs-final loss being almost identical, 'very nice' scaling laws for weight decay and learning rate expressed as functions of tokens per parameter and steps, a switch to Muon with activation gradient clipping, and a training horizon of roughly 40T text tokens (20T unique) plus a new 10T multimodal set.",
+                    "url": "https://x.com/eliebakouch/status/2110779696296472999"
+                },
+                {
+                    "tag": "strata-local-inference",
+                    "title": "@QwenAIFans: Strata Runs the 125B Qwen3.8-Flash-Next on a 12GB Gaming GPU",
+                    "body": "QwenAIFans reports that Strata runs the 125B-parameter Qwen3.8-Flash-Next on a 12GB gaming GPU plus 32GB of RAM, measuring 94 tok/s at Q2 and 53 tok/s at IQ3_S on an RTX 5070. They caution that Q2 is a heavy quantization and users should check quality on their own tasks, while noting the project already has 25K GitHub stars.",
+                    "url": "https://x.com/QwenAIFans/status/2110742987164852646"
+                },
+                {
+                    "tag": "liquid-d1-ultra",
+                    "title": "@liquidai: d1-ultra Decision Model Tops the Artificial Analysis Decision Index",
+                    "body": "Liquid AI releases d1-ultra, which it calls its most powerful decision model: built for hard decision problems, multimodal, supporting 44 languages, ranking #1 on the @ArtificialAnlys Decision Index (65) and leading all eight categories of its 112-evaluation suite.",
+                    "url": "https://x.com/liquidai/status/2110777964489285875"
+                }
+            ]
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Agent Infrastructure: Open Sandboxes, Agent Payments & Feedback Loops",
+            "items": [
+                {
+                    "tag": "perplexity-space",
+                    "title": "@AravSrinivas (Aravind Srinivas): Perplexity Open-Sources the SPACE Sandbox Platform",
+                    "body": "Srinivas argues that while sandboxes are a commodity, serving millions of them under production-grade traffic takes real engineering, and says Perplexity is open-sourcing SPACE—the sandbox platform that powers all of Perplexity Computer—to support the ecosystem of scaling agents for businesses and consumers.",
+                    "url": "https://x.com/AravSrinivas/status/2110785848958759165"
+                },
+                {
+                    "tag": "self-agent-vault",
+                    "title": "@selfxyz (Self Labs): Agent Vault Gives Agents Secure Logins and Card Payments",
+                    "body": "Self Labs says it has used agents since day one and that its agentic web identity and privacy stack is already used by companies like Google. It is now launching the missing piece: Agent Vault, a secure way for agents to log in and make credit-card payments.",
+                    "url": "https://x.com/selfxyz/status/2110771542825304257"
+                },
+                {
+                    "tag": "inflight-feedback",
+                    "title": "@ridd_design: @inflight Ships a Feedback Layer That Feeds Prototype Comments Back to Claude",
+                    "body": "rui (ridd_design) introduces @inflight as \"the missing feedback layer for prototypes\": it works with any agent, supports pinned comments plus video, and turns feedback directly into next steps for Claude.",
+                    "url": "https://x.com/ridd_design/status/2110748819847630872"
+                }
+            ]
+        },
+        {
+            "emoji": "🏢",
+            "title": "Corporate Moves & Frontier Programs",
+            "items": [
+                {
+                    "tag": "musk-amazon",
+                    "title": "@elonmusk (Elon Musk): 'Maybe We Should Start a Competitor to Amazon'",
+                    "body": "A single, terse Musk post—\"Maybe we should start a competitor to Amazon\" with a thinking emoji—became the most-liked item on the timeline by an order of magnitude, drawing roughly 142K likes and ~17.8K replies.",
+                    "url": "https://x.com/elonmusk/status/2110715556328579219"
+                },
+                {
+                    "tag": "rosalind-academic",
+                    "title": "@OpenAI: GPT-Rosalind Academic Plan Expands Model Access for Research Labs",
+                    "body": "OpenAI is expanding access to GPT-Rosalind for academic research. The new Rosalind Academic Plan helps scientific labs bring AI into understanding biology, exploring ideas, and deciding what to test next, with sponsored access for eligible labs at U.S. universities.",
+                    "url": "https://x.com/OpenAI/status/2110841898076418336"
+                },
+                {
+                    "tag": "google-quantum",
+                    "title": "@WatcherGuru: Google $GOOGL Announces a Major Advancement in Quantum Computing",
+                    "body": "WatcherGuru flags a breaking announcement that Google has made a major advancement in quantum computing, without further detail in the post itself.",
+                    "url": "https://x.com/WatcherGuru/status/2110818958077014501"
+                }
+            ]
+        },
+        {
+            "emoji": "🔭",
+            "title": "Research Culture, Engineering Lore & the Distillation Question",
+            "items": [
+                {
+                    "tag": "tao-industrial-math",
+                    "title": "@haider1: Terence Tao on the End of the 'Romantic Era' of Mathematics",
+                    "body": "A widely shared quote from mathematician Terence Tao argues \"we're seeing the end of the romantic era of mathematics, the age of heroes. we're moving into an industrial era where math becomes large-scale, done in big teams like the other sciences,\" adding that we are entering, \"rather unwillingly,\" a new era where exciting things are possible but some things are being lost.",
+                    "url": "https://x.com/haider1/status/2110797855879471162"
+                },
+                {
+                    "tag": "git-lore",
+                    "title": "@GithubProjects: Five Months vs. Ten Days — Anthropic's Git Replacement Draws a Torvalds Comparison",
+                    "body": "A high-engagement quip notes that Anthropic, with Claude's help, spent five months building a replacement for Git, while Linus Torvalds built Git single-handedly in just ten days—an item that circulated widely as an engineering-effort comparison.",
+                    "url": "https://x.com/GithubProjects/status/2110521086656098437"
+                },
+                {
+                    "tag": "distillation-theory",
+                    "title": "@elshayib_: Theory Ties the Pause in Chinese Model Releases to Blocked Distillation",
+                    "body": "elshayib_ floats a theory that since Anthropic started blocking distillation and patched most exploits, Chinese models have slowed down—possibly explaining why there have been no major new releases since GLM 5.3 and Kimi K3.",
+                    "url": "https://x.com/elshayib_/status/2110799095015084422"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
