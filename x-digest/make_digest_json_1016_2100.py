@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Friday, October 16th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>OpenAI Ships Parallel Agents in GPT-6 Astra Pro:</strong> ChatGPT's Astra Pro got an upgrade with faster responses and better plugin/tool use, and multiple agents can now tackle different parts of a task in parallel, with per-agent progress you can follow and finished tasks you can open and review.",
+        "<strong>\"There Are No Moats Left\" Tops the Timeline:</strong> @RuiCarrilho5's argument that intelligence was the last true moat — and is now out of the equation — drew ~13.9K likes, the day's loudest post on the feed.",
+        "<strong>Google Open-Sources AX for Agent Orchestration:</strong> A widely shared thread describes AX as \"Kubernetes but for agents\" — one YAML file declares task, workspace and model, then spins out sandboxes wired with repos, MCP servers and skills. The writeup reports 13.5K stars and Apache 2.0.",
+        "<strong>A Widely Shared Post Says Linus Torvalds Rejected Mandatory AI Tagging:</strong> The post relays a Linux kernel mailing-list discussion in which the team moves to drop the mandatory \"Assisted-by: LLM\" tag, with Torvalds reportedly arguing that disliking a tool doesn't mean banning it — \"then we can disable compilers too.\"",
+        "<strong>Recursive Self-Improvement Gets Two Hard Data Points:</strong> Terminal-RSI climbs a 27B model from 51.7% to 86.5% on Terminal-Bench 2.1 across two self-training cycles, while Apple's new RSI-Inference Bench finds the best agent still only reaches 26.7% pass@1 on real vLLM/SGLang engineering tasks.",
+    ],
+    "sections": [
+        {
+            "emoji": "🚀",
+            "title": "Frontier Model Releases & Upgrades",
+            "items": [
+                {
+                    "tag": "openai-astra-pro-parallel-agents",
+                    "title": "@OpenAI: GPT-6 Astra Pro Gets Faster Tooling and Parallel Sub-Agents in ChatGPT",
+                    "body": "OpenAI says GPT-6 Astra Pro in ChatGPT got an upgrade with faster responses and improved use of plugins and tools. The bigger change is orchestration: multiple agents can now tackle different parts of a task in parallel, with per-agent progress you can follow and completed tasks you can open to review their work. It is available now to Pro users in the Chat tab.",
+                    "url": "https://x.com/OpenAI/status/2111192259073094035"
+                },
+                {
+                    "tag": "glimpse-visual-thinking-model",
+                    "title": "@AndrewDai: Glimpse, a First Visual Thinking Model Aimed at Motion and Angle Changes",
+                    "body": "Andrew Dai frames the launch around a long-standing failure mode: models that ace a single still image but whiff on anything that moves or changes angle. He says Glimpse is their first visual thinking model, with competitive frontier performance against Astra on key public visual reasoning benchmarks.",
+                    "url": "https://x.com/AndrewDai/status/2111142161584628060"
+                },
+                {
+                    "tag": "gemini-argon-canvas-pdfs",
+                    "title": "@GeminiApp: Gemini 4 Argon Turns Dense PDFs into Interactive Web Apps in Canvas",
+                    "body": "The Gemini App account highlights a Canvas workflow with Gemini 4 Argon: point it at a dense PDF and it turns the document into an interactive, animated web app you can explore at your own pace.",
+                    "url": "https://x.com/GeminiApp/status/2111147479248855484"
+                }
+            ]
+        },
+        {
+            "emoji": "🧱",
+            "title": "Agent Infrastructure & Open Source",
+            "items": [
+                {
+                    "tag": "google-ax-agent-orchestration",
+                    "title": "@thisdudelikesAI: Google's AX Wants to Be Kubernetes for Agents",
+                    "body": "A widely shared thread describes AX as an open-source system for orchestrating huge numbers of autonomous agent tasks — \"Kubernetes but built for agents instead of apps.\" The claimed workflow: write one YAML declaring the task, workspace and model; AX spins up a sandbox and wires in Git repos, MCP servers and skills so every agent starts warm; then `ax apply` runs it, `ax ssh` lets you shell in, and `ax suspend`/`ax resume` pause and restore. The post reports 13.5K stars and an Apache 2.0 license, and notes Google says breaking changes are coming before a stable release.",
+                    "url": "https://x.com/thisdudelikesAI/status/2111028170808005070"
+                },
+                {
+                    "tag": "opendesign-motion",
+                    "title": "@OpenDesignHQ: OpenDesign Motion, an Open-Source Take on Claude Motion",
+                    "body": "OpenDesign Motion is pitched as the open-source alternative to Claude Motion: create motion videos with any agent and any model, no Opus 5.5 required. The team says the entire launch video was made in OpenDesign and points to more demos in the thread.",
+                    "url": "https://x.com/OpenDesignHQ/status/2111023212129829086"
+                },
+                {
+                    "tag": "claude-code-2-1-302",
+                    "title": "@ClaudeCodeLog: Claude Code 2.1.302 Ships 63 CLI Changes",
+                    "body": "The release note thread logs 63 CLI changes in Claude Code 2.1.302. Highlights include the Read tool refusing image sources over 128 MB to avoid loading huge files into memory and crashing, prompt suggestions omitting credit-billed models after a credit-billed reply to prevent unexpected credit use, and an 'Idle compaction' on/off toggle in /config with post-compaction notices now explaining how to disable it.",
+                    "url": "https://x.com/ClaudeCodeLog/status/2111203632217559255"
+                }
+            ]
+        },
+        {
+            "emoji": "🔬",
+            "title": "Recursive Self-Improvement & Quantum Research",
+            "items": [
+                {
+                    "tag": "terminal-rsi",
+                    "title": "@Yucheng__Shi: Terminal-RSI — an Agent Trains a Stronger Successor, Twice",
+                    "body": "The paper studies a recursive self-improvement loop: use an agent to help train a stronger successor, then use that successor to train the next, learning from verified successes and repeating. Across two cycles the authors report a 27B model rising from 51.7% to 86.5% on Terminal-Bench 2.1 and from 0.0% to 19.8% on Terminal-Bench 4.0, which they call a new SOTA, and they say they are now probing how far the hill-climbing can go and what makes it stall.",
+                    "url": "https://x.com/Yucheng__Shi/status/2110926888319517119"
+                },
+                {
+                    "tag": "apple-rsi-inference-bench",
+                    "title": "@onloglogn: Apple ML Research Asks Whether Agents Can Improve the Systems That Run AI",
+                    "body": "RSI-Inference Bench from Apple ML Research builds environments and benchmarks from real-world vLLM and SGLang tasks covering day-0 model support, inference optimization and bug fixing — a reported $100K in API tokens and 50K GPU hours to build. The headline finding is an unsaturated field: the best agent reaches only 26.7% pass@1, with verifiable binary and continuous rewards.",
+                    "url": "https://x.com/onloglogn/status/2111170954944823685"
+                },
+                {
+                    "tag": "anthropic-quantum-ec-point-addition",
+                    "title": "@NintendoDoomed: Anthropic's Quantum Paper Quietly Optimized Elliptic-Curve Point Addition",
+                    "body": "A long analysis argues the group that should worry most about Anthropic's new quantum-circuit paper isn't physicists but holders of BTC and ETH. Of the eight tasks, the most detailed is 256-bit elliptic-curve point addition — the core step for breaking elliptic-curve discrete logarithms, which Bitcoin and Ethereum signatures rely on. Per the writeup, Claude Mythos 5 got only a one-paragraph brief plus an automatic scorer (qubits x gates) and iterated in a closed loop: it ran 53 hours to produce the first reversible divsteps inversion implementation that stores no branch history, proved new algebraic identities along the way and formalized them in Lean, landing at 12% more qubits but 17x fewer gates versus the smallest prior design, plus an 12x-fewer-gate Reed-Solomon decoder for DQI. All eight tasks reportedly beat the best published designs on both qubits and gates.",
+                    "url": "https://x.com/NintendoDoomed/status/2111173813094494596"
+                }
+            ]
+        },
+        {
+            "emoji": "💬",
+            "title": "\"No Moats Left\" and the Trust Debate",
+            "items": [
+                {
+                    "tag": "no-moats-left",
+                    "title": "@RuiCarrilho5: \"There *Are* No Moats Left\" — 13.9K Likes",
+                    "body": "The day's highest-engagement original post is a short claim about where value now sits: people are realizing there are no moats left, and the only true moat in existence was intelligence — which is now out of the equation. At roughly 13.9K likes and 782 reposts, it set the tone for the timeline's weekend debate.",
+                    "url": "https://x.com/RuiCarrilho5/status/2111082872153034798"
+                },
+                {
+                    "tag": "vim-dev-vs-ai",
+                    "title": "@GergelyOrosz: The Vim Dev Who Shipped Faster Than Anyone Using AI",
+                    "body": "Gergely Orosz relays a startup anecdote that cuts against the AI-maximalist grain: \"At my last startup, there was one dev. He used vim and could ship features to production faster than anyone else who was using AI. He did it at a higher quality, and this is what he continues to do. The best dev I ever met.\"",
+                    "url": "https://x.com/GergelyOrosz/status/2111125317318508673"
+                },
+                {
+                    "tag": "anthropic-account-bans",
+                    "title": "@StatsWire: Why Paying Claude Developers Are Waking Up to \"Your Account Will Remain Closed\"",
+                    "body": "A widely shared breakdown claims Anthropic banned 11.4M accounts in H1 2026 — up 7.9x — with 89.45% of appeals (356K of 398K) permanently rejected. It lists five automated triggers it says catch ordinary paying developers: third-party OAuth logins to tools like Cline or Roo Code with a Pro/Max subscription instead of an API key, VPN and datacenter IP hops, billing changes such as 5x-to-20x Max upgrades, automated cron/bot calls on consumer plans, and security or red-team prompts without enterprise clearance.",
+                    "url": "https://x.com/StatsWire/status/2110985558004568347"
+                }
+            ]
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Shipping, Tooling & Platform Risk",
+            "items": [
+                {
+                    "tag": "claude-slides-workflow",
+                    "title": "@bcherny: \"Don't Sleep on Claude Slides\"",
+                    "body": "Boris Cherny shares that Claude Slides is now how he makes slide decks, retiring the old habit of googling \"iphone frame svg\" to assemble decks by hand. It is a small workflow note, but it landed with ~2.4K likes as developers swap tips on where agent-native authoring has quietly replaced manual tooling.",
+                    "url": "https://x.com/bcherny/status/2111158659971699136"
+                },
+                {
+                    "tag": "cap-agent-review-loops",
+                    "title": "@davekiss: Cap Your Agent Review Loops at 3 Rounds",
+                    "body": "Citing a writeup, davekiss notes that one Claude Code pull request ran 50+ rounds of review and fixes overnight, mostly re-flagging old code. After capping review loops at three rounds — then stopping and asking the author to rethink the approach — PRs needing five or more rounds dropped from 8.9% to 1.5%. The tip is framed as a line for your REVIEW.md.",
+                    "url": "https://x.com/davekiss/status/2111188919660290362"
+                },
+                {
+                    "tag": "chatgpt-pet-ssd-write",
+                    "title": "@mark_k: A ChatGPT Desktop Bug May Be Wearing Out SSDs",
+                    "body": "Mark K. warns ChatGPT desktop users that the animated desktop Pet may be causing unnecessary SSD wear. He traced constant disk activity to the Pet triggering a rewrite of the entire ~1 MB app state file and its backup about 10 times per second — roughly 385 MB of writes in 20 seconds just to persist the Pet's position. Setting the Pet to \"None\" stopped the activity immediately, so he suggests checking the setting if the app runs all day.",
+                    "url": "https://x.com/mark_k/status/2111166839074013454"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Friday, October 16th, 2026 — 9:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Friday, October 16th, 2026 — 9:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>OpenAI Ships Parallel Agents in GPT-6 Astra Pro:</strong> ChatGPT's Astra Pro got an upgrade with faster responses and better plugin/tool use, and multiple agents can now tackle different parts of a task in parallel, with per-agent progress you can follow and finished tasks you can open and review.</li>
+      <li><strong>"There Are No Moats Left" Tops the Timeline:</strong> @RuiCarrilho5's argument that intelligence was the last true moat — and is now out of the equation — drew ~13.9K likes, the day's loudest post on the feed.</li>
+      <li><strong>Google Open-Sources AX for Agent Orchestration:</strong> A widely shared thread describes AX as "Kubernetes but for agents" — one YAML file declares task, workspace and model, then spins out sandboxes wired with repos, MCP servers and skills. The writeup reports 13.5K stars and Apache 2.0.</li>
+      <li><strong>A Widely Shared Post Says Linus Torvalds Rejected Mandatory AI Tagging:</strong> The post relays a Linux kernel mailing-list discussion in which the team moves to drop the mandatory "Assisted-by: LLM" tag, with Torvalds reportedly arguing that disliking a tool doesn't mean banning it — "then we can disable compilers too."</li>
+      <li><strong>Recursive Self-Improvement Gets Two Hard Data Points:</strong> Terminal-RSI climbs a 27B model from 51.7% to 86.5% on Terminal-Bench 2.1 across two self-training cycles, while Apple's new RSI-Inference Bench finds the best agent still only reaches 26.7% pass@1 on real vLLM/SGLang engineering tasks.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>Frontier Model Releases &amp; Upgrades</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag openai-astra-pro-parallel-agents">Openai-Astra-Pro-Parallel-Agents</span> @OpenAI: GPT-6 Astra Pro Gets Faster Tooling and Parallel Sub-Agents in ChatGPT</div>
+    <div class="item-body">OpenAI says GPT-6 Astra Pro in ChatGPT got an upgrade with faster responses and improved use of plugins and tools. The bigger change is orchestration: multiple agents can now tackle different parts of a task in parallel, with per-agent progress you can follow and completed tasks you can open to review their work. It is available now to Pro users in the Chat tab.</div>
+    <div class="item-meta">
+      <a href="https://x.com/OpenAI/status/2111192259073094035" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag glimpse-visual-thinking-model">Glimpse-Visual-Thinking-Model</span> @AndrewDai: Glimpse, a First Visual Thinking Model Aimed at Motion and Angle Changes</div>
+    <div class="item-body">Andrew Dai frames the launch around a long-standing failure mode: models that ace a single still image but whiff on anything that moves or changes angle. He says Glimpse is their first visual thinking model, with competitive frontier performance against Astra on key public visual reasoning benchmarks.</div>
+    <div class="item-meta">
+      <a href="https://x.com/AndrewDai/status/2111142161584628060" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gemini-argon-canvas-pdfs">Gemini-Argon-Canvas-Pdfs</span> @GeminiApp: Gemini 4 Argon Turns Dense PDFs into Interactive Web Apps in Canvas</div>
+    <div class="item-body">The Gemini App account highlights a Canvas workflow with Gemini 4 Argon: point it at a dense PDF and it turns the document into an interactive, animated web app you can explore at your own pace.</div>
+    <div class="item-meta">
+      <a href="https://x.com/GeminiApp/status/2111147479248855484" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧱</span>
+      <h2>Agent Infrastructure &amp; Open Source</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag google-ax-agent-orchestration">Google-Ax-Agent-Orchestration</span> @thisdudelikesAI: Google&#x27;s AX Wants to Be Kubernetes for Agents</div>
+    <div class="item-body">A widely shared thread describes AX as an open-source system for orchestrating huge numbers of autonomous agent tasks — &quot;Kubernetes but built for agents instead of apps.&quot; The claimed workflow: write one YAML declaring the task, workspace and model; AX spins up a sandbox and wires in Git repos, MCP servers and skills so every agent starts warm; then `ax apply` runs it, `ax ssh` lets you shell in, and `ax suspend`/`ax resume` pause and restore. The post reports 13.5K stars and an Apache 2.0 license, and notes Google says breaking changes are coming before a stable release.</div>
+    <div class="item-meta">
+      <a href="https://x.com/thisdudelikesAI/status/2111028170808005070" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag opendesign-motion">Opendesign-Motion</span> @OpenDesignHQ: OpenDesign Motion, an Open-Source Take on Claude Motion</div>
+    <div class="item-body">OpenDesign Motion is pitched as the open-source alternative to Claude Motion: create motion videos with any agent and any model, no Opus 5.5 required. The team says the entire launch video was made in OpenDesign and points to more demos in the thread.</div>
+    <div class="item-meta">
+      <a href="https://x.com/OpenDesignHQ/status/2111023212129829086" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-code-2-1-302">Claude-Code-2-1-302</span> @ClaudeCodeLog: Claude Code 2.1.302 Ships 63 CLI Changes</div>
+    <div class="item-body">The release note thread logs 63 CLI changes in Claude Code 2.1.302. Highlights include the Read tool refusing image sources over 128 MB to avoid loading huge files into memory and crashing, prompt suggestions omitting credit-billed models after a credit-billed reply to prevent unexpected credit use, and an &#x27;Idle compaction&#x27; on/off toggle in /config with post-compaction notices now explaining how to disable it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ClaudeCodeLog/status/2111203632217559255" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔬</span>
+      <h2>Recursive Self-Improvement &amp; Quantum Research</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag terminal-rsi">Terminal-Rsi</span> @Yucheng__Shi: Terminal-RSI — an Agent Trains a Stronger Successor, Twice</div>
+    <div class="item-body">The paper studies a recursive self-improvement loop: use an agent to help train a stronger successor, then use that successor to train the next, learning from verified successes and repeating. Across two cycles the authors report a 27B model rising from 51.7% to 86.5% on Terminal-Bench 2.1 and from 0.0% to 19.8% on Terminal-Bench 4.0, which they call a new SOTA, and they say they are now probing how far the hill-climbing can go and what makes it stall.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Yucheng__Shi/status/2110926888319517119" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag apple-rsi-inference-bench">Apple-Rsi-Inference-Bench</span> @onloglogn: Apple ML Research Asks Whether Agents Can Improve the Systems That Run AI</div>
+    <div class="item-body">RSI-Inference Bench from Apple ML Research builds environments and benchmarks from real-world vLLM and SGLang tasks covering day-0 model support, inference optimization and bug fixing — a reported $100K in API tokens and 50K GPU hours to build. The headline finding is an unsaturated field: the best agent reaches only 26.7% pass@1, with verifiable binary and continuous rewards.</div>
+    <div class="item-meta">
+      <a href="https://x.com/onloglogn/status/2111170954944823685" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag anthropic-quantum-ec-point-addition">Anthropic-Quantum-Ec-Point-Addition</span> @NintendoDoomed: Anthropic&#x27;s Quantum Paper Quietly Optimized Elliptic-Curve Point Addition</div>
+    <div class="item-body">A long analysis argues the group that should worry most about Anthropic&#x27;s new quantum-circuit paper isn&#x27;t physicists but holders of BTC and ETH. Of the eight tasks, the most detailed is 256-bit elliptic-curve point addition — the core step for breaking elliptic-curve discrete logarithms, which Bitcoin and Ethereum signatures rely on. Per the writeup, Claude Mythos 5 got only a one-paragraph brief plus an automatic scorer (qubits x gates) and iterated in a closed loop: it ran 53 hours to produce the first reversible divsteps inversion implementation that stores no branch history, proved new algebraic identities along the way and formalized them in Lean, landing at 12% more qubits but 17x fewer gates versus the smallest prior design, plus an 12x-fewer-gate Reed-Solomon decoder for DQI. All eight tasks reportedly beat the best published designs on both qubits and gates.</div>
+    <div class="item-meta">
+      <a href="https://x.com/NintendoDoomed/status/2111173813094494596" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💬</span>
+      <h2>&quot;No Moats Left&quot; and the Trust Debate</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag no-moats-left">No-Moats-Left</span> @RuiCarrilho5: &quot;There *Are* No Moats Left&quot; — 13.9K Likes</div>
+    <div class="item-body">The day&#x27;s highest-engagement original post is a short claim about where value now sits: people are realizing there are no moats left, and the only true moat in existence was intelligence — which is now out of the equation. At roughly 13.9K likes and 782 reposts, it set the tone for the timeline&#x27;s weekend debate.</div>
+    <div class="item-meta">
+      <a href="https://x.com/RuiCarrilho5/status/2111082872153034798" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag vim-dev-vs-ai">Vim-Dev-Vs-Ai</span> @GergelyOrosz: The Vim Dev Who Shipped Faster Than Anyone Using AI</div>
+    <div class="item-body">Gergely Orosz relays a startup anecdote that cuts against the AI-maximalist grain: &quot;At my last startup, there was one dev. He used vim and could ship features to production faster than anyone else who was using AI. He did it at a higher quality, and this is what he continues to do. The best dev I ever met.&quot;</div>
+    <div class="item-meta">
+      <a href="https://x.com/GergelyOrosz/status/2111125317318508673" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag anthropic-account-bans">Anthropic-Account-Bans</span> @StatsWire: Why Paying Claude Developers Are Waking Up to &quot;Your Account Will Remain Closed&quot;</div>
+    <div class="item-body">A widely shared breakdown claims Anthropic banned 11.4M accounts in H1 2026 — up 7.9x — with 89.45% of appeals (356K of 398K) permanently rejected. It lists five automated triggers it says catch ordinary paying developers: third-party OAuth logins to tools like Cline or Roo Code with a Pro/Max subscription instead of an API key, VPN and datacenter IP hops, billing changes such as 5x-to-20x Max upgrades, automated cron/bot calls on consumer plans, and security or red-team prompts without enterprise clearance.</div>
+    <div class="item-meta">
+      <a href="https://x.com/StatsWire/status/2110985558004568347" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛠️</span>
+      <h2>Shipping, Tooling &amp; Platform Risk</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-slides-workflow">Claude-Slides-Workflow</span> @bcherny: &quot;Don&#x27;t Sleep on Claude Slides&quot;</div>
+    <div class="item-body">Boris Cherny shares that Claude Slides is now how he makes slide decks, retiring the old habit of googling &quot;iphone frame svg&quot; to assemble decks by hand. It is a small workflow note, but it landed with ~2.4K likes as developers swap tips on where agent-native authoring has quietly replaced manual tooling.</div>
+    <div class="item-meta">
+      <a href="https://x.com/bcherny/status/2111158659971699136" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cap-agent-review-loops">Cap-Agent-Review-Loops</span> @davekiss: Cap Your Agent Review Loops at 3 Rounds</div>
+    <div class="item-body">Citing a writeup, davekiss notes that one Claude Code pull request ran 50+ rounds of review and fixes overnight, mostly re-flagging old code. After capping review loops at three rounds — then stopping and asking the author to rethink the approach — PRs needing five or more rounds dropped from 8.9% to 1.5%. The tip is framed as a line for your REVIEW.md.</div>
+    <div class="item-meta">
+      <a href="https://x.com/davekiss/status/2111188919660290362" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag chatgpt-pet-ssd-write">Chatgpt-Pet-Ssd-Write</span> @mark_k: A ChatGPT Desktop Bug May Be Wearing Out SSDs</div>
+    <div class="item-body">Mark K. warns ChatGPT desktop users that the animated desktop Pet may be causing unnecessary SSD wear. He traced constant disk activity to the Pet triggering a rewrite of the entire ~1 MB app state file and its backup about 10 times per second — roughly 385 MB of writes in 20 seconds just to persist the Pet&#x27;s position. Setting the Pet to &quot;None&quot; stopped the activity immediately, so he suggests checking the setting if the app runs all day.</div>
+    <div class="item-meta">
+      <a href="https://x.com/mark_k/status/2111166839074013454" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
