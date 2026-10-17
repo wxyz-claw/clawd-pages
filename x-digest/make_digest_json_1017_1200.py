@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Saturday, October 17th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Anthropic Puts Its Own Numbers on Agents and Hiring:</strong> In two reports published October 16, Anthropic says cumulative AI-agent work hours had reached 6x employees by August, while the share of junior roles among its technical hires fell from 27% to 9% and interviews increasingly probe candidates' AI-tool fluency.",
+        "<strong>The Claude Code Team Now Ships Mostly Claude-Written Code:</strong> A widely shared breakdown of Anthropic's review practice says roughly 90% of code is written by Claude, merges from June to September more than doubled, and the share needing rollback dropped more than 40% — with every change passing seven layers of checks.",
+        "<strong>DeepSeek Built Its Own Search Engine to Dodge SEO Spam:</strong> It powers new search and fetch APIs at $0.75 per 1,000 successful requests, and the APIs are free when you point DeepSeek at Claude Code, Codex or the DeepSeek harness until November 1.",
+        "<strong>Claude's Official Security Plugin Runs an Adversarial Swarm:</strong> Agents sweep the whole repo, every finding is handed to three more agents whose only job is to knock it down, and a report is only made when two of them agree — even though it may find nothing and still burns usage.",
+        "<strong>RSI-top Gives Stalled Research Agents a Way Out:</strong> The framework, aimed at autonomous research agents that plateau, beats OpenEvolve and ShinkaEvolve by up to 15% on Anthropic's kernel-optimization task and reaches a 77.3% medal rate on MLE-bench Lite, 11.4 points above the strongest baseline.",
+    ],
+    "sections": [
+        {
+            "emoji": "🚀",
+            "title": "Anthropic & Claude Code at Scale",
+            "items": [
+                {
+                    "tag": "anthropic-code-review-seven-layers",
+                    "title": "@vikingmute: Anthropic's Code Review Post — Seven Check Layers and Risk-Based Approvals",
+                    "body": "Summarizing a new Anthropic engineering writeup, vikingmute says the core conclusion is that once there is too much code for people to read, humans stop reviewing code line by line and instead optimise for spending the least time while keeping rollbacks and incidents flat. Every change passes seven checks: agents must prove a PR is done with tests and screenshots, a diff review runs against the whole repo and the PR's intent with multiple agents hunting bugs and another group voting, style-only comments get dropped, and approval headcount scales with risk — low risk auto-merges, normal features need one human, and the riskiest paths need two. A merge queue, feature flags and staged rollout — starting with internal employees — round it out.",
+                    "url": "https://x.com/vikingmute/status/2111302797794885999"
+                },
+                {
+                    "tag": "claude-code-review-cheese-slices",
+                    "title": "@dotey: The Claude Code Team's Review Video — ~90% of Code Written by Claude",
+                    "body": "dotey walks through the Claude Code team's public account of how they review code: roughly 90% of it is written by Claude, and between June and September merged changes more than doubled while the proportion needing rollback fell by more than 40%. The video uses a stack of holey cheese slices to explain the model — every individual check leaks, so stacking them makes leaks unlikely, with a net underneath as the backstop. It answers five questions, including which changes humans still look at, whether AI reviewing AI ever ends, and who is accountable when something goes wrong. People no longer read every line; their time goes to the judgements machines can't make.",
+                    "url": "https://x.com/dotey/status/2111384189656252712"
+                },
+                {
+                    "tag": "anthropic-internal-agent-hours-junior-hiring",
+                    "title": "@dotey: Anthropic's Internal Data — Agent Hours at 6x Staff, Junior Technical Hires Down to 9%",
+                    "body": "Anthropic published two reports on October 16: one on how AI has changed its own hiring and working patterns, one comparing its employees' expectations about AI's future with the general US public's. On hiring, the share of junior roles among new technical hires dropped from 27% to 9%, with a marked slowdown in junior postings after December 2025; technical staff fell from 61% to 56% of the company even as absolute technical headcount kept growing, and interview write-ups mention candidates' use of AI tools several times more often than in 2024 — about 3x for technical roles and 4x for non-technical. On work, cumulative AI-agent work hours overtook employees in March 2026 and reached 6x by August, counting staff at 40 hours per week and only actual agent time.",
+                    "url": "https://x.com/dotey/status/2111223306061836484"
+                }
+            ]
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Agent Tooling & Workflows",
+            "items": [
+                {
+                    "tag": "claude-security-plugin-swarm",
+                    "title": "@Voxyz_ai: Run Claude's Official Security Plugin — Findings Only Ship on a Two-of-Three Vote",
+                    "body": "The pitch is blunt: if you write code, run Claude's official security plugin. It sends a team of agents through your whole repository, and every finding is handed to three more agents whose only job is to knock it down — a report is only made if two of them agree. On a large repo it can take tens of minutes to a few hours, it may find nothing, and it burns usage either way, but the author argues that still beats saying \"if only we'd run it\" after something goes wrong. Setup is three lines: switch to Opus 5.5 with /model, then /plugin install claude-security@claude-plugins-official, /reload-plugins, and run /claude-security scan on the whole repo at high effort.",
+                    "url": "https://x.com/Voxyz_ai/status/2111200518379020292"
+                },
+                {
+                    "tag": "opus-plan-script-haiku-swarm",
+                    "title": "@mirku21: Opus 5.5 Writes the Plan as a Script, Haiku 5.5 Swarms the Files",
+                    "body": "A shared Anthropic pattern for running huge sweeps with almost no Opus burn: launch Claude Code with `claude --model opus --effort ultracode`, then let the split do the work. Opus 5.5 turns the objective into an executable workflow script rather than doing the work itself; Haiku 5.5 swarms every file in parallel at a claimed 340 tok/s to extract candidates; Sonnet 5.5 patches each fix and cross-checks findings in its own isolated copy. The script holds the loop and Opus only sees the final diff, so it is no longer paying context for a hundred agent transcripts.",
+                    "url": "https://x.com/mirku21/status/2111200540772221418"
+                },
+                {
+                    "tag": "openai-codex-maintenance-dead-code",
+                    "title": "@rrroim: At OpenAI, Codex Now Finds Dead Code, Checks Telemetry and Drafts the Cleanup PR",
+                    "body": "Anthropic's cofounder of the term aside, this is OpenAI's take on how software maintenance itself is changing. A few months ago, rrroim says, he had to tell Codex exactly where to look for dead code. Now it can find candidates in Slack, check them against production telemetry, and draft cleanup PRs. He links the full writeup on how they do this at OpenAI.",
+                    "url": "https://x.com/rrroim/status/2111171952849334585"
+                }
+            ]
+        },
+        {
+            "emoji": "💸",
+            "title": "Free Tiers, Pricing & Platform Moves",
+            "items": [
+                {
+                    "tag": "x-subscription-grok-cursor-premium",
+                    "title": "@SpaceXSI: The X Subscription Unifies Grok, Cursor and X Premium — ~17K Likes",
+                    "body": "The highest-engagement platform post in the pull: plans across Grok, Cursor and X Premium have been unified into a single \"The X Subscription.\" At roughly 17.1K likes, 1.9K reposts and almost 1.5K replies it was the loudest thing on the timeline, and the replies are where most of the argument is happening.",
+                    "url": "https://x.com/SpaceXSI/status/2109783335296008414"
+                },
+                {
+                    "tag": "deepseek-search-engine-apis",
+                    "title": "@cheatyyyy: DeepSeek Built Its Own Search Engine to Beat SEO Spam, Now Sells Search and Fetch APIs",
+                    "body": "DeepSeek has built its own search engine with heavy filtering to avoid modern SEO/GEO spam, and it powers the company's new search and fetch APIs. Each API costs $0.75 per 1,000 successful requests, and is free if you use DeepSeek from within Claude Code, Codex or the DeepSeek harness until November 1.",
+                    "url": "https://x.com/cheatyyyy/status/2111372051110125614"
+                },
+                {
+                    "tag": "deepseek-v41-flash-free-api",
+                    "title": "@exploraX_: DeepSeek V4.1 Flash, Completely Free, Plugs Into Any Coding Harness",
+                    "body": "For anyone without a Claude or Codex subscription: sign in to experimental labs .ai with GitHub or Google, generate a free API key, and plug that key into any coding harness of your choice — the post names OpenCode and Cline. The route drew nearly 1K likes as a no-cost way to keep an agent loop running.",
+                    "url": "https://x.com/exploraX_/status/2111139371613123028"
+                }
+            ]
+        },
+        {
+            "emoji": "🔬",
+            "title": "Research: RSI, Models & Oversight",
+            "items": [
+                {
+                    "tag": "rsi-top-stalled-agent-exploration",
+                    "title": "@Mao_Yuzhen: RSI-top Helps Autonomous Research Agents Explore When Progress Stalls",
+                    "body": "RSI-top is a framework for getting autonomous research agents to try new directions when they plateau, attacking the problem from two angles: context management and diversity control. A compact metric dashboard lets agents selectively retrieve useful past experience rather than dragging the whole history along. On Anthropic's kernel-optimization task it outperforms OpenEvolve and ShinkaEvolve by up to 15%, and on MLE-bench Lite it reaches a 77.3% medal rate — 11.4 percentage points above the strongest baseline.",
+                    "url": "https://x.com/Mao_Yuzhen/status/2111165399131652564"
+                },
+                {
+                    "tag": "copy-paste-language-models",
+                    "title": "@nthngdy: Copy-Paste Language Models — Teaching Models to Copy Tokens Better",
+                    "body": "CPLMs — Copy-Paste Language Models — learn to copy tokens better, which the authors report improves downstream accuracy, chain-of-thought, long-context performance and memory-efficiency for RAG, all at under 3% overhead. As a side effect they partially mitigate the LM head bottleneck. Paper linked in the post.",
+                    "url": "https://x.com/nthngdy/status/2111084997993976011"
+                },
+                {
+                    "tag": "hitl-fatigue-critique",
+                    "title": "@math_rachel: Human-in-the-Loop Is Widely Recommended — and Widely Broken",
+                    "body": "A pointed critique of the default safety story: human-in-the-loop is widely recommended for oversight and safety, yet current AI agent design requires humans to keep up with unreasonable volume and complexity, which promotes fatigue and disengagement — and degrades the very human skills the loop is supposed to rely on. Thread, 1/.",
+                    "url": "https://x.com/math_rachel/status/2111238648188584306"
+                }
+            ]
+        },
+        {
+            "emoji": "💬",
+            "title": "Debate: Chat UI, Brain Rot & the Singularity",
+            "items": [
+                {
+                    "tag": "is-chat-final-agent-ui",
+                    "title": "@poteto: Is Chat the Final Form of the Agent UI?",
+                    "body": "A short question that produced the most replies of anything AI-related in the pull — 972 reply threads against 546 likes. \"is chat the final form of agent ui? please share why.\" The thread is a decent snapshot of how people building agents currently think about interface, rather than model capability, as the frontier.",
+                    "url": "https://x.com/poteto/status/2111321176769442251"
+                },
+                {
+                    "tag": "avoid-brain-rot-notes",
+                    "title": "@Thom_Wolf: Notes From \"How to Avoid Brain Rot\"",
+                    "body": "Thom Wolf's takeaways from a talk he rates highly: using AI to ask yourself Socratic questions instead of handing you the answer feels like learning less but research says you actually learn more, and because AI tooling moves so fast it is better to know 50% of a new tool than to master 90% of an older one. Good weekend reading for anyone worried about outsourcing their own thinking.",
+                    "url": "https://x.com/Thom_Wolf/status/2111397076764438554"
+                },
+                {
+                    "tag": "jack-clark-imf-singularity-lecture",
+                    "title": "@AndrewCurran_: Jack Clark at the IMF — \"Inside the Event Horizon\"",
+                    "body": "Andrew Curran flags Jack Clark's IMF lecture, \"Inside the Event Horizon: Why Everyone Should Take AI Progress Seriously,\" and adds that Clark believes the singularity has begun — and so does he. A more institutional framing of the same acceleration the timeline has been arguing about all week.",
+                    "url": "https://x.com/AndrewCurran_/status/2111364376569708838"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")

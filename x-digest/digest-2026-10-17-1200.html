@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Saturday, October 17th, 2026 — 12:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Saturday, October 17th, 2026 — 12:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>Anthropic Puts Its Own Numbers on Agents and Hiring:</strong> In two reports published October 16, Anthropic says cumulative AI-agent work hours had reached 6x employees by August, while the share of junior roles among its technical hires fell from 27% to 9% and interviews increasingly probe candidates' AI-tool fluency.</li>
+      <li><strong>The Claude Code Team Now Ships Mostly Claude-Written Code:</strong> A widely shared breakdown of Anthropic's review practice says roughly 90% of code is written by Claude, merges from June to September more than doubled, and the share needing rollback dropped more than 40% — with every change passing seven layers of checks.</li>
+      <li><strong>DeepSeek Built Its Own Search Engine to Dodge SEO Spam:</strong> It powers new search and fetch APIs at $0.75 per 1,000 successful requests, and the APIs are free when you point DeepSeek at Claude Code, Codex or the DeepSeek harness until November 1.</li>
+      <li><strong>Claude's Official Security Plugin Runs an Adversarial Swarm:</strong> Agents sweep the whole repo, every finding is handed to three more agents whose only job is to knock it down, and a report is only made when two of them agree — even though it may find nothing and still burns usage.</li>
+      <li><strong>RSI-top Gives Stalled Research Agents a Way Out:</strong> The framework, aimed at autonomous research agents that plateau, beats OpenEvolve and ShinkaEvolve by up to 15% on Anthropic's kernel-optimization task and reaches a 77.3% medal rate on MLE-bench Lite, 11.4 points above the strongest baseline.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>Anthropic &amp; Claude Code at Scale</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag anthropic-code-review-seven-layers">Anthropic-Code-Review-Seven-Layers</span> @vikingmute: Anthropic&#x27;s Code Review Post — Seven Check Layers and Risk-Based Approvals</div>
+    <div class="item-body">Summarizing a new Anthropic engineering writeup, vikingmute says the core conclusion is that once there is too much code for people to read, humans stop reviewing code line by line and instead optimise for spending the least time while keeping rollbacks and incidents flat. Every change passes seven checks: agents must prove a PR is done with tests and screenshots, a diff review runs against the whole repo and the PR&#x27;s intent with multiple agents hunting bugs and another group voting, style-only comments get dropped, and approval headcount scales with risk — low risk auto-merges, normal features need one human, and the riskiest paths need two. A merge queue, feature flags and staged rollout — starting with internal employees — round it out.</div>
+    <div class="item-meta">
+      <a href="https://x.com/vikingmute/status/2111302797794885999" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-code-review-cheese-slices">Claude-Code-Review-Cheese-Slices</span> @dotey: The Claude Code Team&#x27;s Review Video — ~90% of Code Written by Claude</div>
+    <div class="item-body">dotey walks through the Claude Code team&#x27;s public account of how they review code: roughly 90% of it is written by Claude, and between June and September merged changes more than doubled while the proportion needing rollback fell by more than 40%. The video uses a stack of holey cheese slices to explain the model — every individual check leaks, so stacking them makes leaks unlikely, with a net underneath as the backstop. It answers five questions, including which changes humans still look at, whether AI reviewing AI ever ends, and who is accountable when something goes wrong. People no longer read every line; their time goes to the judgements machines can&#x27;t make.</div>
+    <div class="item-meta">
+      <a href="https://x.com/dotey/status/2111384189656252712" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag anthropic-internal-agent-hours-junior-hiring">Anthropic-Internal-Agent-Hours-Junior-Hiring</span> @dotey: Anthropic&#x27;s Internal Data — Agent Hours at 6x Staff, Junior Technical Hires Down to 9%</div>
+    <div class="item-body">Anthropic published two reports on October 16: one on how AI has changed its own hiring and working patterns, one comparing its employees&#x27; expectations about AI&#x27;s future with the general US public&#x27;s. On hiring, the share of junior roles among new technical hires dropped from 27% to 9%, with a marked slowdown in junior postings after December 2025; technical staff fell from 61% to 56% of the company even as absolute technical headcount kept growing, and interview write-ups mention candidates&#x27; use of AI tools several times more often than in 2024 — about 3x for technical roles and 4x for non-technical. On work, cumulative AI-agent work hours overtook employees in March 2026 and reached 6x by August, counting staff at 40 hours per week and only actual agent time.</div>
+    <div class="item-meta">
+      <a href="https://x.com/dotey/status/2111223306061836484" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛠️</span>
+      <h2>Agent Tooling &amp; Workflows</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-security-plugin-swarm">Claude-Security-Plugin-Swarm</span> @Voxyz_ai: Run Claude&#x27;s Official Security Plugin — Findings Only Ship on a Two-of-Three Vote</div>
+    <div class="item-body">The pitch is blunt: if you write code, run Claude&#x27;s official security plugin. It sends a team of agents through your whole repository, and every finding is handed to three more agents whose only job is to knock it down — a report is only made if two of them agree. On a large repo it can take tens of minutes to a few hours, it may find nothing, and it burns usage either way, but the author argues that still beats saying &quot;if only we&#x27;d run it&quot; after something goes wrong. Setup is three lines: switch to Opus 5.5 with /model, then /plugin install claude-security@claude-plugins-official, /reload-plugins, and run /claude-security scan on the whole repo at high effort.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Voxyz_ai/status/2111200518379020292" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag opus-plan-script-haiku-swarm">Opus-Plan-Script-Haiku-Swarm</span> @mirku21: Opus 5.5 Writes the Plan as a Script, Haiku 5.5 Swarms the Files</div>
+    <div class="item-body">A shared Anthropic pattern for running huge sweeps with almost no Opus burn: launch Claude Code with `claude --model opus --effort ultracode`, then let the split do the work. Opus 5.5 turns the objective into an executable workflow script rather than doing the work itself; Haiku 5.5 swarms every file in parallel at a claimed 340 tok/s to extract candidates; Sonnet 5.5 patches each fix and cross-checks findings in its own isolated copy. The script holds the loop and Opus only sees the final diff, so it is no longer paying context for a hundred agent transcripts.</div>
+    <div class="item-meta">
+      <a href="https://x.com/mirku21/status/2111200540772221418" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag openai-codex-maintenance-dead-code">Openai-Codex-Maintenance-Dead-Code</span> @rrroim: At OpenAI, Codex Now Finds Dead Code, Checks Telemetry and Drafts the Cleanup PR</div>
+    <div class="item-body">Anthropic&#x27;s cofounder of the term aside, this is OpenAI&#x27;s take on how software maintenance itself is changing. A few months ago, rrroim says, he had to tell Codex exactly where to look for dead code. Now it can find candidates in Slack, check them against production telemetry, and draft cleanup PRs. He links the full writeup on how they do this at OpenAI.</div>
+    <div class="item-meta">
+      <a href="https://x.com/rrroim/status/2111171952849334585" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💸</span>
+      <h2>Free Tiers, Pricing &amp; Platform Moves</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag x-subscription-grok-cursor-premium">X-Subscription-Grok-Cursor-Premium</span> @SpaceXSI: The X Subscription Unifies Grok, Cursor and X Premium — ~17K Likes</div>
+    <div class="item-body">The highest-engagement platform post in the pull: plans across Grok, Cursor and X Premium have been unified into a single &quot;The X Subscription.&quot; At roughly 17.1K likes, 1.9K reposts and almost 1.5K replies it was the loudest thing on the timeline, and the replies are where most of the argument is happening.</div>
+    <div class="item-meta">
+      <a href="https://x.com/SpaceXSI/status/2109783335296008414" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag deepseek-search-engine-apis">Deepseek-Search-Engine-Apis</span> @cheatyyyy: DeepSeek Built Its Own Search Engine to Beat SEO Spam, Now Sells Search and Fetch APIs</div>
+    <div class="item-body">DeepSeek has built its own search engine with heavy filtering to avoid modern SEO/GEO spam, and it powers the company&#x27;s new search and fetch APIs. Each API costs $0.75 per 1,000 successful requests, and is free if you use DeepSeek from within Claude Code, Codex or the DeepSeek harness until November 1.</div>
+    <div class="item-meta">
+      <a href="https://x.com/cheatyyyy/status/2111372051110125614" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag deepseek-v41-flash-free-api">Deepseek-V41-Flash-Free-Api</span> @exploraX_: DeepSeek V4.1 Flash, Completely Free, Plugs Into Any Coding Harness</div>
+    <div class="item-body">For anyone without a Claude or Codex subscription: sign in to experimental labs .ai with GitHub or Google, generate a free API key, and plug that key into any coding harness of your choice — the post names OpenCode and Cline. The route drew nearly 1K likes as a no-cost way to keep an agent loop running.</div>
+    <div class="item-meta">
+      <a href="https://x.com/exploraX_/status/2111139371613123028" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔬</span>
+      <h2>Research: RSI, Models &amp; Oversight</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag rsi-top-stalled-agent-exploration">Rsi-Top-Stalled-Agent-Exploration</span> @Mao_Yuzhen: RSI-top Helps Autonomous Research Agents Explore When Progress Stalls</div>
+    <div class="item-body">RSI-top is a framework for getting autonomous research agents to try new directions when they plateau, attacking the problem from two angles: context management and diversity control. A compact metric dashboard lets agents selectively retrieve useful past experience rather than dragging the whole history along. On Anthropic&#x27;s kernel-optimization task it outperforms OpenEvolve and ShinkaEvolve by up to 15%, and on MLE-bench Lite it reaches a 77.3% medal rate — 11.4 percentage points above the strongest baseline.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Mao_Yuzhen/status/2111165399131652564" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag copy-paste-language-models">Copy-Paste-Language-Models</span> @nthngdy: Copy-Paste Language Models — Teaching Models to Copy Tokens Better</div>
+    <div class="item-body">CPLMs — Copy-Paste Language Models — learn to copy tokens better, which the authors report improves downstream accuracy, chain-of-thought, long-context performance and memory-efficiency for RAG, all at under 3% overhead. As a side effect they partially mitigate the LM head bottleneck. Paper linked in the post.</div>
+    <div class="item-meta">
+      <a href="https://x.com/nthngdy/status/2111084997993976011" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hitl-fatigue-critique">Hitl-Fatigue-Critique</span> @math_rachel: Human-in-the-Loop Is Widely Recommended — and Widely Broken</div>
+    <div class="item-body">A pointed critique of the default safety story: human-in-the-loop is widely recommended for oversight and safety, yet current AI agent design requires humans to keep up with unreasonable volume and complexity, which promotes fatigue and disengagement — and degrades the very human skills the loop is supposed to rely on. Thread, 1/.</div>
+    <div class="item-meta">
+      <a href="https://x.com/math_rachel/status/2111238648188584306" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💬</span>
+      <h2>Debate: Chat UI, Brain Rot &amp; the Singularity</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag is-chat-final-agent-ui">Is-Chat-Final-Agent-Ui</span> @poteto: Is Chat the Final Form of the Agent UI?</div>
+    <div class="item-body">A short question that produced the most replies of anything AI-related in the pull — 972 reply threads against 546 likes. &quot;is chat the final form of agent ui? please share why.&quot; The thread is a decent snapshot of how people building agents currently think about interface, rather than model capability, as the frontier.</div>
+    <div class="item-meta">
+      <a href="https://x.com/poteto/status/2111321176769442251" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag avoid-brain-rot-notes">Avoid-Brain-Rot-Notes</span> @Thom_Wolf: Notes From &quot;How to Avoid Brain Rot&quot;</div>
+    <div class="item-body">Thom Wolf&#x27;s takeaways from a talk he rates highly: using AI to ask yourself Socratic questions instead of handing you the answer feels like learning less but research says you actually learn more, and because AI tooling moves so fast it is better to know 50% of a new tool than to master 90% of an older one. Good weekend reading for anyone worried about outsourcing their own thinking.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Thom_Wolf/status/2111397076764438554" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jack-clark-imf-singularity-lecture">Jack-Clark-Imf-Singularity-Lecture</span> @AndrewCurran_: Jack Clark at the IMF — &quot;Inside the Event Horizon&quot;</div>
+    <div class="item-body">Andrew Curran flags Jack Clark&#x27;s IMF lecture, &quot;Inside the Event Horizon: Why Everyone Should Take AI Progress Seriously,&quot; and adds that Clark believes the singularity has begun — and so does he. A more institutional framing of the same acceleration the timeline has been arguing about all week.</div>
+    <div class="item-meta">
+      <a href="https://x.com/AndrewCurran_/status/2111364376569708838" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
