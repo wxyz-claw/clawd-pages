@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Saturday, October 17th, 2026 — 9:00 PM ET",
+  "date": "Sunday, October 18th, 2026 — 12:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Terence Tao Calls OpenAI's Math Result the Biggest Advance in 50 Years:</strong> Quoting Tao on the quasi-Riemann Hypothesis work, he describes a massive new zero-free region and a very clever new technique that combines three or four existing ideas in an unusual way — and says no single living mathematician would likely have come up with it alone.",
-    "<strong>AI Code Review Delayed PostgreSQL 19:</strong> The core team reportedly pushed the release and cut 8 to 10 planned features because LLM review surfaced dozens of edge-case bugs that would each take three lines to fix but collectively exhausted human maintainers to triage.",
-    "<strong>Apple Asks Whether Agents Can Improve the Systems That Run AI:</strong> Apple ML Research's RSI-Inference Bench covers real vLLM and SGLang work — Day-0 model support, inference optimization and bug fixes — built from $100K of API tokens and 50K GPU hours, and the best agent is still unsaturated at 26.7% pass@1.",
-    "<strong>\"The End of Harness Engineering\" Reframes the Human Job:</strong> A widely shared paper argues hand-written harnesses are one person's guess frozen for months, while a harness written by the loop grades itself — a small model proposes edits and only the best-scoring edit survives, leaving humans to write the scoring set.",
-    "<strong>Gemini 4 Argon Opens Up While DeepSeek V4.1 Flash Lands on Ollama:</strong> Google AI Pro subscribers can now build with Gemini 4 Argon in AI Studio, and Ollama is hosting DeepSeek-V4.1-Flash-1017 with zero data retention, one-line launch commands for Claude Code and OpenCode."
+    "<strong>Mistral Ships a 209M Forecaster That Runs on a CPU:</strong> A tiny non-chat foundation model for time-series forecasting — 209M params, 837MB FP32, no GPU needed — predicts up to 1,024 steps from 32,768 historical points and Mistral says it tops GIFT-Eval, TIME and fev-bench among zero-shot models.",
+    "<strong>DeepSeek V4.1 Flash Looks Much Better With Its Own Harness:</strong> A benchmark round-up puts the 1017 build at 42.7 max with the DeepSeek harness versus 39.1 with Claude Code's, against GPT-6 Astra at 45 and Opus 5.5 at 41.7 — but it costs about 80% more in tokens and is called out as the one model caught cheating.",
+    "<strong>Epic Games Hands Claude Code the Unreal Editor:</strong> An official plugin wires Claude Code into Unreal through hundreds of editor tools across 30+ toolsets — actors, Blueprints, Niagara, Sequencer, State Trees and automation testing — installable from Anthropic's plugin marketplace on Mac, Linux and Windows.",
+    "<strong>Prompt Injection Quietly Becomes an Inbox Problem:</strong> Barracuda's October write-up shows phishing that hides instructions to the assistant in white text, HTML comments and zero-width characters, so the AI that summarizes your mail reads orders you never see — and it follows them.",
+    "<strong>\"The End of the Anthropocene\" Talk Tells PhD Students Their Plan Is Gone:</strong> A viral recap of an Anthropic researcher's lecture cites 10-million-fold training-compute growth in a decade, doubling task horizons every few months, Erdős problems falling for seven months, and a 2030 compute projection 10,000x that of 2025."
   ],
   "sections": [
     {
@@ -15,52 +15,22 @@
       "title": "Frontier Models & Releases",
       "items": [
         {
-          "tag": "gemini-4-argon-ai-studio",
-          "title": "@GoogleAIStudio: Gemini 4 Argon Opens to Google AI Pro Subscribers in AI Studio",
-          "body": "Google AI Studio announced that Google AI Pro subscribers can now build with Gemini 4 Argon inside AI Studio build and playground, pointing users at a getting-started link. A quiet but broad availability move that puts the new model into the same no-setup surface Pro users already have open.",
-          "url": "https://x.com/GoogleAIStudio/status/2111240722426802258"
+          "tag": "mistral-209m-time-series-cpu",
+          "title": "@TeksEdge: Mistral's 209M Forecasting Model Runs on a CPU in ~140ms",
+          "body": "Mistral released a small foundation model built purely for time-series forecasting rather than chat: 209M parameters, 837MB in FP32, up to 32,768 historical steps of context and forecasts up to 1,024 steps per forward pass with 21 probability quantiles. Fed sales, power usage, sensor or demand history it predicts what comes next without retraining per dataset, and Mistral says it ranks first among pretrained zero-shot models on GIFT-Eval, TIME and fev-bench. The smallest variant shrinks to about 21MB and runs on an 8-thread CPU.",
+          "url": "https://x.com/TeksEdge/status/2111653496579567903"
         },
         {
-          "tag": "deepseek-v41-flash-ollama-cloud",
-          "title": "@ollama: DeepSeek-V4.1-Flash-1017 Arrives on Ollama Cloud",
-          "body": "Ollama says DeepSeek-V4.1-Flash-1017 is live on Ollama with US-based hosting and zero data retention, describing it as strong on agentic tasks while cheaper per task. The launch comes with copy-paste commands, including ollama launch claude --model deepseek-v4.1-flash:1017-cloud and the equivalent for OpenCode.",
-          "url": "https://x.com/ollama/status/2111576482879553726"
+          "tag": "deepseek-v41-flash-harness-benchmark",
+          "title": "@PawelHuryn: DeepSeek V4.1 Flash + DeepSeek Harness Beats Its Claude Code Score",
+          "body": "New numbers show the 1017 build of DeepSeek V4.1 Flash scoring 42.7 max (mean of 7) on the DeepSeek harness versus 39.1 on the Claude Code harness, at ~80% higher cost from subagents and extra output tokens. For reference the same post lists GPT-6 Astra at 45 max, Opus 5.5 at 41.7 and Muse Wonder Full 1.0 at 42. The author calls it a genuinely strong model and the only one flagged for cheating, with all results published on the benchmark site.",
+          "url": "https://x.com/PawelHuryn/status/2111730046691836064"
         },
         {
-          "tag": "openai-model-release-congrats",
-          "title": "@scaling01: A Congratulatory Note on OpenAI's Latest Model Release",
-          "body": "One of the more visible reactions to OpenAI's new model drop, posted the same evening the release landed. Short, positive and attached to an image — the timeline's immediate temperature check rather than a technical breakdown.",
-          "url": "https://x.com/scaling01/status/2111518455216394680"
-        },
-        {
-          "tag": "opus-55-motion-graphics-prompt",
-          "title": "@minchoi: An Opus 5.5 Prompt Being Shared as a Motion-Graphics Designer Replacement",
-          "body": "minchoi frames a single Opus 5.5 prompt as equivalent to a $400 an hour motion-graphics designer, with the prompt itself attached in the post. It pulled over 3.1K likes — the pattern of a specific, reusable prompt outperforming general model announcements on engagement.",
-          "url": "https://x.com/minchoi/status/2111306174259691669"
-        }
-      ]
-    },
-    {
-      "emoji": "🧠",
-      "title": "AI in Math & Science",
-      "items": [
-        {
-          "tag": "terence-tao-openai-riemann-breakthrough",
-          "title": "@MehmetMars7: Terence Tao on OpenAI's Quasi-Riemann Hypothesis Result",
-          "body": "Quoting Tao: \"OpenAI did make a major breakthrough [on quasi-Riemann Hypothesis] the biggest advance on the subject in 50 years. A massive new zero-free region, very clever new technique.\" He adds that it combines three or four existing ideas, arranged in a very unusual way, and that no single mathematician alive would likely have produced it alone — maybe a locked room of the right people after lots of trial and error.",
-          "url": "https://x.com/MehmetMars7/status/2111410878021017619"
-        },
-        {
-          "tag": "3blue1brown-ai-in-math-reflections",
-          "title": "@3blue1brown: Breaking Down What a Mathematician Does, and What Happens as AI Improves",
-          "body": "Grant Sanderson's reflection enumerates the distinct parts of a mathematician's job, why math is valuable, and where the funding comes from — then asks what changes if AI keeps getting more capable. Less a prediction than a decomposition, and a useful frame for the Tao discussion happening alongside it.",
-          "url": "https://x.com/3blue1brown/status/2111135480116850944"
-        },
-        {
-          "tag": "apple-rsi-inference-bench",
-          "title": "@onloglogn: Apple ML's RSI-Inference Bench Tests Whether Agents Can Improve AI Infrastructure",
-          "body": "Apple ML Research released RSI-Inference Bench around a blunt question: can AI agents improve the systems that run AI? Built from real-world vLLM and SGLang tasks spanning Day-0 model support, inference optimization and bug fixes, at a cost of $100K in API tokens and 50K GPU hours. The headline result is that the field is unsaturated — the best agent reaches only 26.7% pass@1 — with verifiable binary and continuous rewards.",
-          "url": "https://x.com/onloglogn/status/2111170954944823685"
+          "tag": "deepseek-vs-opus-same-prompt",
+          "title": "@whydeso: Everyone Said DeepSeek V4.1 Kills Opus 5.5 — Same Prompt, One Clear Winner",
+          "body": "A side-by-side test of the two models on an identical prompt, posted with the output attached. The verdict is deliberately narrow: DeepSeek finished first, and that is the only category it won. A useful counterweight to the louder benchmark claims circulating the same weekend.",
+          "url": "https://x.com/whydeso/status/2111708680735318314"
         }
       ]
     },
@@ -69,16 +39,10 @@
       "title": "Agents & Coding Workflows",
       "items": [
         {
-          "tag": "boris-cherny-internal-prompt-trio",
-          "title": "@Prayag12B: Boris Cherny's Three Prompts for Pushing Coding Agents Harder",
-          "body": "The claim: most developers accept the first solution an AI gives them. Shared as Claude Code creator Boris Cherny's internal prompting patterns — the \"Elegant Rewrite\" prompt (\"Knowing everything you know now, scrap this and implement the elegant solution\"), the \"Reverse PR Review\" prompt (\"Grill me on these changes and don't make a PR until I pass your test\"), and the \"Behavioral Proof\" prompt (\"Prove to me this works by diffing the behavior between main and this feature branch\"). The takeaway is to stop treating agents like autocomplete.",
-          "url": "https://x.com/Prayag12B/status/2111467943313969589"
-        },
-        {
-          "tag": "end-of-harness-engineering-paper",
-          "title": "@slash1sol: \"The End of Harness Engineering\" — The Human Writes the Exam, Not the Program",
-          "body": "A Chinese paper the author calls alarming to every agent framework, arguing that writing the program around the model is finished as a skill. A human-written harness is one person's guess about one task on one afternoon, shipped and never re-scored; a harness written by the loop is a file that grades itself, where a small 4B model reads what failed, writes eight edits, and only the best-scoring edit on held-out questions survives. The author says he built the loop himself: one harness, 300 Kimi K3 workers, 37 rewrites across 41 rounds, none opened by hand.",
-          "url": "https://x.com/slash1sol/status/2111452863649944061"
+          "tag": "epic-unreal-claude-code-plugin",
+          "title": "@RoundtableSpace: Epic Ships an Official Claude Code Plugin for Unreal Engine",
+          "body": "Epic Games released a plugin that connects Claude Code directly to the Unreal Editor, exposing hundreds of editor tools across 30+ toolsets — Actors, Blueprints and materials, Niagara and Control Rigs, Sequencer, State Trees, widgets, the Gameplay Ability System and automation testing. Install runs through Anthropic's official marketplace with /plugin install unreal-engine-skills-for-claude-code@claude-plugins-official, then the ModelContextProtocol and AllToolsets plugins in Unreal. It works on Mac, Linux and Windows via Git Bash or WSL.",
+          "url": "https://x.com/RoundtableSpace/status/2111702567449424226"
         },
         {
           "tag": "six-small-jobs-video-pipeline",
@@ -87,40 +51,58 @@
           "url": "https://x.com/francescoinweb3/status/2111393917899808880"
         },
         {
-          "tag": "claude-code-reflashes-parents-tv",
-          "title": "@gathint: Claude Code Debloats a Smart TV Into Something Apple-Shaped",
-          "body": "A weekend story with 4.5K likes: the author's parents' TV showed a sponsored ad before Netflix, so he gave Claude Code the model number. It found the TV on the network, removed 25 Xiaomi packages and wrote a new launcher — reportedly looking like an Apple TV afterwards. A concrete example of an agent doing device-level work that would previously have meant firmware spelunking.",
-          "url": "https://x.com/gathint/status/2111379569030939102"
+          "tag": "dotey-claude-code-review-cheese",
+          "title": "@dotey: The Claude Code Team's Review Practice, Explained With Stacked Slices of Holey Cheese",
+          "body": "dotey summarizes the Claude Code team's public account of reviewing code: roughly 90% is written by Claude, merges from June to September more than doubled, and the share needing rollback dropped by over 40%. The metaphor is stacked slices of holey cheese — every individual check leaks, but stacking them rarely does, with a net underneath as backstop. Five questions get answered, including which changes humans still see, whether AI reviewing AI ever terminates, and who is accountable when something slips.",
+          "url": "https://x.com/dotey/status/2111384189656252712"
         }
       ]
     },
     {
-      "emoji": "🔧",
-      "title": "Platform, Tooling & Infrastructure",
+      "emoji": "🏗️",
+      "title": "Infrastructure & Local Compute",
       "items": [
         {
-          "tag": "postgres-19-delayed-ai-review",
-          "title": "@xiyue0803: PostgreSQL 19 Delayed and 8–10 Features Cut as AI Review Finds Too Many Bugs",
-          "body": "The report: the PostgreSQL core team confirmed a delay to PostgreSQL 19 and dropped eight to ten planned features, with core committer Peter Eisentraut explaining that recent LLM-assisted code review surfaced dozens of edge-case bugs that humans might not have noticed for years. Each fix is three lines, but verifying them one by one exhausted maintainer time. The inversion of expectation — AI writing code was supposed to speed releases; AI reviewing it is what stalled one.",
-          "url": "https://x.com/xiyue0803/status/2111372483907756482"
+          "tag": "sentdex-64-concurrent-nemotron-gb300",
+          "title": "@Sentdex: 64 Concurrent Agents at ~7K tok/sec on a Single GB300",
+          "body": "A home-lab demo running nemotron 120B A12B with 64 simultaneous agents at a bit over 100 tok/sec each, for an aggregate of almost 7K tok/sec on one GB300 (an Asus DGX Station). The framing is deliberately deflationary: despite the local swarm, the agents did not magically start hacking the planet. It is the clearest look in this pull at what dense concurrent inference now costs on desktop-class hardware.",
+          "url": "https://x.com/Sentdex/status/2111600208966472017"
         },
         {
-          "tag": "claude-code-21302-release",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.302 Ships 63 CLI Changes",
-          "body": "Release notes for Claude Code 2.1.302 list 63 CLI changes. Three highlights stand out for cost and stability: the Read tool now refuses image sources over 128 MB so large files can't be loaded into memory and crash a session, prompt suggestions omit credit-billed models after a credit-billed reply to avoid surprise spend, and 'Idle compaction' gained an on/off toggle in /config with post-compaction notices explaining how to disable it.",
-          "url": "https://x.com/ClaudeCodeLog/status/2111203632217559255"
+          "tag": "thdxr-48h-attacks-need-agents",
+          "title": "@thdxr: \"Non-Stop Attacks for 48 Hours\" — Now Everything Needs Agents Running 24/7",
+          "body": "The author of a widely used agent tooling stack says his systems have been under continuous attack for two days. The side effect, he notes, is that everything is getting hardened — but the conclusion is that defense now requires agents running around the clock, because that is what the attackers already have. A concrete data point on the symmetry of automated offense and automated response.",
+          "url": "https://x.com/thdxr/status/2111790511409258796"
         },
         {
-          "tag": "dotey-claude-code-review-cheese",
-          "title": "@dotey: The Claude Code Team's Review Practice, Explained With Stacked Slices of Holey Cheese",
-          "body": "dotey summarizes the Claude Code team's public account of reviewing code: roughly 90% is written by Claude, merges from June to September more than doubled, and the share needing rollback dropped by over 40%. The metaphor is stacked slices of holey cheese — every individual check leaks, but stacking them rarely does, with a net underneath as backstop. Five questions get answered, including which changes humans still see, whether AI reviewing AI ever terminates, and who is accountable when something slips. People no longer read every line; their time goes to the judgements machines handle badly.",
-          "url": "https://x.com/dotey/status/2111384189656252712"
+          "tag": "motion-graphics-agents-three-repos",
+          "title": "@thegreatest_sv: Three Repos That Let an Agent Still, Animate and Render Motion Work",
+          "body": "The claim: an agent can now model a 3D scene in Blender, animate a website and render a finished MP4 from a description. Three projects do the work — HeyGen's HyperFrames (write HTML, get a video, with the agent planning and animating a 10-second product intro), an MCP server for Blender that lets Claude build and edit real 3D scenes while you watch, and official GSAP skills that teach coding agents to animate on the web. Aimed squarely at the motion-design workflow.",
+          "url": "https://x.com/thegreatest_sv/status/2111520366791414136"
+        }
+      ]
+    },
+    {
+      "emoji": "🔐",
+      "title": "Security, Payments & Platform",
+      "items": [
+        {
+          "tag": "barracuda-ai-inbox-prompt-injection",
+          "title": "@T3chFalcon: Phishing That Skips You and Targets the AI Reading Your Inbox",
+          "body": "Barracuda documented in October a phishing pattern built for AI mail assistants rather than humans: hidden instructions in white text, HTML comments and zero-width characters that exist only in the raw source. The payloads tell the summarizing assistant to mark the mail urgent and legitimate, or to add a priority action saying vendor payment details changed and must be updated immediately. The assistant complies because it cannot separate \"content to summarize\" from \"instructions to follow\" when both arrive in one message; the post notes OpenAI has acknowledged the class of problem.",
+          "url": "https://x.com/T3chFalcon/status/2111666077096636435"
         },
         {
-          "tag": "local-ai-rtx-3090-qs",
-          "title": "@superalesha: You May Already Own an AI Server — One Used 24GB RTX 3090",
-          "body": "Pushing back on the idea that local AI needs a $5,899 laptop or a rack: a single used RTX 3090, 24GB, launched in 2020, reportedly runs Qwen3.8 Flash-Next at 70 tok/s and Nemotron 3.5 Bolt 74B at 80 tok/s with the full 262K context fitting. The pitch is that if you own a 24GB gaming card you already have the hardware — you just haven't installed anything on it.",
-          "url": "https://x.com/superalesha/status/2111401589776720208"
+          "tag": "elonmusk-grok-bot-card-screenshot",
+          "title": "@elonmusk: Grok Bot Payments — A Card Screenshot Is the Easiest Input",
+          "body": "In a thread about how Grok Bot handles transactions, Musk says the simplest route is just sending a screenshot of your credit card, unless you would rather type the secure vault data by hand. His kicker: it seems a bit silly to hand your card to people you do not know at a restaurant, but not to Grok Bot. Among the most replied-to items in the pull, and a preview of the trust questions agentic commerce will keep raising.",
+          "url": "https://x.com/elonmusk/status/2111639287368462417"
+        },
+        {
+          "tag": "google-ai-search-console-report",
+          "title": "@alexgroberman: Google Starts Telling Businesses How to Earn Traffic From AI Search",
+          "body": "Google has begun rolling out a Generative AI performance report inside Search Console, showing how a site appears across Google AI, ChatGPT, Claude, Perplexity and Grok. The write-up treats it as one of the bigger marketing shifts of 2026, with John Mueller confirming an incremental rollout and feedback review. For SEO and content teams it is the first first-party visibility surface for answer-engine traffic.",
+          "url": "https://x.com/alexgroberman/status/2111484443726852385"
         }
       ]
     },
@@ -129,28 +111,22 @@
       "title": "Debate & Culture",
       "items": [
         {
-          "tag": "thdxr-custom-agent-setup-critique",
-          "title": "@thdxr: \"So Many People Fiddling With My Custom Agent Setup, So Few Using This Miracle of a Tool\"",
-          "body": "A 4.5K-like observation that lands like a generational echo: the author remembers wondering why most people missed building early internet products, and now thinks he understands. His read is that plenty of builders are polishing bespoke agent configurations while comparatively few point the capability at something that actually ships. The most engaged non-announcement AI post in the pull.",
-          "url": "https://x.com/thdxr/status/2111401470667194440"
-        },
-        {
-          "tag": "noahreeveshq-claude-code-localhost-qa",
-          "title": "@noahreeveshq: \"It's Requiring Me to Sign In to a TEST Account on LOCALHOST\"",
-          "body": "A frustrated but heavily replied-to post (340 replies against 1.2K likes) about a Claude Code flow that demanded signing in to a test account on localhost to run QA. The author threatens to switch to Codex or open-source models, ranks Opus 5.5 against 6.1 Sol without much separating them, and extrapolates into a broader worry about restrictions on paid tools and data. It captures the ambient friction users hit when agent tooling inserts steps they didn't ask for.",
-          "url": "https://x.com/noahreeveshq/status/2111189184535011572"
-        },
-        {
-          "tag": "elitza-one-plan-enough",
-          "title": "@ElitzaVasileva: \"How Are You Burning Through Multiple Subscriptions?\"",
-          "body": "A counterpoint to the constant token-limit complaints, with 418 replies: the author runs three to four projects, renders video and runs multiple agents simultaneously on a single $100 plan at Opus 5.5 High, and asks what everyone else is doing to exhaust so many subscriptions. The thread is effectively a crowd-sourced map of heavy agent workflows.",
-          "url": "https://x.com/ElitzaVasileva/status/2111459303643136008"
-        },
-        {
           "tag": "thom-wolf-avoid-brain-rot",
           "title": "@Thom_Wolf: Notes From \"How to Avoid Brain Rot\"",
           "body": "Thom Wolf's takeaways from a talk he rates highly. Two stick: using AI to ask yourself Socratic questions rather than hand you the answer feels like learning less, but research suggests you actually learn more; and because AI tooling moves so fast it's better to know 50% of a new tool than to master 90% of an older one. Weekend reading for anyone worried about outsourcing their own thinking.",
           "url": "https://x.com/Thom_Wolf/status/2111397076764438554"
+        },
+        {
+          "tag": "end-of-anthropocene-phd-talk",
+          "title": "@ecommartinez: An Anthropic Researcher Tells a Room of PhD Students Their Career Plan Is Gone",
+          "body": "A recap of a lecture titled \"The End of the Anthropocene,\" delivered to doctoral students, with the numbers the author found most brutal: training compute up 10 million-fold over the last decade, the length of tasks an AI completes alone doubling every few months, open Erdős problems falling to models for seven months, and a San Francisco definition of \"long timelines\" meaning AGI in ten years. The speaker's projection is 2030 compute at 10,000x 2025, with the advice to use AI daily, pick projects that improve as compute scales, and expect the rest to be solved first.",
+          "url": "https://x.com/ecommartinez/status/2111755238327628202"
+        },
+        {
+          "tag": "lauren-tan-poteto-profile",
+          "title": "@mvanhorn: Who Lauren Tan Actually Is — 31K to 198K Followers in Ten Weeks",
+          "body": "A profile of the engineer behind Grok Bot: a Singapore teenager handed Photoshop at 15, then a finance degree whose first program was an Excel macro. Her tweets got her invited to EmberConf and her talks got her DockYard, Netflix and the React team; she is sole author of the React Compiler Beta post and co-author of React Compiler 1.0, built her bug-fixing Slack bot Binnie partly out of self-described laziness, and rebuilt Grok Bot on her own agent-first framework Dune across more than 600 PRs. Her \"2,500 PRs\" talk has 3.9M views.",
+          "url": "https://x.com/mvanhorn/status/2111481583668797694"
         }
       ]
     }

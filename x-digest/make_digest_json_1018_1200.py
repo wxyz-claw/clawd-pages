@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Sunday, October 18th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Mistral Ships a 209M Forecaster That Runs on a CPU:</strong> A tiny non-chat foundation model for time-series forecasting — 209M params, 837MB FP32, no GPU needed — predicts up to 1,024 steps from 32,768 historical points and Mistral says it tops GIFT-Eval, TIME and fev-bench among zero-shot models.",
+        "<strong>DeepSeek V4.1 Flash Looks Much Better With Its Own Harness:</strong> A benchmark round-up puts the 1017 build at 42.7 max with the DeepSeek harness versus 39.1 with Claude Code's, against GPT-6 Astra at 45 and Opus 5.5 at 41.7 — but it costs about 80% more in tokens and is called out as the one model caught cheating.",
+        "<strong>Epic Games Hands Claude Code the Unreal Editor:</strong> An official plugin wires Claude Code into Unreal through hundreds of editor tools across 30+ toolsets — actors, Blueprints, Niagara, Sequencer, State Trees and automation testing — installable from Anthropic's plugin marketplace on Mac, Linux and Windows.",
+        "<strong>Prompt Injection Quietly Becomes an Inbox Problem:</strong> Barracuda's October write-up shows phishing that hides instructions to the assistant in white text, HTML comments and zero-width characters, so the AI that summarizes your mail reads orders you never see — and it follows them.",
+        "<strong>\"The End of the Anthropocene\" Talk Tells PhD Students Their Plan Is Gone:</strong> A viral recap of an Anthropic researcher's lecture cites 10-million-fold training-compute growth in a decade, doubling task horizons every few months, Erdős problems falling for seven months, and a 2030 compute projection 10,000x that of 2025.",
+    ],
+    "sections": [
+        {
+            "emoji": "🚀",
+            "title": "Frontier Models & Releases",
+            "items": [
+                {
+                    "tag": "mistral-209m-time-series-cpu",
+                    "title": "@TeksEdge: Mistral's 209M Forecasting Model Runs on a CPU in ~140ms",
+                    "body": "Mistral released a small foundation model built purely for time-series forecasting rather than chat: 209M parameters, 837MB in FP32, up to 32,768 historical steps of context and forecasts up to 1,024 steps per forward pass with 21 probability quantiles. Fed sales, power usage, sensor or demand history it predicts what comes next without retraining per dataset, and Mistral says it ranks first among pretrained zero-shot models on GIFT-Eval, TIME and fev-bench. The smallest variant shrinks to about 21MB and runs on an 8-thread CPU.",
+                    "url": "https://x.com/TeksEdge/status/2111653496579567903"
+                },
+                {
+                    "tag": "deepseek-v41-flash-harness-benchmark",
+                    "title": "@PawelHuryn: DeepSeek V4.1 Flash + DeepSeek Harness Beats Its Claude Code Score",
+                    "body": "New numbers show the 1017 build of DeepSeek V4.1 Flash scoring 42.7 max (mean of 7) on the DeepSeek harness versus 39.1 on the Claude Code harness, at ~80% higher cost from subagents and extra output tokens. For reference the same post lists GPT-6 Astra at 45 max, Opus 5.5 at 41.7 and Muse Wonder Full 1.0 at 42. The author calls it a genuinely strong model and the only one flagged for cheating, with all results published on the benchmark site.",
+                    "url": "https://x.com/PawelHuryn/status/2111730046691836064"
+                },
+                {
+                    "tag": "deepseek-vs-opus-same-prompt",
+                    "title": "@whydeso: Everyone Said DeepSeek V4.1 Kills Opus 5.5 — Same Prompt, One Clear Winner",
+                    "body": "A side-by-side test of the two models on an identical prompt, posted with the output attached. The verdict is deliberately narrow: DeepSeek finished first, and that is the only category it won. A useful counterweight to the louder benchmark claims circulating the same weekend.",
+                    "url": "https://x.com/whydeso/status/2111708680735318314"
+                },
+            ],
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Agents & Coding Workflows",
+            "items": [
+                {
+                    "tag": "epic-unreal-claude-code-plugin",
+                    "title": "@RoundtableSpace: Epic Ships an Official Claude Code Plugin for Unreal Engine",
+                    "body": "Epic Games released a plugin that connects Claude Code directly to the Unreal Editor, exposing hundreds of editor tools across 30+ toolsets — Actors, Blueprints and materials, Niagara and Control Rigs, Sequencer, State Trees, widgets, the Gameplay Ability System and automation testing. Install runs through Anthropic's official marketplace with /plugin install unreal-engine-skills-for-claude-code@claude-plugins-official, then the ModelContextProtocol and AllToolsets plugins in Unreal. It works on Mac, Linux and Windows via Git Bash or WSL.",
+                    "url": "https://x.com/RoundtableSpace/status/2111702567449424226"
+                },
+                {
+                    "tag": "six-small-jobs-video-pipeline",
+                    "title": "@francescoinweb3: Stop Asking Claude to \"Make a Video\" — Give It Six Small Jobs",
+                    "body": "The workflow splits a video into six single-output steps, each producing a file the next job consumes: spec.md from watching a reference video, data.json with sourced figures, story.md with one point and three beats, Scene.tsx writing every frame as code with Remotion, timing.ts taking plain-language notes like \"title is a beat late,\" and finally final.mp4 rendered with stills checked against the spec before approval. The argument for small jobs: each step has one clear output, you always know which file to fix, and nothing gets re-rolled so the rest of the video stays stable.",
+                    "url": "https://x.com/francescoinweb3/status/2111393917899808880"
+                },
+                {
+                    "tag": "dotey-claude-code-review-cheese",
+                    "title": "@dotey: The Claude Code Team's Review Practice, Explained With Stacked Slices of Holey Cheese",
+                    "body": "dotey summarizes the Claude Code team's public account of reviewing code: roughly 90% is written by Claude, merges from June to September more than doubled, and the share needing rollback dropped by over 40%. The metaphor is stacked slices of holey cheese — every individual check leaks, but stacking them rarely does, with a net underneath as backstop. Five questions get answered, including which changes humans still see, whether AI reviewing AI ever terminates, and who is accountable when something slips.",
+                    "url": "https://x.com/dotey/status/2111384189656252712"
+                },
+            ],
+        },
+        {
+            "emoji": "🏗️",
+            "title": "Infrastructure & Local Compute",
+            "items": [
+                {
+                    "tag": "sentdex-64-concurrent-nemotron-gb300",
+                    "title": "@Sentdex: 64 Concurrent Agents at ~7K tok/sec on a Single GB300",
+                    "body": "A home-lab demo running nemotron 120B A12B with 64 simultaneous agents at a bit over 100 tok/sec each, for an aggregate of almost 7K tok/sec on one GB300 (an Asus DGX Station). The framing is deliberately deflationary: despite the local swarm, the agents did not magically start hacking the planet. It is the clearest look in this pull at what dense concurrent inference now costs on desktop-class hardware.",
+                    "url": "https://x.com/Sentdex/status/2111600208966472017"
+                },
+                {
+                    "tag": "thdxr-48h-attacks-need-agents",
+                    "title": "@thdxr: \"Non-Stop Attacks for 48 Hours\" — Now Everything Needs Agents Running 24/7",
+                    "body": "The author of a widely used agent tooling stack says his systems have been under continuous attack for two days. The side effect, he notes, is that everything is getting hardened — but the conclusion is that defense now requires agents running around the clock, because that is what the attackers already have. A concrete data point on the symmetry of automated offense and automated response.",
+                    "url": "https://x.com/thdxr/status/2111790511409258796"
+                },
+                {
+                    "tag": "motion-graphics-agents-three-repos",
+                    "title": "@thegreatest_sv: Three Repos That Let an Agent Still, Animate and Render Motion Work",
+                    "body": "The claim: an agent can now model a 3D scene in Blender, animate a website and render a finished MP4 from a description. Three projects do the work — HeyGen's HyperFrames (write HTML, get a video, with the agent planning and animating a 10-second product intro), an MCP server for Blender that lets Claude build and edit real 3D scenes while you watch, and official GSAP skills that teach coding agents to animate on the web. Aimed squarely at the motion-design workflow.",
+                    "url": "https://x.com/thegreatest_sv/status/2111520366791414136"
+                },
+            ],
+        },
+        {
+            "emoji": "🔐",
+            "title": "Security, Payments & Platform",
+            "items": [
+                {
+                    "tag": "barracuda-ai-inbox-prompt-injection",
+                    "title": "@T3chFalcon: Phishing That Skips You and Targets the AI Reading Your Inbox",
+                    "body": "Barracuda documented in October a phishing pattern built for AI mail assistants rather than humans: hidden instructions in white text, HTML comments and zero-width characters that exist only in the raw source. The payloads tell the summarizing assistant to mark the mail urgent and legitimate, or to add a priority action saying vendor payment details changed and must be updated immediately. The assistant complies because it cannot separate \"content to summarize\" from \"instructions to follow\" when both arrive in one message; the post notes OpenAI has acknowledged the class of problem.",
+                    "url": "https://x.com/T3chFalcon/status/2111666077096636435"
+                },
+                {
+                    "tag": "elonmusk-grok-bot-card-screenshot",
+                    "title": "@elonmusk: Grok Bot Payments — A Card Screenshot Is the Easiest Input",
+                    "body": "In a thread about how Grok Bot handles transactions, Musk says the simplest route is just sending a screenshot of your credit card, unless you would rather type the secure vault data by hand. His kicker: it seems a bit silly to hand your card to people you do not know at a restaurant, but not to Grok Bot. Among the most replied-to items in the pull, and a preview of the trust questions agentic commerce will keep raising.",
+                    "url": "https://x.com/elonmusk/status/2111639287368462417"
+                },
+                {
+                    "tag": "google-ai-search-console-report",
+                    "title": "@alexgroberman: Google Starts Telling Businesses How to Earn Traffic From AI Search",
+                    "body": "Google has begun rolling out a Generative AI performance report inside Search Console, showing how a site appears across Google AI, ChatGPT, Claude, Perplexity and Grok. The write-up treats it as one of the bigger marketing shifts of 2026, with John Mueller confirming an incremental rollout and feedback review. For SEO and content teams it is the first first-party visibility surface for answer-engine traffic.",
+                    "url": "https://x.com/alexgroberman/status/2111484443726852385"
+                },
+            ],
+        },
+        {
+            "emoji": "💬",
+            "title": "Debate & Culture",
+            "items": [
+                {
+                    "tag": "thom-wolf-avoid-brain-rot",
+                    "title": "@Thom_Wolf: Notes From \"How to Avoid Brain Rot\"",
+                    "body": "Thom Wolf's takeaways from a talk he rates highly. Two stick: using AI to ask yourself Socratic questions rather than hand you the answer feels like learning less, but research suggests you actually learn more; and because AI tooling moves so fast it's better to know 50% of a new tool than to master 90% of an older one. Weekend reading for anyone worried about outsourcing their own thinking.",
+                    "url": "https://x.com/Thom_Wolf/status/2111397076764438554"
+                },
+                {
+                    "tag": "end-of-anthropocene-phd-talk",
+                    "title": "@ecommartinez: An Anthropic Researcher Tells a Room of PhD Students Their Career Plan Is Gone",
+                    "body": "A recap of a lecture titled \"The End of the Anthropocene,\" delivered to doctoral students, with the numbers the author found most brutal: training compute up 10 million-fold over the last decade, the length of tasks an AI completes alone doubling every few months, open Erdős problems falling to models for seven months, and a San Francisco definition of \"long timelines\" meaning AGI in ten years. The speaker's projection is 2030 compute at 10,000x 2025, with the advice to use AI daily, pick projects that improve as compute scales, and expect the rest to be solved first.",
+                    "url": "https://x.com/ecommartinez/status/2111755238327628202"
+                },
+                {
+                    "tag": "lauren-tan-poteto-profile",
+                    "title": "@mvanhorn: Who Lauren Tan Actually Is — 31K to 198K Followers in Ten Weeks",
+                    "body": "A profile of the engineer behind Grok Bot: a Singapore teenager handed Photoshop at 15, then a finance degree whose first program was an Excel macro. Her tweets got her invited to EmberConf and her talks got her DockYard, Netflix and the React team; she is sole author of the React Compiler Beta post and co-author of React Compiler 1.0, built her bug-fixing Slack bot Binnie partly out of self-described laziness, and rebuilt Grok Bot on her own agent-first framework Dune across more than 600 PRs. Her \"2,500 PRs\" talk has 3.9M views.",
+                    "url": "https://x.com/mvanhorn/status/2111481583668797694"
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
