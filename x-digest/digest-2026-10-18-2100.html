@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Sunday, October 18th, 2026 — 9:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Sunday, October 18th, 2026 — 9:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>Apple's Local-LLM Lead Looks Uncapped:</strong> A new Mac Studio M5 Ultra is said to ship a 512GB model for $15-20k, and chaining six over Thunderbolt 5 gives over 3TB of RAM — enough to run a 2T+ parameter frontier model locally for roughly $100k, against about $500k of Nvidia for the same capability.</li>
+      <li><strong>Karpathy Says the Graph Replaces the Prompt:</strong> "Prompting is going away. Delete everything, keep Graph" — the framing is Prompts → Agents → Loops → Graphs, where a loop keeps one agent running until the job is done while a graph decides which agents exist and what each one hands to the next.</li>
+      <li><strong>300 Parallel Claude Code Agents, Every Claim Verified in ~100ms:</strong> A 23-year-old dev ran 300 agents writing and checking at once against a source-verification layer, three passes over 100 company profiles with zero errors left, one model doing the work and a cheaper one deciding if each claim is actually true.</li>
+      <li><strong>Tencent's Terminal-RSI Turns a 27B Model Into a Terminal Agent:</strong> Hunyuan's open recursive-self-improvement recipe — two rounds of verified-trajectory rewriting plus critique-based RL refinement — lifts Terminal-Bench 2.1 from 51.70% to 86.52% and TB Hard to 79% on a 27B model.</li>
+      <li><strong>A Bedroom Becomes a $58K Micro-Datacenter:</strong> One 24-year-old replaced $14k/month of rented cloud GPUs with 48 refurbished Mac minis on a wire rack, producing ~14k images and 900 videos a day overnight — $26.4k/month across 11 brands, $314 in power, hardware paid back in 67 days.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>Frontier Models &amp; Releases</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag apple-m5-ultra-local-frontier-model">Apple-M5-Ultra-Local-Frontier-Model</span> @IOHK_Charles: Six Mac Studio M5 Ultras Run a 2T+ Parameter Model Locally</div>
+    <div class="item-body">The claim that prompted the post: Apple&#x27;s local-LLM lead is bigger than most people realize. The new Mac Studio M5 Ultra is expected to offer a 512GB configuration for around $15-20k, and because you can chain six of them over Thunderbolt 5 you get over 3TB of unified RAM plus a large CPU and GPU core count — enough, the author argues, to run a frontier model with more than 2 trillion parameters locally for roughly $100k. Nvidia lands near $500k for the same capability, which is the number doing the work in the thread.</div>
+    <div class="item-meta">
+      <a href="https://x.com/IOHK_Charles/status/2111922564474016146" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag google-ai-pro-offer-argon-exclusion">Google-Ai-Pro-Offer-Argon-Exclusion</span> @vipinxtwt: Google AI Pro Bundles Are Locked Out of Gemini 4 Argon in Antigravity</div>
+    <div class="item-body">A complaint aimed squarely at how Google segments its AI tiers: users who received Google AI Pro through a Pixel purchase, a Jio bundle or the student offer reportedly cannot access Gemini 4 Argon inside Antigravity, and cannot switch to a regular paid Pro subscription on the same account until the existing offer expires. Two pointed questions follow — if Pro is Pro, why are offer users excluded from advertised paid-Pro features, and how can they upgrade without waiting out the promo period.</div>
+    <div class="item-meta">
+      <a href="https://x.com/vipinxtwt/status/2111808157421129734" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag opus-55-ultracode-feels-like-next-model">Opus-55-Ultracode-Feels-Like-Next-Model</span> @LexnLin: Opus 5.5&#x27;s Ultracode Mode &quot;Feels Like a Different Model&quot;</div>
+    <div class="item-body">A short, high-energy field report rather than a benchmark: with Ultracode enabled, Opus 5.5 reads like Opus 5.6 or better. The advice is to spend real hours on demos with it rather than a quick glance, on the argument that the difference only shows up over sustained use. Notable mainly as an early signal of how much of Opus 5.5&#x27;s perceived quality is the mode rather than the base model.</div>
+    <div class="item-meta">
+      <a href="https://x.com/LexnLin/status/2111729999740907684" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agents &amp; Coding Workflows</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag three-hundred-verified-claude-agents">Three-Hundred-Verified-Claude-Agents</span> @0xAIlabs: 300 Claude Code Agents With a Verification Layer That Can&#x27;t Be Fooled</div>
+    <div class="item-body">A 23-year-old developer ran 300 Claude Code agents in parallel, each output checked against the source in about 100ms, with a live dashboard showing agents writing and verifying simultaneously. The architecture is the point: one model does the work and a cheaper model decides whether each claim is actually true, so the loop does not stop until everything checks out. Three passes over 100 company profiles reportedly left zero errors, with results dumped into an Obsidian vault — an analyst-team workload finished in a single run.</div>
+    <div class="item-meta">
+      <a href="https://x.com/0xAIlabs/status/2111779366787026962" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag karpathy-delete-prompts-keep-graph">Karpathy-Delete-Prompts-Keep-Graph</span> @LunarResearcher: Karpathy — &quot;Prompting Is Going Away. Delete Everything, Keep Graph.&quot;</div>
+    <div class="item-body">A recap of a 69-minute Karpathy walkthrough arguing that graphs, not prompts, are the layer that survives: Prompts → Agents → Loops → Graphs. The distinction drawn is that a loop keeps one agent running until the job is done, while a graph decides which agents exist and what each one passes to the next. The summary&#x27;s sharper line — anyone can build an agent, almost nobody builds the graph that runs them — is the reason it travelled.</div>
+    <div class="item-meta">
+      <a href="https://x.com/LunarResearcher/status/2111806045429387749" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag opus-55-five-subagent-launch-qa">Opus-55-Five-Subagent-Launch-Qa</span> @RoundtableSpace: Five Subagents as Your First Users, Before You Launch Anything</div>
+    <div class="item-body">A copy-paste prompt for Claude Code that turns Opus 5.5 into a launch QA lead: spin up five subagents, each a different first-time user. The impatient one skims and quits at the first error; the skeptic reads pricing, terms and privacy; the mobile user works a 375px screen on slow 3G; the non-native speaker follows only what the UI literally says; the breaker pastes junk into forms and double-clicks everything. Each opens the app in a real browser from landing page to first success and screenshots every point of confusion, merged into one ranked list, fixed in a pass, then re-run to prove it. Works best with a browser MCP such as Playwright or Chrome DevTools attached.</div>
+    <div class="item-meta">
+      <a href="https://x.com/RoundtableSpace/status/2111717667228770611" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Research &amp; Benchmarks</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tencent-hunyuan-terminal-rsi-27b">Tencent-Hunyuan-Terminal-Rsi-27B</span> @NFT_Chen: Hunyuan&#x27;s Terminal-RSI Takes a 27B Model From 51.7% to 86.5%</div>
+    <div class="item-body">A walkthrough of Tencent Hunyuan&#x27;s newly open-sourced recursive self-improvement (RSI) recipe for terminal agents, Terminal-RSI. The pipeline alternates two rounds of &quot;verified-trajectory self-rewrite&quot; supervised fine-tuning with critique-inheriting RL refinement — Base → RSR-1 → RPR-1 → RSR-2 → RPR-2 — with each round&#x27;s model generating the next round&#x27;s training data. Reported results: Terminal-Bench 2.1 up from 51.70% to 86.52%, TB 4.0 from 0% to 19.84%, TB Hard at 79%, and long-horizon process reward from 0.21 to 0.37. The headline is that a 27B open model can climb to 86%+ on terminal tasks.</div>
+    <div class="item-meta">
+      <a href="https://x.com/NFT_Chen/status/2111723258517098599" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag andrew-ng-graph-engineering-course">Andrew-Ng-Graph-Engineering-Course</span> @Dhruvkumar16797: Andrew Ng&#x27;s Two-Hour Graph Engineering Course, Chapter by Chapter</div>
+    <div class="item-body">A timestamped guide to a two-hour course that runs from a single agent to full automation: 9:14 for your first agent, 33:11 loop engineering, 1:02:46 graph engineering, 1:30:15 agents that rewrite themselves, and 1:49:05 the full graph system. The framing echoes the same Prompts → Agents → Loops → Graphs arc: most people stop after the first agent and call it automation, while the last forty minutes cover the graph that runs it without them.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Dhruvkumar16797/status/2111766839516917979" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag twelve-stage-agent-engineering-curriculum">Twelve-Stage-Agent-Engineering-Curriculum</span> @suraj_sharma14: A 12-Stage Agent Engineering Curriculum, With Practice and Why</div>
+    <div class="item-body">A long-form roadmap for agent engineering built as twelve stages, each pairing what to learn, what to build and why it matters. It moves from agent architecture and state machines (DAGs, LangGraph, Temporal, durable state) through raw MCP servers, computer-use and GUI automation, 3-tier memory and context engineering, multi-agent swarms with typed state handoffs, sandboxed execution (E2B, gVisor, egress blocking), inter-agent security and prompt-injection middleware, human-in-the-loop breakpoints, self-correction loops, trajectory evals as CI gates, graceful degradation, and public teardowns. The recurring argument: typed state instead of raw text, and managed memory instead of infinite context.</div>
+    <div class="item-meta">
+      <a href="https://x.com/suraj_sharma14/status/2111789399176335412" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🏗️</span>
+      <h2>Infrastructure &amp; Local Compute</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag bedroom-48-mac-mini-micro-datacenter">Bedroom-48-Mac-Mini-Micro-Datacenter</span> @SandraNels10527: 48 Refurbished Mac Minis in a Spare Bedroom, $26.4K/Month</div>
+    <div class="item-body">A 24-year-old converted a spare bedroom into a micro-datacenter: 48 refurbished Mac minis stacked on a wire rack next to a fire extinguisher and a plastic stool, with the landlord assuming it was crypto mining on rent day. Replacing $14k/month of rented cloud GPUs, the rack runs 24/7 and reportedly produces about 14,000 images and 900 videos a day while she sleeps, across 11 brands for $26.4k/month in revenue against $314 in power — hardware paid back in 67 days. The same room also runs a Polymarket wallet that has netted $7.8M total, 97% from sports markets.</div>
+    <div class="item-meta">
+      <a href="https://x.com/SandraNels10527/status/2111742155161018443" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag twelve-gb-gpu-joint-emergency-session">Twelve-Gb-Gpu-Joint-Emergency-Session</span> @sudoingX: The 12GB GPU That Runs What Opus 5.5 Won&#x27;t Touch</div>
+    <div class="item-body">Satire dressed as breaking news: Dario Amodei and Sam Altman reportedly called a joint emergency session over a 12GB GPU, because it holds a 27B model that &quot;refuses nothing&quot; and does the SSH and server work Opus 5.5 will not touch, at 50 tok/s on a used 3060. The punchline is the policy split — Amodei wants the card restricted, Altman wants it billed to you monthly. It is a joke, but it captures the real tension between large hosted models and cheap local ones.</div>
+    <div class="item-meta">
+      <a href="https://x.com/sudoingX/status/2111718663263052048" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag steipete-ai-dr">Steipete-Ai-Dr</span> @steipete: &quot;AI;DR&quot;</div>
+    <div class="item-body">Two letters, no explanation, 500-plus likes in a few hours. The coinage lands as a genre label for the growing pile of AI-summarized-of-AI content — a &quot;too long; didn&#x27;t read&quot; that has itself been delegated. Included as the pull&#x27;s small cultural marker rather than a claim to verify.</div>
+    <div class="item-meta">
+      <a href="https://x.com/steipete/status/2111918049116987476" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💬</span>
+      <h2>Debate &amp; Culture</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag dhh-chinese-models-rough-software">Dhh-Chinese-Models-Rough-Software</span> @dhh: Respect for Chinese AI Models and Hardware, Frustration With the Software</div>
+    <div class="item-body">A pointed observation about a gap that does not get discussed much: the same ecosystem shipping impressive AI models and hardware still produces software that feels rough — WeChat, Alipay, HarmonyOS named directly. The author&#x27;s puzzle is that unique aesthetics, visual fidelity and smooth flows look like the easy part, yet clearly are not. One of the more replied-to non-marketing posts in the pull.</div>
+    <div class="item-meta">
+      <a href="https://x.com/dhh/status/2111795187454296232" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag simonsmith-grok-bot-training-toggle">Simonsmith-Grok-Bot-Training-Toggle</span> @_simonsmith: Trying Grok Bot, and Can&#x27;t Find the &quot;Don&#x27;t Train on My Data&quot; Switch</div>
+    <div class="item-body">A practical first impression from someone evaluating personal agents against positive word of mouth for Grok Bot: the immediate question was how to turn off training on his data. He could not find the setting anywhere, and the bot&#x27;s own initial instance did not know either. A concrete usability and trust gap at exactly the moment agentic assistants are pitching themselves as personal infrastructure.</div>
+    <div class="item-meta">
+      <a href="https://x.com/_simonsmith/status/2111579166042640486" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag trq212-vibe-coding-games-instead-of-playing">Trq212-Vibe-Coding-Games-Instead-Of-Playing</span> @trq212: &quot;I&#x27;d Rather Vibe Code Games Than Play Them&quot;</div>
+    <div class="item-body">A quiet cultural observation that got more traction than expected: the author now prefers to vibe code small parts of games over actually playing them, especially cerebral titles like League. He is unsure what it means for games as a medium but suspects it matters. It is the player-side mirror of the same shift showing up across the timeline — building the thing increasingly competes with using it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/trq212/status/2111945336537420259" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>

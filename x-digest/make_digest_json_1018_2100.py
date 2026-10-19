@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Sunday, October 18th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Apple's Local-LLM Lead Looks Uncapped:</strong> A new Mac Studio M5 Ultra is said to ship a 512GB model for $15-20k, and chaining six over Thunderbolt 5 gives over 3TB of RAM — enough to run a 2T+ parameter frontier model locally for roughly $100k, against about $500k of Nvidia for the same capability.",
+        "<strong>Karpathy Says the Graph Replaces the Prompt:</strong> \"Prompting is going away. Delete everything, keep Graph\" — the framing is Prompts → Agents → Loops → Graphs, where a loop keeps one agent running until the job is done while a graph decides which agents exist and what each one hands to the next.",
+        "<strong>300 Parallel Claude Code Agents, Every Claim Verified in ~100ms:</strong> A 23-year-old dev ran 300 agents writing and checking at once against a source-verification layer, three passes over 100 company profiles with zero errors left, one model doing the work and a cheaper one deciding if each claim is actually true.",
+        "<strong>Tencent's Terminal-RSI Turns a 27B Model Into a Terminal Agent:</strong> Hunyuan's open recursive-self-improvement recipe — two rounds of verified-trajectory rewriting plus critique-based RL refinement — lifts Terminal-Bench 2.1 from 51.70% to 86.52% and TB Hard to 79% on a 27B model.",
+        "<strong>A Bedroom Becomes a $58K Micro-Datacenter:</strong> One 24-year-old replaced $14k/month of rented cloud GPUs with 48 refurbished Mac minis on a wire rack, producing ~14k images and 900 videos a day overnight — $26.4k/month across 11 brands, $314 in power, hardware paid back in 67 days.",
+    ],
+    "sections": [
+        {
+            "emoji": "🚀",
+            "title": "Frontier Models & Releases",
+            "items": [
+                {
+                    "tag": "apple-m5-ultra-local-frontier-model",
+                    "title": "@IOHK_Charles: Six Mac Studio M5 Ultras Run a 2T+ Parameter Model Locally",
+                    "body": "The claim that prompted the post: Apple's local-LLM lead is bigger than most people realize. The new Mac Studio M5 Ultra is expected to offer a 512GB configuration for around $15-20k, and because you can chain six of them over Thunderbolt 5 you get over 3TB of unified RAM plus a large CPU and GPU core count — enough, the author argues, to run a frontier model with more than 2 trillion parameters locally for roughly $100k. Nvidia lands near $500k for the same capability, which is the number doing the work in the thread.",
+                    "url": "https://x.com/IOHK_Charles/status/2111922564474016146"
+                },
+                {
+                    "tag": "google-ai-pro-offer-argon-exclusion",
+                    "title": "@vipinxtwt: Google AI Pro Bundles Are Locked Out of Gemini 4 Argon in Antigravity",
+                    "body": "A complaint aimed squarely at how Google segments its AI tiers: users who received Google AI Pro through a Pixel purchase, a Jio bundle or the student offer reportedly cannot access Gemini 4 Argon inside Antigravity, and cannot switch to a regular paid Pro subscription on the same account until the existing offer expires. Two pointed questions follow — if Pro is Pro, why are offer users excluded from advertised paid-Pro features, and how can they upgrade without waiting out the promo period.",
+                    "url": "https://x.com/vipinxtwt/status/2111808157421129734"
+                },
+                {
+                    "tag": "opus-55-ultracode-feels-like-next-model",
+                    "title": "@LexnLin: Opus 5.5's Ultracode Mode \"Feels Like a Different Model\"",
+                    "body": "A short, high-energy field report rather than a benchmark: with Ultracode enabled, Opus 5.5 reads like Opus 5.6 or better. The advice is to spend real hours on demos with it rather than a quick glance, on the argument that the difference only shows up over sustained use. Notable mainly as an early signal of how much of Opus 5.5's perceived quality is the mode rather than the base model.",
+                    "url": "https://x.com/LexnLin/status/2111729999740907684"
+                },
+            ],
+        },
+        {
+            "emoji": "🤖",
+            "title": "Agents & Coding Workflows",
+            "items": [
+                {
+                    "tag": "three-hundred-verified-claude-agents",
+                    "title": "@0xAIlabs: 300 Claude Code Agents With a Verification Layer That Can't Be Fooled",
+                    "body": "A 23-year-old developer ran 300 Claude Code agents in parallel, each output checked against the source in about 100ms, with a live dashboard showing agents writing and verifying simultaneously. The architecture is the point: one model does the work and a cheaper model decides whether each claim is actually true, so the loop does not stop until everything checks out. Three passes over 100 company profiles reportedly left zero errors, with results dumped into an Obsidian vault — an analyst-team workload finished in a single run.",
+                    "url": "https://x.com/0xAIlabs/status/2111779366787026962"
+                },
+                {
+                    "tag": "karpathy-delete-prompts-keep-graph",
+                    "title": "@LunarResearcher: Karpathy — \"Prompting Is Going Away. Delete Everything, Keep Graph.\"",
+                    "body": "A recap of a 69-minute Karpathy walkthrough arguing that graphs, not prompts, are the layer that survives: Prompts → Agents → Loops → Graphs. The distinction drawn is that a loop keeps one agent running until the job is done, while a graph decides which agents exist and what each one passes to the next. The summary's sharper line — anyone can build an agent, almost nobody builds the graph that runs them — is the reason it travelled.",
+                    "url": "https://x.com/LunarResearcher/status/2111806045429387749"
+                },
+                {
+                    "tag": "opus-55-five-subagent-launch-qa",
+                    "title": "@RoundtableSpace: Five Subagents as Your First Users, Before You Launch Anything",
+                    "body": "A copy-paste prompt for Claude Code that turns Opus 5.5 into a launch QA lead: spin up five subagents, each a different first-time user. The impatient one skims and quits at the first error; the skeptic reads pricing, terms and privacy; the mobile user works a 375px screen on slow 3G; the non-native speaker follows only what the UI literally says; the breaker pastes junk into forms and double-clicks everything. Each opens the app in a real browser from landing page to first success and screenshots every point of confusion, merged into one ranked list, fixed in a pass, then re-run to prove it. Works best with a browser MCP such as Playwright or Chrome DevTools attached.",
+                    "url": "https://x.com/RoundtableSpace/status/2111717667228770611"
+                },
+            ],
+        },
+        {
+            "emoji": "🧠",
+            "title": "Research & Benchmarks",
+            "items": [
+                {
+                    "tag": "tencent-hunyuan-terminal-rsi-27b",
+                    "title": "@NFT_Chen: Hunyuan's Terminal-RSI Takes a 27B Model From 51.7% to 86.5%",
+                    "body": "A walkthrough of Tencent Hunyuan's newly open-sourced recursive self-improvement (RSI) recipe for terminal agents, Terminal-RSI. The pipeline alternates two rounds of \"verified-trajectory self-rewrite\" supervised fine-tuning with critique-inheriting RL refinement — Base → RSR-1 → RPR-1 → RSR-2 → RPR-2 — with each round's model generating the next round's training data. Reported results: Terminal-Bench 2.1 up from 51.70% to 86.52%, TB 4.0 from 0% to 19.84%, TB Hard at 79%, and long-horizon process reward from 0.21 to 0.37. The headline is that a 27B open model can climb to 86%+ on terminal tasks.",
+                    "url": "https://x.com/NFT_Chen/status/2111723258517098599"
+                },
+                {
+                    "tag": "andrew-ng-graph-engineering-course",
+                    "title": "@Dhruvkumar16797: Andrew Ng's Two-Hour Graph Engineering Course, Chapter by Chapter",
+                    "body": "A timestamped guide to a two-hour course that runs from a single agent to full automation: 9:14 for your first agent, 33:11 loop engineering, 1:02:46 graph engineering, 1:30:15 agents that rewrite themselves, and 1:49:05 the full graph system. The framing echoes the same Prompts → Agents → Loops → Graphs arc: most people stop after the first agent and call it automation, while the last forty minutes cover the graph that runs it without them.",
+                    "url": "https://x.com/Dhruvkumar16797/status/2111766839516917979"
+                },
+                {
+                    "tag": "twelve-stage-agent-engineering-curriculum",
+                    "title": "@suraj_sharma14: A 12-Stage Agent Engineering Curriculum, With Practice and Why",
+                    "body": "A long-form roadmap for agent engineering built as twelve stages, each pairing what to learn, what to build and why it matters. It moves from agent architecture and state machines (DAGs, LangGraph, Temporal, durable state) through raw MCP servers, computer-use and GUI automation, 3-tier memory and context engineering, multi-agent swarms with typed state handoffs, sandboxed execution (E2B, gVisor, egress blocking), inter-agent security and prompt-injection middleware, human-in-the-loop breakpoints, self-correction loops, trajectory evals as CI gates, graceful degradation, and public teardowns. The recurring argument: typed state instead of raw text, and managed memory instead of infinite context.",
+                    "url": "https://x.com/suraj_sharma14/status/2111789399176335412"
+                },
+            ],
+        },
+        {
+            "emoji": "🏗️",
+            "title": "Infrastructure & Local Compute",
+            "items": [
+                {
+                    "tag": "bedroom-48-mac-mini-micro-datacenter",
+                    "title": "@SandraNels10527: 48 Refurbished Mac Minis in a Spare Bedroom, $26.4K/Month",
+                    "body": "A 24-year-old converted a spare bedroom into a micro-datacenter: 48 refurbished Mac minis stacked on a wire rack next to a fire extinguisher and a plastic stool, with the landlord assuming it was crypto mining on rent day. Replacing $14k/month of rented cloud GPUs, the rack runs 24/7 and reportedly produces about 14,000 images and 900 videos a day while she sleeps, across 11 brands for $26.4k/month in revenue against $314 in power — hardware paid back in 67 days. The same room also runs a Polymarket wallet that has netted $7.8M total, 97% from sports markets.",
+                    "url": "https://x.com/SandraNels10527/status/2111742155161018443"
+                },
+                {
+                    "tag": "twelve-gb-gpu-joint-emergency-session",
+                    "title": "@sudoingX: The 12GB GPU That Runs What Opus 5.5 Won't Touch",
+                    "body": "Satire dressed as breaking news: Dario Amodei and Sam Altman reportedly called a joint emergency session over a 12GB GPU, because it holds a 27B model that \"refuses nothing\" and does the SSH and server work Opus 5.5 will not touch, at 50 tok/s on a used 3060. The punchline is the policy split — Amodei wants the card restricted, Altman wants it billed to you monthly. It is a joke, but it captures the real tension between large hosted models and cheap local ones.",
+                    "url": "https://x.com/sudoingX/status/2111718663263052048"
+                },
+                {
+                    "tag": "steipete-ai-dr",
+                    "title": "@steipete: \"AI;DR\"",
+                    "body": "Two letters, no explanation, 500-plus likes in a few hours. The coinage lands as a genre label for the growing pile of AI-summarized-of-AI content — a \"too long; didn't read\" that has itself been delegated. Included as the pull's small cultural marker rather than a claim to verify.",
+                    "url": "https://x.com/steipete/status/2111918049116987476"
+                },
+            ],
+        },
+        {
+            "emoji": "💬",
+            "title": "Debate & Culture",
+            "items": [
+                {
+                    "tag": "dhh-chinese-models-rough-software",
+                    "title": "@dhh: Respect for Chinese AI Models and Hardware, Frustration With the Software",
+                    "body": "A pointed observation about a gap that does not get discussed much: the same ecosystem shipping impressive AI models and hardware still produces software that feels rough — WeChat, Alipay, HarmonyOS named directly. The author's puzzle is that unique aesthetics, visual fidelity and smooth flows look like the easy part, yet clearly are not. One of the more replied-to non-marketing posts in the pull.",
+                    "url": "https://x.com/dhh/status/2111795187454296232"
+                },
+                {
+                    "tag": "simonsmith-grok-bot-training-toggle",
+                    "title": "@_simonsmith: Trying Grok Bot, and Can't Find the \"Don't Train on My Data\" Switch",
+                    "body": "A practical first impression from someone evaluating personal agents against positive word of mouth for Grok Bot: the immediate question was how to turn off training on his data. He could not find the setting anywhere, and the bot's own initial instance did not know either. A concrete usability and trust gap at exactly the moment agentic assistants are pitching themselves as personal infrastructure.",
+                    "url": "https://x.com/_simonsmith/status/2111579166042640486"
+                },
+                {
+                    "tag": "trq212-vibe-coding-games-instead-of-playing",
+                    "title": "@trq212: \"I'd Rather Vibe Code Games Than Play Them\"",
+                    "body": "A quiet cultural observation that got more traction than expected: the author now prefers to vibe code small parts of games over actually playing them, especially cerebral titles like League. He is unsure what it means for games as a medium but suspects it matters. It is the player-side mirror of the same shift showing up across the timeline — building the thing increasingly competes with using it.",
+                    "url": "https://x.com/trq212/status/2111945336537420259"
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
