@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Monday, October 19th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Cloudflare Open-Sources Its Security-Audit Skill:</strong> The skill that seeded Cloudflare's own vulnerability-hunting harness is now MIT-licensed and installable into any coding agent — six phases that map the codebase, hunt area by area, and send every finding to a fresh agent that did not find it to confirm it is real, outputting a findings file split into confirmed, needs validation and rejected.",
+        "<strong>GPT-6.1 Terra Shows Up in a Microsoft PR:</strong> Microsoft updated 18 evaluation configs from GPT-5.6 Terra to GPT-6.1 Terra, and the timeline read it as a launch tell — while Plus users are already reporting that GPT-6.1 Sol behaves as if usage limits barely move.",
+        "<strong>Codex's Computer Use Escapes the Codex App:</strong> Someone pulled Computer Use out of the ChatGPT desktop app into a standalone layer, so Claude Code, Pi and Hermes agents can see the screen, click buttons and drive software — one install line, a ChatGPT app on the machine, no login required.",
+        "<strong>Town Raises $108M for Multiplayer AI Assistants:</strong> A $108M Series B co-led by Forerunner and Menlo bets that the moat in workplace AI is not a better single-player assistant but shared ones — every employee gets a Townie that asks other Townies questions and shares only what its person would share.",
+        "<strong>Pocock: Build Your Own Agent Memory, or Rent Your Lock-In:</strong> Three months into his personal wiki, Matt Pocock calls it critical infrastructure for his business and the thing that makes \"agents that run my business\" viable — with the sharper claim that relying on a vendor for memory is a recipe for lock-in.",
+    ],
+    "sections": [
+        {
+            "emoji": "🚀",
+            "title": "Frontier Models & Releases",
+            "items": [
+                {
+                    "tag": "gpt-61-terra-microsoft-pr-leak",
+                    "title": "@LuminaBench: GPT-6.1 Terra Surfaces in a Microsoft PR",
+                    "body": "The tell is a config sweep rather than an announcement: Microsoft reportedly updated 18 evaluation configurations from GPT-5.6 Terra to GPT-6.1 Terra. The poster's read is that a launch is close — \"wouldn't be surprised if we get this soon\" — and the quoted thread frames the appetite plainly, arguing the field badly needs a new frontier model. Treat the version number as a leak signal, not a confirmed release.",
+                    "url": "https://x.com/LuminaBench/status/2112189697388613850"
+                },
+                {
+                    "tag": "gpt-61-sol-feels-unlimited-plus",
+                    "title": "@afaa_him: GPT-6.1 Sol as a Plus Daily Driver That Never Hits the Wall",
+                    "body": "A usage-pattern report rather than a benchmark: the claim is that GPT-6.1 Sol handles complex tasks for hours straight while the usage meter barely moves, which makes it feel effectively unlimited on a Plus plan. The recommendation is to make it the default for everyday work. Anecdotal, but it lands against a timeline that is unusually focused on quota anxiety this week.",
+                    "url": "https://x.com/afaa_him/status/2112112646736523632"
+                },
+                {
+                    "tag": "gemini-4-argon-desk-to-playable-track",
+                    "title": "@Google: Gemini 4 Argon Turns a Photo of a Desk Into a Playable 3D Track",
+                    "body": "Google's own demo of the Argon agent stack: a single photo of a real desk, then Argon orchestrating subagents, Blender MCP and Nano Banana to convert the everyday objects on it into an interactive 3D race track. The interesting part is the composition rather than any one model — a multimodal model acting as the coordinator that hands geometry work to Blender and image work to Nano Banana.",
+                    "url": "https://x.com/Google/status/2112199261899411579"
+                },
+            ],
+        },
+        {
+            "emoji": "🤖",
+            "title": "Agents & Coding Workflows",
+            "items": [
+                {
+                    "tag": "cloudflare-security-audit-skill-open-source",
+                    "title": "@RoundtableSpace: Cloudflare Open-Sources the Security-Audit Skill Behind Its Bug Harness",
+                    "body": "The skill that seeded Cloudflare's own vulnerability-hunting harness is out under MIT, with 31.3K stars, installable into a coding agent via `npx skills add ... --skill security-audit`. The six phases are the design worth copying: map the codebase, hunt bugs area by area so nothing is skipped, send every finding to a fresh agent that did not find it to confirm it is real, write structured results, verify each record again independently, then write the final report. Output is a findings file split into confirmed, needs validation and rejected, so real problems get fixed first.",
+                    "url": "https://x.com/RoundtableSpace/status/2112125353594401162"
+                },
+                {
+                    "tag": "codex-computer-use-lcu-any-agent",
+                    "title": "@LawrenceW_Zen: Codex Computer Use Extracted Into a Layer Any Agent Can Use",
+                    "body": "Someone pulled Computer Use out of the ChatGPT desktop app so that Claude Code, Pi and Hermes can drive a screen too — seeing the display, clicking buttons and operating software. Installation is handed to the agent itself as a single instruction pointing at the LCU docs, and the stated requirements are modest: a ChatGPT app present on the machine, no login needed. If it holds up, screen control stops being a feature of one vendor's agent and becomes a layer anyone can attach.",
+                    "url": "https://x.com/LawrenceW_Zen/status/2112052626494017951"
+                },
+                {
+                    "tag": "flohoeller-agent-tree-component",
+                    "title": "@flohoeller: An Agent Tree Component — See Who Started Whom",
+                    "body": "A small interface piece with outsized practical value: a tree view of an agent run that shows parentage, so you can see which agent spawned which. As soon as subagents fan out beyond two or three, the transcript stops being a legible record of causality; a tree makes delegation and blame traceable at a glance. One of the more liked UI posts in the pull, for a reason that is entirely about debuggability.",
+                    "url": "https://x.com/flohoeller/status/2112150373565612534"
+                },
+            ],
+        },
+        {
+            "emoji": "🧠",
+            "title": "Memory, Knowledge & Craft",
+            "items": [
+                {
+                    "tag": "mattpocock-personal-wiki-agent-memory",
+                    "title": "@mattpocockuk: Three Months In, the Personal Wiki Is Critical Infrastructure",
+                    "body": "A status report on a build-it-yourself knowledge base: every weekday a 15-minute podcast covers what newly entered the wiki from X, Discord, Slack, Gmail and GitHub issues, doubling as a vibe check on whether the wiki still reflects reality, with on-demand podcast deep-dives before he makes a video on a topic. The conclusion is the argument: it greatly enriches his courses and makes \"agents that run my business\" actually viable, and relying on a vendor for memory feels like a recipe for lock-in.",
+                    "url": "https://x.com/mattpocockuk/status/2112131671097020895"
+                },
+                {
+                    "tag": "tobi-anthropic-viz-shopify-river",
+                    "title": "@tobi: The Same Anthropic Visualization, Seen From Inside Shopify's River",
+                    "body": "Shopify's Tobi Lütke flags an Anthropic piece as an interesting read and answers it with the same visualization rebuilt from inside Shopify's River, crediting @aquapoiesis. Little commentary, mostly a side-by-side — but that is the useful part: an outside description of how agent systems are structured, set against what the same diagram looks like when it is an actual company's internal plumbing rather than a diagram.",
+                    "url": "https://x.com/tobi/status/2111999594414665895"
+                },
+                {
+                    "tag": "colorfigures-claude-hand-inked-objects",
+                    "title": "@Aprilzz423: Colorfigures — Describe an Object, Get a Hand-Inked Diagram That Works",
+                    "body": "The follow-up to a skill that got attention for teaching through play: describe an everyday object and Claude draws it hand-inked and isometric, with buttons that actually work, and you can ask how something works so the skill labels the parts and explains what each one does. Released free and open source after enough people asked how it was made. Worth noting as a pattern — the reusable skill, not the one-off demo, is what travels.",
+                    "url": "https://x.com/Aprilzz423/status/2111839048230666590"
+                },
+            ],
+        },
+        {
+            "emoji": "🎨",
+            "title": "Creative & Media Tooling",
+            "items": [
+                {
+                    "tag": "renproton-anatomy-reveal-motion-design",
+                    "title": "@renproton: /anatomy-reveal Turns Claude Into a Motion-Design Studio",
+                    "body": "A skill stack aimed at product and launch video: Opus 5.5 plus the /anatomy skill already handles motion design, and adding /anatomy-reveal pushes it toward real-size 3D models built from a photo or a name, motion-blurred reveal films switchable between 1:1 and 16:9, and exploded views you can take apart. The realistic read is not \"Hollywood in a prompt\" but a fast first pass on the kind of reveal animation agencies bill for.",
+                    "url": "https://x.com/renproton/status/2111857166030418376"
+                },
+                {
+                    "tag": "story2board-consistency-layer-storyboards",
+                    "title": "@FanShifu: Story2Board Attacks Character Consistency in AI Storyboards",
+                    "body": "A former ByteDance team built a storyboard agent from 270,000+ annotated shots distilled out of 250 landmark films, and pointed it at the two things that break LLM storyboarding: faces changing between frames, and a single close-up reshoot resetting the whole art style. The fix is a Consistency Layer holding characters, wardrobe, signature props and sets as reusable assets, plus a shot-language model that recommends framing, axis, angle and camera movement from a plain-language scene description. Delivery is a printable PDF shot list with slug data, priced at $1 = 100 points with no subscription — which the author notes trades LTV and predictable MRR for a low barrier to try.",
+                    "url": "https://x.com/FanShifu/status/2112131115964141790"
+                },
+                {
+                    "tag": "codex-unreal-one-week-game",
+                    "title": "@xingbugengming: A Week With Codex + Unreal, Fused Into One Small Game",
+                    "body": "A build log rather than a claim: one week of work combining the campaign-map feel of Total War: Three Kingdoms with Mount & Blade's combat into a small AI-made game, with the whole development process cut into a video so others can follow the approach. The author is explicit that plenty is unfinished and it is meant as a reference, not a product. Still a useful data point on how far a single person gets in a week with a coding agent and a real engine.",
+                    "url": "https://x.com/xingbugengming/status/2111743548945272840"
+                },
+            ],
+        },
+        {
+            "emoji": "🏗️",
+            "title": "Industry, Compute & Debate",
+            "items": [
+                {
+                    "tag": "town-108m-series-b-multiplayer-ai",
+                    "title": "@jgreze: Town Raises $108M Betting the Moat Is Multiplayer AI",
+                    "body": "Town announced a $108M Series B co-led by Forerunner Ventures and Menlo Ventures, on the thesis that the real workplace bottleneck is waiting on each other rather than a lack of individual capability. The product gives every employee a Townie; Townies ask each other questions, share only what their person would share, and do the work, so usefulness compounds with how much the team actually collaborates. The claim to test is the moat: most assistants are built for one person, and work does not happen alone.",
+                    "url": "https://x.com/jgreze/status/2112184910702403754"
+                },
+                {
+                    "tag": "codex-14-day-challenge-quota-backlash",
+                    "title": "@KolinHuang: Halfway Through the Codex Challenge, the Quota Bill Comes Due",
+                    "body": "A disciplined reply to Tibo's day-14 post: the shipped list — next-prompt autocomplete, lower disk usage, editing previous messages in the desktop app — set against what users say they actually need. That list is quota sufficient to finish a real coding session, predictable limits, a fix for the bug that randomly eats remaining usage, relief from the five-hour wall, memory that survives long conversations, and threads that do not break mid-task. The tone is affectionate, which is what makes it sting: \"someone who loved Codex.\"",
+                    "url": "https://x.com/KolinHuang/status/2112050737001680939"
+                },
+                {
+                    "tag": "elegant-math-as-human-crutch",
+                    "title": "@Noe1017_Monad: Elegant Mathematics as a Crutch for Human Working Memory",
+                    "body": "A provocative essay rather than a product note: elegant mathematical structures, the argument goes, exist because a top human mathematician can track only five or six interacting variables before collapsing, so we invent symmetry, invariants, homology and geometric intuition to avoid expanding high-order terms at all. Ten thousand concurrent agents, in this framing, can track ten thousand fifth-order cross terms as easily as 1+1 and simply expand to the seventh order, fit coefficients and cancel the divergent terms — no need to invent a concept a human can read. The bleak joke at the end: we finally got the answer from God's ledger and found he was not doing calculus, just pressing buttons on a calculator.",
+                    "url": "https://x.com/Noe1017_Monad/status/2112008540592410951"
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")

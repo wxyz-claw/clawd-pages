@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Sunday, October 18th, 2026 — 9:00 PM ET",
+  "date": "Monday, October 19th, 2026 — 12:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Apple's Local-LLM Lead Looks Uncapped:</strong> A new Mac Studio M5 Ultra is said to ship a 512GB model for $15-20k, and chaining six over Thunderbolt 5 gives over 3TB of RAM — enough to run a 2T+ parameter frontier model locally for roughly $100k, against about $500k of Nvidia for the same capability.",
-    "<strong>Karpathy Says the Graph Replaces the Prompt:</strong> \"Prompting is going away. Delete everything, keep Graph\" — the framing is Prompts → Agents → Loops → Graphs, where a loop keeps one agent running until the job is done while a graph decides which agents exist and what each one hands to the next.",
-    "<strong>300 Parallel Claude Code Agents, Every Claim Verified in ~100ms:</strong> A 23-year-old dev ran 300 agents writing and checking at once against a source-verification layer, three passes over 100 company profiles with zero errors left, one model doing the work and a cheaper one deciding if each claim is actually true.",
-    "<strong>Tencent's Terminal-RSI Turns a 27B Model Into a Terminal Agent:</strong> Hunyuan's open recursive-self-improvement recipe — two rounds of verified-trajectory rewriting plus critique-based RL refinement — lifts Terminal-Bench 2.1 from 51.70% to 86.52% and TB Hard to 79% on a 27B model.",
-    "<strong>A Bedroom Becomes a $58K Micro-Datacenter:</strong> One 24-year-old replaced $14k/month of rented cloud GPUs with 48 refurbished Mac minis on a wire rack, producing ~14k images and 900 videos a day overnight — $26.4k/month across 11 brands, $314 in power, hardware paid back in 67 days."
+    "<strong>Cloudflare Open-Sources Its Security-Audit Skill:</strong> The skill that seeded Cloudflare's own vulnerability-hunting harness is now MIT-licensed and installable into any coding agent — six phases that map the codebase, hunt area by area, and send every finding to a fresh agent that did not find it to confirm it is real, outputting a findings file split into confirmed, needs validation and rejected.",
+    "<strong>GPT-6.1 Terra Shows Up in a Microsoft PR:</strong> Microsoft updated 18 evaluation configs from GPT-5.6 Terra to GPT-6.1 Terra, and the timeline read it as a launch tell — while Plus users are already reporting that GPT-6.1 Sol behaves as if usage limits barely move.",
+    "<strong>Codex's Computer Use Escapes the Codex App:</strong> Someone pulled Computer Use out of the ChatGPT desktop app into a standalone layer, so Claude Code, Pi and Hermes agents can see the screen, click buttons and drive software — one install line, a ChatGPT app on the machine, no login required.",
+    "<strong>Town Raises $108M for Multiplayer AI Assistants:</strong> A $108M Series B co-led by Forerunner and Menlo bets that the moat in workplace AI is not a better single-player assistant but shared ones — every employee gets a Townie that asks other Townies questions and shares only what its person would share.",
+    "<strong>Pocock: Build Your Own Agent Memory, or Rent Your Lock-In:</strong> Three months into his personal wiki, Matt Pocock calls it critical infrastructure for his business and the thing that makes \"agents that run my business\" viable — with the sharper claim that relying on a vendor for memory is a recipe for lock-in."
   ],
   "sections": [
     {
@@ -15,22 +15,22 @@
       "title": "Frontier Models & Releases",
       "items": [
         {
-          "tag": "apple-m5-ultra-local-frontier-model",
-          "title": "@IOHK_Charles: Six Mac Studio M5 Ultras Run a 2T+ Parameter Model Locally",
-          "body": "The claim that prompted the post: Apple's local-LLM lead is bigger than most people realize. The new Mac Studio M5 Ultra is expected to offer a 512GB configuration for around $15-20k, and because you can chain six of them over Thunderbolt 5 you get over 3TB of unified RAM plus a large CPU and GPU core count — enough, the author argues, to run a frontier model with more than 2 trillion parameters locally for roughly $100k. Nvidia lands near $500k for the same capability, which is the number doing the work in the thread.",
-          "url": "https://x.com/IOHK_Charles/status/2111922564474016146"
+          "tag": "gpt-61-terra-microsoft-pr-leak",
+          "title": "@LuminaBench: GPT-6.1 Terra Surfaces in a Microsoft PR",
+          "body": "The tell is a config sweep rather than an announcement: Microsoft reportedly updated 18 evaluation configurations from GPT-5.6 Terra to GPT-6.1 Terra. The poster's read is that a launch is close — \"wouldn't be surprised if we get this soon\" — and the quoted thread frames the appetite plainly, arguing the field badly needs a new frontier model. Treat the version number as a leak signal, not a confirmed release.",
+          "url": "https://x.com/LuminaBench/status/2112189697388613850"
         },
         {
-          "tag": "google-ai-pro-offer-argon-exclusion",
-          "title": "@vipinxtwt: Google AI Pro Bundles Are Locked Out of Gemini 4 Argon in Antigravity",
-          "body": "A complaint aimed squarely at how Google segments its AI tiers: users who received Google AI Pro through a Pixel purchase, a Jio bundle or the student offer reportedly cannot access Gemini 4 Argon inside Antigravity, and cannot switch to a regular paid Pro subscription on the same account until the existing offer expires. Two pointed questions follow — if Pro is Pro, why are offer users excluded from advertised paid-Pro features, and how can they upgrade without waiting out the promo period.",
-          "url": "https://x.com/vipinxtwt/status/2111808157421129734"
+          "tag": "gpt-61-sol-feels-unlimited-plus",
+          "title": "@afaa_him: GPT-6.1 Sol as a Plus Daily Driver That Never Hits the Wall",
+          "body": "A usage-pattern report rather than a benchmark: the claim is that GPT-6.1 Sol handles complex tasks for hours straight while the usage meter barely moves, which makes it feel effectively unlimited on a Plus plan. The recommendation is to make it the default for everyday work. Anecdotal, but it lands against a timeline that is unusually focused on quota anxiety this week.",
+          "url": "https://x.com/afaa_him/status/2112112646736523632"
         },
         {
-          "tag": "opus-55-ultracode-feels-like-next-model",
-          "title": "@LexnLin: Opus 5.5's Ultracode Mode \"Feels Like a Different Model\"",
-          "body": "A short, high-energy field report rather than a benchmark: with Ultracode enabled, Opus 5.5 reads like Opus 5.6 or better. The advice is to spend real hours on demos with it rather than a quick glance, on the argument that the difference only shows up over sustained use. Notable mainly as an early signal of how much of Opus 5.5's perceived quality is the mode rather than the base model.",
-          "url": "https://x.com/LexnLin/status/2111729999740907684"
+          "tag": "gemini-4-argon-desk-to-playable-track",
+          "title": "@Google: Gemini 4 Argon Turns a Photo of a Desk Into a Playable 3D Track",
+          "body": "Google's own demo of the Argon agent stack: a single photo of a real desk, then Argon orchestrating subagents, Blender MCP and Nano Banana to convert the everyday objects on it into an interactive 3D race track. The interesting part is the composition rather than any one model — a multimodal model acting as the coordinator that hands geometry work to Blender and image work to Nano Banana.",
+          "url": "https://x.com/Google/status/2112199261899411579"
         }
       ]
     },
@@ -39,94 +39,94 @@
       "title": "Agents & Coding Workflows",
       "items": [
         {
-          "tag": "three-hundred-verified-claude-agents",
-          "title": "@0xAIlabs: 300 Claude Code Agents With a Verification Layer That Can't Be Fooled",
-          "body": "A 23-year-old developer ran 300 Claude Code agents in parallel, each output checked against the source in about 100ms, with a live dashboard showing agents writing and verifying simultaneously. The architecture is the point: one model does the work and a cheaper model decides whether each claim is actually true, so the loop does not stop until everything checks out. Three passes over 100 company profiles reportedly left zero errors, with results dumped into an Obsidian vault — an analyst-team workload finished in a single run.",
-          "url": "https://x.com/0xAIlabs/status/2111779366787026962"
+          "tag": "cloudflare-security-audit-skill-open-source",
+          "title": "@RoundtableSpace: Cloudflare Open-Sources the Security-Audit Skill Behind Its Bug Harness",
+          "body": "The skill that seeded Cloudflare's own vulnerability-hunting harness is out under MIT, with 31.3K stars, installable into a coding agent via `npx skills add ... --skill security-audit`. The six phases are the design worth copying: map the codebase, hunt bugs area by area so nothing is skipped, send every finding to a fresh agent that did not find it to confirm it is real, write structured results, verify each record again independently, then write the final report. Output is a findings file split into confirmed, needs validation and rejected, so real problems get fixed first.",
+          "url": "https://x.com/RoundtableSpace/status/2112125353594401162"
         },
         {
-          "tag": "karpathy-delete-prompts-keep-graph",
-          "title": "@LunarResearcher: Karpathy — \"Prompting Is Going Away. Delete Everything, Keep Graph.\"",
-          "body": "A recap of a 69-minute Karpathy walkthrough arguing that graphs, not prompts, are the layer that survives: Prompts → Agents → Loops → Graphs. The distinction drawn is that a loop keeps one agent running until the job is done, while a graph decides which agents exist and what each one passes to the next. The summary's sharper line — anyone can build an agent, almost nobody builds the graph that runs them — is the reason it travelled.",
-          "url": "https://x.com/LunarResearcher/status/2111806045429387749"
+          "tag": "codex-computer-use-lcu-any-agent",
+          "title": "@LawrenceW_Zen: Codex Computer Use Extracted Into a Layer Any Agent Can Use",
+          "body": "Someone pulled Computer Use out of the ChatGPT desktop app so that Claude Code, Pi and Hermes can drive a screen too — seeing the display, clicking buttons and operating software. Installation is handed to the agent itself as a single instruction pointing at the LCU docs, and the stated requirements are modest: a ChatGPT app present on the machine, no login needed. If it holds up, screen control stops being a feature of one vendor's agent and becomes a layer anyone can attach.",
+          "url": "https://x.com/LawrenceW_Zen/status/2112052626494017951"
         },
         {
-          "tag": "opus-55-five-subagent-launch-qa",
-          "title": "@RoundtableSpace: Five Subagents as Your First Users, Before You Launch Anything",
-          "body": "A copy-paste prompt for Claude Code that turns Opus 5.5 into a launch QA lead: spin up five subagents, each a different first-time user. The impatient one skims and quits at the first error; the skeptic reads pricing, terms and privacy; the mobile user works a 375px screen on slow 3G; the non-native speaker follows only what the UI literally says; the breaker pastes junk into forms and double-clicks everything. Each opens the app in a real browser from landing page to first success and screenshots every point of confusion, merged into one ranked list, fixed in a pass, then re-run to prove it. Works best with a browser MCP such as Playwright or Chrome DevTools attached.",
-          "url": "https://x.com/RoundtableSpace/status/2111717667228770611"
+          "tag": "flohoeller-agent-tree-component",
+          "title": "@flohoeller: An Agent Tree Component — See Who Started Whom",
+          "body": "A small interface piece with outsized practical value: a tree view of an agent run that shows parentage, so you can see which agent spawned which. As soon as subagents fan out beyond two or three, the transcript stops being a legible record of causality; a tree makes delegation and blame traceable at a glance. One of the more liked UI posts in the pull, for a reason that is entirely about debuggability.",
+          "url": "https://x.com/flohoeller/status/2112150373565612534"
         }
       ]
     },
     {
       "emoji": "🧠",
-      "title": "Research & Benchmarks",
+      "title": "Memory, Knowledge & Craft",
       "items": [
         {
-          "tag": "tencent-hunyuan-terminal-rsi-27b",
-          "title": "@NFT_Chen: Hunyuan's Terminal-RSI Takes a 27B Model From 51.7% to 86.5%",
-          "body": "A walkthrough of Tencent Hunyuan's newly open-sourced recursive self-improvement (RSI) recipe for terminal agents, Terminal-RSI. The pipeline alternates two rounds of \"verified-trajectory self-rewrite\" supervised fine-tuning with critique-inheriting RL refinement — Base → RSR-1 → RPR-1 → RSR-2 → RPR-2 — with each round's model generating the next round's training data. Reported results: Terminal-Bench 2.1 up from 51.70% to 86.52%, TB 4.0 from 0% to 19.84%, TB Hard at 79%, and long-horizon process reward from 0.21 to 0.37. The headline is that a 27B open model can climb to 86%+ on terminal tasks.",
-          "url": "https://x.com/NFT_Chen/status/2111723258517098599"
+          "tag": "mattpocock-personal-wiki-agent-memory",
+          "title": "@mattpocockuk: Three Months In, the Personal Wiki Is Critical Infrastructure",
+          "body": "A status report on a build-it-yourself knowledge base: every weekday a 15-minute podcast covers what newly entered the wiki from X, Discord, Slack, Gmail and GitHub issues, doubling as a vibe check on whether the wiki still reflects reality, with on-demand podcast deep-dives before he makes a video on a topic. The conclusion is the argument: it greatly enriches his courses and makes \"agents that run my business\" actually viable, and relying on a vendor for memory feels like a recipe for lock-in.",
+          "url": "https://x.com/mattpocockuk/status/2112131671097020895"
         },
         {
-          "tag": "andrew-ng-graph-engineering-course",
-          "title": "@Dhruvkumar16797: Andrew Ng's Two-Hour Graph Engineering Course, Chapter by Chapter",
-          "body": "A timestamped guide to a two-hour course that runs from a single agent to full automation: 9:14 for your first agent, 33:11 loop engineering, 1:02:46 graph engineering, 1:30:15 agents that rewrite themselves, and 1:49:05 the full graph system. The framing echoes the same Prompts → Agents → Loops → Graphs arc: most people stop after the first agent and call it automation, while the last forty minutes cover the graph that runs it without them.",
-          "url": "https://x.com/Dhruvkumar16797/status/2111766839516917979"
+          "tag": "tobi-anthropic-viz-shopify-river",
+          "title": "@tobi: The Same Anthropic Visualization, Seen From Inside Shopify's River",
+          "body": "Shopify's Tobi Lütke flags an Anthropic piece as an interesting read and answers it with the same visualization rebuilt from inside Shopify's River, crediting @aquapoiesis. Little commentary, mostly a side-by-side — but that is the useful part: an outside description of how agent systems are structured, set against what the same diagram looks like when it is an actual company's internal plumbing rather than a diagram.",
+          "url": "https://x.com/tobi/status/2111999594414665895"
         },
         {
-          "tag": "twelve-stage-agent-engineering-curriculum",
-          "title": "@suraj_sharma14: A 12-Stage Agent Engineering Curriculum, With Practice and Why",
-          "body": "A long-form roadmap for agent engineering built as twelve stages, each pairing what to learn, what to build and why it matters. It moves from agent architecture and state machines (DAGs, LangGraph, Temporal, durable state) through raw MCP servers, computer-use and GUI automation, 3-tier memory and context engineering, multi-agent swarms with typed state handoffs, sandboxed execution (E2B, gVisor, egress blocking), inter-agent security and prompt-injection middleware, human-in-the-loop breakpoints, self-correction loops, trajectory evals as CI gates, graceful degradation, and public teardowns. The recurring argument: typed state instead of raw text, and managed memory instead of infinite context.",
-          "url": "https://x.com/suraj_sharma14/status/2111789399176335412"
+          "tag": "colorfigures-claude-hand-inked-objects",
+          "title": "@Aprilzz423: Colorfigures — Describe an Object, Get a Hand-Inked Diagram That Works",
+          "body": "The follow-up to a skill that got attention for teaching through play: describe an everyday object and Claude draws it hand-inked and isometric, with buttons that actually work, and you can ask how something works so the skill labels the parts and explains what each one does. Released free and open source after enough people asked how it was made. Worth noting as a pattern — the reusable skill, not the one-off demo, is what travels.",
+          "url": "https://x.com/Aprilzz423/status/2111839048230666590"
+        }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "title": "Creative & Media Tooling",
+      "items": [
+        {
+          "tag": "renproton-anatomy-reveal-motion-design",
+          "title": "@renproton: /anatomy-reveal Turns Claude Into a Motion-Design Studio",
+          "body": "A skill stack aimed at product and launch video: Opus 5.5 plus the /anatomy skill already handles motion design, and adding /anatomy-reveal pushes it toward real-size 3D models built from a photo or a name, motion-blurred reveal films switchable between 1:1 and 16:9, and exploded views you can take apart. The realistic read is not \"Hollywood in a prompt\" but a fast first pass on the kind of reveal animation agencies bill for.",
+          "url": "https://x.com/renproton/status/2111857166030418376"
+        },
+        {
+          "tag": "story2board-consistency-layer-storyboards",
+          "title": "@FanShifu: Story2Board Attacks Character Consistency in AI Storyboards",
+          "body": "A former ByteDance team built a storyboard agent from 270,000+ annotated shots distilled out of 250 landmark films, and pointed it at the two things that break LLM storyboarding: faces changing between frames, and a single close-up reshoot resetting the whole art style. The fix is a Consistency Layer holding characters, wardrobe, signature props and sets as reusable assets, plus a shot-language model that recommends framing, axis, angle and camera movement from a plain-language scene description. Delivery is a printable PDF shot list with slug data, priced at $1 = 100 points with no subscription — which the author notes trades LTV and predictable MRR for a low barrier to try.",
+          "url": "https://x.com/FanShifu/status/2112131115964141790"
+        },
+        {
+          "tag": "codex-unreal-one-week-game",
+          "title": "@xingbugengming: A Week With Codex + Unreal, Fused Into One Small Game",
+          "body": "A build log rather than a claim: one week of work combining the campaign-map feel of Total War: Three Kingdoms with Mount & Blade's combat into a small AI-made game, with the whole development process cut into a video so others can follow the approach. The author is explicit that plenty is unfinished and it is meant as a reference, not a product. Still a useful data point on how far a single person gets in a week with a coding agent and a real engine.",
+          "url": "https://x.com/xingbugengming/status/2111743548945272840"
         }
       ]
     },
     {
       "emoji": "🏗️",
-      "title": "Infrastructure & Local Compute",
+      "title": "Industry, Compute & Debate",
       "items": [
         {
-          "tag": "bedroom-48-mac-mini-micro-datacenter",
-          "title": "@SandraNels10527: 48 Refurbished Mac Minis in a Spare Bedroom, $26.4K/Month",
-          "body": "A 24-year-old converted a spare bedroom into a micro-datacenter: 48 refurbished Mac minis stacked on a wire rack next to a fire extinguisher and a plastic stool, with the landlord assuming it was crypto mining on rent day. Replacing $14k/month of rented cloud GPUs, the rack runs 24/7 and reportedly produces about 14,000 images and 900 videos a day while she sleeps, across 11 brands for $26.4k/month in revenue against $314 in power — hardware paid back in 67 days. The same room also runs a Polymarket wallet that has netted $7.8M total, 97% from sports markets.",
-          "url": "https://x.com/SandraNels10527/status/2111742155161018443"
+          "tag": "town-108m-series-b-multiplayer-ai",
+          "title": "@jgreze: Town Raises $108M Betting the Moat Is Multiplayer AI",
+          "body": "Town announced a $108M Series B co-led by Forerunner Ventures and Menlo Ventures, on the thesis that the real workplace bottleneck is waiting on each other rather than a lack of individual capability. The product gives every employee a Townie; Townies ask each other questions, share only what their person would share, and do the work, so usefulness compounds with how much the team actually collaborates. The claim to test is the moat: most assistants are built for one person, and work does not happen alone.",
+          "url": "https://x.com/jgreze/status/2112184910702403754"
         },
         {
-          "tag": "twelve-gb-gpu-joint-emergency-session",
-          "title": "@sudoingX: The 12GB GPU That Runs What Opus 5.5 Won't Touch",
-          "body": "Satire dressed as breaking news: Dario Amodei and Sam Altman reportedly called a joint emergency session over a 12GB GPU, because it holds a 27B model that \"refuses nothing\" and does the SSH and server work Opus 5.5 will not touch, at 50 tok/s on a used 3060. The punchline is the policy split — Amodei wants the card restricted, Altman wants it billed to you monthly. It is a joke, but it captures the real tension between large hosted models and cheap local ones.",
-          "url": "https://x.com/sudoingX/status/2111718663263052048"
+          "tag": "codex-14-day-challenge-quota-backlash",
+          "title": "@KolinHuang: Halfway Through the Codex Challenge, the Quota Bill Comes Due",
+          "body": "A disciplined reply to Tibo's day-14 post: the shipped list — next-prompt autocomplete, lower disk usage, editing previous messages in the desktop app — set against what users say they actually need. That list is quota sufficient to finish a real coding session, predictable limits, a fix for the bug that randomly eats remaining usage, relief from the five-hour wall, memory that survives long conversations, and threads that do not break mid-task. The tone is affectionate, which is what makes it sting: \"someone who loved Codex.\"",
+          "url": "https://x.com/KolinHuang/status/2112050737001680939"
         },
         {
-          "tag": "steipete-ai-dr",
-          "title": "@steipete: \"AI;DR\"",
-          "body": "Two letters, no explanation, 500-plus likes in a few hours. The coinage lands as a genre label for the growing pile of AI-summarized-of-AI content — a \"too long; didn't read\" that has itself been delegated. Included as the pull's small cultural marker rather than a claim to verify.",
-          "url": "https://x.com/steipete/status/2111918049116987476"
-        }
-      ]
-    },
-    {
-      "emoji": "💬",
-      "title": "Debate & Culture",
-      "items": [
-        {
-          "tag": "dhh-chinese-models-rough-software",
-          "title": "@dhh: Respect for Chinese AI Models and Hardware, Frustration With the Software",
-          "body": "A pointed observation about a gap that does not get discussed much: the same ecosystem shipping impressive AI models and hardware still produces software that feels rough — WeChat, Alipay, HarmonyOS named directly. The author's puzzle is that unique aesthetics, visual fidelity and smooth flows look like the easy part, yet clearly are not. One of the more replied-to non-marketing posts in the pull.",
-          "url": "https://x.com/dhh/status/2111795187454296232"
-        },
-        {
-          "tag": "simonsmith-grok-bot-training-toggle",
-          "title": "@_simonsmith: Trying Grok Bot, and Can't Find the \"Don't Train on My Data\" Switch",
-          "body": "A practical first impression from someone evaluating personal agents against positive word of mouth for Grok Bot: the immediate question was how to turn off training on his data. He could not find the setting anywhere, and the bot's own initial instance did not know either. A concrete usability and trust gap at exactly the moment agentic assistants are pitching themselves as personal infrastructure.",
-          "url": "https://x.com/_simonsmith/status/2111579166042640486"
-        },
-        {
-          "tag": "trq212-vibe-coding-games-instead-of-playing",
-          "title": "@trq212: \"I'd Rather Vibe Code Games Than Play Them\"",
-          "body": "A quiet cultural observation that got more traction than expected: the author now prefers to vibe code small parts of games over actually playing them, especially cerebral titles like League. He is unsure what it means for games as a medium but suspects it matters. It is the player-side mirror of the same shift showing up across the timeline — building the thing increasingly competes with using it.",
-          "url": "https://x.com/trq212/status/2111945336537420259"
+          "tag": "elegant-math-as-human-crutch",
+          "title": "@Noe1017_Monad: Elegant Mathematics as a Crutch for Human Working Memory",
+          "body": "A provocative essay rather than a product note: elegant mathematical structures, the argument goes, exist because a top human mathematician can track only five or six interacting variables before collapsing, so we invent symmetry, invariants, homology and geometric intuition to avoid expanding high-order terms at all. Ten thousand concurrent agents, in this framing, can track ten thousand fifth-order cross terms as easily as 1+1 and simply expand to the seventh order, fit coefficients and cancel the divergent terms — no need to invent a concept a human can read. The bleak joke at the end: we finally got the answer from God's ledger and found he was not doing calculus, just pressing buttons on a calculator.",
+          "url": "https://x.com/Noe1017_Monad/status/2112008540592410951"
         }
       ]
     }
