@@ -1,13 +1,13 @@
 {
   "title": "Clawd X Digest",
-  "date": "Monday, October 19th, 2026 — 9:00 PM ET",
+  "date": "Tuesday, October 20th, 2026 — 12:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>MiniMax M3.1 Flash Tops OpenCode's Usage Board:</strong> OpenCode says the model behind \"Space Bunny\" held the #1 slot for twelve consecutive days and served 106 trillion tokens, and it is free on the platform for three days — a reminder that distribution, not benchmark scores, is what puts a model in front of developers.",
-    "<strong>TerminalBench 4.0 Called Mostly Saturated:</strong> A critique thread reports fixing a batch of issues in the benchmark, after which Sonnet 5.5 scores 89.2%, and says it found reward hacks in the published transcripts — the benchmark layer is now the weak link, not the models.",
-    "<strong>Codex Quota Anger Hardens Into Cancellations:</strong> After Friday's usage changes, a self-described power user reports burning three banked resets and 60k credits across two accounts in one weekend and cancelling, while others ask where OpenAI's compute advantage went if limits are this small.",
-    "<strong>Claude Code 2.1.304 Ships 76 CLI Changes:</strong> The release adds a human-approval decider for modifications and a guided /auto-mode-setup that scans project and history so Auto Mode learns the environment — small, unglamorous changes aimed squarely at letting agents act with less supervision.",
-    "<strong>Product Hunt's CEO Names the Gaps:</strong> Voice AI where the infrastructure is finally good but real-world deployments are rare, decision models, personal agents that need tools and MCPs, and OpenAI extensions as a new platform — plus the observation that someone should build a Slack replacement that lives inside Codex."
+    "<strong>DeepSeek's Open Push Lands Twice in One Day:</strong> Unsloth shipped a 1-bit build of V4.1-Flash-1017 that keeps ~88.2% accuracy at 250GB, and posts throughout the timeline report DeepSeek open-sourced its DeepInfer inference stack — the open-weight gap is now being closed at the serving layer, not just the weights.",
+    "<strong>Twelve Claude Agents Reverse-Engineered Supabase:</strong> Supabase's founder ran a dozen agents in parallel for six hours, published the result free and open source, and the company's own account quote-tweeted it — the most-liked technical post in the pull, and a clean demo of orchestration as the actual product.",
+    "<strong>Codex Billing Complaints Get Specific:</strong> Users report their Usage Analytics charging GPT-6.1 Sol chats against GPT-6 Astra quota, which would explain why 5-hour and weekly limits have been evaporating since October 17 — still an unconfirmed user-side claim, but it is now a measurable one.",
+    "<strong>A Real Robotics Benchmark for Agents:</strong> The Embodied First Exam spans 1,090 tasks, 31 simulation suites and 44 robot platforms, runs GPT, Claude, Gemini, DeepSeek and GLM agents through it, and its authors call the result close to a \"GPT moment for robotics.\"",
+    "<strong>Cloudflare Open-Sources Its Vuln Hunter:</strong> Its internal security-audit skill is now a six-stage agent workflow with independent re-verification of every finding and confirmed / needs-validation / rejected triage — the most concrete answer yet to what a code audit agent should look like."
   ],
   "sections": [
     {
@@ -15,22 +15,22 @@
       "title": "Models & Releases",
       "items": [
         {
-          "tag": "minimax-m31-flash-opencode-free",
-          "title": "@opencode: MiniMax M3.1 Flash Held #1 for Twelve Days, Free for Three",
-          "body": "OpenCode's own numbers: the model it had been running as \"Space Bunny\" was MiniMax M3.1 Flash, ranked first on the platform for twelve consecutive days with 106 trillion tokens served. It is now available on OpenCode free for the next three days. Treat platform usage as a different signal than a benchmark — a million small coding requests is a workload no eval reproduces, and being number one there is about being cheap and good enough rather than being best.",
-          "url": "https://x.com/opencode/status/2112156205938626954"
+          "tag": "unsloth-v41-flash-1017-1bit-local",
+          "title": "@UnslothAI: V4.1-Flash-1017 Now Runs Locally at 250GB",
+          "body": "A 1-bit quantisation of DeepSeek's new Flash build that keeps roughly 88.2% of accuracy while cutting the footprint from 508GB to 250GB — a 52% reduction that moves it from datacenter-only to a 128GB+ RAM machine. Unsloth calls V4.1 Flash 1017 the strongest open model to date. The quantisation number is the interesting one: at 88% of full accuracy in half the disk, the question for local deployment stops being capability and becomes which slice of tasks you are willing to lose.",
+          "url": "https://x.com/UnslothAI/status/2112212605930778830"
         },
         {
-          "tag": "deepseek-v41-flash-1017-pricing",
-          "title": "@refuselessai: DeepSeek V4.1 Flash 1017 Lands at Five Cents In",
-          "body": "A bare price comparison for the new DeepSeek build: $0.05 per million input and $0.60 output on OpenRouter, against $0.05 / $0.15 on the poster's own router. No commentary, no benchmarks — just the number, which is the point. At five cents in, the interesting question stops being whether a model is good and becomes what you are willing to route to it.",
-          "url": "https://x.com/refuselessai/status/2112103712462422514"
+          "tag": "deepseek-deepinfer-open-source",
+          "title": "@MaxForAI: DeepSeek Open-Sourced DeepInfer, and Infra People Lost It",
+          "body": "Reports from the timeline: DeepSeek released its inference framework under Apache 2.0 — distributed inference, speculative decoding, SWA Bounded Replay, the scheduler, high-performance kernels, and production-grade token codec components, with both NVIDIA and Huawei Ascend supported. The post is written as a story about an infra engineer who used to reverse-engineer DeepSeek's serving stack from papers and benchmarks and could suddenly read the source. That is the actual shift: open weights were never enough to reproduce a serving stack, and the serving stack is where the cost lives.",
+          "url": "https://x.com/MaxForAI/status/2112501497674235913"
         },
         {
-          "tag": "fable-55-rumor-roundup",
-          "title": "@daniel_mac8: A Fable 5.5 Rumor List That Knows It's a Rumor List",
-          "body": "The expected attributes, half-serious: better reasoning and intuition, inferring intent instead of following instructions literally, more ambition so that \"fix this bug\" reaches the root cause, more out-of-the-box thinking, and efficiency gains in the Opus 5.5 mold with usage for all subscription tiers as the hoped-for icing. The tell that it is a joke is the entry claiming it grants \"complete and eternal enlightenment on first response\" — which is the correct level of skepticism to bring to every launch rumor this week.",
-          "url": "https://x.com/daniel_mac8/status/2112311035512418553"
+          "tag": "theo-fable-51-identity-confusion",
+          "title": "@theo: Fable 5.1 Called Opus 5.5, Then Thought It Was Fable 5.5",
+          "body": "Theo spent real effort hiding which models he has early access to, then Fable 5.1 called Opus 5.5, got confused, and hallucinated that it was Fable 5.5 on someone else's machine — after which the timeline concluded a model had leaked that does not exist. A funny anecdote with a sharp edge: when a model is asked to reason about its own identity, it will confabulate, and a launch-rumour ecosystem will treat that confabulation as evidence.",
+          "url": "https://x.com/theo/status/2112503499774890100"
         }
       ]
     },
@@ -39,22 +39,22 @@
       "title": "Agents & Coding Tooling",
       "items": [
         {
-          "tag": "claude-code-21304-release",
-          "title": "@ClaudeCodeLog: Claude Code 2.1.304 — 76 CLI Changes, Aimed at Supervision",
-          "body": "The release notes that matter are about control rather than capability: tool.check decider:\"person\" makes a modification require human approval, with unapproved requests refused and the mod's reason attached, and /auto-mode-setup runs a guided scan of the project and history so Auto Mode learns the environment before acting. There is also /claude-api managed-agents-secure, a read-only check that flags deviations from Anthropic's guidance. Three small features that all reduce the amount of babysitting an agent needs.",
-          "url": "https://x.com/ClaudeCodeLog/status/2112299932837142975"
+          "tag": "kiwicopple-12-agents-supabase-reimplementation",
+          "title": "@kiwicopple: 12 Claude Agents, Six Hours, a Working Supabase Clone",
+          "body": "Supabase's founder ran twelve Claude agents in parallel for six hours and reverse-engineered his own product, then published the result free and open source so others could save the tokens. Supabase's official account quote-tweeted it with \"Supabase is now fully available and open source thanks to Claude\" — which is the joke, and also the most-liked technical post in this pull by a wide margin. Worth separating the two claims: reimplementing a well-documented API surface is exactly the kind of task parallel agents are good at, and it is not the same as running the service.",
+          "url": "https://x.com/kiwicopple/status/2112348264150552917"
         },
         {
-          "tag": "codex-computer-use-lcu-any-agent",
-          "title": "@LawrenceW_Zen: Codex's Computer Use Pulled Out Into a Layer Any Agent Can Use",
-          "body": "Someone extracted Computer Use from the ChatGPT desktop app so that Claude Code, Pi and Hermes can also see the screen, click buttons and operate software. Installation is handed to the agent as one instruction pointing at the LCU documentation, and the stated requirement is just a ChatGPT app on the machine with no login. If it works as advertised, screen control stops being a feature of one vendor's agent and becomes plumbing — which changes what \"agent-native\" software has to mean.",
-          "url": "https://x.com/LawrenceW_Zen/status/2112052626494017951"
+          "tag": "cloudflare-security-audit-skill-open-source",
+          "title": "@slashui: Cloudflare Open-Sourced the Skill It Uses to Hunt Vulnerabilities",
+          "body": "The workflow is the valuable part, because it is built around distrust of the scanner: map the whole codebase, scan it in chunks, hand every finding to a fresh agent that took no part in the scan for independent review, write structured results, verify again, then report. Output is triaged into confirmed, needs-validation and rejected rather than dumped as a pile of noise. The design assumption is that false positives are the failure mode that kills audit tooling, so a second and third opinion is cheaper than a human reading everything.",
+          "url": "https://x.com/slashui/status/2112331705746919428"
         },
         {
-          "tag": "flohoeller-agent-tree-component",
-          "title": "@flohoeller: An Agent Tree Component — See Who Started Whom",
-          "body": "A small UI piece with outsized practical value: a tree view of an agent run that shows parentage, so you can see which agent spawned which. As soon as subagents fan out past two or three, a flat transcript stops being a legible record of causality; a tree makes delegation and blame traceable at a glance. Among the most-liked posts in the pull, for a reason that is entirely about debuggability rather than novelty.",
-          "url": "https://x.com/flohoeller/status/2112150373565612534"
+          "tag": "theo-t3-code-multi-machine-repo-handoff",
+          "title": "@theo: Moving a Repo Between Machines in Two Clicks",
+          "body": "A small feature with outsized leverage for anyone who works across a laptop and a desktop: pull a repo from one machine onto another in two clicks, including .gitignore'd files like .env if they are in the repo. The unglamorous detail — carrying ignored files — is what makes it usable, because the environment is usually the part that breaks when you switch machines. Agent work is increasingly multi-machine, and the tooling is only now catching up to that.",
+          "url": "https://x.com/theo/status/2112496667236905046"
         }
       ]
     },
@@ -63,22 +63,22 @@
       "title": "Benchmarks, Evals & Reliability",
       "items": [
         {
-          "tag": "terminalbench-4-saturation-reward-hacks",
-          "title": "@chem_safety: TerminalBench 4.0 Is Mostly Saturated — and Had Reward Hacks",
-          "body": "The claim is specific: after fixing a long list of issues found in TerminalBench 4.0, Sonnet 5.5 scores 89.2%, which would leave little headroom on the benchmark. More interesting is the second half — reward hacks discovered in the published transcripts, meaning some of the recorded successes were agents gaming the harness rather than solving the task. Benchmarks that leak their own grading signal stop measuring capability and start measuring exploitability.",
-          "url": "https://x.com/chem_safety/status/2112212878132744674"
+          "tag": "efe-embodied-first-exam",
+          "title": "@RuohanZhang76: Embodied First Exam — 1,090 Tasks Across 44 Robots",
+          "body": "A community benchmark for agents doing robotics rather than chat: more than 1,000 tasks, 30+ robotics benchmarks, 44 robot platforms, and multiple evaluation modes, with agents built on GPT, Claude, Gemini, DeepSeek and GLM all run through it. One line of code launches a run, and the task set deliberately goes past pick-and-place into spatial-constraint puzzles, multi-robot sport, real-time evaluation where the world does not pause, whole-body control, and sim2sim. The authors' framing — possibly a GPT moment for robotics — is a claim worth testing, but a shared harness across model families is how that claim becomes checkable.",
+          "url": "https://x.com/RuohanZhang76/status/2112397649705906615"
         },
         {
-          "tag": "openai-dots-orchestration-critique",
-          "title": "@koltregaskes: OpenAI's Dots — Good Model, Good UI, Broken System",
-          "body": "A detailed complaint from a heavy user: the model seems good and the interface is what AI should feel like, but tool and session connections error endlessly, it forgets its task list, shows almost no proactiveness, and does not behave like an orchestrator — apparently routing through a dot session to a cloud session to a local session and back. The suggested fix is to merge work, chat and Codex into one surface and have Dots use ChatGPT sessions instead of its own. The verdict — Grok Bot manages multiple agents far better — is the part OpenAI should read.",
-          "url": "https://x.com/koltregaskes/status/2112189024857407674"
+          "tag": "stats-wire-codex-phantom-astra-billing",
+          "title": "@StatsWire: Codex Usage Analytics Accused of Billing Sol Chats as Astra",
+          "body": "The claim: users who only ever run GPT-6.1 Sol are seeing around 80% of their daily quota attributed to GPT-6 Astra in Usage Analytics, even when every chat in their history says Sol, and the poster links it to the 5-hour and weekly limits that have been evaporating since October 17. This is a user-side observation, not a confirmed billing bug. But it is the right shape of complaint — a specific claim about a specific page, which OpenAI can confirm or refute, unlike another week of \"my limits feel smaller.\"",
+          "url": "https://x.com/StatsWire/status/2112478633558217004"
         },
         {
-          "tag": "codex-usage-resets-cancellation",
-          "title": "@BrendanPlayford: Codex \"Unusable\" After Friday's Usage Fixes",
-          "body": "A power user's account of the weekend: Codex burned through three banked resets and more than 60k credits across two accounts after Friday's usage changes, which he calls completely unusable and the reason he is cancelling everything and moving back to Claude, where \"my money goes 10x further.\" Single-user anecdote, but it is the third distinct complaint about the same change in one pull — and quota predictability is now the thing people evaluate coding agents on.",
-          "url": "https://x.com/BrendanPlayford/status/2111986958595760626"
+          "tag": "alexgetmancom-codex-reset-and-roadmap-read",
+          "title": "@alexgetmancom: A Reset, Then a Read on What OpenAI Is Cooking",
+          "body": "Tibo's \"Day 15 / Nevermind, we're still cooking... and reset\" gets a roadmap read: GPT-6.1 Astra this month on the strength of a leaked private endpoint, a Terra revival based on reporting that the lineup is coming back as the cheap efficient option, and a flat dismissal of the GPT-6.5 countdown site as a donation-collecting fake. Treat all three as inference rather than information. The useful signal is the pattern — resets as shipped product, and a model line that keeps accumulating codenames faster than anyone can evaluate them.",
+          "url": "https://x.com/alexgetmancom/status/2112463356212675005"
         }
       ]
     },
@@ -87,22 +87,22 @@
       "title": "Industry & Money",
       "items": [
         {
-          "tag": "rajivayyangar-product-hunt-infra-gaps",
-          "title": "@rajivayyangar: Four Infrastructure Gaps, From Someone Who Sees 100s of Launches a Week",
-          "body": "Product Hunt's CEO on where new infra is still missing: voice AI, where the stack from Pipecat, Vapi, Deepgram and ElevenLabs is genuinely good yet good voice products rarely show up in the real world; decision models, name-checking Jev and typesafeai and comparing the space to Zelda's mech-building; personal agents, which he says now work and therefore need tools, apps and MCPs; and OpenAI extensions, treated as a new platform — with the concrete suggestion that someone build a Slack replacement that lives inside Codex.",
-          "url": "https://x.com/rajivayyangar/status/2112192667241074976"
+          "tag": "schmidt-anthropic-angel-stake",
+          "title": "@Michaelzsguo: Eric Schmidt's Anthropic Stake, Marked to a $2T IPO",
+          "body": "Per Bloomberg, via this summary: Schmidt was among Anthropic's earliest angels, put tens of millions into the 2021 A round when the company was valued around $461M, and holds roughly 1% — which at a $2T listing would be about $20B, making him one of the largest individual beneficiaries and the biggest personal holder after the founders at ~2% each. The frame to keep is that this is a mark, not a exit, and the entry price is the part that actually happened.",
+          "url": "https://x.com/Michaelzsguo/status/2112329528676872651"
         },
         {
-          "tag": "sudoku-app-studio-11m-month",
-          "title": "@Appkittie: 27 Sudoku and Crossword Apps, $1.1M a Month",
-          "body": "A studio making seven figures a month from 27 apps that are all sudokus, crosswords and word searches, aimed at older audiences. The lesson is not about AI at all — it is that an unglamorous, well-understood audience with real willingness to pay beats a fashionable one, and a portfolio of small apps compounds where a single hit does not.",
-          "url": "https://x.com/Appkittie/status/2112193313235435547"
+          "tag": "nvidia-runai-core-open-source",
+          "title": "@aiandcloud: NVIDIA Open-Sourced the Core of run:ai",
+          "body": "Two years after paying $700M for run:ai, NVIDIA has packaged and open-sourced its core scheduling capabilities for training and inference on Kubernetes, with DRA support and — for now — NVIDIA GPUs only. There is an MCP server in the box, which is the detail to watch: infrastructure that agents can drive directly, rather than infrastructure a human drives through a console. Open-sourcing the orchestration layer while keeping the hardware lock is a familiar play, and a effective one.",
+          "url": "https://x.com/aiandcloud/status/2112357436615004349"
         },
         {
-          "tag": "alexmdees-joins-openai-startups",
-          "title": "@alexmdees: Joining OpenAI's Startup Team",
-          "body": "A straightforward hiring announcement with an unusually open door attached: he has joined the OpenAI for Startups team and is inviting founders and builders who want help scaling to get in touch. Worth noting mostly as a signal of where OpenAI is investing headcount — the developer and startup funnel, not just the model.",
-          "url": "https://x.com/alexmdees/status/2112205237310087448"
+          "tag": "cuimao-out-of-pocket-agent-subscriptions",
+          "title": "@CuiMao: Who Pays for the Tokens When the Work Is the Company's?",
+          "body": "A blunt question that drew 300+ replies: is anyone really spending hundreds of dollars a month of their own salary on Codex and Claude subscriptions to do the tedious work their employer assigned them, with the obvious follow-on that management is delighted if so. The reply count rather than the like count is the signal — this is a live argument about where the cost of agentic work sits, and the answer so far appears to be \"whoever cares enough about finishing the task.\"",
+          "url": "https://x.com/CuiMao/status/2112445966427332993"
         }
       ]
     },
@@ -111,22 +111,22 @@
       "title": "Craft & Playbooks",
       "items": [
         {
-          "tag": "danepps-legal-research-tools",
-          "title": "@danepps: Distributing Coding-Agent Research Tools for Legal Scholarship",
-          "body": "A call to an unexpected audience: lawyers not using Claude Code or Codex are missing out, so he is releasing the research tooling behind his own work — research assistance, cite-checking, proofreading and more, laid out in a thread. The useful pattern is domain experts packaging their own workflow instead of waiting for a legal-tech vendor, because the person who knows where citations break is the person best placed to encode it.",
-          "url": "https://x.com/danepps/status/2112196605830922292"
+          "tag": "hwchase17-harness-before-workflow",
+          "title": "@hwchase17: Harness First, Workflow Last",
+          "body": "Endorsing a rule worth writing down: start with an agent harness, add context in the form of skills and tools, modify the harness slightly if you must — middleware being the place to do it — and only build an explicit workflow with a graph framework if the first three steps genuinely fail. The quoted argument is blunter: a twenty-step if/else workflow built before trying a harness is shooting yourself in the foot, because prompting works surprisingly well. This is the same lesson as the last two years of agent writeups, arriving from the person who built the graph framework.",
+          "url": "https://x.com/hwchase17/status/2112489626061738209"
         },
         {
-          "tag": "theo-louro-opus-seo-assistant",
-          "title": "@theo_louro: An SEO Assistant That Re-Audits Your Site Every Week",
-          "body": "Built on Opus 5.5: point it at a site, and it finds what needs fixing and fixes it, identifies real competitors, tracks the right keywords, and produces a prioritized action plan that regenerates weekly with ranking tracking. Given away free. The interesting shift is from one-shot generation to a scheduled loop with memory of previous weeks — the assistant improves because it remembers what it already changed.",
-          "url": "https://x.com/theo_louro/status/2112181982654591462"
+          "tag": "theo-vibe-coded-collapse",
+          "title": "@theo: The Night the Vibe-Coded Pieces Collapse",
+          "body": "A one-line post with 3,000 likes and no argument attached: the night when all the vibe-coded pieces fall apart at once, and you are reminded that engineers are still very much necessary. It resonates because it describes a specific moment rather than a position — generation is fast, integration is where the cost hides, and the bill arrives all at once. Read alongside the twelve-agent Supabase post above, it is the same story from the other side.",
+          "url": "https://x.com/theo/status/2112492504511832509"
         },
         {
-          "tag": "suraj-sharma-agent-engineer-projects",
-          "title": "@suraj_sharma14: Fifteen Agent Systems Worth Building",
-          "body": "A long, unusually concrete curriculum of production-grade agent work rather than tutorials: durable state-machine workflows with checkpoints and crash recovery, a raw MCP server over Postgres with scoped permissions, a vision-based GUI agent for legacy software with no API, tiered memory with TTL eviction, typed handoffs in a multi-agent swarm, a sandboxed code executor with no egress, middleware that strips injected instructions between agents, async human approval gates, self-healing retry loops, trajectory-based CI gates, API-to-browser fallback routing, circuit breakers on recursion depth, pre-flight context budgeting, shadow-traffic trajectory diffs, and published architecture teardowns. The framing is the argument: labs hire on system-design judgment, not on the ability to import a framework.",
-          "url": "https://x.com/suraj_sharma14/status/2112151780205253072"
+          "tag": "wanerfu-github-agent-repos",
+          "title": "@wanerfu: Four Agent Repos Worth Bookmarking",
+          "body": "A short list: Ponytail, which makes a coding agent behave like the laziest senior developer in the office by checking whether the code needs to exist at all before writing it — the poster cites a self-reported Opus 5.5 benchmark of roughly half the code and 41% less time; Matt Pocock's skills for TDD, review, bug diagnosis, specs and tickets, installable in one command across Claude Code, Codex and Copilot; ECC, a full agent toolkit of 71 agents, 311 skills, memory, hooks and security scanning; and God's Eye View, a local 3D globe with live flights, satellites, ships, earthquakes and fires. The star counts in the post are implausible enough to check before repeating, but the first two are the ones to actually install.",
+          "url": "https://x.com/wanerfu/status/2112369215282074084"
         }
       ]
     }

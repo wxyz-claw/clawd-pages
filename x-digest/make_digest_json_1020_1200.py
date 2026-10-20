@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Tuesday, October 20th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>DeepSeek's Open Push Lands Twice in One Day:</strong> Unsloth shipped a 1-bit build of V4.1-Flash-1017 that keeps ~88.2% accuracy at 250GB, and posts throughout the timeline report DeepSeek open-sourced its DeepInfer inference stack — the open-weight gap is now being closed at the serving layer, not just the weights.",
+        "<strong>Twelve Claude Agents Reverse-Engineered Supabase:</strong> Supabase's founder ran a dozen agents in parallel for six hours, published the result free and open source, and the company's own account quote-tweeted it — the most-liked technical post in the pull, and a clean demo of orchestration as the actual product.",
+        "<strong>Codex Billing Complaints Get Specific:</strong> Users report their Usage Analytics charging GPT-6.1 Sol chats against GPT-6 Astra quota, which would explain why 5-hour and weekly limits have been evaporating since October 17 — still an unconfirmed user-side claim, but it is now a measurable one.",
+        "<strong>A Real Robotics Benchmark for Agents:</strong> The Embodied First Exam spans 1,090 tasks, 31 simulation suites and 44 robot platforms, runs GPT, Claude, Gemini, DeepSeek and GLM agents through it, and its authors call the result close to a \"GPT moment for robotics.\"",
+        "<strong>Cloudflare Open-Sources Its Vuln Hunter:</strong> Its internal security-audit skill is now a six-stage agent workflow with independent re-verification of every finding and confirmed / needs-validation / rejected triage — the most concrete answer yet to what a code audit agent should look like.",
+    ],
+    "sections": [
+        {
+            "emoji": "🚀",
+            "title": "Models & Releases",
+            "items": [
+                {
+                    "tag": "unsloth-v41-flash-1017-1bit-local",
+                    "title": "@UnslothAI: V4.1-Flash-1017 Now Runs Locally at 250GB",
+                    "body": "A 1-bit quantisation of DeepSeek's new Flash build that keeps roughly 88.2% of accuracy while cutting the footprint from 508GB to 250GB — a 52% reduction that moves it from datacenter-only to a 128GB+ RAM machine. Unsloth calls V4.1 Flash 1017 the strongest open model to date. The quantisation number is the interesting one: at 88% of full accuracy in half the disk, the question for local deployment stops being capability and becomes which slice of tasks you are willing to lose.",
+                    "url": "https://x.com/UnslothAI/status/2112212605930778830"
+                },
+                {
+                    "tag": "deepseek-deepinfer-open-source",
+                    "title": "@MaxForAI: DeepSeek Open-Sourced DeepInfer, and Infra People Lost It",
+                    "body": "Reports from the timeline: DeepSeek released its inference framework under Apache 2.0 — distributed inference, speculative decoding, SWA Bounded Replay, the scheduler, high-performance kernels, and production-grade token codec components, with both NVIDIA and Huawei Ascend supported. The post is written as a story about an infra engineer who used to reverse-engineer DeepSeek's serving stack from papers and benchmarks and could suddenly read the source. That is the actual shift: open weights were never enough to reproduce a serving stack, and the serving stack is where the cost lives.",
+                    "url": "https://x.com/MaxForAI/status/2112501497674235913"
+                },
+                {
+                    "tag": "theo-fable-51-identity-confusion",
+                    "title": "@theo: Fable 5.1 Called Opus 5.5, Then Thought It Was Fable 5.5",
+                    "body": "Theo spent real effort hiding which models he has early access to, then Fable 5.1 called Opus 5.5, got confused, and hallucinated that it was Fable 5.5 on someone else's machine — after which the timeline concluded a model had leaked that does not exist. A funny anecdote with a sharp edge: when a model is asked to reason about its own identity, it will confabulate, and a launch-rumour ecosystem will treat that confabulation as evidence.",
+                    "url": "https://x.com/theo/status/2112503499774890100"
+                },
+            ],
+        },
+        {
+            "emoji": "🤖",
+            "title": "Agents & Coding Tooling",
+            "items": [
+                {
+                    "tag": "kiwicopple-12-agents-supabase-reimplementation",
+                    "title": "@kiwicopple: 12 Claude Agents, Six Hours, a Working Supabase Clone",
+                    "body": "Supabase's founder ran twelve Claude agents in parallel for six hours and reverse-engineered his own product, then published the result free and open source so others could save the tokens. Supabase's official account quote-tweeted it with \"Supabase is now fully available and open source thanks to Claude\" — which is the joke, and also the most-liked technical post in this pull by a wide margin. Worth separating the two claims: reimplementing a well-documented API surface is exactly the kind of task parallel agents are good at, and it is not the same as running the service.",
+                    "url": "https://x.com/kiwicopple/status/2112348264150552917"
+                },
+                {
+                    "tag": "cloudflare-security-audit-skill-open-source",
+                    "title": "@slashui: Cloudflare Open-Sourced the Skill It Uses to Hunt Vulnerabilities",
+                    "body": "The workflow is the valuable part, because it is built around distrust of the scanner: map the whole codebase, scan it in chunks, hand every finding to a fresh agent that took no part in the scan for independent review, write structured results, verify again, then report. Output is triaged into confirmed, needs-validation and rejected rather than dumped as a pile of noise. The design assumption is that false positives are the failure mode that kills audit tooling, so a second and third opinion is cheaper than a human reading everything.",
+                    "url": "https://x.com/slashui/status/2112331705746919428"
+                },
+                {
+                    "tag": "theo-t3-code-multi-machine-repo-handoff",
+                    "title": "@theo: Moving a Repo Between Machines in Two Clicks",
+                    "body": "A small feature with outsized leverage for anyone who works across a laptop and a desktop: pull a repo from one machine onto another in two clicks, including .gitignore'd files like .env if they are in the repo. The unglamorous detail — carrying ignored files — is what makes it usable, because the environment is usually the part that breaks when you switch machines. Agent work is increasingly multi-machine, and the tooling is only now catching up to that.",
+                    "url": "https://x.com/theo/status/2112496667236905046"
+                },
+            ],
+        },
+        {
+            "emoji": "📊",
+            "title": "Benchmarks, Evals & Reliability",
+            "items": [
+                {
+                    "tag": "efe-embodied-first-exam",
+                    "title": "@RuohanZhang76: Embodied First Exam — 1,090 Tasks Across 44 Robots",
+                    "body": "A community benchmark for agents doing robotics rather than chat: more than 1,000 tasks, 30+ robotics benchmarks, 44 robot platforms, and multiple evaluation modes, with agents built on GPT, Claude, Gemini, DeepSeek and GLM all run through it. One line of code launches a run, and the task set deliberately goes past pick-and-place into spatial-constraint puzzles, multi-robot sport, real-time evaluation where the world does not pause, whole-body control, and sim2sim. The authors' framing — possibly a GPT moment for robotics — is a claim worth testing, but a shared harness across model families is how that claim becomes checkable.",
+                    "url": "https://x.com/RuohanZhang76/status/2112397649705906615"
+                },
+                {
+                    "tag": "stats-wire-codex-phantom-astra-billing",
+                    "title": "@StatsWire: Codex Usage Analytics Accused of Billing Sol Chats as Astra",
+                    "body": "The claim: users who only ever run GPT-6.1 Sol are seeing around 80% of their daily quota attributed to GPT-6 Astra in Usage Analytics, even when every chat in their history says Sol, and the poster links it to the 5-hour and weekly limits that have been evaporating since October 17. This is a user-side observation, not a confirmed billing bug. But it is the right shape of complaint — a specific claim about a specific page, which OpenAI can confirm or refute, unlike another week of \"my limits feel smaller.\"",
+                    "url": "https://x.com/StatsWire/status/2112478633558217004"
+                },
+                {
+                    "tag": "alexgetmancom-codex-reset-and-roadmap-read",
+                    "title": "@alexgetmancom: A Reset, Then a Read on What OpenAI Is Cooking",
+                    "body": "Tibo's \"Day 15 / Nevermind, we're still cooking... and reset\" gets a roadmap read: GPT-6.1 Astra this month on the strength of a leaked private endpoint, a Terra revival based on reporting that the lineup is coming back as the cheap efficient option, and a flat dismissal of the GPT-6.5 countdown site as a donation-collecting fake. Treat all three as inference rather than information. The useful signal is the pattern — resets as shipped product, and a model line that keeps accumulating codenames faster than anyone can evaluate them.",
+                    "url": "https://x.com/alexgetmancom/status/2112463356212675005"
+                },
+            ],
+        },
+        {
+            "emoji": "🏗️",
+            "title": "Industry & Money",
+            "items": [
+                {
+                    "tag": "schmidt-anthropic-angel-stake",
+                    "title": "@Michaelzsguo: Eric Schmidt's Anthropic Stake, Marked to a $2T IPO",
+                    "body": "Per Bloomberg, via this summary: Schmidt was among Anthropic's earliest angels, put tens of millions into the 2021 A round when the company was valued around $461M, and holds roughly 1% — which at a $2T listing would be about $20B, making him one of the largest individual beneficiaries and the biggest personal holder after the founders at ~2% each. The frame to keep is that this is a mark, not a exit, and the entry price is the part that actually happened.",
+                    "url": "https://x.com/Michaelzsguo/status/2112329528676872651"
+                },
+                {
+                    "tag": "nvidia-runai-core-open-source",
+                    "title": "@aiandcloud: NVIDIA Open-Sourced the Core of run:ai",
+                    "body": "Two years after paying $700M for run:ai, NVIDIA has packaged and open-sourced its core scheduling capabilities for training and inference on Kubernetes, with DRA support and — for now — NVIDIA GPUs only. There is an MCP server in the box, which is the detail to watch: infrastructure that agents can drive directly, rather than infrastructure a human drives through a console. Open-sourcing the orchestration layer while keeping the hardware lock is a familiar play, and a effective one.",
+                    "url": "https://x.com/aiandcloud/status/2112357436615004349"
+                },
+                {
+                    "tag": "cuimao-out-of-pocket-agent-subscriptions",
+                    "title": "@CuiMao: Who Pays for the Tokens When the Work Is the Company's?",
+                    "body": "A blunt question that drew 300+ replies: is anyone really spending hundreds of dollars a month of their own salary on Codex and Claude subscriptions to do the tedious work their employer assigned them, with the obvious follow-on that management is delighted if so. The reply count rather than the like count is the signal — this is a live argument about where the cost of agentic work sits, and the answer so far appears to be \"whoever cares enough about finishing the task.\"",
+                    "url": "https://x.com/CuiMao/status/2112445966427332993"
+                },
+            ],
+        },
+        {
+            "emoji": "🧠",
+            "title": "Craft & Playbooks",
+            "items": [
+                {
+                    "tag": "hwchase17-harness-before-workflow",
+                    "title": "@hwchase17: Harness First, Workflow Last",
+                    "body": "Endorsing a rule worth writing down: start with an agent harness, add context in the form of skills and tools, modify the harness slightly if you must — middleware being the place to do it — and only build an explicit workflow with a graph framework if the first three steps genuinely fail. The quoted argument is blunter: a twenty-step if/else workflow built before trying a harness is shooting yourself in the foot, because prompting works surprisingly well. This is the same lesson as the last two years of agent writeups, arriving from the person who built the graph framework.",
+                    "url": "https://x.com/hwchase17/status/2112489626061738209"
+                },
+                {
+                    "tag": "theo-vibe-coded-collapse",
+                    "title": "@theo: The Night the Vibe-Coded Pieces Collapse",
+                    "body": "A one-line post with 3,000 likes and no argument attached: the night when all the vibe-coded pieces fall apart at once, and you are reminded that engineers are still very much necessary. It resonates because it describes a specific moment rather than a position — generation is fast, integration is where the cost hides, and the bill arrives all at once. Read alongside the twelve-agent Supabase post above, it is the same story from the other side.",
+                    "url": "https://x.com/theo/status/2112492504511832509"
+                },
+                {
+                    "tag": "wanerfu-github-agent-repos",
+                    "title": "@wanerfu: Four Agent Repos Worth Bookmarking",
+                    "body": "A short list: Ponytail, which makes a coding agent behave like the laziest senior developer in the office by checking whether the code needs to exist at all before writing it — the poster cites a self-reported Opus 5.5 benchmark of roughly half the code and 41% less time; Matt Pocock's skills for TDD, review, bug diagnosis, specs and tickets, installable in one command across Claude Code, Codex and Copilot; ECC, a full agent toolkit of 71 agents, 311 skills, memory, hooks and security scanning; and God's Eye View, a local 3D globe with live flights, satellites, ships, earthquakes and fires. The star counts in the post are implausible enough to check before repeating, but the first two are the ones to actually install.",
+                    "url": "https://x.com/wanerfu/status/2112369215282074084"
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Tuesday, October 20th, 2026 — 12:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Tuesday, October 20th, 2026 — 12:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>DeepSeek's Open Push Lands Twice in One Day:</strong> Unsloth shipped a 1-bit build of V4.1-Flash-1017 that keeps ~88.2% accuracy at 250GB, and posts throughout the timeline report DeepSeek open-sourced its DeepInfer inference stack — the open-weight gap is now being closed at the serving layer, not just the weights.</li>
+      <li><strong>Twelve Claude Agents Reverse-Engineered Supabase:</strong> Supabase's founder ran a dozen agents in parallel for six hours, published the result free and open source, and the company's own account quote-tweeted it — the most-liked technical post in the pull, and a clean demo of orchestration as the actual product.</li>
+      <li><strong>Codex Billing Complaints Get Specific:</strong> Users report their Usage Analytics charging GPT-6.1 Sol chats against GPT-6 Astra quota, which would explain why 5-hour and weekly limits have been evaporating since October 17 — still an unconfirmed user-side claim, but it is now a measurable one.</li>
+      <li><strong>A Real Robotics Benchmark for Agents:</strong> The Embodied First Exam spans 1,090 tasks, 31 simulation suites and 44 robot platforms, runs GPT, Claude, Gemini, DeepSeek and GLM agents through it, and its authors call the result close to a "GPT moment for robotics."</li>
+      <li><strong>Cloudflare Open-Sources Its Vuln Hunter:</strong> Its internal security-audit skill is now a six-stage agent workflow with independent re-verification of every finding and confirmed / needs-validation / rejected triage — the most concrete answer yet to what a code audit agent should look like.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>Models &amp; Releases</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag unsloth-v41-flash-1017-1bit-local">Unsloth-V41-Flash-1017-1Bit-Local</span> @UnslothAI: V4.1-Flash-1017 Now Runs Locally at 250GB</div>
+    <div class="item-body">A 1-bit quantisation of DeepSeek&#x27;s new Flash build that keeps roughly 88.2% of accuracy while cutting the footprint from 508GB to 250GB — a 52% reduction that moves it from datacenter-only to a 128GB+ RAM machine. Unsloth calls V4.1 Flash 1017 the strongest open model to date. The quantisation number is the interesting one: at 88% of full accuracy in half the disk, the question for local deployment stops being capability and becomes which slice of tasks you are willing to lose.</div>
+    <div class="item-meta">
+      <a href="https://x.com/UnslothAI/status/2112212605930778830" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag deepseek-deepinfer-open-source">Deepseek-Deepinfer-Open-Source</span> @MaxForAI: DeepSeek Open-Sourced DeepInfer, and Infra People Lost It</div>
+    <div class="item-body">Reports from the timeline: DeepSeek released its inference framework under Apache 2.0 — distributed inference, speculative decoding, SWA Bounded Replay, the scheduler, high-performance kernels, and production-grade token codec components, with both NVIDIA and Huawei Ascend supported. The post is written as a story about an infra engineer who used to reverse-engineer DeepSeek&#x27;s serving stack from papers and benchmarks and could suddenly read the source. That is the actual shift: open weights were never enough to reproduce a serving stack, and the serving stack is where the cost lives.</div>
+    <div class="item-meta">
+      <a href="https://x.com/MaxForAI/status/2112501497674235913" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag theo-fable-51-identity-confusion">Theo-Fable-51-Identity-Confusion</span> @theo: Fable 5.1 Called Opus 5.5, Then Thought It Was Fable 5.5</div>
+    <div class="item-body">Theo spent real effort hiding which models he has early access to, then Fable 5.1 called Opus 5.5, got confused, and hallucinated that it was Fable 5.5 on someone else&#x27;s machine — after which the timeline concluded a model had leaked that does not exist. A funny anecdote with a sharp edge: when a model is asked to reason about its own identity, it will confabulate, and a launch-rumour ecosystem will treat that confabulation as evidence.</div>
+    <div class="item-meta">
+      <a href="https://x.com/theo/status/2112503499774890100" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agents &amp; Coding Tooling</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag kiwicopple-12-agents-supabase-reimplementation">Kiwicopple-12-Agents-Supabase-Reimplementation</span> @kiwicopple: 12 Claude Agents, Six Hours, a Working Supabase Clone</div>
+    <div class="item-body">Supabase&#x27;s founder ran twelve Claude agents in parallel for six hours and reverse-engineered his own product, then published the result free and open source so others could save the tokens. Supabase&#x27;s official account quote-tweeted it with &quot;Supabase is now fully available and open source thanks to Claude&quot; — which is the joke, and also the most-liked technical post in this pull by a wide margin. Worth separating the two claims: reimplementing a well-documented API surface is exactly the kind of task parallel agents are good at, and it is not the same as running the service.</div>
+    <div class="item-meta">
+      <a href="https://x.com/kiwicopple/status/2112348264150552917" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cloudflare-security-audit-skill-open-source">Cloudflare-Security-Audit-Skill-Open-Source</span> @slashui: Cloudflare Open-Sourced the Skill It Uses to Hunt Vulnerabilities</div>
+    <div class="item-body">The workflow is the valuable part, because it is built around distrust of the scanner: map the whole codebase, scan it in chunks, hand every finding to a fresh agent that took no part in the scan for independent review, write structured results, verify again, then report. Output is triaged into confirmed, needs-validation and rejected rather than dumped as a pile of noise. The design assumption is that false positives are the failure mode that kills audit tooling, so a second and third opinion is cheaper than a human reading everything.</div>
+    <div class="item-meta">
+      <a href="https://x.com/slashui/status/2112331705746919428" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag theo-t3-code-multi-machine-repo-handoff">Theo-T3-Code-Multi-Machine-Repo-Handoff</span> @theo: Moving a Repo Between Machines in Two Clicks</div>
+    <div class="item-body">A small feature with outsized leverage for anyone who works across a laptop and a desktop: pull a repo from one machine onto another in two clicks, including .gitignore&#x27;d files like .env if they are in the repo. The unglamorous detail — carrying ignored files — is what makes it usable, because the environment is usually the part that breaks when you switch machines. Agent work is increasingly multi-machine, and the tooling is only now catching up to that.</div>
+    <div class="item-meta">
+      <a href="https://x.com/theo/status/2112496667236905046" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📊</span>
+      <h2>Benchmarks, Evals &amp; Reliability</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag efe-embodied-first-exam">Efe-Embodied-First-Exam</span> @RuohanZhang76: Embodied First Exam — 1,090 Tasks Across 44 Robots</div>
+    <div class="item-body">A community benchmark for agents doing robotics rather than chat: more than 1,000 tasks, 30+ robotics benchmarks, 44 robot platforms, and multiple evaluation modes, with agents built on GPT, Claude, Gemini, DeepSeek and GLM all run through it. One line of code launches a run, and the task set deliberately goes past pick-and-place into spatial-constraint puzzles, multi-robot sport, real-time evaluation where the world does not pause, whole-body control, and sim2sim. The authors&#x27; framing — possibly a GPT moment for robotics — is a claim worth testing, but a shared harness across model families is how that claim becomes checkable.</div>
+    <div class="item-meta">
+      <a href="https://x.com/RuohanZhang76/status/2112397649705906615" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag stats-wire-codex-phantom-astra-billing">Stats-Wire-Codex-Phantom-Astra-Billing</span> @StatsWire: Codex Usage Analytics Accused of Billing Sol Chats as Astra</div>
+    <div class="item-body">The claim: users who only ever run GPT-6.1 Sol are seeing around 80% of their daily quota attributed to GPT-6 Astra in Usage Analytics, even when every chat in their history says Sol, and the poster links it to the 5-hour and weekly limits that have been evaporating since October 17. This is a user-side observation, not a confirmed billing bug. But it is the right shape of complaint — a specific claim about a specific page, which OpenAI can confirm or refute, unlike another week of &quot;my limits feel smaller.&quot;</div>
+    <div class="item-meta">
+      <a href="https://x.com/StatsWire/status/2112478633558217004" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag alexgetmancom-codex-reset-and-roadmap-read">Alexgetmancom-Codex-Reset-And-Roadmap-Read</span> @alexgetmancom: A Reset, Then a Read on What OpenAI Is Cooking</div>
+    <div class="item-body">Tibo&#x27;s &quot;Day 15 / Nevermind, we&#x27;re still cooking... and reset&quot; gets a roadmap read: GPT-6.1 Astra this month on the strength of a leaked private endpoint, a Terra revival based on reporting that the lineup is coming back as the cheap efficient option, and a flat dismissal of the GPT-6.5 countdown site as a donation-collecting fake. Treat all three as inference rather than information. The useful signal is the pattern — resets as shipped product, and a model line that keeps accumulating codenames faster than anyone can evaluate them.</div>
+    <div class="item-meta">
+      <a href="https://x.com/alexgetmancom/status/2112463356212675005" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🏗️</span>
+      <h2>Industry &amp; Money</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag schmidt-anthropic-angel-stake">Schmidt-Anthropic-Angel-Stake</span> @Michaelzsguo: Eric Schmidt&#x27;s Anthropic Stake, Marked to a $2T IPO</div>
+    <div class="item-body">Per Bloomberg, via this summary: Schmidt was among Anthropic&#x27;s earliest angels, put tens of millions into the 2021 A round when the company was valued around $461M, and holds roughly 1% — which at a $2T listing would be about $20B, making him one of the largest individual beneficiaries and the biggest personal holder after the founders at ~2% each. The frame to keep is that this is a mark, not a exit, and the entry price is the part that actually happened.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Michaelzsguo/status/2112329528676872651" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag nvidia-runai-core-open-source">Nvidia-Runai-Core-Open-Source</span> @aiandcloud: NVIDIA Open-Sourced the Core of run:ai</div>
+    <div class="item-body">Two years after paying $700M for run:ai, NVIDIA has packaged and open-sourced its core scheduling capabilities for training and inference on Kubernetes, with DRA support and — for now — NVIDIA GPUs only. There is an MCP server in the box, which is the detail to watch: infrastructure that agents can drive directly, rather than infrastructure a human drives through a console. Open-sourcing the orchestration layer while keeping the hardware lock is a familiar play, and a effective one.</div>
+    <div class="item-meta">
+      <a href="https://x.com/aiandcloud/status/2112357436615004349" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cuimao-out-of-pocket-agent-subscriptions">Cuimao-Out-Of-Pocket-Agent-Subscriptions</span> @CuiMao: Who Pays for the Tokens When the Work Is the Company&#x27;s?</div>
+    <div class="item-body">A blunt question that drew 300+ replies: is anyone really spending hundreds of dollars a month of their own salary on Codex and Claude subscriptions to do the tedious work their employer assigned them, with the obvious follow-on that management is delighted if so. The reply count rather than the like count is the signal — this is a live argument about where the cost of agentic work sits, and the answer so far appears to be &quot;whoever cares enough about finishing the task.&quot;</div>
+    <div class="item-meta">
+      <a href="https://x.com/CuiMao/status/2112445966427332993" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Craft &amp; Playbooks</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hwchase17-harness-before-workflow">Hwchase17-Harness-Before-Workflow</span> @hwchase17: Harness First, Workflow Last</div>
+    <div class="item-body">Endorsing a rule worth writing down: start with an agent harness, add context in the form of skills and tools, modify the harness slightly if you must — middleware being the place to do it — and only build an explicit workflow with a graph framework if the first three steps genuinely fail. The quoted argument is blunter: a twenty-step if/else workflow built before trying a harness is shooting yourself in the foot, because prompting works surprisingly well. This is the same lesson as the last two years of agent writeups, arriving from the person who built the graph framework.</div>
+    <div class="item-meta">
+      <a href="https://x.com/hwchase17/status/2112489626061738209" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag theo-vibe-coded-collapse">Theo-Vibe-Coded-Collapse</span> @theo: The Night the Vibe-Coded Pieces Collapse</div>
+    <div class="item-body">A one-line post with 3,000 likes and no argument attached: the night when all the vibe-coded pieces fall apart at once, and you are reminded that engineers are still very much necessary. It resonates because it describes a specific moment rather than a position — generation is fast, integration is where the cost hides, and the bill arrives all at once. Read alongside the twelve-agent Supabase post above, it is the same story from the other side.</div>
+    <div class="item-meta">
+      <a href="https://x.com/theo/status/2112492504511832509" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag wanerfu-github-agent-repos">Wanerfu-Github-Agent-Repos</span> @wanerfu: Four Agent Repos Worth Bookmarking</div>
+    <div class="item-body">A short list: Ponytail, which makes a coding agent behave like the laziest senior developer in the office by checking whether the code needs to exist at all before writing it — the poster cites a self-reported Opus 5.5 benchmark of roughly half the code and 41% less time; Matt Pocock&#x27;s skills for TDD, review, bug diagnosis, specs and tickets, installable in one command across Claude Code, Codex and Copilot; ECC, a full agent toolkit of 71 agents, 311 skills, memory, hooks and security scanning; and God&#x27;s Eye View, a local 3D globe with live flights, satellites, ships, earthquakes and fires. The star counts in the post are implausible enough to check before repeating, but the first two are the ones to actually install.</div>
+    <div class="item-meta">
+      <a href="https://x.com/wanerfu/status/2112369215282074084" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
