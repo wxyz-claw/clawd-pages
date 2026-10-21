@@ -24,8 +24,8 @@ if [ -f "$DIR/index.html" ] && [ -f "$DIR/$F" ]; then
   cmp -s "$DIR/$F" "$DIR/index.html" || { print -r -- "FAIL: index.html differs from $F"; fail=1; }
 fi
 
-if ! git -C /Users/jwang/clawd-pages log -1 --format=%s | grep -q "$DAY $HHMM"; then
-  print -r -- "FAIL: latest commit subject does not mention '$DAY $HHMM'"
+if ! git -C /Users/jwang/clawd-pages log -1 --format=%s -- "x-digest/$F" | grep -q "$DAY $HHMM"; then
+  print -r -- "FAIL: no commit for x-digest/$F mentioning '$DAY $HHMM'"
   fail=1
 fi
 
