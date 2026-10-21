@@ -1,0 +1,149 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Wednesday, October 21st, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>eMudhra's CA Keys Were Single-Digit Numbers:</strong> Eight intermediate CA private keys — P-384 keys that should be 116-digit randoms — turned out to be values like 4, 56 and 115, breakable by trying 255 possibilities; browsers blocked them, but servers, containers and dev tools that skip CT and revocation checks could still trust them.",
+        "<strong>PHP2Shell Took Government Sites Offline:</strong> Two critical PHP vulnerabilities with exploit code circulating pushed Finland, the Netherlands and France to pull government sites, with an estimated 5.1 million exposed PHP servers and Cloudflare reporting early attack traffic.",
+        "<strong>LiteLLM 1.107.0 Shipped Malicious Code:</strong> JFrog flagged a supply-chain attack in the PyPI release and told teams to avoid the version and audit any environment that installed or executed it.",
+        "<strong>Codex Made Prompt Cache Permanent:</strong> Cached input now costs roughly 90% fewer credits and persists across sessions tied to the logged-in user — the cold-start cost of long agent tasks drops by about an order of magnitude.",
+        "<strong>The Opus 5.5 Quota Mystery Got Loud:</strong> Users are digging through jsonl logs to explain fast-draining weekly quotas, while Tibo publicly asked Sam Altman whether the 'no more resets' rumour was true.",
+    ],
+    "sections": [
+        {
+            "emoji": "🚨",
+            "title": "The eMudhra CA Collapse",
+            "items": [
+                {
+                    "tag": "snakeyesv1-emudhra-keys-small-numbers",
+                    "title": "@snakeyesV1: The Keys Were 4, 56, 66, 115, 155, 156, 230 and 237",
+                    "body": "The private keys were not stolen — they were tiny. ECDSA P-384 keys should be random numbers around 116 digits long; all eight were below 256, so 255 guesses recover them. A researcher found this from the public certificates on Oct 17, signed 'We have a problem here - Wayne' with each key, and sent it to the browser root programs, which rebuilt the blocklists the same day. Six of the CAs issue TLS certificates chaining to emSign ECC Root CA - G3; two sign code; Sectigo cross-signed all eight under AAA Certificate Services. Browsers were protected because no certs from these CAs appear in CT logs — but curl, scripts, apps and devices that skip CT and revocation checks could have been fooled since April 2025.",
+                    "url": "https://x.com/snakeyesV1/status/2112720612313407762"
+                },
+                {
+                    "tag": "anzalabidi-72-hours-three-incidents",
+                    "title": "@AnzalAbidi: 72 Hours, Three Incidents — eMudhra, PingCAP and PHP",
+                    "body": "A compact incident round-up: the eMudhra CA compromise, a 10.6 TB PingCAP / TiDB Cloud breach traced to GCP and Azure credentials committed in the company's own repos, and the PHP vulnerabilities. The eMudhra root cause is the detail worth keeping — a bug in an HSM key-wrapping test script produced a second set of weak P-384 keys, operators picked the wrong labels, and weeks later someone switched the CRL signer to the weak keys rather than asking why the signatures had stopped matching. Every layer of that sequence was a human decision made after an automated warning.",
+                    "url": "https://x.com/AnzalAbidi/status/2112802425052754183"
+                },
+                {
+                    "tag": "charliermarsh-uv-bundled-certs",
+                    "title": "@charliermarsh: uv 0.13.4 and the Bundled-CA Problem",
+                    "body": "The uv release updates bundled certificates in response to eMudhra, with the important caveat that this is not a uv problem: much of open source ships its own CA bundles — certifi, webpki-root-certs and similar packages — so the vulnerable trust store is duplicated across language ecosystems. The actionable line is to upgrade anything that bundles CA certificates, not just the browser on your laptop. It is also a reminder that 'update your browser' is the easy half of a CA incident.",
+                    "url": "https://x.com/charliermarsh/status/2112598956996010030"
+                },
+            ],
+        },
+        {
+            "emoji": "🐘",
+            "title": "PHP2Shell & Supply Chain",
+            "items": [
+                {
+                    "tag": "wordpress-php-critical-vulnerabilities",
+                    "title": "@WordPress: Two Critical PHP Vulnerabilities, Patch Now",
+                    "body": "The PHP project released fixes for two critical vulnerabilities affecting servers that host PHP applications, and the advice is blunt: confirm your hosting provider's update plan and update PHP immediately. Versions before PHP 8.2 no longer receive security updates. The post also clarifies that this is not WordPress-specific and no WordPress update is required — useful because a lot of site owners will see the alert and patch the wrong layer.",
+                    "url": "https://x.com/WordPress/status/2112907323265917274"
+                },
+                {
+                    "tag": "forab-php2shell-governments-offline",
+                    "title": "@_FORAB: 'PHP2Shell' — One Request, Whole Server",
+                    "body": "The post says the two PHP bugs are being called PHP2Shell and that no login is needed — a single request can take over a server, install malware, steal data or take the site down. It reports Finland, the Netherlands and France pulling government sites offline, an estimated 5.1 million exposed PHP servers, Cloudflare's CTO saying early attack traffic is already visible, and the UK's NCSC advising that systems which cannot be patched should be taken down. It also notes the bugs were found with AI assistance, which is now part of the disclosure story as well as the exploitation story.",
+                    "url": "https://x.com/_FORAB/status/2112921626300031323"
+                },
+                {
+                    "tag": "jfrogsecurity-litellm-pypi-supply-chain",
+                    "title": "@JFrogSecurity: Malicious Code in LiteLLM 1.107.0",
+                    "body": "JFrog says it identified a supply-chain attack involving malicious code in the LiteLLM 1.107.0 PyPI release, and advises avoiding that version and investigating any environment where it was installed or executed. LiteLLM sits in the request path for a lot of LLM applications, which is what makes this more than a routine bad package: the compromised component is often the one holding provider API keys. Pin the version, check lockfiles and rotate anything that ran it.",
+                    "url": "https://x.com/JFrogSecurity/status/2112882176156909646"
+                },
+            ],
+        },
+        {
+            "emoji": "🤖",
+            "title": "Claude, Codex & the Quota Wars",
+            "items": [
+                {
+                    "tag": "kolinhuang-codex-cache-forever",
+                    "title": "@KolinHuang: Codex Caches Are Now Kept Forever",
+                    "body": "The post says Codex caches are no longer expiring, and that Astra's cached input costs 90% fewer credits than uncached input. On its own that reads like a billing footnote; in practice it changes what a long-running agent costs. If the cache survives between sessions, the expensive part of a coding agent stops being 're-read the repository every time' and becomes the new work only.",
+                    "url": "https://x.com/KolinHuang/status/2112745885415125313"
+                },
+                {
+                    "tag": "off-thetarget-permanent-cache-economics",
+                    "title": "@off_thetarget: What Permanent Cache Does to Agent Economics",
+                    "body": "A useful breakdown of the same change: most API prompt caches expire within about 12 hours, while Codex and Work bind the cache to the logged-in user and keep it across sessions and weeks. Cached tokens drop to roughly 1/20 of normal input price — a 95% cut — so the cold-start cost of a large codebase goes to zero and the same monthly quota buys about an order of magnitude more effective turns. The interesting claim is not the latency; it is that subscription agents get a real productivity multiplier from a caching policy.",
+                    "url": "https://x.com/off_thetarget/status/2112754303802982904"
+                },
+                {
+                    "tag": "giadotai-opus-quota-jsonl-logs",
+                    "title": "@giadotai: Opus 5.5 Users Are Auditing Their Own jsonl Logs",
+                    "body": "The complaint is specific: Opus 5.5 users are reading through their own jsonl logs to work out why weekly quotas are draining so quickly. That is a strange place for a paid product to leave its users — the billing is visible, the cause is not, and the only diagnostic tool available is the transcript. Whatever the actual cause, the absence of an official explanation is now part of the story.",
+                    "url": "https://x.com/giadotai/status/2112887667906191832"
+                },
+                {
+                    "tag": "gkev1n-tibo-asks-sam-altman",
+                    "title": "@GKev1n: Tibo Asks Sam Altman 'Is This True'",
+                    "body": "After an unverified account posted 'internal' OpenAI claims — that the company was unhappy with Tibo and that the endless resets would stop — Tibo showed up in the replies and asked Sam Altman directly. The post reads the move as good comedic handling of a rumour, but also notes the real anger underneath: users complaining that quotas are quietly shrinking and that even two $200 accounts are not enough for Astra. Either the resets are a personal favour or they are policy; the ambiguity is the problem.",
+                    "url": "https://x.com/GKev1n/status/2112914513830027404"
+                },
+            ],
+        },
+        {
+            "emoji": "🧬",
+            "title": "Models & Research",
+            "items": [
+                {
+                    "tag": "scaling01-gpt61-sol-reasoning-traces",
+                    "title": "@scaling01: GPT-6.1-Sol's Reasoning Traces, 'Totally Legible'",
+                    "body": "A screenshot post of GPT-6.1-Sol's reasoning trace, captioned 'totally legible, nothing to worry about.' The sarcasm is the content: the trace is being shown as evidence that the newest reasoning models still produce output that is hard to audit, at exactly the moment regulators and labs are arguing that legibility is solved. Treat it as a pointer to the state of reasoning transparency, not as a benchmark.",
+                    "url": "https://x.com/scaling01/status/2112707058558771558"
+                },
+                {
+                    "tag": "nft_chen-sage-a15-35b",
+                    "title": "@NFT_Chen: Shanghai AI Lab's Sage-A1.5 — 35B Beating Bigger Models",
+                    "body": "The claim: Sage-A1.5 is a 35B MoE with only 3B active parameters, aimed at long-horizon execution and scientific exploration. The poster lists FS-Olympiad 81.0, CMT 80.0, PinchBench 90.0, SWE-Bench Pro 61.2, BrowseComp 82.8 and IFBench 81.6, and says it beats same-tier A1 and Ornith-1.5 while edging Kimi-K3, GLM-5.3 and GPT-5.6-sol on several. Those are the poster's numbers, not an independent evaluation — but the pattern of small-active-parameter agent models competing at the top is now consistent across Chinese labs.",
+                    "url": "https://x.com/NFT_Chen/status/2112825844305682477"
+                },
+                {
+                    "tag": "pluvio9yte-memt-1-memory-in-compute",
+                    "title": "@Pluvio9yte: MemT 1.0 Puts Memory Inside the Model",
+                    "body": "The argument: everything the industry calls 'memory' today lives outside the model — RAG chunks in a vector store, middleware that recalls context before each call, error histories stuffed into a long window. The analogy is a brilliant scholar with severe anterograde amnesia, covered in sticky notes by an assistant. MemOS's MemT 1.0 instead pushes remembering, correcting and updating experience into the model's computation, with internal tests claiming 5%+ gains in coding and working scenarios. The claim is worth watching because it attacks the assumption that context length is the only lever.",
+                    "url": "https://x.com/Pluvio9yte/status/2112702909565587829"
+                },
+            ],
+        },
+        {
+            "emoji": "🏗️",
+            "title": "Agents & Builders",
+            "items": [
+                {
+                    "tag": "tiagerbao-google-artemis-android-agent",
+                    "title": "@TiagerBao: Google Open-Sources ARTEMIS, an Android-Operating Agent",
+                    "body": "ARTEMIS connects through MCP to Claude Code, Codex and Cursor, then drives an Android phone: tapping, swiping, typing across apps, running login and navigation test flows, capturing screenshots and Logcat, generating reports and replaying runs. Flash mode takes about 3–5 seconds per step; Pro mode coordinates multiple agents with planning and verification. The project claims over 99% completion on AndroidWorld. The practical use is QA — the part of mobile development that has always been 'pick up the phone and tap through it again.'",
+                    "url": "https://x.com/TiagerBao/status/2112774693954470048"
+                },
+                {
+                    "tag": "theo-t3-code-365-trillion-tokens",
+                    "title": "@theo: T3 Code Users Processed ~36.5 Trillion Tokens",
+                    "body": "The number is the post: T3 Code users processed roughly 36.5 trillion tokens in the same window, which the poster says is 1.5x all Gemini 4 Argon demand globally. Even allowing for the framing, it is a striking illustration of how much inference now flows through a single developer tool — and how hard it has become to reason about 'global demand' when one client can out-volume a frontier lab's consumer traffic.",
+                    "url": "https://x.com/theo/status/2112891770338209933"
+                },
+                {
+                    "tag": "oscarlzn-voice-note-to-pr-ring",
+                    "title": "@oscarlzn: Voice Note to PR in Under 30 Minutes, via a Ring",
+                    "body": "A build log worth reading for the architecture: a Pebble Index ring records the request, the app transcribes it and posts to a verified webhook, a small Lovable triage app stores note and audio, Gemini re-transcribes with a custom word list, and a Claude Code routine reads it through Lovable's MCP, decides whether the intent is a new app, an edit, or a change to Lovable itself, then starts the build. The poster says it took an afternoon to build. The interesting part is not the ring — it is that the glue between voice, transcription, intent and codegen is now small enough to assemble personally.",
+                    "url": "https://x.com/oscarlzn/status/2112864782156173603"
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
