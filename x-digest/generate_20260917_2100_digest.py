@@ -1,0 +1,118 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Thursday, September 17th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Anthropic Rolls Out Projects in Claude Code with Parallel Cloud Execution:</strong> Anthropic launches Projects in Claude Code on desktop and web, enabling single conversations to automatically split complex work into parallel cloud threads that run asynchronously even after closing the laptop.",
+    "<strong>Ex-ChatGPT Co-Inventors Launch Jev Frontier Decision Model:</strong> @typesafeai releases Jev, a high-speed frontier decision AI model trained via Reinforcement Learning from Composable Decisions (RLCD) that delivers 20-200x faster decision execution and sub-millisecond structured outputs.",
+    "<strong>Z.ai Open Sources GLM-5.3-Flash Inference Infrastructure:</strong> Z.ai details how GLM-5.3 optimized its own serving infrastructure for GLM-5.3-Flash, tripling production throughput in under two weeks using dense local correctness tests and microbenchmarks.",
+    "<strong>Taelin Releases Bend 2 Parallel GPU Programming Language:</strong> Taelin unveils Bend 2, a new GPU programming language compiling to HVM2 that eliminates AI mistakes via formal proof-checking and scales high-level code across thousands of GPU cores."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@claudeai: Anthropic Rolls Out Projects in Claude Code with Parallel Cloud Execution",
+          "body": "Anthropic introduces Projects in Claude Code across web and desktop, allowing a single prompt conversation to break tasks into parallel cloud worker threads that continue running contextually in the background.",
+          "url": "https://x.com/claudeai/status/2100632677904744716"
+        },
+        {
+          "tag": "new",
+          "title": "@TheMattBerman: Jev Frontier AI Model Achieves 200x Speedup via Parallel RLCD",
+          "body": "Developers showcase Jev, a stealth frontier decision model built via Reinforcement Learning from Composable Decisions (RLCD) that analyzed 724 live ads across 37 brands in 40 seconds for 9 cents of tokens.",
+          "url": "https://x.com/TheMattBerman/status/2100654891756589230"
+        },
+        {
+          "tag": "hot",
+          "title": "@Zai_org: Z.ai Shares GLM-5.3-Flash Serving Infrastructure Optimization",
+          "body": "Z.ai details how GLM-5.3 self-optimized the inference stack for GLM-5.3-Flash, tripling end-to-end throughput in under two weeks via local correctness traces and microbenchmarks.",
+          "url": "https://x.com/Zai_org/status/2100481236364079277"
+        },
+        {
+          "tag": "new",
+          "title": "@VictorTaelin: Bend 2 GPU Programming Language Integrates Proof Checking",
+          "body": "Taelin launches Bend 2, a high-level programming language compiling to HVM2 GPU kernels that uses formal proof checking to eliminate AI code mistakes across thousands of cores.",
+          "url": "https://x.com/VictorTaelin/status/2100681226143092875"
+        },
+        {
+          "tag": "update",
+          "title": "@JinaAI_: Jina AI Releases jina-ocr-v1 Speculative Visual Document Parser",
+          "body": "Jina AI introduces jina-ocr-v1, a 3.4B parameter (570M active) vision parser with built-in speculative decoding for converting complex PDFs, scans, and tables into markdown.",
+          "url": "https://x.com/JinaAI_/status/2100617174985638364"
+        },
+        {
+          "tag": "new",
+          "title": "@jiang_kev: PolarBrowser Raises $5.7M Seed for Autonomous AI Web Browser",
+          "body": "MIT and YC alum team raises $5.7M for PolarBrowser, an AI-native web browser engineered to automate sales, recruiting, and operations tasks in 30 seconds.",
+          "url": "https://x.com/jiang_kev/status/2082496145994248488"
+        },
+        {
+          "tag": "tip",
+          "title": "@N01ennn: SpaceXAI Engineers Stream 9-Hour Company Build with Grok Bot Fleet",
+          "body": "SpaceXAI engineers detail their 9-hour live stream building an entire startup using 20+ Grok Bot agents structured under Chief of Staff and PM agents.",
+          "url": "https://x.com/N01ennn/status/2100321670401605931"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "tip",
+          "title": "@KeithMcCullough: 24-Year Hedge Fund Process Blueprint Released",
+          "body": "Hedgeye founder Keith McCullough publishes a free 52-page guide titled 'Master the Market', detailing quantitative risk management and macro positioning processes.",
+          "url": "https://x.com/KeithMcCullough/status/1846614136303559130"
+        },
+        {
+          "tag": "update",
+          "title": "@ronmortgageguy: Pierre Poilievre Outlines Canadian Economic Reforms",
+          "body": "Canadian political podcast discusses federal economic strategy, tax reductions, housing affordability initiatives, and potential airport privatization debates.",
+          "url": "https://x.com/ronmortgageguy/status/2099860352355778627"
+        },
+        {
+          "tag": "new",
+          "title": "@Alex8282019: US Housing Market & Local Economic Friction Observed",
+          "body": "Homeowners and administrators report local economic friction in top school districts, with extended home listing durations and administrative workhour reductions.",
+          "url": "https://x.com/Alex8282019/status/2100373805923553361"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Science",
+      "items": [
+        {
+          "tag": "new",
+          "title": "@GUST_EN: Atelier Karia Physical Pre-Orders Open for 2027 Launch",
+          "body": "GUST officially launches physical pre-orders for Atelier Karia: The Night Kingdom & the Guide of Memories across PS5, Switch 2, Xbox Series X|S, and Steam.",
+          "url": "https://x.com/GUST_EN/status/2097371143686795450"
+        },
+        {
+          "tag": "update",
+          "title": "@METALSLUG_EN: Metal Slug Ultimate Collection Announced for 30th Anniversary",
+          "body": "SNK and Metal Slug reveal Metal Slug Ultimate Collection featuring 9 classic arcade titles plus the unreleased location test version for the 30th anniversary.",
+          "url": "https://x.com/METALSLUG_EN/status/2097930496026308752"
+        },
+        {
+          "tag": "hot",
+          "title": "@espn: Colorado and Coach Prime Win on Georgia Tech Blocked Field Goal",
+          "body": "Colorado Buffaloes secure a thriller victory after blocking Georgia Tech's potential game-winning field goal in the closing seconds.",
+          "url": "https://x.com/espn/status/2095721357795328073"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-17 21:00 ET!")

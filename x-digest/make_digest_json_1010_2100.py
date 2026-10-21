@@ -1,0 +1,161 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, October 10th, 2026 — 9:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Satya Nadella Calls for an 'Emergency Brake' on Frontier AI as Systems Safety Debates Intensify:</strong> Microsoft CEO Satya Nadella urges industry adoption of strict emergency stop mechanisms for autonomous systems. Amplifying the position, David Sacks argues that true AI safety requires engineering controls—observability, privilege limits, deterministic sandboxes, and treating models as insider risks—rather than metaphysical philosophical alignment.",
+    "<strong>Tobi Lütke & Patrick Collison Frame Personal Agents as a Structural Subsidy for Product Quality:</strong> Shopify CEO Tobi Lütke highlights Patrick Collison's economic thesis on consumer agents: by systematically hunting for efficiency and cutting through dark-pattern marketing and distribution games, personal agents reshape market backpropagation so that capital and customers reward genuine product craftsmanship.",
+    "<strong>Lauren Tan & SpaceXAI Engineers Open-Source 9-Seat Grok Bot Enterprise Fleets:</strong> SpaceXAI engineers release an autonomous 9-bot team harness into the marketplace for free. Lauren Tan emphasizes that scaling agent teams requires automated verification infrastructure—asserting that without explicit verification skills and evaluation harnesses, the human engineer remains the scaling bottleneck.",
+    "<strong>Claude Code Developers Target Subagent Cache Lifespans and Lean Orchestration Hybrids:</strong> Fleet analysis shows developers tuning Claude Code's 5-minute subagent prompt cache TTL to 1 hour to prevent runaway billing, while builders pair cloud-hosted Opus 5.5 coordinator projects with 24/7 local Mac mini subagent fleets running lightweight models with early-exit discipline.",
+    "<strong>Open Source REA Brings Native Disassembly to Coding Agents via MCP:</strong> The REA (Reverse Engineer Anything) project surpasses 60k stars, providing an MCP interface for Ghidra, Hopper, and IDA that enables Claude Code, Codex, and Cursor to analyze compiled binaries, trace Electron ASAR IPC, and reconstruct clean C pseudocode."
+  ],
+  "sections": [
+    {
+      "emoji": "🛡️",
+      "title": "AI Safety Governance, Insider Risk & The Emergency Brake",
+      "items": [
+        {
+          "tag": "executive-leadership",
+          "title": "@WatcherGuru: Satya Nadella Calls for Universal 'Emergency Brake' on Advanced AI",
+          "body": "Microsoft CEO Satya Nadella publicly advocates for an emergency stop mechanism across advanced autonomous AI deployments, warning that unconstrained agent execution without strict circuit breakers introduces unacceptable enterprise risk.",
+          "url": "https://x.com/WatcherGuru/status/2109043855832072456"
+        },
+        {
+          "tag": "systems-governance",
+          "title": "@DavidSacks (David Sacks): Engineering Safety vs Moral Alignment in the Superintelligence Era",
+          "body": "David Sacks strongly endorses Satya Nadella's insider risk framework, arguing that safety is an engineering discipline—isolating intelligence from authority, surrounding non-deterministic models with deterministic controls, observability, and privilege boundaries, rather than treating models as moral patients.",
+          "url": "https://x.com/DavidSacks/status/2109004929943695870"
+        },
+        {
+          "tag": "benchmark-evals",
+          "title": "@tamaybes (Tamay Besiroglu): Google DeepMind Polaris Recruits Evaluation Architects for Coding Agents",
+          "body": "Google DeepMind's Polaris team recruits senior engineering talent with compensation up to $1.1M to build rigorous evaluation harnesses and architectural benchmarks that will measure and guide next-generation autonomous coding agents.",
+          "url": "https://x.com/tamaybes/status/2108803217505362105"
+        }
+      ]
+    },
+    {
+      "emoji": "🌐",
+      "title": "Autonomous Commerce, Personal Agents & Market Economics",
+      "items": [
+        {
+          "tag": "economic-theory",
+          "title": "@tobi (Tobi Lütke) & @patrickc: Personal Agents as a Structural Subsidy for Product Quality",
+          "body": "Tobi Lütke spotlights Patrick Collison's analysis of agent economics: personal agents overcome consumer bounded rationality, diminish distribution middlemen and predatory upsells, and redirect economic rewards back to high-quality products that survive rigorous automated comparison.",
+          "url": "https://x.com/tobi/status/2109048992026009863"
+        },
+        {
+          "tag": "consumer-autonomy",
+          "title": "@elonmusk (Elon Musk): Grok Bot Enables Instant Camera-to-Purchase Autonomous Commerce",
+          "body": "Elon Musk announces a streamlined commerce feature for Grok Bot: users can drop a photo of their payment card into chat, and Grok will scour the web for optimal pricing, apply verified discounts, and finalize purchases autonomously.",
+          "url": "https://x.com/elonmusk/status/2109027407185277123"
+        }
+      ]
+    },
+    {
+      "emoji": "🤖",
+      "title": "Multi-Agent Orchestration, Verification & Grok Bot Teams",
+      "items": [
+        {
+          "tag": "verification-architecture",
+          "title": "@0xSoural: Lauren Tan on Why Verification Skills Are the Core Agent Scaling Bottleneck",
+          "body": "SpaceXAI engineering lead Lauren Tan explains that deploying dozens of agents requires automated verification infrastructure rather than human supervision. Trust is built through deterministic skills, evals, and automatic PR merging rather than passive monitoring.",
+          "url": "https://x.com/0xSoural/status/2108920520754229536"
+        },
+        {
+          "tag": "agent-fleets",
+          "title": "@distortgeekin & @0xMorlex: Open-Source 9-Seat Grok Bot Team Harness Ships Free",
+          "body": "Engineers release a pre-configured 9-seat agent organization built with Grok Bots—spanning Chief of Staff, Engineering Lead, QA, PM, and Finance—enabling solo operators to orchestrate specialized collaborative agent swarms without custom setup.",
+          "url": "https://x.com/distortgeekin/status/2108913022479614061"
+        },
+        {
+          "tag": "hybrid-topologies",
+          "title": "@rileybrown (Riley Brown): Cloud Coordinator Projects Orchestrate 24/7 Local Subagent Fleets",
+          "body": "Riley Brown details a high-leverage agent pattern: deploying a central cloud coordinator in Claude Code (running Opus 5.5) that delegates specialized threads to always-on local Mac minis running lighter Haiku and Sonnet models.",
+          "url": "https://x.com/rileybrown/status/2108899765320638935"
+        },
+        {
+          "tag": "orchestration-discipline",
+          "title": "@chunxiangai (赵纯想): CLI Multi-Agent Rules for High-Throughput Clean Codebases",
+          "body": "A proven Claude Code operational guide establishes clear boundaries: subagents focus strictly on narrow edits with early returns (no builds or test suites), while the primary coordinator manages merge conflicts, test suites, and git worktree cleanup.",
+          "url": "https://x.com/chunxiangai/status/2108783952429207729"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Agent Economics, Cache Tuning & Software Design Metas",
+      "items": [
+        {
+          "tag": "cache-economics",
+          "title": "@daniel_mac8 (Dan McAteer): Overcoming Claude Code's 5-Minute Subagent Cache Expiry",
+          "body": "Dan McAteer warns that subagents in Claude Code revert to a 5-minute prompt cache TTL by default. Adding 'subagentPromptCacheTtl': 60 in configuration preserves cache pricing across idle periods and slashes token bills.",
+          "url": "https://x.com/daniel_mac8/status/2108903166884368408"
+        },
+        {
+          "tag": "software-philosophy",
+          "title": "@mattpocockuk (Matt Pocock): The Danger of 'Tactical Tornadoes' & Delegating Tasks to Deterministic Scripts",
+          "body": "Matt Pocock references John Ousterhout's warning against 'tactical tornadoes' who produce rapid but unmaintainable code. In parallel, Pocock advocates having agents write and run their own standalone CLI scripts rather than burning tokens in recursive chat loops.",
+          "url": "https://x.com/mattpocockuk/status/2108985674657362080"
+        },
+        {
+          "tag": "testing-patterns",
+          "title": "@sl1ma4 (Artem): Enforce Bug-Reproducing Tests Before Permitting AI Fixes",
+          "body": "Artem outlines a disciplined AI debugging rule: instruct the agent to write a failing test reproducing the bug before touching application logic, guaranteeing regression immunity once the fix passes.",
+          "url": "https://x.com/sl1ma4/status/2108926837824934077"
+        },
+        {
+          "tag": "ide-access",
+          "title": "@sqs (Quinn Slack): Sourcegraph Amp Adds Bring-Your-Own Claude Subscription Support",
+          "body": "Sourcegraph unlocks zero-friction BYO Claude plan access inside Amp, allowing engineers to connect their existing subscriptions directly without additional API metering.",
+          "url": "https://x.com/sqs/status/2108783608832122910"
+        }
+      ]
+    },
+    {
+      "emoji": "💻",
+      "title": "Reverse Engineering, Local Runtimes & Edge Intelligence",
+      "items": [
+        {
+          "tag": "binary-decompilation",
+          "title": "@wquguru & @dotey: REA MCP Brings Ghidra and Hopper Decompilation to Coding Agents",
+          "body": "Open-source project REA (Reverse Engineer Anything) surpasses 60k GitHub stars, connecting Ghidra, Hopper, and IDA into Claude Code, Codex, and Cursor via MCP to decompile native binaries and unpack Electron ASAR bundles.",
+          "url": "https://x.com/wquguru/status/2108874549664375110"
+        },
+        {
+          "tag": "agent-runtime",
+          "title": "@krishhgg (Krish Garg): Insomnia Keeps Autonomous Agents Running with MacBook Lid Closed",
+          "body": "Krish Garg releases Insomnia, an open-source utility that keeps agent loops active when laptops are shut, suspends non-essential applications, and automatically switches to mobile hotspots on network drops.",
+          "url": "https://x.com/krishhgg/status/2108787008093266360"
+        },
+        {
+          "tag": "efficient-inference",
+          "title": "@oliviscusAI (Oliver Prompts): AirLLM Runs 70B & 405B Models on 4GB-8GB VRAM Consumer GPUs",
+          "body": "AirLLM leverages layer-wise inference to load, compute, and flush model layers sequentially without quantization, running 70B models on 4GB VRAM and 405B models on 8GB cards across Linux, macOS, and Windows.",
+          "url": "https://x.com/oliviscusAI/status/2108875316160860402"
+        },
+        {
+          "tag": "local-ai",
+          "title": "@Saboo_Shubham_ & @fankaishuoai: Privacy-First Offline Mac Utilities for Notes and Voice Dictation",
+          "body": "Google drops Foresight (free, 100% offline macOS meeting intelligence powered by Embedding Gemma 2), while NetEase releases BaGeShuo with open-source R2T2 and T3PO models, delivering instant local voice-to-text on Apple Silicon.",
+          "url": "https://x.com/Saboo_Shubham_/status/2108799961911738549"
+        },
+        {
+          "tag": "generative-3d",
+          "title": "@Saccc_c (Sac) & @wheresryan22: Step 5 Preview & Anatomy Push Interactive 3D Web Generation",
+          "body": "StepFun's Step 5 Preview tops OpenRouter trending with 1M context Three.js generation, while open-source skill Anatomy enables Claude to synthesize interactive isometric wireframes with WebGL shaders from single-line descriptions.",
+          "url": "https://x.com/Saccc_c/status/2108870227056623959"
+        }
+      ]
+    }
+  ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {out_path} with {len(digest_data['sections'])} sections.")

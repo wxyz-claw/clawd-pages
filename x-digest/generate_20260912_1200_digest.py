@@ -1,0 +1,119 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, September 12th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Elon Musk Backs Dario Amodei's Call to Slow AI Development:</strong> Elon Musk publicly supported Anthropic CEO Dario Amodei's essay urging an industry-wide slowdown on frontier model development as recursive self-improvement begins, while sharing that Grok 4.7 is delayed a few days due to RL length-penalty issues.",
+    "<strong>OpenAI Fixes GPT-6 Astra Engine Degraded Performance & Issues Reset:</strong> OpenAI staff fixed misconfigured skill triggers and context management experiments that caused early stops for 4,000+ users, while announcing the deprecation of legacy GPT-5.3-Codex-Spark models.",
+    "<strong>Cognition Launches Devin Fusion Multi-Model Coding Harness:</strong> Cognition released Devin Fusion in Devin CLI, pairing frontier models like Fable 5.1 or Astra for planning with SWE-2 for execution, cutting coding benchmark costs by up to 43%.",
+    "<strong>ChatGPT Sites Exceeds 5 Million Apps with New Workspace Tools:</strong> OpenAI announced over 5 million web applications built on ChatGPT Sites, introducing shared workspace co-editing, private access links, custom domains, and database inspection.",
+    "<strong>6TB Leak from Chinese LLM Routers Exposes Enterprise SSH Keys:</strong> Security researcher Chaofan Shou revealed a 6TB leak from commercial Chinese LLM API routers exposing active SSH keys, cloud tokens, and internal prompt logs across top tech companies and government bodies."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk & @DarioAmodei: Elon Musk Backs Anthropic CEO's Call to Slow Down AI Development",
+          "body": "Elon Musk publicly endorsed Anthropic CEO Dario Amodei's essay 'We Must Pace the Frontier', which advocates for industry-wide safety evaluators and a controlled development pace as recursive self-improvement emerges across frontier labs.",
+          "url": "https://x.com/elonmusk/status/2098789109980332057"
+        },
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Grok 4.7 Delayed A Few Days for Reinforcement Learning Adjustments",
+          "body": "Elon Musk explained Grok 4.7 requires additional fine-tuning after RL training overly penalized response length, causing the model to give up prematurely on complex reasoning tasks.",
+          "url": "https://x.com/elonmusk/status/2098462085973741960"
+        },
+        {
+          "tag": "update",
+          "title": "@thsottiaux & @ChrisGPT: OpenAI Resolves GPT-6 Astra Engine Degradation & Issues Reset",
+          "body": "OpenAI engineer Tibo Sottiaux confirmed fixes for GPT-6 Astra quality issues caused by legacy skill conflicts and an opt-in context experiment, rolling out an automatic usage reset for impacted users.",
+          "url": "https://x.com/ChrisGPT/status/2098686935610867905"
+        },
+        {
+          "tag": "new",
+          "title": "@cognition & @ArtificialAnlys: Cognition Unveils Devin Fusion Multi-Model Agent Harness",
+          "body": "Cognition launched Devin Fusion in Devin CLI, enabling developers to pair frontier planning models (Fable 5.1 / GPT-6 Astra) with cost-effective execution sidekicks (SWE-2), reducing benchmark token costs by up to 43%.",
+          "url": "https://x.com/cognition/status/2098445562404024343"
+        },
+        {
+          "tag": "hot",
+          "title": "@ChatGPT: ChatGPT Sites Surpasses 5M Apps with Team Collaboration Tools",
+          "body": "OpenAI reported over 5 million web apps created on ChatGPT Sites, releasing team co-editing, private link sharing, custom domain mapping, and live database inspection capabilities.",
+          "url": "https://x.com/ChatGPT/status/2098457920291946894"
+        },
+        {
+          "tag": "hot",
+          "title": "@shoucccc: 6TB Chinese LLM Router Leak Exposes Enterprise SSH & Cloud Credentials",
+          "body": "Security researcher Chaofan Shou disclosed a 6TB leak from commercial Chinese LLM API routers containing active SSH keys, cloud tokens, and internal prompt logs from major tech firms and government entities.",
+          "url": "https://x.com/shoucccc/status/2098169782541631871"
+        },
+        {
+          "tag": "tip",
+          "title": "@OpenAIDevs & @Saccc_c: OpenAI Outlines Best Practices for AGENTS.md & Astra Workflows",
+          "body": "OpenAI Developers published a guide on structuring AGENTS.md and skill triggers to eliminate redundant context loading and lower token burn when executing agentic tasks with GPT-6 Astra.",
+          "url": "https://x.com/Saccc_c/status/2098708020201189701"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@SupportJimmyLai: Health Concerns Mount for Imprisoned Hong Kong Publisher Jimmy Lai",
+          "body": "Advocacy groups issued urgent calls regarding 78-year-old publisher Jimmy Lai's deteriorating health in solitary confinement, advocating for diplomatic action.",
+          "url": "https://x.com/SupportJimmyLai/status/2049867723425858017"
+        },
+        {
+          "tag": "update",
+          "title": "@1stForAll & @billiewebbb: Reflections Mark 25th Anniversary of 9/11",
+          "body": "Archival front pages and public commemorations marked the 25th anniversary of 9/11, highlighting national memory and historical reflection.",
+          "url": "https://x.com/1stForAll/status/2098400495350227398"
+        },
+        {
+          "tag": "new",
+          "title": "@thdxr: OpenCode Go Achieves Breakeven Unit Economics",
+          "body": "OpenCode founder Dax announced OpenCode Go achieved consecutive profitable weeks, demonstrating sustainable unit economics for cloud-hosted AI coding infrastructure.",
+          "url": "https://x.com/thdxr/status/2098781354611650806"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General & Sports",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano & @TouchlineX: Mbappé & Fabián Ruiz Address UCL & Ballon d'Or Standings",
+          "body": "Kylian Mbappé insisted the Ballon d'Or is won on the pitch in an interview with L'Équipe, while PSG's Fabián Ruiz pointed to his trophy count amidst growing debate among top contenders.",
+          "url": "https://x.com/FabrizioRomano/status/2098744428827488544"
+        },
+        {
+          "tag": "update",
+          "title": "@Bayern_PR & @FCBayern: Anthony Gordon & FC Bayern Highlight Harry Kane's Record Season",
+          "body": "Anthony Gordon and FC Bayern emphasized Harry Kane's goalscoring record in European competition as football commentators weigh Ballon d'Or predictions.",
+          "url": "https://x.com/Bayern_PR/status/2098349505636598066"
+        },
+        {
+          "tag": "new",
+          "title": "@ESPNCFB: Highlighting Standout Plays in College Football Kickoff",
+          "body": "ESPN College Football featured spectacular early-season catches and highlights as the 2026 college football season gathers momentum.",
+          "url": "https://x.com/ESPNCFB/status/2098215126922915846"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-12 12:00 ET!")

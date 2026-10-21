@@ -1,0 +1,155 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Wednesday, September 30th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Factory vs. Cognition Boardroom War Erupts Over Ex-Snowflake CRO:</strong> Factory ($5B val) accuses arch-rival Cognition ($48B val, makers of Devin) of corporate espionage and fires board observer Chris Degnan for secretly defecting as CRO, sparking a Silicon Valley civil war that pits Sequoia against a divided Khosla Ventures.",
+    "<strong>Google Unveils Gemini 4 Argon for Long-Horizon SWE:</strong> Google drops its next-generation frontier intelligence model targeting complex, multi-turn software engineering tasks, while developer telemetry indicates Anthropic's Sonnet 5.5 retains its lead on real-world coding ergonomics.",
+    "<strong>Figure AI Retires Figure 02 in a Finnish Electric Arc Furnace:</strong> In a Terminator-inspired farewell suggested by Arnold Schwarzenegger, Figure AI trained an AI model in simulation so its second-generation humanoid fleet could autonomously leap into a 75-ton molten steel furnace in Finland to guard proprietary hardware IP.",
+    "<strong>Agent Sandboxes & Runtimes Multiply with E2B Embed, Magpie, and Grok Bot:</strong> E2B packages its full sandbox stack into a self-hosted single-node Apache 2.0 release, Grok Bot adds native Cursor handoff alongside a SpaceX-inspired 5-layer loop, and community tools Magpie and oar standardize multi-agent switching across 20+ models.",
+    "<strong>GPT-6.1 Sol Telemetry: Massive Quota Endurance Meets Speed Frustrations:</strong> Power users report Sol 6.1 Medium consumes just 5% of 5-hour Codex limits and praise Box AI's commercial loan auditing, yet complaints mount over sluggish token output and 8x Ultrafast pricing surcharges driving engineers toward Claude Opus 5.5."
+  ],
+  "sections": [
+    {
+      "emoji": "⚔️",
+      "title": "Silicon Valley Boardroom War: Factory vs Cognition (Devin) & Investor Feud",
+      "items": [
+        {
+          "tag": "scandal",
+          "title": "@0xTykoo: Factory Fires Ex-Snowflake CRO Chris Degnan Over Cognition Espionage Claims",
+          "body": "Factory ($5B val) terminates board observer Chris Degnan after he joins arch-rival Cognition ($48B val, makers of Devin) as CRO. Factory CEO Matan Grinberg alleges Cognition engineers conducted fake interviews to pry secret roadmap details and lured Degnan while he participated in confidential board meetings. Degnan and Cognition CEO Scott Wu forcefully deny the claims, asserting Degnan resigned cleanly without transferring IP.",
+          "url": "https://x.com/0xTykoo/status/2105431045084790892"
+        },
+        {
+          "tag": "conflict",
+          "title": "@0xTykoo: Sequoia Brandishes 'Nuclear Weapon' as Khosla Partners Split Over Dual-Backed Rivals",
+          "body": "The defection triggers open warfare among Silicon Valley elite investors. Sequoia partner Shaun Maguire backs Factory, dismissing Cognition as 'Infosys pretending to be Anthropic' and claiming to hold a 'nuclear weapon.' Meanwhile, Khosla Ventures—an investor in both rivals—suffers an unprecedented public split: partner Keith Rabois sides with Factory on ethics, while founder Vinod Khosla attacks Factory as a desperate 'second-rate competitor' lying about the termination.",
+          "url": "https://x.com/0xTykoo/status/2105431045084790892"
+        }
+      ]
+    },
+    {
+      "emoji": "🚀",
+      "title": "Frontier Models & Robotics: Gemini 4 Argon, Grok Bot Cursor & Figure 02 Farewell",
+      "items": [
+        {
+          "tag": "release",
+          "title": "@timo_rf: Google Drops Gemini 4 Argon for Complex SWE as Developers Quip Over Quota Drain",
+          "body": "Google officially unveils Gemini 4 Argon as its next frontier model, claiming new state-of-the-art results on real-world, long-horizon software engineering benchmarks. Developer Timo quips that 'after 4 prompts all your tokens Argon,' reflecting community sentiment around heavy context windows and multi-step reasoning costs.",
+          "url": "https://x.com/timo_rf/status/2105400469065789704"
+        },
+        {
+          "tag": "telemetry",
+          "title": "@Balder13946731: Gemini 4 Demonstrates Strong Reasoning but Trails Sonnet 5.5 in Real-World Code",
+          "body": "Early developer benchmarks indicate that while Gemini 4 exhibits advanced machine review and pre-computation behaviors, it still trails Anthropic's Sonnet 5.5 on complex refactoring tasks. Analysts note that AI model breakthroughs are largely priced into Google's cloud valuation, shifting focus to developer ergonomics.",
+          "url": "https://x.com/Balder13946731/status/2105409615638999081"
+        },
+        {
+          "tag": "robotics",
+          "title": "@dotey: Figure AI Retires Figure 02 Humanoid Fleet in a 75-Ton Finnish Arc Furnace",
+          "body": "Following a Terminator 2 suggestion from Arnold Schwarzenegger, Figure AI retired its second-generation Figure 02 humanoid fleet by having the robots autonomously jump into an electric arc furnace in Imatra, Finland. The dramatic farewell protected proprietary actuator IP without wasting engineering teardown hours; Figure trained a specialized model in simulation to execute the precision leap, with molten metal returning to the US as limited collector ingots.",
+          "url": "https://x.com/dotey/status/2105430166876869113"
+        },
+        {
+          "tag": "workflow",
+          "title": "@elonmusk & @RRRangle: Grok Bot Integrates Cursor Handoff; SpaceX AI Outlines 5-Tier Agent Loop",
+          "body": "xAI announces Grok Bot can now hand off coding tasks directly to Cursor and orchestrate multi-agent development pipelines. In a workshop teardown, SpaceX AI engineer Lauren Tan details the 5-layer autonomous engineering stack: Grok 4.6 (reasons) → harness (controls) → loop (verifies) → graph (delegates) → human approval for irreversible actions.",
+          "url": "https://x.com/elonmusk/status/2105457482424590592"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Agent Infrastructure, Runtimes & Multi-Agent Tooling",
+      "items": [
+        {
+          "tag": "infrastructure",
+          "title": "@e2b: E2B Launches Single-Node Apache 2.0 Sandboxes for Self-Hosted Agents",
+          "body": "E2B releases E2B Embed, packaging their entire agent sandbox stack into a self-hosted, single-node release under Apache 2.0. Supporting Docker Compose, Terraform on GCP, and Kubernetes, builders can now run secure ephemeral VM sandboxes inside their own compliance perimeters using standard E2B SDKs.",
+          "url": "https://x.com/e2b/status/2105345363813286280"
+        },
+        {
+          "tag": "devtools",
+          "title": "@LinearUncle: Yetone Ships Magpie — Menu Bar Model Switcher and Proxy Gateway for 20+ Agents",
+          "body": "Magpie challenges CCSwitch by providing a macOS menu bar controller that seamlessly swaps underlying models across 20+ coding agents (including Claude Code and Codex). It includes a built-in reverse proxy gateway, allowing developers to route requests between personal subscriptions and custom endpoints.",
+          "url": "https://x.com/LinearUncle/status/2104892506282537240"
+        },
+        {
+          "tag": "runtime",
+          "title": "@xiaoxxchan: oar Brings OpenDAL-Style Library Architecture to Agent Orchestration",
+          "body": "Xiao Xiao introduces oar (Open Agent Runtime), a unified library designed to orchestrate Claude Code, Codex, Kimi Code, and Pi. Treating agent execution as a programmable library rather than an awkward protocol abstraction layer, oar eliminates ACP compatibility friction.",
+          "url": "https://x.com/xiaoxxchan/status/2105339191664250968"
+        },
+        {
+          "tag": "opensource",
+          "title": "@sanreds_: Open-Source OpenDots and OpenMuse Deliver Self-Hosted Agent Teams",
+          "body": "Built on the Clawboo platform, OpenDots, OpenMuse, and OpenCue provide an open-source alternative to proprietary agent swarms. Teams can orchestrate OpenClaw, Claude Code, Codex, and Hermes concurrently with task delegation, status dashboards, cost monitoring, and human verification checkpoints.",
+          "url": "https://x.com/sanreds_/status/2105279464892518613"
+        },
+        {
+          "tag": "automation",
+          "title": "@nottecore: Notte Moves Captcha Handling into the Browser Agent Runtime",
+          "body": "Notte updates its web agent runtime to automatically detect and pause execution when encountering captchas mid-flow. Instead of crashing brittle scraper scripts, the runtime holds state until verification completes, ensuring uninterrupted long-horizon web automation.",
+          "url": "https://x.com/nottecore/status/2105324635029909910"
+        },
+        {
+          "tag": "sandboxes",
+          "title": "@yiliush & @Benogju: Two-Minute Cloud Linux Machines and Android Sandboxes for Coding Agents",
+          "body": "Yilio highlights zero-friction 2-minute cloud computers with instant SSH access for Claude Code and Codex to run continuous test loops and builds, while Benogju introduces dedicated cloud Android emulators for coding agents to run native mobile QA.",
+          "url": "https://x.com/yiliush/status/2104997540454371658"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Model Economics, Production Systems & Quant Agents",
+      "items": [
+        {
+          "tag": "economics",
+          "title": "@Codexresets_ & @JustinGorya: GPT-6.1 Sol Slashes Token Consumption Across Extended Coding Sessions",
+          "body": "Codex power users report that 2.5 hours of continuous coding with GPT-6.1 Sol Medium consumed only 5% of the 5-hour Codex Plus limit. Reviewer Justin Gorya notes Sol 6.1 delivers ~90% of Astra's quality at 20% of the cost, making Plus limits genuinely usable for parallel tasks despite Anthropic's continued lead in motion and creative styling.",
+          "url": "https://x.com/Codexresets_/status/2105380982220034180"
+        },
+        {
+          "tag": "enterprise",
+          "title": "@Box: Box Integrates GPT-6.1 Sol to Catch Underwriting Discrepancies Across Loan Packages",
+          "body": "Box demonstrates GPT-6.1 Sol analyzing an 11-document, $1.25M funding submission. The agent automatically uncovered two unmet covenants, flagged delivery address mismatches and seller identity discrepancies, and generated a source-cited checklist of required lending actions.",
+          "url": "https://x.com/Box/status/2105327545080311979"
+        },
+        {
+          "tag": "subscriptions",
+          "title": "@gkxspace & @ForwardEditor: Developers Protest OpenAI Speed Bottlenecks as Opus 5.5 Absorbs Workloads",
+          "body": "Despite Sol 6.1's low cost, developers complain that its generation latency hinders interactive workflows, with Ultrafast costing an 8x quota multiplier and Pro tiers costing $500/month. Concurrently, subscribers note that Opus 5.5 on the $200 plan provides virtually frictionless endurance, bringing engineers closer to consolidating under a single AI subscription.",
+          "url": "https://x.com/gkxspace/status/2105264806517469510"
+        },
+        {
+          "tag": "trading",
+          "title": "@akitabtc: Quant Architect Replaces Traditional Delta-Neutral Bots with Multi-Agent Volatility Swarms",
+          "body": "Veteran crypto trader Akita散人 shares architectural insights from running dozens of concurrent agents inside his live trading system. Transitioning beyond delta-neutral latency arbitrage, his agents now price market volatility and calibrate Kelly-criterion betting sizes, using automated EV-versus-PnL timeline playback modules to correct pricing models in real time.",
+          "url": "https://x.com/akitabtc/status/2105386587442024547"
+        },
+        {
+          "tag": "finance",
+          "title": "@unusual_whales: Meta Takes $355M Tax Break on Zuckerberg Compensation via R&D Classification",
+          "body": "According to a New York Times investigation reported by Unusual Whales, Meta claimed a $355 million tax deduction on Mark Zuckerberg's $4 billion executive compensation package by classifying the CEO as a front-line research scientist.",
+          "url": "https://x.com/unusual_whales/status/2105357759818658139"
+        },
+        {
+          "tag": "systems",
+          "title": "@rishi_raj_jain_: Engineering a Sub-Millisecond 6.4M Article Wikipedia on Neon Postgres and Vercel",
+          "body": "Rishi Raj Jain showcases a custom Wikipedia engine serving 6.4 million English articles with 2x faster LCP and 5x faster TTFB. The architecture pairs live SQL-over-HTTP trigram and BM25 search directly in Neon Postgres with Vercel edge caching and periodic automated prewarming.",
+          "url": "https://x.com/rishi_raj_jain_/status/2105381520148246956"
+        }
+      ]
+    }
+  ]
+}
+
+out_file = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_file, 'w', encoding='utf-8') as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Updated {out_file} successfully.")

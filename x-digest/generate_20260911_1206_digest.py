@@ -1,0 +1,119 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Friday, September 11th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Retiring GPT-5.3-Codex-Spark & Pausing Pro Subscriptions:</strong> OpenAI announced plans to retire the GPT-5.3-Codex-Spark model next week while maintaining a signup pause on $200 Pro plans to manage inference load on new frontier models.",
+    "<strong>DeepSeek V4.1 Flash Architecture Released:</strong> DeepSeek introduced V4.1 Flash featuring a 552B MoE backbone with 196B conditional memory parameters, boasting 33x to 133x lower inference costs compared to competing models.",
+    "<strong>Anthropic Exposes Security Risks of LLM API Relays:</strong> Security reports highlighted major risks from unencrypted Chinese LLM proxy/relay services leaking corporate codebase tokens, cloud API keys, and internal prompt data.",
+    "<strong>Apple Reportedly Paying Samsung $250/Screen for iPhone Duo OLEDs:</strong> Industry reports indicate Apple is sourcing foldable OLED displays from Samsung for the upcoming iPhone Duo at $250 per display module.",
+    "<strong>UEFA Champions League Kickoff & Ballon d'Or Speculation:</strong> Bayern Munich extended their historic 39-game home unbeaten streak in Champions League group/league play as Declan Rice and Vincent Kompany backed Harry Kane and Michael Olise for Ballon d'Or contention."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@thsottiaux: OpenAI Retiring GPT-5.3-Codex-Spark & Managing Pro Plan Capacity",
+          "body": "OpenAI engineer Tibo Sottiaux announced the retirement of GPT-5.3-Codex-Spark next week to free up server infrastructure, following the recent subscription pause on $200 Pro plans.",
+          "url": "https://x.com/thsottiaux/status/2098300998968357218"
+        },
+        {
+          "tag": "new",
+          "title": "@onusoz: DeepSeek Unveils V4.1 Flash with Engram Conditional Memory",
+          "body": "DeepSeek released V4.1 Flash featuring 16B active parameters out of 552B MoE total and a 4x smaller KV cache, drastically reducing token costs by two orders of magnitude.",
+          "url": "https://x.com/onusoz/status/2098080151737389546"
+        },
+        {
+          "tag": "update",
+          "title": "@lidangzzz & @jessyshen: Security Alarm Over LLM API Relay Data Leaks",
+          "body": "Industry commentary centered on security findings showing commercial API proxy relay services leaking confidential codebase tokens, cloud credentials, and internal AI queries.",
+          "url": "https://x.com/lidangzzz/status/2098358352887574929"
+        },
+        {
+          "tag": "new",
+          "title": "@tldraw: tldraw Responds to OpenAI's New @Sketch Feature",
+          "body": "Canvas tool tldraw challenged OpenAI's newly announced @Sketch drawing capability inside ChatGPT, offering live visual prototyping alternatives.",
+          "url": "https://x.com/tldraw/status/2097722028165840900"
+        },
+        {
+          "tag": "update",
+          "title": "@poteto: Grok Android App Enters Google Play Pre-Registration",
+          "body": "The Grok team announced their Android companion application is nearing launch, opening pre-registration for users on the Google Play Store.",
+          "url": "https://x.com/poteto/status/2093063044062650744"
+        },
+        {
+          "tag": "update",
+          "title": "@ErfanEbrahimnia: Shopify Shifts Mobile Architecture Back to Native",
+          "body": "Developer discussions highlighted Shopify's strategic shift moving core app infrastructure away from React Native in favor of native platform frameworks.",
+          "url": "https://x.com/ErfanEbrahimnia/status/2098145097334379001"
+        },
+        {
+          "tag": "tip",
+          "title": "@trq212: Context-Building Prompting Technique for LLM Memory",
+          "body": "A viral prompt pattern suggests leveraging interactive interview mode to build comprehensive long-term context profiles within Claude and ChatGPT.",
+          "url": "https://x.com/trq212/status/2098157600361861579"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Apple Sourcing Samsung Foldable OLED Displays for iPhone Duo",
+          "body": "Reports surfaced that Apple will pay Samsung $250 per unit for foldable OLED screens intended for the anticipated iPhone Duo launch.",
+          "url": "https://x.com/WatcherGuru/status/2098401560980283846"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: US Inflation Holds Steady at 3.4%",
+          "body": "Bureau of Labor Statistics data confirmed US CPI inflation remained at 3.4% year-over-year, keeping macroeconomic monetary policy expectations unchanged.",
+          "url": "https://x.com/WatcherGuru/status/2098388617492394118"
+        },
+        {
+          "tag": "new",
+          "title": "@theo: High Sentiment Surrounds Current Y Combinator Batch",
+          "body": "Y Combinator community discussions noted the current YC startup cohort is among the highest quality and most undervalued in recent history.",
+          "url": "https://x.com/theo/status/2098248404195578342"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General & Sports",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano & @TouchlineX: UEFA UCL Team of the Week & Ballon d'Or Criteria",
+          "body": "UEFA released the Team of the Week following Champions League Matchday 1, while official Ballon d'Or voting guidelines emphasizing individual performance and team success were highlighted.",
+          "url": "https://x.com/FabrizioRomano/status/2098427779909841169"
+        },
+        {
+          "tag": "update",
+          "title": "@FCBayernEN & @iMiaSanMia: Bayern Munich Extends 39-Game Unbeaten UCL Home Streak",
+          "body": "Bayern Munich maintained their record 39-match unbeaten streak in home UCL group/league matches as Vincent Kompany publicly supported Harry Kane and Michael Olise for Ballon d'Or recognition.",
+          "url": "https://x.com/FCBayernEN/status/2098353067838066855"
+        },
+        {
+          "tag": "new",
+          "title": "@NOT_MOTD & @CFC_Janty: Michael Olise Post-Match Demeanor Sparks Fan Debate",
+          "body": "Michael Olise's calm and reserved post-match interview style triggered widespread debate across football media and fan communities.",
+          "url": "https://x.com/NOT_MOTD/status/2098286290768736476"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-11 12:06 ET!")

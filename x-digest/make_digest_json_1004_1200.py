@@ -1,0 +1,173 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Sunday, October 4th, 2026 — 12:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>The Post-Review Era Dawns: Autonomous Merges, Architectural Rules & The 'Michelin Chef' Model:</strong> SpaceXAI engineer Lauren Tan and tech lead Bojie Li detail the collapse of traditional line-by-line PR reviews, demonstrating how teams merge 1,000+ autonomous PRs per month by replacing human micromanagement with deterministic runtime verification, strict architectural constraints, and indirect goal alignment prompts.",
+    "<strong>Agent Tooling Surges: Matt Pocock Releases Skills v1.3 with /retro as Emil Kowalski Torture-Tests UIs:</strong> Matt Pocock ships /retro to analyze past agent transcripts for continuous workflow self-improvement, while Emil Kowalski introduces /mobile-native and /break-ui to harden web applications against edge-case agent regressions.",
+    "<strong>Harness Learning Eclipse: CMU & Google Prove Harness Adaptation Outperforms Weight Updates:</strong> Landmark papers from CMU and Google establish that agentic performance gains are driven by harness optimization: CMU trains a 4B proposer to rewrite agent harness code (beating 35B models), while Google's VeriHarness disproves multi-rollout consensus assumptions to gain +6.4 points on frontier benchmarks.",
+    "<strong>Subscription Economics Unpacked: Claude Pro Yields $3,400/Week API Value While Codex Burnout Stirs Debate:</strong> Developers benchmark the true cost of $200/month tiers, discovering Claude delivers double the API token value of Codex with 10x practical longevity over GPT-6 Astra, while LangChain slashes enterprise coding spend through LangSmith telemetry and OpenSWE gateway caps.",
+    "<strong>Codex Computer Use Decoupled via Local MCP as Style Manifolds Counter AI Tone:</strong> Hackers extract Codex's native macOS automation engine as a universal local MCP server for Claude Code and custom agents, while Fulcrum releases Echo to prove that bland 'AI tone' stems from RLHF over-alignment rather than inherent model limitations."
+  ],
+  "sections": [
+    {
+      "emoji": "🛠️",
+      "title": "The Post-Review Paradigm & Agent Engineering: Autonomous PRs & The Chef's Kitchen",
+      "items": [
+        {
+          "tag": "autonomous-development",
+          "title": "@poteto & @0xGenAi: Lauren Tan Outlines the Zero-Review System Shipping 1,000 PRs a Month",
+          "body": "SpaceXAI engineer Lauren Tan explains how she transitioned from being an exhausted 'meat proxy' between agents and browsers to shipping over 1,000 autonomous PRs a month. Rather than reviewing individual diffs, she treats development like running a Michelin-star kitchen: engineers configure strict architectural rules, automated end-to-end user simulation verifiers, and typed boundaries that make it structurally impossible for agents to merge regressions.",
+          "url": "https://x.com/0xGenAi/status/2106425437144355186"
+        },
+        {
+          "tag": "engineering-leadership",
+          "title": "@bojie_li: Bojie Li on 100x Productivity and Why Tech Lead Vision Dictates Agent Output",
+          "body": "Former Huawei tech lead Bojie Li reflects on achieving the productivity of a 30-100 person research lab using autonomous agents without reviewing PRs. He emphasizes that as models like Opus 5.5 and Fable mature, the primary engineering bottleneck shifts from code implementation to top-level architecture, problem selection, and designing self-healing verification loops.",
+          "url": "https://x.com/bojie_li/status/2106739919863586875"
+        },
+        {
+          "tag": "prompt-engineering",
+          "title": "@poteto & @lukasen_xyz: The 'Indirect Prompt' Eliminating Misalignment Before Code Is Written",
+          "body": "A prompt shared by Lauren Tan garners over 11,000 bookmarks: 'Restate in your own words what you think my goals are and what the problem I'm trying to solve is.' By forcing agents to summarize messy context and diagnose root causes before touching code, developers eliminate the costly cycle of debugging misaligned agent implementations after the fact.",
+          "url": "https://x.com/lukasen_xyz/status/2106609609268175321"
+        },
+        {
+          "tag": "runtime-playbook",
+          "title": "@vikingmute: Addy Osmani Publishes Production Field Guide for Opus 5.5 in Claude Code",
+          "body": "Ex-Googler Addy Osmani, now at Anthropic, authors a definitive practical guide on getting the most out of Opus 5.5 in Claude Code. Key techniques include strict task framing, managing long-running agent horizons, structured inspection routines, and taking advantage of Claude's graceful safety fallback mechanisms.",
+          "url": "https://x.com/vikingmute/status/2106642299883049014"
+        }
+      ]
+    },
+    {
+      "emoji": "🧰",
+      "title": "Skills & Agent Tooling: Self-Improving Transcripts, UI Fuzzing & Decoupled Computer Use",
+      "items": [
+        {
+          "tag": "skill-ecosystem",
+          "title": "@mattpocockuk: Matt Pocock Releases Skills v1.3 with /retro for Automated Workflow Post-Mortems",
+          "body": "Matt Pocock ships version 1.3 of his widely adopted skills repository, headlining the release with /retro. The new skill scans past agent transcripts to identify bottlenecks, friction points, and recurring mistakes, automatically proposing improvements to developer configs and refactoring CONTEXT.md into GLOSSARY.md for cleaner agent comprehension.",
+          "url": "https://x.com/mattpocockuk/status/2106729173511188654"
+        },
+        {
+          "tag": "ui-testing",
+          "title": "@emilkowalski: Emil Kowalski Ships /mobile-native and /break-ui for Stress-Testing Agent Frontends",
+          "body": "Emil Kowalski releases two high-impact skills for frontend builders: /mobile-native, which eliminates web quirks like hover states on touch interfaces to deliver native app feel, and /break-ui, an automated agent fuzzer that deliberately injects extreme strings, aberrant layouts, and long lists to uncover and repair UI vulnerabilities.",
+          "url": "https://x.com/emilkowalski/status/2106752670405099523"
+        },
+        {
+          "tag": "system-automation",
+          "title": "@argofowl & @LinearUncle: Codex Computer Use Decoupled via Local MCP for Claude Code",
+          "body": "Engineers discover that Codex's macOS Computer Use engine runs locally as an MCP server inside the ChatGPT Mac app. By registering the cua_repl plugin into Claude Code or external harnesses, developers can execute background OS clicks and drags without cursor hijacking, achieving superior speed and accuracy over traditional accessibility drivers.",
+          "url": "https://x.com/LinearUncle/status/2106589618007371921"
+        },
+        {
+          "tag": "media-pipeline",
+          "title": "@bkdgiffug: ffmpeg-skill Brings 42 Verified Audio/Video Tools Directly to Coding Agents",
+          "body": "A new open-source CLI skill (npx ffmpeg-skill) equips Claude Code, Codex, and Cursor with 42 local multimedia manipulation tools. Designed with a strict probe-process-verify loop, the agent inspects source streams first, executes transcoding, silence removal, or HDR conversion locally without cloud APIs, and validates output integrity before completing tasks.",
+          "url": "https://x.com/bkdgiffug/status/2106505321774526581"
+        }
+      ]
+    },
+    {
+      "emoji": "🔬",
+      "title": "Harness Engineering & Verifiers: CMU, Google & The Evals Blueprint",
+      "items": [
+        {
+          "tag": "research-breakthrough",
+          "title": "@omarsar0: CMU Proves Harness Learning via RL Outperforms Weight Fine-Tuning",
+          "body": "A landmark paper from Carnegie Mellon University shows that training a 4B proposer model using RL to rewrite agent harness code based on execution failure reports outperforms 35B teacher models across Reasoning Gym. The research validates a major industry shift: improving agent capabilities by optimizing harness logic rather than modifying underlying model weights.",
+          "url": "https://x.com/omarsar0/status/2106529236068819394"
+        },
+        {
+          "tag": "verifier-systems",
+          "title": "@omarsar0: Google Unveils VeriHarness — Disproving Rollout Agreement to Gain +6.4 Points",
+          "body": "Google researchers release VeriHarness along with 26,000 agent trajectories, demonstrating that agreement across multiple rollouts frequently conceals shared errors. VeriHarness investigates rollout discrepancies with workspace evidence and actively challenges unanimous assumptions, boosting performance by +6.2 points on Gemini 3.5 Flash and +6.4 points on Claude Opus 4.8.",
+          "url": "https://x.com/omarsar0/status/2106700905051746803"
+        },
+        {
+          "tag": "evals-engineering",
+          "title": "@suraj_sharma14: The 15 Essential Systems for AI Evals Engineers — The Trajectory as the Unit of Accountability",
+          "body": "Suraj Sharma publishes an exhaustive 15-project masterclass for AI Evals Engineers covering Trajectory Grading Engines, Shadow Routing, Calibrated Judges, and CI/CD gates. Sharma argues that evaluating final outputs hides the exact step where agents fail, establishing the step-level trajectory DAG as the definitive standard for production reliability.",
+          "url": "https://x.com/suraj_sharma14/status/2106715961403273433"
+        },
+        {
+          "tag": "production-evals",
+          "title": "@lennysan: Hamel Husain & Shreya Shankar Share Lessons from 50+ Enterprise Eval Deployments",
+          "body": "Lenny Rachitsky hosts eval pioneers Hamel Husain and Shreya Shankar, breaking down how companies like Ramp (boosting receipt accuracy from 35% to 83%), Shopify (shipping workflows 2.2x faster at 68% lower cost), and Harvey scale evaluation flywheels using automated agentic test suites.",
+          "url": "https://x.com/lennysan/status/2102422882341322779"
+        }
+      ]
+    },
+    {
+      "emoji": "💰",
+      "title": "Token Economics, Quota Disparities & Cost Observability",
+      "items": [
+        {
+          "tag": "subscription-benchmarks",
+          "title": "@Khazix0918: $200 Plan Autopsy — Claude Delivers $3,400/Week API Value vs Codex's $1,700",
+          "body": "Creator Kazik logs token consumption across top subscriptions, discovering that under high prompt cache hit rates (98%+), Claude's $200 plan provides an equivalent API value of $3,400 per week compared to $1,700 on Codex. Because GPT-6 Astra carries 5x higher blended costs than Opus 5.5, users report Claude feeling up to 10x more resilient for daily coding tasks.",
+          "url": "https://x.com/Khazix0918/status/2106762127159734314"
+        },
+        {
+          "tag": "quota-math",
+          "title": "@PawelHuryn: Paweł Huryn Quantifies Vendor Subsidies Across Anthropic, OpenAI & Meta",
+          "body": "Paweł Huryn burns through weekly allowances across major providers, calculating exact multipliers against public API pricing. Claude Pro clocks in at a 42x-45x subsidy ratio with peak hours having zero negative impact, while Meta's Muse High Usage plan offers a 5x multiplier over baseline tiers.",
+          "url": "https://x.com/PawelHuryn/status/2106724136932327458"
+        },
+        {
+          "tag": "enterprise-controls",
+          "title": "@hwchase17: LangChain Slashes Coding Agent Spend Two Months Running via LangSmith",
+          "body": "Harrison Chase shares LangChain's internal playbook for cutting coding agent costs: establishing granular LangSmith telemetry across developer harnesses, enforcing hard user-level cost caps via an LLM gateway, and migrating workloads to OpenSWE with intelligent model routing.",
+          "url": "https://x.com/hwchase17/status/2106695651169800418"
+        },
+        {
+          "tag": "vibe-coding-caution",
+          "title": "@keking99: The 2.6-Billion Request Cautionary Tale: How an Unchecked Poll Loop Burned $1,000",
+          "body": "A developer recounts an expensive vibe-coding mistake after using Astra to quickly generate a DeepSeek voting app. The agent implemented an unchecked 3-second client polling loop without backoff, driving 2.6 billion requests and triggering a sudden $1,000 Cloudflare billing surprise.",
+          "url": "https://x.com/keking99/status/2106687001810677911"
+        }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "title": "Frontier Models, Style Manifolds & Creative Workflows",
+      "items": [
+        {
+          "tag": "voice-synthesis",
+          "title": "@mylifcc: Fulcrum Echo Debuts — Demonstrating AI 'Tone' Is a Post-Training Artifact",
+          "body": "Fulcrum releases Echo, a writing model trained for under $5,000 designed to adopt distinct author personas like Donald Trump, Shakespeare, or technical specs. The creators argue that standard models write in a sanitized 'AI tone' not due to capability limits, but because RLHF alignment compresses the rich latent style manifold learned during pretraining.",
+          "url": "https://x.com/mylifcc/status/2106610263474794515"
+        },
+        {
+          "tag": "openai-roadmap",
+          "title": "@thsottiaux & @Baconbrix: Tibo Sottiaux Confirms Full Codex Usage Dashboard & Teases 6.1 Drops",
+          "body": "OpenAI lead Tibo Sottiaux engages with developers over Pro plan quotas, confirming that an in-depth usage dashboard has launched in the Codex app and teasing upcoming releases including 6.1 Sol Ultra-Fast mode ahead of anticipated OpenAI announcements next week.",
+          "url": "https://x.com/thsottiaux/status/2106607456130592861"
+        },
+        {
+          "tag": "3d-generation",
+          "title": "@python_xxt: Open-Source image-blaster Generates Explorable 3D Worlds from Single Photos",
+          "body": "A viral open-source repo called image-blaster converts any 2D image into a fully explorable 3D environment in five minutes, integrating physics meshes, Gaussian splat backgrounds, and ambient spatial audio to dramatically compress 3D world-building workflows.",
+          "url": "https://x.com/python_xxt/status/2106585503277756603"
+        },
+        {
+          "tag": "enterprise-strategy",
+          "title": "@huxlab: Alexandr Wang on Enterprise Perception: Why Narrative Security Beats Benchmark Prowess",
+          "body": "Scale AI's Alexandr Wang sparks widespread reflection among technical founders, arguing that large enterprises and governments prioritize perceptual and narrative safety over raw benchmark wins, comparing Palantir's disciplined customer alignment to theater rather than pure software delivery.",
+          "url": "https://x.com/huxlab/status/2106559287422328903"
+        }
+      ]
+    }
+  ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {out_path} with {len(digest_data['sections'])} sections.")

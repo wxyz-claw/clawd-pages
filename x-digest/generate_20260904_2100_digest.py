@@ -1,0 +1,137 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Friday, September 4th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Boosts Astra Rate Limits & Rate Resets:</strong> OpenAI bumped 5-hour Astra limits by ~50% across all tier plans and issued a full weekly usage reset, with developers praising Astra-Medium for matching GPT-5.6 intelligence at 1/3 the cost.",
+    "<strong>Artificial Analysis Debuts Intelligence Index v4.2:</strong> Anthropic's Claude Fable 5.1 leads the updated AA benchmark index ahead of GPT-6 Astra, with both models setting new benchmarks for real-world software reverse engineering (SRE-Bench).",
+    "<strong>Sam Altman Clarifies Cybersecurity Pause on Bloomberg:</strong> Altman confirmed GPT-6 Astra is fully deployed and that the model recently paused over cyber safety concerns is an upcoming unreleased frontier iteration.",
+    "<strong>August Jobs Report Triggers Fed Rate Hike Re-Evaluation:</strong> August US non-farm payroll additions nearly tripled forecasts, causing markets to price in a potential 25 bps Federal Reserve interest rate increase.",
+    "<strong>Mbappé Misses 95th-Min Penalty in Real Betis Stunner:</strong> Kylian Mbappé failed to convert a late penalty in stoppage time as Real Betis held on for a dramatic victory over Real Madrid."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@thsottiaux: OpenAI Rolls Out Weekly Usage Reset and Astra Limits Boost",
+          "body": "OpenAI product leads confirmed a full usage reset for Plus, Pro, and Business plans alongside a ~50% increase in 5-hour Astra message limits.",
+          "url": "https://x.com/thsottiaux/status/2096035437299237298"
+        },
+        {
+          "tag": "update",
+          "title": "@ArtificialAnlys: Artificial Analysis Index v4.2 Ranks Fable 5.1 & Astra at Top",
+          "body": "Artificial Analysis launched Index v4.2 with new agentic knowledge benchmarks (AA-Briefcase, GDP.pdf), showing Fable 5.1 and GPT-6 Astra leading the frontier.",
+          "url": "https://x.com/ArtificialAnlys/status/2096001986110099767"
+        },
+        {
+          "tag": "new",
+          "title": "@rohanpaul_ai: Sam Altman Clarifies Paused Frontier Model vs Astra Deployment",
+          "body": "Sam Altman stated on Bloomberg TV that Astra completed safety checks for deployment, while the model recently paused for cyber-critical evaluation is a future model.",
+          "url": "https://x.com/rohanpaul_ai/status/2095988755060633604"
+        },
+        {
+          "tag": "hot",
+          "title": "@PawelHuryn: Real-World Bug Sweep Benchmark Ranks Astra (48/105) Ahead of Fable 5.1",
+          "body": "Independent benchmark testing across real software repositories showed Astra resolving 48 of 105 bugs with superior time and token efficiency.",
+          "url": "https://x.com/PawelHuryn/status/2095982259761475945"
+        },
+        {
+          "tag": "update",
+          "title": "@i2huer: GPT-6 Astra Solves ~100% of Software Reverse Engineering Benchmark (SRE-Bench)",
+          "body": "Researchers reported GPT-6 Astra effectively maxed out SRE-Bench with nearly 100% pass@4 accuracy on software reverse-engineering tasks.",
+          "url": "https://x.com/i2huer/status/2095694379675537904"
+        },
+        {
+          "tag": "update",
+          "title": "@qinzytech: Analysis Explores 'Looped Transformers' Architecture Behind Astra",
+          "body": "Research highlights how recursive layer looping decouples reasoning depth from raw parameter memory capacity, enabling extreme token efficiency.",
+          "url": "https://x.com/qinzytech/status/2095542341956428129"
+        },
+        {
+          "tag": "new",
+          "title": "@theo: Fable 5.1 and Astra Build Developer Confidence for Autonomous PR Merges",
+          "body": "Developer Theo shared that the reliability of Fable 5.1 and Astra allows engineers to delegate end-to-end bug fixes directly to main branches.",
+          "url": "https://x.com/theo/status/2095691652442837310"
+        },
+        {
+          "tag": "update",
+          "title": "@georgepickett: First-Principles Refactoring Prompt Maximizes Astra Cleanups",
+          "body": "Engineers shared an effective first-principles prompt instructing Astra to delete unnecessary complexity before optimizing remaining codebase architecture.",
+          "url": "https://x.com/georgepickett/status/2095979879137460640"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: August Jobs Surge Triples Forecasts, Shifting Rate Hike Expectations",
+          "body": "US employment data surprised markets with robust job creation, prompting economists to project a potential 25 bps rate hike by the Federal Reserve.",
+          "url": "https://x.com/WatcherGuru/status/2095911686775378164"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: MicroStrategy Bitcoin Holdings Reach $4.93 Billion Unrealized Profit",
+          "body": "Michael Saylor's treasury strategy saw paper gains approach $5 billion as Bitcoin price gains continue to bolster $MSTR balance sheet value.",
+          "url": "https://x.com/WatcherGuru/status/2096000868696887559"
+        },
+        {
+          "tag": "new",
+          "title": "@MaxForAI: Tech Analyst Decodes Hidden Easter Eggs in $12.93B Nvidia-Hugging Face Deal",
+          "body": "Analysis revealed the $12,930,300,000 transaction price embeds both the Hugging Face 🤗 emoji code point (U+1F917) and Nvidia brand green hex color.",
+          "url": "https://x.com/MaxForAI/status/2095710556313580017"
+        },
+        {
+          "tag": "update",
+          "title": "@comma_ai: Comma.ai Releases Comma Four Hands-Free Driving Unit for Existing Cars",
+          "body": "Comma AI introduced the Comma Four hardware module, providing plug-and-play hands-free driving assistance without new vehicle purchases.",
+          "url": "https://x.com/comma_ai/status/2095571284608557441"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@tekkersfoot: Kylian Mbappé Misses Late Equalizer Penalty against Real Betis",
+          "body": "Real Betis secured an upset over Real Madrid as Mbappé's 90+5' spot kick failed to find the net in a high-tension La Liga clash.",
+          "url": "https://x.com/tekkersfoot/status/2095981126619693064"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Vincent Kompany Refutes Media Rumors on Bayern Transfer Targets",
+          "body": "Bayern Munich manager Kompany dismissed reports claiming he requested a 3rd major summer signing, emphasizing squad focus and internal alignment.",
+          "url": "https://x.com/iMiaSanMia/status/2095787998595957215"
+        },
+        {
+          "tag": "new",
+          "title": "@Fred834567: Career Advice Advocates To-C Product Focus Over B2B Networking",
+          "body": "Viral career reflection urges young professionals who dislike heavy relationship building to build leverage in consumer (To-C) products over B2B sales.",
+          "url": "https://x.com/Fred834567/status/2095701129908924799"
+        },
+        {
+          "tag": "update",
+          "title": "@espn: Georgia Tech Scores 100-Yard Kickoff Return Touchdown",
+          "body": "Highlights feature a thrilling 100-yard kickoff return TD by Georgia Tech to jumpstart college football weekend action.",
+          "url": "https://x.com/espn/status/2095682959512674309"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully!")

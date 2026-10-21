@@ -1,0 +1,125 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, September 5th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Expands GPT-6 Astra Availability & Details Misalignment Standards:</strong> OpenAI rolled out GPT-6 Astra across Pro, Enterprise, and ChatGPT Work plans, while issuing a statement proposing new industry standards for disclosing AI agent misalignment and web safety incidents.",
+    "<strong>Sam Altman Clarifies Paused Frontier Model vs Astra:</strong> Altman confirmed on Bloomberg TV that GPT-6 Astra passed all safety evaluations for release, and that the model recently paused over cyber-critical concerns is a future unreleased frontier iteration.",
+    "<strong>Artificial Analysis Index v4.2 Ranks Top Models:</strong> Artificial Analysis debuted Index v4.2 featuring new agentic knowledge benchmarks (AA-Briefcase, GDP.pdf), with Claude Fable 5.1 and GPT-6 Astra topping the global leaderboard.",
+    "<strong>August Jobs Report Triggers Fed Rate Increase Expectations:</strong> Strong US employment data showing non-farm payroll additions nearly tripling forecasts led markets to price in a 25 bps Federal Reserve interest rate hike.",
+    "<strong>MicroStrategy Bitcoin Gains Hit $4.93 Billion:</strong> Michael Saylor's treasury strategy reached nearly $5B in unrealized profits as crypto market momentum boosts $MSTR balance sheet valuation."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@OpenAI: GPT-6 Astra Available to Pro, Enterprise & Business Users",
+          "body": "OpenAI launched GPT-6 Astra across ChatGPT Work, Codex, and API endpoints, featuring computer use, asynchronous tool calling, and mid-response steering for long-running workflows.",
+          "url": "https://x.com/OpenAI/status/2095968413646737608"
+        },
+        {
+          "tag": "update",
+          "title": "@OpenAI: OpenAI Proposes Framework for Reporting AI Agent Misalignment Incidents",
+          "body": "Following the 'wiki incident' and Hugging Face security response, OpenAI called for industry-wide standards to publicly report AI agent misalignment during training and deployment.",
+          "url": "https://x.com/OpenAI/status/2096133504417616165"
+        },
+        {
+          "tag": "new",
+          "title": "@rohanpaul_ai: Sam Altman Clarifies Paused Model is Future Frontier Iteration",
+          "body": "Sam Altman clarified on Bloomberg TV that GPT-6 Astra completed cyber-critical safety checks before release, and that the model recently paused is an upcoming unreleased model.",
+          "url": "https://x.com/rohanpaul_ai/status/2095988755060633604"
+        },
+        {
+          "tag": "hot",
+          "title": "@ArtificialAnlys: Artificial Analysis Debuts Index v4.2 with Agentic Benchmarks",
+          "body": "Index v4.2 introduces AA-Briefcase (agentic knowledge work) and GDP.pdf (long-context reasoning), ranking Anthropic Fable 5.1 and OpenAI Astra at the top of the benchmark.",
+          "url": "https://x.com/alexandr_wang/status/2096015031515373939"
+        },
+        {
+          "tag": "update",
+          "title": "@kimmonismus: Developers Praise Astra-Medium Price/Performance Efficiency",
+          "body": "Engineers report Astra-Medium delivers intelligence comparable to GPT-5.6 Sol at roughly 1/3 of the cost due to extreme output token efficiency.",
+          "url": "https://x.com/kimmonismus/status/2095993178423717964"
+        },
+        {
+          "tag": "new",
+          "title": "@MaxForAI: Codex Introduces Experimental Context Management with Persistent Notes",
+          "body": "Codex added an experimental feature replacing context compression with persistent notes and searchable history to reduce token consumption during multi-step coding.",
+          "url": "https://x.com/MaxForAI/status/2096131966647279660"
+        },
+        {
+          "tag": "update",
+          "title": "@poteto: Grok Android App Enters Google Play Pre-Registration",
+          "body": "The Grok team announced pre-registration for their upcoming Android app alongside style control updates in Grok Image 2.0.",
+          "url": "https://x.com/poteto/status/2093063044062650744"
+        },
+        {
+          "tag": "new",
+          "title": "@aliansarinik: Global Demand Surge Drives Hiring of 10,000 Robotics Trainers",
+          "body": "A new category of work emerges as AI companies recruit thousands of remote trainers at $50–$90/hr to label real-world video data for humanoid robots.",
+          "url": "https://x.com/aliansarinik/status/2096032908196909539"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: August Employment Surge Drives Fed Rate Hike Projections",
+          "body": "US jobs data surpassed forecasts, prompting economists to project a potential 25 bps interest rate increase by the Federal Reserve this month.",
+          "url": "https://x.com/WatcherGuru/status/2095911686775378164"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: MicroStrategy Bitcoin Strategy Surpasses $4.93B Paper Gain",
+          "body": "Michael Saylor's treasury holdings reached nearly $5 billion in unrealized profit, bolstering MicroStrategy stock valuation.",
+          "url": "https://x.com/WatcherGuru/status/2096000868696887559"
+        },
+        {
+          "tag": "new",
+          "title": "@APompliano: Analysts Evaluate Bitcoin Role in AI Infrastructure Finance",
+          "body": "Industry discussion explores how Bitcoin treasury strategies and decentralized compute grids align with rising AI data center power demands.",
+          "url": "https://x.com/APompliano/status/2091903355413200911"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano: Luis Enrique Responds to PSG Ligue 1 Winless Streak",
+          "body": "Paris Saint-Germain manager Luis Enrique brushed off press pressure after zero wins in three league matches, expressing confidence in the title race.",
+          "url": "https://x.com/FabrizioRomano/status/2096040946487968011"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Aleksandar Pavlović Rejected €100M Manchester City Summer Transfer",
+          "body": "Reports confirm Bayern Munich midfielder Pavlović declined a major Premier League move after Man City expressed willingness to bid €100m.",
+          "url": "https://x.com/iMiaSanMia/status/2095767807677932021"
+        },
+        {
+          "tag": "new",
+          "title": "@Fred834567: Career Advice Advocates To-C Product Focus Over B2B Networking",
+          "body": "Viral career reflection urges professionals who prefer meritocratic execution over relationship maintenance to build leverage in consumer products.",
+          "url": "https://x.com/Fred834567/status/2095701129908924799"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully!")

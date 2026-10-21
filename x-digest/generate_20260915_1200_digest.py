@@ -1,0 +1,106 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Tuesday, September 15th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Sam Altman & OpenAI Team Tease Massive Release Week:</strong> OpenAI leadership confirms a flurry of major model and feature drops this week ahead of DevDay 2025/2026, with speculation building around new GPT-6 Sol and Luna tier deployments.",
+    "<strong>DeepSeek-V4.1-Flash (Max) Reshapes Agent Arena Pareto Frontier:</strong> DeepSeek releases its lightweight V4.1 Flash model with native vision capabilities, achieving top-3 open model performance at $0.07 per task—up to 99% cheaper than top proprietary models.",
+    "<strong>Anthropic Details 5-Layer Agent Memory Architecture:</strong> Anthropic releases a 13-page technical guide detailing Working, Episodic, Semantic, Procedural, and Forgetting memory layers that cut token costs by 90% while improving agent learning.",
+    "<strong>US House Unveils Crypto Tax Bill as Fed Decision Looms:</strong> Congressional lawmakers introduce fresh crypto tax legislation, while the White House confirms President Trump will respect Fed Chair Kevin Warsh's upcoming rate decision."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@sama & @thsottiaux: OpenAI Teases DevDay-Level Product Ship Week",
+          "body": "Sam Altman and lead engineer Tibo Sottiaux confirm OpenAI is shipping a major wave of updates this week equivalent to a DevDay event, sparking widespread community anticipation for upcoming model deployments.",
+          "url": "https://x.com/sama/status/2099872600977760451"
+        },
+        {
+          "tag": "new",
+          "title": "@arena & @deepseek_ai: DeepSeek-V4.1-Flash (Max) Sets New Efficiency Benchmark",
+          "body": "Agent Arena benchmarks show DeepSeek-V4.1-Flash (Max) achieving a +4.87% net improvement over baseline at $0.07 median task cost, delivering 98% of top open-model performance at a fraction of the cost.",
+          "url": "https://x.com/arena/status/2099606881845321841"
+        },
+        {
+          "tag": "update",
+          "title": "@choopyplug1: Anthropic Publishes 5-Layer Agent Memory Framework",
+          "body": "A 13-page paper from Anthropic breaks down the 5 memory layers required for production coding agents—Working, Episodic, Semantic, Procedural, and Forgetting—demonstrating 90% reductions in token usage per query.",
+          "url": "https://x.com/choopyplug1/status/2099528592531001825"
+        },
+        {
+          "tag": "update",
+          "title": "@thdxr & @derek__Watson: Anthropic Reports >80% Margins as AI Valuations Shift",
+          "body": "Industry analysis highlights Anthropic's reported gross margins surpassing 80% on subscriber tiers, while secondary market trades reflect ongoing revaluations across leading AI labs.",
+          "url": "https://x.com/thdxr/status/2099573726039691312"
+        },
+        {
+          "tag": "tip",
+          "title": "@steipete & @Pat_Erichsen: OpenClaw Introduces Suggested Task Agent Delegation",
+          "body": "OpenClaw author Patrick Erichsen and Peter Steinberger highlight a new agentic feature allowing autonomous coding sessions to scope and spin off sub-tasks into dedicated background sessions.",
+          "url": "https://x.com/steipete/status/2099571935495827761"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: US House Unveils New Crypto Tax Legislation",
+          "body": "The US House of Representatives introduces a new crypto tax bill, while debate continues in Congress over the draft Crypto Clarity Act and digital asset market oversight.",
+          "url": "https://x.com/WatcherGuru/status/2099664512093769894"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: White House Affirms Respect for Upcoming Fed Rate Decision",
+          "body": "The White House confirms President Trump will respect whatever interest rate decision Federal Reserve Chair Kevin Warsh and the FOMC announce tomorrow.",
+          "url": "https://x.com/WatcherGuru/status/2099848129638191185"
+        },
+        {
+          "tag": "new",
+          "title": "@dnystedt: High Attention on China Exit Regulation Effective Dates",
+          "body": "Market participants closely monitor new Chinese exit and entry regulations taking effect Sept. 15, amid reports and commentary on executive movements across major hardware manufacturers.",
+          "url": "https://x.com/dnystedt/status/2099662317382512710"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Science",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FCBayernEN & @iMiaSanMia: Bayern Munich Backs Harry Kane for Ballon d'Or",
+          "body": "Bayern Munich officially endorses England captain Harry Kane for the Ballon d'Or following his match-winning goals and top cover feature in L'Équipe.",
+          "url": "https://x.com/FCBayernEN/status/2099568356273664090"
+        },
+        {
+          "tag": "new",
+          "title": "@FATALFURY_PR: Fatal Fury City of the Wolves Announced for Switch 2",
+          "body": "SNK confirms Fatal Fury: City of the Wolves is coming to Nintendo Switch 2 in October 2026 with digital pre-orders and bonus classic costumes.",
+          "url": "https://x.com/FATALFURY_PR/status/2097958009016340631"
+        },
+        {
+          "tag": "update",
+          "title": "@SportsCenter & @CFBONFOX: College Football Highlights Deliver Viral Moments",
+          "body": "Highlights from weekend college football match-ups sweep sports media as top quarterbacks and defensive standouts post viral scoring plays.",
+          "url": "https://x.com/SportsCenter/status/2098833969726759120"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-15 12:00 ET!")

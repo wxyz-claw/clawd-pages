@@ -1,0 +1,131 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Monday, September 7th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Spotify 'Portal' Architecture Cuts Claude Code Token Burn 90%:</strong> Spotify engineers revealed their 'Portal' two-model routing mechanism, enforcing hard architectural line-count limits (>350 lines) to prevent routine file inspection and boilerplate from reaching expensive frontier models.",
+    "<strong>OpenAI GPT-6 Astra Architecture & FLOP Estimates:</strong> Technical analysis estimates GPT-6 Astra at ~1.2T active parameters (~10T total MoE parameters), trained over 90–110 days using >100k NVIDIA Grace Blackwell NVLink72 GPUs.",
+    "<strong>Ethereum Foundation Roadmaps Gas Payments in Stablecoins for 2027:</strong> Ethereum developers confirmed plans allowing users to settle base transaction gas fees using stablecoins instead of $ETH starting in 2027.",
+    "<strong>China GT Shanghai Crash Triggers Team Boycotts & Safety Backlash:</strong> Driver Luke Hartog heroically rescued competitor Olli Milroy from a burning Ferrari while organizers delayed emergency medical care by 15 minutes, prompting multiple racing teams to withdraw in protest.",
+    "<strong>Unitree Robot Incident at Science Museum Sparks Safety Debate:</strong> A Unitree performing robot accidentally kicked a 5-year-old child at a public science exhibit, raising fresh regulatory and liability concerns over humanoid demonstrations."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@stretchcloud: Spotify Cuts Claude Code Token Usage by 90% via Hard Architectural Routing",
+          "body": "Spotify engineering introduced 'Portal', a two-model routing mechanism for Claude Code. Instead of relying on soft prompt instructions, hard blocks at the 350-line threshold prevent routine file-reading and boilerplate generation from touching expensive frontier models.",
+          "url": "https://x.com/stretchcloud/status/2096439998539321653"
+        },
+        {
+          "tag": "new",
+          "title": "@forloopcodes: Reverse-Engineering GPT-6 Astra's Parameter Count & Pre-Training Compute",
+          "body": "Compute calculations indicate GPT-6 Astra runs ~1.2T active parameters (~10-14T total MoE parameters). Pre-training on OpenAI's Abilene cluster consumed ~7e26 FLOPs over 100 days across 100k+ NVIDIA Grace Blackwell NVLink72 GPUs.",
+          "url": "https://x.com/forloopcodes/status/2096776615258910934"
+        },
+        {
+          "tag": "update",
+          "title": "@mattpocockuk: Emerging Workflows for AI-Authored Code PR Reviews",
+          "body": "TypeScript educator Matt Pocock summarized advanced workflows for reviewing AI pull requests, including visual diff tools (/show-me), automated pseudocode summaries, inline Mermaid diagrams, and Playwright video walkthroughs with AI voiceover narration.",
+          "url": "https://x.com/mattpocockuk/status/2096666329495257563"
+        },
+        {
+          "tag": "update",
+          "title": "@gdb: Greg Brockman Highlights OpenAI Essay on Navigating AGI Era",
+          "body": "OpenAI co-founder Greg Brockman shared Mark Merett's essay 'An Alien Mind,' calling for thoughtful deliberation, institutional responsibility, and collective safety protocols as frontier models reach human-level AGI capabilities.",
+          "url": "https://x.com/gdb/status/2096794565499883839"
+        },
+        {
+          "tag": "new",
+          "title": "@thdxr: Key Mindset Shifts Required for Engineers Building Companies",
+          "body": "Dax Raad highlighted two major cognitive traps software engineers face when founding startups: poor non-technical instincts and overestimating early product-market judgment due to previous developer domain authority.",
+          "url": "https://x.com/thdxr/status/2096965821134246172"
+        },
+        {
+          "tag": "new",
+          "title": "@lksmlabc: Tonghuashun Open-Sources Financial-API for AI Agents",
+          "body": "Chinese financial data giant Tonghuashun released Financial-API, giving AI coding assistants and financial agents native MCP and Python access to real-time market orderbooks, K-line backtesting, and institutional hotlists.",
+          "url": "https://x.com/lksmlabc/status/2096524556123115628"
+        },
+        {
+          "tag": "update",
+          "title": "@jun_song: Critiquing the AGI Marketing Shift Towards Basic Automation",
+          "body": "Tech analyst Jun Song noted the disconnect between AGI's original vision—exponential scientific breakthroughs and medical cures—and current industry marketing that labels basic computer-use tools and hair-salon booking agents as AGI.",
+          "url": "https://x.com/jun_song/status/2096810883100074188"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Ethereum to Enable Gas Fee Payments in Stablecoins by 2027",
+          "body": "Ethereum core protocol updates will allow network users to settle transaction gas fees directly using stablecoins rather than requiring native $ETH tokens, simplifying mainstream onboarding.",
+          "url": "https://x.com/WatcherGuru/status/2096982290375098599"
+        },
+        {
+          "tag": "hot",
+          "title": "@huang3feng: China GT Shanghai Crash Incident Triggers Mass Team Boycotts",
+          "body": "During China GT Shanghai, Porsche driver Luke Hartog heroically pulled rival driver Olli Milroy from a burning Ferrari. Emergency responders took 15 minutes to arrive while organizers attempted to cover up the delay, prompting multiple race teams to withdraw.",
+          "url": "https://x.com/huang3feng/status/2096682622764412951"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: Weekly Global Market & Crypto Policy Round-Up",
+          "body": "Highlights include SEC progression on the Crypto Clarity Act, Nvidia's $12.93B acquisition of Hugging Face, John Ternus succeeding Tim Cook as Apple CEO, and MicroStrategy adding 4,603 BTC.",
+          "url": "https://x.com/WatcherGuru/status/2096611492867035240"
+        },
+        {
+          "tag": "new",
+          "title": "@Rumoreconomy: Analyzing China Central Bank Recapitalization of State Banks",
+          "body": "Financial analyst breakdown of China's Treasury bond issuance used to inject capital into Industrial and Commercial Bank of China (ICBC) and state insurers to absorb real estate bad debt and optimize balance sheets.",
+          "url": "https://x.com/Rumoreconomy/status/2096635377981468951"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@laozhouhengmei: Unitree Humanoid Robot Incident at Science Museum Raises Safety Questions",
+          "body": "A performing Unitree humanoid robot at a public science exhibit misjudged distance and kicked a 5-year-old child, leading to dental surgery and sparking debates over crowd safety guidelines for autonomous robots.",
+          "url": "https://x.com/laozhouhengmei/status/2096567480072196409"
+        },
+        {
+          "tag": "new",
+          "title": "@elonmusk: Elon Musk Jokes About X as the Destination for Rage Content",
+          "body": "Elon Musk commented on X's unique social dynamics, tweeting that users looking for something to get upset about will find all their needs met on the platform.",
+          "url": "https://x.com/elonmusk/status/2096505360232395188"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Bayern Munich's 67-Matchday Bundesliga Top Streak Concludes",
+          "body": "Bayern Munich's historic 67-matchday streak at the top of the Bundesliga table came to an end, as striker Harry Kane reiterated the squad's focus on securing the UEFA Champions League title this season.",
+          "url": "https://x.com/iMiaSanMia/status/2096305655854289003"
+        },
+        {
+          "tag": "update",
+          "title": "@UncleNear666: Municipal Crackdowns Target Predatory Scripted Roleplay Venue Tactics",
+          "body": "Municipal authorities across several cities initiated regulatory enforcement against unmonitored immersive roleplay parlors following high-profile debt exploitation cases involving minors.",
+          "url": "https://x.com/UncleNear666/status/2096576640847642744"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-07 12:00 ET!")

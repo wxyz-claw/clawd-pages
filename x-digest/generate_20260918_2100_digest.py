@@ -1,0 +1,125 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Friday, September 18th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>President Trump Announces Permanent Greenland Security Agreement & White House Media Bans:</strong> The U.S. enters an 'Infinite Life' defense agreement with Denmark and Greenland granting permanent U.S. security rights, alongside immediate press access bans on CNN, MSNOW, and Politico.",
+    "<strong>WebMCP + Jev Benchmarks Solve 100% of Web Tasks at 112x Lower Cost:</strong> New benchmarks demonstrate that pairing Jev for action selection with Mercury 2.5 for argument generation via WebMCP solves 100% of web agent tasks at 112x lower cost than visual computer-use models.",
+    "<strong>Cua Open-Sources Cua-S1-FORMS 2.8MB System-1 Model for Computer Use:</strong> Cua releases a 706K-parameter open-weights System-1 model scoring 99.7% on form-filling evaluations, replacing heavy LLM calls for routine web browser actions.",
+    "<strong>Elon Musk Projects AI to Double U.S. GDP Growth to ~4% Next Year:</strong> Musk forecasts that rapid enterprise AI adoption will double U.S. annual GDP growth from ~2% to ~4%+ starting in 2027.",
+    "<strong>Bayern Munich Demolishes Union Berlin 7-0 as Harry Kane & Michael Olise Break Records:</strong> Harry Kane becomes the fastest player to reach 100 Bundesliga goals (101 total), while Michael Olise scores a hat-trick and assist to reach 11 G/A in 7 matches."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@0xidanlevin: WebMCP + Jev Solves 100% of Web Agent Tasks at 112x Lower Model Cost",
+          "body": "Benchmarks show pairing Jev for tool selection with Mercury for argument generation via WebMCP solves 100% of browser tasks at 112x lower cost than vision-based computer use models.",
+          "url": "https://x.com/0xidanlevin/status/2100937437325205568"
+        },
+        {
+          "tag": "new",
+          "title": "@trycua: Cua Open-Sources Cua-S1-FORMS 2.8MB System-1 Model for Computer Use",
+          "body": "Cua releases Cua-S1-FORMS, a 706K-parameter / 2.8MB specialized System-1 model built for form-filling and browser actions, achieving 99.7% evaluation accuracy.",
+          "url": "https://x.com/trycua/status/2101014004927729737"
+        },
+        {
+          "tag": "hot",
+          "title": "@RohanNayak2: Pocket FM Launches Sherpa Fiction AI Trained on 5.5B Hours of Playtime Data",
+          "body": "Pocket FM introduces Sherpa, a specialized fiction writing AI that uses semantic knowledge graphs and dynamic replanning to generate serialized audio dramas, boosting ARR to $500M.",
+          "url": "https://x.com/RohanNayak2/status/2101019876269973593"
+        },
+        {
+          "tag": "new",
+          "title": "@googlegemma: Google Gemma Team Previews DiffusionGemma-as-Jev for Non-Autoregressive Decisions",
+          "body": "Google Gemma showcases canvas diffusion to evaluate structured decision spaces concurrently in a single parallel step (~0.2s on DGX hardware).",
+          "url": "https://x.com/googlegemma/status/2101069861598482817"
+        },
+        {
+          "tag": "update",
+          "title": "@AnthropicAI: Anthropic & Accenture Partner on $1B Frontier AI Independent Evals",
+          "body": "Anthropic and Accenture commit over $1 Billion over five years to build independent evaluation capacity for frontier AI models.",
+          "url": "https://x.com/AnthropicAI/status/2101039819870937247"
+        },
+        {
+          "tag": "tip",
+          "title": "@peteryared: AgentCloak Launches In-Browser Sensitive Data Anonymizer for AI Tools",
+          "body": "AgentCloak releases a free browser extension that automatically replaces PII and sensitive context with realistic fakes before sending queries to ChatGPT or Claude.",
+          "url": "https://x.com/peteryared/status/2100960005289807961"
+        },
+        {
+          "tag": "tip",
+          "title": "@ctatedev: Instant Generative UI Developed with json-render and Jev",
+          "body": "Developers demonstrate instant generative UI components rendered in milliseconds by pairing json-render design systems with Jev fast decision logic.",
+          "url": "https://x.com/ctatedev/status/2101022101750571357"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@realDonaldTrump: President Trump Announces Permanent Greenland Security Agreement",
+          "body": "The U.S. enters an 'Infinite Life' agreement with Denmark and Greenland for U.S. military base construction and permanent security rights at no cost to the U.S.",
+          "url": "https://x.com/realDonaldTrump/status/2101101979808493780"
+        },
+        {
+          "tag": "hot",
+          "title": "@realDonaldTrump: White House Bans CNN, MSNOW, and Politico Over Reporting Practices",
+          "body": "President Trump announces an immediate ban of CNN, MSNOW, and Politico from White House access, citing media integrity and government subscription grants under prior administration.",
+          "url": "https://x.com/realDonaldTrump/status/2101101916399001773"
+        },
+        {
+          "tag": "new",
+          "title": "@elonmusk: Elon Musk Forecasts AI Will Double U.S. GDP Growth to 4% Next Year",
+          "body": "Musk estimates that AI productivity gains will roughly double U.S. annual GDP growth from ~2% to ~4% or higher starting next year.",
+          "url": "https://x.com/elonmusk/status/2101011740574052697"
+        },
+        {
+          "tag": "tip",
+          "title": "@ethanl_0x: Comprehensive Analysis of Zhu Xiaohu's AI Commercialization Playbook",
+          "body": "A 19-point breakdown of GSR Ventures partner Zhu Xiaohu's key insights on AI moats, retention standards (50%+ M2), and shifting from token maxing to value maxing.",
+          "url": "https://x.com/ethanl_0x/status/2100478370136146010"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Science",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano: Bayern Munich Thrashes Union Berlin 7-0 as Kane Reaches 100 Goals & Olise Scores Hat-Trick",
+          "body": "Harry Kane becomes the fastest player in Bundesliga history to hit 100 goals, while Michael Olise notches a hat-trick and assist (11 G/A in 7 games).",
+          "url": "https://x.com/FabrizioRomano/status/2101046156646039637"
+        },
+        {
+          "tag": "update",
+          "title": "@FabrizioRomano: Lamine Yamal Speaks Out on Ballon d'Or & Champions League Matchups",
+          "body": "Barcelona star Lamine Yamal discusses how off-ball movement draws defenders and prepares for upcoming European clashes against Bayern and PSG.",
+          "url": "https://x.com/FabrizioRomano/status/2100989313206898755"
+        },
+        {
+          "tag": "new",
+          "title": "@METALSLUG_EN: SNK Announces Metal Slug Ultimate Collection for 2027",
+          "body": "SNK reveals Metal Slug Ultimate Collection containing 9 classic titles plus the legendary unreleased location test version for Metal Slug's 30th Anniversary.",
+          "url": "https://x.com/METALSLUG_EN/status/2097930496026308752"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-18 21:00 ET!")

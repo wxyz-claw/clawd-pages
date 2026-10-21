@@ -1,0 +1,118 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Sunday, September 13th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Satya Nadella Outlines Superintelligence Principles:</strong> Microsoft CEO Satya Nadella issues a comprehensive statement calling for grounded AI alignment, broad open vs closed ecosystem choice, enterprise control over custom models, and announces Microsoft's upcoming MAI 'Code of Conduct'.",
+    "<strong>Senate Dems Meet on Crypto Clarity Act & Russia Rejects AI Slowdowns:</strong> Senate Democrats convene to discuss the landmark Crypto Clarity Act, as global AI competition accelerates following Russia's declaration that halting AI development is impossible.",
+    "<strong>Developers Request '/slow' Mode for Codex Workflows:</strong> High token usage during overnight automated goal execution leads developers to propose a half-speed, lower-consumption tier for OpenAI Codex.",
+    "<strong>Biosecurity Expert Rejects AI Bioweapon Hype:</strong> AI researcher David Bellamy, with hands-on experience in both frontier LLM training and lab virus synthesis, dismisses claims that AI poses catastrophic bioweapon creation risks."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@satyanadella: Satya Nadella Outlines AI Principles & MAI Code of Conduct",
+          "body": "Microsoft CEO Satya Nadella released a major statement urging that superintelligence remain grounded in human benefit, advocating for enterprise model ownership, open-source diversity, and announcing Microsoft's upcoming MAI Code of Conduct.",
+          "url": "https://x.com/satyanadella/status/2099220712024408084"
+        },
+        {
+          "tag": "update",
+          "title": "@Im_IrushiK & @ziwenxu_: Developers Propose '/slow' Mode for Codex Workflows",
+          "body": "As developer usage spikes during multi-step automated goal runs, creators request a half-speed, reduced-cost mode for OpenAI Codex to accommodate overnight background execution.",
+          "url": "https://x.com/Im_IrushiK/status/2098809262302720347"
+        },
+        {
+          "tag": "new",
+          "title": "@DavidRBellamy: Frontier LLM & Virology Researcher Rejects AI Virus Warnings",
+          "body": "David Bellamy, having both trained frontier AI models and synthesized viruses in lab settings, argues widespread warnings about AI creating dangerous bioweapon viruses are unfounded.",
+          "url": "https://x.com/DavidRBellamy/status/2099187370407112758"
+        },
+        {
+          "tag": "tip",
+          "title": "@theo: Code Quality Comparison Between AI Agents and Human Devs",
+          "body": "Theo observes that code produced by modern AI generation tools often surpasses average human-written code in structure and consistency across production codebases.",
+          "url": "https://x.com/theo/status/2098882862414274719"
+        },
+        {
+          "tag": "update",
+          "title": "@hwchase17: Domain-Specific Harnesses in Agent Engineering",
+          "body": "LangChain co-founder Harrison Chase spotlights new architectural guides on building domain-specific harnesses for specialized AI agent evaluation and execution.",
+          "url": "https://x.com/hwchase17/status/2098866608785473858"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk: TypeScript Curation Milestone",
+          "body": "Matt Pocock's developer skills repository reaches major community adoption, surpassing React in total GitHub stars.",
+          "url": "https://x.com/mattpocockuk/status/2098696179081007514"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Senate Democrats Meet to Discuss Crypto Clarity Act",
+          "body": "US Senate leadership holds an evening session to review key provisions of the upcoming Crypto Clarity Act as regulatory efforts intensify.",
+          "url": "https://x.com/WatcherGuru/status/2099202777243082899"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: Russia Rejects International AI Development Slowdowns",
+          "body": "Russian officials state that freezing or pacing artificial intelligence development is impossible, reflecting growing international divergence on AI governance.",
+          "url": "https://x.com/WatcherGuru/status/2098910147443634420"
+        },
+        {
+          "tag": "new",
+          "title": "@Polymarket: Surrogacy & Demographic Report Sparks Online Commentary",
+          "body": "Polymarket reports on high-profile international surrogacy cases, triggering widespread discussion on demographic trends and regulatory policy.",
+          "url": "https://x.com/Polymarket/status/2099191756810002924"
+        },
+        {
+          "tag": "tip",
+          "title": "@KeithMcCullough: Institutional Process Blueprint Published",
+          "body": "Hedge fund manager Keith McCullough releases a comprehensive 52-page guide on process-driven risk management and systematic investing.",
+          "url": "https://x.com/KeithMcCullough/status/1846614136303559130"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Sports",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@jack: Jack Dorsey Reflects on Social Programming and Cultural Shifts",
+          "body": "Jack Dorsey shares observations on societal programming and how rapidly public discourse pivots across modern communication networks.",
+          "url": "https://x.com/jack/status/2098906407294693434"
+        },
+        {
+          "tag": "update",
+          "title": "@HKane & @Gazpachen: Bayern Munich Victory at Elversberg Highlights Stadium Upgrades",
+          "body": "Harry Kane celebrates Bayern Munich's away victory at Elversberg as fans share viral behind-the-scenes clips of the stadium's ongoing renovations.",
+          "url": "https://x.com/HKane/status/2099202000084730040"
+        },
+        {
+          "tag": "new",
+          "title": "@ChonlozB: Action Cinema Legends Reunite for Sylvester Stallone at 80",
+          "body": "Hollywood icons gather to celebrate Sylvester Stallone's 80th birthday, sparking viral nostalgia across movie fan communities.",
+          "url": "https://x.com/ChonlozB/status/2099179826448072762"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-13 21:46 ET!")

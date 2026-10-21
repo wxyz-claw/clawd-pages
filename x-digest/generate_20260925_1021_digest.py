@@ -1,0 +1,161 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Friday, September 25th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Claude-Led Discovery of Novel Gene-Editing Molecular Machinery:</strong> Anthropic CEO Dario Amodei reveals that Claude autonomously discovered an unknown programmable enzyme system hidden within bacteriophage DNA featuring CRISPR-like repeating arrays. Claude parsed genomic literature, spotted the mechanism, and designed verification experiments validated in the lab, pointing toward an exponential curve for AI-driven biological discovery.",
+    "<strong>Contrastive Language Models & Jev-as-a-Judge Re-Architect Agent Systems:</strong> Azalia Mirhoseini and Jacky K unveil CLM-8B, a fast System 1 model setting new SOTA on DeepSWE (81.6%) and Terminal Bench (87.6%) while running 9x faster than Jev. Simultaneously, new research on Jev-as-a-Judge proves that confidence-based routing to cheap decision models slashes LLM evaluation costs by 277x while retaining 99% of GPT-6's benchmark accuracy.",
+    "<strong>Memory Attention (MA) Challenges Traditional QKV Attention:</strong> Researchers introduce Memory Attention, demonstrating that Value (V) projections in Transformers can be replaced by learned persistent token memory (V = K + Memory[token]), saving up to 29.6% in training compute and halving KV cache memory footprint via prefetching.",
+    "<strong>Satya Nadella Details Copilot's Transformation into an Enterprise OS:</strong> Microsoft rolls out an extensive re-architecture of Copilot, uniting Autopilot (proactive long-running background agents), tenant-hosted Code creation, and continuous cross-application Office integration.",
+    "<strong>The Death of Hand-Written Code & Real Estate Rate Shock:</strong> Gergely Orosz dissects the industry uproar following DHH's declaration that manual code authoring is dead; Alibaba open-sources a 68-page AI Native Engineering Handbook; and Treasury yields at 5.1% invert against 4.8% rental cap rates to trigger a freeze in private real estate capital."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Agent Tooling",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@DarioAmodei: Claude Identifies Potential New Programmable Gene-Editing System",
+          "body": "Anthropic CEO Dario Amodei details how Claude independently identified a novel molecular machine in bacteriophage DNA featuring CRISPR-like repeating arrays. Claude analyzed genomic databases, drafted the hypotheses, and designed wet-lab protocols successfully executed by Anthropic's biology team, signaling that AI-driven experimental biology is entering an exponential breakthrough phase.",
+          "url": "https://x.com/DarioAmodei/status/2102831170299834652"
+        },
+        {
+          "tag": "update",
+          "title": "@ClaudeDevs: How Anthropic Made claude.ai 3x Faster in Two Weeks Using Claude",
+          "body": "Anthropic's engineering team shares the exact methodology and prompt chains used to accelerate claude.ai 3x in 14 days, employing Claude to profile traces, isolate frontend bottleneck scripts, and refactor heavy execution paths autonomously.",
+          "url": "https://x.com/ClaudeDevs/status/2102839691154427983"
+        },
+        {
+          "tag": "tip",
+          "title": "@angeldot_ & @Hyde_ai3: Clean Legacy Constraints with '/claude-api prompt-audit'",
+          "body": "Developers highlight Anthropic engineer Lance Martin's prompt auditing workflow: executing '/claude-api prompt-audit' scrubs legacy defensive prompt guards and CLAUDE.md bloat designed for earlier models, reformatting instructions around Opus 5.5's concise agentic behavior.",
+          "url": "https://x.com/angeldot_/status/2103095295215100189"
+        },
+        {
+          "tag": "new",
+          "title": "@emmanuel_2m: Scenario Open-Sources GameDev OS: 9 Agent Specialists and 64 Skills",
+          "body": "Scenario open-sources GameDev OS, turning single coding agents into full game studios by orchestrating 9 dedicated subagents (concept artist, 3D rigger, audio designer, director) across Meshy, Rodin, and Seedance models in a unified collaborative pipeline.",
+          "url": "https://x.com/emmanuel_2m/status/2103097017073361137"
+        },
+        {
+          "tag": "tip",
+          "title": "@anshnanda & @hassanazharkhan: Eliminating Tautological Unit Tests in Favor of E2E Verification",
+          "body": "Engineers advocate removing LLM-generated unit tests that merely assert trivial string constants or freeze implementation details. Following OpenClaw's deletion of 400k lines of automated unit tests, teams are shifting AGENTS.md rules toward high-signal end-to-end integration specs.",
+          "url": "https://x.com/anshnanda/status/2103157336164683847"
+        },
+        {
+          "tag": "new",
+          "title": "@aheritier: Docker Releases Official Skills Suite for Coding Agents",
+          "body": "Docker publishes its first official collection of agent skills, giving coding agents verified, context-efficient commands for container building, multi-stage debugging, and compose orchestration without hallucinated CLI arguments.",
+          "url": "https://x.com/aheritier/status/2103188909350084627"
+        },
+        {
+          "tag": "hot",
+          "title": "@twoclipping & @VincentWei93: Pure Code Motion Graphics and Video Generation on Opus 5.5",
+          "body": "Developers demonstrate generating complex UI motion design, SVG morphing, and synchronized BGM video entirely via deterministic HTML/JS code orchestrated by Opus 5.5, bypassing diffusion video generation models in favor of exact, frame-accurate Playwright code execution.",
+          "url": "https://x.com/twoclipping/status/2103273003555402193"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Systems, Models & Infrastructure",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@Azaliamirh & @jackyk02: CLM-8B Sets New SOTA on DeepSWE (81.6%) and Terminal-Bench (87.6%)",
+          "body": "Researchers introduce Contrastive Language Models (CLMs), an ultra-fast System 1 architecture mapping states directly to action distributions. CLM-8B outperforms Jev on coding benchmarks while running up to 9x faster, disaggregating state-action embeddings to reuse cached state representations continuously.",
+          "url": "https://x.com/Azaliamirh/status/2102958024323428362"
+        },
+        {
+          "tag": "hot",
+          "title": "@dair_ai & @askalphaxiv: Jev-as-a-Judge Cascades Retain 99% Accuracy at 277x Lower Eval Cost",
+          "body": "A new paper reveals that using TypeSafe AI's Jev as a first-pass probability judge and escalating only uncertain predictions to GPT-6 retains 99% of frontier evaluation accuracy on preference benchmarks while cutting evaluation spend by 277x ($0.044 vs $12.18 per 1,000 judgments).",
+          "url": "https://x.com/dair_ai/status/2103147453717545278"
+        },
+        {
+          "tag": "new",
+          "title": "@NVIDIAAI: NVIDIA Open-Sources Nemotron 3 Diarization Model on Hugging Face",
+          "body": "NVIDIA AI releases a 100M-parameter Nemotron 3 Diarization checkpoint capable of isolating overlapping speakers in real-time conversations with up to 8 distinct speakers, eliminating messy transcript interleaving in agentic voice workflows.",
+          "url": "https://x.com/NVIDIAAI/status/2102775666366435450"
+        },
+        {
+          "tag": "new",
+          "title": "@MaxForAI: Memory Attention (MA) Drops Value Projections to Slash KV Cache and Compute",
+          "body": "A novel Transformer architecture replaces per-token Value projections with learned persistent token memories (V = K + Memory[token]). The design eliminates dynamic V matrix multiplications, cuts training token consumption by up to 29.6%, and enables offline KV cache reconstruction.",
+          "url": "https://x.com/MaxForAI/status/2103372329984442572"
+        },
+        {
+          "tag": "update",
+          "title": "@satyanadella: Microsoft Unveils Copilot OS Update: Autopilot, Cloud Code, and Ambient Workspace",
+          "body": "Satya Nadella announces Microsoft Copilot's biggest architectural release yet, introducing Autopilot for persistent enterprise agent loops, integrated tenant-level coding workspaces, and proactive 'Today' context retrieval across the M365 ecosystem.",
+          "url": "https://x.com/satyanadella/status/2103455884366188544"
+        },
+        {
+          "tag": "tip",
+          "title": "@HowToPrompt__: IBM STAIR Hierarchical Retrieval Cuts Production RAG Hallucinations to <0.05%",
+          "body": "IBM introduces STAIR, a generative retrieval technique that addresses documents using natural structural tables of contents rather than arbitrary vector chunking, reaching 82.6% Recall@1 and reducing factual hallucination rates to virtually zero.",
+          "url": "https://x.com/HowToPrompt__/status/2103153354755248489"
+        },
+        {
+          "tag": "new",
+          "title": "@OpenAI: OpenAI Open-Sources MentalHealthBench with 80+ Clinicians",
+          "body": "OpenAI releases MentalHealthBench, an evaluation suite built alongside clinical psychologists to test model safety, grounding, and empathetic conversation guardrails in sensitive behavioral healthcare interactions.",
+          "url": "https://x.com/OpenAI/status/2102837574092161102"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture, Tech & Society",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@GergelyOrosz: The Industry Backlash to DHH Declaring Manual Coding Over",
+          "body": "Gergely Orosz analyzes the fierce debate sparked by DHH publicly asserting that hand-written coding is officially obsolete for commercial software engineering, noting that developers paying close attention to frontier models have quietly crossed that threshold months ago.",
+          "url": "https://x.com/GergelyOrosz/status/2103074862310809843"
+        },
+        {
+          "tag": "new",
+          "title": "@shao__meng: Alibaba Releases 68-Page Enterprise AI Native Engineering Handbook",
+          "body": "Alibaba debuts a comprehensive architectural guide at the Apsara Conference detailing lessons learned transitioning internal teams to AI-native engineering—covering agent harnesses, sandboxes, MCP tool connectivity, guardrails, and organizational change.",
+          "url": "https://x.com/shao__meng/status/2103332060513665133"
+        },
+        {
+          "tag": "update",
+          "title": "@_The_Prophet__ & @KobeissiLetter: 5.1% Treasury Yields Trigger Negative Leverage in Real Estate",
+          "body": "Financial analysts highlight how 5.1% 10-year Treasury yields have surpassed average 4.8% rental cap rates, creating a 50% plunge in real estate transaction volumes as risk-free government paper becomes a relentless hurdle rate across private asset markets.",
+          "url": "https://x.com/_The_Prophet__/status/2103175847700308214"
+        },
+        {
+          "tag": "tip",
+          "title": "@lumenxbt: The Napkin Framework Behind Matt Abrahams' Stanford Lecture",
+          "body": "A viral breakdown revisits Matt Abrahams' legendary Stanford lecture 'Think Fast, Talk Smart,' arguing that unscripted spontaneous conversational skills ('What, So What, Now What') carry 90% of career decision weight while over-coached presentations fall flat.",
+          "url": "https://x.com/lumenxbt/status/2103172611723432215"
+        },
+        {
+          "tag": "hot",
+          "title": "@FundamentEdge: Opus 5.5 Passes Institutional Hedge Fund Financial Modeling Test",
+          "body": "Hedge fund investor Brett Caughran reports that Opus 5.5 is the first model capable of one-shot updating complex, multi-decade quarterly financial models with deep analytical scenario tabs, freeing analysts to focus on proprietary qualitative insights.",
+          "url": "https://x.com/FundamentEdge/status/2103136854962819363"
+        },
+        {
+          "tag": "update",
+          "title": "@riba2534: Measuring True Token Quotas: Claude Code MAX 20x Delivers 3x ChatGPT Allocations",
+          "body": "Benchmark tests comparing top-tier developer subscriptions reveal that Claude Code MAX 20x provides roughly 6B weekly tokens under xhigh reasoning compared to 1.5–2B for GPT-6 Astra, giving developers significantly greater sustained throughput.",
+          "url": "https://x.com/riba2534/status/2103363198997180859"
+        }
+      ]
+    }
+  ]
+}
+
+output_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {output_path}")

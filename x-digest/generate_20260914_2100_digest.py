@@ -1,0 +1,118 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Monday, September 14th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Barack Obama Endorses Frontier AI Slowdown Agreement:</strong> Former President Obama praises frontier AI lab leaders for agreeing to slow down development pace, calling for broad public governance on AI's societal impact.",
+    "<strong>Elon Musk Details Grok 4.8 & 4.9 Technical Roadmap:</strong> xAI founder confirms Grok 4.8 (2.5T parameter model on custom C++ stack) enters RL this week, with Grok 4.7 matching Opus 5.0 and Grok 4.9 targeting Astra/Fable performance.",
+    "<strong>DeepSeek Releases Open-Source Agent Harness (dsh):</strong> DeepSeek drops <code>deepseek-harness</code>, an open-source framework for building modular coding agents with pluggable sandboxes, tools, and UI loops.",
+    "<strong>Trump Administration Invokes 1882 Immigration Act Rule:</strong> The administration announces a new welfare-restriction rule effective Friday, September 18th to limit green card eligibility for public charges."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@BarackObama: Barack Obama Weighs In on AI Frontier Governance",
+          "body": "Former President Barack Obama expresses support for frontier lab leaders agreeing to slow down AI development pace, emphasizing that choices between medicine/energy breakthroughs and economic disruption must be made publicly by society.",
+          "url": "https://x.com/BarackObama/status/2099642023922036982"
+        },
+        {
+          "tag": "update",
+          "title": "@elonmusk & @itslueul: Elon Musk Outlines Grok 4.8 RL & Grok 4.9 Benchmark Goals",
+          "body": "Elon Musk clarifies Grok 4.7 matches Opus 5.0, while Grok 4.8—a 2.5T parameter model built with xAI's custom C++ software stack—finishes base training this week to begin RL. He adds Grok 4.9 will target Astra/Fable-class performance.",
+          "url": "https://x.com/elonmusk/status/2099458047408013751"
+        },
+        {
+          "tag": "new",
+          "title": "@sauda_coder & @teortaxesTex: DeepSeek Drops Open-Source 'deepseek-harness' Agent Framework",
+          "body": "DeepSeek releases <code>deepseek-harness</code> (<code>dsh</code>), a fully modular framework for building coding agents where models, tools, sandboxes, and UI loops are pluggable via configuration.",
+          "url": "https://x.com/sauda_coder/status/2099333079567671797"
+        },
+        {
+          "tag": "update",
+          "title": "@mark_k & @thsottiaux: OpenAI Team Responds to ChatGPT Desktop App Feedback",
+          "body": "Users discuss ChatGPT desktop app polish while critiquing the separation between Chat, Work, and Codex modes. OpenAI lead engineer Tibo Sottiaux confirms 'We will fix this'.",
+          "url": "https://x.com/thsottiaux/status/2099394367744356554"
+        },
+        {
+          "tag": "new",
+          "title": "@AtriaASI: Atria Unveils Dawn Preview Agentic Foundation Model",
+          "body": "Atria ASI launches Atria Dawn Preview, an open agentic foundation model designed for long-horizon research and engineering tasks requiring verifiable execution outcomes.",
+          "url": "https://x.com/AtriaASI/status/2099490911822794901"
+        },
+        {
+          "tag": "tip",
+          "title": "@chetaslua & @unclebobmartin: Claude Opus 5.2 & Token Efficiency Insights",
+          "body": "Developers highlight early testing of Claude Opus 5.2 routing inside Claude Code with auto-iterating evaluation loops, alongside commentary on optimizing agent harness efficiency.",
+          "url": "https://x.com/chetaslua/status/2099568130037350647"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@MorseReport: Trump Administration Invokes 1882 Act Welfare Rule for Immigrants",
+          "body": "The Trump Administration announces a rule enforcing public charge restrictions under the Immigration Act of 1882 taking effect Sept 18, impacting federal benefit eligibility for green card applicants.",
+          "url": "https://x.com/MorseReport/status/2099542259767377960"
+        },
+        {
+          "tag": "update",
+          "title": "@ChinaTruth: India Rejects BRICS Currency Proposal to Replace US Dollar",
+          "body": "India formally declines the BRICS proposal to use the Chinese Yuan for bilateral trade settlements, reiterating its policy on monetary independence.",
+          "url": "https://x.com/ChinaTruth/status/2099087304874942536"
+        },
+        {
+          "tag": "update",
+          "title": "@ssankar: Palantir CTO Shyam Sankar Criticizes AI Safety Political Ideology",
+          "body": "Palantir CTO Shyam Sankar calls out Effective Altruist technocrats, arguing AI safety rhetoric is being leveraged to restrict technological progress and concentration of control.",
+          "url": "https://x.com/ssankar/status/2099645313287926080"
+        },
+        {
+          "tag": "new",
+          "title": "@Leonajardinho: Viral Breakdown Highlights Rising Auto Insurance Deductible Costs",
+          "body": "A viral post detailing high monthly auto insurance premiums combined with steep out-of-pocket deductibles sparks wide discussion on consumer insurance economics.",
+          "url": "https://x.com/Leonajardinho/status/2099541624418451692"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Science",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk & @BrandonLuuMD: Cognitive Study Reveals Gamers Test ~13.7 Years Younger",
+          "body": "A study shared by Dr. Brandon Luu showing frequent video gamers score on cognitive tests equivalent to non-gamers ~13.7 years younger draws a playful response from Elon Musk.",
+          "url": "https://x.com/elonmusk/status/2099548187245584550"
+        },
+        {
+          "tag": "update",
+          "title": "@NFL & @SportsCenter: Gridiron Action Delivers Viral Highlights",
+          "body": "The NFL and SportsCenter spotlight standout plays including Drew Mestemaker's touchdown leap and 49ers vs Rams netflix broadcast highlights.",
+          "url": "https://x.com/SportsCenter/status/2098875297781215653"
+        },
+        {
+          "tag": "new",
+          "title": "@iMiaSanMia & @FCBayernEN: Harry Kane Leads Bayern Munich Victory",
+          "body": "Harry Kane delivers another match-winning goal for Bayern Munich as teammates praise his world-class scoring form across European competitions.",
+          "url": "https://x.com/FCBayernEN/status/2099568356273664090"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-14 21:00 ET!")

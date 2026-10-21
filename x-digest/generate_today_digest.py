@@ -1,0 +1,137 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Friday, August 28th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Tencent Releases Hy4 Preview:</strong> Tencent Hy announces Hy4, an open-source 770B parameter (49B active) frontier MoE model featuring a 1M token context window built for high-throughput productivity.",
+    "<strong>Fed Chair Warsh Remarks Shift Treasury Markets:</strong> Federal Reserve Chair Kevin Warsh's latest address drives a 10% uptick in September rate expectations, stabilizing long-term 30-year US Treasury yields.",
+    "<strong>Aston Villa Agrees €55M Deal for PSG Winger Mbaye:</strong> David Ornstein reports Aston Villa has reached an agreement in principle to sign 18-year-old Paris Saint-Germain winger Ibrahim Mbaye.",
+    "<strong>CZ Outlines Binance Hiring & Remote Execution Framework:</strong> CZ shares core principles for remote workforce success at a Hong Kong university talk, highlighting proactive execution, deep focus, and rigorous risk management.",
+    "<strong>Grok Image 2.0 & Ecosystem Expansion:</strong> xAI rolls out Grok Image 2.0 with advanced style controls and multi-image compositing, while partnering with tech creators for Grok Bot integration."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@TencentHunyuan: Tencent Hy4 Preview Model Released",
+          "body": "Tencent Hy released Hy4 preview, an open-source 770B parameter (49B active) MoE architecture featuring a 1 million token context window optimized for software development and automated workflows.",
+          "url": "https://x.com/TencentHunyuan/status/2093222928720761009"
+        },
+        {
+          "tag": "hot",
+          "title": "@itskevin: Tech Commentary on High-Stakes Leadership Gambles",
+          "body": "Viral discussion surrounding leadership conviction, public risk taking, and product launch dynamics across Silicon Valley AI companies.",
+          "url": "https://x.com/itskevin/status/2093113556937904410"
+        },
+        {
+          "tag": "new",
+          "title": "@grok: Grok Image 2.0 Launch",
+          "body": "xAI announced Grok Image 2.0, introducing granular style control, multi-image composition capabilities, and interactive visual refining.",
+          "url": "https://x.com/grok/status/2089720918881014089"
+        },
+        {
+          "tag": "update",
+          "title": "@lennysan: SpaceX/xAI Partners with Lenny's Newsletter for Grok Bot Access",
+          "body": "Lenny Rachitsky announced an exclusive partnership offering Grok Bot access (bundled in Cursor Pro+) for subscribers, highlighting automations for podcasts, support triage, and calendar workflows.",
+          "url": "https://x.com/lennysan/status/2092386630397255796"
+        },
+        {
+          "tag": "update",
+          "title": "@PawelHuryn: Benchmark Evaluation of Hy4 on Real-World Repositories",
+          "body": "AI engineer Paweł Huryn published initial benchmark test results evaluating Hy4 preview across 105 planted bug scenarios in production codebases.",
+          "url": "https://x.com/PawelHuryn/status/2093317528042787087"
+        },
+        {
+          "tag": "new",
+          "title": "@agentmail: AgentMail Integrates Email Verification for Autonomous Agents",
+          "body": "AgentMail launched a specialized tool enabling Claude Code and AI agents to handle email verification flows seamlessly during automated web sign-ups.",
+          "url": "https://x.com/agentmail/status/2064605387777802679"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@artinmemes: Fed Chair Warsh Speech & Treasury Market Dynamics",
+          "body": "Financial analyst breakdown of Fed Chair Kevin Warsh's speech, noting how hawkish signals shifted FedWatch expectations by +10% while calming 30-year Treasury bond volatility.",
+          "url": "https://x.com/artinmemes/status/2093355010860175701"
+        },
+        {
+          "tag": "hot",
+          "title": "@Phoenixyin13: CZ Shares Binance Culture & Remote Execution Framework",
+          "body": "Recap of CZ's Q&A at a Hong Kong university, emphasizing that 80% of success comes from active participation, focus on core product-user metrics, and eliminating low-value distractions.",
+          "url": "https://x.com/Phoenixyin13/status/2093347897999815001"
+        },
+        {
+          "tag": "update",
+          "title": "@APompliano: AI Infrastructure & Digital Asset Protection",
+          "body": "Anthony Pompliano discusses macro technology positioning, framing artificial intelligence as productivity offense and Bitcoin as monetary defense.",
+          "url": "https://x.com/APompliano/status/2086828572866474177"
+        },
+        {
+          "tag": "new",
+          "title": "@tgm: Radiant Nuclear Secures $750M U.S. Army Contract",
+          "body": "Radiant Nuclear receives a $750 million contract from the U.S. Army to develop mobile, containerized megawatt microreactors for tactical power deployment.",
+          "url": "https://x.com/tgm/status/2093007052469596264"
+        },
+        {
+          "tag": "update",
+          "title": "@PIF_en: Saudi Public Investment Fund Advances Real Estate Blueprint",
+          "body": "Saudi Arabia's Public Investment Fund outlines urban real estate investments aligning with Vision 2030 development goals.",
+          "url": "https://x.com/PIF_en/status/2067252277132361920"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@David_Ornstein: Aston Villa Signs Ibrahim Mbaye for €55M",
+          "body": "Exclusive report from David Ornstein confirming Aston Villa has agreed to terms with Paris Saint-Germain for 18-year-old winger Ibrahim Mbaye in a €55 million transfer.",
+          "url": "https://x.com/David_Ornstein/status/2093355500544946439"
+        },
+        {
+          "tag": "hot",
+          "title": "@TomKlingenstein: Reflections on Constitutional Principles & Civic Power",
+          "body": "Civic commentary highlighting the enduring moral and philosophical authority of America's founding documents.",
+          "url": "https://x.com/TomKlingenstein/status/2085183598408163589"
+        },
+        {
+          "tag": "update",
+          "title": "@ihatepivots: Retrospective on Historic Diplomacy Interviews",
+          "body": "Archival media reflection revisiting Henry Kissinger's famous interview at The Four Seasons / The Grill in New York.",
+          "url": "https://x.com/ihatepivots/status/2093172902434599300"
+        },
+        {
+          "tag": "update",
+          "title": "@praiseoghrebg: Viral Sports Media & Pitch Composure",
+          "body": "Viral football commentary analyzing player discipline and tactical decision-making during high-stakes match play.",
+          "url": "https://x.com/praiseoghrebg/status/2093215312829194259"
+        },
+        {
+          "tag": "new",
+          "title": "@Tina23664722279: High Engagement Global Media Snapshot",
+          "body": "Social media snapshot capturing widespread engagement and discussion across current cultural topics.",
+          "url": "https://x.com/Tina23664722279/status/2093156652375765376"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json created successfully!")

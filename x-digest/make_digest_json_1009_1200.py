@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Friday, October 9th, 2026 — 12:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Anthropic Ships Claude Dashboards & Motion in Beta with Monthly Platform API Credits:</strong> Anthropic releases Claude Dashboards for live database-connected BI (Snowflake, BigQuery, ClickHouse) and Claude Motion for programmatic code-driven animation. Concurrently, Anthropic introduces monthly platform API credits ($100-$500/mo) across Max and Team subscriptions, usable with all models and third-party harnesses.",
+    "<strong>The 'Anti-Slop Software Factory' Blueprint Goes Viral Across Scaled Teams:</strong> Sarah (@sarahfim) shares an operational architecture for coordinating 50+ contributors and their autonomous coding agents without compounding technical debt. The model bans useState/useEffect in favor of server actions, tolerates bounded code duplication, and enforces deterministic test gates via tRPC, React Doctor, and MCP test suites.",
+    "<strong>Monid Emerges as the 'OpenRouter of Agent Tools' with 2,443 Unified APIs:</strong> Monid gains massive traction as a foundational tool layer for Codex and Claude Code, consolidating 2,443 distinct tools and APIs behind one gateway—including social scraping (TikHub), semantic web research (Exa, Firecrawl), headless Linux cloud sandboxes (Smol Machines), virtual phone numbers (Saperly), and prediction markets.",
+    "<strong>Frontier AI Beats Wall Street Consensus on Corporate Earnings Predictions:</strong> In a rigorous benchmark published by Maithra Raghu and the Samaya team, frontier models (Claude Opus 5.5, Fable 5.1, Astra) equipped with a point-in-time gated retrieval harness beat human expert consensus on corporate revenue and gross margin metrics against a hard bias-corrected baseline.",
+    "<strong>Thinking Compression and Speculative Decoding Accelerate Local Coding on 24GB VRAM:</strong> The open-source Coder390 fine-tune of Qwen3.8-27B introduces EfficientThink to eliminate redundant chain-of-thought tokens alongside Multi-Token Prediction (MTP) and DFlash2 speculative decoding, rivaling frontier reasoning speeds locally. Meanwhile, Pi Durable expands into mobile and browser runtimes via PiDurableKit."
+  ],
+  "sections": [
+    {
+      "emoji": "⚡",
+      "title": "Anthropic Ecosystem: Dashboards, Motion Beta & Enterprise Reasoning",
+      "items": [
+        {
+          "tag": "tool-release",
+          "title": "@aigclink: Claude Launches Dashboards & Motion Beta, Penetrating BI and Animation Stacks",
+          "body": "Claude rolls out two major capabilities in beta: Dashboards connects to data warehouses (Snowflake, BigQuery, Databricks, ClickHouse) via natural language to generate auto-refreshing interactive dashboards with drill-down SQL inspection, while Motion synthesizes editable code-driven vector animations and MP4 explainer graphics. Official integrations allow instant handoff downstream to Hex, Mixpanel, Adobe, and Runway.",
+          "url": "https://x.com/aigclink/status/2108350606863896978"
+        },
+        {
+          "tag": "platform-update",
+          "title": "@ClaudeDevs: Monthly API Credits Live for Max & Team Plans ($100-$500/mo)",
+          "body": "Anthropic officially enables monthly Claude Platform API credits for Max 5x ($100), Max 20x ($200), and Team plans (up to $500 pooled). Credits apply across all Claude models (including Haiku 5.5) and work seamlessly with custom scripts, third-party agent harnesses, and local development environments.",
+          "url": "https://x.com/ClaudeDevs/status/2108228391404966005"
+        },
+        {
+          "tag": "finance-benchmark",
+          "title": "@maithra_raghu (Maithra Raghu): Frontier Models Outperform Expert Consensus on Corporate Earnings",
+          "body": "The Samaya research team reveals that frontier models (Opus 5.5, Fable 5.1, Astra) running in Samaya's point-in-time gated harness beat Wall Street consensus forecasts on revenue and gross margin metrics against a hard bias-corrected baseline, signaling an inflection point for autonomous quantitative modeling.",
+          "url": "https://x.com/maithra_raghu/status/2108244042551308735"
+        },
+        {
+          "tag": "creative-tooling",
+          "title": "@N01ennn & @0xMovez: 20 Open-Source Repositories Turn Opus 5.5 into a Full Motion Design Studio",
+          "body": "Netflix engineers release a suite of 20 motion graphics repositories for Claude Opus 5.5—including `claude-motion`, `hyperframes`, and `claude-remotion-skill`. The stack uses Opus 5.5 to author animation logic and camera framing rendered into high-fps video via Remotion, GSAP, and HyperFrames.",
+          "url": "https://x.com/N01ennn/status/2108182955671580771"
+        },
+        {
+          "tag": "eval-engineering",
+          "title": "@wey_gu (古思为) & @ClaudeDevs: Official Guidance on Eval Design and Hillclimbing in Claude Code",
+          "body": "Anthropic publishes an in-depth framework for designing robust domain evals that Claude Code can autonomously iterate and hillclimb against. The workflow pairs targeted metrics with synthetic test generation to systematically boost production accuracy and eliminate silent regressions.",
+          "url": "https://x.com/wey_gu/status/2108280942158872769"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Software Factories, Anti-Slop Architecture & Tool Ecosystems",
+      "items": [
+        {
+          "tag": "agent-architecture",
+          "title": "@sarahfim (Sarah): The Anti-Slop Software Factory Playbook for Scaled Agent Teams",
+          "body": "Sarah breaks down lessons from managing 50 contributors and their coding agents in production. Key architectural guidelines include banning useState/useEffect to reduce component drift, permitting localized code duplication over premature abstractions, and enforcing strict type verification using tRPC, React Doctor, Meticulous, and MCP test suites.",
+          "url": "https://x.com/sarahfim/status/2108298553823203613"
+        },
+        {
+          "tag": "tool-aggregator",
+          "title": "@gengdaJ (逸尘) & @Astronaut_1216: Monid Unifies 2,443 APIs & Tools for Codex and Claude Code",
+          "body": "Developers spotlight Monid as a universal tool clearinghouse for autonomous agents, bridging 2,443 distinct APIs behind a single endpoint. Features include social scraping (TikHub), semantic web exploration (Exa, Firecrawl), headless sandboxes (Smol Machines), programmatic communication (AgentMail, Saperly), and prediction market querying (Polymarket, Kalshi).",
+          "url": "https://x.com/gengdaJ/status/2108470885107818729"
+        },
+        {
+          "tag": "agent-ops",
+          "title": "@silentguyy66: Grok Bot Engineers Detail Production Fleet Operations and Automerge Loops",
+          "body": "A deep dive into xAI's internal engineering workflow reveals how Grok Bot fleets operate autonomously: Chief of Staff agents decompose tasks and route work without touching code, peer bots debate architectures in group chats, and agent-generated pull requests automatically run test matrices and merge upon passing.",
+          "url": "https://x.com/silentguyy66/status/2108280456835727812"
+        },
+        {
+          "tag": "developer-workflow",
+          "title": "@daradoescode (Dara A.): Practical Software Factory Refinements Reduce PR Churn",
+          "body": "Dara shares workflow optimizations inspired by Poteto and Matt Pocock's software factory setup, documenting how constraining subagent scope and strictly banning speculative test creation eliminates agent test-slop and dramatically accelerates code reviews.",
+          "url": "https://x.com/daradoescode/status/2108319130231136727"
+        },
+        {
+          "tag": "remote-orchestration",
+          "title": "@app_sail & @0xlangeai: Deploying 24/7 Claude Code Hosts on US Cloud Instances via Orca and Tailscale",
+          "body": "A popular community setup demonstrates provisioning Claude Code inside Grok Bot's 16GB US cloud environment, routing commands securely over Tailscale mesh networks and managing tasks through the Orca agent orchestrator to bypass local IP hurdles and maintain persistent state.",
+          "url": "https://x.com/0xlangeai/status/2108526965242445965"
+        }
+      ]
+    },
+    {
+      "emoji": "💾",
+      "title": "Inference Efficiency, Speculative Execution & Local Silicon",
+      "items": [
+        {
+          "tag": "model-finetune",
+          "title": "@NFT_Chen (SuSu): Qwen3.8-27B Coder390 Matches Frontier Coding with 50% Fewer Thinking Tokens",
+          "body": "A community post-training release of Qwen3.8-27B trained on 3.9M code tokens distills reasoning patterns from Opus 5.5 and GPT-6 Astra. Utilizing EfficientThink to suppress empty reasoning loops, SFT + RLOO + Multi-Token Prediction (MTP), and DFlash2 speculative decoding, the model achieves 90% on LiveCodeBench while fitting into 24GB VRAM.",
+          "url": "https://x.com/NFT_Chen/status/2108459889681207731"
+        },
+        {
+          "tag": "computer-use",
+          "title": "@realWeZZard: Jev Planner-Executor Architecture Halves Computer-Use Latency",
+          "body": "Deploying Pi + Qwen 3.8-27B + DiffusionGemma as a specialized 'Jev' executor slashes computer-use interaction latency by over 50% compared to pure ReAct loops on Opus 5.5. Decoupling high-level planning from rapid visual and keyboard execution enables ultra-responsive local agent interaction.",
+          "url": "https://x.com/realWeZZard/status/2108209984341475525"
+        },
+        {
+          "tag": "agent-runtime",
+          "title": "@xiaomovps (小墨同学): Pi Durable Ecosystem Matures with iOS Runtimes and 1.3MB Actors",
+          "body": "Following the Pi Durable 1.0.3 architecture release, the open-source community ships PiDurableKit (Swift + JavaScriptCore) to embed durable agent sessions directly into iOS apps. Simultaneously, Rivet transitions actors to Pi Durable for 1.3ms instant recovery, while headless browser deployments explore durable code modes.",
+          "url": "https://x.com/xiaomovps/status/2108370725623181408"
+        },
+        {
+          "tag": "cloud-infrastructure",
+          "title": "@a16z: AWS CEO Matt Garman Outlines 3-Second Ephemeral Primitives for Agent Fleets",
+          "body": "In discussion with a16z, AWS CEO Matt Garman details how cloud architectures are pivoting toward autonomous agents, which consume 5x the token volumes of human users. AWS is prioritizing 3-second spin-up ephemeral databases, transient micro-sandboxes, and non-human authorization primitives tailored for short-lived worker tasks.",
+          "url": "https://x.com/a16z/status/2108308969815257427"
+        },
+        {
+          "tag": "cost-optimization",
+          "title": "@fabrice_mayrand & @gpurouter: Dynamic Inference Routers Arbitrage Excess GPU Capacity",
+          "body": "Developers document up to 40% cost reductions by swapping static model endpoints for dynamic arbitrage routers like CheaperInfer and GPURouter, which continuously route requests to verified providers unloading idle datacenter headroom without degrading generation quality.",
+          "url": "https://x.com/fabrice_mayrand/status/2106781083698425885"
+        }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "title": "Reverse Engineering, Generative Interfaces & Open Systems",
+      "items": [
+        {
+          "tag": "reverse-engineering",
+          "title": "@MatthewBerman & @Lee_points: REA Hits 30k Stars, Bringing MCP Decompilation to Hopper & Ghidra",
+          "body": "The viral Reverse Engineer Anything (REA) project surpasses 30,000 GitHub stars. By bridging Ghidra, Hopper, and IDA Pro directly into LLM agent loops via Model Context Protocol, the tool autonomously analyzes compiled binaries and reconstructs readable, functional high-level source code.",
+          "url": "https://x.com/MatthewBerman/status/2108245653843509415"
+        },
+        {
+          "tag": "generative-ui",
+          "title": "@KashyapVisharad (Visharad): Open Intelligent UI Launches Open Standard for Dynamic Generative UI",
+          "body": "Built on the MIT-licensed OpenUI standard, Open Intelligent UI enables developers to embed rich, generative ChatGPT-style canvas interfaces into any application. The toolkit supports both cloud APIs and local inference engines like Ollama and LM Studio without closed ecosystem lock-in.",
+          "url": "https://x.com/KashyapVisharad/status/2108239102676250933"
+        },
+        {
+          "tag": "data-ontology",
+          "title": "@georgecurtiss (Lam Sambert): Foundry Open-Sources Palantir-Style Company Ontology",
+          "body": "George Curtiss releases Foundry, an open-source enterprise ontology platform designed as a lightweight alternative to Palantir Foundry. Powered by HelixDB for S3-backed semantic graphs and DuckDB for ultra-fast local analytical processing, it delivers scalable entity-relationship modeling without enterprise lock-in.",
+          "url": "https://x.com/georgecurtiss/status/2108374327980933516"
+        },
+        {
+          "tag": "video-generation",
+          "title": "@vriparbelli (Victor Riparbelli): Syren Video Launches Opus 5.5-Powered Agentic Video Creation",
+          "body": "Syren Video unveils a free-to-try agentic video studio that pairs Claude Opus 5.5 with Syren's proprietary 3D-aware video rendering engine. Users can generate agency-grade video from initial prompts and interactively refine scene pacing, styling, and camera motions via chat and Claude MCP.",
+          "url": "https://x.com/vriparbelli/status/2108557435640156341"
+        },
+        {
+          "tag": "industry-governance",
+          "title": "@j_asminewang (Jasmine Wang): Former OpenAI Safety Researchers Publish Joint Statement on Firings",
+          "body": "Following their sudden departure from OpenAI, safety researchers Jasmine Wang and colleagues release an open letter challenging the official pretext of unauthorized executive email access, asserting they were terminated for advocating rigorous safety benchmarks over commercial rollout velocity.",
+          "url": "https://x.com/j_asminewang/status/2108263312291180680"
+        }
+      ]
+    }
+  ]
+}
+
+out_file = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_file, 'w', encoding='utf-8') as f:
+    json.dump(digest_data, f, ensure_ascii=False, indent=2)
+
+print(f"Successfully generated {out_file}")

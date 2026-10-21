@@ -1,0 +1,179 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Wednesday, October 7th, 2026 — 9:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Anthropic Ships Claude Haiku 5.5 with Tiered Pricing as Computer Use Joins Native SDKs:</strong> Anthropic unveils Claude Haiku 5.5 (1M context, 43 on Artificial Analysis index) featuring a two-tier pricing model ($0.10/1M under 100k tokens, jumping 5x above). Simultaneously, Anthropic bakes automated computer and browser action loops directly into the official Python and TypeScript SDKs, eliminating custom command-mapping loops.",
+    "<strong>Microsoft Unleashes 'Unmetered Desktop Intelligence': MAI-Code-1.1 & Local Copilot Factory:</strong> Satya Nadella announces an on-device AI paradigm for Windows powered by NVIDIA RTX Spark: the 137B parameter MAI-Code-1.1 Flash model running entirely locally with a 256K context window. GitHub Copilot now offloads tasks to local silicon, and 'Code in Copilot' allows infinite local app generation within the MXC secure sandbox without cloud token spend.",
+    "<strong>Grok Bot 0.68.1 Adds Native X Monitoring as Mobile Software Factories Mature:</strong> Elon Musk and @bot launch Grok Bot 0.68.1 with native X feed search/monitoring, slide deck export, and high-res computer use. Meanwhile, Ben Holmes details a 3-agent mobile software factory spanning Slack, cloud macOS iOS simulators, and Linux adversarial reviewers that ships production Swift features without local Xcode builds.",
+    "<strong>OpenAI Releases Decisions API & Intelligent UI Amid Fierce Codex Throttling Backlash:</strong> OpenAI introduces Intelligent UI across ChatGPT, plugin extensions, and the GPT-6 Luna-powered Decisions API. However, heavy users voice frustration over Codex subscription throttling, citing 12x lower reasoning 'juice' (thinking tokens) compared to the raw API and structural code degradation in GPT-6 Sol.",
+    "<strong>Unsloth Opens Local Decision Model Training as Perplexity Releases PPLX-Embed-V2:</strong> Unsloth AI releases training code to turn lightweight LLMs like Qwen3.5 0.8B into Jev-style decision models on 4GB VRAM (jumping benchmark accuracy from 20.7% to 74.3%). Concurrently, Perplexity open-sources pplx-embed-v2-late, enabling shared cross-modal retrieval and OCR-free PDF search across 9B and 0.6B weights."
+  ],
+  "sections": [
+    {
+      "emoji": "🚀",
+      "title": "Frontier Models, On-Device Intelligence & Desktop Runtimes",
+      "items": [
+        {
+          "tag": "model-release",
+          "title": "@ArtificialAnlys & @ClaudeDevs: Anthropic Launches Claude Haiku 5.5 with 1M Context & Tiered Pricing",
+          "body": "Anthropic releases Claude Haiku 5.5, scoring 43 on the Artificial Analysis Intelligence Index (up 26 points from Haiku 4.5) and reaching 1578 Elo on AA-Briefcase for knowledge work and 33% on Terminal-Bench 4.0. The release introduces tiered pricing: $0.10/$0.50 per 1M input/output tokens below 100k tokens (matching GPT-6 Luna), rising to $0.50/$2.50 above 100k. Developers note that configuring /autocompact 100k locks agent sessions into the lower cost tier.",
+          "url": "https://x.com/ArtificialAnlys/status/2107911905822351609"
+        },
+        {
+          "tag": "local-intelligence",
+          "title": "@satyanadella (Satya Nadella): Microsoft Announces MAI-Code-1.1 Flash & Unmetered Local Windows Agent Factory",
+          "body": "Satya Nadella announces an on-device architecture for Windows powered by NVIDIA RTX Spark on Surface devices. Highlights include MAI-Code-1.1 Flash (a 137B parameter coding model with 256K context optimized for local PC execution), hybrid Copilot handoffs to local silicon to slash cloud token costs, and 'Code in Copilot' for unmetered local desktop software construction isolated inside the MXC sandbox.",
+          "url": "https://x.com/satyanadella/status/2107898018112647313"
+        },
+        {
+          "tag": "sdk-tooling",
+          "title": "@ClaudeDevs: Computer & Browser Use Toolsets Baked Directly into Python & TypeScript SDKs",
+          "body": "Anthropic integrates automated computer use and browser use runtime loops into the official Claude Python and TypeScript SDKs. Instead of developers manually maintaining event loops, parsing JSON actions, and mapping keystrokes to OS drivers, the SDKs now execute the execution loop and dispatch driver commands natively.",
+          "url": "https://x.com/ClaudeDevs/status/2107925762720326090"
+        },
+        {
+          "tag": "multimodal-embeddings",
+          "title": "@sundarpichai (Sundar Pichai): Google Introduces EmbeddingGemma 2 Multimodal On-Device Weights",
+          "body": "Google releases EmbeddingGemma 2, an open natively multimodal embedding model packed into a lightweight 740M parameter form factor. Supporting unified text, code, image, video, and audio tasks, it is designed for offline, privacy-first local RAG pipelines when paired with Gemma 4 on consumer devices.",
+          "url": "https://x.com/sundarpichai/status/2107501975671890211"
+        }
+      ]
+    },
+    {
+      "emoji": "🏭",
+      "title": "Software Factories, Token Economics & Multi-Agent Operations",
+      "items": [
+        {
+          "tag": "mobile-factory",
+          "title": "@BHolmesDev (Ben Holmes): Architecture of a 3-Person Mobile Software Factory for iOS",
+          "body": "Ben Holmes shares the production setup for an automated mobile software factory: a Linux-based 'foreman' agent orchestrates an implementer running inside a cloud macOS VM with an active iOS simulator (generating screenshots and interaction recordings) alongside an adversarial Linux code reviewer. Tasks originate from Slack and feed into GitHub issues, allowing features and bug fixes to ship rapidly without pulling into local Xcode.",
+          "url": "https://x.com/BHolmesDev/status/2107962128883941684"
+        },
+        {
+          "tag": "token-economics",
+          "title": "@theo (Theo): Deconstructing the Viral 1.5T Token Spend — Why Intelligence Deflation Wins",
+          "body": "Theo pushes back against claims that Lauren Tan's 1.5T monthly token Cursor usage costs $132M/year. With prompt caching and tiered pricing, actual API spend is $100k-$500k/month. Furthermore, citing Artificial Analysis trendlines showing intelligence costs falling 30x every 5 months, Theo notes that equivalent compute will drop to $1.2k/year within 12 months, making high-burn exploratory agent loops a leading indicator of future standard workflows.",
+          "url": "https://x.com/theo/status/2107924138094703084"
+        },
+        {
+          "tag": "agent-qa",
+          "title": "@clairevo & @zachdavis: 'Cringe Bot' Automated QA Swarm Dispatches Devin AI PRs",
+          "body": "Claire Vo highlights Cringe Bot, a custom team Grok Bot created by Zach Davis that audits live staging websites 3 times per week, detects visual regressions and UX nits, and automatically files detailed reproduction findings with threaded screenshots to dispatch Devin AI pull requests.",
+          "url": "https://x.com/clairevo/status/2107949580071624826"
+        },
+        {
+          "tag": "platform-update",
+          "title": "@elonmusk & @bot: Grok Bot 0.68.1 Adds Native X Monitoring & Multi-Format Slide Generation",
+          "body": "Grok Bot 0.68.1 rolls out with native ability to search, read, and monitor X real-time streams. Additional capabilities include collaborative slide deck creation exported directly as PowerPoint or Google Slides, direct formatted email dispatching, and accelerated computer use on 1920x1200 virtual displays.",
+          "url": "https://x.com/elonmusk/status/2107921069126672602"
+        },
+        {
+          "tag": "strategic-coding",
+          "title": "@mattpocockuk (Matt Pocock): Agents Excel at Strategic Programming When Instructed to Care",
+          "body": "Matt Pocock argues that coding agents are inherently capable of long-term strategic architectural design, but default reinforcement learning optimizes exclusively for immediate task completion. Explicitly configuring agents to prioritize codebase hygiene, modularity, and defensive boundaries changes agent output from brittle glue code to sustainable architecture.",
+          "url": "https://x.com/mattpocockuk/status/2107864881508540874"
+        }
+      ]
+    },
+    {
+      "emoji": "🔬",
+      "title": "Frontier Mathematics, Real-World Physics & Evaluation Critiques",
+      "items": [
+        {
+          "tag": "math-impact",
+          "title": "@itsolelehmann (Ole Lehmann): Mapping OpenAI's 722 Lean Proofs to Real-World Physical Applications",
+          "body": "Ole Lehmann breaks down why OpenAI's formal mathematics release matters beyond pure academia: Vlasov-Maxwell proofs reinforce mathematical foundations for plasma confinement in fusion reactors; Calderón's problem enables portable electrical impedance body scanners; Maximum-Cardinality Matching accelerates compatible kidney swap networks; and Simple Stochastic Games strengthen formal safety guarantees for autonomous robotics.",
+          "url": "https://x.com/itsolelehmann/status/2107830014322380997"
+        },
+        {
+          "tag": "formal-breakthroughs",
+          "title": "@Balder13946731: Top 10 Mathematical Milestones Formalized in the OpenAI Lean Release",
+          "body": "A technical breakdown cataloging the top 10 results in OpenAI's 722-paper release: Khot's Unique Games Conjecture (locking optimal approximation bounds for Max-Cut), Quasi-Riemann hypothesis zero-free strip (Re(s) > 7/8 for Dirichlet L-functions), full BSD formulas for rank 0 and 1, resolution of Hilbert's 10th problem over rationals, and asymptotic matrix multiplication bound ω ≤ 9/4.",
+          "url": "https://x.com/Balder13946731/status/2107654810300457057"
+        },
+        {
+          "tag": "compute-efficiency",
+          "title": "@kimmonismus (Chubby): 3 Hours of ChatGPT Pro Compute Per Result Signals Efficiency Shift",
+          "body": "Analysis of OpenAI's verification pipeline reveals that the standard procedure required an average of only 3 hours of ChatGPT Pro reasoning compute per formalized result—contrasting sharply with the 10,000 agents and 88 hours consumed by the Navier-Stokes benchmark weeks earlier, highlighting exponential efficiency gains in automated theorem proving.",
+          "url": "https://x.com/kimmonismus/status/2107730383089312021"
+        },
+        {
+          "tag": "model-critique",
+          "title": "@Zhibin992 (Robin): Why GPT-6 Sol Generates Fragile Code — The RL Metric Trap",
+          "body": "An in-depth critique explains why GPT-6 Sol frequently introduces regressions and dead code: reinforcement learning rewarded passing superficial unit tests and minimizing generation tokens rather than software maintainability, architecture, or long-horizon readability, incentivizing models to produce compressed, single-pass code artifacts that resist future extension.",
+          "url": "https://x.com/Zhibin992/status/2107681959275286931"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Agent Runtimes, Decision Models & Tool Integration",
+      "items": [
+        {
+          "tag": "decision-models",
+          "title": "@UnslothAI: Fine-Tuning Local Decision Models on 4GB VRAM with Clef Heads",
+          "body": "Unsloth AI open-sources fine-tuning recipes to convert lightweight LLMs (such as Qwen3.5 0.8B) into Jev-style decision models on consumer hardware with just 4GB VRAM. Using LoRA (r=64) with a Clef head, downstream decision accuracy jumped from 20.7% to 74.3% across three standard evaluation suites in a single epoch.",
+          "url": "https://x.com/UnslothAI/status/2107868866361930236"
+        },
+        {
+          "tag": "openai-apis",
+          "title": "@OpenAIDevs & @cheatyyyy: OpenAI Rolls Out Intelligent UI, Plugin Extensions & Decisions API",
+          "body": "OpenAI announces Intelligent UI and interactive tools rolling out across ChatGPT, alongside plugin extensions that enable sidebar launches, @ mentions, and integrated file viewers. Developers simultaneously spot the release of the Decisions API, a lightweight Jev-like multimodal decision model based on GPT-6 Luna.",
+          "url": "https://x.com/OpenAIDevs/status/2107927072165548276"
+        },
+        {
+          "tag": "agent-gateway",
+          "title": "@riba2534 & @yetone: Magpie Native Claude Code CLI Gateway Prevents Risk Flags",
+          "body": "Open-source developer yetone releases Magpie, a local multi-account proxy and session manager for Claude. Unlike tools that spoof browser fingerprints, Magpie spawns genuine local Claude Code CLI instances with dedicated profile paths, routing tool execution via MCP and preventing account flags under Anthropic usage policies.",
+          "url": "https://x.com/riba2534/status/2107888731906846859"
+        },
+        {
+          "tag": "real-world-actions",
+          "title": "@meghanvjoyce & @getseaworthy: Seaworthy Launches Unified Execution API for Real-World Agent Errands",
+          "body": "Seaworthy launches an execution infrastructure API trained on 30M+ actions that empowers AI agents to perform real-world tasks that typically break brittle scripts—including placing outbound interactive phone calls, handling payment flows, and coordinating logistics.",
+          "url": "https://x.com/meghanvjoyce/status/2107842190177095943"
+        }
+      ]
+    },
+    {
+      "emoji": "⚡",
+      "title": "Developer Breakthroughs, Systems & Open Source",
+      "items": [
+        {
+          "tag": "linux-ios",
+          "title": "@JoshuaSWarren: Building, Signing, and Debugging iOS Apps on Linux Without a Mac",
+          "body": "Joshua Warren documents building an iOS app completely on Omarchy Linux, signing the binary, submitting it to the Apple App Store, deploying to a physical iPhone via USB, and pausing execution at a native breakpoint in the debugger—eliminating the requirement for macOS hardware in Apple mobile development.",
+          "url": "https://x.com/JoshuaSWarren/status/2107570814036111783"
+        },
+        {
+          "tag": "late-interaction",
+          "title": "@AravSrinivas (Aravind Srinivas): Perplexity Open-Sources PPLX-Embed-V2-Late for OCR-Free Document Retrieval",
+          "body": "Perplexity open-sources pplx-embed-v2-late across 9B and 0.6B weights. Built on a unified multimodal embedding space, the models enable cross-model indexing and querying—allowing heavy 9B document indexing with lightweight 0.6B on-device querying, and indexing complex multi-page PDF documents without an OCR preprocessing step.",
+          "url": "https://x.com/AravSrinivas/status/2107871834205196784"
+        },
+        {
+          "tag": "os-architecture",
+          "title": "@bojie_li (Bojie Li): Why Desktop Operating Systems Must Be Re-Engineered for Agents",
+          "body": "Bojie Li outlines the architectural bottlenecks facing agent harnesses on existing desktop OSes: sub-100ms TTFT requirements for real-time voice, massive multi-agent git worktree sprawl exhausting 3TB SSDs in a single day, and memory pressure crashing SSH daemons—calling for kernel-level agent isolation, I/O caching, and automated worktree garbage collection.",
+          "url": "https://x.com/bojie_li/status/2107469512476098813"
+        },
+        {
+          "tag": "ci-infrastructure",
+          "title": "@mattgapp (Matt Gapp): Jog Launches Dedicated High-Speed CI Hardware to Unblock Agent Velocity",
+          "body": "Matt Gapp announces Jog, dedicated bare-metal CI infrastructure designed to eliminate massive $50k/month CI bills caused by high-concurrency coding agent commits. By removing virtualization overhead and optimizing for agent-scale build loops, Jog cuts build queue delays and execution costs.",
+          "url": "https://x.com/mattgapp/status/2107942692034683326"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {digest_path} ({len(digest_data['sections'])} sections)")

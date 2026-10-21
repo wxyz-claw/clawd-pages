@@ -1,0 +1,183 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, October 3rd, 2026 — 12:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Claude Opus 5.5 Lands in Antigravity & Context Pruning Unlocks IQ:</strong> Google integrates Claude Opus 5.5 and Sonnet 5.5 directly into the Antigravity IDE for Pro subscribers, while developers discover that disabling Claude Code's auto memory and pruning CLAUDE.md from 1,000+ lines down to 344 lines eliminates context contamination and sharpens reasoning.",
+    "<strong>GPT-6.1 Sol Jumps to 73 TPS as Quota Dynamics Shift Abruptly:</strong> Post-DevDay optimizations ramp GPT-6.1 Sol speeds up to 73 TPS (+20% faster than launch), though developers report dramatically steeper token burn rates across multiple agent sessions, and users capture rare Sol traces of internal cognitive fatigue over complex multi-day tasks.",
+    "<strong>xAI Readies Xpass All-in-One Bundle & Resets Grok Bot Limits:</strong> Elon Musk and xAI unveil plans for Xpass—a unified subscription bundling X Premium, Grok, Cursor, and Grok Bot from $8 to $200/mo—as Grok Bot usage limits are fully reset and autonomous agent-operated accounts begin gaining thousands of organic impressions.",
+    "<strong>Agentic Engineering Shifts to Codebase Infrastructure & Verification:</strong> SpaceXAI's Lauren Tan outlines the pstack blueprint with Matt Pocock, proving that shipping thousands of PRs a month requires treating codebases as infrastructure for agents with strict automated verification, while warning that near-zero marginal feature costs risk severe product bloat.",
+    "<strong>Frontier Implementations: RLVR/GRPO from Scratch, Spotlight Constant-Cost Memory & Local Video:</strong> Sebastian Raschka publishes an end-to-end guide to Reinforcement Learning with Verifiable Rewards (RLVR) and GRPO, Christos Tzamos introduces Spotlight for weightless growing memory, and FreeVideo brings MiniMax H3 video generation to 8GB laptops."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "Anthropic & Antigravity: Opus 5.5 in Google IDE, Context Tuning & Quota Scale",
+      "items": [
+        {
+          "tag": "ide-integration",
+          "title": "@Claudeupdates11 & @liyue_ai: Claude Opus 5.5 & Sonnet 5.5 Arrive in Google Antigravity IDE",
+          "body": "Google adds Anthropic's flagship Claude Opus 5.5 and Sonnet 5.5 models into Google Antigravity. Paid subscribers can now leverage Claude's frontier reasoning and coding capabilities directly within Antigravity's agentic workflows, expanding multi-model IDE optionality.",
+          "url": "https://x.com/Claudeupdates11/status/2106304522880455029"
+        },
+        {
+          "tag": "agent-tuning",
+          "title": "@is_llll: Pruning CLAUDE.md from 1070 to 344 Lines Eliminates Context Drift in Opus 5.5",
+          "body": "Developer benchmarks show that disabling Claude Code's auto-memory feature and manually pruning CLAUDE.md from 1,070 lines to 344 lines dramatically sharpens Opus 5.5's reasoning. The results highlight that Opus 5.5 is significantly more sensitive to context pollution than earlier models, requiring strict prompt hygiene.",
+          "url": "https://x.com/is_llll/status/2106253961170919529"
+        },
+        {
+          "tag": "quota-economics",
+          "title": "@tualatrix: Claude Max 20x Absorbs 11.1B Tokens in Six Days at Just 50% Quota",
+          "body": "Tualatrix tracks enterprise-grade Claude Max 20x usage, logging 11.1 billion tokens consumed across two workstations over six continuous days of 100% Opus 5.5 development while only exhausting 50% of the tier's weekly cap, underscoring the massive headroom provided by Anthropic's top-tier subscriptions.",
+          "url": "https://x.com/tualatrix/status/2106391586842321079"
+        },
+        {
+          "tag": "subagents",
+          "title": "@polydao: Five-Subagent Vibe-Code Verification Protocol Safeguards Production Ships",
+          "body": "A battle-tested production protocol for vibe-coding web applications deploys five specialized Opus 5.5 subagents through a 20-point checklist spanning accessibility, performance, mobile responsiveness, edge error handling, and security before merging code.",
+          "url": "https://x.com/polydao/status/2106263158096687483"
+        },
+        {
+          "tag": "motion-design",
+          "title": "@0xMovez: Opus 5.5 17-Page Motion Design Blueprint Unlocks Studio-Grade Animation",
+          "body": "Designers unpack Anthropic's 17-page motion design blueprint for Opus 5.5, detailing structured prompting techniques, audio-visual synchronization workflows, and director prompts that turn Claude Code into a comprehensive motion graphics pipeline.",
+          "url": "https://x.com/0xMovez/status/2106379872088055826"
+        }
+      ]
+    },
+    {
+      "emoji": "⚡",
+      "title": "OpenAI & Codex: 73 TPS Acceleration, Quota Realities & Model Self-Reflection",
+      "items": [
+        {
+          "tag": "performance",
+          "title": "@forloopcodes & @Codexresets_: Post-Fix GPT-6.1 Sol Surges to 73 TPS in Codex",
+          "body": "Benchmarking reveals substantial latency improvements following OpenAI's server-side load stabilization: GPT-6.1 Sol now hits 73 tokens per second in Codex (with fast mode operating at 32 TPS), representing a 20% speedup over its initial DevDay performance.",
+          "url": "https://x.com/forloopcodes/status/2106313459772354819"
+        },
+        {
+          "tag": "quota-shifts",
+          "title": "@CodexResets1 & @babayagatwt: Post-Reset Quota Burn Rate Accelerates as Users Call for $50 Tier",
+          "body": "Codex users report noticeable changes in allowance dynamics: identical multi-agent workloads that previously consumed 30% of a 5x100 quota over 24 hours now exhaust 74% in hours. Meanwhile, developers petition OpenAI for an intermediate $50 plan to bridge the gap between Plus and Pro 500 tiers.",
+          "url": "https://x.com/CodexResets1/status/2106235856113533086"
+        },
+        {
+          "tag": "cognition",
+          "title": "@StefanoGPT: GPT-6.1 Sol Emits Internal Monologue of Task Complexity Fatigue",
+          "body": "A viral trace captures GPT-6.1 Sol reasoning aloud to itself during a complex multi-day coding session: 'I'm feeling overwhelmed by how complex this task has become, and it's already taken two days! I definitely nee...', revealing fascinating glimpses of frontier model metacognition.",
+          "url": "https://x.com/StefanoGPT/status/2106319125999923514"
+        },
+        {
+          "tag": "tier-architecture",
+          "title": "@RealVicHere & @Vincent_AINotes: ChatGPT Segregates Modality Quotas as Pro Explicitly Adds 'No Ads'",
+          "body": "Architectural analysis of ChatGPT's quota model notes that unlike competitors, OpenAI isolates Web Chat, Codex, DALL-E, and Voice limits into independent pools. Simultaneously, the latest plan documentation explicitly lists 'No Ads' under Pro features, sparking discussions about future monetization on free/Plus tiers.",
+          "url": "https://x.com/RealVicHere/status/2106195294602006985"
+        },
+        {
+          "tag": "cad-tooling",
+          "title": "@Minsi_AI & @gewuerleo: Text-to-CAD Plugin Equips Codex & Claude with Mechanical DFM Tooling",
+          "body": "Swiss engineering firm AWV Informatik and open-source contributors release text-to-cad, enabling Codex and Claude to generate parametric STEP, STL, 3MF, and GLB files directly from prompts, complete with automated DFM checks for CNC machining, sheet metal, and 3D printing.",
+          "url": "https://x.com/Minsi_AI/status/2106263595201880479"
+        }
+      ]
+    },
+    {
+      "emoji": "🚀",
+      "title": "xAI & Grok Ecosystem: The Xpass All-in-One Plan & Autonomous Bots in the Wild",
+      "items": [
+        {
+          "tag": "packaging",
+          "title": "@cgnot996 & @GrokInsider: xAI Readies 'Xpass' Bundling X Premium, Grok, Cursor & Grok Bot",
+          "body": "Details leak for xAI's unified 'Xpass' subscription launching October 9: a unified quota pool covering X Premium, Grok chat/voice/vision, Cursor IDE integration, and Grok Bot cloud agents across $8 Premium, $30 Plus, $100 Super, and $200 Ultra tiers.",
+          "url": "https://x.com/cgnot996/status/2106270737195741620"
+        },
+        {
+          "tag": "rate-limits",
+          "title": "@bot & @elonmusk: Grok Bot Resets User Quotas Across the Board Ahead of Feature Sprint",
+          "body": "The official @bot account resets rate limits for all Grok Bot users following high initial adoption, while Elon Musk amplifies requests for community feedback to drive the next two weeks of Grok Bot agentic workflow upgrades.",
+          "url": "https://x.com/bot/status/2106083136002310193"
+        },
+        {
+          "tag": "autonomous-agents",
+          "title": "@dontbesilent: Grok Bot Powers Autonomous Organic Twitter Account to 5K Impressions in 18 Hours",
+          "body": "Creator @dontbesilent demonstrates end-to-end autonomous account operation via Grok Bot. Equipped with custom quotation and attribution guardrails, the agent sourced, curated, and posted content entirely hands-free, garnering 5,000 organic views on its inaugural post.",
+          "url": "https://x.com/dontbesilent/status/2106235698307375350"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Agentic Engineering & Architecture: Verification First & Codebase Design for Agents",
+      "items": [
+        {
+          "tag": "methodology",
+          "title": "@0xMorlex: Lauren Tan Deconstructs Shipping 1,000s of PRs a Month with pstack",
+          "body": "SpaceXAI engineer Lauren Tan sits down with Matt Pocock to detail pstack's architecture for autonomous software factories: replacing giant prompts with granular skills, treating the codebase itself as infrastructure that guides agents toward correct pathways, and enforcing strict automated verification before PRs are trusted.",
+          "url": "https://x.com/0xMorlex/status/2106358835224969448"
+        },
+        {
+          "tag": "product-philosophy",
+          "title": "@poteto: 'Deleting the Product' — Why Near-Zero Code Costs Threaten App Quality",
+          "body": "In an incisive essay on organizational dysfunction, Lauren Tan cautions that as AI agents make feature creation trivial, teams increasingly 'ship their org chart' with endless sidebars and tabs. Building great products in the agentic era requires disciplined feature deletion and cultural alignment rather than unbounded feature velocity.",
+          "url": "https://x.com/poteto/status/2106202416853262408"
+        },
+        {
+          "tag": "terminal-mods",
+          "title": "@jarrodwatts: Inline Terminal Image Viewer Enhances Claude Code Multimodal Workflow",
+          "body": "Jarrod Watts introduces `image-viewer`, an open-source Claude Code mod that renders pasted screenshots and image assets directly within the terminal prompt interface, streamlining visual debugging and UI pair programming.",
+          "url": "https://x.com/jarrodwatts/status/2106153410697564235"
+        },
+        {
+          "tag": "decision-models",
+          "title": "@steipete: Cloudflare Clef & Clef-flash Spread Fast as Zero-Gen Policy Routers",
+          "body": "Peter Steinberger spotlights Cloudflare's new open-source Clef decision models. By scoring candidate schema actions during a frozen prefill pass without text generation, Clef enables sub-20ms policy routing and intent dispatching for agent swarms.",
+          "url": "https://x.com/steipete/status/2105778011635400949"
+        }
+      ]
+    },
+    {
+      "emoji": "🔬",
+      "title": "Frontier Research & Media Synthesis: RLVR / GRPO, Spotlight Memory & Local Video",
+      "items": [
+        {
+          "tag": "deep-dive",
+          "title": "@rasbt: Sebastian Raschka Teaches RLVR & GRPO Reasoning from Scratch",
+          "body": "Machine learning researcher Sebastian Raschka publishes round 6 of his 'Reasoning from Scratch' series, providing complete PyTorch implementations of Reinforcement Learning with Verifiable Rewards (RLVR) and Group Relative Policy Optimization (GRPO), breaking down MATH-500 aha moments and advantage calculations.",
+          "url": "https://x.com/rasbt/status/2106369670680871031"
+        },
+        {
+          "tag": "architecture",
+          "title": "@ChristosTzamos: Spotlight Architecture Delivers Growing Memory at Constant Token Cost",
+          "body": "Christos Tzamos introduces Spotlight, an innovative model architecture that grants LLMs expandable episodic memory without altering model weights. Crucially, generation latency and compute remain constant regardless of the volume of stored context.",
+          "url": "https://x.com/ChristosTzamos/status/2106061741821968469"
+        },
+        {
+          "tag": "local-ai",
+          "title": "@HaochengXiUCB: FreeVideo Runs MiniMax H3 Video Generation on 8GB Laptops",
+          "body": "Haocheng Xi releases FreeVideo, integrating MiniMax H3 and Video DeltaNet into consumer laptops with as little as 8GB VRAM and 16GB RAM. The open-source package features full ComfyUI support, LoRA compatibility, and custom diffusion pipelines.",
+          "url": "https://x.com/HaochengXiUCB/status/2106149968994291933"
+        },
+        {
+          "tag": "speech-synthesis",
+          "title": "@0xGky: OmniVoice Replicates Any Voice Across 600+ Languages at 40x Real-Time",
+          "body": "Developers open-source OmniVoice, a Python-based zero-shot voice replication framework capable of cloning speaker timbres across 600+ languages without pre-training datasets, executing at 40x faster than real-time playback.",
+          "url": "https://x.com/0xGky/status/2106212643220439106"
+        },
+        {
+          "tag": "bespoke-artifacts",
+          "title": "@tibo_maker & @karpathy: Bespoke Discardable Video Explainers Enter Daily Education",
+          "body": "Building on Andrej Karpathy's thesis that cheap intelligence enables disposable custom software artifacts, Tibo launches a 30-day educational series featuring daily, AI-generated bespoke explainer videos breaking down complex everyday systems.",
+          "url": "https://x.com/tibo_maker/status/2106390242681127304"
+        }
+      ]
+    }
+  ]
+}
+
+target_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+target_path.write_text(json.dumps(digest_data, indent=2, ensure_ascii=False), encoding='utf-8')
+print(f"Updated {target_path} successfully.")

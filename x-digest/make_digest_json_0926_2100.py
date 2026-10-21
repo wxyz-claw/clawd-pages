@@ -1,0 +1,149 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, September 26th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Zuckerberg Outlines Meta Muse & Shift to Long-Lived Personal Agents:</strong> Meta's vision for Muse pivots AI from reactive single-task coding bots to persistent personal agents powered by confidential VMs, self-generating tasks via an autonomous 'Ideas' engine, and coordinating across a decentralized Human + Agent network.",
+    "<strong>OpenAI DevDay in 72 Hours as 'o' Always-On Agent Leaks:</strong> OpenAI marks three days until DevDay as codebase leaks reveal 'o', an always-on persistent agent with fast mode rolling out across Pro tiers, while engineers propagate widespread quota resets.",
+    "<strong>Claude Conquers Nine-Loop Quantum Amplitudes in Physics Breakthrough:</strong> Anthropic publishes results showing Claude solved the notoriously complex nine-loop planar N=4 super-Yang-Mills quantum amplitude calculation largely unsupervised in Claude Science, breaking the SLAC academic world record for a few thousand dollars.",
+    "<strong>Harness Engineering & Minimalist Agent Architectures Mature:</strong> A newly open-sourced harness curriculum illustrates how environments turn failing models into production systems, while MIT CSAIL's JAZ shows a single recursive <code>invoke</code> primitive beats heavy external memory engines at half the compute.",
+    "<strong>Engineering Reality Focuses on Lifecycle Accountability over Syntax:</strong> Developers debate the true value of software engineers in the agentic era, emphasizing that engineers are paid for full-lifecycle liability, architectural defense, and system recovery rather than mechanical code typing."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI Agents & Frontier Systems",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@xiaogaifun: Mark Zuckerberg on Meta Muse: Long-Lived Personal Agents, Ideas & Confidential VMs",
+          "body": "In an extensive podcast interview, Mark Zuckerberg outlines the fundamental shift from task-bound coding agents (like Codex) to long-lived personal agents (Muse). Muse features persistent multi-month goals, an 'Ideas' engine that proactively proposes actions from user history, confidential VM hardware isolation ensuring zero employee visibility into user data, and an inter-agent network where personal agents negotiate directly with each other.",
+          "url": "https://x.com/xiaogaifun/status/2103766319518843158"
+        },
+        {
+          "tag": "new",
+          "title": "@OpenAIDevs & @CodexResets1: 72 Hours to OpenAI DevDay as Persistent Agent 'o' Surfaces",
+          "body": "OpenAI begins the official 72-hour countdown to DevDay on Tuesday, as leaks in production code reveal 'o', OpenAI's upcoming always-on agent designed to rival Grok Bot and Muse. Expected to feature Fast Mode and broad availability across Pro tiers, the release coincides with fleet-wide quota resets across Codex and ChatGPT.",
+          "url": "https://x.com/OpenAIDevs/status/2103929727761137940"
+        },
+        {
+          "tag": "breakthrough",
+          "title": "@AnthropicAI: Claude Solves Nine-Loop Quantum Amplitudes, Topping SLAC Physics Record",
+          "body": "Anthropic details how Claude autonomously pushed past theoretical physics records by computing nine-loop scattering amplitudes in planar N=4 super-Yang-Mills theory. Running unsupervised for days inside Claude Science, the model solved the multi-layer quantum problem for a few thousand dollars, with results independently verified by SLAC researchers.",
+          "url": "https://x.com/AnthropicAI/status/2103541577083719888"
+        },
+        {
+          "tag": "new",
+          "title": "@HowToPrompt__: Google 'ScientistTwo' Fully Automates End-to-End ML Research",
+          "body": "Researchers highlight Google's 'ScientistTwo', an autonomous multi-agent framework that reads domain challenges, navigates current literature, formulates novel hypotheses, executes code and ablation studies, and refines publications against a simulated peer-review engine, beating human conference SOTA on 86 tasks with zero citation hallucinations.",
+          "url": "https://x.com/HowToPrompt__/status/2103804240866976237"
+        },
+        {
+          "tag": "update",
+          "title": "@NicolasZu & @thsottiaux: Developer Debate Highlights Headroom Differences in Codex vs. Claude",
+          "body": "Subscribers discuss practical quota management across frontier subscriptions, noting that heavy reasoning models like Astra rapidly deplete monthly allotments on intensive multi-agent workflows, contrasting with generous token headroom on Claude Opus 5.5 tiers ahead of expected DevDay adjustments.",
+          "url": "https://x.com/NicolasZu/status/2103891145130414387"
+        },
+        {
+          "tag": "update",
+          "title": "@antigravity: Google Antigravity 2.0 Introduces Dedicated /plan Planning Mode",
+          "body": "Google Antigravity 2.0 officially launches its interactive `/plan` mode, mirroring CLI capabilities by instructing agents to step back, conduct broad repo research, and generate structured implementation blueprints requiring user approval before modifying code.",
+          "url": "https://x.com/antigravity/status/2103611698800140697"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Harness Engineering & Infrastructure",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@JafarNajafov: 14-Lecture Curriculum Maps the 5 Subsystems of Harness Engineering",
+          "body": "A popular 15k-star open-source course outlines the core architecture of production agent harnesses. Citing Anthropic experiments where a harness turned a complete model failure into a fully playable 2D game, the curriculum provides scaffold scripts and templates (AGENTS.md, init.sh, feature_list.json, and progress logging) to enforce verification loops.",
+          "url": "https://x.com/JafarNajafov/status/2103764227404312730"
+        },
+        {
+          "tag": "insight",
+          "title": "@omarsar0: MIT CSAIL's JAZ Proves Single-Primitive Harness Beats Complex Memory Systems",
+          "body": "MIT CSAIL introduces JAZ, an ultra-minimal agent framework centered on a single recursive `invoke` primitive. Rather than relying on separate vector databases or memory subsystems, the agent treats context and history as program variables, outperforming Letta (MemGPT) by 8% and self-improving baselines at half the compute cost.",
+          "url": "https://x.com/omarsar0/status/2103826930181308720"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk: Fuzzy Linting in Agent Workflows: Fast Models for Micro-Rule Enforcement",
+          "body": "Developers highlight architectures using lightweight, low-latency models like Jev as fuzzy linters inside agent execution loops. By evaluating modular coding guidelines (such as sensible useEffect patterns and comment hygiene) with confidence scoring, harnesses catch subtle anti-patterns without wasting expensive frontier model calls.",
+          "url": "https://x.com/mattpocockuk/status/2103904095996088628"
+        },
+        {
+          "tag": "resource",
+          "title": "@Mnilax: TypeSafe Releases Official Skill Rewiring Jev Decision Ordering by 12.2x",
+          "body": "TypeSafe open-sources a skill for Claude Code that restructures checker requests into a single batched pipeline (docs -> behaviour -> judgments -> batch request), reducing verification bills by 12.2x while preventing agent stalling when verification endpoints drop offline.",
+          "url": "https://x.com/Mnilax/status/2103901384135295088"
+        },
+        {
+          "tag": "new",
+          "title": "@simplifyinAI: Microsoft Open-Sources skillopt for Self-Evolving Agent Skills",
+          "body": "Microsoft releases `skillopt`, an open-source framework that automates skill and prompt optimization. The base model executes tasks while an automated optimizer evaluates outcomes against benchmark metrics, iteratively rewriting instructions and auto-rejecting regressions across any model family.",
+          "url": "https://x.com/simplifyinAI/status/2103783560029020597"
+        },
+        {
+          "tag": "resource",
+          "title": "@jochenmadler: Structural Slop Classifier Distinguishes AI Text with 98% Accuracy",
+          "body": "Researchers release code and weights for a classifier that detects AI-generated blog posts purely from structural and syntactical features, achieving 98% accuracy on unseen content by identifying characteristic slop patterns rather than relying on brittle semantic watermarks.",
+          "url": "https://x.com/jochenmadler/status/2103530162318901673"
+        },
+        {
+          "tag": "update",
+          "title": "@1weiho: open-slide 2.0 Launches Visual Presentation Editor for Coding Agents",
+          "body": "open-slide 2.0 releases with a new visual editor, editable PowerPoint (.pptx) export, and redesigned user interface, enabling AI coding agents to generate complete corporate decks that developers can visually refine and present seamlessly.",
+          "url": "https://x.com/1weiho/status/2103873490730549558"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture, Strategy & Engineering Reality",
+      "items": [
+        {
+          "tag": "opinion",
+          "title": "@lidangzzz: Engineers Get Paid for Full-Lifecycle Liability, Not Syntax Generation",
+          "body": "Commentators challenge claims that AI will render software engineers obsolete, emphasizing that engineering is fundamentally about taking responsibility for the complete lifecycle—architectural design, deployment, debugging agent failures, and production safety—roles an autonomous code generator cannot be held accountable for.",
+          "url": "https://x.com/lidangzzz/status/2103809164229153245"
+        },
+        {
+          "tag": "insight",
+          "title": "@lifesinger: Yu Bo on AI Product Economics: Why Consumer Agents Demand Free Commerce Models",
+          "body": "Tech leader Yu Bo reflects on the diverging economic models of AI products: while B2B software successfully charges recurring subscriptions by directly augmenting paid human labor, consumer agents thrive on free-tier scale monetized through transactional commerce and advertising, as seen in Meta Muse.",
+          "url": "https://x.com/lifesinger/status/2103770508605194463"
+        },
+        {
+          "tag": "resource",
+          "title": "@fhwofjow51260: 15k-Star 'vibe-coding-cn' Formalizes End-to-End Agent Workflows",
+          "body": "A comprehensive developer guide trends on GitHub, moving beyond basic prompt tricks to formalize professional vibe coding workflows across Codex, Claude Code, and Gemini CLI, detailing requirements staging, quality gates, automated testing, and git discipline.",
+          "url": "https://x.com/fhwofjow51260/status/2103824077563846863"
+        },
+        {
+          "tag": "analysis",
+          "title": "@RealJGBanks: Mapping the Three Phases of the 10-Year AI Infrastructure Macro Cycle",
+          "body": "Market analysts map the upcoming decade of capital expenditure into three distinct phases: foundational hardware (hyperscalers, HBM, optical networking in 2026–2027), power generation and grid resources (nuclear, gas turbines, copper in 2028–2030), and physical autonomy (robotics and industrial automation beyond 2030).",
+          "url": "https://x.com/RealJGBanks/status/2103913805751398502"
+        },
+        {
+          "tag": "culture",
+          "title": "@soundfury: NYT Industry Poll Names 21st Century's Top 100 TV Dramas",
+          "body": "A New York Times survey of more than 500 television industry professionals names the top 100 TV series of the 21st century, with Breaking Bad, The Wire, Mad Men, and Succession claiming the top four spots, underscoring the enduring dominance of pre-streaming prestige cable storytelling.",
+          "url": "https://x.com/soundfury/status/2103689332125290976"
+        }
+      ]
+    }
+  ]
+}
+
+target_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(target_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {target_path}")

@@ -1,0 +1,161 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Monday, October 5th, 2026 — 9:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>SemiAnalysis Exposes 5x Value Chasm Between Claude & OpenAI Subscriptions as Tibo Pledges 28-Day Fix Sprint:</strong> A comprehensive benchmark across nine AI providers reveals that Anthropic's $200/mo Claude Max tier delivers roughly 5x more token volume and API-equivalent value than OpenAI's halved Pro tier on daily workhorse models (Opus 5.5 vs. GPT-6.1 Sol). As developers migrate, OpenAI product lead Tibo Sottiaux commits to 28 consecutive days of daily speed/feature updates or fleet-wide rate limit resets, kicking off with a claimed 50% speedup across GPT-6 Astra and Sol.",
+    "<strong>Dust Breakthrough Proves Zeroth-Order Transformer Pretraining Scalable Beyond Backpropagation:</strong> Samip and collaborators debut Dust, the first zeroth-order optimization algorithm capable of pretraining transformer architectures at scale. By leveraging parallel activation perturbations via 'virtual populations,' Dust achieves 1,000x–10,000x greater compute efficiency than existing evolutionary strategies like EGGROLL, demonstrating that overparameterized models exhibit emergent backprop-like gradients up to 1B tokens.",
+    "<strong>OpenEnv Proxy & Pi Durable Redefine Agent Execution: From Live RL Environments to Resumable Task Harnesses:</strong> Hugging Face CEO Clem Delangue releases an open capture proxy in OpenEnv that converts unmodified coding harnesses (Claude Code, Codex, Hermes, OpenCode) into native reinforcement learning environments via vLLM and TRL, slashing redundant tool calls by 31%. Concurrently, Pi drops Pi Durable, a lightweight task-based harness engine designed to let multiplayer, long-running agents suspend and resume state seamlessly without heavy orchestration frameworks.",
+    "<strong>Eval-Driven Development & Context Graphs Replace Brittle Multi-Agent Scaffolding:</strong> Industry engineering consensus shifts toward rigorous verification and structural constraints. Alex Lieberman codifies eval-driven agent development across deterministic, rubric, and trajectory graders, while Cognition deploys 'dreaming' offline memory compaction and developers adopt hierarchical closure contracts ('分层治理 + 问责收口') to prevent context entropy. Meanwhile, SST's Dax issues a reality check: rapidly improving base models increasingly render complex custom developer scaffolding obsolete.",
+    "<strong>Open Financial Tooling & Local System Controls: OpenMarket wrun, arc-driver, and RemoveMacAI:</strong> OpenMarket launches wrun, an open TypeScript/Wasm alternative to TradingView's proprietary Pine Script capable of processing L2 order book microstructures and options volatility directly in-browser. On the desktop front, arc-driver delivers up to 8x faster macOS computer use automation for coding agents, while the open-source RemoveMacAI CLI allows power users to cleanly strip Apple Intelligence via native profiles, reclaiming 12GB of RAM and eliminating background fan spin."
+  ],
+  "sections": [
+    {
+      "emoji": "📊",
+      "title": "Subscription Economics, Compute Limits & Codex/ChatGPT Evolution",
+      "items": [
+        {
+          "tag": "subscription-benchmark",
+          "title": "@SemiAnalysis_ & @dotey: SemiAnalysis Tests 9 AI Plans — Claude Delivers 5x More Value Than OpenAI",
+          "body": "A comprehensive benchmarking report by SemiAnalysis across nine AI subscription providers reveals that Anthropic's $200/mo Claude Max tier delivers approximately 5x more effective token volume and API-equivalent value than OpenAI's $200 Pro tier on primary workhorse models (Opus 5.5 vs. GPT-6.1 Sol). Following OpenAI's recent DevDay cut halving Pro allowances from 20x to 10x Plus, developer sentiment has sharply tilted toward Claude for heavy agentic coding workloads.",
+          "url": "https://x.com/SemiAnalysis_/status/2107204965710053510"
+        },
+        {
+          "tag": "openai-sprint",
+          "title": "@thsottiaux & @stalkermustang: Tibo Sottiaux Pledges 28-Day Fix Sprint as Day 1 Ships 50% Speedup",
+          "body": "Addressing developer frustration over halved rate limits and quota resets, OpenAI Codex lead Tibo Sottiaux pledges a 28-day sprint where every day brings either a performance improvement or an account-wide limit reset. Day 1 rolls out an automatic ~50% default speedup across GPT-6 Astra and GPT-6.1 Sol for ChatGPT subscription holders and integrated partner harnesses, though early community benchmarks still observe peak-time bottlenecks around 35 TPS.",
+          "url": "https://x.com/stalkermustang/status/2107221802090889536"
+        },
+        {
+          "tag": "dots-workaround",
+          "title": "@kaiostephens: The 'Dots' Quota Loophole — Running Autonomous GPT-6 Astra Free of Codex Limits",
+          "body": "AI engineer Kaio Stephens highlights an unintended architectural quirk in OpenAI's new subscription tiers: because the new Dots autonomous agent runs on GPT-6 Astra without drawing from Codex rate limit pools, users on the $100/mo plan can instruct Dots to bypass Codex delegation and execute tasks directly, effectively unlocking over $1,200/day in frontier API inference without hitting standard cooldown walls.",
+          "url": "https://x.com/kaiostephens/status/2107136625838813230"
+        },
+        {
+          "tag": "codex-cloud",
+          "title": "@Dimillian & @OpenAIDevs: Codex Cloud Unlocks Persistent Dev Environments & Terminal Worktrees",
+          "body": "OpenAI engineer Thomas Ricouard and OpenAI Developers showcase the production capabilities of Codex Cloud following DevDay. Developers can spin up persistent, reusable remote developer environments that remain active when laptops are shut, while the native Codex CLI adds voice-driven task initiation, multi-project agent management, and isolated Git worktree experimentation directly from the terminal.",
+          "url": "https://x.com/Dimillian/status/2107112499925443067"
+        },
+        {
+          "tag": "chatgpt-ecosystem",
+          "title": "@skirano: MagicPath Plugin Generates $500K ARR in First Week Inside ChatGPT",
+          "body": "MagicPath founder Pietro Schirano reports unprecedented growth after launching as an integrated sidebar plugin within ChatGPT, pulling in over $500,000 in annual recurring revenue in just seven days. With OpenAI dropping the developer mode requirement to connect custom MCP servers, native chat-embedded canvas and file-editing tools are seeing massive enterprise adoption.",
+          "url": "https://x.com/skirano/status/2107236581442720203"
+        }
+      ]
+    },
+    {
+      "emoji": "🧪",
+      "title": "Foundational AI, Zeroth-Order Pretraining & World Models",
+      "items": [
+        {
+          "tag": "zeroth-order",
+          "title": "@industriaalist: Dust Pretrains Transformers via Zeroth-Order Optimization Beyond Backprop",
+          "body": "Samip and collaborators introduce Dust, the first zeroth-order credit assignment method capable of pretraining transformer architectures to approach and occasionally surpass backpropagation under high compute budgets. Utilizing a 'virtual population' mechanism to perturb activations in parallel, Dust is 1,000x to 10,000x more compute-efficient than prior evolutionary strategies like EGGROLL, demonstrating that overparameterized models yield emergent backprop-aligned gradients across runs up to 1B tokens.",
+          "url": "https://x.com/industriaalist/status/2107194534501433804"
+        },
+        {
+          "tag": "world-models",
+          "title": "@Charles_Y_Wu: JEPA-Anything Unifies World Modeling Across Physical and Biological Domains",
+          "body": "AI researcher Charles Wu debuts JEPA-Anything, a universal Joint Embedding Predictive Architecture model designed to predict dynamics across radically disparate physical systems. The open-source code and paper demonstrate unified spatio-temporal representations across molecular interactions, cellular biology, fluid dynamics, clinical patient trajectories, robotics, and global weather patterns.",
+          "url": "https://x.com/Charles_Y_Wu/status/2107134454762496397"
+        },
+        {
+          "tag": "reasoning-architectures",
+          "title": "@AdithyaNLP: AlphaZero-Style Search in Natural Language Solves Complex Chess Reasoning",
+          "body": "Adithya Bhaskar and colleagues present a groundbreaking paper adapting the AlphaZero algorithmic paradigm to autoregressive language models. By integrating search and policy-value iteration into natural language token generations, the framework enables LLMs to master and articulate complex tactical chess strategy, establishing an architectural template for rigorous multi-step domain reasoning.",
+          "url": "https://x.com/AdithyaNLP/status/2107123924828049691"
+        },
+        {
+          "tag": "design-benchmarks",
+          "title": "@DesignArena: GPT-6 Astra Captures #1 Across All Four Design Arena Leaderboards",
+          "body": "Design Arena announces that OpenAI's GPT-6 Astra has swept the top ranking across its evaluation suite, securing #1 in 3D Design (1484 Elo), Frontend (1397 Elo), Full Stack (1355 Elo), and Image-to-HTML (1272 Elo). The model demonstrates particular mastery in spatial 3D mesh and scene generation, outpacing dedicated generative graphics models.",
+          "url": "https://x.com/DesignArena/status/2106884950691868702"
+        }
+      ]
+    },
+    {
+      "emoji": "🤖",
+      "title": "Agent Harnesses, Resumability & Eval Engineering",
+      "items": [
+        {
+          "tag": "harness-rl",
+          "title": "@ClementDelangue: Hugging Face OpenEnv Converts Coding Harnesses into Native RL Environments",
+          "body": "Hugging Face CEO Clem Delangue announces OpenEnv and TRL integrations that turn unmodified production coding harnesses (Claude Code, Codex, Hermes, OpenCode) into reinforcement learning environments. By deploying a transparent capture proxy that intercepts agent API calls and exposes exact token sampling logprobs to vLLM, RL training boosted cross-harness pass rates from 42% to 54% while pruning unnecessary tool calls by 31%.",
+          "url": "https://x.com/ClementDelangue/status/2107120717980471638"
+        },
+        {
+          "tag": "durable-agents",
+          "title": "@pidotdev: Pi Durable Releases Task-Based Workflow Engine for Resumable Multiplayer Agents",
+          "body": "Pi founders Armin Ronacher (@mitsuhiko) and Mario Zechner unveil Pi Durable, an architectural harness built around an ultra-compact task workflow engine. Designed specifically for long-horizon multiplayer agent swarms, Pi Durable allows agents to suspend execution mid-turn, persist execution states to local disk, and resume cleanly across heterogeneous machines without relying on heavyweight orchestrators like Temporal or Effect.ts.",
+          "url": "https://x.com/pidotdev/status/2107033061905104941"
+        },
+        {
+          "tag": "eval-driven-dev",
+          "title": "@businessbarista: The Eval-Driven Development Blueprint — Deterministic to Trajectory Graders",
+          "body": "Alex Lieberman details a comprehensive operational playbook for eval-driven agent development. The framework defines a complete grading hierarchy—deterministic code checks, reference-answer baselines, rubric judges, and execution trajectory validators—coupled with automated promotion pipelines that convert failed production telemetry traces directly into repeatable offline CI test suites.",
+          "url": "https://x.com/businessbarista/status/2107227070505824625"
+        },
+        {
+          "tag": "memory-and-costs",
+          "title": "@hwchase17: LangSmith Tracks Falling Agent Costs as Cognition Implements 'Dreaming' Pruning",
+          "body": "Harrison Chase notes that engineering teams using LangSmith are recording consecutive monthly declines in agent API spend through user-level cost caps and harness routing via OpenSWE. Chase also highlights Cognition's implementation of 'dreaming'—an asynchronous offline memory compaction loop that prunes stale context records to prevent retrieval degradation over long-lived sessions.",
+          "url": "https://x.com/hwchase17/status/2107206402078851519"
+        },
+        {
+          "tag": "agent-architecture",
+          "title": "@GKev1n & @thdxr: Hierarchical Agent Governance vs. the Scaffolding Inversion Trap",
+          "body": "Practitioners reflect on architectural maturity: GKev1n diagnoses why unconstrained multi-agent group chats fail due to context entropy, advocating for hierarchical governance ('分层治理 + 问责收口') where coordinator models strictly isolate worker outputs via structured contracts. Meanwhile, SST's Dax warns against over-engineering: because frontier foundation models improve faster than custom scaffolds, developers using vanilla harnesses often outperform brittle multi-agent prompt chains.",
+          "url": "https://x.com/thdxr/status/2107260844400931156"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Developer Tooling, Desktop Automation & Financial Engines",
+      "items": [
+        {
+          "tag": "financial-tooling",
+          "title": "@openmarket_xyz: OpenMarket Ships wrun — Open TypeScript/Wasm Alternative to Pine Script",
+          "body": "OpenMarket announces the public beta of wrun, an open-source, high-performance alternative to TradingView's proprietary Pine Script. Written in clean TypeScript syntax and compiled to WebAssembly, wrun executes in-browser at near-native speeds and natively computes complex L2 order-book microstructure, options Greeks, funding rates, and prediction market flows, fully compatible with LLM code generation.",
+          "url": "https://x.com/openmarket_xyz/status/2107174437170937964"
+        },
+        {
+          "tag": "creative-automation",
+          "title": "@HyperFrames_: HyperFrames Studio Launches Agent-Native Timeline Video Editor",
+          "body": "HyperFrames introduces HyperFrames Studio, a timeline-based video editing environment designed from the ground up for agent-human pair production. Users describe visual concepts while autonomous agents construct video tracks, render motion elements, and refine edits interactively through frame-level drawing, comments, and direct timeline manipulation.",
+          "url": "https://x.com/HyperFrames_/status/2107149824189698558"
+        },
+        {
+          "tag": "computer-use",
+          "title": "@sxhivs: arc-driver Delivers 8x Faster Computer Use Automation on macOS",
+          "body": "Developer Shiv open-sources arc-driver, a lean macOS automation driver tailored for coding and desktop agents. Benchmarked at up to 8x faster than standard cua-driver implementations, arc-driver integrates into existing agent harnesses via a single CLI command, dramatically reducing latency during visual desktop interaction loops.",
+          "url": "https://x.com/sxhivs/status/2107150075906691224"
+        },
+        {
+          "tag": "system-cleanup",
+          "title": "@mylifcc: RemoveMacAI CLI Strips Apple Intelligence to Reclaim 12GB Unified RAM",
+          "body": "Developer Lifcc releases RemoveMacAI, a clever macOS utility that completely disables Apple Intelligence background daemons without disabling System Integrity Protection (SIP) or altering /System partitions. By applying official Apple Configuration Profiles and routing model fetch endpoints to dummy ports, the CLI recovers 12GB of RAM and eliminates fan noise, freeing memory for local LLM inference.",
+          "url": "https://x.com/mylifcc/status/2107079606255686016"
+        },
+        {
+          "tag": "demo-generation",
+          "title": "@realchendahuang: Autonomous Demo Video Generator Converts Any Product URL in 4 Minutes",
+          "body": "Chen Dahuang highlights an open-source video generation pipeline that ingests any SaaS product landing page URL and outputs a polished 30-second promotional MP4 in four minutes. The tool directs Claude to analyze page typography and visual branding, write custom CSS/HTML web animations, and assemble the final video via headless Chromium frame capture.",
+          "url": "https://x.com/realchendahuang/status/2107076166616322121"
+        }
+      ]
+    }
+  ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {out_path} with {len(digest_data['sections'])} sections and {sum(len(s['items']) for s in digest_data['sections'])} items.")

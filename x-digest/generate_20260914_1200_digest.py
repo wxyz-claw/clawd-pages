@@ -1,0 +1,118 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Monday, September 14th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Elon Musk Outlines Grok 4.8 RL Timeline:</strong> xAI founder Elon Musk confirms Grok 4.8 (2.5T parameter model) trained on a custom C++ software stack will finish base training this week and enter reinforcement learning.",
+    "<strong>Trump Slams Anthropic as Enterprise Partners Limit Model Usage:</strong> President Trump criticizes Anthropic CEO Dario Amodei over AI slowdown calls while tech and defense partners including NVIDIA, Palantir, and the Pentagon move to limit Anthropic model integration.",
+    "<strong>Trump Agrees to Crypto Clarity Act Ethics Provisions:</strong> Bipartisan momentum accelerates as President Trump officially agrees to ethics provisions in the landmark Crypto Clarity Act framework.",
+    "<strong>India Rejects BRICS Currency Swap for Chinese Yuan:</strong> India officially declines the BRICS proposal to replace US Dollar transactions with the Chinese Yuan, reinforcing its position on monetary sovereignty."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Elon Musk Outlines Grok 4.8 & Model Roadmap",
+          "body": "Elon Musk announces that Grok 4.8, a 2.5-trillion parameter model built with xAI's custom C++ software stack, completes base training this week before starting reinforcement learning (RL). He added Grok 4.7 matches Opus 5.0, while Grok 4.9 aims for Astra/Fable class capability.",
+          "url": "https://x.com/elonmusk/status/2099308197802631191"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru & @unusual_whales: Corporate & Defense Partners Restrict Anthropic Models",
+          "body": "President Trump criticizes Anthropic CEO Dario Amodei for advocating AI slowdowns, as major industry and defense leaders including NVIDIA, Palantir, Booz Allen Hamilton, and the Pentagon report plans to limit Anthropic model integration.",
+          "url": "https://x.com/unusual_whales/status/2099494877654556864"
+        },
+        {
+          "tag": "new",
+          "title": "@jukan05: Anthropic Financials Reveal >80% Gross Margins",
+          "body": "Financial disclosures reveal Anthropic achieves >80% gross margins prior to revenue sharing with partners like Amazon and model training costs, as the firm targets consecutive quarterly profitability.",
+          "url": "https://x.com/jukan05/status/2099267844185964889"
+        },
+        {
+          "tag": "update",
+          "title": "@alexandr_wang: MSL Unveils Muse Agent & Spark Model Lineup",
+          "body": "Scale AI founder Alexandr Wang shares the architectural vision behind MSL's Muse Spark models (1 through 1.3), designed specifically to power personal superintelligence agent @Muse.",
+          "url": "https://x.com/alexandr_wang/status/2099337296487333978"
+        },
+        {
+          "tag": "tip",
+          "title": "@hwchase17: Domain-Specific Harnesses in Agent Engineering",
+          "body": "LangChain co-founder Harrison Chase highlights blueprints for building domain-specific testing harnesses to evaluate and benchmark autonomous AI agents.",
+          "url": "https://x.com/hwchase17/status/2098866608785473858"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk: Cultivating Internal AI Champions in Engineering",
+          "body": "Matt Pocock encourages developers mastering AI tools to step up as internal organization trainers, bridging community knowledge into enterprise AI execution.",
+          "url": "https://x.com/mattpocockuk/status/2099422382368641064"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Trump Signs Off on Crypto Clarity Act Ethics Terms",
+          "body": "President Trump officially agrees to new bipartisan ethics provisions for the Crypto Clarity Act, unlocking key legislative momentum for US digital asset regulation.",
+          "url": "https://x.com/WatcherGuru/status/2099344845915492485"
+        },
+        {
+          "tag": "update",
+          "title": "@ChinaTruth: India Rejects BRICS Currency Proposal to Replace Dollar",
+          "body": "India formally rejects the BRICS coalition proposal to substitute Chinese Yuan for US Dollar settlements, signaling strong commitment to independent currency strategy.",
+          "url": "https://x.com/ChinaTruth/status/2099087304874942536"
+        },
+        {
+          "tag": "update",
+          "title": "@hellosuoha: Larry Ellison Cancels $7.5B Oracle Share Sale",
+          "body": "Oracle founder Larry Ellison cancels plans to sell up to $7.5 billion in company stock, while markets digest Fed interest rate projections and upcoming European DLT settlement launch.",
+          "url": "https://x.com/hellosuoha/status/2099273610850685175"
+        },
+        {
+          "tag": "new",
+          "title": "@APompliano: Long-Term Bitcoin Valuation Models Gain Traction",
+          "body": "Anthony Pompliano spotlights emerging institutional valuation frameworks projecting long-term Bitcoin milestones amid evolving macroeconomic policy.",
+          "url": "https://x.com/APompliano/status/2094490946415284247"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Sports",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@NFL: Tyler Owens & 49ers vs Rams Highlights",
+          "body": "The NFL showcases standout plays from Commanders vs Eagles and 49ers vs Rams as early season gridiron action delivers major viral highlights.",
+          "url": "https://x.com/NFL/status/2099248175085498563"
+        },
+        {
+          "tag": "update",
+          "title": "@PSGINT_: Harry Kane Emerges as 2026 Ballon d'Or Frontrunner",
+          "body": "Harry Kane's extraordinary tally of 86 goal contributions (77 goals, 9 assists) positions him as the leading candidate for the 2026 Ballon d'Or award.",
+          "url": "https://x.com/PSGINT_/status/2099297703020704180"
+        },
+        {
+          "tag": "new",
+          "title": "@sathyashrii & @mchlhess: Viral Perspectives on Life, Luck & City Life",
+          "body": "Reflective posts on the role of luck in personal growth and lighthearted SF tech dating commentary generate wide engagement across social feeds.",
+          "url": "https://x.com/sathyashrii/status/2099189927925948913"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-14 12:00 ET!")

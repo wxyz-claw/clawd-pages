@@ -1,0 +1,119 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Sunday, September 6th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Outlines Full GPT-6 Model Family (Astra, Sol, Terra, Luna):</strong> OpenAI insiders detailed the roadmap for the GPT-6 model tier structure, positioning Astra as the flagship tier alongside upcoming Sol, Terra, and Luna models optimized for scaled inference.",
+    "<strong>Fruit Fly Connectome Simulated in Minecraft via GPT-6 Astra:</strong> Developer @evnsnclr successfully mapped the full 166,700-neuron male fruit fly connectome inside Minecraft, using GPT-6 Astra to drive simulated fly neural activity and movement.",
+    "<strong>Ollama Introduces 50% Off-Peak Rates for DeepSeek-V4:</strong> Ollama Cloud launched half-price off-peak token rates for DeepSeek-V4-Flash and Pro models outside peak business hours, expanding enterprise access across US and EU data centers.",
+    "<strong>Tesla Cybercab Eliminates Rare-Earth Metals in Motors:</strong> Elon Musk confirmed that Tesla's Cybercab drive units operate entirely without rare-earth materials, setting a new open benchmark for EV and aerospace powertrains.",
+    "<strong>Rival Driver Heroically Rescues Competitor at China GT Shanghai:</strong> At China GT Shanghai, driver Yang Baijie abandoned his race to pull a trapped competitor from a burning vehicle after track safety crews fled, sparking team boycotts against event organizers."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@mark_k: OpenAI Clarifies GPT-6 Model Family Architecture",
+          "body": "OpenAI representatives confirmed that GPT-6 is a broad family of models with Astra serving as the flagship tier. Subsequent releases will include GPT-6 Luna, Terra, and Sol across different performance and cost tiers.",
+          "url": "https://x.com/mark_k/status/2096533124096172402"
+        },
+        {
+          "tag": "new",
+          "title": "@evnsnclr: 166,700-Neuron Fly Connectome Simulated in Minecraft via Astra",
+          "body": "Leveraging Google Research's adult male fruit fly connectome map, developer Evan Sinclair simulated all 166,700 neurons inside Minecraft, using GPT-6 Astra to control simulated neural movement in real time.",
+          "url": "https://x.com/evnsnclr/status/2095975490708291948"
+        },
+        {
+          "tag": "update",
+          "title": "@ollama: Ollama Cloud Unveils 50% Off-Peak Token Pricing for DeepSeek-V4",
+          "body": "Ollama introduced half-price token rates for DeepSeek-V4-Flash and Pro models outside 12:00-18:00 UTC on weekdays and all weekend across US and EU hosted endpoints.",
+          "url": "https://x.com/ollama/status/2096374001119744190"
+        },
+        {
+          "tag": "update",
+          "title": "@davitb: Krisp Releases Voice Isolation 2.5 with 46% WER Reduction",
+          "body": "Krisp audio team announced VIVA / Voice Isolation 2.5, improving speech clarity in multi-speaker background noise and lowering Word Error Rate by 46.4% across 10 speech-to-text engines.",
+          "url": "https://x.com/davitb/status/2087555112810250608"
+        },
+        {
+          "tag": "new",
+          "title": "@aleabitoreddit: LLM Portfolio Benchmark Pits Astra Ultra Against Fable 5.1 Max",
+          "body": "A 1-year investment portfolio benchmark comparing OpenAI Astra Ultra against Anthropic Fable 5.1 Max revealed Astra prioritizing targeted biotech equities while Fable selected nuclear energy and quantum infrastructure.",
+          "url": "https://x.com/aleabitoreddit/status/2096605093986787380"
+        },
+        {
+          "tag": "update",
+          "title": "@haider1: OpenAI Early Compute Capacity Investments Pay Off",
+          "body": "Industry analysts highlighted how OpenAI's aggressive two-year compute reservation strategy gave it scalable infrastructure advantages over competitors facing hardware availability bottlenecks.",
+          "url": "https://x.com/haider1/status/2096294791567057142"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@CaoChangqing: Nike S&P 100 Removal Follows 76% Five-Year Decline",
+          "body": "Retail analysis highlighted Nike's exclusion from the S&P 100 index after an 18-year run, driven by a 76%+ stock drop caused by direct-to-consumer distribution errors and rising brand competition.",
+          "url": "https://x.com/CaoChangqing/status/2096392787738698153"
+        },
+        {
+          "tag": "update",
+          "title": "@Kunluntalk: Tesla Cybercab Motors Achieve 100% Rare-Earth Elimination",
+          "body": "Analysis of Tesla's Cybercab drivetrain confirmed complete elimination of rare-earth materials, opening up supply chain independence for next-generation electric vehicles.",
+          "url": "https://x.com/Kunluntalk/status/2096379279286419844"
+        },
+        {
+          "tag": "new",
+          "title": "@APompliano: Analysts Highlight Bitcoin as Key Settlement Asset for AI Agents",
+          "body": "Financial strategists discussed how Bitcoin treasury holdings and decentralized rails are emerging as leading settlement mechanisms for high-frequency autonomous AI agent transactions.",
+          "url": "https://x.com/APompliano/status/2091903355413200911"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@whyyoutouzhele: Heroic Driver Rescues Competitor in China GT Shanghai Crash",
+          "body": "Driver Yang Baijie abandoned his race to pull a rival driver from a burning car at China GT Shanghai after emergency marshals fled, prompting team boycotts against organizers.",
+          "url": "https://x.com/whyyoutouzhele/status/2096591750005432557"
+        },
+        {
+          "tag": "update",
+          "title": "@wangdan1989: Wang Dan Meets Dalai Lama in Dharamshala Audience",
+          "body": "Dissident scholar Wang Dan held a 15-minute audience with the Dalai Lama in Dharamshala, discussing international peace, ethical governance, and democratic prospects in Asia.",
+          "url": "https://x.com/wangdan1989/status/2096226646286311812"
+        },
+        {
+          "tag": "new",
+          "title": "@panzerwong: Cybercab Grok Diverts Wanted Suspect to Police Station",
+          "body": "A viral report detailed a Cybercab equipped with Grok facial recognition locking its doors and delivering a passenger with an outstanding arrest warrant directly to an Austin police station.",
+          "url": "https://x.com/panzerwong/status/2096516444226015357"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Bayern CEO Urges Lifting Ban on Opposing Coach",
+          "body": "Bayern Munich CEO Jan-Christian Dreesen publicly requested lifting a red-card touchline ban for Elversberg manager Vincent Wagner before their upcoming fixture, drawing widespread applause.",
+          "url": "https://x.com/iMiaSanMia/status/2096554947441566135"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully!")

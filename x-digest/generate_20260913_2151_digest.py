@@ -1,0 +1,118 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Sunday, September 13th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Elon Musk Outlines Grok 4.8 RL Timeline:</strong> xAI founder Elon Musk confirms Grok 4.8 (2.5T parameter model) trained on a custom C++ software stack will finish base training this week and enter reinforcement learning.",
+    "<strong>Trump & Russia Reject International AI Slowdown Calls:</strong> President Trump declares 'whoever wins AI, wins' after tech executives cite existential risks, matching Russia's declaration that pacing AI development globally is impossible.",
+    "<strong>China Offloads $70B Treasuries in Gold & Yuan Shift:</strong> China executes its largest US Treasury divestment since 2008 ($70B), boosting gold reserves to $305B as Hong Kong launches gold-backed clearing linked to Shanghai.",
+    "<strong>Senate Democrats Convene on Crypto Clarity Act:</strong> US Senate leadership holds an evening session to finalize key provisions of the upcoming Crypto Clarity Act regulatory framework."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Elon Musk Outlines Grok 4.8 RL Timeline",
+          "body": "Elon Musk announces that Grok 4.8, a 2.5-trillion parameter model built with xAI's new custom C++ software stack, completes base training this week before beginning reinforcement learning (RL).",
+          "url": "https://x.com/elonmusk/status/2099308197802631191"
+        },
+        {
+          "tag": "update",
+          "title": "@satyanadella: Satya Nadella Outlines Superintelligence & MAI Principles",
+          "body": "Microsoft CEO Satya Nadella issues a comprehensive statement calling for grounded AI alignment, open vs closed ecosystem diversity, enterprise model ownership, and announces Microsoft's upcoming MAI Code of Conduct.",
+          "url": "https://x.com/satyanadella/status/2099220712024408084"
+        },
+        {
+          "tag": "new",
+          "title": "@theo: AI Code Quality Outpaces Average Human Developers",
+          "body": "Theo notes that code produced by modern AI generation platforms like Fable and Astra consistently exceeds the structure and quality of average human developer code.",
+          "url": "https://x.com/theo/status/2098882862414274719"
+        },
+        {
+          "tag": "tip",
+          "title": "@davitb: Krisp Releases VIVA 2.5 Voice Isolation Model",
+          "body": "Krisp launches VIVA 2.5 voice isolation, cutting STT word error rates by 46.4% on overlapping background audio across 10 speech engines.",
+          "url": "https://x.com/davitb/status/2099030332439715907"
+        },
+        {
+          "tag": "update",
+          "title": "@hwchase17: Domain-Specific Evaluation Harnesses in Agent Engineering",
+          "body": "LangChain co-founder Harrison Chase spotlights architectural blueprints for building domain-specific testing harnesses to evaluate autonomous AI agents.",
+          "url": "https://x.com/hwchase17/status/2098866608785473858"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk: TypeScript Curation Milestone Surpasses React",
+          "body": "Matt Pocock's developer TypeScript skills repository passes React in total GitHub stars, marking a major milestone in community adoption.",
+          "url": "https://x.com/mattpocockuk/status/2098696179081007514"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Senate Democrats Meet on Crypto Clarity Act",
+          "body": "US Senate leadership holds an evening session to review key provisions of the landmark Crypto Clarity Act as digital asset regulatory efforts accelerate.",
+          "url": "https://x.com/WatcherGuru/status/2099202777243082899"
+        },
+        {
+          "tag": "update",
+          "title": "@KobeissiLetter: Trump Rejects AI Slowdown Calls",
+          "body": "President Trump rejects calls to freeze AI progress following CEO safety concerns, stating that the US must maintain leadership in the global AI race.",
+          "url": "https://x.com/KobeissiLetter/status/2099229881544413389"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: Russia Rejects International AI Development Slowdowns",
+          "body": "Russian officials declare that pacing artificial intelligence development is impossible, reflecting growing international divergence on AI governance.",
+          "url": "https://x.com/WatcherGuru/status/2098910147443634420"
+        },
+        {
+          "tag": "new",
+          "title": "@MikuBTC: China Offloads $70B US Treasuries in Massive Gold & Yuan Pivot",
+          "body": "China sells $70B in US Treasuries while pushing gold reserves to $305B and launching a gold-backed clearing system in Hong Kong linked to the Shanghai Gold Exchange.",
+          "url": "https://x.com/MikuBTC/status/2099080383891493278"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Sports",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@TheCinesthetic: Christian Bale's 2003 Toyota Tacoma Goes Viral",
+          "body": "Reports highlighting actor Christian Bale driving the same 2003 Toyota Tacoma for over two decades spark viral admiration across film and car communities.",
+          "url": "https://x.com/TheCinesthetic/status/2099226477065867355"
+        },
+        {
+          "tag": "update",
+          "title": "@ChonlozB: Sylvester Stallone 80th Birthday Reunion",
+          "body": "Action cinema legends gather to celebrate Sylvester Stallone's 80th birthday, generating viral nostalgia among action movie fans.",
+          "url": "https://x.com/ChonlozB/status/2099179826448072762"
+        },
+        {
+          "tag": "new",
+          "title": "@HKane & @Gazpachen: Bayern Munich Win at Elversberg",
+          "body": "Harry Kane celebrates Bayern Munich's away victory as fans share viral behind-the-scenes footage of Elversberg's stadium renovations.",
+          "url": "https://x.com/HKane/status/2099202000084730040"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-13 21:51 ET!")

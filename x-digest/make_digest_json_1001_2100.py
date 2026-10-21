@@ -1,0 +1,173 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Thursday, October 1st, 2026 — 9:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Claude Code Launches Promptable 'Mods' Architecture:</strong> Anthropic introduces user-promptable mods for Claude Code (/plugin), empowering developers to customize agent behavior, restyle CLI/desktop interfaces, and inject automated guardrails (progress preservation, process watchdogs, and auto-eval hillclimbing) with minimal TypeScript or natural language.",
+    "<strong>OpenAI Dots Fallout Sparks Open-Source 'OpenDots' & Engineering Control Planes:</strong> Facing developer backlash over locked-down consumer environments, halved $200 plan limits, and missing integrations, the community launches OpenDots (self-hostable with Computer Use and AG-UI), while OpenAI engineering leads clarify dual-mode local and cloud orchestration roadmaps.",
+    "<strong>Artificial Analysis Releases Coding Agent Index: Sonnet 5.5 Wins Quality, Sol Dominates Cost:</strong> The inaugural index ranks Claude Sonnet 5.5 in Claude Code at #1 (score 68, $14.19/task), Gemini 4 Argon in Antigravity at 64 ($5.84/task), and GPT-6.1 Sol in Codex at 63 ($1.04/task)—revealing a 14x cost reduction for near-parity coding scores.",
+    "<strong>Decision-Layer Expansion: Cloudflare Open-Sources 'Clef' to Rival Jev:</strong> Cloudflare releases Apache 2.0 decision models Clef and Clef-flash on Hugging Face to compete with TypeSafe's Jev, as Stanford researchers publish a two-gate RAG loop that eliminates 90%+ of expensive frontier LLM calls.",
+    "<strong>Karpathy on Discardable Software & a16z Tracks Historic AI Capex:</strong> Andrej Karpathy urges developers to leverage abundant intelligence for disposable interactive HTML artifacts and custom explainer videos, as a16z data shows AI infrastructure investment has surpassed historical railroad buildouts as a percentage of GDP."
+  ],
+  "sections": [
+    {
+      "emoji": "🧩",
+      "title": "Claude Code 'Mods' Ecosystem & Autonomous Developer Tooling",
+      "items": [
+        {
+          "tag": "ecosystem",
+          "title": "@bcherny: Claude Code Ships 'Mods' — Custom Behavior & UI via Natural Language",
+          "body": "Boris Cherny highlights the rollout of Claude Code Mods, allowing developers to overhaul CLI and desktop agent behavior, UI layouts, and tool pipelines with plain English prompts or brief TypeScript snippets. Bundled directly into plugins installable via '/plugin', mods turn Claude into a personalized, self-modifying developer environment.",
+          "url": "https://x.com/bcherny/status/2105756563302723721"
+        },
+        {
+          "tag": "tooling",
+          "title": "@Av1dlive: Self-Healing Mods Detect Loops, Compaction Loss & Orphan Processes",
+          "body": "Avid demonstrates prompt-driven Claude Code mods designed to resolve common agentic failure modes: automated progress saving prior to context compaction, watchdog triggers for runaway background tasks, loop detectors for failed shell retries, and automated session auditing that extracts repeatable instructions into memory.",
+          "url": "https://x.com/Av1dlive/status/2105757532790903192"
+        },
+        {
+          "tag": "evals",
+          "title": "@HamelHusain: Anthropic Ships Auto Eval Plugin for Autonomous Capability Hillclimbing",
+          "body": "Hamel Husain reviews Anthropic's new Auto Eval plugin for Claude Code. The framework allows agents to autonomously synthesize assertion suites, run regression loops against codebase changes, and optimize prompts and skills via automated evaluation hillclimbing.",
+          "url": "https://x.com/HamelHusain/status/2105471347736682953"
+        },
+        {
+          "tag": "creative",
+          "title": "@0xMovez: Single-Prompt Opus 5.5 Workflows Challenge Dedicated Motion Design Stacks",
+          "body": "Creators showcase automated motion graphics production using Claude Opus 5.5, bypassing traditional editing suites like After Effects and DaVinci. Single structured prompts guide the model through concept generation, storyboarding, WebGPU shader transitions, and synchronized audio cueing.",
+          "url": "https://x.com/0xMovez/status/2105768550711558491"
+        }
+      ]
+    },
+    {
+      "emoji": "🤖",
+      "title": "OpenAI Dots Backlash, OpenDots & Engineering Orchestration",
+      "items": [
+        {
+          "tag": "open-source",
+          "title": "@ataiiam: OpenDots Drops Self-Hostable, Harness-Agnostic Coworkers",
+          "body": "Atai Barkai and the CopilotKit team unveil OpenDots, an open-source alternative to OpenAI Dots. Built with AG-UI and computer-use capabilities across terminal, browser, and local files, OpenDots connects to any agent backend and integrates into Slack, Teams, and desktop environments without proprietary cloud lock-in.",
+          "url": "https://x.com/ataiiam/status/2105710796198322659"
+        },
+        {
+          "tag": "architecture",
+          "title": "@TheRohanVarma: OpenAI Outlines Dual-Mode Engineering Control Planes for Dots",
+          "body": "OpenAI engineer Rohan Varma clarifies Dots' roadmap for technical teams: local desktop connectivity enabling Computer Use Agent (CUA) control over local Codex and browser instances, and a cloud developer environment where Dots dynamically spin up containerized workspaces to orchestrate parallel tasks.",
+          "url": "https://x.com/TheRohanVarma/status/2105476962596917572"
+        },
+        {
+          "tag": "ux",
+          "title": "@rileybrown: 24 Hours with Dots Reveals Voice Brilliance but Workspace Friction",
+          "body": "Riley Brown reviews 24 hours of continuous usage with OpenAI's 'Bluey' Dot. While praising voice responsiveness as industry-leading, he flags confusing multi-browser abstractions ('my VM browser vs Codex browser vs Chrome') and calls for replacing the rigid 'Projects' model with fluid subagent thread visualization.",
+          "url": "https://x.com/rileybrown/status/2105670426378535406"
+        },
+        {
+          "tag": "critique",
+          "title": "@giadotai & @0xrwu: DevDay Pricing Tiers & Sandboxing Trigger Consumer Pushback",
+          "body": "Frustration surfaces across the developer community following DevDay tier changes. Users cite the halving of effective limits on legacy $200 plans, high premiums on the new $500 tier, missing native payment integrations, and sandboxing friction compared to unified agent competitors.",
+          "url": "https://x.com/giadotai/status/2105610718125158656"
+        },
+        {
+          "tag": "speculation",
+          "title": "@cherry_mx_reds: Speculation Mounts Over Dots as Software Layer for Jony Ive Hardware",
+          "body": "Hardware and AI analysts hypothesize that Dots' cloud persistence, unified personal context, and background task execution represent the software operating system being designed for OpenAI's upcoming joint hardware device with Jony Ive.",
+          "url": "https://x.com/cherry_mx_reds/status/2105688157433811241"
+        }
+      ]
+    },
+    {
+      "emoji": "📊",
+      "title": "Frontier Coding Leaderboards, Economics & Telemetry",
+      "items": [
+        {
+          "tag": "benchmark",
+          "title": "@ArtificialAnlys: Coding Agent Index Confirms Sonnet Quality Lead vs Sol Cost Supremacy",
+          "body": "Artificial Analysis publishes its updated Coding Agent Index evaluating full model-harness systems. Claude Sonnet 5.5 in Claude Code claims #1 with a score of 68 at $14.19 per task; Gemini 4 Argon in Antigravity scores 64 at $5.84; and GPT-6.1 Sol in Codex achieves 63 at an industry-low $1.04 per task—a 14x cost reduction.",
+          "url": "https://x.com/ArtificialAnlys/status/2105814318294114720"
+        },
+        {
+          "tag": "models",
+          "title": "@cursor_ai: GLM 5.3 & Flash Arrive in Cursor, Claiming Top Open-Weight Benchmark",
+          "body": "Cursor integrates GLM 5.3 and GLM 5.3 Flash into its editor, highlighting that GLM 5.3 Max has captured the top open-weight spot on CursorBench 4.0, offering developers another high-performance alternative for in-IDE autocomplete and agent edits.",
+          "url": "https://x.com/cursor_ai/status/2105787358557999585"
+        },
+        {
+          "tag": "capacity",
+          "title": "@kr0der & @thsottiaux: OpenAI Doubles GPT-6.1 Sol Inference Capacity Amid Heavy Load",
+          "body": "OpenAI Head of Product Tibo reports massive demand for GPT-6.1 Sol across API and subscriptions, confirming teams brought substantial new GPU capacity online to nearly double baseline generation speeds and alleviate community bottlenecks in ChatGPT and Codex.",
+          "url": "https://x.com/kr0der/status/2105553048483627454"
+        },
+        {
+          "tag": "quota",
+          "title": "@Codexresets_ & @ai_funss: Sol Quota Efficiency Tested Against Claude Pro Token Volumes",
+          "body": "Telemetry accounts report that Codex Plus users running GPT-6.1 Sol Medium consumed only 5% of their 5-hour limit during intense multi-hour sessions, contrasting with debates over Claude Pro's generous 3B monthly token allocation at 90 tok/s vs Sol's baseline throughput.",
+          "url": "https://x.com/Codexresets_/status/2105380982220034180"
+        }
+      ]
+    },
+    {
+      "emoji": "⚡",
+      "title": "The Decision-Layer Revolution: Cloudflare Clef & System-1 Routing",
+      "items": [
+        {
+          "tag": "open-source",
+          "title": "@steipete & @victormustar: Cloudflare Releases Open-Weight 'Clef' Models to Hugging Face",
+          "body": "Cloudflare open-sources Clef and Clef-flash under Apache 2.0, providing specialized, lightweight decision models trained for sub-second agent routing. Peter Steinberger remarks on the unprecedented adoption velocity of dedicated decision layers decoupling routine policy choices from massive frontier LLMs.",
+          "url": "https://x.com/steipete/status/2105778011635400949"
+        },
+        {
+          "tag": "rag",
+          "title": "@N01ennn: Stanford Research Blueprint Introduces Two-Gate Jev Decision Loops to RAG",
+          "body": "Stanford researchers release an optimized retrieval-augmented generation architecture. Rather than streaming bulky passages into expensive frontier LLMs, a single sub-second Jev pass filters injection and answerability across top-20 chunks, followed by a second verification gate to guarantee factual grounding with zero token waste.",
+          "url": "https://x.com/N01ennn/status/2105606036639932433"
+        },
+        {
+          "tag": "swarms",
+          "title": "@polydao: TypeSafe Details 9 Micro-Decision Tasks for 300-Agent Swarms",
+          "body": "TypeSafe highlights nine operational patterns where sub-second System One decision models replace costly frontier calls—including intent classification, schema validation, tool selection, and retry arbitration—reducing latency and inference expenses by up to 100x.",
+          "url": "https://x.com/polydao/status/2105596331934785999"
+        }
+      ]
+    },
+    {
+      "emoji": "🔭",
+      "title": "Frontier Paradigms: Discardable Software & Silicon Infrastructure",
+      "items": [
+        {
+          "tag": "paradigm",
+          "title": "@karpathy: Abundant Intelligence Makes Large Software Artifacts Discardable",
+          "body": "Andrej Karpathy details emerging strategies for consuming agentic output as models handle deeper autonomy: constrained technical prose (ASD-STE100), interactive HTML artifacts, and bespoke 3b1b-style video narration. He emphasizes that with code generation commoditized, complex custom software artifacts can now be treated as disposable.",
+          "url": "https://x.com/karpathy/status/2105819303471976479"
+        },
+        {
+          "tag": "infrastructure",
+          "title": "@sameenkarim: GitHub Releases Async Merge API for Agentic Engineering Fleets",
+          "body": "GitHub rolls out a dedicated asynchronous merge API. The endpoint enables autonomous coding agents to resolve and merge pull requests programmatically in CI/CD without blocking executions or suffering merge-queue race conditions.",
+          "url": "https://x.com/sameenkarim/status/2105751711482876197"
+        },
+        {
+          "tag": "macro",
+          "title": "@a16z: AI Infrastructure Capex Eclipses Railroads as % of GDP in State of Markets II",
+          "body": "a16z publishes its State of Markets II report, breaking down AI capital allocation ($50 chips, $20 power, $15 networking, $15 physical cooling/facilities per $100 invested). The firm notes supply-side buildouts have surpassed the historic railroad boom as a share of US GDP, heralding an enterprise 'agent work period'.",
+          "url": "https://x.com/a16z/status/2105752116757422375"
+        },
+        {
+          "tag": "markets",
+          "title": "@LeopoldTracker_: Leopold Aschenbrenner Closes Short Hedges with $315M Call Spread",
+          "body": "Portfolio disclosures show Leopold Aschenbrenner closed all semiconductor put hedges, committing ~$315M into call options across memory and compute infrastructure (AMD, Bloom Energy, CoreWeave, SK Hynix, SanDisk, Intel) alongside multi-billion-dollar private stakes in Anthropic.",
+          "url": "https://x.com/LeopoldTracker_/status/2105682337291743550"
+        }
+      ]
+    }
+  ]
+}
+
+target_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(target_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {target_path} with {len(digest_data['sections'])} sections.")

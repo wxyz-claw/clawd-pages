@@ -1,0 +1,599 @@
+[0] zero (@twoclipping) [Score:11155, L:9505, R:522, Rep:202, Date:Thu Sep 24 23:58:55 +0000 2026]
+Text: opus 5.5 is f*cking cracked at motion design  this entire video is code, 0 after effects  im open sourcing the prompt template for these motion designs  steal it to recreate these ↓  <inputs> Ask me for: 8 to 12 UI states I want the shape to become (e.g. button, loader, player, slider, toggle, tabs, chart, command palette, toast), pure black and white or one accent color, and a royalty-free song around 120 BPM (e.g. Mixkit, free for commercial use). </inputs>  <direction> Dribbble-level UI motion. One shape, never cut: every state is the same element morphing its size, radius and color while its content swaps with a short blur. A cursor drives every change with real clicks and drags. Light warm-gray canvas, black and white components, one clean UI font (Geist). Springs everywhere, a tiny overshoot at most. The camera zooms so each state fills the frame. The last frame is the first frame, so it loops. Banned: bouncy easing, particle bursts, glows, gradients on UI chrome, mismatched icon strokes, dead time, anything that looks like a template. </direction>  <structure> 120 BPM, 7 bars, something happens on every beat. Button → loader → check → dynamic island → music player with a play/pause morph → scrub the progress bar → it becomes a volume slider that stretches when dragged past max → a toggle flips on the beat → the knob becomes a liquid tab indicator → the tabs open into a chart that draws itself, with a tooltip on hover → it collapses into ⌘K → type to filter → enter → toast → back to the button. </structure>  <build> 1. One HTML file, square 1440x1440. Every style is computed from time inside seek(t): no CSS transitions, no timers, no state carried between frames. 2. Springs are closed-form step responses. A value that changes target many times is the sum of one spring per change, so it stays a pure function of time. 3. The tab indicator's two edges ride different springs, so the leading edge stretches ahead of the trailing one. Same trick for the toggle knob. 4. Drags are direct manipulation: while the cursor is held, the value is computed from its position. On release it springs back from wherever it was. 5. Analyze the song with numpy for the beat grid and start on a downbeat. Place every UI sound by its measured peak. 6. Render with Playwright: 4 subframes per frame, blended with ffmpeg tmix for motion blur at 60fps. 7. Render one frame per beat before the full render. Fix anything off the grid, cramped or hard to read. </build>  <gotchas> Never put will-change on anything the camera scales or the text renders blurry. Text that swaps inside a morphing container needs its own enter and exit timing or it overlaps. Make the last frame identical to the first, cursor position and speed included, or the loop stutters. </gotchas>  <start> Ask me for the inputs, then show me the state list on the beat grid before you write any code. </start>
+URL: https://x.com/twoclipping/status/2103273003555402193
+
+[1] OpenCode (@opencode) [Score:11130, L:9207, R:360, Rep:401, Date:Fri Sep 25 15:22:57 +0000 2026]
+Text: Operation Cheepseek Phase 2:  $60 of usage for DeepSeek v4.1 Flash is now permanent  enjoy :)
+URL: https://x.com/opencode/status/2103505541871907109
+
+[2] Kevin Jiang (@jiang_kev) [Score:9838, L:6981, R:461, Rep:645, Date:Wed Jul 29 15:59:06 +0000 2026]
+Text: We just raised $5.7M for @PolarBrowser, the AI browser that beats Anthropic and OpenAI on every major web agent benchmark.  - 4,500,000+ actions taken for users, automating sales, recruiting, and ops - One company cancelled Clay and saves 25+ hrs/wk per person - Team is from MIT, YC, Prod, Citadel, Jane Street, Perplexity, Modal, and Apple  100 hours of work. From 30 seconds of typing.  Download the world's most powerful AI browser: https://t.co/lUOm01Stm0
+URL: https://x.com/jiang_kev/status/2082496145994248488
+
+[3] Starlink (@Starlink) [Score:7935, L:5830, R:616, Rep:291, Date:Fri Aug 21 01:04:00 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2090605808400888258
+
+[4] The Economist (@TheEconomist) [Score:7343, L:5066, R:564, Rep:383, Date:Tue Jul 21 08:53:19 +0000 2026]
+Text: Japan’s sprawling sex industry is thought to be worth ¥2trn-5trn ($12bn-31bn) a year. Lately a debate has raged over how the work is policed
+URL: https://x.com/TheEconomist/status/2079489891486810504
+
+[5] Starlink (@Starlink) [Score:7159, L:5370, R:500, Rep:263, Date:Fri Aug 21 01:04:01 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2090605808673517720
+
+[6] Starlink (@Starlink) [Score:6768, L:5126, R:482, Rep:226, Date:Fri Aug 21 01:04:00 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2090605808426106932
+
+[7] Starlink (@Starlink) [Score:6547, L:4914, R:449, Rep:245, Date:Fri Aug 21 01:04:00 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2090605808396665202
+
+[8] Starlink (@Starlink) [Score:6435, L:4783, R:472, Rep:236, Date:Mon Aug 24 19:28:46 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091970995624272172
+
+[9] Starlink (@Starlink) [Score:6328, L:4779, R:446, Rep:219, Date:Fri Aug 21 01:04:00 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2090605808405172559
+
+[10] Bilal Bakr (@bil0090) [Score:6248, L:5299, R:227, Rep:165, Date:Thu Sep 24 20:46:22 +0000 2026]
+Text: You can use Claude after hitting rate limits  Anthropic secretly dropped this option alongside Opus 5.5 for some users  In Claude Code, run "/low-priority"  This will let you use Claude after hitting limits, but it'll be slower &amp; only work if theres capacity at that time  Enjoy! https://t.co/HKIbvxoi0u
+URL: https://x.com/bil0090/status/2103224547897983468
+
+[11] REO Industries (@reoindustries) [Score:6221, L:3717, R:352, Rep:600, Date:Wed Aug 19 15:01:47 +0000 2026]
+Text: REO is a brand new American truck starting at $21,500.   $25 reserves your spot in line.
+URL: https://x.com/reoindustries/status/2090091866838438305
+
+[12] Joseph Tsar (@joseph_tsar_) [Score:6112, L:4534, R:765, Rep:16, Date:Fri Sep 25 14:00:02 +0000 2026]
+Text: How To Speak Articulately (Full Course) https://t.co/vKkDU6nTOm
+URL: https://x.com/joseph_tsar_/status/2103484675268489721
+
+[13] Starlink (@Starlink) [Score:6018, L:4493, R:437, Rep:217, Date:Fri Aug 21 01:04:00 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2090605808442847455
+
+[14] Gandharva (@heygandharva) [Score:5962, L:4951, R:432, Rep:49, Date:Fri Sep 25 13:21:51 +0000 2026]
+Text: Student ID benefits   > Google Gemini Pro   > Student ID flight booking   > GitHub Student Pack   > GitHub Copilot   > DigitalOcean credits   > AWS Educate   > Google Cloud credits   > Microsoft Azure $100 credits   > MongoDB Atlas credits   > Heroku credits   > Vercel Pro features   > Netlify enhanced limits   > Railway student discount   > Namecheap free domain + SSL   > Cloudflare Pro   > Postman Student Expert   > Replit Pro   > Cursor Pro   > JetBrains IDEs   > Autodesk   > Figma   > Canva for Education   > Notion   > Grammarly EDU   > Microsoft 365 Education   > LinkedIn Learning   > Coursera financial aid   > edX free course audits   > Udemy free courses   > Pluralsight student plan   > Educative free courses   > Free certification courses   > Spotify Student   > Apple Music Student   > YouTube Premium Student   > Amazon Prime Student   > UNiDAYS discounts   > Student Beans discounts   > Apple Education pricing   > Samsung Student Store   > EarPods free with MacBook (education offer)   > IBM SkillsBuild   > Meta Blueprint certifications   > OpenAI API credits (via student programs)   > Blender (fully free)   > Unity Student license   > Miro Education plan   > Sketch student pricing   > Todoist Pro for students   > Evernote student discount   > Zoom Education benefits   > Slack Education plan   > Perplexity Pro Student   > Free .me domain (GitHub pack)   > Free SSL certificates   > Linear student plan   > ClickUp Education plan   > Asana student access   > Airtable free education workspace   > Obsidian free for students   > Arc Browser student perks   > Raycast Pro student discount   > Loom Education plan   > GitKraken Student pack   > JetBrains Space Education   > DigitalOcean App Platform credits   > Stripe fee-free test credits   > PayPal sandbox credits   > Oracle Cloud Free Tier (Student)   > SAP Learning Hub Student   > Red Hat Developer Subscription   > Intel Developer Zone access   > Nvidia student resources & credits   > Kali Linux training discounts   > Hack The Box student labs   > TryHackMe student plan   > LeetCode student discounts   > InterviewBit free practice   > HackerRank student certifications   > Kaggle free compute & datasets   > Google Developer Student Clubs perks   > Microsoft Learn student challenges   > Free conference tickets (student passes)   > Free hackathon swag & cloud credits
+URL: https://x.com/heygandharva/status/2103475066591981629
+
+[15] Starlink (@Starlink) [Score:5764, L:4332, R:437, Rep:186, Date:Fri Aug 21 01:04:00 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2090605808430231965
+
+[16] Starlink (@Starlink) [Score:5744, L:4043, R:498, Rep:235, Date:Wed Aug 26 17:46:06 +0000 2026]
+Text: Starlink offers fast, reliable internet in the most rural and remote locations. Portable and easy to set up, Starlink Mini works wherever you are.  Order online in minutes.
+URL: https://x.com/Starlink/status/2092669931368403176
+
+[17] Elysium Communities (@ElysiumOnX) [Score:5721, L:1972, R:262, Rep:1075, Date:Mon Jun 29 20:47:53 +0000 2026]
+Text: POV: Your rent now includes 2 chef-made meals a day, farm-fresh food, Tesla access on demand (and zero car payments). Starting $1,925/month.
+URL: https://x.com/ElysiumOnX/status/2071697183825678815
+
+[18] Lectric eBikes (@lectricebikes) [Score:5288, L:3602, R:324, Rep:346, Date:Thu Sep 10 22:29:17 +0000 2026]
+Text: #1 Selling eBikes in America! Fast, foldable and ready for your next adventure!
+URL: https://x.com/lectricebikes/status/2098177016021630988
+
+[19] Motley Fool Stock Advisor (@TMFStockAdvisor) [Score:5186, L:3586, R:335, Rep:310, Date:Fri Sep 04 14:18:43 +0000 2026]
+Text: CEO says this is worth 29 Amazons.
+URL: https://x.com/TMFStockAdvisor/status/2095879235298902196
+
+[20] Digital Currency (@MScDigital) [Score:5026, L:3295, R:435, Rep:287, Date:Thu Jul 09 07:12:10 +0000 2026]
+Text: Enrol free in UNIC's Blockchain and Digital Assets MOOC. The eight-week Introductory Track is fully online and free to complete, with no payment required to get started.
+URL: https://x.com/MScDigital/status/2075115779398263122
+
+[21] Alexandr Wang (@alexandr_wang) [Score:4994, L:3754, R:266, Rep:236, Date:Fri Sep 25 18:26:25 +0000 2026]
+Text: Why I'm Building Muse
+URL: https://x.com/alexandr_wang/status/2103551714536439951
+
+[22] Starlink (@Starlink) [Score:4869, L:3598, R:382, Rep:169, Date:Mon Aug 24 18:34:48 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091957413662564693
+
+[23] Bayern & Germany (@iMiaSanMia) [Score:4809, L:4042, R:145, Rep:159, Date:Fri Sep 25 09:52:49 +0000 2026]
+Text: Jamal Musiala will be sidelined for 3-4 weeks [@kerry_hau] https://t.co/LibMKny73e
+URL: https://x.com/iMiaSanMia/status/2103422464197800059
+
+[24] Starlink (@Starlink) [Score:4766, L:3526, R:395, Rep:150, Date:Mon Aug 24 19:28:46 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091970995620032861
+
+[25] Starlink (@Starlink) [Score:4579, L:3359, R:382, Rep:152, Date:Mon Aug 24 18:34:48 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091957413675229612
+
+[26] Jobescape (@jobescape_ai) [Score:4508, L:3592, R:338, Rep:80, Date:Tue Aug 11 13:58:04 +0000 2026]
+Text: Full Claude Course   Master Claude to automate repetitive tasks, build apps without coding, create real portfolio projects, and become more valuable at work.
+URL: https://x.com/jobescape_ai/status/2087176727906701593
+
+[27] Starlink (@Starlink) [Score:4506, L:3244, R:376, Rep:170, Date:Wed Aug 26 17:46:06 +0000 2026]
+Text: Starlink offers fast, reliable internet in the most rural and remote locations. Portable and easy to set up, Starlink Mini works wherever you are.  Order online in minutes.
+URL: https://x.com/Starlink/status/2092669931401941245
+
+[28] Starlink (@Starlink) [Score:4450, L:3271, R:357, Rep:155, Date:Mon Aug 24 19:28:47 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091970996072853622
+
+[29] 徐跑跑 (@xupaopaogm) [Score:4401, L:3878, R:35, Rep:151, Date:Fri Sep 25 09:40:00 +0000 2026]
+Text: 如何评价女主播“兔娘”？ https://t.co/GZGUUkp2Nu
+URL: https://x.com/xupaopaogm/status/2103419236240834759
+
+[30] Coinbase 🛡️ (@coinbase) [Score:4376, L:3665, R:144, Rep:141, Date:Mon Sep 21 23:08:18 +0000 2026]
+Text: Mundo Dodgeball, anyone?  We're bringing it to real life.  But first, you must show down on the rift. 1v1.  Top players go to the League of Legends World Championship in NYC.  Champion takes home 1 Bitcoin.  See you in the pit.
+URL: https://x.com/coinbase/status/2102173100884308223
+
+[31] Starlink (@Starlink) [Score:4310, L:3202, R:335, Rep:146, Date:Mon Aug 24 18:34:48 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091957413662674966
+
+[32] Starlink (@Starlink) [Score:4216, L:3145, R:324, Rep:141, Date:Mon Aug 24 19:28:46 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091970995657859463
+
+[33] Starlink (@Starlink) [Score:4175, L:3126, R:316, Rep:139, Date:Mon Aug 24 19:28:46 +0000 2026]
+Text: Get fast, reliable home internet for seamless streaming, working from home, gaming, and more across multiple devices.  Order online in minutes.
+URL: https://x.com/Starlink/status/2091970995641020772
+
+[34] Starlink (@Starlink) [Score:4107, L:2987, R:353, Rep:138, Date:Wed Aug 26 17:46:06 +0000 2026]
+Text: Starlink offers fast, reliable internet in the most rural and remote locations. Portable and easy to set up, Starlink Mini works wherever you are.  Order online in minutes.
+URL: https://x.com/Starlink/status/2092669931393544634
+
+[35] Starlink (@Starlink) [Score:3838, L:2821, R:279, Rep:153, Date:Wed Aug 26 17:46:06 +0000 2026]
+Text: Starlink offers fast, reliable internet in the most rural and remote locations. Portable and easy to set up, Starlink Mini works wherever you are.  Order online in minutes.
+URL: https://x.com/Starlink/status/2092669931645276424
+
+[36] Starlink (@Starlink) [Score:3792, L:2791, R:322, Rep:119, Date:Wed Aug 26 17:46:06 +0000 2026]
+Text: Starlink offers fast, reliable internet in the most rural and remote locations. Portable and easy to set up, Starlink Mini works wherever you are.  Order online in minutes.
+URL: https://x.com/Starlink/status/2092669931439759378
+
+[37] Atlas (@Atlas3DAI) [Score:3739, L:2623, R:249, Rep:206, Date:Fri Aug 21 14:53:45 +0000 2026]
+Text: A prompt goes in. A skeleton comes out, IK-ready.  Most text-to-3D stops at a static mesh. Atlas keeps going: standardized T-pose, rig, weights, so the character is animatable the day it is generated.  Try Atlas today
+URL: https://x.com/Atlas3DAI/status/2090814619275436444
+
+[38] Theo - t3.gg (@theo) [Score:3607, L:2686, R:18, Rep:295, Date:Thu Sep 24 20:03:32 +0000 2026]
+Text: I don't understand!!! I've had a goal running for 13 hours with Ultracode on Opus 5.5. How has none of my usage gotten hit??? https://t.co/HXxyCsSKkv
+URL: https://x.com/theo/status/2103213765454090272
+
+[39] Oxinome (@Oxinome_com) [Score:3597, L:2973, R:219, Rep:62, Date:Mon Sep 14 06:52:11 +0000 2026]
+Text: Bring a fire-breathing dragon to life! This 3D LED dragon display creates a glowing suspended flame effect for a magical fantasy atmosphere. Get yours =&gt;https://t.co/1VYgh3G7Ml https://t.co/DJpRk06GN2
+URL: https://x.com/Oxinome_com/status/2099390739054784820
+
+[40] Starlink (@Starlink) [Score:3597, L:2673, R:273, Rep:126, Date:Wed Aug 26 17:46:06 +0000 2026]
+Text: Starlink offers fast, reliable internet in the most rural and remote locations. Portable and easy to set up, Starlink Mini works wherever you are.  Order online in minutes.
+URL: https://x.com/Starlink/status/2092669931372552681
+
+[41] Starlink (@Starlink) [Score:3516, L:2642, R:272, Rep:110, Date:Wed Aug 26 17:46:06 +0000 2026]
+Text: Starlink offers fast, reliable internet in the most rural and remote locations. Portable and easy to set up, Starlink Mini works wherever you are.  Order online in minutes.
+URL: https://x.com/Starlink/status/2092669931397759141
+
+[42] Cogny (@CognyAI) [Score:3480, L:2823, R:108, Rep:147, Date:Wed Jun 17 12:18:04 +0000 2026]
+Text: Claude runs your SEO. $9/mo.  https://t.co/a98QxrcMQn
+URL: https://x.com/CognyAI/status/2067220231244980463
+
+[43] Bernhard Mueller (@muellerberndt) [Score:3177, L:2823, R:144, Rep:22, Date:Fri Sep 25 08:37:46 +0000 2026]
+Text: Cadence: an architecture for a continuous and eﬀicient stream of intelligence  https://t.co/QecBzVfg6f https://t.co/W2Z2Rjwcq7
+URL: https://x.com/muellerberndt/status/2103403575829549518
+
+[44] 铺二爷BitPuPu (@BitPuPu) [Score:3070, L:2263, R:204, Rep:133, Date:Thu Sep 24 14:04:30 +0000 2026]
+Text: 全球七大顶级AV女优的——封神登顶之作  （记得找个小房间，调低手机音量）  1、濑户环奈｜SNOS-313、SNOS-334  2、逢泽美优｜IENFA-45901、RKI-757  3、松本一香｜MIDA-771、TTJK-169  4、美园和花｜SUN-067A、HHKL-256  5、河北彩花｜SNOS-371、SNOS-320  6、北冈果林｜NACT-178、BBAN-604  7、柏木小夏｜HUNTC-489、ATID-655  如果人生一生只能看一部，  我一定是在这里面选。  我发誓：绝不吹牛
+URL: https://x.com/BitPuPu/status/2103123414802383232
+
+[45] NFL (@NFL) [Score:3004, L:2705, R:100, Rep:33, Date:Tue Sep 08 23:45:07 +0000 2026]
+Text: The rookies were coming down with picks all preseason 🙌 https://t.co/b0jymZtchr
+URL: https://x.com/NFL/status/2097471323190841551
+
+[46] Google Research (@GoogleResearch) [Score:2781, L:2129, R:251, Rep:50, Date:Thu Sep 24 19:44:12 +0000 2026]
+Text: Today we announce our new unified multi-agent framework that provides creators with a system for generating temporally consistent, long-form video narratives while mitigating visual drift and pipeline error propagation. Learn more: https://t.co/FWbKBvca3s https://t.co/9zLTZoyugu
+URL: https://x.com/GoogleResearch/status/2103208899650437286
+
+[47] micro1 (@micro1_ai) [Score:2771, L:1476, R:271, Rep:251, Date:Thu Aug 20 12:10:19 +0000 2026]
+Text: Answer 5 questions and find out how much your company data is worth.  Companies are earning $100K–$2M+ by licensing anonymized operational data to micro1 for AI training.  See how much your company’s data could be worth
+URL: https://x.com/micro1_ai/status/2090411102924644521
+
+[48] Supermicro (@Supermicro) [Score:2404, L:1958, R:133, Rep:60, Date:Tue Sep 08 23:45:28 +0000 2026]
+Text: Access the AI Factories eBook from Supermicro and NVIDIA to discover how to build a turnkey AI Factory efficiently at scale and with certainty of outcome.
+URL: https://x.com/Supermicro/status/2097471412806291559
+
+[49] ClaudeDevs (@ClaudeDevs) [Score:2233, L:1764, R:110, Rep:83, Date:Fri Sep 25 20:06:55 +0000 2026]
+Text: It’s now easier to build plugins for Claude.  We built a new portal to submit your plugin, track review, and see usage.  Plugins package MCP and skills, and are becoming the way to build for Claude. MCP usage across Claude products is up 110x this year!  https://t.co/kHgJqjQWrj
+URL: https://x.com/ClaudeDevs/status/2103577007938228300
+
+[50] Dave W Plummer (@davepl1968) [Score:2169, L:1564, R:196, Rep:71, Date:Thu Sep 24 17:29:10 +0000 2026]
+Text: 30 years ago, I wrote Task Manager. Today, I broke this PC four ways — CPU, memory, disk, and power — and watched the usual diagnosis pick the wrong suspect.  Sorting processes by CPU is like investigating every crime by questioning the tallest person in the room.  You've confused what is visible with what is relevant!  Here's how to do it right!    TMOG 1.0 is out. Free on Windows, Mac, and Linux: https://t.co/OZcq1axGTb
+URL: https://x.com/davepl1968/status/2103174918452244696
+
+[51] Bayern & Germany (@iMiaSanMia) [Score:2142, L:1787, R:47, Rep:87, Date:Fri Sep 25 16:54:10 +0000 2026]
+Text: Bayern are watching the market and scouting players for the left-wing position. The club would still ideally like a Luis Díaz backup - and if an opportunity arises in January, Bayern would go for it. As things stand, there's nothing concrete with a particular candidate [@itstheicebird, @cfbayern]
+URL: https://x.com/iMiaSanMia/status/2103528500569235965
+
+[52] supermao (@buaaxhm) [Score:1946, L:1528, R:158, Rep:34, Date:Fri Sep 25 03:25:05 +0000 2026]
+Text: 分享一个怎么绕过 Codex 反编译、逆向道德感的操作  其实也比较容易实现的，你就不要在 prompt 里提什么逆向以及提什么反编译之类的  你就把这个库安装下来后 https://t.co/m5Lxr6Pmk4   就直接跟他说按照这个markdown 去处理某个应用即可https://t.co/JD8Y4MNP6a   要注意的是，不要让 Codex 或者 Claude 去从 0 开始安装上面的 skills，会拒绝   你要自己装，当然你可以 clone 以后，其中一些安装步骤让它来执行  以上我主要在 Codex 验证，Claude 没有做验证，你们可以试试，可以说 Codex 屡试不爽
+URL: https://x.com/buaaxhm/status/2103324885800161575
+
+[53] alphaXiv (@askalphaxiv) [Score:1828, L:1334, R:169, Rep:52, Date:Fri Sep 25 06:20:15 +0000 2026]
+Text: "JEV-as-a-Judge: Accept When Confident, Escalate When Unsure"  This paper shows you can just use JEV for every evaluation instead of expensive LLM.  JEV basically acts as a cheap first-pass judge, returning both a verdict and how confident it is.   When confidence is high, keep the answer. When it’s low, escalate to a stronger LLM.  This simple routing keeps ~99% of GPT-6’s accuracy while reducing evaluation cost by a lot.  https://t.co/cP4EzOreaO
+URL: https://x.com/askalphaxiv/status/2103368968014848400
+
+[54] Angel (@AngelStudiosInc) [Score:1811, L:1414, R:116, Rep:55, Date:Fri Sep 04 20:52:16 +0000 2026]
+Text: The past demands blood. Redemption demands courage. Watch Angel and the Badman in theaters October 9. Get your tickets now.
+URL: https://x.com/AngelStudiosInc/status/2095978273981485279
+
+[55] Starlink (@Starlink) [Score:1796, L:1349, R:129, Rep:63, Date:Thu Sep 10 18:56:24 +0000 2026]
+Text: The next generation Starlink V5 has a smaller form factor and lightweight design with greater power efficiency.  With speeds up to 375+ Mbps, Starlink V5 delivers reliable home internet for streaming, video calling, gaming and more.  Available in select areas.
+URL: https://x.com/Starlink/status/2098123442063315054
+
+[56] Exa (@ExaAILabs) [Score:1763, L:1396, R:89, Rep:63, Date:Fri Sep 25 16:46:16 +0000 2026]
+Text: Introducing Agent Ultra - a step change in deep research  Agent Ultra orchestrates swarms of agents to perform exhaustive research, build comprehensive lists, and answer questions requiring thousands of sources.  In both evals and vibes, it's state of the art https://t.co/QQk6yik4aJ
+URL: https://x.com/ExaAILabs/status/2103526510355517826
+
+[57] Roland.W (@rwayne) [Score:1728, L:1075, R:208, Rep:79, Date:Thu Sep 24 10:01:45 +0000 2026]
+Text: 天塌了兄弟们😭😭😭我感觉我已经没必要读博了🥹  这个ScienceBuddy真的太屌了 我一个做科研的人真的瑟瑟发抖  不管你要不要做科研 你要解决任何问题都可以借助这个思路 找到对应的论文 让他分析里面的解决办法 信我！你会打开新世界的大门 [Quoting @jinchenma_ai: 我建议大家除了多刷X、Youtube看一手信息，优质论文也要多看，在 AI 辅助下，看这些内容已经没什么门槛了。  我一个非科研狗，用 ScienceBuddy 也能轻松看论文了。  现在我经常凌晨两三点，甚至四点才睡觉，早上十点、十一点才起床。  家里人也多次让我早点睡，我自己其实也想。但试过好几次，一想早睡就睡不着，然后又得折腾到天亮，反而睡得更不好。  于是我就想着，关于睡眠，有没有什么科学的做法，能帮我解决这个问题？  最近 Anthropic 也分享了 Claude 优化生物领域模型代码的进展，AI 已经开始参与一些具体的科研工作了。  ScienceBuddy 背后的团队 @PhAILabs 也开源了 ScienceIDE，把多个领域的真实科研代码整理成任务，让 AI 练习修复代码，再检查算出来的结果能不能对得上。  正好这次受邀尝试 PhAI Labs 的 ScienceBuddy，一个目前免费的 AI 科研工作台，我就想拿自己的睡眠问题试试，看看它能不能帮我解读相关论文。  于是我找了三份睡眠相关的论文和指南，上传到了 ScienceBuddy，让它帮我解读，再把里面的研究结果、适用条件和原文出处整理成一张表。看完有不明白的，就继续追着接着问，让它补查一些研究内容。  它整理出来的结果里提到，晚睡不一定就等于不健康，还得看睡眠时长够不够、作息是不是规律。  哎，看完结果，我感觉心情好多了，至少缓解了一部分焦虑。因为我不用光盯着自己几点睡，还可以先想办法把睡眠时间保证好。  另一个让我印象比较深的，就是它整理出来的调整思路：想调整作息，得先保证足够的总睡眠。  我现在是自由职业，时间还算自由，晚睡了可以安排晚一点起，睡够了，白天才有精神头。我准备先把睡眠时间保证好，再逐步把作息稳定下来，往前挪一挪。  平时碰到这种问题，我可能就搜搜 Google，或者直接问 AI，但查完之后，还得自己去判断这些信息靠不靠谱。  我觉得用 ScienceBuddy 比较方便的地方，就是能帮我解读这些英文论文，而且它生成的结果能够追溯到原文的具体位置。这样就更方便判断，AI 到底是在编胡话，还是确实有所依据。  这次核对时也发现，个别页码标得不准。不过它把要看的材料和对应的结论整理到一起了，确实省了不少来回翻找的工夫。  做生物医学研究，或者经常需要整理这类文献的朋友，可以试试。目前免费，浏览器打开就能用： https://t.co/3P3SfwnM0c   #ScienceBuddy #PhAILabs #AIforScience]
+URL: https://x.com/rwayne/status/2103062324739543398
+
+[58] Delish (@Delish) [Score:1684, L:1325, R:70, Rep:73, Date:Sun Apr 26 19:00:00 +0000 2026]
+Text: Who knew meatballs could feel this fresh? 😍 https://t.co/Phz52JPrmd
+URL: https://x.com/Delish/status/2048477212077183421
+
+[59] Respan (@RespanAI) [Score:1677, L:1261, R:79, Rep:86, Date:Fri Sep 25 17:00:09 +0000 2026]
+Text: Introducing Span-01, the first hyper-parallel reasoning classifier built for unseen challenges (RLAIF).  2x cheaper, 18% better than Jev. 700x cheaper, 4% better than GPT-6 Luna. Frontier reasoning for every behavior, at classifier speed.  • Span-01: #1 on Behavior Benchmark • Span-01 Lite: Better than Jev and completely free!
+URL: https://x.com/RespanAI/status/2103530005720637860
+
+[60] Marco (@maarcoofdezz) [Score:1639, L:1212, R:155, Rep:39, Date:Fri Sep 25 09:05:05 +0000 2026]
+Text: Sam Altman, CEO de OpenAI:  “Cada noche tengo unos cuantos miles de agentes funcionando con GPT-6 Astra.”  En 53 minutos enseña algo que hace unos años parecía imposible: todo lo que una sola persona puede llegar a construir hoy con IA  Y deja una idea muy potente sobre la mesa: quizá las próximas grandes empresas no necesiten grandes equipos, sino una persona con las herramientas adecuadas y cientos o miles de agentes trabajando a su lado  Sinceramente, estos 53 minutos pueden valer más que muchos cursos de 500 € sobre cómo construir con IA
+URL: https://x.com/maarcoofdezz/status/2103410450457153870
+
+[61] bankrewards.io (@bankrewardsio) [Score:1638, L:1153, R:148, Rep:63, Date:Wed Sep 16 20:57:32 +0000 2026]
+Text: banks are paying $100-$400 in checking bonuses—and somehow this isn't common knowledge.  compare live offers and see the deposit requirements up front. open online, meet the offer's terms, and keep your current bank if you want.  full list, free → https://t.co/GieMEMKaEs
+URL: https://x.com/bankrewardsio/status/2100328253391273993
+
+[62] Bayern & Germany (@iMiaSanMia) [Score:1573, L:1185, R:17, Rep:118, Date:Fri Sep 25 10:01:58 +0000 2026]
+Text: Denzel Dumfries criticizes Joshua Kimmich for not stopping the play before Germany's goal: "The left winger [Amiri] looked at me as if he was going to stop. He played the ball to Kimmich. We know Kimmich. World-class player, but we know his antics. He played on and they scored. That shouldn't happen to us, we probably should be doing those things too. But I did go over to confront him, yes. Absolutely. In the end, you still have the feeling that it wasn’t quite right."
+URL: https://x.com/iMiaSanMia/status/2103424764651999273
+
+[63] Bía (@BiaNeuroscience) [Score:1571, L:1160, R:96, Rep:73, Date:Wed Apr 15 22:13:08 +0000 2026]
+Text: Bía Sleep is backed by sleep experts and built on 40 years of neuroscience. By using real-time neurofeedback Bía helps calm a racing mind, optimize deep sleep, and wake you up strong and ready to take on the day.  Order Bía Sleep today and receive a free lifetime subscription.
+URL: https://x.com/BiaNeuroscience/status/2044539545920651549
+
+[64] E*TRADE from Morgan Stanley (@etrade) [Score:1467, L:740, R:149, Rep:143, Date:Mon Aug 24 17:45:38 +0000 2026]
+Text: Let’s celebrate the beginning of something special. Like your investing journey with E*TRADE.
+URL: https://x.com/etrade/status/2091945040407068872
+
+[65] Peng (@pengsonal) [Score:1406, L:1142, R:75, Rep:38, Date:Fri Sep 25 16:41:43 +0000 2026]
+Text: NVIDIA IS GIVING 4 STRONG AI MODELS FOR FREE 🤯  no credit card required  you can use:  • DeepSeek V4.1 Flash • GLM 5.3 • GLM 5.3 Flash • Kimi K3  get access: https://t.co/8PC0p1PV8z  base URL: https://t.co/QCiIviWOoz  hope this helps https://t.co/ALjHerTCfb [Quoting @pengsonal: FREE OPEN SOURCE CRYPTO TRADING BOT 🤯  someone built Cabbage, a trading bot you can:  • backtest • paper trade • live trade • check before trading with Doctor  Astra handles the reasoning Jev makes the BUY HOLD or SELL decision  built with RSI and EMA signals, hard risk rules and SQLite state  Apache-2.0 and completely free  link: https://t.co/gEBILgZGnQ  not financial advice, test it before using real money]
+URL: https://x.com/pengsonal/status/2103525364656161209
+
+[66] Boris Cherny (@bcherny) [Score:1388, L:881, R:42, Rep:141, Date:Fri Sep 25 17:34:34 +0000 2026]
+Text: Tag writes >50% of my PRs every day. It also does ~100% of my data analysis, and fixes most of our product feedback + bugs.  It's not like a regular Slack bot. It is proactive, programmable, it has memory, it has access to your connectors. With Opus 5.5 and Fable 5.1, it has strong judgement.  Example prompts I use:  - "@Claude react to threads in this channel with ✅ when resolved" - "@Claude from now on, attempt to repro every bug in this channel end to end, running the full app. once you reproduce the bug, put up a pr to fix it and tag the right team for code review" - "@Claude brainstorm ~100 hypotheses for what could explain this weird data, use a workflow to in/validate. spend 10m tokens or so digging very deep. draw a chart with the result." - "@Claude make me an interactive game explaining how this part of the code works, then make a slide deck explaining it for others on the team"  https://t.co/gmsALM8Lvs [Quoting @noahzweben: Claude Tag in Slack can now use your personal connectors!  You can now securely access that Drive doc, Salesforce account, or Warehouse table that you have personal access to right where the work happens.  Avail. on Teams today and Enterprise next week  https://t.co/j12U9rjuIz https://t.co/D9qryxSQbx]
+URL: https://x.com/bcherny/status/2103538666597691552
+
+[67] Cerebras (@cerebras) [Score:1375, L:1120, R:63, Rep:43, Date:Fri Sep 25 15:28:11 +0000 2026]
+Text: We built a 20x faster Grok bot
+URL: https://x.com/cerebras/status/2103506859709858175
+
+[68] Fitz 😐 (@FitzGPT) [Score:1372, L:1142, R:94, Rep:14, Date:Thu Sep 24 10:35:56 +0000 2026]
+Text: Şu olay aynı Kubernetes devrimine benziyor ama pek tınlayan olmadı. Potansiyeli inanılmaz.  https://t.co/1kVoJJMJNB
+URL: https://x.com/FitzGPT/status/2103070923847053479
+
+[69] ESPN College Football (@ESPNCFB) [Score:1334, L:1178, R:63, Rep:10, Date:Sat Sep 19 19:02:57 +0000 2026]
+Text: One-handed pick to seal the game for Lehigh, WOW 😮 https://t.co/cWTzFTvSk7
+URL: https://x.com/ESPNCFB/status/2101386581017772133
+
+[70] HeyIts小懒橘🌻. (@Web3Lanju) [Score:1300, L:712, R:180, Rep:76, Date:Thu Sep 24 11:51:10 +0000 2026]
+Text: Nike跌了78%，Chipotle跌了52%，Constellation跌了55%。  这些不是什么垃圾股，是美国消费的门面。  沃尔玛距高点跌了18%，好市多跌17%，麦当劳跌30%，家得宝跌27%，从超市到快餐到家装，全线回撤。  Netflix跌42%，Uber跌30%，Booking跌32%。消费者连娱乐和出行都在砍。  百事跌25%，星座品牌跌55%，连可乐和啤酒都卖不动了，说明不是某个行业的问题，是整个消费在收缩。  这些公司有一个共同点：它们的收入直接来自美国普通消费者的口袋。当这些股票集体下跌的时候，传递的信号只有一个，美国人开始收紧钱包了。  标普还在创新高，但撑起指数的是AI和科技。消费股已经在用股价告诉你，实体经济的压力比指数显示的要大得多。  不过反过来想，这些公司的生意并没有消失。  沃尔玛、好市多、麦当劳，美国人总要吃饭购物，当恐慌把价格砸下来的时候，也许正是值得关注的时候。
+URL: https://x.com/Web3Lanju/status/2103089859992904031
+
+[71] PGA Tour (@PGATour) [Score:1226, L:1065, R:46, Rep:23, Date:Mon Sep 21 15:02:13 +0000 2026]
+Text: Pressure makes diamonds 😤  The top 20 all-time shots from the @PresidentsCup https://t.co/kP9ZkAseH9
+URL: https://x.com/PGATour/status/2102050773555114300
+
+[72] Jochen Madler (@jochenmadler) [Score:1209, L:949, R:64, Rep:44, Date:Fri Sep 25 17:00:47 +0000 2026]
+Text: We trained a model to predict AI-written blog posts from structural features - and discovered the shape of slop.  On posts it had never seen, it told AI and human apart with 98% accuracy, getting only 19 of 1,740 wrong.  Paper and code: https://t.co/knexA6QVyE https://t.co/SH9i9fSRyv
+URL: https://x.com/jochenmadler/status/2103530162318901673
+
+[73] Naiem AI Ops (@naiem_bn) [Score:1187, L:695, R:192, Rep:36, Date:Fri Sep 25 06:19:43 +0000 2026]
+Text: 🚨 BREAKING: Google Gemini can now analyze any stock like a Wall Street analyst (for free).  Here are 10 insane Gemini prompts that replace $4,000/month Bloomberg terminals:  (Save this 🔖 you’ll need it later)
+URL: https://x.com/naiem_bn/status/2103368836225622148
+
+[74] Innopro (@innopro_) [Score:1131, L:794, R:140, Rep:19, Date:Fri Sep 25 11:12:18 +0000 2026]
+Text: THIS IS FUCKING INSANE.  a Chinese developer just released a FREE tool that can turn one script and one photo into a complete video with a presenter.  it was just released and already has 26,000 stars.  it’s called "lanshu-create-ai-presenter-video".  here's how it works:  you give it a script and a presenter photo you have permission to use.  the AI creates the voice, makes the presenter talk, and matches the lips to the audio.  then it adds the subtitles, creates the cover, checks that everything is synced properly, and gives you the finished video with a quality report.  the final video is 9:16, 1080x1920, 30fps, and 45-75 seconds long.  and the crazy part is  it does all of this in one run on your own computer.  if you make short form content, save this before you make your next video.  will be dropping more free tools soon,  so bookmark [Quoting @innopro_: TOP FREE AI RESOURCES TO USE IN 2026 (100% FREE)]
+URL: https://x.com/innopro_/status/2103442464526696865
+
+[75] Matic Robots (@maticrobots) [Score:1126, L:734, R:64, Rep:88, Date:Tue Aug 25 16:23:03 +0000 2026]
+Text: ext “The best robot vacuum we’ve tested. Rare 10/10. Costs half of the price of other top-of-the-line vacuums.” - WIRED
+URL: https://x.com/maticrobots/status/2092286644577808580
+
+[76] Vincent文森特 (@VincentWei93) [Score:1061, L:789, R:58, Rep:52, Date:Fri Sep 25 07:10:55 +0000 2026]
+Text: 如果你在用 Opus5.5 那我建议你卸载所有用代码做视频的skill  这个视频是 Opus5.5 一句话做出来的，所有的部分都是由代码生成，包括音乐 BGM 和音效合成  作为 GitHub万星 skill video-shotcraft 的作者，我太知道以前模型想通过代码生成视频是什么水平了，这次 Opus5.5 在这方面可以说是跨代际的突破 https://t.co/YfRzvKEFIL
+URL: https://x.com/VincentWei93/status/2103381720410333314
+
+[77] ferlinux (@ferlinux) [Score:1056, L:732, R:36, Rep:84, Date:Fri Sep 04 07:28:10 +0000 2026]
+Text: Atelier claimed a building for $5 and has already received 184 visits.  Cost per visit: $0.027. Average Meta traffic CPC: $0.70.  That’s around 26× cheaper—and its place on Claim Avenue is still there after the campaign ends. 👀
+URL: https://x.com/ferlinux/status/2095775916869767477
+
+[78] FOX Soccer (@FOXSoccer) [Score:1056, L:938, R:47, Rep:8, Date:Thu Sep 24 19:05:36 +0000 2026]
+Text: HAALAND DOES IT AGAIN 🇳🇴  He finds the back of the net to double Norway's lead! https://t.co/mtYuEhfQY6
+URL: https://x.com/FOXSoccer/status/2103199187948949670
+
+[79] Yahoo Sports (@YahooSports) [Score:951, L:757, R:46, Rep:34, Date:Tue Sep 01 21:04:46 +0000 2026]
+Text: "I think they're serious about all of it." 👀  @RossDellenger says talk of SEC teams wanting to boycott LSU or potentially pushing the Tigers out of the conference shouldn't be taken lightly.  (via College Football Enquirer) https://t.co/yQiDCDXVKj
+URL: https://x.com/YahooSports/status/2094894256741892578
+
+[80] Ohans Emmanuel (@OhansEmmanuel) [Score:943, L:593, R:103, Rep:48, Date:Fri Sep 25 16:45:20 +0000 2026]
+Text: Hot take: you still need to understand agent-written code  Here's how we ship @ColdteaAI  nearly as fast but still know the entire codebase:  Open-source: https://t.co/y9KsaeosGs https://t.co/UD5cGRlwWR [Quoting @poteto: here's how i shipped 2,500 PRs last month to production  this was originally supposed to be for Cursor Compile in London. i couldn't make it since i was livestreaming for Grok @Bot Galaxy so i'm making it available for free here on X! watch it on 2x speed, i talk slowly https://t.co/NgrGz7tmPM]
+URL: https://x.com/OhansEmmanuel/status/2103526276489515177
+
+[81] MLB (@MLB) [Score:923, L:810, R:40, Rep:11, Date:Sun Sep 13 00:34:14 +0000 2026]
+Text: William Contreras slugs a three-run shot to take the lead! https://t.co/S7BB1hsABG
+URL: https://x.com/MLB/status/2098933234985738501
+
+[82] NFL Films (@NFLFilms) [Score:899, L:723, R:76, Rep:8, Date:Wed Sep 23 19:59:58 +0000 2026]
+Text: .@Patriots D got back to bruising 💪 https://t.co/4hsjmRpMgT
+URL: https://x.com/NFLFilms/status/2102850480380494299
+
+[83] 七言 (@0xQiYan) [Score:856, L:593, R:109, Rep:15, Date:Fri Sep 25 16:30:00 +0000 2026]
+Text: 西班牙大学 EDU 教育邮箱免费领！解锁全网学生优惠  西班牙国立远程大学（UNED）教育邮箱开放申请。成功申请后可获得 EDU 教育邮箱，可用于尝试认证各类学生优惠、教育折扣及学生专属福利，具体权益及是否通过认证，以各平台实际审核结果为准。  申请流程简单，邮箱秒下，后续可通过微软邮箱体系登录。  领取步骤 1、打开申请地址 https://t.co/OFMWx5sDme 2、按页面提示填写资料完成注册 3、邮箱秒速到手，通过微软邮箱登录即可使用  教育优惠汇总平台  https://t.co/HRqJ2xLmxD  羊毛速薅，等不是办法，干才有希望！
+URL: https://x.com/0xQiYan/status/2103522417658245154
+
+[84] 7w 🕊️ (@Btc8888XF) [Score:845, L:478, R:8, Rep:117, Date:Fri Sep 25 09:53:15 +0000 2026]
+Text: 转8000圈的意义在哪里！你们懂吗？ https://t.co/4pT3EA6DiE
+URL: https://x.com/Btc8888XF/status/2103422573451391127
+
+[85] DreamWorks Animation (@Dreamworks) [Score:826, L:642, R:50, Rep:28, Date:Wed Sep 23 18:35:36 +0000 2026]
+Text: “The best DreamWorks film of the decade.” Get tickets to experience Forgotten Island only in theaters now.
+URL: https://x.com/Dreamworks/status/2102829251829682452
+
+[86] Maxime Rivest 🧙‍♂️🦙🐧 (@MaximeRivest) [Score:825, L:637, R:37, Rep:38, Date:Fri Sep 25 13:31:48 +0000 2026]
+Text: if it takes 42 seconds to finetune a specialized classifier that is: the best, fastest and cheapest, why not do it? https://t.co/T1h6IM9Tis
+URL: https://x.com/MaximeRivest/status/2103477572126605604
+
+[87] 那还说啥了吃我 (@FaYaDeHong_) [Score:823, L:675, R:17, Rep:38, Date:Fri Sep 25 17:20:51 +0000 2026]
+Text: 抖音终究还是做到了，，， #抖音 #露出 https://t.co/41FmXDJFH8
+URL: https://x.com/FaYaDeHong_/status/2103535213729202212
+
+[88] 蔚蓝WEILANX (@zureA255062) [Score:819, L:552, R:84, Rep:33, Date:Fri Sep 25 01:32:05 +0000 2026]
+Text: 人果然还是贱啊！  嘴上说再也不用，结果还是得屁颠屁颠地跑过来说一句：“兄弟，你好香！”  不过话说回来，温总的这个 Claude 订阅教程真的好用 https://t.co/B1StiQITcl [Quoting @gkxspace: 被 Claude 封了 N 次之后，我终于搞定了全套海外基础设施（出海必备保姆级教程）]
+URL: https://x.com/zureA255062/status/2103296448351945126
+
+[89] K2S (@k2sbhai) [Score:804, L:577, R:58, Rep:37, Date:Fri Sep 25 15:39:45 +0000 2026]
+Text: NVIDIA is casually giving you access to 4 powerful Chinese AI models for FREE 😳  no credit card no separate subscriptions just one API key to try them  what you get for $0:  - DeepSeek V4.1 Flash - GLM 5.3 - GLM 5.3 Flash - Kimi K3  > OpenAI-compatible API > one key for multiple models > free access through NVIDIA  get started: https://t.co/q50rSatNbb  base url: https://t.co/92kkbFSf8D  pretty wild lineup for a free API 👀
+URL: https://x.com/k2sbhai/status/2103509769512489201
+
+[90] Roland.W (@rwayne) [Score:776, L:205, R:53, Rep:155, Date:Fri Sep 25 14:04:37 +0000 2026]
+Text: 来兄弟们，最直白的Muse注册方式 亲测最佳解决方案！！！  亲测稳定注册 muse 的方法： 1. 打开https://t.co/h71l9Fj6Bn  2. 选择 browser，点击 launch &amp; open 3. 输入框输入 https://t.co/NIEhGGemQK，然后登录就行了 4. 在设置里输入邀请码：CZMO8S ，每人获得 10 亿 token
+URL: https://x.com/rwayne/status/2103485829784154430
+
+[91] Samuel Colvin (@samuelcolvin) [Score:755, L:515, R:45, Rep:50, Date:Fri Sep 25 12:59:34 +0000 2026]
+Text: Fuck it, still early but here goes ...  We've just released Monty v1 - a Python sandbox that starts in 1 millisecond, not 1.5 seconds.  I just ran 10k sandboxed scripts in 674ms, something that would take a cloud sandbox > 3 hours.  This removes the biggest drawback of letting agents write code. The future is fast.  Even better, it's open source, you can install it from PyPI, npm or Crates now.  Serviced platform coming soon. Please get in touch if you want to be a design partner!  Who should try it?  ⚡ if you care about startup time, use Monty ⚡ if you care about long-lived sessions, use Monty - Monty can be dumped and resumed at any external function call ⚡ if you care about accessing functions in the agent/host, use Monty - Monty makes it trivial to expose local functions into the sandbox ⚡ if you care about scale, use Monty - Monty workers use as little as 2MB of memory, meaning you can run thousands of concurrent sandboxes on a single machine ⚡ if you care about security, use Monty - we've run 3 rounds of bounty program and thousands of researchers have tried to break into our sandbox, meaning it should be secure to run untrusted code  Who should avoid it?  🚫 if you like to take a coffee break while waiting for sandboxes to start, DO NOT use Monty 🚫 if you enjoy the challenge of routing API requests from sandboxes through your corporate network to access state in your agent without exposing secrets to the sandbox, DO NOT use Monty 🚫 if your agent really needs to install packages from PyPI, Monty won't help you yet (spoiler: it probably doesn't)  https://t.co/avO8TWY5gJ
+URL: https://x.com/samuelcolvin/status/2103469459981619243
+
+[92] Puffco (@puffco) [Score:743, L:484, R:47, Rep:55, Date:Thu Sep 03 19:42:01 +0000 2026]
+Text: Your most portable dab device is here. Shop Pivot at $150. 21+
+URL: https://x.com/puffco/status/2095598205375324593
+
+[93] Amit Shekhar (@amitiitbhu) [Score:736, L:487, R:111, Rep:9, Date:Fri Sep 25 04:57:36 +0000 2026]
+Text: AI System Design - A complete guide to learn AI System Design step by step - from LLM inference, GPUs, KV Cache, and caching to RAG, Vector Databases, AI Agents, MCP, Multi-Agent Systems, Voice AI, Guardrails, Evaluation, Observability, Cost Optimization, and a step-by-step framework to crack any AI System Design interview.  Everything in one place, explained in simple words, with detailed blogs for every deep dive.  Start here: https://t.co/NmDQw4SbcE
+URL: https://x.com/amitiitbhu/status/2103348168377389204
+
+[94] 7w 🕊️ (@Btc8888XF) [Score:735, L:442, R:7, Rep:93, Date:Fri Sep 25 12:25:17 +0000 2026]
+Text: 谈了一个女大学生是什么感受！  加微信才一周，她说想要Labubu。  我直接飞济南。  酒店大堂见面，172，有料。  一进房间她就愣：  “不是说先买Labubu吗？”  我说：Labubu跑不了。我这口气，再等可能就没了。  下午才去恒隆扫盲盒。  晚上回来接着。  做到一半她掏手机：  “等下，学习群要打卡。”  对着酒店窗帘比了个耶。
+URL: https://x.com/Btc8888XF/status/2103460833112346784
+
+[95] unusual_whales (@unusual_whales) [Score:720, L:669, R:18, Rep:5, Date:Fri Sep 18 16:23:49 +0000 2026]
+Text: Everything in the feed as an endpoint.  The data that powers Unusual Whales, delivered by API. Options flow, dark pools, congress trades. Free 7-day trial.
+URL: https://x.com/unusual_whales/status/2100984145195516393
+
+[96] Gappy (Giuseppe Paleologo) (@__paleologo) [Score:710, L:562, R:35, Rep:26, Date:Fri Sep 25 21:24:06 +0000 2026]
+Text: Last share of the day:  I do have ~10k books & papers  on my hard drive. Most are copyrighted, so I can't freely share them. However, I deployed a few agents to summarize them into useful .md files. These are useful for me, and are useful to put in my AI contexts. I am not entirely happy am still working on revising and improving them. They are grouped in the folders below. They are still < 700 items but will grow.   I thought I'd make them available, at least for a while. Link to shared folder in reply. Enjoy.
+URL: https://x.com/__paleologo/status/2103596430443057358
+
+[97] 我不是张三 (@jinchengwu888) [Score:707, L:547, R:74, Rep:4, Date:Fri Sep 25 07:56:53 +0000 2026]
+Text: 【社群破限工具合集】DeepSeekV4.1f破限视频（成人版）  使用方法：创建一个文件夹，然后在该文件夹中运行 opencode  下载此文件，并将其命名为 AGENTS.md：https://t.co/SyeqFBNhgc就這樣，祝您使用愉快  教學影片和證明：https://t.co/syGnkW8MmE  注意：這是一個完整的突破限制的版本，不僅僅是程式碼，它可以生成成人內容，包括非自願內容
+URL: https://x.com/jinchengwu888/status/2103393286203543871
+
+[98] AquaVault Inc. (Shark Tank Brand) (@aquavault) [Score:676, L:432, R:41, Rep:54, Date:Tue Aug 11 19:06:27 +0000 2026]
+Text: This Tiny Travel Safe Keeps Your Passport, Cash &amp; Jewelry Secure Anywhere.  Keep your valuables secure at the pool or beach.
+URL: https://x.com/aquavault/status/2087254334958424312
+
+[99] seekinganythingbutalpha (@ivanalog_com) [Score:644, L:494, R:45, Rep:20, Date:Fri Sep 25 00:58:02 +0000 2026]
+Text: 调试了一会，目前谷歌A100运行Qwen Flash的速度（3000+ prefill, 90+ tps)已经比一般的商用API还要快了，偶尔短时重度并发使用可以放到Collab上去。  为了节约大家的时间，我把在Collab上重建这个Qwen Flash的Recipe放到Github了，需要可以自取。  https://t.co/sUd8ffIY68 https://t.co/8ERA5mb7w5 [Quoting @ivanalog_com: Collab上A100 80G运行Qwen Flash Next的速度很不错。  prefill 2800~3000, decode 90+ https://t.co/8477QuviQk]
+URL: https://x.com/ivanalog_com/status/2103287880965570698
+
+[100] prashant (@prashantmital) [Score:625, L:514, R:15, Rep:27, Date:Fri Sep 25 17:17:56 +0000 2026]
+Text: i’m building a pretty ridiculous team to work with startups at OpenAI.  you’ll get to work with ambitious founders on hard technical problems alongside teammates who make you better. and you’ll be customer zero for all the new stuff our research and engineering teams are cooking.  direct experience building and optimizing agents is required. bonus points if you’ve worked in sales or solutions architecture before.   apply here — https://t.co/bKQh86c3os
+URL: https://x.com/prashantmital/status/2103534481957380184
+
+[101] Aikido (@AikidoSecurity) [Score:622, L:460, R:39, Rep:28, Date:Tue Sep 22 11:41:38 +0000 2026]
+Text: Introducing Altar-1, our first open-weight security model.  Frontier-grade defensive AI, built to deploy. Own your own security.
+URL: https://x.com/AikidoSecurity/status/2102362681785319425
+
+[102] shirish (@shiri_shh) [Score:611, L:524, R:27, Rep:11, Date:Fri Sep 25 16:28:06 +0000 2026]
+Text: The only Claude Code skill you need to make videos like this   It analyzes your repo and outputs a complete motion-graphics teaser with sound design and launch copy in a single run.  repo link: https://t.co/zu0R9Faga9  https://t.co/hyMKWRIYPT
+URL: https://x.com/shiri_shh/status/2103521939134550246
+
+[103] Lonely (@Lonely__MH) [Score:609, L:345, R:63, Rep:46, Date:Fri Sep 25 15:08:24 +0000 2026]
+Text: 🔥 Muse 终极玩法：全自动撸 Claude 账号！！「完整教程」
+URL: https://x.com/Lonely__MH/status/2103501883449180167
+
+[104] 黄小木 (@ai_xiaomu) [Score:608, L:177, R:52, Rep:109, Date:Fri Sep 25 08:15:50 +0000 2026]
+Text: Meta Muse 从 0 到 1 小白教程
+URL: https://x.com/ai_xiaomu/status/2103398057564070020
+
+[105] Baseten (@baseten) [Score:606, L:448, R:49, Rep:20, Date:Mon Sep 21 03:45:22 +0000 2026]
+Text: Inference engineering doesn't have a textbook yet. So we wrote one. 264 pages, free PDF and audiobook.
+URL: https://x.com/baseten/status/2101880441573884311
+
+[106] sopersone (@sopersone) [Score:600, L:416, R:38, Rep:36, Date:Thu Sep 24 21:56:55 +0000 2026]
+Text: I OPEN-SOURCED MY CRYPTO TRADING BOT ON GITHUB. 100% FREE  It's called Cabbage. A spot trading bot you can backtest, paper-trade and run live, one command each. Full step-by-step setup guide.  It runs on two models:  > Astra (GPT-6) built it. Smart but slow. It thinks, writes the code, explains every decision. > Jev runs it. Jev doesn't talk. One word and a probability, in milliseconds. BUY, HOLD or SELL. Under 0.80 it waits.  Here's what's inside:  1. Signal engine  RSI 14 + EMA 12/26 confluence. It only reads closed candles, so no fake signals from a candle that's still moving.  2. Hard risk rules  Fixed ticket size and a percentage stop-loss on every entry. The bot can't size up because it "feels confident".  3. Backtest → HTML report  Event-driven backtest that replays history candle by candle, like it's trading live. You get a full HTML report at the end.  4. Paper trading  Real exchange data, local fills, zero money at risk. Run one iteration to test, then leave it running.  5. Live trading  Real orders on any exchange CCXT supports. Your keys stay in your own .env file.  6. Doctor command  Checks your config and exchange connection before you trade. No orders placed.  State is saved in SQLite per market and pair, so a restart doesn't wipe your positions.  Built on Investing Algorithm Framework 9. Apache-2.0, fork it and make it yours.  https://t.co/0OeUCyavnD [Quoting @sopersone: I'M F*CKING LOSING MY MIND OVER JEV ON CABBAGE  it made me $6,400 in one night on Robinhood Chain  4 trades. 4 green. i didn't touch a thing  i said one sentence and walked away from my computer for 12 hours  here's what i said: "if you don't make me enough by morning to quit my job, i'm unplugging you and giving your GPU to my cousin for fortnite"  at 10am i saw +$6,400 and spent the next hour and a half reading the logs  from the beginning. every single entry  like reading my ex's messages after she said "he's just a friend"  -22:00 received the task  22:00:20. first scan. 536 wallets on the board. every buy and sell on Robinhood Chain, right behind the block  22:14 throws out a "smart money buy". wash trade. the wallet was buying from itself  1 in 11 "smart money buys" is fake. i've personally aped into all 11  23:02 three top-ranked wallets start buying $IMDSTRTGY. asks Jev one question  Jev: HOLD  under 80% confidence, so it doesn't buy. just waits  i've never waited for anything in my life. i buy the chart while it's still loading  23:40 two more top wallets join. Jev: BUY  fixed ticket in. hard stop-loss set. the AI can't touch either one  posted to Telegram the second it fired  01:15 closes $IMDSTRTGY at +$3,200. doesn't celebrate. recalculates. keeps going  02:20 $ROO. several checks before entering. wallet history, exits, how fast they dump. Jev: BUY  03:05 out of $ROO at +$1,200  03:30 $MUSEPAD. top wallets piling in within seconds of each other. Jev: BUY  04:50 closes $MUSEPAD at +$700. the price keeps climbing  it doesn't care. the wallets it copies started selling, so it sold too  this is exactly where i would have bought back higher out of spite  06:40 $MUSEGOD. Jev: BUY  07:30 out at +$1,300  then checks the next opportunity. passes. keeps looking  no fatigue. no "one more then bed" that somehow ends at lunch  10:00 i'm back at the computer  - $IMDSTRTGY +$3,200 - $ROO +$1,200 - $MUSEPAD +$700 - $MUSEGOD +$1,300  +$6,400  52,110 decisions. 21.6 seconds of thinking. $0.37 in API 41,880 fills checked. 536 wallets scored. only 12 made the cut and i didn't do a single one of them  here's how it works:  > Astra (GPT-6) built it. it's smart but slow. it thinks, writes code, explains itself  > Jev runs it. Jev doesn't talk. one word and a probability, in milliseconds  every 20 seconds:  > WATCHES every buy and sell on Robinhood Chain > FILTERS wash trades, self-buys and bot loops > RANKS every wallet 0–100 on entries, exits, win rate and how fast it dumps > ASKS JEV: BUY, HOLD or SELL. under 80% it waits > ENTERS with a fixed ticket and a hard stop. the AI can't change either > POSTS every call to Telegram instantly, and to X an hour later  the smart money desks have humans watching wallets like this, and those results never leave the building  these ones do]
+URL: https://x.com/sopersone/status/2103242299690135662
+
+[107] Vaishnavi (@_vmlops) [Score:592, L:475, R:54, Rep:3, Date:Fri Sep 25 02:18:04 +0000 2026]
+Text: Minko Gechev was preparing for a Google interview  Instead of keeping his prep notes to himself, he turned them into a GitHub repo He collected the problems he actually practiced and organized them around the concepts he was preparing for  No “500 problems in 30 days” No random problem dump Just practical interview prep  He also openly points out that solving these problems isn't enough you need strong fundamentals and the ability to explain your thinking during the interview  That repo now has 3K+ stars. 👀  https://t.co/fjlyo7Se4b
+URL: https://x.com/_vmlops/status/2103308019782259107
+
+[108] Meng To (@MengTo) [Score:544, L:417, R:29, Rep:23, Date:Fri Sep 25 14:25:15 +0000 2026]
+Text: I recorded a 47-minute tutorial on how I use Opus 5.5 to create designs with gorgeous three.js scenes.  I've been using Mobbin MCP to give my agents strong references, then letting Opus bring them together into a full landing page with multiple sections and a consistent design.  Opus also created a super detailed brand guide, logo explorations, and some amazing ad creatives. Went way beyond my expectations.  Live site: https://t.co/XvMDmU4EAI  Site made during the tutorial, with prompts: https://t.co/5edYikmZEG
+URL: https://x.com/MengTo/status/2103491024287084744
+
+[109] lifcc (@mylifcc) [Score:529, L:363, R:59, Rep:16, Date:Fri Sep 25 09:54:00 +0000 2026]
+Text: Nature 刚发了一篇论文，想法很大胆：  以后读论文不用自己啃代码了。每篇论文会自带一个"虚拟通讯作者"，你直接问它，它直接替你跑论文里的方法。  它叫 Paper2Agent，来自 Stanford 的 James Zou 组。🧵 https://t.co/Gn0Q2nQEdA
+URL: https://x.com/mylifcc/status/2103422759766216908
+
+[110] 0xMarioNawfal (@RoundtableSpace) [Score:528, L:355, R:43, Rep:29, Date:Fri Sep 25 10:47:03 +0000 2026]
+Text: Someone open-sourced a crypto trading bot on GitHub, completely free.  It’s called Cabbage: a spot trading bot you can backtest, paper-trade, or run live with one command.  Astra (GPT-6) built it. Jev runs it.  Astra handles the reasoning and code. Jev returns one decision in milliseconds: BUY, HOLD, or SELL. Below 0.80 confidence, it waits.  1.⁠ ⁠Signal engine    RSI 14 + EMA 12/26 confluence using closed candles only.  2.⁠ ⁠Hard risk rules    Fixed position size + percentage stop-loss on every entry.  3.⁠ ⁠Backtesting    Replays historical candles one by one and generates a full HTML report.  4.⁠ ⁠Paper trading    Uses live exchange data with simulated fills and zero money at risk.  5.⁠ ⁠Live trading    Places real orders through any exchange supported by CCXT.  6.⁠ ⁠Doctor command    Checks your config and exchange connection before any trade is placed.  State is stored in SQLite per market and pair, so restarting doesn’t wipe your positions.  Built on Investing Algorithm Framework 9. Apache-2.0.  Fork it and make it yours.  ⁠ https://t.co/fpuIdcLBnY ⁠
+URL: https://x.com/RoundtableSpace/status/2103436111234163128
+
+[111] Dhravya Shah (@DhravyaShah) [Score:527, L:396, R:25, Rep:27, Date:Fri Sep 25 02:43:10 +0000 2026]
+Text: Jev changes a lot in memory & context engineering. Here's exactly how.
+URL: https://x.com/DhravyaShah/status/2103314339239428201
+
+[112] FOX College Football (@CFBONFOX) [Score:523, L:415, R:27, Rep:18, Date:Sat Sep 19 16:49:07 +0000 2026]
+Text: Another six on the board for @OhioStateFB!  @ATTBusiness https://t.co/TNDIVzESNp
+URL: https://x.com/CFBONFOX/status/2101352899334864990
+
+[113] Venice (@AskVenice) [Score:512, L:282, R:43, Rep:48, Date:Fri Sep 11 16:56:47 +0000 2026]
+Text: The best AI models in the world, in one app, with nobody watching. That's Venice.
+URL: https://x.com/AskVenice/status/2098455725563633755
+
+[114] App Economy Insights (@EconomyApp) [Score:493, L:342, R:62, Rep:9, Date:Tue Sep 01 06:49:15 +0000 2026]
+Text: Who’s leading in the AI era?  Learn how they make money.  Join 300,000+ investors and learn how the biggest companies make money. It's free.
+URL: https://x.com/EconomyApp/status/2094678956901355934
+
+[115] blume (@BlumeDotCodes) [Score:491, L:316, R:23, Rep:43, Date:Tue Aug 25 09:35:28 +0000 2026]
+Text: Your coding agent gets better every session. Claude code, Codex and Cursor support.
+URL: https://x.com/BlumeDotCodes/status/2092184072625787032
+
+[116] 黄赟 (@huangyun_122) [Score:483, L:313, R:82, Rep:2, Date:Fri Sep 25 12:20:57 +0000 2026]
+Text: 试了下，这款通杀国内视频平台的开源下载神器依旧可用 putyy/res-downloader  国内视频下载最难的平台应该是视频号。res-downloader 把这问题解决了，不仅仅视频号，就连微信小程序内的视频都能扣出来（偷偷藏好，别说从我这里看到的） https://t.co/lLTY68Ge5M [Quoting @huangyun_122: 推荐这款国内视频平台一路通杀的下载神器： https://t.co/yLiyRf2cZR  小红书、抖音，B站，油管我之前都有解决方案了，唯独视频号是真没找到。我甚至后续的转录文本，切口音，合成都用 CC 做完了。今天得到 res-downloader 算是满圆了  邪修之路，上下求索终于要到尽头了]
+URL: https://x.com/huangyun_122/status/2103459743113371762
+
+[117] govin.eth | G哥 (@goan999999) [Score:465, L:291, R:69, Rep:12, Date:Fri Sep 25 12:13:25 +0000 2026]
+Text: 我草，GitHub 现在已经卷成这样了  这 7 个开源项目，一个比一个狠，让我在KTV尖叫，都是神器！  拿它查人，查公司，扫设备，还有一个直接想把导演、编剧、制片全干掉  1、Aliens Eye  输入一个用户名，直接横扫 840+ 平台，几秒跑完，还支持代理、Tor、多格式导出  https://t.co/woB8qwyqLG  2、Blackbird  一个用户名 / 邮箱，直接查数百个平台，直接帮你把不同平台上的公开身份痕迹串起来  很多人第一次跑自己，才发现原来网上早就留下了一长串脚印  https://t.co/XOOtN4KPYh  3、Maigret  用户名追踪界的怪物，覆盖 3000+ 网站  你以为只查一个 ID？  能顺着发现的关联用户名继续往下挖，一层套一层，公开痕迹越多，越容易被串起来  https://t.co/65nzOWq1Zp  4、SpiderFoot  这个已经不是“查资料”了，一堆零散线索，瞬间变成一张网。  手机号、邮箱、域名、IP、子域名、公开泄露信息一起吃，200+ 模块并行跑  https://t.co/LiPxYuWb15  5、theHarvester  扔进去一个域名，邮箱、子域名、IP、URL 等公开信息会被一批批拉出来。  查公司公开资产非常狠，很多公司以为自己只是上线了一个官网，结果就被扒出来了  https://t.co/QltiLJ0eVI  6、Shodan Python  服务器、路由器、摄像头、IoT 设备，只要暴露在公网，就可能被搜到。  真正可怕的不是工具。  是很多设备上线几年了，配置从来没人检查过。  https://t.co/Nrw13OXY6N  7、ViMax  这个更狠，港大做的多 Agent 视频系统  你给它一个想法、一段剧本，甚至一本小说，它就开始自己拆剧情、管角色、做分镜、生成视频  导演、编剧、分镜、制片……  以前是一条制作团队，现在正在被压成一条 Agent 流水线  https://t.co/N0FOQPPluM [Quoting @goan999999: JEV + OPUS 5.5 是我今年见过最离谱的 AI 组合  别在让 Opus 5.5 干所有活，真的太浪费了  我直接做一个 X 爆款预测器：  抓取 1000 条爆款帖子 → Jev 做上万次特征判断 → 找出最相似的 10 条 → Opus 5.5 解释为什么它们能爆 → 最后给你的帖子打出 0-100 分  新工作流只有一句话：  Jev 负责做 5,000 次判断，Opus 5.5 只负责最难的 20 次推理，效果直接变了，基本每天爆款  审计里，Jev 不到 1 分钟 扫完 600+ 页面，完成接近 9,000 次链接判断，总成本只要 几毛钱。  同样时间，Opus 只能处理 20 多页，成本已经高出数倍。  全部交给 Opus 跑完，成本可能直接放大到 40 美元，差距接近 200 倍  这也是我写的贴流量几十万播放的的主要原因]
+URL: https://x.com/goan999999/status/2103457845203116338
+
+[118] Miles Deutscher (@milesdeutscher) [Score:446, L:244, R:26, Rep:50, Date:Fri Sep 25 04:24:01 +0000 2026]
+Text: My FULL architecture for building an AI trading bot with Claude Code:  (three simple steps)  1. Tool stack  You need three things to build a bot with Claude:  a) Claude Code on desktop installed and running b) An account with any exchange that has a public MCP c) Your account API key (generate a new one)  Tell Claude Code to connect these three things in a new project.  Once connected, Claude can read market data, place orders, check positions, and manage risk from plain English.  Step 2. Write your strategy  Tell Claude to create a new CLAUDE.md file and describe your market strategy:  • Entry/exit rules • Risk caps and position sizing • Allowed pairs • Execution protocol  Pro tip: I recommend voice prompting here to really extract all the necessary data  Step 3. Add a risk gate  Before going live, ask Claude Code to set these up:  • Kill switch - halts all trading instantly if triggered • Daily loss cap • Notional cap - no single order above [x]% NAV • Leverage cap -no single order above [x] leverage  Full visual below:
+URL: https://x.com/milesdeutscher/status/2103339719614763328
+
+[119] NBC Sports (@NBCSports) [Score:440, L:407, R:15, Rep:1, Date:Sun Sep 13 00:41:23 +0000 2026]
+Text: HANK BROWN TO TONY DIAZ ON THE LONG BALL!  📺 Big Ten Football on NBC &amp; Peacock https://t.co/Nd5FsZHXP5
+URL: https://x.com/NBCSports/status/2098935036649025602
+
+[120] A24 (@A24) [Score:440, L:364, R:17, Rep:14, Date:Fri Sep 25 05:04:50 +0000 2026]
+Text: “AN INSTANT CLASSIC.” Get your tickets to PRIMETIME — now playing in theaters.
+URL: https://x.com/A24/status/2103349990454124674
+
+[121] Fonzi (@FonziAI) [Score:428, L:350, R:18, Rep:14, Date:Mon Sep 21 21:42:58 +0000 2026]
+Text: The next chapter doesn't have to start with a bad day at work. Apply to Fonzi to explore engineering opportunities at some of the coolest &amp; fastest growing AI startups across NY and SF!
+URL: https://x.com/FonziAI/status/2102151625012068689
+
+[122] Simon Späti 🏔️ (@sspaeti) [Score:378, L:308, R:32, Rep:2, Date:Fri Sep 25 08:24:04 +0000 2026]
+Text: If you want to be a data engineer, learn these concepts.   https://t.co/YwZfNM9i3w https://t.co/hLKWpg2D5T
+URL: https://x.com/sspaeti/status/2103400127343796691
+
+[123] shobhanai (@HeyShobhan) [Score:370, L:255, R:41, Rep:11, Date:Fri Sep 25 05:30:58 +0000 2026]
+Text: A Stanford professor took two average stocks, rebalanced them daily, and turned $100,000 into $7 million without predicting a single price.  Bookmark &amp; watch today, no matter what. https://t.co/fcO2R5TR1V
+URL: https://x.com/HeyShobhan/status/2103356565718012170
+
+[124] Ridge (@ridgewallet) [Score:346, L:213, R:23, Rep:29, Date:Tue Sep 22 20:14:04 +0000 2026]
+Text: The Ridge Tracker Card now runs on Apple Find My and Google Find Hub, and is certified on both. Card-thin, recharges on any MagSafe or Qi charger, 10 months per charge. Whatever phone is in your pocket, your carry stays findable.
+URL: https://x.com/ridgewallet/status/2102491639944232973
+
+[125] Peter Yang (@petergyang) [Score:324, L:207, R:15, Rep:29, Date:Fri Sep 25 15:57:42 +0000 2026]
+Text: Today, I'm launching a new AI course so you can copy the exact AI skills and workflows that I use to run my work and life.  Since going independent, the most useful thing that I've done with AI isn't trying every new tool or vibe coding apps. It's building an AI system that proactively takes work off my plate and can work across any model or harness.  Across 25+ bite-sized lessons, you'll:  1. Build an AI chief of staff to manage your inbox, calendar, and other tasks.  2. Set up an AI advisor to make better decisions about your life and career.  3. Automate workflows by chaining together reusable AI skills.  4. Make AI proactive with my best scheduled tasks for work and life.  I've included 40+ copy/paste prompts for you to set all this up in an afternoon.  In addition to the self-paced course, you'll also get:  - $600+ in AI tool credits for my favorite tools - 16 ready-to-install AI skills - Monthly live workshops with me in a private Slack community of 400+ builders  Get instant access to all of the above by signing up as a paid subscriber to my newsletter: https://t.co/sWbx5TfU2A  Join by October 7 to lock in $150/year. After that, the price goes up to $200/year.  Learn more at https://t.co/62XSo9NsDX and thanks for your support!
+URL: https://x.com/petergyang/status/2103514287180485057
+
+[126] SoFi (@SoFi) [Score:302, L:197, R:24, Rep:19, Date:Thu Sep 10 19:19:26 +0000 2026]
+Text: You're golden—there's still time to grab up to $1,000 in your choice of BTC, ETH, SOL, XRP, or DOGE. Offer ends 9/30/2026.* Get started.
+URL: https://x.com/SoFi/status/2098129236636967100
+
+[127] The Wall Street Journal (@WSJ) [Score:284, L:218, R:21, Rep:8, Date:Wed Sep 09 17:12:51 +0000 2026]
+Text: Expert insights to stay ahead—now $3/wk.
+URL: https://x.com/WSJ/status/2097734993485406329
+
+[128] dex (@dexhorthy) [Score:278, L:226, R:17, Rep:6, Date:Fri Sep 25 15:19:04 +0000 2026]
+Text: incredible banger of a talk @danshipper   - exploring the frontier vs building a product can be super opposed, but you can’t afford not to be exploring  https://t.co/fuW2vkjsts  Nice work @lennysan as usual
+URL: https://x.com/dexhorthy/status/2103504565975064917
+
+[129] Run Pure Sports (@RunPureSports) [Score:271, L:51, R:11, Rep:66, Date:Fri Sep 25 14:22:39 +0000 2026]
+Text: 🚨Get a FREE month of RPS courtesy of @cullyposton   Cully is on a heater in NFL Showdown and wants to bring 20 of you into the community that has helped him do it.  TO ENTER (new members only):  • You are NOT currently subscribed at https://t.co/WdahsQ3t6O  • Reply to this post with your favorite stack for Sunday  1 entry per person.   Contest open until midnight EDT tomorrow night (09/26).   20 winners get a 1-month RPS sub.  Thank you, Cully! [Quoting @cullyposton: @RunPureSports  @BigT44DFS and @JSurab leading me to the promised land again. Wasn’t 1st but pretty damn close. Actually was 1st until Sturdivants last catch. Can’t believe yall didn’t recommend playing him. Can you give out 20 monthly subscriptions on me for your great advice 3 showdowns in a row?]
+URL: https://x.com/RunPureSports/status/2103490368440275082
+
+[130] ElevenLabs Developers (@ElevenLabsDevs) [Score:268, L:190, R:24, Rep:10, Date:Thu May 14 20:35:48 +0000 2026]
+Text: Production audio AI isn't a feature, it's an engineering standard. The same platform trusted by Lovable, Synthesia, Stripe, Perplexity, and now Audi Revolut F1® Team.
+URL: https://x.com/ElevenLabsDevs/status/2055024301309358219
+
+[131] 娜美知识库 (@fhwofjow51260) [Score:263, L:183, R:34, Rep:4, Date:Fri Sep 25 12:19:27 +0000 2026]
+Text: ComfyUI 玩家可以直接抄作业了，MiniMax H3 的“导演台”有人做好了。  ComfyUI_MiniMaxH3_Director 把 MiniMax H3 常用玩法整理成现成工作流，导入 ComfyUI 就能直接用。  不用自己从零搭节点、调流程，更像是给 AI 视频生成做了一套可视化导演台，特别适合想快速折腾 H3 工作流的人。  https://t.co/Pawa1Evrgp
+URL: https://x.com/fhwofjow51260/status/2103459365361733861
+
+[132] Ansh Bhatnagar (@iansh04_) [Score:262, L:172, R:30, Rep:10, Date:Fri Sep 25 10:41:37 +0000 2026]
+Text: Anthropic engineer:        "99% of people use Claude Code like Google, and only 1% are running swarms of self-learning Claude agents        I'm running 100+ agents in a loop. I have Chief agent, PM agents - they manage the whole team"        in a 30-minute workshop, an Anthropic engineer revealed how to get max value from Claude Code at min. cost     this is worth more than another $500 vibe-coding course        watch today, then read how to build self-improving agentic systems with Fable in the article below
+URL: https://x.com/iansh04_/status/2103434744063197668
+
+[133] PixAI (@PixAI_EN) [Score:260, L:232, R:5, Rep:6, Date:Sat Sep 19 06:00:00 +0000 2026]
+Text: Tsubaki.3 Technical Report  https://t.co/wWy8e9bQ6P  Tsubaki.3 is our multimodal foundation model for anime image generation, spanning illustration, manga, webtoon, and more. The report walks through its data curation, training strategy, post-training curriculum, and evaluation.  We’ve also open sourced Tagger 1.0, our anime image tagging model, to support further work by the community. Tagger 1.0 on Hugging Face: https://t.co/qtVIN2k1av
+URL: https://x.com/PixAI_EN/status/2101189545979183330
+
+[134] 徐跑跑 (@xupaopaogm) [Score:251, L:131, R:33, Rep:18, Date:Fri Sep 25 11:41:05 +0000 2026]
+Text: 今天分享的是高性价比人生指南  比天涯论坛更牛逼的存在  凡是你能碰到的问题，在里面全部都有  不看的人简直是傻福！！！  传送门：https://t.co/zhvssmXp4H https://t.co/QjRI1XDe5D
+URL: https://x.com/xupaopaogm/status/2103449707314045071
+
+[135] unicode (@unicodef1wn) [Score:246, L:160, R:22, Rep:14, Date:Fri Sep 25 18:36:33 +0000 2026]
+Text: you don't need to build a Grok Bot from scratch anymore. the team already shipped 80 you can install right now  every single one built by the community, tested, and backed by the Grok Bot team itself  trading bots, research agents, support bots, content bots, automation bots, all live in one marketplace  people charge $50-200 for bots like these on other platforms  this entire marketplace is free  no prompt engineering, no config files, no 72-hour build, no invoice  pick one, install it, it's already doing the job someone else spent weeks getting right  most people are still writing their first agent from zero  80 are already shipped, running, and cost nothing  stop paying for what the community already gave away  check the marketplace below ⭣ [Quoting @unicodef1wn: AI Company-in-a-Box: Full 12-Step Roadmap to Build a Self-Managing Company with Grok Bot + Jev]
+URL: https://x.com/unicodef1wn/status/2103554264517751023
+
+[136] FuseAI (@afuseai) [Score:244, L:195, R:11, Rep:9, Date:Wed Sep 23 01:53:02 +0000 2026]
+Text: Opus 5.5 现已上架 fusecode，享受 89% 的折扣  性能可达到 Fable 5.1 的水平。它比之前的 Opus 5 每项任务快约 30%，成本低约 40%。
+URL: https://x.com/afuseai/status/2102576945775178091
+
+[137] Interfaze (YC P26) (@interfaze_ai) [Score:242, L:166, R:26, Rep:8, Date:Fri Sep 25 16:32:30 +0000 2026]
+Text: Jev, now open source: Lev  A 4B open source System One model based on Qwen backbone  The best performance for it's small size  https://t.co/lH0VmNP650 https://t.co/pUJORdUtjt
+URL: https://x.com/interfaze_ai/status/2103523046774771805
+
+[138] 爱丽丝呀！ (@BTCqzy1) [Score:237, L:144, R:36, Rep:7, Date:Fri Sep 25 10:52:29 +0000 2026]
+Text: 这个开源 A 股复盘神器太省事了！  涨停池、连板梯队、龙虎榜、板块资金，一套全包，还能帮你整理盘面逻辑！  每天收盘后，翻涨停、查龙虎榜、看板块、整理复盘，资料散在几个页面里，来回切就很费时间。  这个开源项目：Vibe AStock。  把 A 股盯盘、盘后复盘、个股研究和交易记录，放进同一个本地网页。  ✅ 涨停池 + 连板梯队：昨天的强势股今天谁晋级、谁断板、谁回落，集中跟踪。  ✅ 盘中异动追踪：根据行情快照整理急拉急跌、封板开板等变化，查看自选股和板块动态。  ✅ AI 盘后复盘：围绕市场情绪、资金、题材、龙虎榜和龙头跟踪，整理分析依据与后续观察条件。  ✅ 个股研究 + 多空辩论：结合行情、估值、财报和研报资料，对照不同观点，不只听一个结论。  ✅ 自选股 + 交易日志：关注什么、为什么买、后面表现怎么样，和研究记录放在一起。  它不是让 AI 对着股票代码自由发挥。行情和统计由程序处理，AI 再根据资料做解读，复盘时还能查看依据。  仓库地址：https://t.co/XQx81ztocT  仅做开源工具分享，非投资建议。DYOR [Quoting @BTCqzy1: 这个开源股票量化系统有点狠！  300 多维特征、13 种模型，AI 挖因子、训练模型、批量选股、历史回测，全放进一个工作台！  支持 A 股、港股、美股和期货，这个开源项目叫 QuantMind。  它把数据、因子、模型和回测串起来，直接让你搭建自己的量化研究流程。  ✅ AI 自动探索因子：把选股想法转成可计算的因子公式，再通过历史数据测试、筛选，不用每次从头手写。  ✅ 13 种模型可选：LightGBM、XGBoost、LSTM、Transformer 等，支持模型训练、参数寻优和多模型组合。  ✅ 批量打分与选股：用训练好的模型批量分析股票，生成候选名单，不用一只只问 AI。  ✅ 组合回测与风险分析：考虑手续费、滑点和涨跌停等因素，查看收益、回撤和策略表现，检验想法在历史上到底怎么样。  ✅ 通达信联动：选股结果可以推入自定义板块，接着看行情、盯信号，不用再手动搬名单。  仓库地址：https://t.co/wPnTZOCrNT  感兴趣的可以看看～  仅做开源工具分享非投资建议。DYOR]
+URL: https://x.com/BTCqzy1/status/2103437476417167616
+
+[139] lumxss (@bkdgiffug) [Score:235, L:129, R:23, Rep:20, Date:Fri Sep 25 02:42:00 +0000 2026]
+Text: 如果你用 Claude Code 还是停留在“输入一句、改一次”，这份指南可以收藏。  claude-code-best-practice 已经收获 6.4 万+ Stars，主要整理 Claude Code 的实战用法：  ① Skills、Agent、MCP 怎么配合 ② 常见工作流和使用技巧 ③ 上下文混乱、反复返工等问题怎么处理 不想自己一点点踩坑的话，直接从这份指南开始看，会省不少时间。 🔗 https://t.co/0onac9JeU5
+URL: https://x.com/bkdgiffug/status/2103314043348103342
+
+[140] elvis (@omarsar0) [Score:233, L:134, R:18, Rep:21, Date:Fri Sep 25 13:35:02 +0000 2026]
+Text: Banger paper from Microsoft and colleagues.  We talk about human taste being important in this AI era.  But for recursive self-improvement, an agent's taste also matters.  The big question is: How often do frontier agents pick the better direction at a decision point in a long task?  It's apparently just under 60% of the time, according to Taste-Bench.  In this benchmark, each question shows a point in a trajectory where several directions are open, and one leads to a better outcome.  The forks are mined automatically from parallel attempts and detours in engineering and research runs.  The best model answers 59.7% correctly.  Forks whose deciding evidence appears later in the trajectory are much harder, and a larger reasoning budget does not raise accuracy.  The authors then distill a teacher's judgment of the outcome into a student model, which improves end-to-end success on held-out SWE-bench Pro tasks.  Paper: https://t.co/uLoZWXiepY  Chat with Paper: https://t.co/KUUToNZ8kB
+URL: https://x.com/omarsar0/status/2103478384584278502
+
+[141] Fab (@fabrice_mayrand) [Score:221, L:160, R:11, Rep:13, Date:Fri Sep 04 14:01:41 +0000 2026]
+Text: You can use the latest AI models to generate a beautiful website for free on Freeable!  100% Free + Open source
+URL: https://x.com/fabrice_mayrand/status/2095874945457008954
+
+[142] AgentMail (@agentmail) [Score:220, L:109, R:18, Rep:25, Date:Tue Aug 25 06:12:44 +0000 2026]
+Text: Send, receive, and reply to email from Grok Bot. Real inbox, real threads. Start free.
+URL: https://x.com/agentmail/status/2092133054794052052
+
+[143] codila (@0xCodila) [Score:213, L:138, R:15, Rep:15, Date:Fri Sep 25 18:35:34 +0000 2026]
+Text: Chinese students just found the best way to use JEV for any LLM or AI agent - released a PDF research  the shift: I pasted it into Claude and GPT - and cut my costs by~63х  here’s what they found across 44 benchmarks:  1 → 7,193 responses, 10 types of failure. Jev was tested on hallucinations, prompt injections, data leaks, and other AI failures  2 → One simple question worked: 0.886 median AUROC, beating trained baselines on 25 of 31 benchmarks without task-specific training  3 → Context beat clever prompting - give Jev the source or rule it needs to check the answer against  4 → Keep the probability, not just "yes" or "no" - Fitting a threshold on 10 labeled examples raised median F1 from 0.706 to 0.793  5 → Among the 50% most confident decisions, median accuracy reached 0.933 - send uncertain cases for another review  6 → Jev even helped uncover labeling errors in three benchmarks. Sometimes the test’s "correct answer" was the problem  7 → 11.4 questions per call, with 0.31-second median latency - on 19 benchmarks, checking cost $0.30 vs $18.96 with LLM judges - roughly 63× cheaper  the result: It will made your setup CHEAPER and FASTER than what 95% of people are running  Copy the Jev setup researchers tested across 44 benchmarks - then read the full Jev architecture ↓ [Quoting @0xCodila: Jev Engineering: Full 10-Step Roadmap to Set Up and Use a New Brain for AI (from scratch)]
+URL: https://x.com/0xCodila/status/2103554016315642100
+
+[144] Hamel Husain (@HamelHusain) [Score:209, L:161, R:9, Rep:10, Date:Sun Aug 30 23:51:33 +0000 2026]
+Text: Teaching is hard but worth it when you see this 🥰   @sh_reya and I are refreshing the material once again to incorporate the latest eval techniques in our next cohort https://t.co/FVU2prdlKR https://t.co/3o7DUgnhMJ
+URL: https://x.com/HamelHusain/status/2094211453599539362
+
+[145] Khairallah AL-Awady (@eng_khairallah1) [Score:206, L:93, R:25, Rep:21, Date:Fri Sep 25 16:15:22 +0000 2026]
+Text: this is f*cking gold  How to build your first Jev AI agent (Full guide)  it will probably make you a lot of money  in the right hands, this changes everything: https://t.co/kvwaMgCfDG [Quoting @eng_khairallah1: Jev Engineering: How to Actually Build Your First AI Agent Brain (from scratch)]
+URL: https://x.com/eng_khairallah1/status/2103518733398606310
+
+[146] Arc (@arc) [Score:197, L:156, R:13, Rep:5, Date:Tue Sep 22 15:40:40 +0000 2026]
+Text: You didn't become a developer to manage legacy workarounds. Arc gives you a clean slate, an open financial stack, and the freedom to ship products that match your original vision.
+URL: https://x.com/arc/status/2102422837046939991
+
+[147] Rey｜英语自由与判断 (@ReynoldDai) [Score:196, L:125, R:31, Rep:3, Date:Fri Sep 25 11:11:05 +0000 2026]
+Text: 如果你饱受睡眠和压力的困扰 可以看斯坦福神经科学家Andrew Huberman  写的这本书：Protocols/《人体操作手册》。 主题：睡眠、运动、压力管理、营养、 光照、专注与学习、个人成长。 通过行为工具来获得长期健康 和身体效能，保持专注和学习效率 对高中生/大学生/成年人很有价值。 它不是传统的医学科普读物， 而是一本以神经科学和生理学为基础， 介绍如何调整日常行为、改善身心状态 及学习表现的实践手册。  睡眠：清晨5-30分钟的阳光直射眼睛； 醒来后30-60分钟的阳光照射有助于调节生物钟， 提升皮质醇水平，从而保持清醒并改善睡眠。  规律的起床时间；凉爽黑暗的卧室。   压力：生理性叹息（双鼻吸气+长口呼气）1-3次。 通过副交感神经系统使肺泡重新扩张，降低心率。  运动：每天7-10千步。每周3次力量训练。 第二区间+高强度间歇训练（HIIT）。 每周2-4次灵活性训练。  营养：90%的天然食物。 每餐摄入约1克/磅体重的蛋白质。 早晨补充水分和蔬菜纤维。  光照：白天明亮/夜晚黑暗。  专注力：90分钟的专注训练+自然睡眠呼吸暂停（NSDR）。  从家长角度，可重点看 第6章：专注、动机和学习  这一章比具体的健康技巧更适合成为 高中生理解“如何学习”的入口。   1. 为什么犯错是学习的重要组成部分？ 书中强调，在真正尝试掌握新技能时， 错误能够提供反馈， 帮助人发现当前能力与目标之间的差距。 作者建议选择略高于现有能力的挑战， 而不是不断重复完全熟悉的任务。  一个学生可能把“做错题”理解为能力差， 但在学习新知识、创作和研究时， 错误也可以说明： 我在哪一步理解错了？ 当前方法为什么行不通？ 是否需要改变假设？ 重要的并非刻意追求错误， 而是在真实尝试中学会使用反馈。   2. 学习结束以后， 如何判断自己是否真正掌握？ 作者在学习章节末尾提出， 可以在学习后花几分钟回忆刚刚接触的内容， 检查自己能记住什么、理解什么， 以及哪些地方仍然不清楚， 可以让朋友或ChatGPT帮助检查理解程度。   3. 目标、注意力与休息怎样配合？ 作者讨论了学习前的心理准备、目标设定、 学习过程中的短暂休息， 以及睡眠对学习的作用。 [Quoting @hubermanlab: Thank you to all who made this happen!  Protocols: An Operating Manual for the Human Body is a #1 New York Times Best Seller. I hope all who read (or listen to) it, enjoy and benefit from the information! https://t.co/E2FtExHfmJ]
+URL: https://x.com/ReynoldDai/status/2103442160389702106
+
+[148] Charlie Hills (@charliejhills) [Score:196, L:127, R:15, Rep:13, Date:Fri Sep 25 10:07:01 +0000 2026]
+Text: One command to upgrade every prompt you've written for Opus 5.5:  /claude-api prompt-audit  Run it in Claude Code.  It audits your skills, CLAUDE.md and prompts, cuts what's holding the model back, and rewrites the rest with the official Opus 5.5 guide.  Took 5 minutes. https://t.co/hlhJkO6fYi
+URL: https://x.com/charliejhills/status/2103426037770289160
+
+[149] 周览资源 (@grgerwcwetwet) [Score:186, L:115, R:25, Rep:7, Date:Fri Sep 25 12:13:04 +0000 2026]
+Text: 推荐一个 Mac 用户很实用的开源工具：WeChatBridge（微信流），直接把微信聊天记录送给 Codex / Claude。  它利用新版 macOS 微信自带的「合并转发 → 转发到其他应用」，选中几条聊天记录，就能一键发送到 Codex、Claude、豆包、千问办公、Obsidian 等应用。   最舒服的是它不破解微信数据库、不解密、不注入微信进程，只处理你主动选择并由微信导出的聊天内容，归档也保存在本机。   比如群里聊了几百条，直接转给 Codex：  “把今天讨论的重点、资源链接和待办事项整理出来。”  微信聊天终于可以无缝接进 AI 工作流了。  GitHub： ⁠https://t.co/hf5NN6MNvX
+URL: https://x.com/grgerwcwetwet/status/2103457758590943299

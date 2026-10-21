@@ -1,0 +1,112 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Sunday, September 13th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>'Pace the Frontier' AI Debate Escalates:</strong> Industry leaders and commentators debate Anthropic CEO Dario Amodei's proposal to slow frontier AI development; critics question commercial vs safety motives as Anthropic raises compute targets to $517B and Russia asserts AI development cannot be slowed.",
+    "<strong>Recurrent Looped Transformers (RLT) Breakthrough:</strong> AI researchers introduce Recurrent Looped Transformers (RLT), enabling infinite reasoning depth across prompt and response tokens with global KV memory.",
+    "<strong>Tesla Launch Control vs McLaren Goes Viral:</strong> Viral racing clips highlighting Tesla launch acceleration trigger widespread discussions on electric vehicle performance and engineering.",
+    "<strong>Ballon d'Or Race Heats Up:</strong> Football analysts weigh individual statistics between Harry Kane (85 G/A), Kylian Mbappé, Lamine Yamal, and Michael Olise ahead of the upcoming awards ceremony."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@DarioAmodei & @elonmusk: Anthropic's 'Pace the Frontier' Proposal Triggers Intense Debate",
+          "body": "Discussion continues surrounding Anthropic CEO Dario Amodei's call to pace frontier AI development with 3rd-party audits, supported by Elon Musk and Sam Altman, as commentators debate safety concerns versus corporate positioning.",
+          "url": "https://x.com/KoutoTV/status/2099048507789250801"
+        },
+        {
+          "tag": "hot",
+          "title": "@askalphaxiv & @yifanzhang_: Recurrent Looped Transformers (RLT) Introduced",
+          "body": "A new paper presents Recurrent Looped Transformers (RLT), making decoder computations recurrent across prompt and response tokens for infinite reasoning depth with reusable global KV memory.",
+          "url": "https://x.com/askalphaxiv/status/2099066543170793587"
+        },
+        {
+          "tag": "update",
+          "title": "@liquidtrading: Anthropic Triples Compute Target to $517B",
+          "body": "Reports indicate Anthropic increased its compute guidance to $517B (up from $180B), underscoring massive infrastructure scaling even as calls for safety evaluations grow.",
+          "url": "https://x.com/liquidtrading/status/2098997745105141804"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru & @DrEliDavid: Russia Rejects AI Slowdowns as Global Competition Intensifies",
+          "body": "Russian officials declared it impossible to freeze or slow domestic AI progress, highlighting geopolitical tensions surrounding international AI safety agreements.",
+          "url": "https://x.com/WatcherGuru/status/2098910147443634420"
+        },
+        {
+          "tag": "new",
+          "title": "@Im_IrushiK: Developers Request '/slow' Mode for Codex Workflows",
+          "body": "Users propose a half-speed, lower-usage mode for OpenAI Codex to accommodate overnight automated goal execution and manage API usage limits.",
+          "url": "https://x.com/Im_IrushiK/status/2098809262302720347"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk & @theo: TypeScript Skills Repositories Gain Massive Traction",
+          "body": "Matt Pocock's developer skills repository surpassed React in stars, sparking discussion among creators on domain-specific harnesses and public skill curation.",
+          "url": "https://x.com/mattpocockuk/status/2098696179081007514"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Finance",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@KeithMcCullough: Institutional Process Blueprint Shared",
+          "body": "Hedge fund manager Keith McCullough published a comprehensive 52-page guide outlining process-driven risk management and investing strategies.",
+          "url": "https://x.com/KeithMcCullough/status/1846614136303559130"
+        },
+        {
+          "tag": "update",
+          "title": "@parasitoahorro: Strategic Estate & Asset Liquidity Frameworks",
+          "body": "A viral financial thread details how long-term investors utilize asset-backed borrowing to preserve capital and navigate tax implications.",
+          "url": "https://x.com/parasitoahorro/status/2099092569091129733"
+        },
+        {
+          "tag": "new",
+          "title": "@aleabitoreddit & @bhoomikacodes: The Divergence Between Finance X and Traditional Tech",
+          "body": "Commentators examine the stark contrast in risk tolerance, market outlooks, and technical focus between mainstream industry engineering and fast-moving online finance communities.",
+          "url": "https://x.com/aleabitoreddit/status/2099126746390139042"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General & Sports",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@TheM1Show: Tesla Launch Control Take-off Sparks Performance Discussions",
+          "body": "A viral clip demonstrating Tesla launch acceleration against a McLaren sparked widespread online commentary regarding EV torque and supercar performance.",
+          "url": "https://x.com/TheM1Show/status/2098707121881628792"
+        },
+        {
+          "tag": "update",
+          "title": "@PSGINT_ & @Bayern_PR: Ballon d'Or Debates Highlight Kane, Yamal, and Olise",
+          "body": "Football analysts debate individual contributions across top European leagues, with Harry Kane's 85 G/A season featuring prominently in discussions.",
+          "url": "https://x.com/PSGINT_/status/2098806895188361602"
+        },
+        {
+          "tag": "new",
+          "title": "@yaniversal: Commentary on Political Demographics and Presidential History",
+          "body": "A viral observation highlighting birth year patterns among U.S. presidents drew broad engagement across political and historical commentary.",
+          "url": "https://x.com/yaniversal/status/2098975313120100521"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-13 12:00 ET!")

@@ -1,0 +1,161 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Tuesday, September 29th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Ships GPT-6.1 Sol, Always-On 'Dots' Agents & Cloud Codex at DevDay:</strong> OpenAI rolls out GPT-6.1 Sol featuring 95% input cache discounts and near-Astra coding prowess, alongside 'Dots'—always-on cloud agents with dedicated virtual environments—and full cloud access for Codex across devices.",
+    "<strong>Devin Adopts GPT-6.1 Sol with Direct ChatGPT Subscription Quota Integration:</strong> Cognition announces instant availability of GPT-6.1 Sol in Devin (scoring 60.4% on FrontierCode 1.1 at $0.31/task, an 81% cost plunge from GPT-6 Sol), while enabling developers to bill directly against their personal ChatGPT Plus and Pro quotas.",
+    "<strong>Developer Backlash Erupts Over $500 Plan Burn Rates & 'Benchmaxing' Controversy:</strong> Heavy users report burning through weekly $500 ChatGPT Pro Max allocations in under 30 minutes with Astra Ultrafast, while independent benchmark BridgeBench reports GPT-6.1 Sol scored just 3 points above GPT-6 Sol (82 points behind Astra), igniting debate against Theo's real-world Codex findings.",
+    "<strong>Robinhood Enters Agent Economy with Autonomous Retail Trading Agents:</strong> Robinhood announces 'Robinhood Agents', allowing retail investors to spin up 24/7 autonomous trading loops with built-in margin and execution guardrails directly within the native app.",
+    "<strong>Foundational Engineering: Hierarchical AGENTS.md Architectures & Claude Code Network Fixes:</strong> Systems architects formalize multi-tier AGENTS.md conventions for scaling autonomous projects, while post-mortems reveal that sudden Claude account bans stem from local network proxy and IPv6 dual-stack desyncs rather than residential IP quality."
+  ],
+  "sections": [
+    {
+      "emoji": "⚡",
+      "title": "OpenAI DevDay 2026: GPT-6.1 Sol, 'Dots' & Cloud Codex",
+      "items": [
+        {
+          "tag": "release",
+          "title": "@OpenAIDevs: GPT-6.1 Sol Launches with 95% Cache Discount and Near-Astra Power",
+          "body": "OpenAI officially unveils GPT-6.1 Sol, engineered specifically for agentic coding, computer use, and long-horizon codebase refactoring. The model delivers near-Astra reasoning at a fifth of the inference price, supported by an aggressive 95% discount on cached inputs.",
+          "url": "https://x.com/OpenAIDevs/status/2104993035507712318"
+        },
+        {
+          "tag": "agents",
+          "title": "@OpenAIDevs: 'Dots' Always-On Agents Bring Cloud Computers to Bug Triage and PRs",
+          "body": "OpenAI introduces Dots, autonomous GPT-6 Astra-powered agents equipped with isolated cloud computers, plugin ecosystems, and user context. Dots continuously triage incoming bug reports, reproduce broken builds, run test suites with Codex, and draft complete pull requests for human review.",
+          "url": "https://x.com/OpenAIDevs/status/2104989680987238814"
+        },
+        {
+          "tag": "integration",
+          "title": "@cognition: GPT-6.1 Sol Lands in Devin with Direct ChatGPT Subscription Billing",
+          "body": "Cognition rolls out immediate support for GPT-6.1 Sol across Devin Cloud, Desktop, and CLI. On FrontierCode 1.1, GPT-6.1 Sol achieves 60.4% at medium reasoning effort ($0.31 per task, an 81% reduction vs GPT-6 Sol). Furthermore, developers can now sign in with their personal ChatGPT Plus or Pro subscriptions to draw down directly from existing quotas.",
+          "url": "https://x.com/cognition/status/2104988938817413583"
+        },
+        {
+          "tag": "platform",
+          "title": "@DanDr1s: Codex Moves to the Cloud for Remote Execution Across Devices",
+          "body": "OpenAI ships Cloud Codex at DevDay, untethering developer workflows from local machines. Engineers can now orchestrate and inspect autonomous Codex tasks remotely from mobile devices or lightweight cloud environments without maintaining local daemon processes.",
+          "url": "https://x.com/DanDr1s/status/2104984122871402642"
+        },
+        {
+          "tag": "drama",
+          "title": "@ns123abc & @birdabo: Live Demo Gaffe as xAI Trolls with dots.com Domain Hijack",
+          "body": "OpenAI's keynote faced notable friction when a live stage demo of Dots encountered execution errors, causing production to briefly mute the stream audio. Capitalizing on the moment, SpaceX/xAI secured dots.com to redirect all inbound traffic straight to the Grok Bot installer.",
+          "url": "https://x.com/birdabo/status/2104987275813917076"
+        }
+      ]
+    },
+    {
+      "emoji": "📊",
+      "title": "Pricing Backlash, Plan Limits & Benchmark Debates",
+      "items": [
+        {
+          "tag": "pricing",
+          "title": "@bridgemindai: $500 ChatGPT Pro Max Weekly Limit Drained in Under 30 Minutes",
+          "body": "Frustration mounts over OpenAI's restructured subscription multipliers as high-throughput developers report burning through 100% of their weekly $500 Pro Max allocation in under 30 minutes while running GPT-6 Astra Ultrafast, locking accounts until the following week.",
+          "url": "https://x.com/bridgemindai/status/2105016612365770809"
+        },
+        {
+          "tag": "benchmark",
+          "title": "@bridgebench: BridgeBench Evaluation Flags 'Benchmaxing' on GPT-6.1 Sol",
+          "body": "Independent evaluation by BridgeBench reports that GPT-6.1 Sol scored just 3 points above GPT-6 Sol while trailing GPT-6 Astra by 82 points, struggling in complex visual rendering tests. BridgeBench cautions that massive gains on proprietary benchmarks without corresponding external movement suggest aggressive benchmark overfitting.",
+          "url": "https://x.com/bridgebench/status/2105040913949159914"
+        },
+        {
+          "tag": "telemetry",
+          "title": "@theo: Real-World Codex Telemetry Tells a Different Story Than Synthetic Suites",
+          "body": "Theo publishes verification runs indicating that GPT-6.1 Sol performs significantly better in production agent harnesses like Codex than in synthetic benchmark setups like mini-swe, matching or exceeding Opus 5.5 in agentic task completion at ~1/30th the overall cost.",
+          "url": "https://x.com/theo/status/2105063015712465094"
+        },
+        {
+          "tag": "analysis",
+          "title": "@signulll: Communications Autopsy on OpenAI's Pre-Keynote Limit Cut Framing",
+          "body": "Product analysts dissect OpenAI's PR misstep of announcing 50% subscription multiplier cuts immediately before DevDay. By introducing severe usage scarcity into developer minds first, attendees evaluated every subsequent launch through the lens of whether it justified what was taken away.",
+          "url": "https://x.com/signulll/status/2105017411556512022"
+        },
+        {
+          "tag": "economics",
+          "title": "@forloopcodes: The Widening Arbitrage Gap Between Claude Code and OpenAI Plans",
+          "body": "Builders highlight the stark economics across frontier subscriptions: while Anthropic's $200 Claude Code tier continues to tolerate upwards of $9,000 in monthly API-equivalent Opus usage, OpenAI's recalibrated $200 plan now hard-caps at approximately $500 in effective API value.",
+          "url": "https://x.com/forloopcodes/status/2104840038978646423"
+        }
+      ]
+    },
+    {
+      "emoji": "🤖",
+      "title": "Autonomous Trading, Agent Outreach & Research Tooling",
+      "items": [
+        {
+          "tag": "fintech",
+          "title": "@RobinhoodApp: Robinhood Agents Bring Retail Autonomous Trading Loops",
+          "body": "Robinhood announces native support for autonomous trading agents. Users can configure 24/7 automated analysis, strategy execution, and continuous loops without writing code, bounded by dedicated sandboxed sub-accounts and mandatory order approval gates.",
+          "url": "https://x.com/RobinhoodApp/status/2105074572722679839"
+        },
+        {
+          "tag": "quant",
+          "title": "@RohOnChain: Free Institutional Order Flow Desk Built on OpenMarket, Jev & Opus 5.5",
+          "body": "Traders publish blueprints for an autonomous algorithmic trading stack utilizing OpenMarket's free feeds (liquidation heatmaps, CVD, order book depth). A local Jev scoring engine evaluates order-flow microstructure in sub-100ms intervals, while an overlying Opus 5.5 supervisor continually audits decision logic and refines risk rules.",
+          "url": "https://x.com/RohOnChain/status/2104960910318280841"
+        },
+        {
+          "tag": "workflow",
+          "title": "@speedrunjaen: Cold Outreach Multi-Agent Swarm Yields 55% Reply Rates at $0.08/Lead",
+          "body": "A packaged outreach skill combines Claude Code and Codex into an autonomous prospecting pipeline. By scraping active buyer engagements and generating bespoke, customized functional assets for each prospect prior to initial contact, the pipeline sustains a 55% response rate at negligible marginal expense.",
+          "url": "https://x.com/speedrunjaen/status/2102877683394998609"
+        },
+        {
+          "tag": "research",
+          "title": "@askalphaxiv: OpenResearch Ships Native Desktop App for Autonomous Science",
+          "body": "alphaXiv launches cross-platform desktop builds of OpenResearch across macOS, Windows, and Linux. The environment connects local coding agents directly to paper repositories, citation graphs, and synthesis tools to execute end-to-end scientific literature discovery.",
+          "url": "https://x.com/askalphaxiv/status/2104947053642047521"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Engineering Standards, Network Hygiene & Agent Tooling",
+      "items": [
+        {
+          "tag": "architecture",
+          "title": "@HermesWatcher: Codifying Hierarchical AGENTS.md Architectures for Agentic Teams",
+          "body": "Systems engineers share a standardized workspace pattern separating AGENTS.md (rules), PROJECT.md (goals), STATUS.md (real-time telemetry), and DECISIONS.md (immutable architecture choices). The blueprint advocates hierarchical inheritance, placing specialized AGENTS.md instruction sets inside deep sub-directories only as modular complexity demands.",
+          "url": "https://x.com/HermesWatcher/status/2104919128230273501"
+        },
+        {
+          "tag": "debugging",
+          "title": "@Karadokuy: Deconstructing Claude Account Bans — The Local Network Desync Trap",
+          "body": "A technical audit dismantles myths surrounding 'dirty residential IPs' in Claude account suspensions. Root-cause telemetry traces common flags to local client routing fractures: Claude Code rejecting SOCKS proxies in favor of strict HTTP/HTTPS, IPv6 dual-stack bypasses leaking real locations, and conflicting exit gateways between terminal sessions and desktop apps.",
+          "url": "https://x.com/Karadokuy/status/2104601113299468483"
+        },
+        {
+          "tag": "tooling",
+          "title": "@romandevz: Official `claude-code-setup` Plugin Automates Agent Config & Hooks",
+          "body": "Anthropic distributes `claude-code-setup@claude-plugins-official`, an automated workspace inspector. The plugin analyzes local repository structures to automatically provision and configure relevant lifecycle hooks, skills, MCP servers, and subagent orchestration trees.",
+          "url": "https://x.com/romandevz/status/2104969172895621433"
+        },
+        {
+          "tag": "gateway",
+          "title": "@LinearUncle: Magpie Emerges as Unified Menu-Bar Proxy Across 20+ Agent CLIs",
+          "body": "Developer yetone releases Magpie, a native menu-bar application providing dynamic model switching and a local reverse-proxy gateway for over 20 autonomous agent environments including Claude Code, Codex, and bespoke harness frameworks.",
+          "url": "https://x.com/LinearUncle/status/2104892506282537240"
+        },
+        {
+          "tag": "vision",
+          "title": "@0x0SojalSec: NVIDIA Releases 3B High-Speed Visual Grounding VLM",
+          "body": "NVIDIA open-sources a 3B parameter vision-language model trained on 138 million queries and 785 million bounding boxes. Leveraging parallel box decoding, the model achieves 10x the inference speed of Qwen3-VL, providing lightweight sub-millisecond visual perception for computer-use agents and GUI automation.",
+          "url": "https://x.com/0x0SojalSec/status/2104717495055851883"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {digest_path}")

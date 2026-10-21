@@ -1,0 +1,161 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Tuesday, September 29th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Kicks Off DevDay 2026 Amid Pro $200 Subscription Restructuring:</strong> OpenAI launches DevDay 2026 at 10am PT, accompanied by Tibo's announcement that the Pro $200 subscription is reopening with its relative multiplier cut from 20x to 10x (effectively halving API-spend equivalent per dollar), while slashing API prices by 50% on GPT-6 Sol and Luna and granting unmetered fair-use access to GPT-5.6 Sol, Luna, and Terra.",
+    "<strong>Claude Sonnet 5.5 Dominates Real-World Bug Hunting via Relentless Turn Spend:</strong> Independent testing on 105 bugs across production codebases reveals Claude Sonnet 5.5 (max) resolving 55.5 issues—outperforming GPT-6 Astra (45) and Opus 5.5 (41.7)—by running 1,330 turns (6x Astra) and refusing to stop short on complex reasoning.",
+    "<strong>Artificial Analysis Confirms Sonnet 5.5 Parity with Opus 5.5 at Extreme Token Scale:</strong> Benchmark telemetry reveals Claude Sonnet 5.5 reaching 64% on Terminal-Bench 4.0 (#1 worldwide, ahead of Astra and Opus 5.5 at 60%), but requiring ~193k output tokens per task at max effort (+60% over Opus 5.5), raising per-task costs to $7.60.",
+    "<strong>Raven 0.2.0 Drops as 'Harness of Harnesses' Built for Recursive Self-Improvement:</strong> Open-source multi-agent harness Raven 0.2.0 unifies specialized sub-harnesses (Research, Code, Design, Oncall) with Claude Code and Codex into an interconnected task graph achieving 0.963 Node F1, with complete self-rewriting capabilities across prompts, policies, and orchestration logic.",
+    "<strong>Developer Tooling Surge: `pdfcn` from Shadcn Labs, `magpie` Agent Gateway, and Karpathy's Compiled Wiki:</strong> Shadcn Labs introduces `pdfcn` for component-driven document creation, `magpie` delivers local menu-bar switching across 20+ coding agents, and Karpathy's 3-tier 'Second Brain as a Compiler' pattern spreads across the developer community."
+  ],
+  "sections": [
+    {
+      "emoji": "⚡",
+      "title": "DevDay 2026 Kickoff & OpenAI Subscription Overhaul",
+      "items": [
+        {
+          "tag": "keynote",
+          "title": "@OpenAI: 10am PT on the Dot — DevDay 2026 Keynote Kicks Off",
+          "body": "OpenAI counts down to the official opening of DevDay 2026 at 10am PT. The event is set to spotlight new autonomous agent models, enterprise platform unification, and API infrastructure upgrades following weeks of heightened community anticipation.",
+          "url": "https://x.com/OpenAI/status/2104934336206430527"
+        },
+        {
+          "tag": "pricing",
+          "title": "@thsottiaux: OpenAI Reopens Pro $200 Plan While Halving Relative Token Multiplier",
+          "body": "Tibo details major subscription adjustments ahead of DevDay: the Pro $200 plan reopens to new subscribers, but its relative multiplier drops to 10x over Plus (down from 20x), effectively halving API spend per dollar to eliminate extreme usage arbitrage. Existing subscribers retain their 20x multiplier temporarily with bonus credits, while API prices for GPT-6 Sol and Luna are cut by 50%.",
+          "url": "https://x.com/thsottiaux/status/2104951965184925941"
+        },
+        {
+          "tag": "reaction",
+          "title": "@wholyv: Developer Frustration Over Effective $500/mo Cost for Previous Limits",
+          "body": "Builders voice strong disappointment over the subscription recalibration, calculating that developers must now spend $500/mo to match previously available $200 limits, compounded by frustration over delayed Astra 6.1 releases and GPT-6 Sol benchmark trade-offs.",
+          "url": "https://x.com/wholyv/status/2104877385887965415"
+        },
+        {
+          "tag": "update",
+          "title": "@iannuttall: Pro Tier Grants 'Unlimited*' Usage for GPT-5.6 Sol, Luna, and Terra",
+          "body": "To balance out the quota reductions on frontier models, OpenAI updates the Pro subscription to include unlimited fair-use access to GPT-5.6 Sol, Luna X-High, and Terra models, preserving high throughput for developers working with workhorse models.",
+          "url": "https://x.com/iannuttall/status/2104832696900112858"
+        },
+        {
+          "tag": "perk",
+          "title": "@flavioAd: Free 30-Day ChatGPT Pro Access Granted to All DevDay Attendees",
+          "body": "DevDay in-person and registered attendees receive 30 days of complimentary ChatGPT Pro access, letting developers test the updated subscription multipliers and newly released platform capabilities immediately.",
+          "url": "https://x.com/flavioAd/status/2104912242584236220"
+        }
+      ]
+    },
+    {
+      "emoji": "🤖",
+      "title": "Frontier Coding & Benchmarks: Sonnet 5.5 vs Opus 5.5",
+      "items": [
+        {
+          "tag": "benchmark",
+          "title": "@PawelHuryn: Sonnet 5.5 (max) Resolves 55.5 Bugs Across 2 Repos via 1,330 Turns",
+          "body": "In a head-to-head evaluation across 2 production repositories containing 105 bugs, Claude Sonnet 5.5 (max) achieved top performance with 55.5 bugs resolved, surpassing GPT-6 Astra (45), GPT-5.6 Sol (43.5), Fable 5.1 (43), and Opus 5.5 (41.7). The model succeeded by refusing to quit early, taking 1,330 turns (6x Astra and 3x Opus) to exhaustively isolate root causes.",
+          "url": "https://x.com/PawelHuryn/status/2104818995316527105"
+        },
+        {
+          "tag": "analysis",
+          "title": "@ArtificialAnlys: Sonnet 5.5 Dominates Terminal-Bench 4.0 at 64% with 193k Output Tokens",
+          "body": "Artificial Analysis confirms Sonnet 5.5 scored 56 on the Intelligence Index (#2 behind Opus 5.5 at 58) and claimed #1 on Terminal-Bench 4.0 at 64% vs 60% for Opus 5.5 and Astra. Achieving this parity requires ~193k output tokens per task at max effort (+60% over Opus 5.5), increasing per-task cost to $7.60 despite identical $2/$10 token pricing.",
+          "url": "https://x.com/ArtificialAnlys/status/2104640155843989864"
+        },
+        {
+          "tag": "economics",
+          "title": "@theo: $200 Claude Code Subscriptions Yield ~$9,000 to $20,000 in Opus Usage",
+          "body": "Theo analyzes usage across three drained Claude Code accounts, revealing that heavy developers consume $2,086 to $2,442 in Opus 5.5 API-equivalent tokens weekly (~$9,000 to $20,000/month) on flat-rate $200 seats, demonstrating why AI labs are being forced to restructure subscription limits.",
+          "url": "https://x.com/theo/status/2104683186215363058"
+        },
+        {
+          "tag": "debate",
+          "title": "@dayonefoundry: The Practical Choice Between Sonnet 5.5 and Opus 5.5 in Claude Code",
+          "body": "Engineers debate the optimal division of labor in Claude Code. While Opus 5.5 remains dominant for high-level architectural decisions and holistic context, Sonnet 5.5's 30% faster execution and lower cost make it the preferred driver for rapid test-edit-compile cycles.",
+          "url": "https://x.com/dayonefoundry/status/2104781740774740143"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Agent Orchestration, Harnesses & JEV Primitives",
+      "items": [
+        {
+          "tag": "release",
+          "title": "@LongTermMemoryE: Raven 0.2.0 Drops as 'The Harness of Harnesses' Built for RSI",
+          "body": "Raven 0.2.0 unifies specialized harnesses (Research, Code, Design, Oncall) with external agents like Claude Code and Codex into a collaborative team task graph. Scoring 0.963 Node F1 on the Multi-Agent Orchestration Benchmark, the entire harness is designed for recursive self-improvement where AI rewrites prompts, policies, strategy code, and playbooks.",
+          "url": "https://x.com/LongTermMemoryE/status/2104745468119146913"
+        },
+        {
+          "tag": "framework",
+          "title": "@hwchase17: The Agent Hierarchy: From Personal Coding to Enterprise Org Harnesses",
+          "body": "Harrison Chase outlines the structural shift occurring across developer tooling: progressing from individual coding harnesses to personal multi-agent setups, and ultimately to full organizational harnesses that coordinate entire fleets of autonomous background workers.",
+          "url": "https://x.com/hwchase17/status/2104701729120157766"
+        },
+        {
+          "tag": "workflow",
+          "title": "@thedelost: Dual-Agent Architecture: Opus 5.5 Ships While Fable 5.1 Advises via `/advisor`",
+          "body": "Delost shares an advanced Claude Code pattern: Opus 5.5 acts as the primary builder while Fable 5.1 is kept on call as an advisor (`/advisor fable`), only speaking up to review plans, intervene on repeated errors, and audit code before task completion, while JEV handles subagent branching.",
+          "url": "https://x.com/thedelost/status/2104677530825634273"
+        },
+        {
+          "tag": "open-source",
+          "title": "@mikenevermiss: Open-Source JEV Primitives Package Routing, Guardrails, and Fanout",
+          "body": "A modular open-source library of ready-made JEV agent skills drops: `jev-route` for deterministic intent dispatch, `jev-guardrail` for typed safety verification, and `jev-fanout` for parallel subagent execution, removing the need to hand-roll orchestration infrastructure for complex multi-step tasks.",
+          "url": "https://x.com/mikenevermiss/status/2104445072632668356"
+        },
+        {
+          "tag": "automation",
+          "title": "@ai_fengshou: CUA Open-Source Computer-Use Framework Commoditizes Desktop Agents",
+          "body": "An open-source computer-use agent framework (CUA) releases direct OS interaction capabilities (mouse clicks, keyboard strokes), providing developers with an unencumbered foundation for autonomous desktop workflows without reliance on closed proprietary platforms.",
+          "url": "https://x.com/ai_fengshou/status/2104834310553612682"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Developer Tooling, System Architecture & Research",
+      "items": [
+        {
+          "tag": "launch",
+          "title": "@shadcnlabs: Shadcn Labs Introduces `pdfcn` for Component-Driven PDF Generation",
+          "body": "Shadcn Labs launches `pdfcn`, an open-source library powered by Takumi + Forme that lets developers build beautiful, pixel-perfect PDFs using the same declarative component model and theming conventions as shadcn/ui.",
+          "url": "https://x.com/shadcnlabs/status/2104840500847263794"
+        },
+        {
+          "tag": "tool",
+          "title": "@LinearUncle: `magpie` Launches as Menu-Bar Switcher and Reverse Proxy for 20+ Agents",
+          "body": "Yetone releases `magpie`, a native menu-bar application that acts as a local proxy gateway and quick model switcher across Claude Code, Codex, and over 20 terminal coding agents, streamlining model routing and credential management.",
+          "url": "https://x.com/LinearUncle/status/2104892506282537240"
+        },
+        {
+          "tag": "security",
+          "title": "@Karadokuy: Why Residential IPs Still Get Flagged: Claude Code Proxy Pitfalls",
+          "body": "KunKun investigates unexpected Claude Code account suspensions, demonstrating that issues often stem from local network misconfigurations—such as IPv4/IPv6 splits, mismatched browser/CLI routing, and Claude Code's lack of SOCKS proxy support requiring explicit `HTTP_PROXY` configuration—rather than IP reputation alone.",
+          "url": "https://x.com/Karadokuy/status/2104601113299468483"
+        },
+        {
+          "tag": "architecture",
+          "title": "@rvaniaaaa: Karpathy's 'Second Brain as a Compiler' Blueprint Surpasses 1.3M Views",
+          "body": "A comprehensive deep dive into Andrej Karpathy's compiled knowledge architecture explains how separating inputs into `raw/`, linked `wiki/`, and compiled `output/` folders with a central `CLAUDE.md` and automated linting transforms an AI assistant into a compounding knowledge base.",
+          "url": "https://x.com/rvaniaaaa/status/2104602707675718102"
+        },
+        {
+          "tag": "education",
+          "title": "@rasbt: Sebastian Raschka Publishes Comprehensive Visual Guide to Language Models",
+          "body": "Machine learning researcher Sebastian Raschka publishes an extensive visual guide covering text classification architectures, RNNs, CNNs, transformers, and calibration techniques, complete with empirical benchmarks on classification accuracy and inference efficiency.",
+          "url": "https://x.com/rasbt/status/2104923910039040173"
+        }
+      ]
+    }
+  ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, 'w', encoding='utf-8') as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {out_path} with {len(digest_data['sections'])} sections.")

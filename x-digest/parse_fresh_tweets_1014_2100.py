@@ -1,0 +1,88 @@
+import json
+from pathlib import Path
+
+tweets_path = Path("/Users/jwang/clawd-pages/x-digest/home-300-2026-10-14-2100.json")
+
+if not tweets_path.exists():
+    print(f"Error: {tweets_path} does not exist.")
+    exit(1)
+
+with open(tweets_path, 'r', encoding='utf-8') as f:
+    try:
+        tweets = json.load(f)
+    except Exception as e:
+        print(f"Error loading JSON: {e}")
+        exit(1)
+
+print(f"Total raw items: {len(tweets)}")
+
+seen_ids = set()
+unique_tweets = []
+for t in tweets:
+    tid = t.get('id')
+    if not tid or tid in seen_ids:
+        continue
+    seen_ids.add(tid)
+    unique_tweets.append(t)
+
+print(f"Unique tweets: {len(unique_tweets)}")
+
+def get_score(t):
+    likes = t.get('likeCount', 0) or 0
+    rts = t.get('retweetCount', 0) or 0
+    replies = t.get('replyCount', 0) or 0
+    return likes + (rts * 2) + (replies * 3)
+
+SLOP_PHRASES = [
+    'comment "yes"', 'type "amen"', '👇', 'bookmark this', 'thread 🧵', 
+    'mind blowing', 'insane trick', 'you won\'t believe', 'promoted'
+]
+
+def is_slop(text):
+    text_lower = text.lower()
+    for phrase in SLOP_PHRASES:
+        if phrase in text_lower:
+            return True
+    return False
+
+filtered_tweets = []
+for t in unique_tweets:
+    text = t.get('text', '')
+    if not text or is_slop(text):
+        continue
+    filtered_tweets.append(t)
+
+filtered_tweets.sort(key=get_score, reverse=True)
+top_tweets = filtered_tweets[:160]
+
+output_lines = []
+for idx, t in enumerate(top_tweets):
+    user = t.get('author', {}).get('username', 'unknown')
+    name = t.get('author', {}).get('name', 'unknown')
+    text = t.get('text', '').replace('\n', ' ').strip()
+    likes = t.get('likeCount', 0) or 0
+    rts = t.get('retweetCount', 0) or 0
+    replies = t.get('replyCount', 0) or 0
+    score = get_score(t)
+    tid = t.get('id')
+    url = f"https://x.com/{user}/status/{tid}"
+    created_at = t.get('createdAt', '')
+    
+    quoted_text = ""
+    if t.get('quotedTweet'):
+        q_user = t['quotedTweet'].get('author', {}).get('username', 'unknown')
+        q_text = t['quotedTweet'].get('text', '').replace('\n', ' ').strip()
+        quoted_text = f" [Quoting @{q_user}: {q_text}]"
+        
+    article_text = ""
+    if t.get('article'):
+        a_title = t['article'].get('title', '')
+        a_preview = t['article'].get('previewText', '')
+        article_text = f" [Article: {a_title} - {a_preview}]"
+        
+    line = f"[{idx}] {name} (@{user}) [Score:{score}, L:{likes}, R:{rts}, Rep:{replies}, Date:{created_at}]\nText: {text}{quoted_text}{article_text}\nURL: {url}\n"
+    output_lines.append(line)
+
+out_file = Path("/Users/jwang/clawd-pages/x-digest/top_tweets_20261014_2100.txt")
+out_file.write_text("\n".join(output_lines), encoding='utf-8')
+print(f"Wrote {len(top_tweets)} top tweets to {out_file}")

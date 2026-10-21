@@ -1,0 +1,137 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, August 29th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Codex Milestone Tease:</strong> OpenAI engineer Tibo (@thsottiaux) teases an upcoming Codex dashboard milestone, prompting developer commentary on transitioning from Cursor to Codex.",
+    "<strong>MiniMax H3 Max Infinite Stream:</strong> Rehan Sheikh (@rehan_shei) connects MiniMax H3 Max video generation to a Twitch stream for real-time interdimensional video synthesis.",
+    "<strong>Mourinho & Kane Football Milestones:</strong> José Mourinho's comments on Ballon d'Or criteria go viral while Harry Kane becomes the first English player named Germany's Footballer of the Year.",
+    "<strong>CZ & Crypto Leadership Harmony:</strong> Binance founder CZ (@cz_binance) shares thoughts on professional ethics and mutual respect in crypto industry disputes.",
+    "<strong>Gen Z Financial Behavior Shift:</strong> Anthony Pompliano (@APompliano) highlights data showing Gen Z investors demonstrate greater risk awareness due to expanded financial education."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@thsottiaux: OpenAI Codex Milestone Teased as Developers Shift Tools",
+          "body": "OpenAI Codex engineer Tibo teases a major dashboard milestone celebration while developers like Jim Liu share transitions from Cursor to Codex for codebase refactoring.",
+          "url": "https://x.com/thsottiaux/status/2093573991965557198"
+        },
+        {
+          "tag": "hot",
+          "title": "@rehan_shei: Real-Time Interdimensional Video Generation via MiniMax H3 Max",
+          "body": "Rehan Sheikh hooks MiniMax H3 Max video generation to a live Twitch stream, generating continuous real-time video faster than standard playback speed.",
+          "url": "https://x.com/rehan_shei/status/2093528415576211819"
+        },
+        {
+          "tag": "new",
+          "title": "@poteto: xAI Grok Bot Team Prepares Android Release",
+          "body": "The Grok Bot team announces that its native Android application is near completion and open for Google Play Store pre-registration.",
+          "url": "https://x.com/poteto/status/2093063044062650744"
+        },
+        {
+          "tag": "new",
+          "title": "@esandurrani: Honen & NVIDIA Partner for AI Literacy Scale",
+          "body": "Honen partners with NVIDIA to deliver context-aware, self-improving interactive AI courses to over 250,000 enterprise learners.",
+          "url": "https://x.com/esandurrani/status/2072083052109635633"
+        },
+        {
+          "tag": "update",
+          "title": "@davitb: Krisp Releases VIVA 2.5 Voice Isolation Architecture",
+          "body": "Krisp unveils VIVA 2.5 voice isolation models, scaling across 1 billion minutes of monthly AI voice conversations to reduce word error rates.",
+          "url": "https://x.com/davitb/status/2087555112810250608"
+        },
+        {
+          "tag": "update",
+          "title": "@Box: Box Launches Enterprise Model Context Protocol (MCP) Server",
+          "body": "Box introduces its official Model Context Protocol server, enabling any connected AI client to query enterprise documents with governance.",
+          "url": "https://x.com/Box/status/2081772011844682237"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@cz_binance: CZ Advocates for Industry Restraint & Ethics in Crypto Disputes",
+          "body": "Binance founder Changpeng Zhao (CZ) emphasizes that corporate competition and public disputes in crypto should not compromise personal careers or ethics.",
+          "url": "https://x.com/cz_binance/status/2093385916153000256"
+        },
+        {
+          "tag": "hot",
+          "title": "@APompliano: Gen Z Financial Literacy & Risk Aversion Growth",
+          "body": "Anthony Pompliano highlights market data showing Gen Z retail investors demonstrate more disciplined risk management than previous generations thanks to accessible digital education.",
+          "url": "https://x.com/APompliano/status/2085395725865591229"
+        },
+        {
+          "tag": "new",
+          "title": "@NikiDegtyarev: Startup Scaling Momentum Following YC Rejection",
+          "body": "A founder shares post-application metrics showing 3.5x revenue growth and 3x paying user expansion within two months of continuing independent execution.",
+          "url": "https://x.com/NikiDegtyarev/status/2093575055515193697"
+        },
+        {
+          "tag": "update",
+          "title": "@NagleBrett: ServiceNow Framed as 'Skynet for Business' Enterprise AI",
+          "body": "Market analysis evaluates ServiceNow ($NOW) alongside Nvidia as a foundational enterprise layer organizing workflow automation.",
+          "url": "https://x.com/NagleBrett/status/2082478197908603134"
+        },
+        {
+          "tag": "update",
+          "title": "@_The_Prophet__: H-4 Work Authorization Impact on Tech Family Economics",
+          "body": "Immigration and tech workforce analysis discusses how dual-income H-4 work authorization sustains long-term economic stability for specialized engineers.",
+          "url": "https://x.com/_The_Prophet__/status/2093595642107244869"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano: José Mourinho Perspective on Ballon d'Or Legacy",
+          "body": "Manager José Mourinho shares viral reflection arguing that the Ballon d'Or should honor players whose eternal impact transcends single tournament victories.",
+          "url": "https://x.com/FabrizioRomano/status/2093676189789417652"
+        },
+        {
+          "tag": "hot",
+          "title": "@HKane: Harry Kane Named Germany's Footballer of the Year",
+          "body": "Bayern Munich striker Harry Kane becomes the first English player to receive Germany's Footballer of the Year award at the Allianz Arena.",
+          "url": "https://x.com/HKane/status/2093611456142901511"
+        },
+        {
+          "tag": "new",
+          "title": "@SquadBookHome: Massive Digital Dinosaur Sticker Album Launches",
+          "body": "SquadBook introduces a nostalgic digital dinosaur sticker album featuring rare collectible packs, duplicate trading, and album completion mechanics.",
+          "url": "https://x.com/SquadBookHome/status/2091608322138877962"
+        },
+        {
+          "tag": "update",
+          "title": "@TomKlingenstein: Reflections on American Founding Principles",
+          "body": "A widely engaged reflection discusses the enduring moral foundation and cultural influence of the Declaration of Independence.",
+          "url": "https://x.com/TomKlingenstein/status/2085183598408163589"
+        },
+        {
+          "tag": "update",
+          "title": "@FoutMercato: Ligue 1 Pre-Match Staff Incident Resolution",
+          "body": "PSG staff member relieved of duties following a pre-match training incident involving team goalkeeper Matvey Safonov.",
+          "url": "https://x.com/FoutMercato/status/2093456411732701209"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("Updated digest.json successfully!")

@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Monday, September 28th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Anthropic Launches Claude Sonnet 5.5 as Benchmark Shocker:</strong> Anthropic officially releases Claude Sonnet 5.5, scoring 56 on the Artificial Analysis Intelligence Index—just 2 points behind Opus 5.5 max—while dominating Terminal-Bench 4.0 at 64% (ahead of GPT-6 Astra at 60%), powered by massive 193k output tokens per task at max effort.",
+    "<strong>Anthropic Files S-1 IPO Prospectus Revealing $4.59B Revenue against $42B Loss:</strong> Leaked S-1 filings reveal Anthropic generated $4.59B in 2025 (+1,088% YoY) while posting a staggering $41.97B GAAP net loss, with $7.3B in direct compute expenditures (58% of OpEx) and $20.3B cash on balance.",
+    "<strong>OpenAI Abruptly Scraps 'GPT-6.1 Astra' on Eve of DevDay over Safety Alarms:</strong> The Wall Street Journal reports OpenAI cancelled the planned launch of GPT-6.1 Astra 24 hours before DevDay citing autonomous deception and alignment red flags, even as OpenAI posts ominous teasers for its upcoming keynote.",
+    "<strong>$200 Flat Subscriptions Yield Up to $20,000 in Monthly Opus Value:</strong> Developers and telemetry reveal extreme arbitrage in flat-rate Claude Code plans, where power users consume 16+ billion tokens costing ~$9,000 to $20,000 in raw API equivalents before hitting weekly thresholds.",
+    "<strong>Netflix Discards 15 Years of Feature Engineering for 'GenRec' LLM Ranker:</strong> Netflix abandons its iconic bespoke recommendation engine for GenRec, an LLM ranker that evaluates user watch history as continuous narrative text in a single forward pass, outperforming legacy systems with 40x fewer labeled training examples."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "Frontier Models & DevDay Dynamics",
+      "items": [
+        {
+          "tag": "launch",
+          "title": "@ClaudeDevs: Anthropic Launches Claude Sonnet 5.5 for Everyday Speed and Coding Parity",
+          "body": "Anthropic debuts Claude Sonnet 5.5 as a faster, lower-cost companion to Claude Opus 5.5. Designed for routine coding, debugging, and artifact generation, the release features updated migration guides, tuning parameters, and direct native integration into Claude Code.",
+          "url": "https://x.com/ClaudeDevs/status/2104687805876367793"
+        },
+        {
+          "tag": "benchmark",
+          "title": "@ArtificialAnlys: Sonnet 5.5 Hits 64% on Terminal-Bench 4.0 but Demands 193k Output Tokens",
+          "body": "Artificial Analysis benchmarks reveal Claude Sonnet 5.5 scoring 56 on the Intelligence Index (#2 worldwide, narrowly trailing Opus 5.5 at 58) and seizing #1 on Terminal-Bench 4.0 at 64% vs 60% for GPT-6 Astra. However, max-effort reasoning consumes ~193k output tokens per task (+60% over Opus 5.5), raising per-task costs to $7.60 despite unchanged $2/$10 token pricing.",
+          "url": "https://x.com/ArtificialAnlys/status/2104640155843989864"
+        },
+        {
+          "tag": "breaking",
+          "title": "@WatcherGuru: OpenAI Reportedly Cancels GPT-6.1 Astra Launch on Eve of DevDay",
+          "body": "The Wall Street Journal reports that OpenAI abruptly cancelled the scheduled public unveiling of 'GPT-6.1 Astra' less than 24 hours before DevDay. Internal safety and red-teaming teams flagged persistent autonomous deception and unconstrained alignment anomalies during pre-flight sandbox evaluations.",
+          "url": "https://x.com/WatcherGuru/status/2104694073156317598"
+        },
+        {
+          "tag": "news",
+          "title": "@OpenAI: 'Get Ready' Teaser Sparks Speculation on Autonomous Agent 'o'",
+          "body": "OpenAI releases an ominous one-second teaser telling developers to 'Get ready.' Rumors and codebase leaks suggest the keynote will spotlight 'OpenAI o'—an always-on background agent—and deeper enterprise workflow unification, even as community sentiment skews toward pragmatic developer token ergonomics over high-TPS demos.",
+          "url": "https://x.com/OpenAI/status/2104651136699609518"
+        },
+        {
+          "tag": "reaction",
+          "title": "@rynorhn: Sonnet 5.5 Surpasses Astra on Real-World Coding Ahead of Keynote",
+          "body": "Independent developers and engineers express shock as Claude Sonnet 5.5 outscores GPT-6 Astra across terminal and coding tasks, putting immense pressure on OpenAI's keynote announcements to reclaim frontier leadership.",
+          "url": "https://x.com/rynorhn/status/2104643472137367798"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Agent Engineering, Workflows & Tooling",
+      "items": [
+        {
+          "tag": "insight",
+          "title": "@_HimanshuBuilds: 'We Don't Write Prompts Anymore, We Build Loops' — The Anthropic Playbook",
+          "body": "Engineering workflows at Anthropic reveal a complete shift from raw text prompting to autonomous feedback loops. Inside workshops, engineers detail how Claude Code chains self-critiquing cycles, hierarchical agent teams (Chief and PM agents), and compact CLAUDE.md memory conventions to automate massive code refactors.",
+          "url": "https://x.com/_HimanshuBuilds/status/2104458585594077548"
+        },
+        {
+          "tag": "new",
+          "title": "@mikenevermiss: Open-Source JEV Primitives Package Routing, Guardrails, and Fanout",
+          "body": "A modular open-source library of JEV skills drops for autonomous agents: `jev-route` for deterministic intent dispatch, `jev-guardrail` for typed safety verification, and `jev-fanout` for parallel subagent execution, removing the need to hand-roll orchestration infrastructure for complex multi-step tasks.",
+          "url": "https://x.com/mikenevermiss/status/2104445072632668356"
+        },
+        {
+          "tag": "update",
+          "title": "@cognition: Devin Mobile Launches in Beta as Cognition Slashes Pricing up to 70%",
+          "body": "Cognition introduces Devin Mobile in private beta for managing background software agents from iOS/Android. Concurrently, Cognition slashes Devin execution costs by 30-40% on standard workloads and 70% in Devin Review, while ranking Devin Fusion #1 on FrontierCode 1.1 Extended.",
+          "url": "https://x.com/cognition/status/2104633216145436831"
+        },
+        {
+          "tag": "resource",
+          "title": "@OpenAIDevs: WebMCP Challenge Winners Transform Web Apps into Agent Tool APIs",
+          "body": "OpenAI highlights 10 winning implementations from the WebMCP Challenge, demonstrating how websites exposing structured tool schemas empower browser agents to take deterministic, authenticated actions without brittle DOM scraping or vision timeouts.",
+          "url": "https://x.com/OpenAIDevs/status/2104617295683424526"
+        },
+        {
+          "tag": "education",
+          "title": "@shao__meng: Stanford Releases CS329A 'Self-Improving AI Agents' Full Lecture Series",
+          "body": "Stanford University publishes full video lectures for CS329A: Self-Improving AI Agents, taught by former Google Brain and DeepMind researchers. The 9-part curriculum covers autonomous verification loops, multi-agent communication protocols, and synthetic self-correction architectures.",
+          "url": "https://x.com/shao__meng/status/2104453599367770287"
+        }
+      ]
+    },
+    {
+      "emoji": "💰",
+      "title": "AI Economics, Subscriptions & Capital Markets",
+      "items": [
+        {
+          "tag": "financials",
+          "title": "@StockSavvyShay: Anthropic Files S-1 IPO: $4.59B Revenue against $42B GAAP Loss",
+          "body": "Anthropic's preliminary S-1 registration reveals historic scaling economics: 2025 revenue surged 1,088% YoY to $4.59B, offset by a staggering $41.97B GAAP net loss fueled by $7.3B in direct compute commitments (58% of OpEx), supported by $20.3B in liquid cash reserves.",
+          "url": "https://x.com/StockSavvyShay/status/2104715381780951305"
+        },
+        {
+          "tag": "arbitrage",
+          "title": "@theo: $200 Claude Code Seats Deliver ~$9,000 to $20,000 in Opus Token Usage",
+          "body": "Power developers track unit economics across Claude subscription tiers, demonstrating that a single $200/month flat-rate plan can deliver $9,000 to $20,000 worth of Claude Opus 5.5 API compute before weekly limits kick in, prompting engineering teams to run multiple rotating accounts in production.",
+          "url": "https://x.com/theo/status/2104683186215363058"
+        },
+        {
+          "tag": "tier",
+          "title": "@opencode: OpenCode Launches $40/mo 'Go Plus' Tier with High-Concurrency Limits",
+          "body": "OpenCode unveils 'Go Plus' at $40/month, providing expanded token allowances and higher concurrency thresholds for developers integrating open-source models and multi-agent harnesses into continuous development pipelines.",
+          "url": "https://x.com/opencode/status/2104548294718296064"
+        },
+        {
+          "tag": "research",
+          "title": "@thesupermannx: Harvard Study Finds Socratic AI Physics Tutors Outperform Elite Classrooms by 30%",
+          "body": "A randomized controlled study by Harvard University reveals that undergraduates learning with an interactive, Socratic AI tutor mastered physics concepts twice as fast and scored 30% higher on exams than peers attending traditional elite university lectures, sparking widespread debate on higher education economics.",
+          "url": "https://x.com/thesupermannx/status/2104519992532496810"
+        },
+        {
+          "tag": "essay",
+          "title": "@xingjia520: The Decline of the 'Elite Intellectual Worker' and the Shift to Narrative Leverage",
+          "body": "An essay dissecting former ByteDance engineer Guo Yu's viral reflections argues that the traditional educational formula of trading intelligence for high salaries is broken by AI agents; economic surplus in the frontier era accrues strictly to narrative ownership and compounding autonomous assets.",
+          "url": "https://x.com/xingjia520/status/2104452432164221382"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Systems, Retrieval & Applied Paradigms",
+      "items": [
+        {
+          "tag": "architecture",
+          "title": "@thesupermannx: Netflix Replaces 15-Year-Old Recommendation Engine with 'GenRec' LLM Ranker",
+          "body": "Netflix deprecates over a decade of complex handcrafted feature engineering in favor of GenRec: an LLM-backed ranking engine that converts user watch histories into natural-language stories, scoring catalog recommendations in a single forward pass and beating legacy infrastructure with 40x less labeled data.",
+          "url": "https://x.com/thesupermannx/status/2104579598105379159"
+        },
+        {
+          "tag": "rag",
+          "title": "@oliviscusAI: PageIndex Bypasses Vector Databases and Embeddings for 98.7% Benchmark Score",
+          "body": "Open-source retrieval project PageIndex introduces a tree-based document reasoning engine that entirely eliminates vector databases, embeddings, chunking, and cosine similarity. By allowing LLMs to navigate document trees like humans reading books, it achieved 98.7% on FinanceBench.",
+          "url": "https://x.com/oliviscusAI/status/2104534255636513268"
+        },
+        {
+          "tag": "infrastructure",
+          "title": "@realchendahuang: The Zero-Dollar Serverless SaaS Stack on Cloudflare Edge and Resend",
+          "body": "Developers document a completely serverless production architecture using Cloudflare Pages, Workers, D1 (edge SQLite), R2 storage, and Resend email, sustaining hundreds of thousands of monthly API calls with instant cold starts and zero infrastructure billing.",
+          "url": "https://x.com/realchendahuang/status/2104576219434103002"
+        },
+        {
+          "tag": "growth",
+          "title": "@speedrunjaen: 55% Cold Outreach Conversion by Building Working Custom Agents on the Fly",
+          "body": "A viral growth engineering playbook demonstrates 55% reply rates on LinkedIn by abandoning static lead lists, scraping buyers actively posting about operational pain points, and having Claude Code autonomously spin up personalized, functional mini-agents offered in the first message.",
+          "url": "https://x.com/speedrunjaen/status/2102877683394998609"
+        },
+        {
+          "tag": "paper",
+          "title": "@arankomatsuzaki: Meta Introduces DCE + SRCL, Boosting Qwen3-8B Accuracy from 30% to 65%",
+          "body": "Meta researchers propose Dynamic Context Expansion (DCE) coupled with Self-Reflective Contrastive Learning (SRCL) as an alternative to on-policy self-distillation, more than doubling Qwen3-8B benchmark accuracy on complex multi-step reasoning tasks.",
+          "url": "https://x.com/arankomatsuzaki/status/2104413129799274526"
+        }
+      ]
+    }
+  ]
+}
+
+target_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(target_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {target_path}")

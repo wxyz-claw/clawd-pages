@@ -1,0 +1,119 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Friday, September 11th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Fields Medalists Warn of AI Misalignment in Math:</strong> Terence Tao and 24 Fields Medalists released an open letter criticizing AI labs for treating mathematical research as a brute-force benchmark, rushing unverified proofs, and compromising attribution.",
+    "<strong>Elon Musk Details Grok 4.7 Delay:</strong> Elon Musk revealed Grok 4.7 will take a few more days to release after reinforcement learning overly penalized response length, causing the model to give up prematurely on hard tasks.",
+    "<strong>ChatGPT Sites Passes 5 Million Milestone:</strong> OpenAI announced over 5 million web applications have been published via ChatGPT Sites, introducing team co-editing, private sharing, custom domain mapping, and database inspection.",
+    "<strong>Massive Security Breach via Chinese LLM Proxy Relays:</strong> Cybersecurity researchers uncovered a 6TB leak from Chinese commercial LLM API routers exposing SSH keys, VPN credentials, and internal prompt data from top tech firms and government agencies.",
+    "<strong>Apple Purchasing Samsung Foldable OLEDs for iPhone Duo:</strong> Industry sources reported Apple is sourcing foldable OLED display modules from Samsung at $250 per unit for the upcoming iPhone Duo."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@ns123abc & @Polymarket: Terence Tao & 24 Fields Medalists Publish Open Letter on AI in Math",
+          "body": "Terence Tao and 24 fellow Fields Medalists signed a joint letter warning AI laboratories against treating mathematics as a brute-force benchmark. They highlighted concerns over rushed proof announcements, lack of proper writeups, and potential plagiarism.",
+          "url": "https://x.com/ns123abc/status/2098515807869255893"
+        },
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Grok 4.7 Launch Delayed a Few Days for RL Fine-Tuning",
+          "body": "Elon Musk shared that Grok 4.7 requires additional fine-tuning after RL training overly penalized output length, leading the model to terminate early on complex reasoning tasks.",
+          "url": "https://x.com/elonmusk/status/2098462085973741960"
+        },
+        {
+          "tag": "new",
+          "title": "@ChatGPT: ChatGPT Sites Surpasses 5M Apps with New Collaboration Features",
+          "body": "OpenAI reported over 5 million sites created on ChatGPT Sites since launch, rolling out shared workspace editing, private link permissions, custom domain support, and live database inspection.",
+          "url": "https://x.com/ChatGPT/status/2098457920291946894"
+        },
+        {
+          "tag": "hot",
+          "title": "@shoucccc & @caozlog: Chinese LLM API Routers Leaking Enterprise Credentials",
+          "body": "Security researcher Chaofan Shou revealed a 6TB dataset captured from commercial LLM routers containing active SSH keys, cloud API tokens, and internal prompt logs from Chinese tech leaders and government entities.",
+          "url": "https://x.com/shoucccc/status/2098169782541631871"
+        },
+        {
+          "tag": "new",
+          "title": "@ClaudeDevs: Anthropic Introduces 'claude plugin eval' for Skill Testing",
+          "body": "Anthropic released 'claude plugin eval' in Claude Code, enabling developers to build benchmark test suites, evaluate custom plugin performance, and compare outputs with and without plugins.",
+          "url": "https://x.com/ClaudeDevs/status/2098500999656923145"
+        },
+        {
+          "tag": "update",
+          "title": "@vineerpasam & @dirtman: Developers Debate Vibe Coding Reliability & Platform Risk",
+          "body": "Founders and engineers discussed the risks of 'vibe coding' micro-apps when frontier model providers frequently ship native features that displace standalone indie tools overnight.",
+          "url": "https://x.com/vineerpasam/status/2098285000076739065"
+        },
+        {
+          "tag": "tip",
+          "title": "@Miulahung: Benchmark Analysis of Token Usage Across GPT-6 Astra Reasoning Levels",
+          "body": "Developer tests comparing GPT-5.6 Sol and GPT-6 Astra reasoning levels found Astra High to be the optimal sweet spot for complex multi-step execution balance.",
+          "url": "https://x.com/Miulahung/status/2098369240327987603"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Apple Paying Samsung $250/Unit for iPhone Duo Foldable OLEDs",
+          "body": "Reports confirmed Apple is sourcing foldable OLED panels from Samsung at $250 per display for the planned iPhone Duo foldable hardware launch.",
+          "url": "https://x.com/WatcherGuru/status/2098401560980283846"
+        },
+        {
+          "tag": "new",
+          "title": "@Polymarket: Fields Medalist Deng Yu Vows to Write Romance Novels If AI Solves Math",
+          "body": "Polymarket highlighted Chinese Fields Medal winner Deng Yu's playful claim that he will retire from mathematics to author romance novels if AI models achieve total mathematical problem-solving parity.",
+          "url": "https://x.com/Polymarket/status/2098487731051438424"
+        },
+        {
+          "tag": "update",
+          "title": "@johnondrasik & @billiewebbb: 25th Anniversary Reflections on 9/11",
+          "body": "Commentators and public figures marked the 25th anniversary of 9/11, reflecting on historical memory, national unity, and long-term cultural impacts.",
+          "url": "https://x.com/johnondrasik/status/2098401481774727327"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General & Sports",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano & @Bayern_PR: Declan Rice & Anthony Gordon Back Harry Kane for Ballon d'Or",
+          "body": "Declan Rice and Anthony Gordon publicly endorsed Harry Kane for the Ballon d'Or following his record-breaking goal tally at Bayern Munich.",
+          "url": "https://x.com/FabrizioRomano/status/2098024831610400995"
+        },
+        {
+          "tag": "update",
+          "title": "@ChampionsLeague & @iMiaSanMia: Bayern Munich Extends European Home Record",
+          "body": "UEFA Champions League highlights showcased Michael Olise and Bayern Munich extending their unmatched 39-game home unbeaten run in European competition.",
+          "url": "https://x.com/ChampionsLeague/status/2098382045751967887"
+        },
+        {
+          "tag": "new",
+          "title": "@SportsCenter: Caitlin Clark Sets Historic WNBA Record",
+          "body": "SportsCenter highlighted Caitlin Clark becoming the first player in WNBA history to log consecutive games with at least 30 points and 10 assists.",
+          "url": "https://x.com/SportsCenter/status/2093513930056282138"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("Created digest.json successfully!")

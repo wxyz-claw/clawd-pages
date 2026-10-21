@@ -1,0 +1,149 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Sunday, September 20th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>RSA-896 Factored in 30 GPU-Years (10 Days):</strong> Cryptographers publish a 450-bit factor of the 270-digit RSA-896 challenge using 2,048 GPUs, prompting community calculations that legacy hardware roots of trust like the Nintendo DSi's RSA-1024 would take roughly ~900 GPU-years to crack.",
+    "<strong>Anthropic Opus 5 Praise vs Harness Fatigue:</strong> Zhu Liang reports Anthropic's Opus 5 has reached frontier dominance over competitors, while Theo highlights developer fatigue over fragmented agent harnesses as builders plead for universal runtime layers across Claude and Codex.",
+    "<strong>Emil Kowalski's Agent Design Skills Near 40k Stars:</strong> Linear designer Emil Kowalski open-sources a curated skill suite (including Apple Design principles from WWDC, animation review, and UI library selection) giving coding agents refined aesthetic judgment and native-grade micro-interactions.",
+    "<strong>Sub-1B Decision Models Advance with Laya-MLX & Game Micro:</strong> Developers demonstrate Laya running locally on Apple Silicon MLX at 60 decisions/sec (&lt;1GB RAM) playing Snake, while Jev is deployed to orchestrate independent per-unit micro-management and kiting in Warcraft III.",
+    "<strong>Terence Tao Urges AI Deceleration Amid Rapid Advances:</strong> Renowned mathematician Terence Tao cautions that the breakneck pace of AI capabilities is expanding faster than humanity can safely integrate, arguing there is no imperative reason to rush frontier deployment."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Agent Tooling",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@pengchujin: Emil Kowalski Releases AI Agent Design Skills Suite for Native UI Polish",
+          "body": "Linear designer Emil Kowalski open-sources a widely adopted collection of agent skills—including Apple Design (WWDC principles), animation review, and Swift idioms—bringing human-grade aesthetic nuance, component hierarchy, and feedback timing to autonomous frontend agents.",
+          "url": "https://x.com/pengchujin/status/2101578929786228924"
+        },
+        {
+          "tag": "update",
+          "title": "@paradite_: Anthropic's Opus 5 Surpasses Fable 5.1 Across Real-World Workflows",
+          "body": "Zhu Liang reports that recent upgrades to Anthropic's Opus 5 have propelled it well ahead of Fable 5.1, urging developers to migrate workflows to the newly refined frontier model.",
+          "url": "https://x.com/paradite_/status/2101651765603295602"
+        },
+        {
+          "tag": "new",
+          "title": "@NousResearch: Hermes Agent Launches Official Plugin Catalog with 100 Extensions",
+          "body": "Nous Research rolls out the official Hermes Agent Plugin Catalog, featuring 4 core system tools alongside 96 verified community integrations for desktop mods, cross-platform environments, and specialized browsing.",
+          "url": "https://x.com/NousResearch/status/2100266421020152114"
+        },
+        {
+          "tag": "tip",
+          "title": "@Gas1688: Why Production AI Agents Require Principled Harness Engineering Over Raw Demos",
+          "body": "Reflecting on LangChain's 'Agents From Scratch,' a practitioner breaks down why toy agent scripts fail in production, emphasizing LLM-as-a-judge evaluations, structured human-in-the-loop boundaries, and persistent memory.",
+          "url": "https://x.com/Gas1688/status/2101342553660363179"
+        },
+        {
+          "tag": "new",
+          "title": "@jiang_kev: PolarBrowser Secures $5.7M to Scale Autonomous Enterprise Web Navigation",
+          "body": "PolarBrowser lands $5.7M in seed financing for its web agent browser, claiming superiority over OpenAI and Anthropic across agent benchmarks after executing 4.5M+ browser actions for enterprise workflows.",
+          "url": "https://x.com/jiang_kev/status/2082496145994248488"
+        },
+        {
+          "tag": "update",
+          "title": "@AndyL5cc: Codex Automates Multi-Account Social Content Operations End-to-End",
+          "body": "A creator documents using Codex to manage Xiaohongshu accounts autonomously—from niche ideation and copy drafting to performance analytics—generating 3M+ impressions and 2,000 followers in under a week.",
+          "url": "https://x.com/AndyL5cc/status/2101499000990179392"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Systems, Cryptography & Models",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@sweis & @__soragoto__: 450-Bit Factor of RSA-896 Found in 30 GPU-Years",
+          "body": "Cryptographer Steve Weis reveals a 450-bit factor of the 270-digit RSA-896 challenge number. The computation consumed ~30 GPU-years across up to 2,048 GPUs in 10 calendar days, sparking analysis that legacy RSA-1024 hardware roots (like Nintendo DSi) are within reach of ~900 GPU-years.",
+          "url": "https://x.com/sweis/status/2101484464807596264"
+        },
+        {
+          "tag": "hot",
+          "title": "@theo: Developers Plead for Universal Harness as Tool Switching Fatigue Mounts",
+          "body": "Theo highlights growing community exhaustion from constantly context-switching between Claude Code and OpenAI Codex, amplifying calls for a unified agent harness that works seamlessly across competing foundation models.",
+          "url": "https://x.com/theo/status/2101436984694804687"
+        },
+        {
+          "tag": "new",
+          "title": "@mizorewww: Laya-MLX Runs Sub-1B Decision Models at 60 FPS Locally on M3 Max",
+          "body": "Developer mizore ports Laya (a fast text-probability decision engine similar to Jev) to Apple Silicon MLX, demonstrating 50x speedups, sub-1GB memory consumption, and 60 decisions per second playing Snake locally.",
+          "url": "https://x.com/mizorewww/status/2101473552956555427"
+        },
+        {
+          "tag": "tip",
+          "title": "@techNmak: Deep Architectural Dissection of PEFT: LoRA, QLoRA, VeRA, and Delta-LoRA",
+          "body": "A comprehensive technical guide demystifies the PEFT landscape, contrasting which parameters, activation memories, or base weight updates move between LoRA-FA, QLoRA, VeRA, Delta-LoRA, and LoRA+.",
+          "url": "https://x.com/techNmak/status/2101614143447200124"
+        },
+        {
+          "tag": "update",
+          "title": "@KKaWSB: Micro-Managing Warcraft III Units with Individual Jev Decision Models",
+          "body": "Gamers experiment with assigning independent Jev-based tactical decision micro-models to every unit in a Warcraft III army, achieving automated hero-level kiting and focus-firing behavior.",
+          "url": "https://x.com/KKaWSB/status/2101437008703009051"
+        },
+        {
+          "tag": "tip",
+          "title": "@argofowl: Tuning AGENTS.md Stabilizes Long-Horizon Task Execution in Astra",
+          "body": "Builders discuss stabilizing Astra by refining AGENTS.md conventions, preventing premature termination and erratic reasoning loops without requiring expensive multi-turn prompting.",
+          "url": "https://x.com/argofowl/status/2101340945312776669"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture, Science & Life",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@Liv_Boeree: Terence Tao Urges AI Deceleration: 'No Reason to Be This Fast'",
+          "body": "Fields medalist Terence Tao calls for a deliberate slowdown in AI development pace, arguing that rapid, unconstrained deployment provides little tangible benefit compared to the mounting systemic coordination risks.",
+          "url": "https://x.com/Liv_Boeree/status/2101400915295055941"
+        },
+        {
+          "tag": "update",
+          "title": "@bbcchinese: Trump Plans Unprecedented Airport Reception for Xi Jinping",
+          "body": "Reports indicate US President Donald Trump will personally greet Chinese President Xi Jinping on the airport tarmac, marking the first such presidential airport reception for a visiting foreign head of state in over six decades.",
+          "url": "https://x.com/bbcchinese/status/2101262192880325012"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Harry Kane Reflects on 45-Year Bayern Ballon d'Or Drought",
+          "body": "Following Bayern Munich's dominant run, Harry Kane discusses Ballon d'Or prospects, acknowledging Bayern has not claimed the award since Karl-Heinz Rummenigge in 1981 while praising fellow contenders Michael Olise and Kylian Mbappé.",
+          "url": "https://x.com/iMiaSanMia/status/2101610543844827210"
+        },
+        {
+          "tag": "tip",
+          "title": "@Peregrino1708: The Brutal Economics and Pay Structure of Oktoberfest Servers",
+          "body": "As Munich's Oktoberfest kicks off, an insider breakdown reveals servers front €1.5k–€3.5k in tokens/attire, purchase beer at wholesale to earn margins plus tips, and walk 50k steps carrying 10+ steins to make €5k–€12k over two weeks.",
+          "url": "https://x.com/Peregrino1708/status/2101377720458596467"
+        },
+        {
+          "tag": "tip",
+          "title": "@mubeitech: Charlie Munger's Golden Rule on Elon Musk: Extreme Luck, Never Bet",
+          "body": "A viral retrospective highlights Charlie Munger's assessment of Elon Musk—recognizing his repeated survival through extreme leverage and luck, while maintaining a strict policy to never invest with nor bet against him.",
+          "url": "https://x.com/mubeitech/status/2101501634131931417"
+        },
+        {
+          "tag": "tip",
+          "title": "@emrenakyol: German EV Bureaucracy Fines Plugged-In Tesla in Charging Spot",
+          "body": "A Tesla driver in Konstanz plugged into an active EV charging stall returns to find a municipal parking violation, discovering local regulations mandate a physical German EV badge regardless of the vehicle or charging cable.",
+          "url": "https://x.com/emrenakyol/status/2101417083640684729"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-20 12:00 ET!")

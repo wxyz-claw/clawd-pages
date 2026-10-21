@@ -1,0 +1,137 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, August 22nd, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Theo's Model Tier List:</strong> T3.gg creator Theo published a comprehensive tier list evaluating current frontier AI models across coding, reasoning, and multi-modal developer workflows.",
+    "<strong>Linus Torvalds on \"Vibe Coding\" vs Maintenance:</strong> Linus Torvalds highlighted that while AI prompt generation excels at throwaway scripts, long-term codebase maintenance still requires deep human comprehension.",
+    "<strong>Peter Thiel's Investment Strategy Insights:</strong> PayPal & Palantir co-founder Peter Thiel shared updated macro market positioning and capital allocation perspectives.",
+    "<strong>GTA VI Extended Look on Netflix:</strong> Rockstar Games confirmed \"Grand Theft Auto VI: An Extended Look\" will premiere globally on Netflix on Thursday, August 27 at 3 PM ET.",
+    "<strong>Mbappé Halftime Tactical Audio Goes Viral:</strong> Real Madrid star Kylian Mbappé was recorded giving direct mid-match positional instructions to teammate Arda Güler."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@theo: Theo's Frontier AI Model Tier List",
+          "body": "t3.gg founder Theo released an updated tier list evaluating leading LLMs across developer productivity, autonomous coding accuracy, and tool orchestration.",
+          "url": "https://x.com/theo/status/2091277536600969276"
+        },
+        {
+          "tag": "hot",
+          "title": "@JeffLia12309881: Linus Torvalds Comments on \"Vibe Coding\" & Kernel Maintenance",
+          "body": "Linux creator Linus Torvalds emphasized that prompt-driven 'vibe coding' works well for single-use scripts, but core infrastructure and long-term kernel maintenance demand human understanding.",
+          "url": "https://x.com/JeffLia12309881/status/2091104261925138519"
+        },
+        {
+          "tag": "new",
+          "title": "@ustnvs: Agentic Mobile Automation CLI",
+          "body": "Developer @ustnvs released an iOS and Android CLI allowing AI coding agents to interact natively with mobile user interfaces using plain-language action target descriptions.",
+          "url": "https://x.com/ustnvs/status/2084212680257143213"
+        },
+        {
+          "tag": "update",
+          "title": "@altryne: Free Tier Access for \"Ox-Alpha\" Stealth Model",
+          "body": "AI researchers reported that the stealth 'Ox-Alpha' model has deployed across OpenRouter and OpenCode with free tier access for public benchmarking.",
+          "url": "https://x.com/altryne/status/2090913538932129874"
+        },
+        {
+          "tag": "update",
+          "title": "@ricochetx81: NVMe Hardware Requirements for AI Data Centers",
+          "body": "Infrastructure engineers outline flash storage and prefix cache bandwidth requirements needed to maximize throughput in high-density AI model inference clusters.",
+          "url": "https://x.com/ricochetx81/status/2091188073434681391"
+        },
+        {
+          "tag": "new",
+          "title": "@LinearUncle: Darkbloom Idle NPU Compute Marketplace",
+          "body": "LinearUncle showcased Darkbloom, a platform enabling Apple Silicon Mac owners to monetise idle NPU compute by serving open-weights LLMs over OpenRouter.",
+          "url": "https://x.com/LinearUncle/status/2091066390090564063"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@insiderwave: Peter Thiel Portfolio & Capital Allocation",
+          "body": "Venture capitalist and Palantir co-founder Peter Thiel shared perspectives on market liquidity, technology valuations, and long-term capital allocation strategies.",
+          "url": "https://x.com/insiderwave/status/2091220309802184984"
+        },
+        {
+          "tag": "update",
+          "title": "@FundamentEdge: Rethinking Career Velocity & Retirement Math",
+          "body": "Former hedge fund PM Brett Caughran highlighted the importance of early capital accumulation and skill compounding over traditional 65-year retirement models.",
+          "url": "https://x.com/FundamentEdge/status/2090170781917646949"
+        },
+        {
+          "tag": "new",
+          "title": "@kgast99: Enterprise Tech Procurement & Purchase Orders",
+          "body": "Enterprise founders discuss transitioning from pilot programs to multi-million dollar binding purchase orders with Fortune 50 corporate clients.",
+          "url": "https://x.com/kgast99/status/2008913704826409359"
+        },
+        {
+          "tag": "update",
+          "title": "@StrongandSafeNY: Utility Rate Accountability Debate in New York",
+          "body": "Policy advocates call for increased transparency and regulatory scrutiny following consecutive residential energy rate increases across New York.",
+          "url": "https://x.com/StrongandSafeNY/status/2090441079099097192"
+        },
+        {
+          "tag": "hot",
+          "title": "@KillaKreww: MrBeast's $500K Citywide Hide-and-Seek Challenge",
+          "body": "YouTube creator MrBeast launched a massive real-world event challenging 100 law enforcement officers to locate 4 hidden players across the city within 12 hours.",
+          "url": "https://x.com/KillaKreww/status/2091215308019450141"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@RockstarGames: GTA VI Extended Look Premieres on Netflix",
+          "body": "Rockstar Games officially announced 'Grand Theft Auto VI: An Extended Look' streaming globally on Netflix on Thursday, August 27 at 3:00 PM ET.",
+          "url": "https://x.com/RockstarGames/status/2090187149090193916"
+        },
+        {
+          "tag": "hot",
+          "title": "@TouchlineX: Mbappé On-Field Tactical Instructions to Güler",
+          "body": "Viral match audio captured Real Madrid forward Kylian Mbappé providing halftime positional guidance to Arda Güler to optimize attacking space.",
+          "url": "https://x.com/TouchlineX/status/2091263790209806352"
+        },
+        {
+          "tag": "update",
+          "title": "@drsuffy: Honda Engineering Excellence Viral Clip",
+          "body": "Automotive enthusiasts highlight Honda Chief Engineer design achievements and precision vehicle engineering.",
+          "url": "https://x.com/drsuffy/status/2090903377249292563"
+        },
+        {
+          "tag": "update",
+          "title": "@JoePostingg: Upfront Purchase vs Monthly Payment Math",
+          "body": "Viral social media commentary pokes fun at consumer financing decisions between $0 down monthly plans versus $800 upfront expenses.",
+          "url": "https://x.com/JoePostingg/status/2091265581953548706"
+        },
+        {
+          "tag": "update",
+          "title": "@TomKlingenstein: Reflections on Foundational Principles",
+          "body": "Civic writer Tom Klingenstein shares insights on public service, legal scholarship, and constitutional leadership.",
+          "url": "https://x.com/TomKlingenstein/status/2085183599243084164"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("Generated fresh digest.json successfully!")

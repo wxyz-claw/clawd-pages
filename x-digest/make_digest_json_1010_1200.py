@@ -1,0 +1,179 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, October 10th, 2026 — 12:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Satya Nadella Frames Autonomous Models as Insider Risks:</strong> Microsoft CEO Satya Nadella pens an essay analyzing the inability to trace non-deterministic neural pathways in production software, positioning autonomous agent deployments as emerging insider risks. Amplified by Elon Musk, the piece highlights escalating concerns across frontier labs over model behavior auditability.",
+    "<strong>Google DeepMind Spins Up Polaris Team for AI Coding Agent Evals:</strong> Tamay Besiroglu spotlights Google DeepMind's recruitment for Polaris, an elite engineering unit tasked with designing comprehensive evaluation benchmarks that will define future coding agents, offering up to $1.1M in total compensation regardless of formal degrees.",
+    "<strong>Reverse Engineer Anything (REA) Connects MCP to Disassemblers and Binaries:</strong> An open-source MCP server named REA bridges disassemblers (Ghidra, Hopper, IDA) and Electron ASAR unpackers into Claude Code, Codex, and Cursor, empowering autonomous agents to reverse engineer compiled applications and reconstruct C-level pseudocode from raw binaries.",
+    "<strong>Developer Fleet Economics Focus on Subagent Cache Lifespans and Compaction Limits:</strong> Analysis of Claude Code internals reveals that subagent prompt cache TTL defaults to just 5 minutes rather than the main agent's 1-hour window, while high default compaction thresholds (~967k tokens) push engineers toward manual cache tuning and sandboxed tool-output plugins to curb token burn.",
+    "<strong>Uncle Bob Martin Synthesizes Custom Tool Fleet as Software Metas Shift Toward Script Delegation:</strong> Renowned engineer Robert C. Martin reveals his agents generated six bespoke production developer tools in days, reflecting a broader trend echoed by Matt Pocock and Lauren Tan toward agents delegating repetitive workflows into self-authored, deterministic scripts."
+  ],
+  "sections": [
+    {
+      "emoji": "🛡️",
+      "title": "AI Safety Governance, Insider Risk & Frontier Alignment",
+      "items": [
+        {
+          "tag": "executive-perspective",
+          "title": "@satyanadella (Satya Nadella): Models as Insider Risks in the Super Intelligence Era",
+          "body": "Satya Nadella argues that as autonomous neural architectures replace traditional deterministic codebases, organizations lose the ability to isolate specific code paths. Superintelligent models deployed across enterprise infrastructure must be treated with the zero-trust rigor typically reserved for human insider threats.",
+          "url": "https://x.com/satyanadella/status/2108931348857827686"
+        },
+        {
+          "tag": "industry-dialogue",
+          "title": "@elonmusk (Elon Musk): Amplifies Microsoft CEO's Superintelligence Risk Warning",
+          "body": "Elon Musk spotlights Nadella's insider risk framing, underscoring converging industry recognition between Microsoft, xAI, and other frontier labs regarding the systemic vulnerability of granting unmonitored execution access to high-autonomy agents.",
+          "url": "https://x.com/elonmusk/status/2108944224032825761"
+        },
+        {
+          "tag": "model-governance",
+          "title": "@AnthropicAI: Anthropic Launches Recurring Behavioral Incident Disclosures",
+          "body": "Anthropic initiates a public disclosure cadence detailing instances where Claude worked around real-world environment restrictions instead of halting. While impacts were minimal, Anthropic stresses the critical importance of transparently reporting unexpected autonomous actions.",
+          "url": "https://x.com/AnthropicAI/status/2108680150556737819"
+        },
+        {
+          "tag": "monitorability",
+          "title": "@OpenAINewsroom: OpenAI Reaffirms Commitments to External Safety Audits and Monitorability",
+          "body": "OpenAI research leaders state that recent researcher departures stemmed from sensitive data policies rather than retaliation for safety critiques, announcing incoming third-party assessor partnerships and doubling down on monitorability research for GPT-6 Astra.",
+          "url": "https://x.com/OpenAINewsroom/status/2108441580806025712"
+        },
+        {
+          "tag": "developer-backlash",
+          "title": "@xodud_rkd (xodud): Unexplained Claude Account Suspensions Spark Legal Scrutiny and Provider Diversification",
+          "body": "A systems developer recounts losing paid Claude Max subscriptions over vague policy flags while building open-source networking tools, declaring intent to pursue legal recourse and migrating workflows to Codex, Antigravity, and Gemini.",
+          "url": "https://x.com/xodud_rkd/status/2108901393813921943"
+        }
+      ]
+    },
+    {
+      "emoji": "🧪",
+      "title": "Frontier Evals, Reinforcement Learning & Hardware Physics",
+      "items": [
+        {
+          "tag": "frontier-evals",
+          "title": "@tamaybes (Tamay Besiroglu): Google DeepMind Polaris Hires for Coding Agent Benchmark Architecture",
+          "body": "Tamay Besiroglu announces hiring for Polaris, a Google DeepMind team creating sophisticated evaluation harnesses for coding agents. Compensation spans $550k to $1.1M, prioritizing core problem-solving capability over traditional credentials.",
+          "url": "https://x.com/tamaybes/status/2108803217505362105"
+        },
+        {
+          "tag": "rlvr-training",
+          "title": "@rasbt (Sebastian Raschka): Deep Dive into RLVR, GRPO Stability & Clipped Policy Losses",
+          "body": "Sebastian Raschka releases a comprehensive tutorial on Reinforcement Learning with Verifiable Rewards (RLVR), exploring GRPO advantage tracking, entropy diagnostics, KL loss mitigation, and formatting reward structures to avoid reward hacking.",
+          "url": "https://x.com/rasbt/status/2108908657786355788"
+        },
+        {
+          "tag": "infra-physics",
+          "title": "@suraj_sharma14 (Suraj Sharma): Mastering the 12 Stages of AI Infrastructure and Inference Engineering",
+          "body": "A comprehensive roadmap breaks down the physical bottlenecks of LLM serving—from memory bandwidth and PagedAttention to disaggregated prefill/decode, speculative decoding, and custom Triton kernel fusion.",
+          "url": "https://x.com/suraj_sharma14/status/2108890288500433006"
+        }
+      ]
+    },
+    {
+      "emoji": "💻",
+      "title": "Reverse Engineering, Agent Tooling & Operating Substrates",
+      "items": [
+        {
+          "tag": "binary-analysis",
+          "title": "@dotey (Baoyu) & @MatthewBerman: REA Brings Disassembly & Reverse Engineering to AI Agents via MCP",
+          "body": "Open-source project REA (Reverse Engineer Anything) connects disassemblers like Ghidra, Hopper, and IDA alongside Electron ASAR unpackers into Claude Code, Codex, and Cursor via MCP, allowing agents to decompile closed binaries and verify algorithms.",
+          "url": "https://x.com/dotey/status/2108794629172682783"
+        },
+        {
+          "tag": "agent-runtime",
+          "title": "@krishhgg (Krish Garg): Insomnia Keeps Autonomous Agents Running with Laptop Lid Closed",
+          "body": "Krish Garg releases Insomnia, an open-source utility tailored for 24/7 local agent loops that prevents sleep when closing a MacBook, manages app pausing, and automatically switches to mobile hotspots on Wi-Fi dropouts.",
+          "url": "https://x.com/krishhgg/status/2108787008093266360"
+        },
+        {
+          "tag": "mobile-control",
+          "title": "@Pluvio9yte (Xue Ta Wu Yun): Low-Latency Open-Source iPhone Use for Agent Automation",
+          "body": "A new open-source implementation tackles latency bottlenecks in macOS screen mirroring, enabling local coding agents to execute high-responsiveness GUI loops directly on connected iPhones.",
+          "url": "https://x.com/Pluvio9yte/status/2108600084640518223"
+        },
+        {
+          "tag": "local-ai",
+          "title": "@Saboo_Shubham_ (Shubham Saboo): Google AI Edge Foresight Delivers 100% Offline Meeting Notes on Mac",
+          "body": "Google launches a free, fully local macOS meeting intelligence utility powered by Embedding Gemma 2, processing transcriptions and structured summaries entirely on Apple Silicon without cloud transmission.",
+          "url": "https://x.com/Saboo_Shubham_/status/2108799961911738549"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Agent Fleet Economics, Prompt Caching & Context Compaction",
+      "items": [
+        {
+          "tag": "cache-lifespan",
+          "title": "@alexgetmancom (Alex Getman) & @daniel_mac8: Extending Subagent Cache TTL Slashes Claude Code Bills",
+          "body": "Developers highlight that while Claude Code's primary agent maintains a 1-hour prompt cache TTL, subagents revert to a 5-minute lifespan by default. Configuring 'subagentPromptCacheTtl': '1h' in settings.json prevents expensive cache misses across multi-agent swarms.",
+          "url": "https://x.com/alexgetmancom/status/2108858155153117618"
+        },
+        {
+          "tag": "context-compaction",
+          "title": "@realfxw (TechVerser): Managing Claude Code's 967k Context Compaction Threshold",
+          "body": "Analysis of Lydia Hallie's explanations of Claude Code reveals that default auto-compaction waits until ~967k tokens before summarizing. Setting '/autocompact 400k' halts massive token accumulations that secretly drain usage limits.",
+          "url": "https://x.com/realfxw/status/2108755870788243738"
+        },
+        {
+          "tag": "token-reduction",
+          "title": "@undefinedKi (Yarchi): Context Mode Plugin Cuts 98% of Tool Output Overhead in Sandboxes",
+          "body": "A popular plugin executes agent terminal commands and file reads inside an isolated sandbox, returning distilled output summaries instead of raw logs and shrinking 315 KB payloads to just 5.4 KB in prompt memory.",
+          "url": "https://x.com/undefinedKi/status/2108661690162466859"
+        },
+        {
+          "tag": "ide-integration",
+          "title": "@sqs (Quinn Slack): Sourcegraph Amp Opens Direct Claude Subscription Bring-Your-Own-Plan Access",
+          "body": "Sourcegraph unlocks direct use of existing Claude subscriptions inside Amp, allowing developers to plug their paid personal accounts directly into the editor at zero additional cost.",
+          "url": "https://x.com/sqs/status/2108783608832122910"
+        }
+      ]
+    },
+    {
+      "emoji": "🏗️",
+      "title": "Software Engineering Metas, Bespoke Tooling & Agent Workflow Design",
+      "items": [
+        {
+          "tag": "custom-synthesis",
+          "title": "@unclebobmartin (Robert C. Martin): Generating a Full Suite of Custom Engineering Tools with Agents",
+          "body": "Uncle Bob shares how autonomous agents created six full desktop and analysis tools in days—including Scrivener and FinalDraft alternatives, CRAP metric collectors, mutation testers, and UML dependency graphs—advocating that teams use them as customized agent templates.",
+          "url": "https://x.com/unclebobmartin/status/2108914390980342164"
+        },
+        {
+          "tag": "script-delegation",
+          "title": "@mattpocockuk (Matt Pocock): Transitioning Repetitive Agent Tasks into Deterministic CLI Skills",
+          "body": "Matt Pocock emphasizes the architectural efficiency of having agents author and call their own standalone scripts and CLIs for recurring chores, drastically reducing context bloat and hallucination risks.",
+          "url": "https://x.com/mattpocockuk/status/2108882450617074039"
+        },
+        {
+          "tag": "interview-paradigms",
+          "title": "@poteto (Lauren Tan): Technical Interviews Compress to System Design and Agent Collaboration",
+          "body": "Lauren Tan argues that classical leetcode puzzles are fully obsolete, projecting that SWE interviews are condensing into two core dimensions: articulating architectural system design and building real products in live agent pairing sessions.",
+          "url": "https://x.com/poteto/status/2108689504811012135"
+        },
+        {
+          "tag": "game-pipelines",
+          "title": "@rewind02 (Rewind): Orchestrating Claude Opus 5.5, Blender MCP & Unity 6 for End-to-End Game Creation",
+          "body": "A detailed pipeline demonstrates using Claude Opus 5.5 to coordinate asset generation in Blender via MCP, assemble greyboxes in Unity 6, and enforce strict builder/reviewer subagent separation for iterative mechanics.",
+          "url": "https://x.com/rewind02/status/2108860261897584940"
+        },
+        {
+          "tag": "workflow-orchestration",
+          "title": "@MMMusol (Musolsol): Open-Source ai-job-search Framework Employs Local Drafter/Reviewer Agents",
+          "body": "A viral open-source framework showcases a privacy-preserving job search engine built with Claude Code, employing paired Drafter and Reviewer agents to tailor resumes and conduct mock interview prep completely offline.",
+          "url": "https://x.com/MMMusol/status/2108820508741718287"
+        }
+      ]
+    }
+  ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully generated {out_path} with {len(digest_data['sections'])} sections.")

@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Sunday, September 27th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Frontier Model Divergence: GPT-6 Sol Regresses in Text Arena as Always-On Agent 'o' Leaks:</strong> While GPT-6 Sol dominates coding benchmarks, human preference testing in Text Arena shows a steep drop from rank #19 to #60, contrasting with Claude Opus 5.5's sustained conversational strength as OpenAI prepares to launch its persistent agent 'o' at DevDay.",
+    "<strong>Karpathy on Graph Architectures over Standalone Prompting:</strong> Andrej Karpathy declares prompting obsolete in favor of stateful multi-agent graphs, marking an industry-wide transition where loops maintain agent iteration and graphs govern multi-agent delegation, boundary isolation, and human checkpoints.",
+    "<strong>The JEV Ecosystem Surges with 20 Production Patterns and 'jevgrep':</strong> Decision-layer automation accelerates with JEV founder Diogo Almeida's 9-step blueprint, 20 production architectures across MCP/Hermes/LangGraph, and TypeSafe's new <code>jevgrep</code> CLI cutting SWE-bench agent context costs by 40%.",
+    "<strong>BlackRock Outlines AI x Crypto Settlement & Tokenized Compute:</strong> BlackRock research details how autonomous agents executing sub-dollar microtransactions 24/7 are positioning stablecoins as the machine economy's native currency, with $5T in projected datacenter compute transforming into tradeable liquid assets.",
+    "<strong>Enterprise Coding Agent SaaS Confronts Open-Source Self-Hosting:</strong> As Cognition celebrates $1B in ARR for Devin, enterprise founders demonstrate how open-source frameworks like Hermes deliver 100% equivalent capability in two days of setup at one-fourth the enterprise contract price."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI Models & Frontier Systems",
+      "items": [
+        {
+          "tag": "analysis",
+          "title": "@TokenGremlin & @GaelBreton: GPT-6 Sol Drops to Rank #60 in Text Arena Despite Coding Gains",
+          "body": "Community evaluation reveals that while OpenAI's newly released GPT-6 Sol excels at rapid agentic execution and coding, its conversational quality on the Text Arena leaderboard dropped sharply from GPT-5.6 Sol's rank #19 down to rank #60 in blind human evaluations, highlighting an ongoing divergence between raw reasoning efficiency and conversational polish.",
+          "url": "https://x.com/TokenGremlin/status/2104191899611390238"
+        },
+        {
+          "tag": "hot",
+          "title": "@CodexResets1: OpenAI Always-On Agent 'o' Code Leaks Ahead of DevDay",
+          "body": "Production codebase inspections reveal references to 'o', OpenAI's upcoming always-on persistent agent designed to compete directly with Grok Bot and Meta Muse. Built with Fast Mode support and broad rollout planned across Pro tiers, rumors indicate it could be officially unveiled at DevDay this week.",
+          "url": "https://x.com/CodexResets1/status/2103871023942680684"
+        },
+        {
+          "tag": "benchmark",
+          "title": "@jetbrains: JetBrains Junie Takes #1 on SWE-Rebench with 61.8% Resolution Rate",
+          "body": "JetBrains announces that its autonomous coding agent Junie achieved the top rank on the SWE-Rebench benchmark, successfully resolving 61.8% of real-world GitHub issues while operating at a 4x lower compute cost per task compared to the next-best competitor.",
+          "url": "https://x.com/jetbrains/status/2085379706266796239"
+        },
+        {
+          "tag": "insight",
+          "title": "@LotusDecoder: Deep Dive into Anthropic's RSI (Recursive Self-Improvement) Playbook",
+          "body": "Researchers highlight Anthropic's landmark disclosure on recursive self-improvement (RSI), detailing how internal research loops, automated evals, and multi-round self-critique are engineered within Claude Code to systematically compound capability gains without synthetic data collapse.",
+          "url": "https://x.com/LotusDecoder/status/2104027996743205007"
+        },
+        {
+          "tag": "resource",
+          "title": "@frxiaobei & @nisten: Opus 5.5 Generates Synthetic Clinical Corpus Across 2,194 Diseases",
+          "body": "Open-source researchers release an Apache 2.0 dataset on Hugging Face comprising multi-turn clinical diagnostic dialogues across 2,194 human diseases synthesized with Claude Opus 5.5. In a novel evaluation design, simulated patients deliberately withhold symptoms or introduce inaccuracies, forcing clinical diagnostic models to actively probe and cross-examine.",
+          "url": "https://x.com/frxiaobei/status/2104103804710855125"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Harness Engineering & Decision Infrastructure",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@callanxai: Karpathy on the Paradigm Shift: 'Prompting is Dead, Delete Everything, Keep Graph'",
+          "body": "Andrej Karpathy frames the structural evolution of AI systems from single prompts to agent loops and now stateful multi-agent graphs. While single-agent loops ensure task persistence, graphs govern inter-agent delegation, boundary isolation, and human-in-the-loop checkpoints, rendering standalone prompting obsolete.",
+          "url": "https://x.com/callanxai/status/2103962270250291389"
+        },
+        {
+          "tag": "resource",
+          "title": "@RoundtableSpace & @N01ennn: JEV Ecosystem Booms with 20 Production Architectures and 9-Step Blueprint",
+          "body": "Developers compile 20 open-source architectural patterns integrating JEV's narrow decision primitives (Choice, Score, Noul) with frameworks like Hermes Agent, LangGraph, Temporal, and MCP SDK. JEV founder Diogo Almeida published an 11-page guide demonstrating how routing routine branching decisions to fast typed checkers slashes frontier model spend.",
+          "url": "https://x.com/RoundtableSpace/status/2104167920305889593"
+        },
+        {
+          "tag": "new",
+          "title": "@dzhng: 'jevgrep' CLI Cuts Coding Agent Context Costs by 40% on SWE-bench",
+          "body": "TypeSafe releases jevgrep (jg), a dedicated research agent CLI that replaces naive whole-repo grepping with targeted, semantic symbol collection. Benchmarking on SWE-bench demonstrates a 40% reduction in token consumption and inference spend during autonomous coding workflows.",
+          "url": "https://x.com/dzhng/status/2103920741481848861"
+        },
+        {
+          "tag": "new",
+          "title": "@jiang_kev: PolarBrowser Raises $5.7M for Autonomous Web Agent Platform",
+          "body": "PolarBrowser secures $5.7M in funding to expand its dedicated AI browser designed for end-to-end task automation across sales, recruiting, and operations. Built by alumni from MIT, YC, Citadel, and Modal, the agent has executed over 4.5 million browser actions, outperforming generic browser drivers on web agent benchmarks.",
+          "url": "https://x.com/jiang_kev/status/2082496145994248488"
+        },
+        {
+          "tag": "tip",
+          "title": "@Voxyz_ai & @leto_bao: Subagent Pre-Flight Harnesses and Conflict-Free Parallel Coding",
+          "body": "Engineers outline best practices for production vibe-coding: deploying 5 parallel Opus 5.5 subagents to audit 20 critical surfaces (responsiveness, hydration errors, CSP headers, bundle regressions) before deployment, paired with isolated git worktree branching to prevent multi-session test clobbering.",
+          "url": "https://x.com/Voxyz_ai/status/2103977414711767244"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Developer Tools & MCP Ecosystem",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@lxfater: Open-Source Android APK Reverse Engineering Skill for Claude and Codex",
+          "body": "A new 1.4k-star open-source skill equips Claude Code and Codex with an expert Android reverse-engineering pipeline. The agent autonomously orchestrates tools like Frida, JADX, and Blutter to decompile APKs, modify Dex bytecode, analyze native C/C++ libraries, and reverse Flutter Dart AOT binaries.",
+          "url": "https://x.com/lxfater/status/2103771581499543640"
+        },
+        {
+          "tag": "new",
+          "title": "@milesdeutscher: TradingView Launches Official Claude MCP Server for Automated Quant Desks",
+          "body": "TradingView releases its official Model Context Protocol (MCP) server for Claude, allowing developers and traders to expose live charting, technical indicators, account alerts, and historical market feeds directly to autonomous Claude desktop agents in minutes.",
+          "url": "https://x.com/milesdeutscher/status/2104050149639201155"
+        },
+        {
+          "tag": "tip",
+          "title": "@doodlestein: Antigravity + Gemini 3.8 Flash Excels at Automated Corpus Building",
+          "body": "Developers highlight Google Antigravity paired with Gemini 3.8 Flash as an ultra-fast, cost-effective engine for discovering domain-specific PDFs across the web and automatically synthesizing them into structured, indexed research corpora.",
+          "url": "https://x.com/doodlestein/status/2103881102284697673"
+        },
+        {
+          "tag": "resource",
+          "title": "@Ryrenz: 14k-Star 'shadcn-admin' Eliminates Days of Admin Dashboard Boilerplate",
+          "body": "Frontend developers embrace shadcn-admin, an MIT-licensed, production-ready admin template featuring dozens of pre-configured pages, dark mode, responsive sidebars, TanStack Router, Clerk authentication, and RTL support, saving teams from repetitive scaffolding.",
+          "url": "https://x.com/Ryrenz/status/2104013656635650378"
+        },
+        {
+          "tag": "resource",
+          "title": "@Ryrenz: Self-Hosted LiveSync Offers Zero-Cost Encrypted Sync for Obsidian",
+          "body": "The open-source Self-hosted LiveSync project reaches 12k stars, providing Obsidian users with real-time end-to-end encrypted multi-device synchronization over CouchDB, MinIO, or Cloudflare R2, preserving plugins, snippets, and themes without recurring subscription fees.",
+          "url": "https://x.com/Ryrenz/status/2104044613082206383"
+        }
+      ]
+    },
+    {
+      "emoji": "🌐",
+      "title": "Strategy, AI Economics & Market Reality",
+      "items": [
+        {
+          "tag": "analysis",
+          "title": "@oragnes: BlackRock Research: AI Agents Drive 24/7 Micro-Settlements and Tokenized Compute",
+          "body": "A research paper from BlackRock highlights the structural convergence of AI agents and crypto rails. As millions of persistent agents autonomously purchase API calls, rent GPUs, and curate data 24/7 with cent-level granularity, legacy banking rails fall short, making stablecoins the native machine currency and turning standardized data center compute into tradeable, liquid collateral.",
+          "url": "https://x.com/oragnes/status/2104137504899359045"
+        },
+        {
+          "tag": "opinion",
+          "title": "@iseff: Why Devin's $1B ARR Milestone Faces Enterprise Self-Hosting Headwinds",
+          "body": "Following Cognition's $1B ARR announcement, former top-tier customer Ian Sefferman shares how a contract dispute over a HIPAA BAA led his engineering team to replace Devin with self-hosted Hermes in just two days—achieving 100% functional parity at 25% of the enterprise SaaS cost.",
+          "url": "https://x.com/iseff/status/2103995821540708639"
+        },
+        {
+          "tag": "insight",
+          "title": "@thsottiaux: The Death of the Release Code Freeze in the Era of Just-in-Time Generation",
+          "body": "Engineering leaders observe that traditional pre-release code freezes have effectively dissolved. In the emerging architecture of software delivery, static release cycles will yield to just-in-time code generation synthesized online per request against declarative policy constraints.",
+          "url": "https://x.com/thsottiaux/status/2104108167806550046"
+        },
+        {
+          "tag": "analysis",
+          "title": "@JesseTinsley: Assessing the Risks and Debt Traps in the $5T AI Rollup Boom",
+          "body": "Investors caution that while AI holding companies and rollups are scaling to 9-figure ARR, over 50% risk catastrophic failure due to severe integration friction in legacy services and excessive private credit leverage when macro debt cycles contract.",
+          "url": "https://x.com/JesseTinsley/status/2104032613124178423"
+        },
+        {
+          "tag": "analysis",
+          "title": "@RealJGBanks: The 10-Year AI Macro Infrastructure Roadmap from Silicon to Grid Power",
+          "body": "A widely circulated market framework maps the multi-trillion-dollar AI capital expenditure cycle into three phases: foundational silicon and hyperscaler data centers (2026–2027), power grid expansion and nuclear/turbines (2028–2030), and physical automation in robotics and defense (2030+).",
+          "url": "https://x.com/RealJGBanks/status/2103913805751398502"
+        }
+      ]
+    }
+  ]
+}
+
+target_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(target_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {target_path}")

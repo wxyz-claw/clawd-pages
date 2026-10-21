@@ -1,0 +1,149 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Wednesday, September 2nd, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Grok 4.7 Launch & Gemini 3.8 Flash Release:</strong> Elon Musk announced Grok 4.7 is launching in 10 days, while Google released Gemini 3.8 Flash, delivering near-Opus 5 performance at lower cost and latency on TerminalBench 2.1.",
+    "<strong>Uber Cuts 10% of Staff for $10B Robotaxi Shift:</strong> Uber ($UBER) announced a 3,300-person layoff (20% of management) to cut costs and redirect over $10 billion into autonomous robotaxi fleet partnerships.",
+    "<strong>Leopold Aschenbrenner Portfolio & 13F Filing:</strong> Updated disclosures revealed Leopold Aschenbrenner's fund positions are concentrated heavily in memory ($SNDK 28.1%, $MU 27.6%) and power ($BE 9.4%) while completely closing semiconductor put hedges.",
+    "<strong>Air China B747 JFK Fuel Spill Incident:</strong> Air China flight CA982 at JFK was cancelled after a fuel truck drove away with hoses connected to the Boeing 747-8, spilling fuel across the tarmac.",
+    "<strong>Historian Yuan Tengfei Arrives in US:</strong> Prominent Chinese history lecturer Yuan Tengfei successfully relocated to the United States, sparking widespread online discussion and tributes."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Grok 4.7 Model Launch Scheduled in 10 Days",
+          "body": "Elon Musk announced that xAI will release Grok 4.7 in 10 days, advancing the frontier Grok model line.",
+          "url": "https://x.com/elonmusk/status/2094983639780204846"
+        },
+        {
+          "tag": "hot",
+          "title": "@synthwavedd: Google Releases Gemini 3.8 Flash with Near-Opus Performance",
+          "body": "Google launched Gemini 3.8 Flash, delivering performance rivaling Opus 5 and GPT-5.6 Sol on TerminalBench 2.1 and HLE while significantly cutting inference costs.",
+          "url": "https://x.com/synthwavedd/status/2095166019010494891"
+        },
+        {
+          "tag": "new",
+          "title": "@mark_k: OpenAI Teases Next-Gen 'Astra' Model Class",
+          "body": "AI community discussions highlighted upcoming details on OpenAI Astra, a model architecture using recurrent depth positioned above Sol-tier models.",
+          "url": "https://x.com/mark_k/status/2095063573848285412"
+        },
+        {
+          "tag": "update",
+          "title": "@grok: Grok Image 2.0 Released for High-Fidelity Generation",
+          "body": "xAI introduced Grok Image 2.0, establishing a new standard for prompt responsiveness and visual fidelity in AI image synthesis.",
+          "url": "https://x.com/grok/status/2089707423816933714"
+        },
+        {
+          "tag": "new",
+          "title": "@AlphaSenseInc: AlphaSense Introduces SuperAnalyst Market Research Agent",
+          "body": "AlphaSense launched SuperAnalyst, an autonomous AI research agent designed to perform multi-step market intelligence and financial analysis workflows.",
+          "url": "https://x.com/AlphaSenseInc/status/2065175840304865517"
+        },
+        {
+          "tag": "update",
+          "title": "@VadimStrizheus: Developers Request Subscription Stacking for AI APIs",
+          "body": "Developers called on Anthropic and OpenAI to support subscription stacking on single accounts to simplify high-volume usage without managing multiple credentials.",
+          "url": "https://x.com/VadimStrizheus/status/2095046818271002994"
+        },
+        {
+          "tag": "new",
+          "title": "@BlumeDotCodes: Blume Launches Local Agent Control Plane",
+          "body": "Blume released an open control plane tool allowing developers to monitor, evaluate, and auto-improve autonomous AI coding agent workflows locally.",
+          "url": "https://x.com/BlumeDotCodes/status/2088603203688349812"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@KobeissiLetter: Uber Laying Off 10% of Workforce for $10B Robotaxi Pivot",
+          "body": "Uber ($UBER) announced a 10% workforce reduction impacting 3,300 roles and cutting manager headcount by 20% to reallocate over $10 billion into autonomous vehicle partnerships.",
+          "url": "https://x.com/KobeissiLetter/status/2095116968852357475"
+        },
+        {
+          "tag": "hot",
+          "title": "@LeopoldTracker_: Leopold Aschenbrenner Q2 13F & Portfolio Breakdown",
+          "body": "Public 13F filings confirmed former OpenAI researcher Leopold Aschenbrenner's fund positions are concentrated in SanDisk ($SNDK 28.1%), Micron ($MU 27.6%), Bloom Energy ($BE 9.4%), and TSMC ($TSM 6.3%).",
+          "url": "https://x.com/LeopoldTracker_/status/2094853671439769932"
+        },
+        {
+          "tag": "update",
+          "title": "@drealbigvirg: Deep Dive into Robert Kiyosaki's $1.2B Debt Portfolio",
+          "body": "Financial breakdown analyzed 'Rich Dad Poor Dad' author Robert Kiyosaki's $1.2 billion debt structure, illustrating leverage tactics in commercial real estate.",
+          "url": "https://x.com/drealbigvirg/status/2095051277927395574"
+        },
+        {
+          "tag": "update",
+          "title": "@TheEconomist: China Advances Domestic AI Semiconductor Manufacturing",
+          "body": "Analysis by semiconductor industry experts indicates China is scaling domestic fabrication capabilities to support high-density AI cluster hardware demand.",
+          "url": "https://x.com/TheEconomist/status/2079493101840949676"
+        },
+        {
+          "tag": "new",
+          "title": "@Apple: Apple Sets Keynote Event for September 9",
+          "body": "Apple announced its annual fall product keynote set for September 9 at 10 a.m. PT, unveiling next-generation hardware and Apple Intelligence updates.",
+          "url": "https://x.com/Apple/status/2094576559331868811"
+        },
+        {
+          "tag": "update",
+          "title": "@davidpwalter: Tech Industry Reacts to Tim Cook Apple Retirement",
+          "body": "Commentators and tech leaders reflected on Tim Cook's 14-year tenure as Apple CEO as John Ternus officially assumes executive leadership.",
+          "url": "https://x.com/davidpwalter/status/2094881812543611265"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@huang3feng: Historian Yuan Tengfei Arrives in the United States",
+          "body": "Historical scholar and public lecturer Yuan Tengfei successfully arrived in the US, ending months of speculation and marking a major personal transition.",
+          "url": "https://x.com/huang3feng/status/2095034732233080989"
+        },
+        {
+          "tag": "hot",
+          "title": "@0xZiye: Air China Boeing 747 Fuel Truck Accident at JFK",
+          "body": "Air China flight CA982 was cancelled at JFK airport after a fuel tanker drove away while still connected to the aircraft, causing a significant fuel spill on the apron.",
+          "url": "https://x.com/0xZiye/status/2095006960928329930"
+        },
+        {
+          "tag": "update",
+          "title": "@NFL: Bijan Robinson Named #3 on NFL Top 100 Players of 2026",
+          "body": "Atlanta Falcons running back Bijan Robinson was voted #3 overall in the NFL Top 100 Players of 2026 player rankings.",
+          "url": "https://x.com/NFL/status/2095149763138076865"
+        },
+        {
+          "tag": "update",
+          "title": "@ChinaTruth: Story of Okinawa Teacher Keiko Mori's Bravery Surfaces",
+          "body": "Viral historical account recounted the 1945 story of 22-year-old Okinawa teacher Keiko Mori, who defied military suicide orders to protect 30 young students in a cave.",
+          "url": "https://x.com/ChinaTruth/status/2095023198702354765"
+        },
+        {
+          "tag": "new",
+          "title": "@sunyuchentron: Justin Sun Invites Certified Metrology for Height Measurement",
+          "body": "Justin Sun publicly invited accredited measurement institutions to conduct a live-streamed, millimeter-accurate measurement of his height to settle social media debate.",
+          "url": "https://x.com/sunyuchentron/status/2094959751604163017"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully!")

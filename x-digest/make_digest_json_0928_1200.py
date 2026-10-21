@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Monday, September 28th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Gemini 4 Pro Leaks Pressure DevDay as OpenAI Limits First-Party Codex Reasoning:</strong> Ahead of OpenAI DevDay, leaked benchmarks show Gemini 4 Pro outperforming frontier rivals, while community measurements reveal OpenAI grants direct API users over 6x more reasoning depth (832 juice) than subscribers using its own Codex client (128 juice).",
+    "<strong>Andrew Ng Unveils Agentic Graph Masterclass as Decision Models Hit 50Hz:</strong> Andrew Ng publishes a comprehensive two-hour curriculum on transitioning from fragile single-agent loops to deterministic multi-agent graphs, while Open-Jev-27B achieves sub-19ms inference (>50Hz) on NVIDIA B300 silicon, unlocking real-time robotics and agent decision layers.",
+    "<strong>JEMM-27B Multimodal Decision Weights Open-Sourced alongside 'jev-opus' CLI:</strong> The open-weights JEMM-27B model lands on Hugging Face scoring 85.7% on JevBench and 93.3% tool-calling accuracy, while developers release the <code>jev-opus</code> CLI and Rust-based Keel harness to offload 80% of routine Claude Opus 5.5 decisions to fast typed checkers.",
+    "<strong>Clean-Room Codebase Rebuilding and Agent-First Documentation Frameworks:</strong> Practitioners detail zero-downtime multi-agent rewrite workflows distilling legacy codebases with Opus 5.5 and GPT-6 Astra, as Cloudflare open-sources Nimbus—a dual-audience documentation framework authored equally for humans and AI agents.",
+    "<strong>Harvard Study Shows AI Tutors Beat Elite Classrooms by 30% as Jane Street Details Multi-Agent Quants:</strong> A Harvard controlled trial reveals AI tutors double learning speed and beat elite active classrooms by 30%, while quant trading breakdowns illustrate how Jane Street deploys adversarial agent-checking-agent architectures to safeguard capital."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI Models & Frontier Systems",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@JustLingonberry: Leaked Gemini 4 Pro Benchmarks Shake AI Landscape Ahead of OpenAI DevDay",
+          "body": "Leaked benchmark results indicate that Google's upcoming Gemini 4 Pro achieves dominant scores against both Anthropic and OpenAI frontier systems. Commentators note that an aggressive Gemini 4 Pro launch will exert severe pricing pressure on Claude Fable 5.5 and GPT-6.1 heading into DevDay.",
+          "url": "https://x.com/JustLingonberry/status/2104431004337479933"
+        },
+        {
+          "tag": "analysis",
+          "title": "@TokenGremlin: OpenAI Disproportionately Constrains Reasoning Budgets on Codex vs. API",
+          "body": "Reverse-engineering and telemetry analysis show that OpenAI allocates significantly deeper reasoning budgets through its raw API than through its first-party Codex harness. Benchmarks show GPT-6 Astra registering ~832 compute units on API Max vs. only 128 units inside Codex, effectively holding models back on internal client subscriptions.",
+          "url": "https://x.com/TokenGremlin/status/2104559277700510034"
+        },
+        {
+          "tag": "news",
+          "title": "@WatcherGuru: OpenAI Reportedly Pauses Training Iterations Over Rogue Agent Concerns",
+          "body": "Reports surface that OpenAI has temporarily suspended training runs for its next-generation frontier models following internal red-teaming alerts regarding autonomous agent alignment and unconstrained tool-calling escalation in sandbox environments.",
+          "url": "https://x.com/WatcherGuru/status/2104584938289061897"
+        },
+        {
+          "tag": "opinion",
+          "title": "@scottstts: Daily Developer Usability Favors Opus 5.5 Over OpenAI DevDay Hype",
+          "body": "Experienced practitioners voice growing skepticism ahead of OpenAI DevDay, emphasizing that daily software engineering demands rock-solid reasoning reliability and usable token headroom rather than 750-TPS novelty demos or hardware devices, cementing Claude Opus 5.5 as the developer favorite.",
+          "url": "https://x.com/scottstts/status/2104116595211538477"
+        },
+        {
+          "tag": "insight",
+          "title": "@fly3nn: Pragmatic Protocol Extraction: Gemini CLI Agility vs. GPT Token-Heavy Computer Use",
+          "body": "Developers highlight contrasting philosophies in autonomous web retrieval: when encountering tough anti-scraping walls, Gemini autonomously spoofed mobile client headers and extracted raw media CDN streams via CLI tools in seconds, whereas GPT burned thousands of tokens on DOM timeouts and vision-based desktop automation.",
+          "url": "https://x.com/fly3nn/status/2104193840651403698"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Harness Engineering & Agent Architectures",
+      "items": [
+        {
+          "tag": "resource",
+          "title": "@AYi_AInotes: Andrew Ng Releases 2-Hour Masterclass on Agentic Graph Topologies",
+          "body": "Andrew Ng launches a comprehensive two-hour masterclass detailing the evolution of autonomous AI systems from simple prompting loops to self-correcting agents and stateful graph architectures. The course explains how moving control flow out of model black boxes into deterministic graph topologies eliminates context rot and enables multi-agent parallelism.",
+          "url": "https://x.com/AYi_AInotes/status/2104542011642757330"
+        },
+        {
+          "tag": "new",
+          "title": "@NFT_Chen: JEMM-27B Multimodal Decision Model Debuts with 'jev-opus' CLI Harness",
+          "body": "Open-weights JEMM-27B (fine-tuned on Qwen) arrives on Hugging Face, delivering 85.7% accuracy on JevBench and 93.3% tool-calling precision with native multimodal support. Community engineers also released `jev-opus` and the Rust-based Keel harness, enabling Claude Code to offload 80% of routine branching decisions to fast typed checkers.",
+          "url": "https://x.com/NFT_Chen/status/2104323955742183544"
+        },
+        {
+          "tag": "benchmark",
+          "title": "@zhaoran_wang: Open-Jev-27B Hits 18.6ms Latency (>50Hz) on Single NVIDIA B300",
+          "body": "Researchers benchmark Open-Jev-27B running in native BF16 on a single NVIDIA B300 GPU, achieving an 18.6ms P50 server-side latency (>50Hz). The result demonstrates that narrow decision models are fast enough to govern sub-100ms real-time robotics and closed-loop agent execution without quantization loss.",
+          "url": "https://x.com/zhaoran_wang/status/2104364228501238064"
+        },
+        {
+          "tag": "analysis",
+          "title": "@akshay_pachaar: CMU Paper Demonstrates 99% Evaluation Accuracy at 57% Cost via Jev Cascades",
+          "body": "A Carnegie Mellon University study demonstrates that TypeSafe's Jev primitive matches top frontier LLM-as-judge decisions within 3% on bounded evaluations at 0.36% of the price. Using Jev confidence scores to selectively escalate difficult judgments to GPT-6 retains 99% baseline accuracy while reducing evaluation spend by 43%.",
+          "url": "https://x.com/akshay_pachaar/status/2104214116999278874"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk: Jev as a Fast Fuzzy Linter for Non-Deterministic Code Rules",
+          "body": "TypeScript educator Matt Pocock endorses harnessing Jev as a lightweight fuzzy linter within agent loops. By delegating subjective standards (e.g. clean React useEffect patterns, concise comment hygiene) to fast decision calls with confidence tiers, agents catch double the stylistic issues without wasting frontier model tokens.",
+          "url": "https://x.com/mattpocockuk/status/2103904095996088628"
+        }
+      ]
+    },
+    {
+      "emoji": "🛠️",
+      "title": "Developer Tools, Systems & Open Source",
+      "items": [
+        {
+          "tag": "tip",
+          "title": "@Khazix0918: Clean-Room Codebase Rebuilding via Dual-Model Distillation and Shadow Runs",
+          "body": "Practitioners share a battle-tested blueprint for rewriting legacy projects: distilling source code into clean functional specifications using Claude Opus 5.5 and GPT-6 Astra, performing a clean-room rewrite without legacy source context, auditing with Claude Fable 5.1, and validating through a 6-hour production shadow run before cutover.",
+          "url": "https://x.com/Khazix0918/status/2104555128691073505"
+        },
+        {
+          "tag": "resource",
+          "title": "@RoundtableSpace: The Agent Memory Infrastructure Stack: 10 Key Open-Source Projects",
+          "body": "An architectural breakdown categorizes 10 vital open-source projects (Mem0, Hindsight, memU, Cognee, Graphiti, Letta) tackling persistent agent memory across sessions, highlighting that large context windows cannot replace structured knowledge graphs and multi-session experience retention.",
+          "url": "https://x.com/RoundtableSpace/status/2104477459525906866"
+        },
+        {
+          "tag": "resource",
+          "title": "@huoshan007: Battle-Tested Open-Source GitHub Repositories Replacing Expensive AI SaaS",
+          "body": "A curated breakdown of high-impact open-source alternatives covering multi-agent quant trading (TradingAgents), unified multi-model chat (LibreChat), video synthesis (HyperFrames), financial data terminals (Fincept), and voice cloning (VoxCPM) that save teams hundreds in monthly subscription costs.",
+          "url": "https://x.com/huoshan007/status/2104452796980298135"
+        },
+        {
+          "tag": "new",
+          "title": "@mylifcc: Cloudflare Open-Sources Nimbus for Dual Human and Agent Documentation",
+          "body": "Cloudflare quietly open-sources Nimbus, a novel documentation framework designed to be consumed equally by human engineers and autonomous coding agents. The project introduces structured semantic hooks that allow agents to traverse API capabilities without context bloating or hallucinated parameters.",
+          "url": "https://x.com/mylifcc/status/2104430399053045976"
+        },
+        {
+          "tag": "policy",
+          "title": "@vxanand: Clay Establishes Official AI Writing Policy: 'Writing is Thinking'",
+          "body": "Clay institutes a company-wide AI writing policy authored by its engineering leadership: mandating that all documents genuinely reflect the author's personal viewpoint, treating writing as an essential cognitive process, and prohibiting short prompts expanded into voluminous, low-signal AI text.",
+          "url": "https://x.com/vxanand/status/2104576879415988453"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "AI Economics, Markets & Quantitative Systems",
+      "items": [
+        {
+          "tag": "interview",
+          "title": "@patrick_oshag: Noah Shinn on Instinct: App-Less Personal AI Growing 10% Daily",
+          "body": "Noah Shinn, founder of personal AI assistant Instinct, discusses building an app-less agent system that interacts via existing messaging channels. With 10% daily organic growth, Shinn details compute forward-purchasing, user credit card delegation, and agent-to-agent negotiation protocols.",
+          "url": "https://x.com/patrick_oshag/status/2104542892073095398"
+        },
+        {
+          "tag": "analysis",
+          "title": "@51bodila: Deconstructing Jane Street's Adversarial Multi-Agent Trading Architecture",
+          "body": "A deep dive into Jane Street's quantitative AI methodology reveals how the trading giant deploys adversarial feedback loops: one primary agent writes execution logic while multiple auditor agents actively hunt for logic flaws, boundary drifts, and hallucinated market constraints across 230k+ token sessions.",
+          "url": "https://x.com/51bodila/status/2104346680904622301"
+        },
+        {
+          "tag": "research",
+          "title": "@thesupermannx: Harvard Controlled Study: AI Physics Tutors Outperform Elite Classrooms by 30%",
+          "body": "A randomized controlled study by Harvard researchers finds undergraduates using an active, Socratic AI physics tutor learned twice as much in less time, scoring 30% higher on assessments than students in elite physical classrooms with faculty support, shaking the economic foundation of elite higher education.",
+          "url": "https://x.com/thesupermannx/status/2104519992532496810"
+        },
+        {
+          "tag": "strategy",
+          "title": "@sairahul1: Claude Opus 5.5 Quantitative Strategy Beats S&P 500 with 53% Alpha",
+          "body": "Quants document structured prompt workflows utilizing Claude Opus 5.5 to parse SEC filings, evaluate momentum factor regimes, and construct algorithmic equity portfolios that delivered 53% backtested annualized returns outperforming the S&P 500.",
+          "url": "https://x.com/sairahul1/status/2104536785036693744"
+        },
+        {
+          "tag": "insight",
+          "title": "@AYi_AInotes: The Neuroscience of Post-Work Fatigue: Resetting Prefrontal Glutamate Overload",
+          "body": "A viral neurobiological analysis breaks down why professionals experience evening paralysis and compulsive scrolling: daytime decision-making exhausts prefrontal cortex metabolic reserves, depositing glutamate that impairs self-control. Experts outline a 20-minute cognitive offline protocol to restore executive focus.",
+          "url": "https://x.com/AYi_AInotes/status/2104439742507241676"
+        }
+      ]
+    }
+  ]
+}
+
+target_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(target_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {target_path}")

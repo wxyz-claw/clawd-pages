@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Wednesday, September 2nd, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Stanford 'Modern Software Developer' 2026 Syllabus:</strong> Mihail Eric announced the Fall 2026 update for Stanford's software developer course, overhauling 85% of content to focus on AI-native engineering, coding agents (Claude Opus 4.5, Cursor, Claude Code), MCP portals, and open-source contributions.",
+    "<strong>Sam Altman on ChatGPT Energy & Water Usage:</strong> OpenAI CEO Sam Altman shared that running 38,000 ChatGPT queries consumes equivalent water to producing a single California almond.",
+    "<strong>US–Venezuela 65B Barrel Oil Deal Signed:</strong> The US and Venezuela officially finalized an energy agreement giving America majority operational control over 65 billion barrels of crude reserves.",
+    "<strong>US Treasury on Strait of Hormuz Bypass:</strong> US Treasury Secretary Scott Bessent stated that strategic bypass routes will render the Strait of Hormuz virtually irrelevant for global oil transit within 2 years.",
+    "<strong>Grok Android Release & Image 2.0:</strong> xAI opened Google Play pre-registration for the official Grok Android app alongside the rollout of Grok Image 2.0 with multi-image compositing and style controls."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@mihail_eric: Stanford Course 'The Modern Software Developer' 2026 Update",
+          "body": "Mihail Eric announced the Fall 2026 syllabus for Stanford's CS course, discarding 85% of prior material to focus on AI-native software engineering, MCP portals, agentic code review, and PR contributions to top OSS repos (Browserbase, CopilotKit, Vercel, Semgrep).",
+          "url": "https://x.com/mihail_eric/status/2095166860740174273"
+        },
+        {
+          "tag": "update",
+          "title": "@unusual_whales: Sam Altman Compares ChatGPT Query Footprint to Almond Production",
+          "body": "Sam Altman highlighted AI resource efficiency, noting that 38,000 ChatGPT queries consume the same amount of water used to grow a single California almond.",
+          "url": "https://x.com/unusual_whales/status/2095263244449354054"
+        },
+        {
+          "tag": "new",
+          "title": "@poteto: Grok Android App Opens Google Play Pre-Registration",
+          "body": "The Grok team announced that the official Grok Android app is nearing launch, opening pre-registration for users on the Google Play Store.",
+          "url": "https://x.com/poteto/status/2093063044062650744"
+        },
+        {
+          "tag": "update",
+          "title": "@grok: xAI Rolls Out Grok Image 2.0 for High-Fidelity Synthesis",
+          "body": "xAI introduced Grok Image 2.0, featuring advanced style controls, multi-image compositing capabilities, and fast iterative visual generation.",
+          "url": "https://x.com/grok/status/2089714736355070453"
+        },
+        {
+          "tag": "new",
+          "title": "@rahulbais136: Google NotebookLM Expands into Autonomous AI Workflow Engine",
+          "body": "Updates to Google NotebookLM transform it beyond PDF summarization into a multi-format AI execution system with automated data processing pipelines.",
+          "url": "https://x.com/rahulbais136/status/2094966081270218881"
+        },
+        {
+          "tag": "update",
+          "title": "@QwenDevs: Qwen Developers Release Technical Deep Dive on Local Search",
+          "body": "Qwen Devs published 'From rg to zg: Local Search Beyond Keywords', detailing semantic and structural code search techniques for developer tools.",
+          "url": "https://x.com/QwenDevs/status/2095157452904018263"
+        },
+        {
+          "tag": "update",
+          "title": "@Supermicro: Supermicro & NVIDIA Expand Enterprise AI Factory Solutions",
+          "body": "Supermicro showcased turnkey AI infrastructure pairing high-density GPU computing with liquid-cooled server architectures for enterprise LLM clusters.",
+          "url": "https://x.com/Supermicro/status/2089863103563649120"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: US & Venezuela Sign Deal for Control Over 65 Billion Barrels of Oil",
+          "body": "The United States and Venezuela signed a bilateral energy agreement establishing US majority management over 65 billion barrels of Venezuelan oil reserves.",
+          "url": "https://x.com/WatcherGuru/status/2095189210349138098"
+        },
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Treasury Secretary Bessent Predicts Strait of Hormuz Bypass in 2 Years",
+          "body": "US Treasury Secretary Scott Bessent announced plans and infrastructure timeline to bypass the Strait of Hormuz within 2 years, neutralizing its global oil bottleneck role.",
+          "url": "https://x.com/WatcherGuru/status/2094784647465251128"
+        },
+        {
+          "tag": "new",
+          "title": "@WatcherGuru: US Mint Releases 2026 President Trump $1 Coin into Circulation",
+          "body": "The US Mint officially released the 2026 President Donald Trump $1 commemorative circulation coin across federal banking channels.",
+          "url": "https://x.com/WatcherGuru/status/2095145153157808635"
+        },
+        {
+          "tag": "update",
+          "title": "@unusual_whales: Zoom Appoints Former Oracle CFO Jeffrey E. Epstein to Board",
+          "body": "Zoom Video Communications added former Oracle CFO Jeffrey E. Epstein to its Board of Directors to guide enterprise financial expansion.",
+          "url": "https://x.com/unusual_whales/status/2095278030289879230"
+        },
+        {
+          "tag": "update",
+          "title": "@Apple: Apple Formally Announces Fall Keynote for September 9",
+          "body": "Apple sent official invitations for its annual fall hardware keynote scheduled for September 9 at 10:00 AM PT at Apple Park.",
+          "url": "https://x.com/Apple/status/2095205673071948066"
+        },
+        {
+          "tag": "update",
+          "title": "@TheEconomist: Semiconductor Report Highlights China's AI Fabrication Progress",
+          "body": "Industry analysis details how Chinese semiconductor foundries are scaling production techniques to supply domestic AI data centers with high-density chips.",
+          "url": "https://x.com/TheEconomist/status/2079493101840949676"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@ChinaTruth: Story of Okinawa Teacher Keiko Mori Rescues 30 Students in 1945",
+          "body": "Historical retrospective shared the story of 22-year-old Okinawa teacher Keiko Mori, who defied 1945 military suicide orders to protect 30 young students in a cave until Allied forces arrived.",
+          "url": "https://x.com/ChinaTruth/status/2095023198702354765"
+        },
+        {
+          "tag": "update",
+          "title": "@FabrizioRomano: Major European Football Free Agents Tracker",
+          "body": "Fabrizio Romano compiled a high-profile list of unattached global football stars currently available as free agents, including Pogba, Sancho, Carvajal, and Ramos.",
+          "url": "https://x.com/FabrizioRomano/status/2095090843912708550"
+        },
+        {
+          "tag": "update",
+          "title": "@MarioNawfal: Travel Creator Shares Experience at Nigerian Checkpoints",
+          "body": "A viral travel report documented a Chinese creator passing through 20 regional checkpoints in Nigeria, highlighting travel safety discussions.",
+          "url": "https://x.com/MarioNawfal/status/2095013854216335845"
+        },
+        {
+          "tag": "new",
+          "title": "@NFL: Jaxon Smith-Njigba Voted #5 Player on NFL Top 100",
+          "body": "Seattle Seahawks wide receiver Jaxon Smith-Njigba was voted the #5 overall player in the NFL Top 100 Players of 2026 player rankings.",
+          "url": "https://x.com/NFL/status/2094424971841802735"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully!")

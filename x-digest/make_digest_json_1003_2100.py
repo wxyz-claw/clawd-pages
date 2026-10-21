@@ -1,0 +1,171 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, October 3rd, 2026 — 9:00 PM ET",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Wavestone Deconstructs 11 Frontier Agents into a 7-Part Harness Blueprint:</strong> Wavestone AI Lab analyzes Claude Code, Codex, OpenHands, and eight other agents, establishing that modern coding agents share a universal 7-layer architecture (Loop, LLM, Tools, Memory, Safety, Orchestration, Extensions) where SKILL.md and MCP dominate while heavyweight agent frameworks and vector embeddings have been entirely discarded.",
+    "<strong>Cognition's SWE-2 Under the Microscope in 3-Week Production Autopsy:</strong> Developers publish detailed telemetry on Cognition's SWE-2 model inside Devin, praising its speed, permission discipline, and stamina, but warning of hallucinated source recall, thinking loops burning 128k tokens on trivial decisions, and silent background agent deaths when unsupervised by models like Opus 5.5.",
+    "<strong>Pstack 0.15.9 Ships /correct Architecture as the 'Skills as Apps' Mental Model Formalizes:</strong> Lauren Tan releases pstack 0.15.9 introducing automated mistake-pattern elimination via architecture and types, while Kun Chen formalizes the emerging industry paradigm: LLMs are CPUs, Context is Memory, Agent Harnesses are Operating Systems, and Skills are the new Applications.",
+    "<strong>Codex 'Dot' UX Sparks Heated Debate as Persistent Agents Confront Multi-Thread Reality:</strong> Simon Willison, community developers, and OpenAI's Tibo Sottiaux debate Codex's new persistent 'Dot' agent, contrasting single-thread stateful memory against discrete multi-thread control, while users critique simulated phone-call ringing latencies compared to Grok Bot's instant sub-second response.",
+    "<strong>Quota Wars Escalate: 3B Claude Allowances, Fable Burnouts & the $50 Tier Petition:</strong> Anthropic's 3B-token Claude Pro allowance sparks aggressive comparison against ChatGPT Plus's 870M pool, Theo exhausts four Claude accounts while remaining untouched by Fable caps, and developers rally OpenAI for an intermediate $50 tier ahead of rumored Astra 6.5 drops next week."
+  ],
+  "sections": [
+    {
+      "emoji": "🏗️",
+      "title": "Architecture & Harness Engineering: The 7-Part Blueprint & Pstack 0.15.9",
+      "items": [
+        {
+          "tag": "agent-architecture",
+          "title": "@undefinedKi: Wavestone AI Lab Deconstructs 11 Frontier Coding Agents into 7-Part Harness Blueprint",
+          "body": "A landmark Wavestone AI Lab paper disassembles Claude Code, Codex, OpenHands, and 8 other agents to reveal universal architectural convergence: an agent is simply a model plus a 7-part harness (Loop, LLM layer, Tools, Memory, Safety, Orchestration, Extensions). Crucially, the researchers note that none of the top-performing agents use heavyweight agent frameworks or embeddings, relying instead on typed on-demand tools, SKILL.md specs (present in 9 of 11), and MCP protocols (present in 8 of 11).",
+          "url": "https://x.com/undefinedKi/status/2106479644354474463"
+        },
+        {
+          "tag": "pstack-release",
+          "title": "@poteto: Lauren Tan Releases Pstack 0.15.9 with Automated /correct Pattern Elimination",
+          "body": "SpaceXAI engineer Lauren Tan announces pstack 0.15.9, introducing a /correct skill designed to break the cycle of agent micromanagement. When agents repeatedly make identical mistakes, the skill automatically identifies recurring failure patterns and eliminates them structurally through strict types, architectural constraints, and CI lint rules, rather than relying on brittle human prompt corrections.",
+          "url": "https://x.com/poteto/status/2106542593656111276"
+        },
+        {
+          "tag": "mental-model",
+          "title": "@kunchenguid: Kun Chen Formalizes the New Software Stack — Skills as Apps, Harnesses as OS",
+          "body": "Kun Chen outlines a widely circulated mental model for modern AI systems: LLMs serve as the computer (weights as CPU, context window as RAM), agent harnesses function as the operating system (Claude as macOS, Codex as Windows, Pi as Linux), MCP servers act as standard APIs, and portable skills represent the new application layer that users install and execute across environments.",
+          "url": "https://x.com/kunchenguid/status/2106223024253071404"
+        },
+        {
+          "tag": "pipeline-design",
+          "title": "@CodexResets1: The Case for Native Agent-to-Agent Handoffs in Autonomous Pipelines",
+          "body": "Codex power users highlight the critical missing primitive in modern IDE agents: seamless agent-to-agent handoffs. Rather than requiring developers to manually pass context and PR notes across turns, next-generation harnesses must support autonomous staging pipelines where builder, reviewer, fixer, and test agents hand off execution state directly.",
+          "url": "https://x.com/CodexResets1/status/2106453466034078101"
+        }
+      ]
+    },
+    {
+      "emoji": "🔬",
+      "title": "Frontier Execution & Model Autopsies: SWE-2 Telemetry & Gemini 4 Argon",
+      "items": [
+        {
+          "tag": "model-benchmark",
+          "title": "@Da7_Tech: Cognition SWE-2 3-Week Production Autopsy — Stamina, Hallucinations & Thinking Loops",
+          "body": "After three weeks of intensive production usage inside Devin, developer Da7_Tech scores Cognition's SWE-2 a 7.3/10 on the Da7em Bench. While praising its strict permission adherence, speed, and solo endurance, the review documents serious edge failures: silent agent starvation during background orchestration, 128K token thinking loops that obsess over trivial wording, and rapid output quality decay beyond 45 minutes unless supervised by a reasoning model like Opus 5.5.",
+          "url": "https://x.com/Da7_Tech/status/2106515649551868126"
+        },
+        {
+          "tag": "eval-arena",
+          "title": "@trikcode: Gemini 4 Argon Surpasses Claude Opus 4.8 on Agent Arena",
+          "body": "Fresh benchmark evaluations on Agent Arena reveal Google's Gemini 4 Argon overtaking Claude Opus 4.8 in multi-turn tool use, agentic reasoning, and complex API coordination, reinforcing Google's accelerating momentum in frontier model performance.",
+          "url": "https://x.com/trikcode/status/2106354933322912091"
+        },
+        {
+          "tag": "orchestration",
+          "title": "@Ga_Vasques: Daily Orchestrator Tier List Ranks T3 Code Nightly at SS-Tier",
+          "body": "Guilherme Vasques publishes an updated daily-driver AI orchestrator ranking, placing T3 Code Nightly at SS-tier due to seamless background responsiveness, while downgrading Traycer and Maestri for terminal-bound friction and requiring excessive human nudging when subagents stall.",
+          "url": "https://x.com/Ga_Vasques/status/2106391784913772883"
+        },
+        {
+          "tag": "prompt-hygiene",
+          "title": "@is_llll: Context Pruning Confirmed — Opus 5.5 Thrives After 1,000-Line CLAUDE.md Diet",
+          "body": "Further telemetry confirms that disabling Claude Code's auto-memory and pruning bloated CLAUDE.md files from 1,070 lines to 344 lines yields immediate IQ gains in Opus 5.5, demonstrating that latest frontier models are hypersensitive to context contamination compared to prior architectures.",
+          "url": "https://x.com/is_llll/status/2106253961170919529"
+        }
+      ]
+    },
+    {
+      "emoji": "⚡",
+      "title": "OpenAI & Codex Ecosystem: Dot's UX Dilemma & the Impending Astra Drop",
+      "items": [
+        {
+          "tag": "ux-architecture",
+          "title": "@simonw & @thsottiaux: Simon Willison and OpenAI Lead Debate Dot vs ChatGPT Threading",
+          "body": "Simon Willison questions the user experience paradigm of OpenAI's new Dot agent, noting that while Dot offers persistent memory, users lose granular control over contextual branch threads. OpenAI product lead Tibo Sottiaux explains that Dots are engineered as persistent companion agents carrying cross-session state, teasing significant workflow updates scheduled for next week.",
+          "url": "https://x.com/simonw/status/2106500511465869380"
+        },
+        {
+          "tag": "voice-agent-ux",
+          "title": "@theaaron & @argofowl: Codex Dot Voice UX Faces Criticism Over 5-Ring Latency vs Grok Bot",
+          "body": "Users voice frustration over OpenAI Dot's simulated telephone interface, where calls take 5 rings (10-15 seconds) to connect compared to Grok Bot's instantaneous 0.5-second response time. Developers argue skeuomorphic phone paradigms introduce unnecessary drag into high-velocity 2026 agent workflows.",
+          "url": "https://x.com/theaaron/status/2106401263089029122"
+        },
+        {
+          "tag": "model-anticipation",
+          "title": "@bindureddy & @davis7: OpenAI Gears Up for Next-Week Launch as Astra Ultra-Fast Mode Gains Fans",
+          "body": "Speculation intensifies around OpenAI's confirmed launch next week, with Bindu Reddy predicting an Astra 6.5 drop. Meanwhile, developers praise Astra on low-reasoning ultra-fast settings for rapid email management, quick patches, and research triage, while clamoring for equivalent ultra-fast execution on GPT-6.1 Sol.",
+          "url": "https://x.com/bindureddy/status/2106444156021375063"
+        },
+        {
+          "tag": "deprecation-alert",
+          "title": "@Voxyz_ai: Countdown Begins — GPT-5.5 Sunsets Across Codex and ChatGPT on October 14",
+          "body": "Engineers remind developers that GPT-5.5 will be officially retired from ChatGPT and Codex in 11 days (October 14), urging teams to audit config files and migration pipelines for legacy model strings before the deprecation cutoff.",
+          "url": "https://x.com/Voxyz_ai/status/2106398877511520661"
+        }
+      ]
+    },
+    {
+      "emoji": "💰",
+      "title": "Quota Economics, Agent Hardware & Open Source Tools",
+      "items": [
+        {
+          "tag": "quota-wars",
+          "title": "@theo & @Claudeupdates11: Claude Pro 3B Token Headroom Shakes Up the $20 Tier Landscape",
+          "body": "Creator Theo reports burning through 4 separate Claude accounts without denting his Fable allocation limits. Comparative tier breakdowns reveal Claude Pro delivering 3B tokens at 90 TPS compared to ChatGPT Plus's 870M tokens at 25-50 TPS, intensifying community calls for OpenAI to introduce a dedicated $50 intermediate plan.",
+          "url": "https://x.com/theo/status/2106502358834479502"
+        },
+        {
+          "tag": "agent-hardware",
+          "title": "@karolzdeb: $30k iPhone Farm MCP Server Enables Real-Device Agent Swarms",
+          "body": "Karol Zdebel introduces a dedicated physical iPhone server accessible via MCP, allowing coding agents like Claude Code, Codex, and Grok Bot to orchestrate mobile tasks directly on physical hardware with dedicated carrier SIMs, bypassing proxy blocks and API restrictions.",
+          "url": "https://x.com/karolzdeb/status/2101355640262394307"
+        },
+        {
+          "tag": "open-source",
+          "title": "@trending_repos: Agent-Reach Hits 89K Stars for Universal Social Data Extraction",
+          "body": "Trending open-source tool Agent-Reach surges past 89,000 GitHub stars. The CLI utility provides autonomous agents with unified, zero-API-fee scrapers across Twitter, Reddit, YouTube, GitHub, and Bilibili, giving agent pipelines real-time web awareness.",
+          "url": "https://x.com/trending_repos/status/2106356614559391800"
+        },
+        {
+          "tag": "workflow-optimization",
+          "title": "@Michael_Fenech_: The 30-Day Human-Dependency Audit Framework for Grok Bot Workflows",
+          "body": "An operational audit protocol for heavy Grok Bot users structures an 8-point review classifying human interventions into Teach, Systemise, Automate, or Escalate categories, methodically eliminating manual context handoffs and unnecessary human approval bottlenecks.",
+          "url": "https://x.com/Michael_Fenech_/status/2106412459645129054"
+        }
+      ]
+    },
+    {
+      "emoji": "🎨",
+      "title": "Local AI & Creative Engineering: FreeVideo, Qwen LoRAs & Text-to-CAD",
+      "items": [
+        {
+          "tag": "local-video",
+          "title": "@HaochengXiUCB: FreeVideo Runs MiniMax H3 Video Generation on 8GB Laptops",
+          "body": "Haocheng Xi releases FreeVideo, bringing MiniMax H3 and Video DeltaNet to consumer laptops with just 8GB VRAM and 16GB RAM. The release features native ComfyUI workflows, LoRA compatibility, and diffusion optimizations for affordable local video generation.",
+          "url": "https://x.com/HaochengXiUCB/status/2106149968994291933"
+        },
+        {
+          "tag": "image-synthesis",
+          "title": "@AndyL5cc: Qwen Image 2.1 Face-Swap LoRA Ships for ComfyUI and Draw Things",
+          "body": "Open-source creator Andy L releases BFS-Best-Face-Swap adapted for Qwen Image 2.1, supporting full face, head, and body replacement with packaged workflows for ComfyUI and Draw Things on Apple Silicon.",
+          "url": "https://x.com/AndyL5cc/status/2106342448444399823"
+        },
+        {
+          "tag": "cad-tooling",
+          "title": "@cellinlab: Open-Source Text-to-CAD Plugin Integrates Directly into Codex",
+          "body": "Developer Cell demonstrates text-to-cad running locally within Codex, converting prompts directly into parametric STEP, STL, and 3MF geometry with built-in DFM checks for CNC, 3D printing, and injection molding.",
+          "url": "https://x.com/cellinlab/status/2106182312841150667"
+        },
+        {
+          "tag": "design-systems",
+          "title": "@thekitze: DesignVibes Delivers Curated Aesthetic Tokens to Elevate Agent Taste",
+          "body": "Kitze launches DesignVibes, a gallery of frontend aesthetic tokens and shadcn templates developers can paste directly into coding agents to eliminate generic UI styling and instill consistent design taste.",
+          "url": "https://x.com/thekitze/status/2106036397216002339"
+        }
+      ]
+    }
+  ]
+}
+
+target_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+target_path.write_text(json.dumps(digest_data, indent=2, ensure_ascii=False), encoding='utf-8')
+print(f"Updated {target_path} successfully.")

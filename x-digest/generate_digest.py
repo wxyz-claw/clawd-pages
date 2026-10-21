@@ -1,0 +1,128 @@
+import json
+from pathlib import Path
+
+# Formatted date for Saturday, August 8th, 2026
+formatted_date = "Saturday, August 8th, 2026"
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": formatted_date,
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Sergey Brin Takes Direct Charge of Gemini:</strong> Google co-founder Sergey Brin ($240B net worth) has returned to hands-on programming and direct oversight of Gemini as Google restructures its AI leadership.",
+    "<strong>SpaceX Acquires Cursor in $60B Deal:</strong> Reports surface that SpaceX is completing a $60B acquisition of developer platform Cursor, sparking discussions around brand identity and cloud infrastructure.",
+    "<strong>xAI Launches Imagine Image 2.0:</strong> Grok introduces its next-generation image synthesis model featuring precision image editing, crisp typography rendering, and improved human faces.",
+    "<strong>GPT-4 4-Year Milestone:</strong> OpenAI President Greg Brockman reflects on four years since GPT-4 completed initial training, highlighting the rapid acceleration of AI capabilities.",
+    "<strong>Autonomous Financial Intelligence:</strong> AlphaSense debuts SuperAnalyst, an always-on AI agent capable of conducting multi-step financial research and monitoring workflows."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@aakashgupta: Sergey Brin Takes Direct Control of Gemini",
+          "body": "Google co-founder Sergey Brin has reportedly assumed direct oversight of Gemini amid leadership restructuring. Demis Hassabis confirmed Brin is actively programming alongside team members to accelerate Google's AI capabilities.",
+          "url": "https://x.com/aakashgupta/status/2085990394022801632"
+        },
+        {
+          "tag": "hot",
+          "title": "@GergelyOrosz: SpaceX Acquires Cursor Developer Platform",
+          "body": "Reports indicate SpaceX is finalizing a $60B acquisition of Cursor with plans to phase out the standalone brand name, raising community discussions regarding developer trust and cloud environment privacy.",
+          "url": "https://x.com/GergelyOrosz/status/2086068253252633016"
+        },
+        {
+          "tag": "new",
+          "title": "@grok: Announcing Imagine Image 2.0",
+          "body": "xAI launched Imagine Image 2.0, introducing precision image editing, sharp text rendering within generated images, and significant improvements in facial detail accuracy.",
+          "url": "https://x.com/grok/status/2085816912383021110"
+        },
+        {
+          "tag": "update",
+          "title": "@gdb: GPT-4 Training 4-Year Anniversary",
+          "body": "OpenAI co-founder Greg Brockman highlighted that GPT-4 finished training exactly four years ago today, marking a key milestone in the progression of large-scale frontier AI models.",
+          "url": "https://x.com/gdb/status/2086064115160891632"
+        },
+        {
+          "tag": "new",
+          "title": "@robert_lauko: KurateOrg AI Reader for Arxiv",
+          "body": "KurateOrg introduced an AI-powered literature scanner that evaluates 500+ daily Arxiv preprints across 16 research dimensions including novelty, rigor, and translational impact.",
+          "url": "https://x.com/robert_lauko/status/2084753655413006737"
+        },
+        {
+          "tag": "update",
+          "title": "@thsottiaux: AI Harness Suspensions & Usage Limit Resets",
+          "body": "Discussions surrounding account suspensions when using custom model harnesses led developers across ecosystems to clarify API usage rules and reset usage limits for coding workloads.",
+          "url": "https://x.com/thsottiaux/status/2086153754525712706"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "new",
+          "title": "@AlphaSenseInc: SuperAnalyst AI Agent Launch",
+          "body": "AlphaSense released SuperAnalyst, an autonomous AI research agent designed to perform multi-step market intelligence, company analysis, and automated monitoring workflows for financial institutions.",
+          "url": "https://x.com/AlphaSenseInc/status/2065175840304865517"
+        },
+        {
+          "tag": "update",
+          "title": "@bookwormengr: China AI API Pricing Trends",
+          "body": "Developers observe rising pricing tiers for Chinese frontier AI model services like GLM Coding plans, reflecting growing compute costs and expanding enterprise capabilities.",
+          "url": "https://x.com/bookwormengr/status/2085659199242224027"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Aston Villa Transfer Negotiations",
+          "body": "Aston Villa football club confirmed active transfer negotiations for mid-fielder João Palhinha following a long-term injury to Amadou Onana.",
+          "url": "https://x.com/iMiaSanMia/status/2085997843236475191"
+        },
+        {
+          "tag": "hot",
+          "title": "@realmadrid: Official Statement on Jorge Messi",
+          "body": "Real Madrid C.F. issued an official statement expressing deep condolences following the passing of Jorge Messi, father of football legend Lionel Messi.",
+          "url": "https://x.com/realmadrid/status/2086050510100754805"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "update",
+          "title": "@kiteandkeymedia: Chapman Poll on Fictional Events",
+          "body": "A Chapman University poll revealed that nearly a third of respondents believed the government was concealing details about a North Dakota plane crash that never actually occurred, illustrating media perception dynamics.",
+          "url": "https://x.com/kiteandkeymedia/status/2084852143056675092"
+        },
+        {
+          "tag": "new",
+          "title": "@Phoenixyin13: Stephen Wolfram's NKS & Calculus",
+          "body": "An in-depth analysis of Stephen Wolfram's 'A New Kind of Science' explores continuous calculus as an engineering approximation of a fundamentally discrete computational universe.",
+          "url": "https://x.com/Phoenixyin13/status/2085934952630149324"
+        },
+        {
+          "tag": "update",
+          "title": "@laozhouhengmei: Han Dynasty Silkworm Heritage",
+          "body": "A retrospective look at the 1984 discovery of the Western Han gilded bronze silkworm by a Shaanxi farmer highlights how cultural artifact preservation policies have evolved over the decades.",
+          "url": "https://x.com/laozhouhengmei/status/2086060641270558852"
+        },
+        {
+          "tag": "update",
+          "title": "@naflasco: Architecture of Ancient Massive Doors",
+          "body": "An architectural exploration breaks down the engineering rationale behind massive ancient fort doors, detailing defensive mechanics and historical construction methods.",
+          "url": "https://x.com/naflasco/status/2085974088934203552"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("Created digest.json successfully!")

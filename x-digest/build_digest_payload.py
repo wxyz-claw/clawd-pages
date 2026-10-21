@@ -1,0 +1,137 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Monday, August 31st, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Lionel Messi International Retirement:</strong> Lionel Messi officially announced his retirement from international football with Argentina, closing an iconic national team career.",
+    "<strong>2027 AI Infrastructure Compute Gridlock:</strong> Elon Musk highlighted that ~15GW of AI compute capacity produced in 2027 cannot be powered on immediately due to power grid, transformer, and liquid-cooling constraints.",
+    "<strong>Tim Cook Steps Down as Apple CEO:</strong> Tim Cook published a farewell message to the Apple community on his final day as CEO, transitioning to a new role at the company.",
+    "<strong>US Sovereign Debt Strategy Alert:</strong> Treasury Secretary Bessent stated the US must grow its way out of debt through GDP expansion, as Fed Chair Kevin Warsh noted a global investment surge.",
+    "<strong>Barcelona Sign Gabriel Jesus from Arsenal:</strong> Fabrizio Romano confirmed Barcelona agreed a €10m transfer package to sign Arsenal forward Gabriel Jesus."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk: 15GW AI Compute Grid Infrastructure Bottleneck for 2027",
+          "body": "Elon Musk reported industry estimates indicating ~15GW of AI compute manufactured in 2027 cannot be powered on in 2027. Scaling requires solving physical infrastructure beyond power generation, including high-voltage transformers, liquid-cooling loops, massive chillers, and complex networking.",
+          "url": "https://x.com/elonmusk/status/2093810234141634702"
+        },
+        {
+          "tag": "hot",
+          "title": "@tim_cook: Tim Cook Shares Farewell on Final Day as Apple CEO",
+          "body": "Tim Cook published a message expressing gratitude to the global Apple community on his final day as CEO before transitioning his title, reflecting on Apple's ongoing mission and upcoming chapter.",
+          "url": "https://x.com/tim_cook/status/2094448088199078236"
+        },
+        {
+          "tag": "new",
+          "title": "@openclaw: OpenClaw 2.0 Official Release",
+          "body": "OpenClaw launched version 2.0 of its open-source multi-agent framework, featuring updated agent orchestration, local tool routing, and performance enhancements.",
+          "url": "https://x.com/openclaw/status/2094266903204434431"
+        },
+        {
+          "tag": "update",
+          "title": "@esandurrani: Honen Partners with NVIDIA for Enterprise AI Learning",
+          "body": "Esan announced Honen, an AI platform created with NVIDIA support that automatically turns company codebases and docs into interactive, self-improving courses for 250,000 enterprise learners.",
+          "url": "https://x.com/esandurrani/status/2072083052109635633"
+        },
+        {
+          "tag": "update",
+          "title": "@lennysan: Lenny's Newsletter Partners with SpaceXAI / Grok Bot",
+          "body": "Lenny Rachitsky announced an integration partnership with SpaceXAI and Grok Bot, extending AI assistant tools to newsletter subscribers and developer workflows.",
+          "url": "https://x.com/lennysan/status/2092386630397255796"
+        },
+        {
+          "tag": "update",
+          "title": "@thsottiaux: OpenAI Codex Team Celebrates Dashboard Milestone",
+          "body": "OpenAI engineer Tibo (@thsottiaux) shared progress updates on OpenAI Codex capabilities as developers discuss migrating workspace tooling to native model execution environments.",
+          "url": "https://x.com/thsottiaux/status/2093811840258293947"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: US Treasury Secretary Bessent on Sovereign Debt",
+          "body": "US Treasury Secretary Bessent emphasized that outgrowing debt through economic expansion and productivity is the primary path forward for US fiscal health.",
+          "url": "https://x.com/WatcherGuru/status/2094413866650513809"
+        },
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Fed Chair Kevin Warsh Highlights Global Investment Surge",
+          "body": "Federal Reserve Chair Kevin Warsh noted that global capital allocation is shifting toward infrastructure and productivity, reversing prior savings gluts.",
+          "url": "https://x.com/WatcherGuru/status/2094431317303939572"
+        },
+        {
+          "tag": "update",
+          "title": "@APompliano: Gen Z Financial Literacy & Risk Management Trends",
+          "body": "Anthony Pompliano highlighted research demonstrating Gen Z retail investors show disciplined risk aversion and long-term financial planning enabled by accessible digital education.",
+          "url": "https://x.com/APompliano/status/2085395725865591229"
+        },
+        {
+          "tag": "viral",
+          "title": "@UziCryptoo: Corporate vs Household Tax Code Comparison",
+          "body": "A viral commentary analyzing small business reinvestment write-offs versus personal household expense accounting sparked widespread discussion on tax structure reform.",
+          "url": "https://x.com/UziCryptoo/status/2094148366389117254"
+        },
+        {
+          "tag": "update",
+          "title": "@Starlink: Direct Global Connectivity Orders Expand",
+          "body": "Starlink highlighted growing international adoption for high-speed satellite broadband across remote home, enterprise, and mobile deployment scenarios.",
+          "url": "https://x.com/Starlink/status/2080392509671534884"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "viral",
+          "title": "@FabrizioRomano: Lionel Messi Retires from Argentina National Team",
+          "body": "Fabrizio Romano reported that Lionel Messi has officially retired from international football with Argentina, ending his historic career for his country.",
+          "url": "https://x.com/FabrizioRomano/status/2094441736076513620"
+        },
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano: Barcelona Agree €10m Deal for Gabriel Jesus",
+          "body": "Fabrizio Romano broke news that Barcelona reached an agreement to sign Gabriel Jesus from Arsenal on a permanent deal with medicals scheduled.",
+          "url": "https://x.com/FabrizioRomano/status/2094042636000661647"
+        },
+        {
+          "tag": "hot",
+          "title": "@Bayern_PR: Pep Guardiola Backs Harry Kane for Ballon d'Or",
+          "body": "Pep Guardiola publicly endorsed Harry Kane for the Ballon d'Or, praising his 70+ goal campaign, consistency, and overall impact on Bayern Munich's squad.",
+          "url": "https://x.com/Bayern_PR/status/2094026377481589219"
+        },
+        {
+          "tag": "update",
+          "title": "@wydcasmir: José Mourinho Analyzes European Football Depth",
+          "body": "Manager José Mourinho shared viral analysis evaluating La Liga versus Premier League star talent and coaching styles.",
+          "url": "https://x.com/wydcasmir/status/2094304619258102043"
+        },
+        {
+          "tag": "update",
+          "title": "@RnaudBertrand: Hong Kong Street Interview Feature",
+          "body": "A viral street interview in Hong Kong captured an unexpected conversation with a high-net-worth individual sharing business philosophy and wealth building principles.",
+          "url": "https://x.com/RnaudBertrand/status/2094373873060122780"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("Generated digest.json successfully!")

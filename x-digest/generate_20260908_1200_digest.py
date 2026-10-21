@@ -1,0 +1,131 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Tuesday, September 8th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Navier–Stokes Proof Allegations Rock AI & Math Community:</strong> Mathematicians Tristan Buckmaster and Levent Alpöge achieved major progress on Navier–Stokes using Claude and Codex, triggering a fiery debate after allegations surfaced that OpenAI internal teams attempted to scoop the proof using private chat logs.",
+    "<strong>DeepMind Launches AlphaGenome Atlas Mapping 9 Billion DNA Variants:</strong> Demis Hassabis announced DeepMind's AlphaGenome Atlas, an AI database charting all 9 billion single-letter DNA variants to predict mutation impacts on human health and disease.",
+    "<strong>Anthropic Incubator Team Revealed Behind Claude Code & MCP:</strong> Insider reports revealed Anthropic operates a fast-paced 20-person internal experimental team that accepts 70–80% project failure rates to incubate breakout products like Claude Code, MCP, and Claude Design.",
+    "<strong>France Football Announces Official 2026 Ballon d'Or Nominees:</strong> The 30 nominees for the 2026 Men's Ballon d'Or were officially unveiled, featuring Harry Kane, Lamine Yamal, Kylian Mbappé, Jude Bellingham, and Erling Haaland.",
+    "<strong>Heroic Rescue at Shanghai GT Race Sparks Safety & Organizer Outrage:</strong> Netherlands driver Hartog halted his race to single-handedly rescue a British driver from a burning GT race car after venue safety marshals failed to respond effectively."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@hosseeb: OpenAI & Math Community Erupt over Navier-Stokes Proof Claims",
+          "body": "Mathematicians Tristan Buckmaster and Levent Alpöge made breakthrough progress on Navier-Stokes using Claude and Codex, triggering high-profile accusations that OpenAI attempted to scoop the work using private chat logs.",
+          "url": "https://x.com/hosseeb/status/2097217378753106336"
+        },
+        {
+          "tag": "new",
+          "title": "@demishassabis: DeepMind Releases AlphaGenome Atlas for Human Genomic Variant Mapping",
+          "body": "Google DeepMind launched AlphaGenome Atlas, mapping the predicted biological impact of all 9 billion possible single-letter DNA changes to advance genetic disease research.",
+          "url": "https://x.com/demishassabis/status/2097341636472688674"
+        },
+        {
+          "tag": "new",
+          "title": "@choblin29: Anthropic Incubator Team Yields Claude Code, MCP, and Claude Design",
+          "body": "An inside look revealed Anthropic maintains an agile 20-person team running 2-week iteration cycles with high fail-rates, responsible for spawning Claude Code, MCP, and Claude Design.",
+          "url": "https://x.com/choblin29/status/2096977155641225599"
+        },
+        {
+          "tag": "update",
+          "title": "@_FORAB: AI-Designed Molecule Shows Pulmonary Fibrosis Reversal in Phase II Trial",
+          "body": "Clinical trial results showed an AI-discovered small molecule targeting the TNIK enzyme successfully stabilized and partially restored lung function in pulmonary fibrosis patients.",
+          "url": "https://x.com/_FORAB/status/2097242987025805644"
+        },
+        {
+          "tag": "update",
+          "title": "@theo: Developers Contrast GPT-6 Astra's High Capability with Unpredictable Edge Cases",
+          "body": "Tech commentator Theo noted that while GPT-6 Astra achieves unprecedented multi-step coding autonomous feats, its occasional logic lapses contrast with consistent execution models like Fable 5.1.",
+          "url": "https://x.com/theo/status/2097192907023458473"
+        },
+        {
+          "tag": "new",
+          "title": "@White1637402: DeepSeek Introduces Flash 4.1 Architecture with API Speed Improvements",
+          "body": "DeepSeek unveiled its Flash 4.1 model iteration, delivering faster token generation and optimized throughput across developer API endpoints.",
+          "url": "https://x.com/White1637402/status/2097230806796419340"
+        },
+        {
+          "tag": "update",
+          "title": "@poteto: xAI Prepares Grok Companion App for Android Google Play Store Release",
+          "body": "The Grok team announced Android app pre-registration on the Google Play Store for its standalone conversational and agentic assistant.",
+          "url": "https://x.com/poteto/status/2093063044062650744"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@ballondor: France Football Unveils 30 Nominees for 2026 Men's Ballon d'Or",
+          "body": "The official nomination list for the 2026 Ballon d'Or highlighted top global football stars including Harry Kane, Lamine Yamal, Kylian Mbappé, Jude Bellingham, and Vinícius Jr.",
+          "url": "https://x.com/ballondor/status/2097334895081402430"
+        },
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: China Reports Surge in August Trade Surplus Reaching $119 Billion",
+          "body": "Official trade data revealed China's trade surplus expanded to $119 billion in August, driven by resilient industrial and electronics export demand.",
+          "url": "https://x.com/WatcherGuru/status/2097153678620676561"
+        },
+        {
+          "tag": "update",
+          "title": "@TeslaAndDoge: Analysts Debate Robotaxi Economics as Cybercab Monetization Approaches",
+          "body": "EV industry commentators analyzed Cybercab's hardware pricing strategy versus autonomous fleet revenue projections, debating fleet ownership models.",
+          "url": "https://x.com/TeslaAndDoge/status/2097172120891736466"
+        },
+        {
+          "tag": "update",
+          "title": "@eurofounder: Tech & Medical Talent Mobility Debated Across US and European Compensation",
+          "body": "A viral case study sparked global discussion on total compensation, tax rates, paternity benefits, and quality-of-life trade-offs between US tech/medical offers and European positions.",
+          "url": "https://x.com/eurofounder/status/2097258391122972776"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@hlxf99: Heroic Rescue Driver Praised Following Shanghai GT Fire Incident",
+          "body": "Dutch driver Hartog received widespread acclaim after abandoning his position in a Shanghai GT race to pull a trapped rival from a burning car when track safety crews lagged.",
+          "url": "https://x.com/hlxf99/status/2096891011134034350"
+        },
+        {
+          "tag": "update",
+          "title": "@FabrizioRomano: Ballon d'Or Nominees Trigger Intense Club of the Year Debate",
+          "body": "Football journalist Fabrizio Romano sparked global fan debate over the Club of the Year award following shortlists featuring Real Madrid, PSG, and Bayern Munich.",
+          "url": "https://x.com/FabrizioRomano/status/2097256535902560422"
+        },
+        {
+          "tag": "new",
+          "title": "@engr_imm: Babysitter Overtime Invoice Sparks Debate on Gig Economy Boundaries",
+          "body": "A viral conversation over a $180 babysitting bill ignited broader discussions regarding clear hourly rate expectations and overtime boundaries in household services.",
+          "url": "https://x.com/engr_imm/status/2097190381859287041"
+        },
+        {
+          "tag": "update",
+          "title": "@samuelxzhang: Direct Executive Outreach Highlighted as Effective Networking Shortcut",
+          "body": "Tech founders discussed the surprising efficacy of cold emailing CEOs directly, proving that clear, high-value outreach often bypasses corporate gatekeepers.",
+          "url": "https://x.com/samuelxzhang/status/2097170820359692396"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-08 12:00 ET!")

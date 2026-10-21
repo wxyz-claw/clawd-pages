@@ -1,0 +1,153 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Monday, September 21st, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Xiaomi MiMo-V2.6 Pro & Flash Take #1 Open-Source Intelligence Crown:</strong> Xiaomi releases open-weights MiMo-V2.6-Pro (1.02T total / 42B active MoE) scoring 46 on the Artificial Analysis Intelligence Index—matching Claude Opus 5 and GPT-5.6 Sol on agent benchmarks at an aggressive $0.435/$0.87 per million tokens ($0.13/task Pareto frontier), accompanied by the CodeMidas RL training framework and open datasets.",
+    "<strong>OpenAI Internal Model Cracks 100+ Open Math Problems in 24 Days:</strong> Mathematical luminaries Edward Witten, Timothy Gowers, and Martin Hairer convene on an independent advisory panel as OpenAI reveals an internal reasoning model resolved over 100 open problems across mathematics within 24 days of training, catching internal researchers off guard.",
+    "<strong>Diogo Almeida Unveils 10-Step Jev Blueprint as Agent Memory Ecosystem Grows:</strong> TypeSafe AI founder Diogo Almeida shares an architectural blueprint ('Meta-attention') for rebuilding coding agents without static KV cache penalties, while community projects like Beacon (cross-harness self-improving memory) and AgentRun (90% enterprise cost reduction) operationalize calibrated decision layers across Claude Code and Codex.",
+    "<strong>Google AX & Open-Source Agent Infrastructure Accelerate:</strong> Google open-sources AX, an orchestrator positioned as 'Kubernetes for agent execution,' while Nous Research's Hermes Agent ships official Claude SDK plugin integration, and EvoOntology demonstrates up to +26.7 benchmark gains by serving dynamic ontologies via MCP.",
+    "<strong>Apple Hardware Divide, Zero-Setup Cloudflare Tunnels & Sol vs Astra Debate:</strong> Ben Thompson reviews the iPhone 18 Pro Max and iPhone Air form-factor split; Cloudflare debuts Quick Tunnels for instant zero-config localhost exposure; and developer evaluations critique OpenAI's verifier-focused benchmark alignment versus Claude Fable's intuitive open-ended reasoning."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Agent Tooling",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@CompleteSkeptic & @0xMovez: Diogo Almeida's 10-Step Blueprint for Jev Coding Agent Harnesses",
+          "body": "TypeSafe AI founder Diogo Almeida releases a 12-page architectural guide on building high-performance coding agent harnesses. By replacing static, ballooning KV cache histories with dynamic turn-by-turn context reconstitution ('Meta-attention'), tiered tool disclosure, and condition-loaded instructions, the design cuts agent token costs by up to 400x and speeds up execution by 200x.",
+          "url": "https://x.com/CompleteSkeptic/status/2101894250401271876"
+        },
+        {
+          "tag": "new",
+          "title": "@_avichawla: Beacon Brings Cross-Harness Self-Improving Agent Memory via Jev",
+          "body": "Beacon by Asymptote Labs open-sources an autonomous learning layer that unifies sessions across Claude Code, Codex, Cursor, and OpenCode. Rather than hoarding raw command histories, Jev continuously evaluates run traces for genuine debugging lessons and human corrections, promoting distilled patterns into reusable project skills shared across all harnesses.",
+          "url": "https://x.com/_avichawla/status/2101966536798040332"
+        },
+        {
+          "tag": "new",
+          "title": "@arpit_bhayani: Google Open-Sources AX Agentic Orchestration Framework",
+          "body": "Google open-sources AX, an agentic execution orchestrator engineered as a 'Kubernetes for agents.' It introduces resilient scheduling, execution tracing, and distributed coordination primitives to supervise multi-agent workflows at scale.",
+          "url": "https://x.com/arpit_bhayani/status/2102045239917850785"
+        },
+        {
+          "tag": "update",
+          "title": "@Teknium: Hermes Agent Integrates Official Claude SDK Plugin",
+          "body": "Nous Research's Teknium releases an official Claude SDK plugin for Hermes Agent, allowing developers to route through their existing Claude Code subscriptions natively without API tier markups or loss of harness features.",
+          "url": "https://x.com/Teknium/status/2102093483788107792"
+        },
+        {
+          "tag": "tip",
+          "title": "@omarsar0: EvoOntology Paper Demonstrates +26.7 Accuracy Jump via Evolving MCP Schema Layers",
+          "body": "A new research paper introduces EvoOntology, showing that serving an agent with a dedicated, self-evolving ontology over MCP improves GPT-5.5 accuracy by 26.7 points on DDR-Bench and 7.4 points on BIRD. The ontology is iteratively updated via paired evaluations, outperforming both static prompts and manual schema annotations.",
+          "url": "https://x.com/omarsar0/status/2102099298716660223"
+        },
+        {
+          "tag": "tip",
+          "title": "@dani_avila7: Dynamic Jev Skill Injection Keeps Claude Code Context Lean",
+          "body": "A new Claude Code mod uses the Jev decision API to evaluate user intent and inject only matching skill definitions on demand, eliminating the context window bloat of having dozens of idle skill prompts loaded by default.",
+          "url": "https://x.com/dani_avila7/status/2101885477158547753"
+        },
+        {
+          "tag": "hot",
+          "title": "@_aj: AgentRun Harness Slashes Enterprise Knowledge Work Costs by 90%",
+          "body": "AJ Asver unveils AgentRun, a specialized harness leveraging Jev to learn repetitive operational workflows as they run. By compiling solved LLM decision steps into executable deterministic code, processing 100,000 compliance alerts plummeted from over $290,000 on Opus 5 to under $26,000.",
+          "url": "https://x.com/_aj/status/2102061534956662818"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Systems, Models & Infrastructure",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@XiaomiMiMo & @ArtificialAnlys: Xiaomi MiMo-V2.6 Pro Claims #1 Open-Weights Spot on Intelligence Index",
+          "body": "Xiaomi open-sources MiMo-V2.6 (1.02T MoE / 42B active parameters), debuting atop the Artificial Analysis Intelligence Index with a score of 46—matching Claude Opus 5 and GPT-5.6 Sol across agent benchmarks. Priced at $0.435 input / $0.87 output per 1M tokens ($0.13 per task), it establishes a new Pareto efficiency frontier, complete with open weights, RL code, and the CodeMidas dataset.",
+          "url": "https://x.com/XiaomiMiMo/status/2102138559952290106"
+        },
+        {
+          "tag": "hot",
+          "title": "@choblin29 & @OpenAI: OpenAI Internal Model Solves Over 100 Open Mathematics Problems in 24 Days",
+          "body": "OpenAI convenes an independent advisory board including Fields Medalists and mathematicians Edward Witten, Timothy Gowers, and Martin Hairer to evaluate breakthroughs from an internal model that resolved over 100 long-standing open problems across mathematics within 24 days of training.",
+          "url": "https://x.com/choblin29/status/2102095044543160555"
+        },
+        {
+          "tag": "new",
+          "title": "@RohOnChain: Sub-100ms Autonomous Trading Engine Built on Jev and TradingView",
+          "body": "Roan open-sources a 24/7 trading framework combining real-time TradingView technical indicators with Jev's typed probability layer. By evaluating condensed numeric state snapshots (<400 tokens) in 81ms, the system enables Kelly-sized position entry without generative LLM hallucination.",
+          "url": "https://x.com/RohOnChain/status/2102082148866130323"
+        },
+        {
+          "tag": "hot",
+          "title": "@ScarletKc: Benchmark Overfitting vs Exploratory Intuition: Why Astra and Fable Diverge",
+          "body": "A viral critique contrasts GPT-6 Astra's rigid, test-driven validation habits with Claude Fable's fluid capability for open-ended problem exploration, arguing that frontier models overtrained on verifier-based test suites lose the ability to navigate ambiguous, real-world development tasks.",
+          "url": "https://x.com/ScarletKc/status/2101815661752459497"
+        },
+        {
+          "tag": "tip",
+          "title": "@Fei2411: Deconstructing Actual Token Quotas and Pricing Traps in GPT vs Claude '20x' Tiers",
+          "body": "A deep data breakdown analyzes actual weekly allocations in Pro/Max subscriptions: while OpenAI provides an exact 20x multiplier on base limits, Claude's higher base Opus quota delivers significantly more absolute tokens despite Fable being capped at half-quota.",
+          "url": "https://x.com/Fei2411/status/2102068603323666900"
+        },
+        {
+          "tag": "new",
+          "title": "@TungaBayrak: Freya AI Releases 'Adam & Eve' Ultra-Realistic Speech Synthesis",
+          "body": "Freya AI launches its Adam and Eve speech models, taking the #1 ranking on AudioRealismBench. The models cross the uncanny valley with nuanced respiratory cadence, micro-pauses, and natural conversation dynamics.",
+          "url": "https://x.com/TungaBayrak/status/2102069626762932680"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture, Tech & Society",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@benthompson: Ben Thompson's iPhone 18 Pro Max Review: The iPhone Air Dilemma",
+          "body": "Stratechery's Ben Thompson weighs in on Apple's latest hardware lineup with a succinct warning: testing the razor-thin iPhone Air makes returning to traditional flagship chassis virtually impossible.",
+          "url": "https://x.com/benthompson/status/2102167616743702950"
+        },
+        {
+          "tag": "update",
+          "title": "@dallairedemers: Breakthroughs Reported Against Chinese Post-Quantum Cryptography Candidates",
+          "body": "Cryptographic researchers report rapid cryptanalytic progress breaking multiple Chinese post-quantum cryptography (PQC) algorithms in rapid succession, intensifying debate around global lattice-based cryptography standards.",
+          "url": "https://x.com/dallairedemers/status/2102021269747376247"
+        },
+        {
+          "tag": "new",
+          "title": "@xiaohu: Cloudflare Quick Tunnels Enable Single-Command Localhost Exposure",
+          "body": "Cloudflare introduces Quick Tunnels, enabling developers to expose local development ports to the public internet via globally authenticated HTTPS URLs instantly with a single CLI command—requiring zero accounts, configs, or port-forwarding.",
+          "url": "https://x.com/xiaohu/status/2101877033517379832"
+        },
+        {
+          "tag": "tip",
+          "title": "@0xSilver_Time: Automated AI Prospecting Engine Turns Google Maps Gaps into High-Margin Contracts",
+          "body": "A case study outlines how an entrepreneur built a recurring $20,000/month agency by scanning Google Maps for highly rated businesses lacking websites, programmatically drafting live demo sites in minutes, and executing automated targeted outreach.",
+          "url": "https://x.com/0xSilver_Time/status/2101860297170706821"
+        },
+        {
+          "tag": "tip",
+          "title": "@AndyL5cc: Autonomous Growth Operations: Managing Red Book Distribution with Codex",
+          "body": "Andy L documents 5-day results using Codex as an autonomous marketing agent, generating 3.07 million impressions and 2,000 targeted followers across topic discovery, automated copy formulation, and audience feedback loops.",
+          "url": "https://x.com/AndyL5cc/status/2101499000990179392"
+        },
+        {
+          "tag": "update",
+          "title": "@corndogjpn2: Instant-Solubility Food Science: Deconstructing Meiji Savas Cold-Water Dispersion",
+          "body": "A viral deep-dive into food processing engineering examines the physical and chemical mechanics behind Meiji's Savas protein powder, highlighting fluidized bed agglomeration and lecithin dispersion techniques that eliminate clumping.",
+          "url": "https://x.com/corndogjpn2/status/2101914474336899402"
+        }
+      ]
+    }
+  ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+out_path.write_text(json.dumps(digest_payload, indent=2, ensure_ascii=False), encoding='utf-8')
+print(f"Successfully generated {out_path}")

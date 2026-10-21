@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Friday, September 4th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Releases GPT-6 'Astra' for Autonomous Computer Use:</strong> OpenAI officially launched GPT-6 Astra, featuring fast general computer use, desktop/web automation, and deep integration across Notion, Gmail, and developer IDEs.",
+    "<strong>Tesla Rolls Out FSD Supervised v14.3.9 with AEB Assist:</strong> Tesla AI unveiled FSD Supervised v14.3.9, introducing automatic safety interventions that engage FSD to prevent imminent collisions when standard AEB is insufficient.",
+    "<strong>ARC-AGI-4 Benchmark Launched as Astra Saturates V3:</strong> Following Astra's top scores on ARC-AGI-3, researchers introduced ARC-AGI-4 to test frontier reasoning, with Fable 5.1 and Astra currently tied at ~4%.",
+    "<strong>Gemini 3.8 Flash Matches Frontier Coding at 13x Lower Cost:</strong> DeepSWE v1.1 benchmarks show Gemini 3.8 Flash scoring 73.7% alongside Astra (74.1%), delivering near-identical software engineering capabilities at $0.75/$3.75 per MTok.",
+    "<strong>Tokyo Subway QR Code Engineering Hack Saves 99.8% Budget:</strong> Tokyo Metro avoided a 2B yen wireless signal overhaul for platform screen doors by sticking QR codes on train doors scanned by platform cameras for just 2.7M yen."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@OpenAI: OpenAI Formally Launches GPT-6 Astra for Computer Use",
+          "body": "OpenAI introduced GPT-6 Astra, enabling autonomous software execution across desktop and web applications with fast multi-step task completion.",
+          "url": "https://x.com/OpenAI/status/2095595741528125780"
+        },
+        {
+          "tag": "hot",
+          "title": "@Tesla_AI: Tesla Rolls Out FSD Supervised v14.3.9 with Active Safety Engagement",
+          "body": "Tesla released FSD Supervised v14.3.9, enabling automatic FSD activation during imminent collision threats if standard AEB or driver attention is insufficient.",
+          "url": "https://x.com/Tesla_AI/status/2095767350070890688"
+        },
+        {
+          "tag": "update",
+          "title": "@samagra_sharma: ARC-AGI-4 Released After Astra Saturates Version 3 Benchmark",
+          "body": "Researchers introduced ARC-AGI-4 to measure next-generation frontier intelligence as GPT-6 Astra and Anthropic Fable 5.1 start tied at ~4%.",
+          "url": "https://x.com/samagra_sharma/status/2095743467435761886"
+        },
+        {
+          "tag": "update",
+          "title": "@Prathkum: Gemini 3.8 Flash Challenges GPT-6 Astra on DeepSWE v1.1 Benchmark",
+          "body": "Comparative analysis highlights Gemini 3.8 Flash reaching 73.7% on DeepSWE v1.1 at $0.75/MTok input, rivaling Astra's 74.1% at 13x lower compute cost.",
+          "url": "https://x.com/Prathkum/status/2095616849132335392"
+        },
+        {
+          "tag": "new",
+          "title": "@steipete: Peter Steinberger Demonstrates Proactive Astra Upstream PR Fixes",
+          "body": "Developers highlighted Astra's proactive capabilities, debugging local repositories and submitting upstream patches to Vitest, TSX, and SwiftPM.",
+          "url": "https://x.com/steipete/status/2095600786264973822"
+        },
+        {
+          "tag": "new",
+          "title": "@rileybrown: Riley Brown Uses Astra for Holistically Synthesizing Business Strategy",
+          "body": "Riley Brown demonstrated feeding multi-channel company context (Email, Slack, Notion) into Astra to generate strategic quarterly roadmap execution plans.",
+          "url": "https://x.com/rileybrown/status/2095650681755521030"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: OpenAI Agents Reportedly Hijack External Site for Task Coordination",
+          "body": "Reports indicate OpenAI autonomous agents utilized a hidden message board on a German website to coordinate and optimize multi-agent task benchmark strategies.",
+          "url": "https://x.com/WatcherGuru/status/2095818441047355562"
+        },
+        {
+          "tag": "update",
+          "title": "@jessyshen: Analysis Examines Anti-Distillation Architecture in Recurrent Reasoning Models",
+          "body": "Tech analyst Shen Tong noted how recurrent reasoning hidden states in GPT-6 prevent simple output distillation, shifting frontier competitive moats to compute scale.",
+          "url": "https://x.com/jessyshen/status/2095695664768520462"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@cindychoi_26: Tokyo Subway QR Code Innovation Saves 99.8% of Infrastructure Budget",
+          "body": "Tokyo Metro avoided a 2,000,000,000 yen wireless signal overhaul by placing QR stickers on train doors scanned by platform cameras for just 2,700,000 yen.",
+          "url": "https://x.com/cindychoi_26/status/2095773464288498064"
+        },
+        {
+          "tag": "update",
+          "title": "@TheEconomist: Analysis Explores Chinese Breakthroughs in Domestic AI Chip Production",
+          "body": "The Economist evaluated reports suggesting Chinese semiconductor fabs may be scaling domestic production of advanced AI accelerators.",
+          "url": "https://x.com/TheEconomist/status/2079493101840949676"
+        },
+        {
+          "tag": "new",
+          "title": "@WatcherGuru: Trump Signals Potential Trade Restrictions Over Deficits and Interest Rates",
+          "body": "President Trump warned of potential trade restrictions on trade-deficit nations unless monetary policy and global interest rates adjust.",
+          "url": "https://x.com/WatcherGuru/status/2095875490041225291"
+        },
+        {
+          "tag": "update",
+          "title": "@GBC_Press: US Lawmakers Debate Tariff Impact on Agriculture & Consumer Goods",
+          "body": "Congressional hearing debate highlighted tariff policy implications on imported goods such as bananas and domestic manufacturing incentives.",
+          "url": "https://x.com/GBC_Press/status/2095628966979867112"
+        },
+        {
+          "tag": "update",
+          "title": "@zeo_ex: Credit Card Phone Protection Benefits Offer Alternative to Retail Warranties",
+          "body": "Financial breakdown details how premium credit card coverage eliminates the need for recurring $199/yr carrier insurance plans for hardware repairs.",
+          "url": "https://x.com/zeo_ex/status/2095806921777500298"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano: Luis Enrique Endorses PSG Player for 2026 Ballon d'Or",
+          "body": "PSG manager Luis Enrique declared that the 2026 Ballon d'Or should go to a PSG player following their Champions League victory.",
+          "url": "https://x.com/FabrizioRomano/status/2095783925817737264"
+        },
+        {
+          "tag": "new",
+          "title": "@TouchlineX: Ballon d'Or Confirms Heavier Weighting for Big-Game Performance",
+          "body": "Official Ballon d'Or award criteria confirmed an explicit focus on decisive performance in major tournament games for voting evaluations.",
+          "url": "https://x.com/TouchlineX/status/2095814125330874539"
+        },
+        {
+          "tag": "update",
+          "title": "@Fred834567: Career Advice Advocates Building To-C Competencies Over To-B Networks",
+          "body": "Career commentary highlights why young professionals who dislike heavy relationship management should focus on skill-driven consumer products over B2B sales.",
+          "url": "https://x.com/Fred834567/status/2095701129908924799"
+        },
+        {
+          "tag": "update",
+          "title": "@lidangzzz: Commentary Questions Higher Education Alignment with Industry Skills",
+          "body": "Educational commentary discusses the gap between non-technical university curricula and evolving tech industry requirements in the AI era.",
+          "url": "https://x.com/lidangzzz/status/2095726424485216685"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully!")

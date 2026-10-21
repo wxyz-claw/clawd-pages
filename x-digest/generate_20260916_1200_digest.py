@@ -1,0 +1,112 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Wednesday, September 16th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Salesforce & Anthropic Launch Salesforce in Claude Keynote:</strong> Salesforce introduces 37 pre-built sales skills directly in Claude, bringing accounts, opportunities, and pipeline forecasting into AI workflows, backed by a live Dreamforce keynote with Marc Benioff and Dario Amodei.",
+    "<strong>Nous Research Cleans 1M Lines of Code with 1,393 Hermes Subagents:</strong> Nous Research publishes technical details showing how 1,393 Hermes subagents ran over 19 hours to trim a 1M line Python codebase by 34.4%, saving nearly $2M in engineering hours.",
+    "<strong>Google DeepMind Unveils 'Dream-RSI' Strategy Framework:</strong> DeepMind researchers release Dream-RSI (Recursive Self-Improvement through Evolving Worlds), demonstrating how coding agents can optimize their exploration strategies in replay simulators without retraining model weights.",
+    "<strong>Community Reviews Claude Opus 5.2 Subagent Capabilities:</strong> Hands-on evaluations highlight Opus 5.2's industry-leading intent recognition, token efficiency, and 10/10 subagent delegation skills, alongside ongoing speculation around OpenAI GPT-6 Luna and Sol tier rollouts."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@claudeai & @salesforce: Salesforce in Claude Beta Launches with 37 Sales Skills",
+          "body": "Salesforce and Anthropic release Salesforce in Claude in beta, integrating live accounts, deals, and pipeline dashboards with 37 pre-built sales skills directly inside conversation workflows.",
+          "url": "https://x.com/claudeai/status/2099876514330206578"
+        },
+        {
+          "tag": "new",
+          "title": "@NousResearch: 1,393 Hermes Subagents Clean 1M Lines of Python Code",
+          "body": "Nous Research demonstrates large-scale subagent coordination: 1,393 Hermes subagents ran across 19 hours to refactor and reduce a 1,000,000-line codebase by 34.4%, saving nearly $2M in human dev hours.",
+          "url": "https://x.com/NousResearch/status/2099984561451028913"
+        },
+        {
+          "tag": "update",
+          "title": "@MaxForAI: Google DeepMind Releases Dream-RSI Strategy Improvement Paper",
+          "body": "Google DeepMind's Dream-RSI paper shows agents modifying their exploration strategy rather than weights, creating replay simulators from execution history to achieve up to 2.43x GPU kernel search efficiency.",
+          "url": "https://x.com/MaxForAI/status/2100111071726174279"
+        },
+        {
+          "tag": "update",
+          "title": "@Gegam245074: Hands-On Evaluation of Claude Opus 5.2's Subagent Delegation",
+          "body": "Detailed benchmark analysis of Claude Opus 5.2 highlights its token efficiency, precise plugin call timing, zero-hallucination design code adherence, and superior multi-agent delegation.",
+          "url": "https://x.com/Gegam245074/status/2099920403770589607"
+        },
+        {
+          "tag": "new",
+          "title": "@opencode: Union Alpha Stealth Model Released Free for Agentic Coding",
+          "body": "OpenCode releases its Union Alpha stealth model free for one week, specifically optimized for agentic coding with image input support and strict zero-data-training privacy.",
+          "url": "https://x.com/opencode/status/2100236430890991782"
+        },
+        {
+          "tag": "tip",
+          "title": "@trq212: Why Stateless MCPs Outpace CLIs for Model Integration",
+          "body": "Architecture breakdown showing why Model Context Protocols (MCP) with deferred tools and query parameters are outperforming local CLIs for complex AI integrations.",
+          "url": "https://x.com/trq212/status/2099958388230873165"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@Huang_Sihao: Sihao Huang Joins Anthropic as Head of Frontier Compute Strategy",
+          "body": "Sihao Huang announces he is joining Anthropic to lead frontier compute strategy and infrastructure expansion alongside Tom Brown.",
+          "url": "https://x.com/Huang_Sihao/status/2100013578078261463"
+        },
+        {
+          "tag": "new",
+          "title": "@moomoo: Moomoo Integrates as Official X Cashtag Trading Partner",
+          "body": "Fintech platform Moomoo officially partners with X, enabling one-click stock trading directly from inline X Cashtag mentions.",
+          "url": "https://x.com/moomoo/status/2099415029393379364"
+        },
+        {
+          "tag": "update",
+          "title": "@shillman1: Fuel Price Disclosure Executive Order Sparks Market Debate",
+          "body": "Policy analysts track new executive actions targeting energy price transparency and retail consumer cost metrics ahead of upcoming quarterly economic reports.",
+          "url": "https://x.com/shillman1/status/2100023588640145562"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Science",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Elon Musk Cites E.M. Forster Classic During Gaming Server Outage",
+          "body": "Elon Musk draws parallels between E.M. Forster's classic sci-fi essay 'The Machine Stops' and launch-day login queue failures across major gaming titles.",
+          "url": "https://x.com/elonmusk/status/2099946406345937242"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: FC Bayern Honors Joshua Kimmich for 500th Club Appearance",
+          "body": "Bayern Munich celebrates German midfielder Joshua Kimmich with a commemorative presentation following his landmark 500th official match for the club.",
+          "url": "https://x.com/iMiaSanMia/status/2100173584911982608"
+        },
+        {
+          "tag": "new",
+          "title": "@GUST_EN: Atelier Karia Announced for Next-Gen Consoles & PC",
+          "body": "Koei Tecmo and Gust officially unveil Atelier Karia: The Night Kingdom & the Guide of Memories for PS5, Nintendo Switch 2, and Steam.",
+          "url": "https://x.com/GUST_EN/status/2097371143686795450"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-16 12:00 ET!")

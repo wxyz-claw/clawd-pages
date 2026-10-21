@@ -1,0 +1,113 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, September 5th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>GPT-6 Astra Takes #1 Spot on Code Arena WebDev Benchmark:</strong> OpenAI's newly released GPT-6 Astra reached 1797 points on Arena.ai's WebDev leaderboard, surpassing Claude Fable 5.1 Max by 35 points while setting a new Pareto efficiency standard at $40/Mtoken.",
+    "<strong>Nike Removed from S&P 100 Following 80% Stock Decline:</strong> Nike is set to be removed from the S&P 100 index after 18 years, following a catastrophic stock drop driven by DTC distribution missteps and intense competition from Hoka and On Running.",
+    "<strong>Speculation Swirls Over Anthropic Navier-Stokes Millennium Prize Claim:</strong> Tech commentators highlighted claims that Anthropic's Claude may have produced a proposed solution to the Navier–Stokes existence and smoothness problem, currently under expert peer review ahead of Anthropic's anticipated IPO.",
+    "<strong>MicroStrategy Bitcoin Portfolio Hits $4.93B Unrealized Profit:</strong> Michael Saylor's treasury reserve strategy reached nearly $5 billion in net unrealized gains as Bitcoin price appreciation continues to bolster $MSTR asset balance sheets.",
+    "<strong>Luis Enrique & Bayern Munich Highlight European Football Dramas:</strong> PSG manager Luis Enrique shrugged off winless Ligue 1 pressure, while Bayern Munich's historic 67-matchday run at the top of the Bundesliga table came to an official end."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@arena: GPT-6 Astra Claims #1 Spot on Code Arena Leaderboard",
+          "body": "OpenAI's GPT-6 Astra (Max) captured the top position in Code Arena: WebDev with 1797 points (+35 over Claude Fable 5.1 Max), setting a new performance-to-cost benchmark at $40/Mtoken across Data & Analytics and Consumer Product tasks.",
+          "url": "https://x.com/arena/status/2096290434700247250"
+        },
+        {
+          "tag": "new",
+          "title": "@AndrewCurran_: Viral Speculation Claims Anthropic Solved Navier–Stokes Problem",
+          "body": "A viral analysis claimed Anthropic's Claude model generated a candidate proof for the Navier–Stokes Millennium Prize Problem, currently undergoing confidential expert review prior to Anthropic's public listing.",
+          "url": "https://x.com/AndrewCurran_/status/2096062392442724805"
+        },
+        {
+          "tag": "update",
+          "title": "@theo: Developers React to GPT-6 Astra Computer Control Speed",
+          "body": "Developers noted that GPT-6 Astra's rapid asynchronous tool use and web navigation speed are prompting software engineers to rethink subscription tiers and personal workflow tooling.",
+          "url": "https://x.com/theo/status/2096227527807422582"
+        },
+        {
+          "tag": "update",
+          "title": "@Acemation_: Elon Musk Warns the 200-Year Deal of Selling Hours is Ending",
+          "body": "Highlighting upcoming labor disruption, Musk cautioned that workers have at most a decade left selling manual hours before AI agents execute the vast majority of economic work.",
+          "url": "https://x.com/Acemation_/status/2096265101020107121"
+        },
+        {
+          "tag": "new",
+          "title": "@quxiaoyin: AI Startups Ramp Up Unlimited Token Budgets for Vibe Coders",
+          "body": "Startups are recruiting top-tier AI builders with unlimited token access—aiming for 1B tokens per developer per day—to accelerate agentic product development.",
+          "url": "https://x.com/quxiaoyin/status/2096015497758495075"
+        },
+        {
+          "tag": "update",
+          "title": "@poteto: Grok Android App Opens Pre-Registration on Google Play",
+          "body": "The Grok team announced pre-registration for their native Android application alongside Grok Image 2.0 multi-modal generation updates.",
+          "url": "https://x.com/poteto/status/2093063044062650744"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@gregorykennedy: Nike Delisted from S&P 100 After 18-Year Tenure",
+          "body": "Nike's stock drop of nearly 80% over 5 years resulted in removal from the S&P 100 index, sparked by a flawed pivot to direct-to-consumer sales that severed legacy retail partnerships.",
+          "url": "https://x.com/gregorykennedy/status/2096346110688465039"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: MicroStrategy Bitcoin Strategy Surpasses $4.93B Unrealized Gain",
+          "body": "MicroStrategy's corporate treasury holdings recorded $4.93B in paper profit since initiating Bitcoin purchases in 2020, boosting market capitalization.",
+          "url": "https://x.com/WatcherGuru/status/2096000868696887559"
+        },
+        {
+          "tag": "new",
+          "title": "@WatcherGuru: Robinhood CEO Reaffirms Commitment to Stock Tokens",
+          "body": "Robinhood CEO Vlad Tenev confirmed the company's long-term backing for tokenized equities and integrated multi-asset trading.",
+          "url": "https://x.com/WatcherGuru/status/2095891506259169518"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@FabrizioRomano: Luis Enrique Responds to PSG Ligue 1 Title Pressure",
+          "body": "PSG manager Luis Enrique dismissed concerns following three winless matches in Ligue 1, remaining firm in his prediction for PSG's title defense.",
+          "url": "https://x.com/FabrizioRomano/status/2096040946487968011"
+        },
+        {
+          "tag": "update",
+          "title": "@FullTimeX_: Thierry Henry Comments on Julian Alvarez Atletico Situation",
+          "body": "Football legend Thierry Henry voiced concern over Julian Alvarez's psychological strain and transfer speculation at Atletico Madrid following recent matches.",
+          "url": "https://x.com/FullTimeX_/status/2096313777553649807"
+        },
+        {
+          "tag": "new",
+          "title": "@iMiaSanMia: Bayern Munich Bundesliga Top Spot Streak Ends at 67 Matchdays",
+          "body": "Bayern Munich's historic 67-matchday streak leading the Bundesliga standings officially came to an end following weekend league results.",
+          "url": "https://x.com/iMiaSanMia/status/2096305655854289003"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully!")

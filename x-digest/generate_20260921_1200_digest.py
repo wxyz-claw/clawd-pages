@@ -1,0 +1,149 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Monday, September 21st, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Jev 20-Project Ecosystem Explodes & Calibrated Decision Wave:</strong> Community builders unveil a comprehensive directory of 20 open-source tools powered by TypeSafe AI's Jev API—including fast context compaction for Claude Code, browser automation, and Canny task completion verification—while architectural analyses highlight why typed probability layers outperform slow, token-wasting LLM autoregression.",
+    "<strong>Exponential Intelligence Curves & Frontier Model Watch (Opus 5.5 vs GPT-6 Sol):</strong> Elon Musk underscores that intelligence is improving exponentially as open-weights flash models eclipse late-2025 frontier tiers, while developer anticipation builds around leaked pricing for OpenAI's upcoming GPT-6 Sol ($2.50/$15) and imminent drop rumors for Anthropic's Claude Opus 5.5.",
+    "<strong>Native Agent Evals & Tencent T-Mem Associative Recall:</strong> Addy Osmani highlights Claude Code's built-in plugin evaluation framework (`claude plugin eval init`) for regression-testing agent skills, while Tencent AI open-sources T-Mem at EMNLP 2026, delivering predictive associative recall that maintains contextual coherence where standard RAG vector stores drop 50%.",
+    "<strong>AI Supply Chain Security & DeepSeek Hardware Pivot:</strong> Tencent Zhuque Lab open-sources AI-Infra-Guard (6.4k stars) to scan MCP servers and agent skills for prompt injection and credential leaks, while reports from DeepSeek's high-security investor briefing confirm an aggressive priority shift toward domestic Huawei chips.",
+    "<strong>Grammarly Employee Pressure Campaign Backfires & Open Financial Tooling:</strong> A viral dispatch details Grammarly's disastrous attempt to bypass corporate procurement by spamming employees, triggering an immediate company-wide ban; meanwhile, open-source terminal OpenStock surges to 16.9k stars by blending real-time charting, prediction market sentiment, and Gemini-curated summaries."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Agent Tooling",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@charliejhills & @Pluvio9yte: The Top 20 Projects Powered by the Jev Fast-Decision API",
+          "body": "A curated catalog of 20 breakout Jev implementations highlights practical agent tooling: jev-ultrafast (7-second Browser-Use automation), fast-jev-compaction (Claude Code context trimming), Winnow (context garbage collection), Canny (stopping coding agents from hallucinating task completion), and jev-codex-router.",
+          "url": "https://x.com/charliejhills/status/2101957500669169711"
+        },
+        {
+          "tag": "tip",
+          "title": "@addyosmani: Addy Osmani Demonstrates Native Skill & Plugin Evals in Claude Code",
+          "body": "Google's Addy Osmani highlights Claude Code's built-in evaluation framework: running `claude plugin eval init` and `run claude plugin eval .` automatically drafts test suites within plugin directories to verify whether custom agent skills genuinely improve output quality.",
+          "url": "https://x.com/addyosmani/status/2101921871092658655"
+        },
+        {
+          "tag": "hot",
+          "title": "@threeaus: Diogo Almeida on Why RLHF Derails Autonomy and the Third Decision Paradigm",
+          "body": "Deconstructing Jev founder Diogo Almeida's core thesis: while RLHF optimizes for pleasing human evaluators (keeping humans in the loop) and RLVR targets formal correctness, calibrated fast-decision layers create true autonomous systems by unchaining pre-trained capabilities from conversational chat biases.",
+          "url": "https://x.com/threeaus/status/2101552895498097035"
+        },
+        {
+          "tag": "tip",
+          "title": "@anshnanda: Strict Testing Discipline for AGENTS.md Workflows",
+          "body": "A blueprint for AI agent rulefiles: prohibit writing unit tests post-implementation, mandate end-to-end tests as the primary verification mechanism with reproducible artifacts, and enforce mapping out system failure modes before generating implementation code.",
+          "url": "https://x.com/anshnanda/status/2101627891721371971"
+        },
+        {
+          "tag": "new",
+          "title": "@poteto: Shipping 2,500 Production PRs in One Month with AI Agents",
+          "body": "Lauren releases a comprehensive workflow guide explaining how agentic orchestration, parallelized task harnesses, and rigorous automated review enabled shipping over 2,500 pull requests into production in a single month.",
+          "url": "https://x.com/poteto/status/2102050467505430555"
+        },
+        {
+          "tag": "tip",
+          "title": "@xmglab: End-to-End Guide to Wiring Jev Decision Layers into Claude Code and Codex",
+          "body": "A practical walkthrough details configuring Jev decision layers across Claude Code and Codex, offloading branching, intent classification, and tool gating to sub-100ms decision primitives.",
+          "url": "https://x.com/xmglab/status/2101932146416075073"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Systems, Models & Infrastructure",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@elonmusk: Intelligence Improves Exponentially Across Open-Source Flash Frontiers",
+          "body": "Elon Musk highlights the compounding pace of AI development, echoing analysis that open-weights models like GLM 5.3 Flash, DeepSeek V4.1 Flash, and Qwen 3.8 Next Flash are soundly outperforming what was considered top-tier frontier intelligence just ten months ago.",
+          "url": "https://x.com/elonmusk/status/2101975928800714904"
+        },
+        {
+          "tag": "hot",
+          "title": "@AYi_AInotes: Engineering Breakdown: Why Non-Generative Decision Primitives Redefine System Architecture",
+          "body": "A deep architectural teardown of Jev explains why inability to generate text is its biggest engineering strength: eliminating autoregressive token generation reduces decision latency to tens of milliseconds, cuts costs by 400x, and provides calibrated confidence distributions for automated three-tier risk triage.",
+          "url": "https://x.com/AYi_AInotes/status/2101850119637193020"
+        },
+        {
+          "tag": "new",
+          "title": "@TencentAI_News: Tencent Unveils T-Mem: Open-Source Associative Memory for LLMs",
+          "body": "Tencent AI researchers present T-Mem (accepted at EMNLP 2026), an open-source memory layer that shifts from similarity-based RAG to predictive associative recall. On zero-overlap associative benchmarks where standard vector stores drop 28–50%, T-Mem degrades by only 5.45%.",
+          "url": "https://x.com/TencentAI_News/status/2101927467158270021"
+        },
+        {
+          "tag": "new",
+          "title": "@Ryrenz: Tencent Zhuque Lab Opens AI-Infra-Guard for MCP and Skill Vulnerability Scanning",
+          "body": "Tencent Zhuque Lab releases AI-Infra-Guard (6.4k stars, 2,000+ CVE rules), an automated security scanner evaluating deployed AI infrastructure, MCP servers, and community Agent Skills for prompt injection flaws, path traversal, and unauthorized data leakage.",
+          "url": "https://x.com/Ryrenz/status/2101728099003965872"
+        },
+        {
+          "tag": "hot",
+          "title": "@JustLingonberry & @DanDr1s: GPT-6 Sol Pricing Leaked at $2.50/$15 as Opus 5.5 Speculation Peaks",
+          "body": "Supply leaks point to OpenAI pricing GPT-6 Sol at $2.50 input / $15 output per million tokens—delivering Astra-grade reasoning at half the cost—while developer communities brace for an imminent Anthropic counter-release of Claude Opus 5.5.",
+          "url": "https://x.com/JustLingonberry/status/2101745905691205801"
+        },
+        {
+          "tag": "update",
+          "title": "@_FORAB: DeepSeek Investor Briefing Tightens Operational Security Amid Domestic Chip Transition",
+          "body": "Despite implementing draconian physical security measures requiring investors to surrender all electronic devices before briefings with CEO Liang Wenfeng, reports surface that DeepSeek is actively prioritizing migration to domestic Chinese accelerators, targeting upcoming Huawei chip deliveries.",
+          "url": "https://x.com/_FORAB/status/2102028002322497735"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture, Geopolitics & Life",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@mylifcc: Grammarly's Desperate Employee-Targeted Revolt Backfires into Instant Enterprise Ban",
+          "body": "A viral corporate case study: after a company IT department declined to renew its enterprise Grammarly contract, the vendor bypassed management to blast staff with pre-written petition emails naming the IT manager, prompting the CEO to immediately mandate a silent company-wide uninstall and domain block.",
+          "url": "https://x.com/mylifcc/status/2102012970385772770"
+        },
+        {
+          "tag": "update",
+          "title": "@wangdan1989: Overseas Activists Mobilize Washington DC Protests for Xi Jinping State Visit",
+          "body": "Following official announcements that Chinese leader Xi Jinping will visit Washington D.C. from September 23–25, overseas activist groups and dissidents announce coordinated demonstrations across the capital.",
+          "url": "https://x.com/wangdan1989/status/2102025275358007491"
+        },
+        {
+          "tag": "tip",
+          "title": "@gkxspace: Hardening Overseas Developer Infrastructure: Networking, Red Pocket & Virtual Rails",
+          "body": "A widely shared technical guide covers clean developer operational setups for cross-border SaaS access, combining US eSIM provisioning, TUN-mode routing, clean residential VPS relays, and independent billing channels to prevent unexpected platform bans.",
+          "url": "https://x.com/gkxspace/status/2101996665926488084"
+        },
+        {
+          "tag": "new",
+          "title": "@huoshan007: OpenStock Reaches 16.9k Stars, Bringing Open-Source Bloomberg Terminal to Retail",
+          "body": "Open-source project OpenStock gains massive traction by integrating real-time price action, TradingView charts, Polymarket sentiment feeds, and automated Gemini-powered personalized morning briefing emails into an open, self-hostable workspace.",
+          "url": "https://x.com/huoshan007/status/2101904757183168860"
+        },
+        {
+          "tag": "tip",
+          "title": "@mindarchx: Harvard's 8% Hurdle Rate and the Math of Portfolio Sizing",
+          "body": "Drawing on Jake Xia's popular MIT OpenCourseWare curriculum managing Harvard's endowment, an analysis emphasizes that asset allocation and position sizing along the efficient frontier dictate compounding survival far more than individual asset selection.",
+          "url": "https://x.com/mindarchx/status/2101750742520312270"
+        },
+        {
+          "tag": "update",
+          "title": "@LPX2019: Grandfather Surprised with Restored 1974 Corvette Stingray on Birthday",
+          "body": "A viral family moment captures a grandfather unwrapping what he thought was a simple 1974 Corvette Stingray scale model, before his family opens the garage door to reveal the fully restored dream car purchased for him by his children.",
+          "url": "https://x.com/LPX2019/status/2101994243157819476"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-21 12:00 ET!")

@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, September 19th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Playwright Ships WebMCP & CLI Tooling for Autonomous Agents:</strong> Playwright releases native WebMCP support alongside its new CLI, allowing web applications to hand structured tools directly to AI agents, with selective DOM grepping and 60fps cursor recordings.",
+    "<strong>System-1 Micro-Models & Open-Source Jev Boom:</strong> Following Cua's 2.8MB CUA-S1-FORMS (99.7% accuracy) and open replicas like Laya, developer attention shifts rapidly to sub-1B parameter models that eliminate large LLM overhead for routine browser and classification tasks.",
+    "<strong>Google Paper Replaces Append-Only Context with SKILL.state:</strong> New Google research demonstrates that swapping raw conversation histories for mutable structured state objects prevents agent context collapse and cuts cumulative token usage 16x over 100 turns.",
+    "<strong>Cloudflare Open-Sources security-audit Agent Workflow:</strong> Cloudflare releases its multi-agent vulnerability discovery framework, which deploys adversarial subagents specifically charged with attempting to disprove potential security flaws.",
+    "<strong>Nucleus Genomics Unveils Vitruvian Genetic Optimization Models:</strong> Trained on over 1,000,000 genomes, Vitruvian introduces genetic scoring to optimize embryo DNA for up to 14 IQ points, turning long-theorized genetic enhancement into practice."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Agent Tooling",
+      "items": [
+        {
+          "tag": "new",
+          "title": "@playwrightweb: Playwright Ships WebMCP & Agent-Centric CLI Suite",
+          "body": "Playwright launches native WebMCP support (@playwright/mcp) and CLI tooling, allowing web applications to expose structured tools directly to agents, alongside DOM grepping, lean snapshots, and 60fps cursor recordings.",
+          "url": "https://x.com/playwrightweb/status/2101099626401067367"
+        },
+        {
+          "tag": "hot",
+          "title": "@trycua & @Layton_Gott: CUA-S1-FORMS 2.8MB Model Delivers 99.7% Accuracy for Computer Use",
+          "body": "Cua open-sources CUA-S1-FORMS, a 706K-parameter / 2.8MB System-1 model scoring 99.7% on form-filling benchmarks, spearheading a shift toward micro-models that handle repetitive browser actions without calling giant LLMs.",
+          "url": "https://x.com/trycua/status/2101014004927729737"
+        },
+        {
+          "tag": "hot",
+          "title": "@beamnxw: Google Research Eliminates Context Collapse with SKILL.state",
+          "body": "A Google paper introduces SKILL.state, replacing append-only conversation history with structured, mutable state objects. The architecture maintains a constant prompt footprint and cuts cumulative token consumption 16x over 100 turns.",
+          "url": "https://x.com/beamnxw/status/2101018409802580300"
+        },
+        {
+          "tag": "new",
+          "title": "@awabx7: Tencent Open-Sources Hy-MT2 1.8B Model for Local Translation",
+          "body": "Tencent releases Hy-MT2, a 1.8B translation model compressed to 440MB via 1.25-bit quantization that runs entirely locally on base Mac minis while outperforming commercial translation APIs.",
+          "url": "https://x.com/awabx7/status/2100928732190093449"
+        },
+        {
+          "tag": "tip",
+          "title": "@charliejhills: Anthropic Claude Code Billing Breakdown & 21 Cost-Cutting Tactics",
+          "body": "A deep dive into Anthropic's per-turn conversation re-send billing mechanics, detailing 21 practical strategies (/compact, /rewind, quiet flags, subagent haiku delegation) to slash developer costs.",
+          "url": "https://x.com/charliejhills/status/2100984663884042445"
+        },
+        {
+          "tag": "tip",
+          "title": "@peteryared: AgentCloak Releases In-Browser Sensitive Data Anonymizer",
+          "body": "AgentCloak launches a free browser extension that swaps private credentials, names, and sensitive context with realistic fakes before sending prompts to ChatGPT or Claude, swapping real data back in the response.",
+          "url": "https://x.com/peteryared/status/2100960005289807961"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Harnesses & Architectures",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@studio_yebisu: Comprehensive Catalog of 30+ Trending Jev Ecosystem Repositories",
+          "body": "StudioYebisu curates top Jev repositories across browser automation (jev-ultrafast), Claude Code history compaction (fast-jev-compaction), autonomous review (foreman), and real-time database sorting (pg-jev).",
+          "url": "https://x.com/studio_yebisu/status/2101065176069886152"
+        },
+        {
+          "tag": "update",
+          "title": "@hwchase17: Harrison Chase on Why Constrained Models Power Modern Agent Harnesses",
+          "body": "LangChain's Harrison Chase explains that non-generative, constrained decision models like Jev solve the core harness bottleneck by isolating action scoring from text synthesis.",
+          "url": "https://x.com/hwchase17/status/2100773130041950570"
+        },
+        {
+          "tag": "new",
+          "title": "@GitHub_Daily: Cloudflare Open-Sources security-audit Multi-Agent Skill",
+          "body": "Cloudflare releases its internal security audit harness (11,000+ stars), using an adversarial agent architecture where candidate vulnerabilities discovered by one subagent must be rigorously disproved by independent verification agents.",
+          "url": "https://x.com/GitHub_Daily/status/2101249967860138457"
+        },
+        {
+          "tag": "hot",
+          "title": "@hanakoxbt: Graph Engineering vs. Append-Only Memory in Autonomous Agents",
+          "body": "An architectural breakdown contrasting raw memory stores with edge constraints in graph systems: stores keep raw historical logs, while edges preserve actionable rules that prevent repeated mistakes without context bloat.",
+          "url": "https://x.com/hanakoxbt/status/2101068140457402550"
+        },
+        {
+          "tag": "tip",
+          "title": "@kunchenguid: compact-adviser Plugin Uses Jev to Optimize Session Compaction",
+          "body": "Kun Chen releases compact-adviser for Claude and Pi, using Jev to detect task boundaries and balance precision vs. recall when deciding the ideal moment to compact session history.",
+          "url": "https://x.com/kunchenguid/status/2101032677940117875"
+        },
+        {
+          "tag": "update",
+          "title": "@lidangzzz: The 'Redmi Moment' of the Large Language Model Era",
+          "body": "A viral analysis arguing that the surge in Jev-style classification models marks the pragmatic cost-optimization phase of enterprise AI—swapping expensive frontier LLM calls for lean, sub-second classifiers.",
+          "url": "https://x.com/lidangzzz/status/2101141707915989010"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Science, Culture & Life",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@KianSadeghi5: Nucleus Genomics Unveils Vitruvian Genetic Optimization Models",
+          "body": "Nucleus Genomics announces Vitruvian, genetic scoring models trained on 1,000,000+ genomes and 40,000+ siblings capable of optimizing embryo DNA for up to 14 IQ points.",
+          "url": "https://x.com/KianSadeghi5/status/2101018839412531231"
+        },
+        {
+          "tag": "new",
+          "title": "@AYi_AInotes: Visualizing the Rubik's Cube Cayley Graph and God's Number 20",
+          "body": "A viral 3D topological animation explains how graph theory and group theory conquer the Rubik's cube's 43 quintillion states via Cayley graphs and Kociemba's algorithm, proving any state solves in 20 moves or less.",
+          "url": "https://x.com/AYi_AInotes/status/2101268729153605748"
+        },
+        {
+          "tag": "update",
+          "title": "@FabrizioRomano: Harry Kane Deflects Ballon d'Or Talk Following Bayern's 7-0 Romp",
+          "body": "Following his milestone 100th Bundesliga goal and Bayern's demolition of Union Berlin, Harry Kane keeps his focus on the pitch rather than engaging in Ballon d'Or debates with competitors.",
+          "url": "https://x.com/FabrizioRomano/status/2101078724602970599"
+        },
+        {
+          "tag": "tip",
+          "title": "@BuzzPatterson: Inside the History of the President's Military Aide & Nuclear Football",
+          "body": "Former Presidential Military Aide Buzz Patterson details the history of carrying the 45-pound Presidential Emergency Satchel, Yankee White clearances, and maintaining 24/7 command readiness.",
+          "url": "https://x.com/BuzzPatterson/status/2101179177773027521"
+        },
+        {
+          "tag": "tip",
+          "title": "@two3pro: Lessons in Self-Reliance After Broken Promises",
+          "body": "A viral narrative on rebuilding independence, discipline, and personal growth through education and fitness after realizing superficial promises offer no genuine foundation.",
+          "url": "https://x.com/two3pro/status/2100859264965484650"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-19 12:00 ET!")

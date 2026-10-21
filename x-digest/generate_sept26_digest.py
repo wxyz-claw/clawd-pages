@@ -1,0 +1,149 @@
+import json
+from pathlib import Path
+
+digest_data = {
+  "title": "Clawd X Digest",
+  "date": "Saturday, September 26th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Xiaomi Open-Sources MiMo-V2.6 Agentic RL Stack & 7.7k+ Environments:</strong> Xiaomi releases the full reinforcement learning training pipeline (verl + mini-swe-agent) alongside 7,780 verified software engineering, security, and web tasks with 750,000 real trajectories, openly publishing the multi-million-dollar training infrastructure that boosted SWE-bench from 48.8 to 65.7.",
+    "<strong>Cline Debuts Free Stealth Model 'Pixel Canary' Matching GPT-6 Astra:</strong> Coding assistant Cline releases Pixel Canary for free across its extension, matching GPT-6 Astra and beating Kimi K3 on realistic Next.js web and mobile engineering benchmarks.",
+    "<strong>OpenAI Leaks Point to 'Aeon' Long-Horizon Agent for DevDay:</strong> Ahead of Tuesday's DevDay, details surface of Aeon, an autonomous multi-day agent environment built on Astra in cloud sandboxes, as OpenAI engineers announce platform usage resets.",
+    "<strong>NVIDIA & Stanford Propose Contrastive Language Models for 9x Faster Tool Routing:</strong> Researchers introduce CLM, turning System-1 agent decision routing into vector retrieval over frozen embeddings to cut tool-selection latency by up to 9x compared to autoregressive generation.",
+    "<strong>Jensen Huang Addresses the AI Homework Paradox on NYT:</strong> In a feature interview with Ezra Klein on research showing student exam scores dropped 24% despite faster homework completion with AI, Jensen Huang argues that relinquishing manual arithmetic is the inevitable cost of moving up to high-dimensional systems thinking."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Agent Tooling",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@cline: Pixel Canary Stealth Model Launches Free in Cline, Matching GPT-6 Astra",
+          "body": "Cline introduces Pixel Canary, an unannounced stealth model made available for free inside the extension. On Next.js Agent Evals—which benchmarks realistic full-stack web and mobile tasks—Pixel Canary ties GPT-6 Astra and outperforms Kimi K3, giving developers frontier agent coding performance at zero cost.",
+          "url": "https://x.com/cline/status/2103636639038026093"
+        },
+        {
+          "tag": "tip",
+          "title": "@rexan_wong: Production Playbook for Opus 5.5 Motion Graphics Video Synthesis",
+          "body": "Rexan Wong outlines the complete architecture for high-end motion graphics with Opus 5.5. Moving beyond fragile 'one-prompt' scripts, the proven pipeline combines curated reference videos, Remotion or HyperFrames for code-to-MP4 scene rendering, @21st_dev UI design components, and still-frame storyboard reviews before applying director camera prompts.",
+          "url": "https://x.com/rexan_wong/status/2103707054108299437"
+        },
+        {
+          "tag": "new",
+          "title": "@CodexResets1 & @thsottiaux: OpenAI Prepares Long-Horizon Agent 'Aeon' Ahead of DevDay",
+          "body": "Ahead of DevDay on Tuesday, reports indicate OpenAI will unveil 'Aeon,' a persistent agent engineered to work across hours, days, or weeks on complex projects. Running in hosted cloud sandboxes with multi-agent orchestration, Aeon builds on Astra's long-horizon capabilities, while OpenAI engineers reset usage quotas across Codex and ChatGPT.",
+          "url": "https://x.com/CodexResets1/status/2103761776995135637"
+        },
+        {
+          "tag": "new",
+          "title": "@lxfater: Open-Source Reverse-Engineering Skill Turns Agents into Android APK Analysts",
+          "body": "Security developers open-source an Android reverse-engineering skill for Claude Code and Codex. The skill autonomously decompiles DEX files, signs repackaged binaries, analyzes native libraries, and unpacks Flutter Dart AOT code by installing Frida, JADX, and Blutter on the fly.",
+          "url": "https://x.com/lxfater/status/2103771581499543640"
+        },
+        {
+          "tag": "tip",
+          "title": "@mattpocockuk: Zero-Latency CODING_STANDARDS.md Maintenance via /retro",
+          "body": "Developer Matt Pocock recommends treating CODING_STANDARDS.md as a live contract that should never remain empty: instantly capture styling slips, omitted validation rules, and improper primitives using /retro after agent execution runs to prevent recurring errors.",
+          "url": "https://x.com/mattpocockuk/status/2103748049906397613"
+        },
+        {
+          "tag": "new",
+          "title": "@supermemory: Supermemory Open-Sources Multiplayer Slack 'Company Brain'",
+          "body": "Supermemory open-sources its company brain harness, providing a self-hostable multi-agent coworker inside Slack equipped with persistent frontier memory that team members can deploy in five minutes.",
+          "url": "https://x.com/supermemory/status/2103668795843973538"
+        },
+        {
+          "tag": "update",
+          "title": "@hfcorriez: Google ARTEMIS Enables Cross-App Autonomous Android Execution",
+          "body": "Engineers highlight Google's open-source ARTEMIS framework, which allows Codex and Claude Code to drive mobile test devices and interact with native Android applications via goal-based execution without fragile hardcoded scripts.",
+          "url": "https://x.com/hfcorriez/status/2103537069972939099"
+        }
+      ]
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Systems, Models & Infrastructure",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@NFT_Chen & @iScienceLuvr: Xiaomi Open-Sources MiMo-V2.6 Agentic RL Stack & 7,780 Environments",
+          "body": "Xiaomi releases its end-to-end reinforcement learning infrastructure for MiMo-V2.6, providing 7,780 executable Docker environments across software engineering, security, and web tasks. The release includes full training code (verl + mini-swe-agent), rule-based verifiable reward systems, and 750k trajectory logs from live 3.7B token batch training runs.",
+          "url": "https://x.com/NFT_Chen/status/2103674566816272693"
+        },
+        {
+          "tag": "new",
+          "title": "@akshay_pachaar: NVIDIA & Stanford Debut Contrastive Language Models for 9x Faster Tool Routing",
+          "body": "Researchers from NVIDIA and Stanford introduce Contrastive Language Models (CLM), treating agent tool calling and system-one routing as vector retrieval over frozen embeddings rather than autoregressive token generation. By caching action embeddings and training state projections via InfoNCE, CLM matches Jev accuracy while cutting latency up to 9x.",
+          "url": "https://x.com/akshay_pachaar/status/2103483160382386234"
+        },
+        {
+          "tag": "tip",
+          "title": "@imryven: Graph Engineering: Strict Context Isolation Between Workers and Verifiers",
+          "body": "Architect Ryven breaks down failure modes in multi-agent graph pipelines, demonstrating that sequential straight-line chains introduce artificial delays. Crucially, verifiers must never share context with worker agents—giving a verifier the worker's thread creates confirmation bias rather than true adversarial verification.",
+          "url": "https://x.com/imryven/status/2103596797063242013"
+        },
+        {
+          "tag": "update",
+          "title": "@lqiao: Fireworks AI Completes $132M Employee Tender Offer Led by Atreides",
+          "body": "Fireworks AI co-founder Lin Qiao announces a $132M tender offer for employees led by Atreides, allowing early team members to realize value while accelerating development of enterprise-tailored production inference engines.",
+          "url": "https://x.com/lqiao/status/2103558879087116474"
+        },
+        {
+          "tag": "insight",
+          "title": "@lidangzzz: Frontier LLM Generalization Disrupts Handcrafted Robotics Architectures",
+          "body": "Commentators highlight an unexpected development in robotics: while specialized teams spent years training dedicated Vision-Language-Action (VLA) models, general reasoning models like GPT-6 Astra paired with raw tool calling and gamepad inputs are succeeding at complex pick-and-place tasks via general reasoning.",
+          "url": "https://x.com/lidangzzz/status/2103804274777936034"
+        },
+        {
+          "tag": "resource",
+          "title": "@baseten: Baseten Publishes 264-Page Textbook on Production Inference Engineering",
+          "body": "Infrastructure platform Baseten releases a free 264-page textbook and companion audiobook covering production inference engineering, GPU memory optimization, and high-throughput model serving architectures.",
+          "url": "https://x.com/baseten/status/2101880441573884311"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture, Tech & Society",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@mylifcc: Jensen Huang on NYT: Cognitive Abstraction and the 'Loss of Fundamentals'",
+          "body": "In a 1h47m interview with Ezra Klein, NVIDIA CEO Jensen Huang responds to a study of 26,000 students showing homework scores rose 18% with AI while exam scores fell 24%. Huang argues that forgetting calculation mechanics—from long division to transistor-level tracing—is the inevitable tradeoff as humans ascend to higher-level system architecture and abstraction.",
+          "url": "https://x.com/mylifcc/status/2103741862481948811"
+        },
+        {
+          "tag": "new",
+          "title": "@taozi0929: Local AI Presenter Generator Lanshu Surges Past 20k GitHub Stars",
+          "body": "The open-source lanshu-create-ai-presenter-video project trends on GitHub, automating end-to-end 1080p talking-head videos with accurate lip-sync and auto-captioning entirely on local machines from a single portrait and text script.",
+          "url": "https://x.com/taozi0929/status/2103709398325727546"
+        },
+        {
+          "tag": "opinion",
+          "title": "@jayledev: DHH on Software Artisanship and the Practical Future of AI Coding",
+          "body": "Developers examine DHH's candid reflections on handcrafted code vs AI code generation, emphasizing that maintaining architectural taste and understanding system mechanics will distinguish elite software artisans from pure prompt operators.",
+          "url": "https://x.com/jayledev/status/2103758369123426518"
+        },
+        {
+          "tag": "tip",
+          "title": "@ashen_one: Headless Desktop Compute + Tailscale Workstation Architecture",
+          "body": "Engineers detail productivity setups leveraging lightweight laptops paired with high-memory headless desktops (like a 256GB Mac Studio) via Tailscale, offloading heavy agent compilation, local model inference, and background tasks seamlessly over Wi-Fi.",
+          "url": "https://x.com/ashen_one/status/2103757218621653040"
+        },
+        {
+          "tag": "resource",
+          "title": "@goan999999: Practical OSINT Tooling and Open-Source Playbooks Draw Viral Interest",
+          "body": "Open-source community compendiums for digital investigation tooling (SpiderFoot, Maigret, Aliens Eye) and pragmatic life strategies gain tens of thousands of stars on GitHub as developers compile structured, actionable checklists.",
+          "url": "https://x.com/goan999999/status/2103751407463784884"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {digest_path}")

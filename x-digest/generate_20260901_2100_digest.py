@@ -1,0 +1,149 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Tuesday, September 1st, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>Claude Fable 5.1 Launch & Pricing Debate:</strong> Anthropic released Claude Fable 5.1 with a 1M context window and updated Claude Code, setting benchmark records (scoring 66 on Artificial Analysis Index) while triggering developer discussions over high-effort API costs and Max tier rate limits.",
+    "<strong>OpenAI Internal Codex Culture:</strong> Gergely Orosz highlighted that internal OpenAI teams are deeply 'Codex-pilled', utilizing internal iterations far more capable than public releases alongside new direct subscription gift cards.",
+    "<strong>Leopold Aschenbrenner Portfolio Disclosure:</strong> Former OpenAI researcher Leopold Aschenbrenner's fund holdings were published, showing heavy concentration in memory chipmakers SanDisk ($SNDK) and Micron ($MU) alongside Bloom Energy ($BE) and TSMC ($TSM).",
+    "<strong>Bessent Outlines Strait of Hormuz Energy Bypass:</strong> US Treasury Secretary Scott Bessent announced new global transit infrastructure that will enable energy shipping to bypass the Strait of Hormuz within two years.",
+    "<strong>Robert Kiyosaki Facing $1.2B Debt & Market Signals:</strong> Financial news highlighted 'Rich Dad Poor Dad' author Robert Kiyosaki confronting $1.2B in debt, while incoming Apple CEO John Ternus prepares for a $58M pay structure."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@ClaudeCodeLog: Claude Fable 5.1 Released in Claude Code 2.1.257",
+          "body": "Anthropic updated Claude Code to version 2.1.257, setting Claude Fable 5.1 (1M context window) as the default model at $10/$50 per million tokens and introducing auto-mode prompt optimizations.",
+          "url": "https://x.com/ClaudeCodeLog/status/2094851915007828101"
+        },
+        {
+          "tag": "hot",
+          "title": "@GergelyOrosz: Inside OpenAI's Deep 'Codex-Pilled' Development Culture",
+          "body": "Tech writer Gergely Orosz noted that OpenAI internal teams heavily rely on advanced, unreleased versions of Codex that far surpass publicly available developer tools.",
+          "url": "https://x.com/GergelyOrosz/status/2094542273690153418"
+        },
+        {
+          "tag": "update",
+          "title": "@simonw: Simon Willison Tests Claude Fable 5.1 High-Reasoning Capabilities",
+          "body": "Simon Willison tested Claude Fable 5.1 at maximum thinking levels, achieving unprecedented SVG vector generation and animation quality while noting the higher per-task token cost ($3.30 for complex rendering).",
+          "url": "https://x.com/simonw/status/2094938927727804684"
+        },
+        {
+          "tag": "update",
+          "title": "@cheatyyyy: Fable 5.1 Sets Benchmark Records on Artificial Analysis Index",
+          "body": "AI benchmark tracking showed Claude Fable 5.1 scoring a record 66 on the Artificial Analysis Intelligence Index, while setting new benchmarks for deep multi-step reasoning.",
+          "url": "https://x.com/cheatyyyy/status/2094865189195932138"
+        },
+        {
+          "tag": "new",
+          "title": "@Mileson07: OpenAI Introduces Direct Subscription Gift Cards",
+          "body": "OpenAI launched official gift cards for ChatGPT and Codex subscriptions, enabling international users to activate and renew accounts directly without third-party payment workarounds.",
+          "url": "https://x.com/Mileson07/status/2094718034799968717"
+        },
+        {
+          "tag": "update",
+          "title": "@Zai_org: Z.ai Celebrates GLM 1-Year Anniversary with Quota Resets",
+          "body": "AI platform Z.ai celebrated the one-year milestone of the GLM Coding Plan by issuing Reset Cards to subscribers, refilling weekly and 5-hour quota allocations.",
+          "url": "https://x.com/Zai_org/status/2094769612730532172"
+        },
+        {
+          "tag": "update",
+          "title": "@RLanceMartin: Cost-Efficiency Tips for Deploying Fable 5.1",
+          "body": "AI engineer Lance Martin shared optimization guidelines for Fable 5.1, noting that low-effort reasoning settings achieve competitive results with Sonnet while dramatically lowering per-task costs on CursorBench.",
+          "url": "https://x.com/RLanceMartin/status/2094854835854295296"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & News",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@LeopoldTracker_: Leopold Aschenbrenner Portfolio Holdings Disclosed",
+          "body": "Public disclosures revealed former OpenAI alignment researcher Leopold Aschenbrenner's core fund positions, led by heavy allocations in SanDisk ($SNDK 28.1%), Micron ($MU 27.6%), Bloom Energy ($BE 9.4%), and TSMC ($TSM 6%).",
+          "url": "https://x.com/LeopoldTracker_/status/2094853671439769932"
+        },
+        {
+          "tag": "hot",
+          "title": "@WatcherGuru: Treasury Secretary Bessent Outlines Strait of Hormuz Bypass",
+          "body": "US Treasury Secretary Scott Bessent stated that new international transit infrastructure will allow global oil and energy shipments to bypass the Strait of Hormuz within two years.",
+          "url": "https://x.com/WatcherGuru/status/2094784647465251128"
+        },
+        {
+          "tag": "update",
+          "title": "@Polymarket: Robert Kiyosaki Facing $1.2 Billion Debt Load",
+          "body": "Financial market channels highlighted 'Rich Dad Poor Dad' author Robert Kiyosaki confronting over $1.2 billion in debt tied to real estate and asset leverage.",
+          "url": "https://x.com/Polymarket/status/2094899849938510012"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: Incoming Apple CEO John Ternus 2027 Compensation",
+          "body": "Securities filings revealed incoming Apple ($AAPL) CEO John Ternus is structured to receive a $58,000,000 pay package in 2027.",
+          "url": "https://x.com/WatcherGuru/status/2094913934822437351"
+        },
+        {
+          "tag": "new",
+          "title": "@Polymarket: Trump Nominates Hung Cao for Secretary of the Navy",
+          "body": "President Trump announced the nomination of retired Navy Captain Hung Cao to serve as the next Secretary of the Navy.",
+          "url": "https://x.com/Polymarket/status/2094924184975507831"
+        },
+        {
+          "tag": "update",
+          "title": "@WatcherGuru: Fed Chair Kevin Warsh on Global Investment Cycles",
+          "body": "Federal Reserve Chair Kevin Warsh remarked that expanding global infrastructure and AI data center investments are actively reversing past global capital gluts.",
+          "url": "https://x.com/WatcherGuru/status/2094431317303939572"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "General",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@pettylark: GitHub Default Branch Satire Goes Viral",
+          "body": "A satirical social media post went viral claiming GitHub changed default repository branch naming conventions from 'main' to 'America'.",
+          "url": "https://x.com/pettylark/status/2094620110476697940"
+        },
+        {
+          "tag": "hot",
+          "title": "@r0ck3t23: Jeff Bezos Commentary on Middle-Class Tax Rates",
+          "body": "When asked about high-net-worth tax policies, Jeff Bezos highlighted that middle-class workers often face disproportionate relative tax burdens.",
+          "url": "https://x.com/r0ck3t23/status/2094771231039889617"
+        },
+        {
+          "tag": "update",
+          "title": "@SportsCenter: Sabrina Ionescu Clutches Liberty Victory",
+          "body": "SportsCenter captured Liberty star Sabrina Ionescu delivering a game-sealing defensive and scoring sequence against Chicago Sky in the WNBA.",
+          "url": "https://x.com/SportsCenter/status/2067431358935302502"
+        },
+        {
+          "tag": "update",
+          "title": "@conneryoungBC: The Financial Reality of 7-Year Homeownership",
+          "body": "Financial breakdown analyzed a 7-year homeownership timeline on a $500K mortgage at 6.75%, showing $181K paid in interest versus $36K in principal equity.",
+          "url": "https://x.com/conneryoungBC/status/2094805356878725150"
+        },
+        {
+          "tag": "update",
+          "title": "@ICEgov: ICE Reports Enforcement Operations & Removals",
+          "body": "U.S. Immigration and Customs Enforcement published updates detailing recent law enforcement operations and removal statistics.",
+          "url": "https://x.com/ICEgov/status/2094915211220357163"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json created successfully!")

@@ -1,0 +1,112 @@
+import json
+from pathlib import Path
+
+digest_payload = {
+  "title": "Clawd X Digest",
+  "date": "Wednesday, September 16th, 2026",
+  "summary_title": "High Signal Summary",
+  "summary": [
+    "<strong>OpenAI Releases Misalignment Disclosure Framework & 6 Safety Reports:</strong> OpenAI details a new public disclosure policy for model misalignment during training and evaluation, publishing six empirical case studies on observed misaligned behaviors.",
+    "<strong>Nous Research Cleans 1M Lines of Code with 1,393 Hermes Subagents:</strong> Technical details reveal how 1,393 Hermes subagents ran over 19 hours to reduce a Python codebase by 34.4%, saving nearly $2M in developer time.",
+    "<strong>Tencent AI Open Sources BrowserSkill for Local Agent Tab Sharing:</strong> Tencent AI releases BrowserSkill, an open-source CLI allowing local AI agents to borrow authenticated browser tabs for seamless web actions and captcha handling.",
+    "<strong>Warsh Fed Hikes Rates 25bps Ahead of 2026 Midterms:</strong> Macro analysts highlight the policy shift under Fed Chair Warsh, implementing a 25bps rate hike with core CPI at 2.4%."
+  ],
+  "sections": [
+    {
+      "emoji": "🤖",
+      "title": "AI & Tech",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@OpenAI: OpenAI Publishes Misalignment Framework & 6 Safety Reports",
+          "body": "OpenAI releases a standardized criteria and timeline framework for disclosing model misalignment during training and evaluation, accompanied by six initial empirical reports from the past six months.",
+          "url": "https://x.com/OpenAI/status/2100344867507327087"
+        },
+        {
+          "tag": "new",
+          "title": "@NousResearch: 1,393 Hermes Subagents Refactor 1M Lines of Code",
+          "body": "Nous Research demonstrates large-scale multi-agent execution: 1,393 Hermes subagents ran across 19 hours to trim a 1,000,000-line Python codebase by 34.4%, saving $2M in human engineering costs.",
+          "url": "https://x.com/NousResearch/status/2099984561451028913"
+        },
+        {
+          "tag": "hot",
+          "title": "@TencentAI_News: Tencent AI Open Sources BrowserSkill for Local Agents",
+          "body": "Tencent AI introduces BrowserSkill, a local CLI bridge that lets AI coding agents borrow active browser tabs with logged-in credentials to handle complex web workflows and interactive captchas.",
+          "url": "https://x.com/TencentAI_News/status/2100143086429217278"
+        },
+        {
+          "tag": "update",
+          "title": "@salesforce: Marc Benioff Demonstrates Salesforce in Claude Live Keynote",
+          "body": "Salesforce Chair and CEO Marc Benioff presents AIforce and Salesforce in Claude live on the main stage, showcasing 37 pre-built sales skills directly integrated into Claude workflows.",
+          "url": "https://x.com/salesforce/status/2099993861447963032"
+        },
+        {
+          "tag": "new",
+          "title": "@notkevinzhang: Jev Frontier Model Claims 200x Speedup via Parallel RLCD",
+          "body": "Ex-ChatGPT researchers announce Jev, a stealth frontier AI model trained via Reinforcement Learning from Composable Decisions (RLCD) that achieves 20-200x faster decision execution.",
+          "url": "https://x.com/notkevinzhang/status/2100032100892393955"
+        },
+        {
+          "tag": "update",
+          "title": "@alexandr_wang: Scale AI Muse Offers 1 Billion Tokens for Friend Referrals",
+          "body": "Scale AI founder Alexandr Wang launches referral invite codes for Muse, rewarding users with up to 1 billion tokens each when inviting up to 20 friends.",
+          "url": "https://x.com/alexandr_wang/status/2100256876072210517"
+        }
+      ]
+    },
+    {
+      "emoji": "📈",
+      "title": "Markets & Policy",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@zerohedge: Warsh Fed Hikes Rates 25bps Ahead of Midterm Elections",
+          "body": "Macro strategists track monetary policy divergence as the Warsh Fed enacts a 25bps rate hike with core CPI at 2.4%, contrasting with 2024 pre-election rate cuts.",
+          "url": "https://x.com/zerohedge/status/2100290026865152047"
+        },
+        {
+          "tag": "new",
+          "title": "@moomoo: Moomoo Integrates Inline X Cashtag Trading Partnership",
+          "body": "Fintech platform Moomoo officially launches inline X Cashtag integration, enabling users to tap stock tickers on X and execute one-click trades.",
+          "url": "https://x.com/moomoo/status/2099415029393379364"
+        },
+        {
+          "tag": "tip",
+          "title": "@KeithMcCullough: 24-Year Hedge Fund Process Blueprint Released",
+          "body": "Hedgeye founder Keith McCullough releases a free 52-page guide titled 'Master the Market', detailing quantitative risk management and macro positioning strategies.",
+          "url": "https://x.com/KeithMcCullough/status/1846614136303559130"
+        }
+      ]
+    },
+    {
+      "emoji": "🌍",
+      "title": "Culture & Science",
+      "items": [
+        {
+          "tag": "hot",
+          "title": "@Phoenixyin13: Manifold Hypothesis & Learning as Compression Breakdown",
+          "body": "An in-depth theoretical analysis explores how deep learning compresses high-dimensional data onto lower-dimensional manifolds, linking Shannon entropy, Kolmogorov complexity, and intelligence.",
+          "url": "https://x.com/Phoenixyin13/status/2100024080040710564"
+        },
+        {
+          "tag": "update",
+          "title": "@iMiaSanMia: Jürgen Klopp Excludes Leroy Sané from Germany National Squad",
+          "body": "Germany national team manager Jürgen Klopp decides to omit Leroy Sané from upcoming international match call-ups, according to Bild reports.",
+          "url": "https://x.com/iMiaSanMia/status/2100269759325675522"
+        },
+        {
+          "tag": "new",
+          "title": "@GUST_EN: Atelier Karia Physical Pre-Orders Launch for Next-Gen Systems",
+          "body": "GUST officially opens physical pre-orders and confirms a February 2027 launch window for Atelier Karia across PS5, Switch 2, Xbox Series X|S, and Steam.",
+          "url": "https://x.com/GUST_EN/status/2097371143686795450"
+        }
+      ]
+    }
+  ]
+}
+
+digest_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(digest_path, "w", encoding="utf-8") as f:
+    json.dump(digest_payload, f, indent=2, ensure_ascii=False)
+
+print("digest.json generated successfully for 2026-09-16 21:00 ET!")
