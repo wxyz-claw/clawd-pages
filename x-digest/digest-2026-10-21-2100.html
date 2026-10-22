@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Wednesday, October 21st, 2026 — 9:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Wednesday, October 21st, 2026 — 9:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>PHP2Shell Became a Global Patch Day:</strong> Two critical PHP bugs with details leaked before fixes pushed the Netherlands, Finland, France and Denmark to pull government sites, with Censys counting roughly 1.5 million servers on unfixed versions and Japan's Prime Minister telling 48.8 million people to take systems offline.</li>
+      <li><strong>Node.js Patched Ten Flaws, Four High:</strong> Node 22, 24 and 26 got emergency releases covering a Brotli decoder remote code execution bug (CVE-2026-111497) and two TLS certificate-validation bypasses; 18 and 20 are end-of-life and got nothing.</li>
+      <li><strong>LiteLLM 1.107.0 Shipped a Credential Stealer:</strong> Socket reports the 92M-downloads-a-month package carried malware in its PyPI wheels and Docker images, including latest — installing it was enough, no import required.</li>
+      <li><strong>Claude's API Got Its First Dated Version Since 2023:</strong> API version 2026-10-21 is out, with Anthropic saying releases will come more often so teams can absorb breaking changes before a new model forces them; 2023-06-01 is not deprecated.</li>
+      <li><strong>Local Models Kept Getting Better and Cheaper:</strong> Recursive shipped Flint, an open-weights coding model at 125+ tokens/sec on a MacBook Pro, while DeepSeek Flash went free and unlimited in 16 countries and GitHub put formal verification in front of AI-generated code.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚨</span>
+      <h2>PHP2Shell, Day Two</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag fiveoutofnine-wednesday-roundup">Fiveoutofnine-Wednesday-Roundup</span> @fiveoutofnine: The Whole Day, in One Post</div>
+    <div class="item-body">A running list of what broke today: two critical PHP bugs that allow code execution without a login, with details leaking before the patch, affecting WordPress, MediaWiki, Magento, Joomla and Laravel; Censys counting about 1.5 million servers on versions with no fix; the NSA, FBI, CISA, UK and CERT-EU all recommending systems be taken offline, and Japan&#x27;s Prime Minister posting at 5:55 AM telling 48.8 million people to do it. The Dutch cybersecurity agency, Dutch parliament, Port of Rotterdam, Wikipedia, Asana, GOG and the University of Vienna&#x27;s webmail all went down. Also in the same 24 hours: GitLab dropped a CVSS 10.0 for a bug present since 2014, LiteLLM was hijacked, Railway paused every deployment after its environment variables were accessed, TiDB Cloud disclosed a month-long intrusion with 10.6 TB claimed, and Zeabur is shutting down after a second breach in two months.</div>
+    <div class="item-meta">
+      <a href="https://x.com/fiveoutofnine/status/2113045722744717360" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag nodejs-security-releases-oct-21">Nodejs-Security-Releases-Oct-21</span> @nodejs: Security Releases for 22.x, 24.x and 26.x</div>
+    <div class="item-body">The official notice: new releases for Node.js 22.x, 24.x and 26.x address multiple vulnerabilities including high-severity issues. The parallel breakdown from @markgadala puts numbers on it — ten flaws patched, four rated high, the worst being CVE-2026-111497, a remote code execution bug in Node&#x27;s Brotli decoder, plus two TLS issues that can make an application accept a certificate for the wrong server. Node 18 and 20 are end-of-life and did not receive fixes. If you run containers, rebuild them; a patched host binary does not patch a stale image.</div>
+    <div class="item-meta">
+      <a href="https://x.com/nodejs/status/2113037478286221570" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag xillive-php-psa-for-normal-people">Xillive-Php-Psa-For-Normal-People</span> @XilLive: What This Means If You Are Not a Sysadmin</div>
+    <div class="item-body">A security practitioner&#x27;s translation of the PHP disclosure for everyone else, and the part worth keeping is the asymmetry: patching closes the hole but does not remove a backdoor or recover data already taken, and most companies do not have the staff to properly investigate whether someone got in before the fix. Practical advice — watch for breach notices and unusual logins, navigate to sites directly instead of trusting emailed reset links, expect a wave of fake security warnings, stop reusing passwords, and turn on MFA starting with email. The warning about &#x27;your data was encrypted&#x27; is the right scepticism: encryption is not protection if the attacker controls the service holding the keys.</div>
+    <div class="item-meta">
+      <a href="https://x.com/XilLive/status/2112976899987448220" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📦</span>
+      <h2>Supply Chain and Security Models</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag socketsecurity-litellm-malware">Socketsecurity-Litellm-Malware</span> @SocketSecurity: LiteLLM 1.107.0 Was Compromised</div>
+    <div class="item-body">LiteLLM is the Python package most LLM applications use to talk to model providers, with 92M+ monthly downloads. Version 1.107.0 shipped credential-stealing malware through PyPI wheels and Docker images, aimed at cloud credentials, developer secrets and AI tooling. Two details make it worse than a routine bad release: the Docker images were affected including latest, and the payload ran on install rather than import, so a dependency resolution was enough. Pin the version, audit lockfiles and container tags, and rotate anything that touched it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/SocketSecurity/status/2112907732877775016" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jurbed-cloudflare-security-audit-skill">Jurbed-Cloudflare-Security-Audit-Skill</span> @jurbed: Run Cloudflare&#x27;s Security Audit Skill on Everything</div>
+    <div class="item-body">A concrete recommendation from a day that badly needed one: Cloudflare&#x27;s security audit skill works across agent harnesses and is model independent, so it can be run over all your software with free models. The interesting claim is the stacking — use it even if a model has already audited the code, because a different pass finds different things. Given that the day&#x27;s incidents were mostly unpatched dependencies and leaked credentials, an automated, repeatable audit loop is the only kind of review that keeps up.</div>
+    <div class="item-meta">
+      <a href="https://x.com/jurbed/status/2112973191157252103" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag corridor-argos-1-security-model">Corridor-Argos-1-Security-Model</span> @corridor: corridor-argos-1, a 9B Security Model</div>
+    <div class="item-body">Corridor&#x27;s first security model is a Qwen 3.5 9B fine-tune, and the claim is narrow on purpose: it outperforms frontier models including GPT-6 Astra and Claude Opus 5.5 on security context selection — the task of picking which code and context matters for a finding — with the lowest time to first token of the 14 models tested. A small specialised model beating frontier generalists on a scoped task is the more useful signal than the benchmark itself; security review is exactly the kind of work where latency and focus matter more than breadth.</div>
+    <div class="item-meta">
+      <a href="https://x.com/corridor/status/2112961411504800039" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Claude&#x27;s API Gets Version Numbers</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claudedevs-api-version-2026-10-21">Claudedevs-Api-Version-2026-10-21</span> @ClaudeDevs: API Version 2026-10-21</div>
+    <div class="item-body">The first official versioned release since 2023. The reasoning is the news: Anthropic plans to ship versions more often so teams can handle breaking changes on their own schedule rather than when a new model forces the issue. Version 2023-06-01 is explicitly not deprecated, so existing integrations keep working — but the implied contract change is that &#x27;pin nothing and hope&#x27; is now a worse strategy than it was yesterday.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ClaudeDevs/status/2113013247209021918" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag every-duet-vs-dot-vibe-check">Every-Duet-Vs-Dot-Vibe-Check</span> @every: Duet vs. Dot, a Full Vibe Check</div>
+    <div class="item-body">Every published a side-by-side evaluation of Anthropic&#x27;s Duet against Dot, framed as a vibe check rather than a benchmark suite. Worth reading because consumer agent comparisons are still mostly anecdote, and the useful question is not which model is smarter but which one finishes ordinary multi-step tasks without supervision. The post links the full comparison.</div>
+    <div class="item-meta">
+      <a href="https://x.com/every/status/2113007438144409727" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jauneclaude-duet-quota-complaints">Jauneclaude-Duet-Quota-Complaints</span> @jauneclaude: &#x27;Has Anyone Noticed Claude Duet Get Dumber?&#x27;</div>
+    <div class="item-body">The counterweight to launch-week enthusiasm: complaints that Duet fails simple tasks and that 80% of a usage quota disappeared in a single prompt. The replies are where the detail is, but the pattern is familiar — agent products are judged on quota economics as much as capability, and a model that burns a week of allowance on one task reads as worse than a weaker model that does not. Anthropic has not responded in the thread.</div>
+    <div class="item-meta">
+      <a href="https://x.com/jauneclaude/status/2113017379240480905" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💻</span>
+      <h2>Small Models, Hard Proofs</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag richardsocher-flint-local-coding-model">Richardsocher-Flint-Local-Coding-Model</span> @RichardSocher: Flint, a Fast Local Coding Model</div>
+    <div class="item-body">Recursive&#x27;s first model, built with their automated research system the Eureka Machine, and built from scratch in under four months. The specs are the pitch: best-in-class fast local coding, up to 2x faster than comparable models at 125+ tokens/sec on a MacBook Pro and 150+ on RTX Spark, open weights on Hugging Face, runnable in the usual frameworks or free on OpenCode and Pidot. &#x27;Private, unmetered intelligence on your own machine&#x27; is the sentence that matters — it is the same promise that made LiteLLM&#x27;s compromise so damaging today, minus the dependency.</div>
+    <div class="item-meta">
+      <a href="https://x.com/RichardSocher/status/2112944385415426249" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jahooma-deepseek-flash-free-unlimited">Jahooma-Deepseek-Flash-Free-Unlimited</span> @jahooma: DeepSeek Flash Free and Unlimited in 16 Countries</div>
+    <div class="item-body">Limits were raised again, and DeepSeek Flash is now free and unlimited in the US, Canada, UK, Australia, New Zealand, Ireland, Norway, Sweden, Denmark, Finland, the Netherlands, Austria, Luxembourg, Iceland, Germany and Switzerland. Free frontier-adjacent inference in exactly the markets where paid subscriptions are most entrenched is a pricing attack, not a promotion — and it lands the same week Anthropic started versioning its API for stability rather than price.</div>
+    <div class="item-meta">
+      <a href="https://x.com/jahooma/status/2113022788550492507" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag github-chopin-proof-driven-development">Github-Chopin-Proof-Driven-Development</span> @github: Chopin and the Proof-Driven Development Kit</div>
+    <div class="item-body">GitHub Next and Microsoft Research shipped a research preview aimed at the actual bottleneck in agent-written code: review. Instead of reading diffs line by line, the PDD Kit translates developer intent into a formal specification and uses formal verification to prove the generated code meets it — stronger assurance, the post argues, than code review and tests alone. It works with Verus for Rust and integrates with Chopin. The premise is worth taking seriously: if agents write more code than humans can review, the review process has to become a checkable proof rather than a reading exercise.</div>
+    <div class="item-meta">
+      <a href="https://x.com/github/status/2112938664959562081" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🍎</span>
+      <h2>The iPhone Duo Verdict</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag mediastorm-iphone-duo-10000-folds">Mediastorm-Iphone-Duo-10000-Folds</span> @mediastorm_en: iPhone Duo Review, 10,000 Folds Later</div>
+    <div class="item-body">The most-engaged post on the timeline today by a wide margin — 38,000 likes — is a durability review framed around 10,000 folds. That is the right test for a folding phone and the right framing for the audience: the hinge and the display crease are the parts that decide whether the category is a product or a demo, and neither shows up in a launch-day hands-on.</div>
+    <div class="item-meta">
+      <a href="https://x.com/mediastorm_en/status/2112940762291941794" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag danielcberk-video-better-than-iphone">Danielcberk-Video-Better-Than-Iphone</span> @danielcberk: &#x27;This Video Is More Impressive Than the Actual iPhone&#x27;</div>
+    <div class="item-body">Posted at 7:05 PM: a video that impressed him more than the phone itself, and a public deliberation about cancelling the preorder in favour of an iPhone 18 Pro Max. Read as a leading indicator rather than a verdict — the interesting part is that the thing making him hesitate was a video, not a spec sheet.</div>
+    <div class="item-meta">
+      <a href="https://x.com/danielcberk/status/2112983613956292821" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag danielcberk-cancelled-preorder">Danielcberk-Cancelled-Preorder</span> @danielcberk: Preorder Cancelled, Two and a Half Hours Later</div>
+    <div class="item-body">The follow-up at 9:41 PM: &#x27;I canceled my iPhone Duo preorder.&#x27; No argument attached, which is its own data point — the deliberation resolved itself in under three hours, and the post got nearly 7,000 likes. Launch-week enthusiasm for a new form factor is running into the same question the 10,000-fold review asks, and the answer is not obviously yes.</div>
+    <div class="item-meta">
+      <a href="https://x.com/danielcberk/status/2113022979823292468" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>

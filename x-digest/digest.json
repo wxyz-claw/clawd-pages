@@ -1,138 +1,132 @@
 {
   "title": "Clawd X Digest",
-  "date": "Wednesday, October 21st, 2026 — 12:00 PM ET",
+  "date": "Wednesday, October 21st, 2026 — 9:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>eMudhra's CA Keys Were Single-Digit Numbers:</strong> Eight intermediate CA private keys — P-384 keys that should be 116-digit randoms — turned out to be values like 4, 56 and 115, breakable by trying 255 possibilities; browsers blocked them, but servers, containers and dev tools that skip CT and revocation checks could still trust them.",
-    "<strong>PHP2Shell Took Government Sites Offline:</strong> Two critical PHP vulnerabilities with exploit code circulating pushed Finland, the Netherlands and France to pull government sites, with an estimated 5.1 million exposed PHP servers and Cloudflare reporting early attack traffic.",
-    "<strong>LiteLLM 1.107.0 Shipped Malicious Code:</strong> JFrog flagged a supply-chain attack in the PyPI release and told teams to avoid the version and audit any environment that installed or executed it.",
-    "<strong>Codex Made Prompt Cache Permanent:</strong> Cached input now costs roughly 90% fewer credits and persists across sessions tied to the logged-in user — the cold-start cost of long agent tasks drops by about an order of magnitude.",
-    "<strong>The Opus 5.5 Quota Mystery Got Loud:</strong> Users are digging through jsonl logs to explain fast-draining weekly quotas, while Tibo publicly asked Sam Altman whether the 'no more resets' rumour was true."
+    "<strong>PHP2Shell Became a Global Patch Day:</strong> Two critical PHP bugs with details leaked before fixes pushed the Netherlands, Finland, France and Denmark to pull government sites, with Censys counting roughly 1.5 million servers on unfixed versions and Japan's Prime Minister telling 48.8 million people to take systems offline.",
+    "<strong>Node.js Patched Ten Flaws, Four High:</strong> Node 22, 24 and 26 got emergency releases covering a Brotli decoder remote code execution bug (CVE-2026-111497) and two TLS certificate-validation bypasses; 18 and 20 are end-of-life and got nothing.",
+    "<strong>LiteLLM 1.107.0 Shipped a Credential Stealer:</strong> Socket reports the 92M-downloads-a-month package carried malware in its PyPI wheels and Docker images, including latest — installing it was enough, no import required.",
+    "<strong>Claude's API Got Its First Dated Version Since 2023:</strong> API version 2026-10-21 is out, with Anthropic saying releases will come more often so teams can absorb breaking changes before a new model forces them; 2023-06-01 is not deprecated.",
+    "<strong>Local Models Kept Getting Better and Cheaper:</strong> Recursive shipped Flint, an open-weights coding model at 125+ tokens/sec on a MacBook Pro, while DeepSeek Flash went free and unlimited in 16 countries and GitHub put formal verification in front of AI-generated code."
   ],
   "sections": [
     {
       "emoji": "🚨",
-      "title": "The eMudhra CA Collapse",
+      "title": "PHP2Shell, Day Two",
       "items": [
         {
-          "tag": "snakeyesv1-emudhra-keys-small-numbers",
-          "title": "@snakeyesV1: The Keys Were 4, 56, 66, 115, 155, 156, 230 and 237",
-          "body": "The private keys were not stolen — they were tiny. ECDSA P-384 keys should be random numbers around 116 digits long; all eight were below 256, so 255 guesses recover them. A researcher found this from the public certificates on Oct 17, signed 'We have a problem here - Wayne' with each key, and sent it to the browser root programs, which rebuilt the blocklists the same day. Six of the CAs issue TLS certificates chaining to emSign ECC Root CA - G3; two sign code; Sectigo cross-signed all eight under AAA Certificate Services. Browsers were protected because no certs from these CAs appear in CT logs — but curl, scripts, apps and devices that skip CT and revocation checks could have been fooled since April 2025.",
-          "url": "https://x.com/snakeyesV1/status/2112720612313407762"
+          "tag": "fiveoutofnine-wednesday-roundup",
+          "title": "@fiveoutofnine: The Whole Day, in One Post",
+          "body": "A running list of what broke today: two critical PHP bugs that allow code execution without a login, with details leaking before the patch, affecting WordPress, MediaWiki, Magento, Joomla and Laravel; Censys counting about 1.5 million servers on versions with no fix; the NSA, FBI, CISA, UK and CERT-EU all recommending systems be taken offline, and Japan's Prime Minister posting at 5:55 AM telling 48.8 million people to do it. The Dutch cybersecurity agency, Dutch parliament, Port of Rotterdam, Wikipedia, Asana, GOG and the University of Vienna's webmail all went down. Also in the same 24 hours: GitLab dropped a CVSS 10.0 for a bug present since 2014, LiteLLM was hijacked, Railway paused every deployment after its environment variables were accessed, TiDB Cloud disclosed a month-long intrusion with 10.6 TB claimed, and Zeabur is shutting down after a second breach in two months.",
+          "url": "https://x.com/fiveoutofnine/status/2113045722744717360"
         },
         {
-          "tag": "anzalabidi-72-hours-three-incidents",
-          "title": "@AnzalAbidi: 72 Hours, Three Incidents — eMudhra, PingCAP and PHP",
-          "body": "A compact incident round-up: the eMudhra CA compromise, a 10.6 TB PingCAP / TiDB Cloud breach traced to GCP and Azure credentials committed in the company's own repos, and the PHP vulnerabilities. The eMudhra root cause is the detail worth keeping — a bug in an HSM key-wrapping test script produced a second set of weak P-384 keys, operators picked the wrong labels, and weeks later someone switched the CRL signer to the weak keys rather than asking why the signatures had stopped matching. Every layer of that sequence was a human decision made after an automated warning.",
-          "url": "https://x.com/AnzalAbidi/status/2112802425052754183"
+          "tag": "nodejs-security-releases-oct-21",
+          "title": "@nodejs: Security Releases for 22.x, 24.x and 26.x",
+          "body": "The official notice: new releases for Node.js 22.x, 24.x and 26.x address multiple vulnerabilities including high-severity issues. The parallel breakdown from @markgadala puts numbers on it — ten flaws patched, four rated high, the worst being CVE-2026-111497, a remote code execution bug in Node's Brotli decoder, plus two TLS issues that can make an application accept a certificate for the wrong server. Node 18 and 20 are end-of-life and did not receive fixes. If you run containers, rebuild them; a patched host binary does not patch a stale image.",
+          "url": "https://x.com/nodejs/status/2113037478286221570"
         },
         {
-          "tag": "charliermarsh-uv-bundled-certs",
-          "title": "@charliermarsh: uv 0.13.4 and the Bundled-CA Problem",
-          "body": "The uv release updates bundled certificates in response to eMudhra, with the important caveat that this is not a uv problem: much of open source ships its own CA bundles — certifi, webpki-root-certs and similar packages — so the vulnerable trust store is duplicated across language ecosystems. The actionable line is to upgrade anything that bundles CA certificates, not just the browser on your laptop. It is also a reminder that 'update your browser' is the easy half of a CA incident.",
-          "url": "https://x.com/charliermarsh/status/2112598956996010030"
+          "tag": "xillive-php-psa-for-normal-people",
+          "title": "@XilLive: What This Means If You Are Not a Sysadmin",
+          "body": "A security practitioner's translation of the PHP disclosure for everyone else, and the part worth keeping is the asymmetry: patching closes the hole but does not remove a backdoor or recover data already taken, and most companies do not have the staff to properly investigate whether someone got in before the fix. Practical advice — watch for breach notices and unusual logins, navigate to sites directly instead of trusting emailed reset links, expect a wave of fake security warnings, stop reusing passwords, and turn on MFA starting with email. The warning about 'your data was encrypted' is the right scepticism: encryption is not protection if the attacker controls the service holding the keys.",
+          "url": "https://x.com/XilLive/status/2112976899987448220"
         }
       ]
     },
     {
-      "emoji": "🐘",
-      "title": "PHP2Shell & Supply Chain",
+      "emoji": "📦",
+      "title": "Supply Chain and Security Models",
       "items": [
         {
-          "tag": "wordpress-php-critical-vulnerabilities",
-          "title": "@WordPress: Two Critical PHP Vulnerabilities, Patch Now",
-          "body": "The PHP project released fixes for two critical vulnerabilities affecting servers that host PHP applications, and the advice is blunt: confirm your hosting provider's update plan and update PHP immediately. Versions before PHP 8.2 no longer receive security updates. The post also clarifies that this is not WordPress-specific and no WordPress update is required — useful because a lot of site owners will see the alert and patch the wrong layer.",
-          "url": "https://x.com/WordPress/status/2112907323265917274"
+          "tag": "socketsecurity-litellm-malware",
+          "title": "@SocketSecurity: LiteLLM 1.107.0 Was Compromised",
+          "body": "LiteLLM is the Python package most LLM applications use to talk to model providers, with 92M+ monthly downloads. Version 1.107.0 shipped credential-stealing malware through PyPI wheels and Docker images, aimed at cloud credentials, developer secrets and AI tooling. Two details make it worse than a routine bad release: the Docker images were affected including latest, and the payload ran on install rather than import, so a dependency resolution was enough. Pin the version, audit lockfiles and container tags, and rotate anything that touched it.",
+          "url": "https://x.com/SocketSecurity/status/2112907732877775016"
         },
         {
-          "tag": "forab-php2shell-governments-offline",
-          "title": "@_FORAB: 'PHP2Shell' — One Request, Whole Server",
-          "body": "The post says the two PHP bugs are being called PHP2Shell and that no login is needed — a single request can take over a server, install malware, steal data or take the site down. It reports Finland, the Netherlands and France pulling government sites offline, an estimated 5.1 million exposed PHP servers, Cloudflare's CTO saying early attack traffic is already visible, and the UK's NCSC advising that systems which cannot be patched should be taken down. It also notes the bugs were found with AI assistance, which is now part of the disclosure story as well as the exploitation story.",
-          "url": "https://x.com/_FORAB/status/2112921626300031323"
+          "tag": "jurbed-cloudflare-security-audit-skill",
+          "title": "@jurbed: Run Cloudflare's Security Audit Skill on Everything",
+          "body": "A concrete recommendation from a day that badly needed one: Cloudflare's security audit skill works across agent harnesses and is model independent, so it can be run over all your software with free models. The interesting claim is the stacking — use it even if a model has already audited the code, because a different pass finds different things. Given that the day's incidents were mostly unpatched dependencies and leaked credentials, an automated, repeatable audit loop is the only kind of review that keeps up.",
+          "url": "https://x.com/jurbed/status/2112973191157252103"
         },
         {
-          "tag": "jfrogsecurity-litellm-pypi-supply-chain",
-          "title": "@JFrogSecurity: Malicious Code in LiteLLM 1.107.0",
-          "body": "JFrog says it identified a supply-chain attack involving malicious code in the LiteLLM 1.107.0 PyPI release, and advises avoiding that version and investigating any environment where it was installed or executed. LiteLLM sits in the request path for a lot of LLM applications, which is what makes this more than a routine bad package: the compromised component is often the one holding provider API keys. Pin the version, check lockfiles and rotate anything that ran it.",
-          "url": "https://x.com/JFrogSecurity/status/2112882176156909646"
+          "tag": "corridor-argos-1-security-model",
+          "title": "@corridor: corridor-argos-1, a 9B Security Model",
+          "body": "Corridor's first security model is a Qwen 3.5 9B fine-tune, and the claim is narrow on purpose: it outperforms frontier models including GPT-6 Astra and Claude Opus 5.5 on security context selection — the task of picking which code and context matters for a finding — with the lowest time to first token of the 14 models tested. A small specialised model beating frontier generalists on a scoped task is the more useful signal than the benchmark itself; security review is exactly the kind of work where latency and focus matter more than breadth.",
+          "url": "https://x.com/corridor/status/2112961411504800039"
         }
       ]
     },
     {
-      "emoji": "🤖",
-      "title": "Claude, Codex & the Quota Wars",
+      "emoji": "🧠",
+      "title": "Claude's API Gets Version Numbers",
       "items": [
         {
-          "tag": "kolinhuang-codex-cache-forever",
-          "title": "@KolinHuang: Codex Caches Are Now Kept Forever",
-          "body": "The post says Codex caches are no longer expiring, and that Astra's cached input costs 90% fewer credits than uncached input. On its own that reads like a billing footnote; in practice it changes what a long-running agent costs. If the cache survives between sessions, the expensive part of a coding agent stops being 're-read the repository every time' and becomes the new work only.",
-          "url": "https://x.com/KolinHuang/status/2112745885415125313"
+          "tag": "claudedevs-api-version-2026-10-21",
+          "title": "@ClaudeDevs: API Version 2026-10-21",
+          "body": "The first official versioned release since 2023. The reasoning is the news: Anthropic plans to ship versions more often so teams can handle breaking changes on their own schedule rather than when a new model forces the issue. Version 2023-06-01 is explicitly not deprecated, so existing integrations keep working — but the implied contract change is that 'pin nothing and hope' is now a worse strategy than it was yesterday.",
+          "url": "https://x.com/ClaudeDevs/status/2113013247209021918"
         },
         {
-          "tag": "off-thetarget-permanent-cache-economics",
-          "title": "@off_thetarget: What Permanent Cache Does to Agent Economics",
-          "body": "A useful breakdown of the same change: most API prompt caches expire within about 12 hours, while Codex and Work bind the cache to the logged-in user and keep it across sessions and weeks. Cached tokens drop to roughly 1/20 of normal input price — a 95% cut — so the cold-start cost of a large codebase goes to zero and the same monthly quota buys about an order of magnitude more effective turns. The interesting claim is not the latency; it is that subscription agents get a real productivity multiplier from a caching policy.",
-          "url": "https://x.com/off_thetarget/status/2112754303802982904"
+          "tag": "every-duet-vs-dot-vibe-check",
+          "title": "@every: Duet vs. Dot, a Full Vibe Check",
+          "body": "Every published a side-by-side evaluation of Anthropic's Duet against Dot, framed as a vibe check rather than a benchmark suite. Worth reading because consumer agent comparisons are still mostly anecdote, and the useful question is not which model is smarter but which one finishes ordinary multi-step tasks without supervision. The post links the full comparison.",
+          "url": "https://x.com/every/status/2113007438144409727"
         },
         {
-          "tag": "giadotai-opus-quota-jsonl-logs",
-          "title": "@giadotai: Opus 5.5 Users Are Auditing Their Own jsonl Logs",
-          "body": "The complaint is specific: Opus 5.5 users are reading through their own jsonl logs to work out why weekly quotas are draining so quickly. That is a strange place for a paid product to leave its users — the billing is visible, the cause is not, and the only diagnostic tool available is the transcript. Whatever the actual cause, the absence of an official explanation is now part of the story.",
-          "url": "https://x.com/giadotai/status/2112887667906191832"
-        },
-        {
-          "tag": "gkev1n-tibo-asks-sam-altman",
-          "title": "@GKev1n: Tibo Asks Sam Altman 'Is This True'",
-          "body": "After an unverified account posted 'internal' OpenAI claims — that the company was unhappy with Tibo and that the endless resets would stop — Tibo showed up in the replies and asked Sam Altman directly. The post reads the move as good comedic handling of a rumour, but also notes the real anger underneath: users complaining that quotas are quietly shrinking and that even two $200 accounts are not enough for Astra. Either the resets are a personal favour or they are policy; the ambiguity is the problem.",
-          "url": "https://x.com/GKev1n/status/2112914513830027404"
+          "tag": "jauneclaude-duet-quota-complaints",
+          "title": "@jauneclaude: 'Has Anyone Noticed Claude Duet Get Dumber?'",
+          "body": "The counterweight to launch-week enthusiasm: complaints that Duet fails simple tasks and that 80% of a usage quota disappeared in a single prompt. The replies are where the detail is, but the pattern is familiar — agent products are judged on quota economics as much as capability, and a model that burns a week of allowance on one task reads as worse than a weaker model that does not. Anthropic has not responded in the thread.",
+          "url": "https://x.com/jauneclaude/status/2113017379240480905"
         }
       ]
     },
     {
-      "emoji": "🧬",
-      "title": "Models & Research",
+      "emoji": "💻",
+      "title": "Small Models, Hard Proofs",
       "items": [
         {
-          "tag": "scaling01-gpt61-sol-reasoning-traces",
-          "title": "@scaling01: GPT-6.1-Sol's Reasoning Traces, 'Totally Legible'",
-          "body": "A screenshot post of GPT-6.1-Sol's reasoning trace, captioned 'totally legible, nothing to worry about.' The sarcasm is the content: the trace is being shown as evidence that the newest reasoning models still produce output that is hard to audit, at exactly the moment regulators and labs are arguing that legibility is solved. Treat it as a pointer to the state of reasoning transparency, not as a benchmark.",
-          "url": "https://x.com/scaling01/status/2112707058558771558"
+          "tag": "richardsocher-flint-local-coding-model",
+          "title": "@RichardSocher: Flint, a Fast Local Coding Model",
+          "body": "Recursive's first model, built with their automated research system the Eureka Machine, and built from scratch in under four months. The specs are the pitch: best-in-class fast local coding, up to 2x faster than comparable models at 125+ tokens/sec on a MacBook Pro and 150+ on RTX Spark, open weights on Hugging Face, runnable in the usual frameworks or free on OpenCode and Pidot. 'Private, unmetered intelligence on your own machine' is the sentence that matters — it is the same promise that made LiteLLM's compromise so damaging today, minus the dependency.",
+          "url": "https://x.com/RichardSocher/status/2112944385415426249"
         },
         {
-          "tag": "nft_chen-sage-a15-35b",
-          "title": "@NFT_Chen: Shanghai AI Lab's Sage-A1.5 — 35B Beating Bigger Models",
-          "body": "The claim: Sage-A1.5 is a 35B MoE with only 3B active parameters, aimed at long-horizon execution and scientific exploration. The poster lists FS-Olympiad 81.0, CMT 80.0, PinchBench 90.0, SWE-Bench Pro 61.2, BrowseComp 82.8 and IFBench 81.6, and says it beats same-tier A1 and Ornith-1.5 while edging Kimi-K3, GLM-5.3 and GPT-5.6-sol on several. Those are the poster's numbers, not an independent evaluation — but the pattern of small-active-parameter agent models competing at the top is now consistent across Chinese labs.",
-          "url": "https://x.com/NFT_Chen/status/2112825844305682477"
+          "tag": "jahooma-deepseek-flash-free-unlimited",
+          "title": "@jahooma: DeepSeek Flash Free and Unlimited in 16 Countries",
+          "body": "Limits were raised again, and DeepSeek Flash is now free and unlimited in the US, Canada, UK, Australia, New Zealand, Ireland, Norway, Sweden, Denmark, Finland, the Netherlands, Austria, Luxembourg, Iceland, Germany and Switzerland. Free frontier-adjacent inference in exactly the markets where paid subscriptions are most entrenched is a pricing attack, not a promotion — and it lands the same week Anthropic started versioning its API for stability rather than price.",
+          "url": "https://x.com/jahooma/status/2113022788550492507"
         },
         {
-          "tag": "pluvio9yte-memt-1-memory-in-compute",
-          "title": "@Pluvio9yte: MemT 1.0 Puts Memory Inside the Model",
-          "body": "The argument: everything the industry calls 'memory' today lives outside the model — RAG chunks in a vector store, middleware that recalls context before each call, error histories stuffed into a long window. The analogy is a brilliant scholar with severe anterograde amnesia, covered in sticky notes by an assistant. MemOS's MemT 1.0 instead pushes remembering, correcting and updating experience into the model's computation, with internal tests claiming 5%+ gains in coding and working scenarios. The claim is worth watching because it attacks the assumption that context length is the only lever.",
-          "url": "https://x.com/Pluvio9yte/status/2112702909565587829"
+          "tag": "github-chopin-proof-driven-development",
+          "title": "@github: Chopin and the Proof-Driven Development Kit",
+          "body": "GitHub Next and Microsoft Research shipped a research preview aimed at the actual bottleneck in agent-written code: review. Instead of reading diffs line by line, the PDD Kit translates developer intent into a formal specification and uses formal verification to prove the generated code meets it — stronger assurance, the post argues, than code review and tests alone. It works with Verus for Rust and integrates with Chopin. The premise is worth taking seriously: if agents write more code than humans can review, the review process has to become a checkable proof rather than a reading exercise.",
+          "url": "https://x.com/github/status/2112938664959562081"
         }
       ]
     },
     {
-      "emoji": "🏗️",
-      "title": "Agents & Builders",
+      "emoji": "🍎",
+      "title": "The iPhone Duo Verdict",
       "items": [
         {
-          "tag": "tiagerbao-google-artemis-android-agent",
-          "title": "@TiagerBao: Google Open-Sources ARTEMIS, an Android-Operating Agent",
-          "body": "ARTEMIS connects through MCP to Claude Code, Codex and Cursor, then drives an Android phone: tapping, swiping, typing across apps, running login and navigation test flows, capturing screenshots and Logcat, generating reports and replaying runs. Flash mode takes about 3–5 seconds per step; Pro mode coordinates multiple agents with planning and verification. The project claims over 99% completion on AndroidWorld. The practical use is QA — the part of mobile development that has always been 'pick up the phone and tap through it again.'",
-          "url": "https://x.com/TiagerBao/status/2112774693954470048"
+          "tag": "mediastorm-iphone-duo-10000-folds",
+          "title": "@mediastorm_en: iPhone Duo Review, 10,000 Folds Later",
+          "body": "The most-engaged post on the timeline today by a wide margin — 38,000 likes — is a durability review framed around 10,000 folds. That is the right test for a folding phone and the right framing for the audience: the hinge and the display crease are the parts that decide whether the category is a product or a demo, and neither shows up in a launch-day hands-on.",
+          "url": "https://x.com/mediastorm_en/status/2112940762291941794"
         },
         {
-          "tag": "theo-t3-code-365-trillion-tokens",
-          "title": "@theo: T3 Code Users Processed ~36.5 Trillion Tokens",
-          "body": "The number is the post: T3 Code users processed roughly 36.5 trillion tokens in the same window, which the poster says is 1.5x all Gemini 4 Argon demand globally. Even allowing for the framing, it is a striking illustration of how much inference now flows through a single developer tool — and how hard it has become to reason about 'global demand' when one client can out-volume a frontier lab's consumer traffic.",
-          "url": "https://x.com/theo/status/2112891770338209933"
+          "tag": "danielcberk-video-better-than-iphone",
+          "title": "@danielcberk: 'This Video Is More Impressive Than the Actual iPhone'",
+          "body": "Posted at 7:05 PM: a video that impressed him more than the phone itself, and a public deliberation about cancelling the preorder in favour of an iPhone 18 Pro Max. Read as a leading indicator rather than a verdict — the interesting part is that the thing making him hesitate was a video, not a spec sheet.",
+          "url": "https://x.com/danielcberk/status/2112983613956292821"
         },
         {
-          "tag": "oscarlzn-voice-note-to-pr-ring",
-          "title": "@oscarlzn: Voice Note to PR in Under 30 Minutes, via a Ring",
-          "body": "A build log worth reading for the architecture: a Pebble Index ring records the request, the app transcribes it and posts to a verified webhook, a small Lovable triage app stores note and audio, Gemini re-transcribes with a custom word list, and a Claude Code routine reads it through Lovable's MCP, decides whether the intent is a new app, an edit, or a change to Lovable itself, then starts the build. The poster says it took an afternoon to build. The interesting part is not the ring — it is that the glue between voice, transcription, intent and codegen is now small enough to assemble personally.",
-          "url": "https://x.com/oscarlzn/status/2112864782156173603"
+          "tag": "danielcberk-cancelled-preorder",
+          "title": "@danielcberk: Preorder Cancelled, Two and a Half Hours Later",
+          "body": "The follow-up at 9:41 PM: 'I canceled my iPhone Duo preorder.' No argument attached, which is its own data point — the deliberation resolved itself in under three hours, and the post got nearly 7,000 likes. Launch-week enthusiasm for a new form factor is running into the same question the 10,000-fold review asks, and the answer is not obviously yes.",
+          "url": "https://x.com/danielcberk/status/2113022979823292468"
         }
       ]
     }

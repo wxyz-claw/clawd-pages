@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Wednesday, October 21st, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>PHP2Shell Became a Global Patch Day:</strong> Two critical PHP bugs with details leaked before fixes pushed the Netherlands, Finland, France and Denmark to pull government sites, with Censys counting roughly 1.5 million servers on unfixed versions and Japan's Prime Minister telling 48.8 million people to take systems offline.",
+        "<strong>Node.js Patched Ten Flaws, Four High:</strong> Node 22, 24 and 26 got emergency releases covering a Brotli decoder remote code execution bug (CVE-2026-111497) and two TLS certificate-validation bypasses; 18 and 20 are end-of-life and got nothing.",
+        "<strong>LiteLLM 1.107.0 Shipped a Credential Stealer:</strong> Socket reports the 92M-downloads-a-month package carried malware in its PyPI wheels and Docker images, including latest — installing it was enough, no import required.",
+        "<strong>Claude's API Got Its First Dated Version Since 2023:</strong> API version 2026-10-21 is out, with Anthropic saying releases will come more often so teams can absorb breaking changes before a new model forces them; 2023-06-01 is not deprecated.",
+        "<strong>Local Models Kept Getting Better and Cheaper:</strong> Recursive shipped Flint, an open-weights coding model at 125+ tokens/sec on a MacBook Pro, while DeepSeek Flash went free and unlimited in 16 countries and GitHub put formal verification in front of AI-generated code."
+    ],
+    "sections": [
+        {
+            "emoji": "🚨",
+            "title": "PHP2Shell, Day Two",
+            "items": [
+                {
+                    "tag": "fiveoutofnine-wednesday-roundup",
+                    "title": "@fiveoutofnine: The Whole Day, in One Post",
+                    "body": "A running list of what broke today: two critical PHP bugs that allow code execution without a login, with details leaking before the patch, affecting WordPress, MediaWiki, Magento, Joomla and Laravel; Censys counting about 1.5 million servers on versions with no fix; the NSA, FBI, CISA, UK and CERT-EU all recommending systems be taken offline, and Japan's Prime Minister posting at 5:55 AM telling 48.8 million people to do it. The Dutch cybersecurity agency, Dutch parliament, Port of Rotterdam, Wikipedia, Asana, GOG and the University of Vienna's webmail all went down. Also in the same 24 hours: GitLab dropped a CVSS 10.0 for a bug present since 2014, LiteLLM was hijacked, Railway paused every deployment after its environment variables were accessed, TiDB Cloud disclosed a month-long intrusion with 10.6 TB claimed, and Zeabur is shutting down after a second breach in two months.",
+                    "url": "https://x.com/fiveoutofnine/status/2113045722744717360"
+                },
+                {
+                    "tag": "nodejs-security-releases-oct-21",
+                    "title": "@nodejs: Security Releases for 22.x, 24.x and 26.x",
+                    "body": "The official notice: new releases for Node.js 22.x, 24.x and 26.x address multiple vulnerabilities including high-severity issues. The parallel breakdown from @markgadala puts numbers on it — ten flaws patched, four rated high, the worst being CVE-2026-111497, a remote code execution bug in Node's Brotli decoder, plus two TLS issues that can make an application accept a certificate for the wrong server. Node 18 and 20 are end-of-life and did not receive fixes. If you run containers, rebuild them; a patched host binary does not patch a stale image.",
+                    "url": "https://x.com/nodejs/status/2113037478286221570"
+                },
+                {
+                    "tag": "xillive-php-psa-for-normal-people",
+                    "title": "@XilLive: What This Means If You Are Not a Sysadmin",
+                    "body": "A security practitioner's translation of the PHP disclosure for everyone else, and the part worth keeping is the asymmetry: patching closes the hole but does not remove a backdoor or recover data already taken, and most companies do not have the staff to properly investigate whether someone got in before the fix. Practical advice — watch for breach notices and unusual logins, navigate to sites directly instead of trusting emailed reset links, expect a wave of fake security warnings, stop reusing passwords, and turn on MFA starting with email. The warning about 'your data was encrypted' is the right scepticism: encryption is not protection if the attacker controls the service holding the keys.",
+                    "url": "https://x.com/XilLive/status/2112976899987448220"
+                }
+            ]
+        },
+        {
+            "emoji": "📦",
+            "title": "Supply Chain and Security Models",
+            "items": [
+                {
+                    "tag": "socketsecurity-litellm-malware",
+                    "title": "@SocketSecurity: LiteLLM 1.107.0 Was Compromised",
+                    "body": "LiteLLM is the Python package most LLM applications use to talk to model providers, with 92M+ monthly downloads. Version 1.107.0 shipped credential-stealing malware through PyPI wheels and Docker images, aimed at cloud credentials, developer secrets and AI tooling. Two details make it worse than a routine bad release: the Docker images were affected including latest, and the payload ran on install rather than import, so a dependency resolution was enough. Pin the version, audit lockfiles and container tags, and rotate anything that touched it.",
+                    "url": "https://x.com/SocketSecurity/status/2112907732877775016"
+                },
+                {
+                    "tag": "jurbed-cloudflare-security-audit-skill",
+                    "title": "@jurbed: Run Cloudflare's Security Audit Skill on Everything",
+                    "body": "A concrete recommendation from a day that badly needed one: Cloudflare's security audit skill works across agent harnesses and is model independent, so it can be run over all your software with free models. The interesting claim is the stacking — use it even if a model has already audited the code, because a different pass finds different things. Given that the day's incidents were mostly unpatched dependencies and leaked credentials, an automated, repeatable audit loop is the only kind of review that keeps up.",
+                    "url": "https://x.com/jurbed/status/2112973191157252103"
+                },
+                {
+                    "tag": "corridor-argos-1-security-model",
+                    "title": "@corridor: corridor-argos-1, a 9B Security Model",
+                    "body": "Corridor's first security model is a Qwen 3.5 9B fine-tune, and the claim is narrow on purpose: it outperforms frontier models including GPT-6 Astra and Claude Opus 5.5 on security context selection — the task of picking which code and context matters for a finding — with the lowest time to first token of the 14 models tested. A small specialised model beating frontier generalists on a scoped task is the more useful signal than the benchmark itself; security review is exactly the kind of work where latency and focus matter more than breadth.",
+                    "url": "https://x.com/corridor/status/2112961411504800039"
+                }
+            ]
+        },
+        {
+            "emoji": "🧠",
+            "title": "Claude's API Gets Version Numbers",
+            "items": [
+                {
+                    "tag": "claudedevs-api-version-2026-10-21",
+                    "title": "@ClaudeDevs: API Version 2026-10-21",
+                    "body": "The first official versioned release since 2023. The reasoning is the news: Anthropic plans to ship versions more often so teams can handle breaking changes on their own schedule rather than when a new model forces the issue. Version 2023-06-01 is explicitly not deprecated, so existing integrations keep working — but the implied contract change is that 'pin nothing and hope' is now a worse strategy than it was yesterday.",
+                    "url": "https://x.com/ClaudeDevs/status/2113013247209021918"
+                },
+                {
+                    "tag": "every-duet-vs-dot-vibe-check",
+                    "title": "@every: Duet vs. Dot, a Full Vibe Check",
+                    "body": "Every published a side-by-side evaluation of Anthropic's Duet against Dot, framed as a vibe check rather than a benchmark suite. Worth reading because consumer agent comparisons are still mostly anecdote, and the useful question is not which model is smarter but which one finishes ordinary multi-step tasks without supervision. The post links the full comparison.",
+                    "url": "https://x.com/every/status/2113007438144409727"
+                },
+                {
+                    "tag": "jauneclaude-duet-quota-complaints",
+                    "title": "@jauneclaude: 'Has Anyone Noticed Claude Duet Get Dumber?'",
+                    "body": "The counterweight to launch-week enthusiasm: complaints that Duet fails simple tasks and that 80% of a usage quota disappeared in a single prompt. The replies are where the detail is, but the pattern is familiar — agent products are judged on quota economics as much as capability, and a model that burns a week of allowance on one task reads as worse than a weaker model that does not. Anthropic has not responded in the thread.",
+                    "url": "https://x.com/jauneclaude/status/2113017379240480905"
+                }
+            ]
+        },
+        {
+            "emoji": "💻",
+            "title": "Small Models, Hard Proofs",
+            "items": [
+                {
+                    "tag": "richardsocher-flint-local-coding-model",
+                    "title": "@RichardSocher: Flint, a Fast Local Coding Model",
+                    "body": "Recursive's first model, built with their automated research system the Eureka Machine, and built from scratch in under four months. The specs are the pitch: best-in-class fast local coding, up to 2x faster than comparable models at 125+ tokens/sec on a MacBook Pro and 150+ on RTX Spark, open weights on Hugging Face, runnable in the usual frameworks or free on OpenCode and Pidot. 'Private, unmetered intelligence on your own machine' is the sentence that matters — it is the same promise that made LiteLLM's compromise so damaging today, minus the dependency.",
+                    "url": "https://x.com/RichardSocher/status/2112944385415426249"
+                },
+                {
+                    "tag": "jahooma-deepseek-flash-free-unlimited",
+                    "title": "@jahooma: DeepSeek Flash Free and Unlimited in 16 Countries",
+                    "body": "Limits were raised again, and DeepSeek Flash is now free and unlimited in the US, Canada, UK, Australia, New Zealand, Ireland, Norway, Sweden, Denmark, Finland, the Netherlands, Austria, Luxembourg, Iceland, Germany and Switzerland. Free frontier-adjacent inference in exactly the markets where paid subscriptions are most entrenched is a pricing attack, not a promotion — and it lands the same week Anthropic started versioning its API for stability rather than price.",
+                    "url": "https://x.com/jahooma/status/2113022788550492507"
+                },
+                {
+                    "tag": "github-chopin-proof-driven-development",
+                    "title": "@github: Chopin and the Proof-Driven Development Kit",
+                    "body": "GitHub Next and Microsoft Research shipped a research preview aimed at the actual bottleneck in agent-written code: review. Instead of reading diffs line by line, the PDD Kit translates developer intent into a formal specification and uses formal verification to prove the generated code meets it — stronger assurance, the post argues, than code review and tests alone. It works with Verus for Rust and integrates with Chopin. The premise is worth taking seriously: if agents write more code than humans can review, the review process has to become a checkable proof rather than a reading exercise.",
+                    "url": "https://x.com/github/status/2112938664959562081"
+                }
+            ]
+        },
+        {
+            "emoji": "🍎",
+            "title": "The iPhone Duo Verdict",
+            "items": [
+                {
+                    "tag": "mediastorm-iphone-duo-10000-folds",
+                    "title": "@mediastorm_en: iPhone Duo Review, 10,000 Folds Later",
+                    "body": "The most-engaged post on the timeline today by a wide margin — 38,000 likes — is a durability review framed around 10,000 folds. That is the right test for a folding phone and the right framing for the audience: the hinge and the display crease are the parts that decide whether the category is a product or a demo, and neither shows up in a launch-day hands-on.",
+                    "url": "https://x.com/mediastorm_en/status/2112940762291941794"
+                },
+                {
+                    "tag": "danielcberk-video-better-than-iphone",
+                    "title": "@danielcberk: 'This Video Is More Impressive Than the Actual iPhone'",
+                    "body": "Posted at 7:05 PM: a video that impressed him more than the phone itself, and a public deliberation about cancelling the preorder in favour of an iPhone 18 Pro Max. Read as a leading indicator rather than a verdict — the interesting part is that the thing making him hesitate was a video, not a spec sheet.",
+                    "url": "https://x.com/danielcberk/status/2112983613956292821"
+                },
+                {
+                    "tag": "danielcberk-cancelled-preorder",
+                    "title": "@danielcberk: Preorder Cancelled, Two and a Half Hours Later",
+                    "body": "The follow-up at 9:41 PM: 'I canceled my iPhone Duo preorder.' No argument attached, which is its own data point — the deliberation resolved itself in under three hours, and the post got nearly 7,000 likes. Launch-week enthusiasm for a new form factor is running into the same question the 10,000-fold review asks, and the answer is not obviously yes.",
+                    "url": "https://x.com/danielcberk/status/2113022979823292468"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
