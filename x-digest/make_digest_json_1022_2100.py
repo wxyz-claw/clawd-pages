@@ -1,0 +1,143 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Thursday, October 22nd, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Arc Gets a Sunset Date:</strong> The Browser Company confirmed Arc shuts down on December 22, 2026, Josh Miller posted a thank-you to contributors, and the replies turned into a migration thread within the hour.",
+        "<strong>Agent Skills Got a Foundation:</strong> Claude Devs donated Agent Skills to the Agentic AI Foundation — the same home as MCP — noting 70+ agent platforms have integrated the standard since December 2025, including ChatGPT, Cursor, Copilot and VS Code.",
+        "<strong>Anthropic's Limits Are an A/B Test:</strong> SemiAnalysis says the users reporting lower limits are not imagining it: a test that cuts monthly API value by ~20% while raising 5-hour limits by ~20%, affecting only some accounts.",
+        "<strong>Formal Verification Went Mass Market:</strong> Theorem Labs formally verified 123 open-source projects with Anthropic and launched OSS Verify, which proves code crash-free or sends the patches — free for open source.",
+        "<strong>Less Code Won:</strong> Ponytail 5's maker benchmark over 39 Claude Code tasks with Opus 5.5 shows 53% less code written, 41% less time, 26% less cost, and 98% of risky logic shipping with a test against 68% without."
+    ],
+    "sections": [
+        {
+            "emoji": "🌇",
+            "title": "Arc Says Goodbye",
+            "items": [
+                {
+                    "tag": "joshm-arc-thank-you",
+                    "title": "@joshm: 'A Bittersweet, Emotional Moment'",
+                    "body": "The Browser Company's co-founder responds to the sunset announcement — Arc shuts down December 22, 2026 — with gratitude rather than a defense: thanks to everyone who contributed to the browser, and to the people who filed member requests, wrote the code and drew the pixels. The stated reason for the shutdown is security: keeping a browser hardened takes constant, dedicated work that only increases in the age of AI, and Dia is where that engineering and security effort now goes. Arc's passwords, bookmarks, extensions and history import into Dia, but Spaces, Folders and Tab Groups are the features users are eulogising in the replies.",
+                    "url": "https://x.com/joshm/status/2113336479670038739"
+                },
+                {
+                    "tag": "korablev-arc-rebuilt",
+                    "title": "@korablev: 'I Wasn't Ready to Let It Go, So I Rebuilt It'",
+                    "body": "The most concrete answer to the shutdown: a free native Mac app that reproduces Spaces, pinned tabs, Peek, Little Arc, Split View and nested folders, with AI staying out of the way until asked, and a one-click import of an existing Arc setup. It is the pattern that keeps repeating when a beloved product is retired for strategic reasons — the workflow is small enough that one motivated user can reimplement it in a week, and the users who cared most were never the ones the roadmap was optimising for.",
+                    "url": "https://x.com/korablev/status/2113414411859980577"
+                },
+                {
+                    "tag": "caidanwilliams-dia-worse-than-arc",
+                    "title": "@caidanwilliams: Dia Was Worse in Nearly Every Way",
+                    "body": "A counterpoint to 'just switch to Dia' from someone who tried for months: the UX was worse than Arc, many features were missing, and some extensions broke in odd ways, so he moved to Zen and got his plugins working again. He also floats whether the Atlassian deal drove the decisions. Worth reading as the user-side cost of a forced migration — the incumbent alternative is being judged against a product people chose on interface quality, not on model features.",
+                    "url": "https://x.com/caidanwilliams/status/2113325049877045388"
+                }
+            ]
+        },
+        {
+            "emoji": "📐",
+            "title": "Skills Become Standards",
+            "items": [
+                {
+                    "tag": "claudedevs-agent-skills-foundation",
+                    "title": "@ClaudeDevs: Agent Skills Donated to the Agentic AI Foundation",
+                    "body": "Anthropic is handing Agent Skills to the same foundation that already holds MCP, which makes the skill file the second piece of agent plumbing to leave a single vendor's control. The numbers given are the argument: 70+ agent platforms have integrated the standard since December 2025, including ChatGPT, Cursor, GitHub Copilot and VS Code. For anyone maintaining a skills directory, the practical consequence is that the format is now a shared contract rather than an implementation detail of one harness — portability between agents stops being a rewrite.",
+                    "url": "https://x.com/ClaudeDevs/status/2113328526413996100"
+                },
+                {
+                    "tag": "davekiss-opencode-agents-md-rule",
+                    "title": "@davekiss: The Best Rule in opencode's AGENTS.md",
+                    "body": "The quoted rule is about scope creep disguised as diligence: before adding complexity for a speculative or vanishingly unlikely race or security edge case, the agent must explain the concrete failure mode, the likelihood and the complexity cost, and get the user's buy-in instead of silently expanding scope for theoretical robustness. It reads like a code review guideline because that is what it is — and it targets the specific failure mode where a model 'hardens' a diff nobody asked it to harden, then hands you a hundred lines to audit for a bug that cannot happen.",
+                    "url": "https://x.com/davekiss/status/2113363042247512161"
+                },
+                {
+                    "tag": "voxyz-ponytail-5-benchmark",
+                    "title": "@Voxyz_ai: Ponytail 5, and 335 Lines Becoming 10",
+                    "body": "The headline example is the whole thesis: asked to add a date picker, the agent without the skill wrote 335 lines; with it, 10 lines that reuse the repo's existing Input component and let the browser supply the calendar. The maker's benchmark — 39 tasks in Claude Code with Opus 5.5 — reports 53% less code, 41% less time, 26% less cost, and 98% of risky logic shipped with a test versus 68% without. The decision ladder is the reusable part: does this need writing at all, is it already in the repo, is the standard library enough, does the OS or browser already do it, can a dependency cover it, can it be one line — and only then write the smallest version that runs. Validation, error handling, security and accessibility are explicitly exempt from the cuts.",
+                    "url": "https://x.com/Voxyz_ai/status/2113344640959250912"
+                }
+            ]
+        },
+        {
+            "emoji": "📉",
+            "title": "Meter Wars, Round Two",
+            "items": [
+                {
+                    "tag": "semianalysis-anthropic-ab-test",
+                    "title": "@SemiAnalysis_: Anthropic Is A/B Testing Usage Limits",
+                    "body": "The firm's measurement backs up what the timeline has been claiming all day: users reporting lower limits are not wrong, because a live A/B test decreases monthly API value by roughly 20% while increasing 5-hour limits by roughly 20%, and only some accounts are in it. That trade is the interesting part — shorter windows get more generous while the monthly ceiling drops, which reads as smoothing burst usage without increasing total capacity. It also means two people comparing screenshots can both be honest and still disagree, which is its own argument for publishing the plan you are on.",
+                    "url": "https://x.com/SemiAnalysis_/status/2113383965784502444"
+                },
+                {
+                    "tag": "damonchen-region-ban-confirmed",
+                    "title": "@damonchen: 'Confirmed — the Supported Regions Policy'",
+                    "body": "An update to yesterday's ban thread: someone from the Claude team confirmed the account was banned under the supported-regions policy. His follow-up is the real question — DHH was publicly in China describing Claude Code use through Tailscale, so if the restriction is hard, enforcement should not look like a lottery; if it is discretionary, it should not be described as a policy. No resolution is posted. The structural risk stands either way: one account is simultaneously the billing relationship and the only path to your work, so an enforcement decision is an outage with no escalation tier.",
+                    "url": "https://x.com/damonchen/status/2113414134515765640"
+                },
+                {
+                    "tag": "ishuagra02-banked-reset-duet",
+                    "title": "@ishuagra02: A Banked Reset for Trying Duet",
+                    "body": "A small but telling data point on how the quota economy now works: Anthropic will issue a banked reset if you give Claude Duet a try. Resets have become a currency — granted as incentives, hoarded across a week, spent deliberately — and users track them the way they once tracked uptime. Whether or not the offer is still live, it confirms that capacity, not features, is the lever being used to move people between products.",
+                    "url": "https://x.com/ishuagra02/status/2113100195462266915"
+                }
+            ]
+        },
+        {
+            "emoji": "🔬",
+            "title": "Proof Instead of Review",
+            "items": [
+                {
+                    "tag": "theoremlabs-oss-verify",
+                    "title": "@theoremlabs: 123 Projects Formally Verified, Now OSS Verify",
+                    "body": "Theorem Labs formally verified 123 open-source projects in a partnership with Anthropic, and is now launching OSS Verify to run the same treatment on the software everyone depends on: either it proves the code crash-free or it sends the patches needed, free for open source. The quoted Anthropic Frontier Red Team post frames why this is newly possible — formal verification could previously prove the absence of certain bugs only on small codebases or with heavy expert time, and models change that economics. For a week that began with supply-chain breaches, a proof obligation is a different kind of answer than another audit checklist.",
+                    "url": "https://x.com/theoremlabs/status/2113396868814360821"
+                },
+                {
+                    "tag": "xudong-anthropic-eval-commands",
+                    "title": "@Xudong07452910: Two Claude Code Commands Against Fake Progress",
+                    "body": "A close read of Anthropic's eval engineering post, with the two commands it ships: /claude-api build-eval assembles an eval set preferring real tasks and observed failures, and checks grader stability by scoring the same output twice; /claude-api hillclimb proposes one change at a time to a prompt, skill or harness and keeps it only if the held-out set improves, reverting otherwise. The reported case — 44 support tickets, cost down to about a fifth, held-out accuracy from 78.6% to 90.5% — comes with the right caveat about sample size. His own addition is the sharpest bit: because the test set decides every round, it is also being tuned, so keep a second untouched set and roll back if that one stops improving.",
+                    "url": "https://x.com/Xudong07452910/status/2113208759476445526"
+                },
+                {
+                    "tag": "hwchase17-traces-as-training-data",
+                    "title": "@hwchase17: Your Traces Are Already Training Data",
+                    "body": "The argument for not renting frontier intelligence for a narrow task: keep the runs that did the job well, fine-tune a small model on them, and eval on your own task — a 9B model beating frontier models makes sense when it is trained on exactly that task. The quoted case is Corridor's Argos, a fine-tuned 9B model that scored highest of 14 models tested on their security-context benchmark, built from traces with smithtune. The implication for anyone running agents in production is unglamorous: logging is not just observability, it is the raw material for a cheaper model later.",
+                    "url": "https://x.com/hwchase17/status/2112983115215802417"
+                }
+            ]
+        },
+        {
+            "emoji": "🏗️",
+            "title": "The Harness Is the Product",
+            "items": [
+                {
+                    "tag": "xudong-openai-fde-90-percent",
+                    "title": "@Xudong07452910: OpenAI's FDE Team Deleted 90% of Its Custom Code",
+                    "body": "Notes on a post from OpenAI's FDE lead: after months of building bespoke AI systems for clients, the team removed roughly 90% of its custom code once Codex got strong enough, converting scenario-specific apps into skills and plugins on a general harness, with Codex itself as the interface. The semiconductor case is the detail worth keeping — verification is about 70% of project work there, targeted test generation saved around 48% of the time, and weeks of debugging collapsed into hours. Replication cost fell from two months for the first team to one day for the second, and telemetry went the other way: real failures were fed back to research, where a telecom voice agent climbed from about 60% to over 90% on its key eval across six months. His conclusion is the durable rule — eval, failure cases and skill-encoded domain knowledge survive; glue code written to cover a model gap should be re-examined on every upgrade and deleted without ceremony.",
+                    "url": "https://x.com/Xudong07452910/status/2113415101877559707"
+                },
+                {
+                    "tag": "jnagal-agent-compute-engine",
+                    "title": "@jnagal: Agent Compute Engine Comes to Google Cloud",
+                    "body": "A senior engineer's honest framing of how the work changed: he returned to Google for AI infrastructure and instead got pulled into the problem of exploding agent usage across the company, which produced Agent Compute Engine — infrastructure for running agents at Google's scale, now being offered to Google Cloud customers. Read it as a signal about where the bottleneck sits: not model quality, but the scheduling, isolation and lifecycle of large numbers of agents doing real work against real systems.",
+                    "url": "https://x.com/jnagal/status/2113347021616943202"
+                },
+                {
+                    "tag": "googlecloud-knowledge-catalog-context",
+                    "title": "@googlecloud: A Context Layer That Learns From Agent Traffic",
+                    "body": "Knowledge Catalog in preview adds self-learning enrichment, context sets and a rebuilt UI, with the pitch that the enterprise context layer now learns continuously from live agent interactions and unstructured documents while cutting token usage. That combination is the interesting claim: the same interactions that burn context become the material that reduces it. For teams hand-maintaining retrieval corpora, it is another sign that the context layer is being productised underneath the agent rather than written by the application.",
+                    "url": "https://x.com/googlecloud/status/2113352002889503116"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Thursday, October 22nd, 2026 — 12:00 PM ET</title>
+  <title>Clawd X Digest — Thursday, October 22nd, 2026 — 9:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Thursday, October 22nd, 2026 — 12:00 PM ET</div>
+    <div class="date">Thursday, October 22nd, 2026 — 9:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,150 +179,150 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>The Security Bill Came Due:</strong> A day after PHP2Shell, LiteLLM, GitLab and Node, engineers spent the morning auditing instead of shipping, with Samuel Colvin saying every CPython install, venv and UV environment is at risk and Philipp Schmid declaring a moratorium on AI posts because it is a tough day to be an engineer.</li>
-      <li><strong>1Password Put a Keyring in Front of Agents:</strong> The new 1Password for Agents platform lets an agent request a credential and have 1Password autofill it in the destination site, so the agent completes the sign-in without ever seeing or holding the password; it is free and opt-in for personal and family accounts.</li>
-      <li><strong>Railway's Outage Became a Lock-In Lesson:</strong> Theo spent hours pricing alternatives and concluded nothing is a drop-in replacement, with the minimum cost to replicate his setup running 3x what he pays today — the clearest argument yet that 'just migrate' is not a security plan.</li>
-      <li><strong>Claude's Quota Math Became a Public Complaint:</strong> A widely shared open letter to Anthropic asks for a real token meter and a usage changelog, citing a weekly meter that went from 0% to 54% in 22 hours on volume that used to take 4.4 days.</li>
-      <li><strong>AGENTS.md Turned Into a Style Guide:</strong> The most-engaged practical posts of the day were one-line rules for the file — cut secondary labels so the layout explains itself, and always hand back a Tailscale URL instead of localhost.</li>
+      <li><strong>Arc Gets a Sunset Date:</strong> The Browser Company confirmed Arc shuts down on December 22, 2026, Josh Miller posted a thank-you to contributors, and the replies turned into a migration thread within the hour.</li>
+      <li><strong>Agent Skills Got a Foundation:</strong> Claude Devs donated Agent Skills to the Agentic AI Foundation — the same home as MCP — noting 70+ agent platforms have integrated the standard since December 2025, including ChatGPT, Cursor, Copilot and VS Code.</li>
+      <li><strong>Anthropic's Limits Are an A/B Test:</strong> SemiAnalysis says the users reporting lower limits are not imagining it: a test that cuts monthly API value by ~20% while raising 5-hour limits by ~20%, affecting only some accounts.</li>
+      <li><strong>Formal Verification Went Mass Market:</strong> Theorem Labs formally verified 123 open-source projects with Anthropic and launched OSS Verify, which proves code crash-free or sends the patches — free for open source.</li>
+      <li><strong>Less Code Won:</strong> Ponytail 5's maker benchmark over 39 Claude Code tasks with Opus 5.5 shows 53% less code written, 41% less time, 26% less cost, and 98% of risky logic shipping with a test against 68% without.</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
-      <span class="emoji">🚨</span>
-      <h2>The Day After the Breaches</h2>
+      <span class="emoji">🌇</span>
+      <h2>Arc Says Goodbye</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag samuelcolvin-python-supply-chain-terror">Samuelcolvin-Python-Supply-Chain-Terror</span> @samuelcolvin: &#x27;I&#x27;m Terrified, the Situation Seems Intractable&#x27;</div>
-    <div class="item-body">The Pydantic maintainer&#x27;s reaction to the week&#x27;s supply-chain disclosures, and he is not hedging: in the Python ecosystem alone, every CPython install, every venv and every UV environment is at risk, before you even get to npm, pnpm, yarn, Go and Rust. His closing joke — that his 2026 security posture is to stay home and only connect from a trusted ISP — lands because there is no actual mitigation being offered. Worth reading as a calibration point: the people closest to packaging think the current model is not fixable by individual diligence.</div>
+    <div class="item-title"><span class="tag joshm-arc-thank-you">Joshm-Arc-Thank-You</span> @joshm: &#x27;A Bittersweet, Emotional Moment&#x27;</div>
+    <div class="item-body">The Browser Company&#x27;s co-founder responds to the sunset announcement — Arc shuts down December 22, 2026 — with gratitude rather than a defense: thanks to everyone who contributed to the browser, and to the people who filed member requests, wrote the code and drew the pixels. The stated reason for the shutdown is security: keeping a browser hardened takes constant, dedicated work that only increases in the age of AI, and Dia is where that engineering and security effort now goes. Arc&#x27;s passwords, bookmarks, extensions and history import into Dia, but Spaces, Folders and Tab Groups are the features users are eulogising in the replies.</div>
     <div class="item-meta">
-      <a href="https://x.com/samuelcolvin/status/2113115400623751437" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag theo-railway-alternatives">Theo-Railway-Alternatives</span> @theo: Railway Has No Drop-In Replacement</div>
-    <div class="item-body">After multiple hours pricing alternatives to move off Railway, the conclusion is that the product is uniquely good and nothing comes close — the cheapest way to replicate his setup today is 3x what he currently pays. This is the practical counterweight to breach-week migration advice: switching platforms under pressure is expensive, slow and its own source of risk, so the real lesson from Railway&#x27;s exposure is credential hygiene and scoped secrets, not a hasty move.</div>
-    <div class="item-meta">
-      <a href="https://x.com/theo/status/2113115149112692883" target="_blank">View Tweet</a>
+      <a href="https://x.com/joshm/status/2113336479670038739" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag jurbed-cloudflare-security-audit-skill">Jurbed-Cloudflare-Security-Audit-Skill</span> @jurbed: Run Cloudflare&#x27;s Security Audit Skill on Everything</div>
-    <div class="item-body">Still the most useful concrete action from yesterday and it travelled further today: run Cloudflare&#x27;s security audit skill across all your software, run it with free models, and run it even on code a model has already audited because a different pass finds different things. It works across agent harnesses and is model independent. On a day when the failures were mostly unpatched dependencies and leaked credentials, a repeatable automated audit loop is the only review process that keeps pace.</div>
+    <div class="item-title"><span class="tag korablev-arc-rebuilt">Korablev-Arc-Rebuilt</span> @korablev: &#x27;I Wasn&#x27;t Ready to Let It Go, So I Rebuilt It&#x27;</div>
+    <div class="item-body">The most concrete answer to the shutdown: a free native Mac app that reproduces Spaces, pinned tabs, Peek, Little Arc, Split View and nested folders, with AI staying out of the way until asked, and a one-click import of an existing Arc setup. It is the pattern that keeps repeating when a beloved product is retired for strategic reasons — the workflow is small enough that one motivated user can reimplement it in a week, and the users who cared most were never the ones the roadmap was optimising for.</div>
     <div class="item-meta">
-      <a href="https://x.com/jurbed/status/2112973191157252103" target="_blank">View Tweet</a>
+      <a href="https://x.com/korablev/status/2113414411859980577" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag caidanwilliams-dia-worse-than-arc">Caidanwilliams-Dia-Worse-Than-Arc</span> @caidanwilliams: Dia Was Worse in Nearly Every Way</div>
+    <div class="item-body">A counterpoint to &#x27;just switch to Dia&#x27; from someone who tried for months: the UX was worse than Arc, many features were missing, and some extensions broke in odd ways, so he moved to Zen and got his plugins working again. He also floats whether the Atlassian deal drove the decisions. Worth reading as the user-side cost of a forced migration — the incumbent alternative is being judged against a product people chose on interface quality, not on model features.</div>
+    <div class="item-meta">
+      <a href="https://x.com/caidanwilliams/status/2113325049877045388" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🔑</span>
-      <h2>Agents Get a Keyring</h2>
+      <span class="emoji">📐</span>
+      <h2>Skills Become Standards</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag 1password-for-agents-launch">1Password-For-Agents-Launch</span> @1Password: 1Password for Agents</div>
-    <div class="item-body">The launch, with integrations across Muse, Grok Bot, Claude, OpenAI, Town, Browserbase, Browser Use, Dana, Instinct, Kernel, Perplexity, Ramp, Tomo and Wajo. The mechanism is the important part: when an agent hits a sign-in form it requests a credential from the vault, you approve, and 1Password autofills it directly into the destination site — the agent finishes the task without ever seeing or taking possession of the password. Agents cannot touch the vault unless you opt in to a connector, and the feature is free and optional for personal and family accounts. This is the architectural answer to the week&#x27;s credential-theft incidents.</div>
+    <div class="item-title"><span class="tag claudedevs-agent-skills-foundation">Claudedevs-Agent-Skills-Foundation</span> @ClaudeDevs: Agent Skills Donated to the Agentic AI Foundation</div>
+    <div class="item-body">Anthropic is handing Agent Skills to the same foundation that already holds MCP, which makes the skill file the second piece of agent plumbing to leave a single vendor&#x27;s control. The numbers given are the argument: 70+ agent platforms have integrated the standard since December 2025, including ChatGPT, Cursor, GitHub Copilot and VS Code. For anyone maintaining a skills directory, the practical consequence is that the format is now a shared contract rather than an implementation detail of one harness — portability between agents stops being a rewrite.</div>
     <div class="item-meta">
-      <a href="https://x.com/1Password/status/2113276767582498943" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag petergyang-personal-agent-review">Petergyang-Personal-Agent-Review</span> @petergyang: An Updated Review of Every Personal Agent</div>
-    <div class="item-body">Four agents reviewed on the same axes. Grok Bot: a team of bots is the easiest mental model and free X access is genuinely great for research, but email does not really work. Muse: free, the best consumer UX, business calling is excellent, though Wonder trails Opus and Astra. Claude Duet: the most proactive out of the box and arguably the best model underneath, but still missing basics in preview like driving its own browser. ChatGPT Dots: can drive all your cloud and local threads, still buggy, slow voice connect. He caps himself at four agents connected to one inbox, which is the sane default.</div>
-    <div class="item-meta">
-      <a href="https://x.com/petergyang/status/2113042717270049028" target="_blank">View Tweet</a>
+      <a href="https://x.com/ClaudeDevs/status/2113328526413996100" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag davis7-grok-bots-everywhere">Davis7-Grok-Bots-Everywhere</span> @davis7: Grok Bots Are Now Everywhere</div>
-    <div class="item-body">The distribution list is the story: desktop app, mobile app, grok.com, X DMs, Teslas and Cursor. Whatever you think of the product, Grok Bot is being placed inside surfaces where a person is already authenticated and already has context, which is exactly where an agent is most useful and most dangerous. Read alongside the 1Password launch, the two posts describe the same problem from opposite ends — reach versus containment.</div>
+    <div class="item-title"><span class="tag davekiss-opencode-agents-md-rule">Davekiss-Opencode-Agents-Md-Rule</span> @davekiss: The Best Rule in opencode&#x27;s AGENTS.md</div>
+    <div class="item-body">The quoted rule is about scope creep disguised as diligence: before adding complexity for a speculative or vanishingly unlikely race or security edge case, the agent must explain the concrete failure mode, the likelihood and the complexity cost, and get the user&#x27;s buy-in instead of silently expanding scope for theoretical robustness. It reads like a code review guideline because that is what it is — and it targets the specific failure mode where a model &#x27;hardens&#x27; a diff nobody asked it to harden, then hands you a hundred lines to audit for a bug that cannot happen.</div>
     <div class="item-meta">
-      <a href="https://x.com/davis7/status/2113054315225174449" target="_blank">View Tweet</a>
+      <a href="https://x.com/davekiss/status/2113363042247512161" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag voxyz-ponytail-5-benchmark">Voxyz-Ponytail-5-Benchmark</span> @Voxyz_ai: Ponytail 5, and 335 Lines Becoming 10</div>
+    <div class="item-body">The headline example is the whole thesis: asked to add a date picker, the agent without the skill wrote 335 lines; with it, 10 lines that reuse the repo&#x27;s existing Input component and let the browser supply the calendar. The maker&#x27;s benchmark — 39 tasks in Claude Code with Opus 5.5 — reports 53% less code, 41% less time, 26% less cost, and 98% of risky logic shipped with a test versus 68% without. The decision ladder is the reusable part: does this need writing at all, is it already in the repo, is the standard library enough, does the OS or browser already do it, can a dependency cover it, can it be one line — and only then write the smallest version that runs. Validation, error handling, security and accessibility are explicitly exempt from the cuts.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Voxyz_ai/status/2113344640959250912" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">💳</span>
-      <h2>Quota Politics</h2>
+      <span class="emoji">📉</span>
+      <h2>Meter Wars, Round Two</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag mkeremturhan-anthropic-quota-letter">Mkeremturhan-Anthropic-Quota-Letter</span> @mkeremturhan: An Open Letter on Claude&#x27;s Usage Meter</div>
-    <div class="item-body">The argument is precise rather than angry: Opus 5.5 is the best coding model available, people dropped $200 Codex plans because Claude Code felt unlimited, and weeks later the same people hit weekly limits in three days on identical work. One bug report has the weekly meter going from 0% to 54% in 22 hours on token volume that previously took 4.4 days. He notes OpenAI answered the equivalent complaint with a number — roughly 40,000 accounts on the wrong meter — while Anthropic shipped a warning and a pricing page that reserves the right to limit usage at its discretion. The three asks are reasonable: a real meter in tokens, a changelog for anything that changes usage, and honesty about where the GPUs went.</div>
+    <div class="item-title"><span class="tag semianalysis-anthropic-ab-test">Semianalysis-Anthropic-Ab-Test</span> @SemiAnalysis_: Anthropic Is A/B Testing Usage Limits</div>
+    <div class="item-body">The firm&#x27;s measurement backs up what the timeline has been claiming all day: users reporting lower limits are not wrong, because a live A/B test decreases monthly API value by roughly 20% while increasing 5-hour limits by roughly 20%, and only some accounts are in it. That trade is the interesting part — shorter windows get more generous while the monthly ceiling drops, which reads as smoothing burst usage without increasing total capacity. It also means two people comparing screenshots can both be honest and still disagree, which is its own argument for publishing the plan you are on.</div>
     <div class="item-meta">
-      <a href="https://x.com/mkeremturhan/status/2112966847536439699" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag buildwithrajath-codex-day-17-resets">Buildwithrajath-Codex-Day-17-Resets</span> @buildwithrajath: Day 17 Resets Slip a Day</div>
-    <div class="item-body">The practical state of the quota wars: the expected reset is not landing today, it is scheduled for tomorrow at 10 AM PST, and the post does the timezone conversion for New York, the UK, Central Europe, India, Japan and Sydney. The tone — &#x27;time to fucking build again&#x27; — is the tell. A meaningful share of professional AI coding now runs on a rhythm of accumulated quota and periodic resets rather than on committed capacity, and people plan their week around it.</div>
-    <div class="item-meta">
-      <a href="https://x.com/buildwithrajath/status/2113192492183249183" target="_blank">View Tweet</a>
+      <a href="https://x.com/SemiAnalysis_/status/2113383965784502444" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag damonchen-claude-account-ban">Damonchen-Claude-Account-Ban</span> @damonchen: &#x27;$1,500 in a Month, Then Banned&#x27;</div>
-    <div class="item-body">A long-time paying Claude user reports spending over $1,500 in the past month and then having the entire account banned, with the only ask being that the ban arrive before the annual fee next time. No appeal outcome is posted in the thread, so treat the details as one side of it — but the structural point stands: when a single account is both the billing relationship and the only access path to your work, a mistaken enforcement action is an outage with no support tier to escalate through.</div>
+    <div class="item-title"><span class="tag damonchen-region-ban-confirmed">Damonchen-Region-Ban-Confirmed</span> @damonchen: &#x27;Confirmed — the Supported Regions Policy&#x27;</div>
+    <div class="item-body">An update to yesterday&#x27;s ban thread: someone from the Claude team confirmed the account was banned under the supported-regions policy. His follow-up is the real question — DHH was publicly in China describing Claude Code use through Tailscale, so if the restriction is hard, enforcement should not look like a lottery; if it is discretionary, it should not be described as a policy. No resolution is posted. The structural risk stands either way: one account is simultaneously the billing relationship and the only path to your work, so an enforcement decision is an outage with no escalation tier.</div>
     <div class="item-meta">
-      <a href="https://x.com/damonchen/status/2113124054207250682" target="_blank">View Tweet</a>
+      <a href="https://x.com/damonchen/status/2113414134515765640" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ishuagra02-banked-reset-duet">Ishuagra02-Banked-Reset-Duet</span> @ishuagra02: A Banked Reset for Trying Duet</div>
+    <div class="item-body">A small but telling data point on how the quota economy now works: Anthropic will issue a banked reset if you give Claude Duet a try. Resets have become a currency — granted as incentives, hoarded across a week, spent deliberately — and users track them the way they once tracked uptime. Whether or not the offer is still live, it confirms that capacity, not features, is the lever being used to move people between products.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ishuagra02/status/2113100195462266915" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🛠️</span>
-      <h2>AGENTS.md Is the New Style Guide</h2>
+      <span class="emoji">🔬</span>
+      <h2>Proof Instead of Review</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag luinlee-agents-md-anti-slop">Luinlee-Agents-Md-Anti-Slop</span> @luinlee: One Line That Fixes AI-Generated UI</div>
-    <div class="item-body">After writing a lot of UI with Opus and Astra, the highest-leverage fix turned out to be a single sentence in AGENTS.md: avoid unnecessary secondary labels and descriptions, and let the layout do the explaining. 4,500 likes for what is essentially a design principle rendered as a machine instruction. The general lesson is that agent output quality is often governed by whether you stated the constraint you actually care about, not by which model you picked.</div>
+    <div class="item-title"><span class="tag theoremlabs-oss-verify">Theoremlabs-Oss-Verify</span> @theoremlabs: 123 Projects Formally Verified, Now OSS Verify</div>
+    <div class="item-body">Theorem Labs formally verified 123 open-source projects in a partnership with Anthropic, and is now launching OSS Verify to run the same treatment on the software everyone depends on: either it proves the code crash-free or it sends the patches needed, free for open source. The quoted Anthropic Frontier Red Team post frames why this is newly possible — formal verification could previously prove the absence of certain bugs only on small codebases or with heavy expert time, and models change that economics. For a week that began with supply-chain breaches, a proof obligation is a different kind of answer than another audit checklist.</div>
     <div class="item-meta">
-      <a href="https://x.com/luinlee/status/2113085361836744764" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag voxyz-agents-md-two-lines">Voxyz-Agents-Md-Two-Lines</span> @Voxyz_ai: The Same Rule, With a Second Line</div>
-    <div class="item-body">An independent arrival at nearly identical advice: cut taglines, helper text and secondary labels, and if a screen needs them to make sense then fix the layout. The second line is the more ambitious one — make the best decision that elevates user experience, developer experience and agent experience together without breaking anything. Two accounts converging on the same phrasing in twelve hours is how a convention forms; this is worth copying into a project file today.</div>
-    <div class="item-meta">
-      <a href="https://x.com/Voxyz_ai/status/2113254050170843418" target="_blank">View Tweet</a>
+      <a href="https://x.com/theoremlabs/status/2113396868814360821" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag cathrynlavery-tailscale-link-rule">Cathrynlavery-Tailscale-Link-Rule</span> @cathrynlavery: Never Give Me localhost</div>
-    <div class="item-body">A rule for anyone working across several machines: whenever the agent hands over a link to something running locally — a preview, a review page, a dashboard — it should publish it with tailscale serve, open the link itself to confirm it works, and only then send a Tailscale URL instead of localhost. The pattern is the point: the instruction includes the verification step, so the agent cannot hand you a link it has not checked.</div>
+    <div class="item-title"><span class="tag xudong-anthropic-eval-commands">Xudong-Anthropic-Eval-Commands</span> @Xudong07452910: Two Claude Code Commands Against Fake Progress</div>
+    <div class="item-body">A close read of Anthropic&#x27;s eval engineering post, with the two commands it ships: /claude-api build-eval assembles an eval set preferring real tasks and observed failures, and checks grader stability by scoring the same output twice; /claude-api hillclimb proposes one change at a time to a prompt, skill or harness and keeps it only if the held-out set improves, reverting otherwise. The reported case — 44 support tickets, cost down to about a fifth, held-out accuracy from 78.6% to 90.5% — comes with the right caveat about sample size. His own addition is the sharpest bit: because the test set decides every round, it is also being tuned, so keep a second untouched set and roll back if that one stops improving.</div>
     <div class="item-meta">
-      <a href="https://x.com/cathrynlavery/status/2112996650289451225" target="_blank">View Tweet</a>
+      <a href="https://x.com/Xudong07452910/status/2113208759476445526" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hwchase17-traces-as-training-data">Hwchase17-Traces-As-Training-Data</span> @hwchase17: Your Traces Are Already Training Data</div>
+    <div class="item-body">The argument for not renting frontier intelligence for a narrow task: keep the runs that did the job well, fine-tune a small model on them, and eval on your own task — a 9B model beating frontier models makes sense when it is trained on exactly that task. The quoted case is Corridor&#x27;s Argos, a fine-tuned 9B model that scored highest of 14 models tested on their security-context benchmark, built from traces with smithtune. The implication for anyone running agents in production is unglamorous: logging is not just observability, it is the raw material for a cheaper model later.</div>
+    <div class="item-meta">
+      <a href="https://x.com/hwchase17/status/2112983115215802417" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🧪</span>
-      <h2>Proof, Pipelines, Prompts</h2>
+      <span class="emoji">🏗️</span>
+      <h2>The Harness Is the Product</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag msftresearch-pdd-kit-chopin">Msftresearch-Pdd-Kit-Chopin</span> @MSFTResearch: Proof-Driven Development</div>
-    <div class="item-body">Microsoft Research&#x27;s answer to the review bottleneck in agent-written code: instead of reading diffs, translate developer intent into a formal specification and use formal verification to prove the generated code meets it. The PDD Kit works with Verus for Rust and is integrated with GitHub Next&#x27;s Chopin. The premise is the interesting part — if agents produce more code than humans can review, review has to become a checkable proof rather than a reading exercise. Demo at GitHub Universe, October 28–29.</div>
+    <div class="item-title"><span class="tag xudong-openai-fde-90-percent">Xudong-Openai-Fde-90-Percent</span> @Xudong07452910: OpenAI&#x27;s FDE Team Deleted 90% of Its Custom Code</div>
+    <div class="item-body">Notes on a post from OpenAI&#x27;s FDE lead: after months of building bespoke AI systems for clients, the team removed roughly 90% of its custom code once Codex got strong enough, converting scenario-specific apps into skills and plugins on a general harness, with Codex itself as the interface. The semiconductor case is the detail worth keeping — verification is about 70% of project work there, targeted test generation saved around 48% of the time, and weeks of debugging collapsed into hours. Replication cost fell from two months for the first team to one day for the second, and telemetry went the other way: real failures were fed back to research, where a telecom voice agent climbed from about 60% to over 90% on its key eval across six months. His conclusion is the durable rule — eval, failure cases and skill-encoded domain knowledge survive; glue code written to cover a model gap should be re-examined on every upgrade and deleted without ceremony.</div>
     <div class="item-meta">
-      <a href="https://x.com/MSFTResearch/status/2112987215496093979" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag chenchengpro-pstack-notes">Chenchengpro-Pstack-Notes</span> @chenchengpro: Notes on pstack, 56 Skills That Are One Workflow</div>
-    <div class="item-body">A detailed read of @poteto&#x27;s pstack that is more useful than most of the skill itself: it is not 56 separate skills but a methodology, and the order matters — build a verification skill and a feature map first so the agent can run and operate the app, then apply fixed per-task flows, and only then parallelise. His summary of how to build verification is the actionable part: make the app a CLI, make commands composable, give destructive operations a --dry-run, output JSON, and have errors tell the agent what to do next. Also worth stealing: prefer erasing a class of mistake with architecture or a lint rule over correcting it in review.</div>
-    <div class="item-meta">
-      <a href="https://x.com/chenchengpro/status/2113243170788278767" target="_blank">View Tweet</a>
+      <a href="https://x.com/Xudong07452910/status/2113415101877559707" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag vikingmute-software-factory-skill">Vikingmute-Software-Factory-Skill</span> @vikingmute: Matt&#x27;s &#x27;Software Factory&#x27; Skill</div>
-    <div class="item-body">A vocabulary post rather than a runnable system, and that is fine: the software factory model puts the agent inside a pipeline with a ticket or issue as input, a trigger that starts the run, a sandboxed runner, an orchestrator, quality gates, and humans only at the decision points. It is still in PR and is explicitly a glossary plus a reference framework you assemble yourself. Worth reading for the shape of the pipeline, which is where most teams&#x27; agent setups are still missing the quality gates.</div>
+    <div class="item-title"><span class="tag jnagal-agent-compute-engine">Jnagal-Agent-Compute-Engine</span> @jnagal: Agent Compute Engine Comes to Google Cloud</div>
+    <div class="item-body">A senior engineer&#x27;s honest framing of how the work changed: he returned to Google for AI infrastructure and instead got pulled into the problem of exploding agent usage across the company, which produced Agent Compute Engine — infrastructure for running agents at Google&#x27;s scale, now being offered to Google Cloud customers. Read it as a signal about where the bottleneck sits: not model quality, but the scheduling, isolation and lifecycle of large numbers of agents doing real work against real systems.</div>
     <div class="item-meta">
-      <a href="https://x.com/vikingmute/status/2113259609746289086" target="_blank">View Tweet</a>
+      <a href="https://x.com/jnagal/status/2113347021616943202" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag googlecloud-knowledge-catalog-context">Googlecloud-Knowledge-Catalog-Context</span> @googlecloud: A Context Layer That Learns From Agent Traffic</div>
+    <div class="item-body">Knowledge Catalog in preview adds self-learning enrichment, context sets and a rebuilt UI, with the pitch that the enterprise context layer now learns continuously from live agent interactions and unstructured documents while cutting token usage. That combination is the interesting claim: the same interactions that burn context become the material that reduces it. For teams hand-maintaining retrieval corpora, it is another sign that the context layer is being productised underneath the agent rather than written by the application.</div>
+    <div class="item-meta">
+      <a href="https://x.com/googlecloud/status/2113352002889503116" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>

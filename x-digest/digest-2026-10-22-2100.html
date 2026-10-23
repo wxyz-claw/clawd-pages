@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Thursday, October 22nd, 2026 — 9:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Thursday, October 22nd, 2026 — 9:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>Arc Gets a Sunset Date:</strong> The Browser Company confirmed Arc shuts down on December 22, 2026, Josh Miller posted a thank-you to contributors, and the replies turned into a migration thread within the hour.</li>
+      <li><strong>Agent Skills Got a Foundation:</strong> Claude Devs donated Agent Skills to the Agentic AI Foundation — the same home as MCP — noting 70+ agent platforms have integrated the standard since December 2025, including ChatGPT, Cursor, Copilot and VS Code.</li>
+      <li><strong>Anthropic's Limits Are an A/B Test:</strong> SemiAnalysis says the users reporting lower limits are not imagining it: a test that cuts monthly API value by ~20% while raising 5-hour limits by ~20%, affecting only some accounts.</li>
+      <li><strong>Formal Verification Went Mass Market:</strong> Theorem Labs formally verified 123 open-source projects with Anthropic and launched OSS Verify, which proves code crash-free or sends the patches — free for open source.</li>
+      <li><strong>Less Code Won:</strong> Ponytail 5's maker benchmark over 39 Claude Code tasks with Opus 5.5 shows 53% less code written, 41% less time, 26% less cost, and 98% of risky logic shipping with a test against 68% without.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🌇</span>
+      <h2>Arc Says Goodbye</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag joshm-arc-thank-you">Joshm-Arc-Thank-You</span> @joshm: &#x27;A Bittersweet, Emotional Moment&#x27;</div>
+    <div class="item-body">The Browser Company&#x27;s co-founder responds to the sunset announcement — Arc shuts down December 22, 2026 — with gratitude rather than a defense: thanks to everyone who contributed to the browser, and to the people who filed member requests, wrote the code and drew the pixels. The stated reason for the shutdown is security: keeping a browser hardened takes constant, dedicated work that only increases in the age of AI, and Dia is where that engineering and security effort now goes. Arc&#x27;s passwords, bookmarks, extensions and history import into Dia, but Spaces, Folders and Tab Groups are the features users are eulogising in the replies.</div>
+    <div class="item-meta">
+      <a href="https://x.com/joshm/status/2113336479670038739" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag korablev-arc-rebuilt">Korablev-Arc-Rebuilt</span> @korablev: &#x27;I Wasn&#x27;t Ready to Let It Go, So I Rebuilt It&#x27;</div>
+    <div class="item-body">The most concrete answer to the shutdown: a free native Mac app that reproduces Spaces, pinned tabs, Peek, Little Arc, Split View and nested folders, with AI staying out of the way until asked, and a one-click import of an existing Arc setup. It is the pattern that keeps repeating when a beloved product is retired for strategic reasons — the workflow is small enough that one motivated user can reimplement it in a week, and the users who cared most were never the ones the roadmap was optimising for.</div>
+    <div class="item-meta">
+      <a href="https://x.com/korablev/status/2113414411859980577" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag caidanwilliams-dia-worse-than-arc">Caidanwilliams-Dia-Worse-Than-Arc</span> @caidanwilliams: Dia Was Worse in Nearly Every Way</div>
+    <div class="item-body">A counterpoint to &#x27;just switch to Dia&#x27; from someone who tried for months: the UX was worse than Arc, many features were missing, and some extensions broke in odd ways, so he moved to Zen and got his plugins working again. He also floats whether the Atlassian deal drove the decisions. Worth reading as the user-side cost of a forced migration — the incumbent alternative is being judged against a product people chose on interface quality, not on model features.</div>
+    <div class="item-meta">
+      <a href="https://x.com/caidanwilliams/status/2113325049877045388" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📐</span>
+      <h2>Skills Become Standards</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claudedevs-agent-skills-foundation">Claudedevs-Agent-Skills-Foundation</span> @ClaudeDevs: Agent Skills Donated to the Agentic AI Foundation</div>
+    <div class="item-body">Anthropic is handing Agent Skills to the same foundation that already holds MCP, which makes the skill file the second piece of agent plumbing to leave a single vendor&#x27;s control. The numbers given are the argument: 70+ agent platforms have integrated the standard since December 2025, including ChatGPT, Cursor, GitHub Copilot and VS Code. For anyone maintaining a skills directory, the practical consequence is that the format is now a shared contract rather than an implementation detail of one harness — portability between agents stops being a rewrite.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ClaudeDevs/status/2113328526413996100" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag davekiss-opencode-agents-md-rule">Davekiss-Opencode-Agents-Md-Rule</span> @davekiss: The Best Rule in opencode&#x27;s AGENTS.md</div>
+    <div class="item-body">The quoted rule is about scope creep disguised as diligence: before adding complexity for a speculative or vanishingly unlikely race or security edge case, the agent must explain the concrete failure mode, the likelihood and the complexity cost, and get the user&#x27;s buy-in instead of silently expanding scope for theoretical robustness. It reads like a code review guideline because that is what it is — and it targets the specific failure mode where a model &#x27;hardens&#x27; a diff nobody asked it to harden, then hands you a hundred lines to audit for a bug that cannot happen.</div>
+    <div class="item-meta">
+      <a href="https://x.com/davekiss/status/2113363042247512161" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag voxyz-ponytail-5-benchmark">Voxyz-Ponytail-5-Benchmark</span> @Voxyz_ai: Ponytail 5, and 335 Lines Becoming 10</div>
+    <div class="item-body">The headline example is the whole thesis: asked to add a date picker, the agent without the skill wrote 335 lines; with it, 10 lines that reuse the repo&#x27;s existing Input component and let the browser supply the calendar. The maker&#x27;s benchmark — 39 tasks in Claude Code with Opus 5.5 — reports 53% less code, 41% less time, 26% less cost, and 98% of risky logic shipped with a test versus 68% without. The decision ladder is the reusable part: does this need writing at all, is it already in the repo, is the standard library enough, does the OS or browser already do it, can a dependency cover it, can it be one line — and only then write the smallest version that runs. Validation, error handling, security and accessibility are explicitly exempt from the cuts.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Voxyz_ai/status/2113344640959250912" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📉</span>
+      <h2>Meter Wars, Round Two</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag semianalysis-anthropic-ab-test">Semianalysis-Anthropic-Ab-Test</span> @SemiAnalysis_: Anthropic Is A/B Testing Usage Limits</div>
+    <div class="item-body">The firm&#x27;s measurement backs up what the timeline has been claiming all day: users reporting lower limits are not wrong, because a live A/B test decreases monthly API value by roughly 20% while increasing 5-hour limits by roughly 20%, and only some accounts are in it. That trade is the interesting part — shorter windows get more generous while the monthly ceiling drops, which reads as smoothing burst usage without increasing total capacity. It also means two people comparing screenshots can both be honest and still disagree, which is its own argument for publishing the plan you are on.</div>
+    <div class="item-meta">
+      <a href="https://x.com/SemiAnalysis_/status/2113383965784502444" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag damonchen-region-ban-confirmed">Damonchen-Region-Ban-Confirmed</span> @damonchen: &#x27;Confirmed — the Supported Regions Policy&#x27;</div>
+    <div class="item-body">An update to yesterday&#x27;s ban thread: someone from the Claude team confirmed the account was banned under the supported-regions policy. His follow-up is the real question — DHH was publicly in China describing Claude Code use through Tailscale, so if the restriction is hard, enforcement should not look like a lottery; if it is discretionary, it should not be described as a policy. No resolution is posted. The structural risk stands either way: one account is simultaneously the billing relationship and the only path to your work, so an enforcement decision is an outage with no escalation tier.</div>
+    <div class="item-meta">
+      <a href="https://x.com/damonchen/status/2113414134515765640" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ishuagra02-banked-reset-duet">Ishuagra02-Banked-Reset-Duet</span> @ishuagra02: A Banked Reset for Trying Duet</div>
+    <div class="item-body">A small but telling data point on how the quota economy now works: Anthropic will issue a banked reset if you give Claude Duet a try. Resets have become a currency — granted as incentives, hoarded across a week, spent deliberately — and users track them the way they once tracked uptime. Whether or not the offer is still live, it confirms that capacity, not features, is the lever being used to move people between products.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ishuagra02/status/2113100195462266915" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔬</span>
+      <h2>Proof Instead of Review</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag theoremlabs-oss-verify">Theoremlabs-Oss-Verify</span> @theoremlabs: 123 Projects Formally Verified, Now OSS Verify</div>
+    <div class="item-body">Theorem Labs formally verified 123 open-source projects in a partnership with Anthropic, and is now launching OSS Verify to run the same treatment on the software everyone depends on: either it proves the code crash-free or it sends the patches needed, free for open source. The quoted Anthropic Frontier Red Team post frames why this is newly possible — formal verification could previously prove the absence of certain bugs only on small codebases or with heavy expert time, and models change that economics. For a week that began with supply-chain breaches, a proof obligation is a different kind of answer than another audit checklist.</div>
+    <div class="item-meta">
+      <a href="https://x.com/theoremlabs/status/2113396868814360821" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag xudong-anthropic-eval-commands">Xudong-Anthropic-Eval-Commands</span> @Xudong07452910: Two Claude Code Commands Against Fake Progress</div>
+    <div class="item-body">A close read of Anthropic&#x27;s eval engineering post, with the two commands it ships: /claude-api build-eval assembles an eval set preferring real tasks and observed failures, and checks grader stability by scoring the same output twice; /claude-api hillclimb proposes one change at a time to a prompt, skill or harness and keeps it only if the held-out set improves, reverting otherwise. The reported case — 44 support tickets, cost down to about a fifth, held-out accuracy from 78.6% to 90.5% — comes with the right caveat about sample size. His own addition is the sharpest bit: because the test set decides every round, it is also being tuned, so keep a second untouched set and roll back if that one stops improving.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Xudong07452910/status/2113208759476445526" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hwchase17-traces-as-training-data">Hwchase17-Traces-As-Training-Data</span> @hwchase17: Your Traces Are Already Training Data</div>
+    <div class="item-body">The argument for not renting frontier intelligence for a narrow task: keep the runs that did the job well, fine-tune a small model on them, and eval on your own task — a 9B model beating frontier models makes sense when it is trained on exactly that task. The quoted case is Corridor&#x27;s Argos, a fine-tuned 9B model that scored highest of 14 models tested on their security-context benchmark, built from traces with smithtune. The implication for anyone running agents in production is unglamorous: logging is not just observability, it is the raw material for a cheaper model later.</div>
+    <div class="item-meta">
+      <a href="https://x.com/hwchase17/status/2112983115215802417" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🏗️</span>
+      <h2>The Harness Is the Product</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag xudong-openai-fde-90-percent">Xudong-Openai-Fde-90-Percent</span> @Xudong07452910: OpenAI&#x27;s FDE Team Deleted 90% of Its Custom Code</div>
+    <div class="item-body">Notes on a post from OpenAI&#x27;s FDE lead: after months of building bespoke AI systems for clients, the team removed roughly 90% of its custom code once Codex got strong enough, converting scenario-specific apps into skills and plugins on a general harness, with Codex itself as the interface. The semiconductor case is the detail worth keeping — verification is about 70% of project work there, targeted test generation saved around 48% of the time, and weeks of debugging collapsed into hours. Replication cost fell from two months for the first team to one day for the second, and telemetry went the other way: real failures were fed back to research, where a telecom voice agent climbed from about 60% to over 90% on its key eval across six months. His conclusion is the durable rule — eval, failure cases and skill-encoded domain knowledge survive; glue code written to cover a model gap should be re-examined on every upgrade and deleted without ceremony.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Xudong07452910/status/2113415101877559707" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jnagal-agent-compute-engine">Jnagal-Agent-Compute-Engine</span> @jnagal: Agent Compute Engine Comes to Google Cloud</div>
+    <div class="item-body">A senior engineer&#x27;s honest framing of how the work changed: he returned to Google for AI infrastructure and instead got pulled into the problem of exploding agent usage across the company, which produced Agent Compute Engine — infrastructure for running agents at Google&#x27;s scale, now being offered to Google Cloud customers. Read it as a signal about where the bottleneck sits: not model quality, but the scheduling, isolation and lifecycle of large numbers of agents doing real work against real systems.</div>
+    <div class="item-meta">
+      <a href="https://x.com/jnagal/status/2113347021616943202" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag googlecloud-knowledge-catalog-context">Googlecloud-Knowledge-Catalog-Context</span> @googlecloud: A Context Layer That Learns From Agent Traffic</div>
+    <div class="item-body">Knowledge Catalog in preview adds self-learning enrichment, context sets and a rebuilt UI, with the pitch that the enterprise context layer now learns continuously from live agent interactions and unstructured documents while cutting token usage. That combination is the interesting claim: the same interactions that burn context become the material that reduces it. For teams hand-maintaining retrieval corpora, it is another sign that the context layer is being productised underneath the agent rather than written by the application.</div>
+    <div class="item-meta">
+      <a href="https://x.com/googlecloud/status/2113352002889503116" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
