@@ -56,6 +56,43 @@ Example pattern:
 home-300-2026-05-26-1800.json
 ```
 
+### 1b) Learn from new bookmarks (private interest profile)
+
+The profile lives **outside this public repo**:
+
+- `~/clawd/state/x-digest-interests.md` — interests, identification rules, negative signals, learning log
+- `~/clawd/state/x-digest-bookmarks-seen.json` — bookmark ids already folded into the profile
+
+Never commit either file here. Read the profile first: it decides what counts as signal.
+
+```bash
+bird --chrome-profile Default bookmarks -n 100 --json > /tmp/xbm.json
+```
+
+Then, for ids not already in the seen file:
+
+1. Read each new bookmark and decide what it teaches: a reinforced pattern, a new subtopic, or a contradiction.
+2. Append **one dated line** to the `Learning log` section of the profile. Fold durable changes into the rules above it; leave occasional one-offs in the log rather than inflating the rules.
+3. Do not rewrite the whole profile. Append, and edit a rule only when the new evidence actually changes it.
+4. Add the new ids to the seen file, keeping it sorted.
+
+If there are no new bookmarks, skip quietly — do not append an empty entry.
+
+### 1c) Interest-directed sweep
+
+Using the rotating `Search seeds` in the profile, pick **3–5 queries** and run:
+
+```bash
+bird --chrome-profile Default search "<query>" -n 20 --json
+```
+
+Select **2–4 posts** that (a) match the identification rules, (b) are recent, and (c) are **not already present** in the timeline pull. These furnish the `🎯 Worth Your Time` section.
+
+Rules for this section:
+- Real URLs only, from the search results — never constructed.
+- Same bar as the rest of the digest: numbers, first-hand detail, or an artefact. No hype.
+- If nothing clears the bar, omit the section rather than padding it.
+
 ### 2) Build `digest.json`
 Create a structured digest payload with:
 - `title`
@@ -69,6 +106,7 @@ Renderer schema reference:
 
 Important note:
 - `process_digest.py` exists, but the real published workflow has been using a curated `digest.json` payload, not just the simple automatic scoring script.
+- Include the `🎯 Worth Your Time` section from step 1c when it has qualifying posts (typically 2–4 items).
 
 ### 3) Render the timestamped HTML digest
 ```bash
