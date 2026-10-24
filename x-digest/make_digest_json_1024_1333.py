@@ -1,0 +1,191 @@
+import json
+from pathlib import Path
+from datetime import datetime
+import zoneinfo
+
+ny_tz = zoneinfo.ZoneInfo("America/New_York")
+now_ny = datetime.now(ny_tz)
+formatted_date = now_ny.strftime("%A, %B %-d, %Y — %-I:%M %p ET")
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": formatted_date,
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Claude Code Departures Continue:</strong> Following Anthony Morris, prominent Claude Code advocate Thariq Shihipar announced his departure from Anthropic alongside a wave of pre-listing exits, cementing developer attention on organizational shifts within the team.",
+        "<strong>The Routing Layer Under the Terminal:</strong> Developers mapped the architecture of local agent switches, contrasting CC Switch's direct configuration mutations against Magpie's local proxy approach with Langfuse observability for full prompt tracing.",
+        "<strong>Autonomous Media Pipelines:</strong> OpenMontage crossed 65,000 GitHub stars by turning Claude Code and Cursor into end-to-end video directors, generating structured multi-scene video assets for under $1.50 per run.",
+        "<strong>Docker's Firewall Bypass on Agent VPSs:</strong> A sharp reminder for teams hosting autonomous agents on cloud VPSs: Docker modifies iptables directly, exposing container ports regardless of standard ufw rules unless bound explicitly to localhost.",
+        "<strong>🎯 Worth Your Time:</strong> Four selected deep-dives on experience memory in coding agents (REM's 270-token structured summaries), Google's real-world 85-task PLE engineering benchmark, production trajectory-drift metrics, and holistic harness engineering."
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "The Claude Code Exodus",
+            "items": [
+                {
+                    "tag": "departure",
+                    "tag_label": "Departure",
+                    "title": "@samuel_ys92: Thariq Shihipar Departs Anthropic",
+                    "body": "Following Anthony Morris's departure earlier this week, prominent Claude Code developer and public advocate Thariq Shihipar has left Anthropic. While Boris Cherny is recognized as the architect of Claude Code, Thariq was instrumental in demonstrating real internal team workflows to the public. Coming immediately before Anthropic's expected public listing, the departures underscore growing developer attention around team continuity and product direction.",
+                    "url": "https://x.com/samuel_ys92/status/2113806118640320961"
+                },
+                {
+                    "tag": "claude-code",
+                    "tag_label": "Claude Code",
+                    "title": "@CtrlAltDwayne: 'Claude Identified My Position as Redundant'",
+                    "body": "The viral sentiment capturing the moment: after more than a year working on Claude Code, an engineer joked that during a routine refactoring pass, Claude identified his role as redundant and eliminated it. The humor resonated widely across developer communities because it highlights the cultural paradox of building self-improving coding tools.",
+                    "url": "https://x.com/CtrlAltDwayne/status/2113949410799587828"
+                },
+                {
+                    "tag": "analysis",
+                    "tag_label": "Analysis",
+                    "title": "@imjustnewatai: Tracking Pre-Listing Talent Flow",
+                    "body": "The observation that framed the discussion: noting a cluster of Anthropic departures over the preceding two weeks. While high-growth startups naturally experience turnover ahead of liquidity events, developers are closely watching how much institutional memory in core tooling teams remains intact.",
+                    "url": "https://x.com/imjustnewatai/status/2113820839850451337"
+                }
+            ]
+        },
+        {
+            "emoji": "🛠️",
+            "title": "The Routing Layer Under the Hood",
+            "items": [
+                {
+                    "tag": "architecture",
+                    "tag_label": "Architecture",
+                    "title": "@HunziDaily: CC Switch vs. Magpie Implementation Tradeoffs",
+                    "body": "A detailed breakdown of how developers swap models in Claude Code: CC Switch functions via direct local configuration modification (~/.claude/settings.json), whereas Magpie runs a local reverse proxy server (127.0.0.1:8080) that intercepts requests, counts tokens, rewrites headers, and forwards calls to arbitrary upstream providers. The proxy approach adds slight runtime overhead but decouples the agent CLI from proprietary vendor lock-in.",
+                    "url": "https://x.com/HunziDaily/status/2113863053443756076"
+                },
+                {
+                    "tag": "observability",
+                    "tag_label": "Observability",
+                    "title": "@LinearUncle: Magpie Prompt Tracing with Langfuse",
+                    "body": "Pairing local proxies with observability tooling: by wiring Magpie to a local Langfuse instance, engineers gain complete request-level prompt inspection, token attribution, and latency breakdown for every subagent call. Capturing full interaction traces locally makes it significantly easier to debug multi-step reasoning failures and runaway tool loops.",
+                    "url": "https://x.com/LinearUncle/status/2113943764821774743"
+                },
+                {
+                    "tag": "optimization",
+                    "tag_label": "Optimization",
+                    "title": "@LanzhiAI: Codex CLI Cache Invalidation Fixes",
+                    "body": "A technical recap of recent Codex CLI adjustments: connecting dots faster and ensuring mid-session reasoning adjustments no longer invalidate prompt cache prefixes. Protecting prompt cache hits during interactive steering drastically cuts both round-trip latency and token expenses on long coding sessions.",
+                    "url": "https://x.com/LanzhiAI/status/2113805689101652126"
+                }
+            ]
+        },
+        {
+            "emoji": "🤖",
+            "title": "Autonomous Workflows & Production Harnesses",
+            "items": [
+                {
+                    "tag": "open-source",
+                    "tag_label": "Open Source",
+                    "title": "@dandanetha: OpenMontage Passes 65K Stars on GitHub",
+                    "body": "OpenMontage surged on GitHub by chaining Claude Code and Cursor into an automated video production studio. By orchestrating 12 pipelines, over 100 tools, and 700 agent skills, the harness decomposes a prompt into scripts, asset retrieval, narration, caption alignment, and ffmpeg assembly—producing 60-second animations and product overviews for $1.00 to $1.33 in API costs.",
+                    "url": "https://x.com/dandanetha/status/2113791582453301332"
+                },
+                {
+                    "tag": "ux",
+                    "tag_label": "UX",
+                    "title": "@rileybrown: Personal Agent UX vs. Raw Horsepower",
+                    "body": "An unvarnished assessment of personal agent ergonomics: while Claude Code remains the benchmark for raw technical capability on deep coding tasks, Grokbot is capturing mindshare on speed and consumer UI execution. The contrast illustrates that as underlying foundation models converge, product victory depends on interaction design and friction removal.",
+                    "url": "https://x.com/rileybrown/status/2113773696863064377"
+                },
+                {
+                    "tag": "framework",
+                    "tag_label": "Framework",
+                    "title": "@wlzh: InkOS Specialized Narrative Agent",
+                    "body": "InkOS reached 10,500 GitHub stars by structuring long-form writing workflows into modular agent roles. Rather than relying on a single context window, the system separates story generation into discrete phases: world-building lore, character constraint tracking, outline branching, and chapter synthesis.",
+                    "url": "https://x.com/wlzh/status/2113812872577093966"
+                }
+            ]
+        },
+        {
+            "emoji": "🛡️",
+            "title": "Infrastructure & Defensive Security",
+            "items": [
+                {
+                    "tag": "security",
+                    "tag_label": "Security",
+                    "title": "@Voxyz_ai: Docker Bypasses UFW on Linux VPSs",
+                    "body": "A critical operational warning for developers running AI agents and self-hosted services on cloud VPS instances: by default, Docker writes directly to iptables, routing exposed container ports straight past Ubuntu's Uncomplicated Firewall (ufw). Without binding published ports explicitly to 127.0.0.1 or configuring DOCKER-USER iptables chains, supposedly protected services are broadcast to the public internet.",
+                    "url": "https://x.com/Voxyz_ai/status/2114009025528426980"
+                },
+                {
+                    "tag": "infra",
+                    "tag_label": "Infrastructure",
+                    "title": "@0xjackkk: From Proxy Fleets to Agent Fleets",
+                    "body": "A breakdown of running an 8-VPS fleet ($221/year across commercial providers plus three free Oracle Cloud instances): initially built for personal VPN and proxy routing, the infrastructure is shifting into 24/7 autonomous worker nodes running background scrapers, scripts, and persistent agent runtimes.",
+                    "url": "https://x.com/0xjackkk/status/2113897816267599980"
+                },
+                {
+                    "tag": "throughput",
+                    "tag_label": "Throughput",
+                    "title": "@StatsWire: Silent Throughput Boost on Codex Models",
+                    "body": "Telemetric observations on OpenAI's Codex backend: users noticed sudden throughput increases on GPT-6 Astra and 6.1 Sol models, jumping from standard baseline rates without downtime. The unannounced upgrade highlights ongoing server-side speculative decoding and inference optimization rollouts.",
+                    "url": "https://x.com/StatsWire/status/2113868030648218045"
+                }
+            ]
+        },
+        {
+            "emoji": "🎨",
+            "title": "Perspective & Craft",
+            "items": [
+                {
+                    "tag": "craft",
+                    "tag_label": "Engineering & Art",
+                    "title": "@johnnie: 10 Years of iPhone Portrait Mode",
+                    "body": "A ten-year retrospective on building Apple's Portrait Mode: the initial engineering team treated depth estimation purely as a stereoscopic disparity math problem, resulting in ugly boundary artifacts and synthetic-looking blur. The breakthrough came from classical oil portraiture—if the subject's eyes are sharp, the human viewer forgives softness elsewhere. Pairing an ML eye-masking model with disparity maps allowed engineers to aggressively increase bokeh, turning edge errors into pleasing optical softness.",
+                    "url": "https://x.com/johnnie/status/2114007844605612167"
+                },
+                {
+                    "tag": "gamedev",
+                    "tag_label": "Re-engineering",
+                    "title": "@MichalD1986: Recreating GTA 1997 with AI in Browser JavaScript",
+                    "body": "A developer recreated the 1997 original Grand Theft Auto in browser-native JavaScript with AI writing the overwhelming majority of the codebase. The takeaway: as AI handles heavy code synthesis, engineering shifts away from typing syntax toward providing precise domain context and auditing runtime invariants.",
+                    "url": "https://x.com/MichalD1986/status/2113949369334407506"
+                }
+            ]
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "research",
+                    "tag_label": "Paper",
+                    "title": "@arkyyang: REM — What to Store, Recall, and Forget in Agent Memory",
+                    "body": "A breakdown of the NeurIPS 2026 CLEA Workshop paper on coding agent experience memory: compressing past execution trajectories into ~270-token structured summaries (bug diagnosis, root cause, fix, verification) outperforms dumping raw logs by 100x token efficiency without losing solve rate. Critically, gating detailed past edits until the agent hits a genuine failure signal—and evicting them immediately after—achieves higher benchmark success (27.6% vs 25.3%) while using fewer tokens (374K vs 423K per task).",
+                    "url": "https://x.com/arkyyang/status/2113990583241125942"
+                },
+                {
+                    "tag": "eval",
+                    "tag_label": "Benchmark",
+                    "title": "@randhir302: Google's PLE Benchmark Tests Billable Engineering Work",
+                    "body": "Google's Project-Level Engineering (PLE) benchmark shifts evals from toy coding puzzles to 85 long-horizon tasks across mechanical, electrical, civil, and structural engineering. Tasks include 61-file project directories with CAD/BIM models, spreadsheets, and superseded distractors. Key findings: Claude Opus 5.5 scored 50.6% ($17.18/task), GPT-6 Astra scored 48.3%, and open-weight models scored under 7%. Notably, model capability exhibited a 50-point spread across benchmarks, dwarfing the median 3-point variance between different harness frameworks.",
+                    "url": "https://x.com/randhir302/status/2113901106556194884"
+                },
+                {
+                    "tag": "evals",
+                    "tag_label": "Metrics",
+                    "title": "@Kizuno18: Four Production Metrics for Agent Trajectory Drift",
+                    "body": "Why code coverage is the wrong metric for autonomous agents: agents rarely fail from missed code branches; they fail from trajectory drift. The post outlines four metrics for real agent dashboards: Self-Correction Velocity (percentage of tool errors resolved within 2 turns without repeating arguments), Loop Circuit Breaker Frequency (catching repetitive file thrashing), Invariant Verification Coverage (requiring green tests and clean git trees before declaring completion), and Token Cost-to-Completion Ratio.",
+                    "url": "https://x.com/Kizuno18/status/2113781075684086028"
+                },
+                {
+                    "tag": "harness",
+                    "tag_label": "Primer",
+                    "title": "@i_amanchadha: Harness Engineering End-to-End Primer",
+                    "body": "A primer on why the harness surrounding a model is a first-class capability variable: covering meta-harnesses that optimize surrounding tools around a fixed foundation model, trace-driven harness self-modification, durable memory structures, and sandboxed validation gates. As raw model weights commoditize, the engineering moat lies in the verification and execution harness.",
+                    "url": "https://x.com/i_amanchadha/status/2113777708039831607"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path} with date: {formatted_date}")
