@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Saturday, October 24, 2026 — 1:33 PM ET</title>
+  <title>Clawd X Digest — Saturday, October 24th, 2026 — 9:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Saturday, October 24, 2026 — 1:33 PM ET</div>
+    <div class="date">Saturday, October 24th, 2026 — 9:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,38 +179,94 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>Claude Code Departures Continue:</strong> Following Anthony Morris, prominent Claude Code advocate Thariq Shihipar announced his departure from Anthropic alongside a wave of pre-listing exits, cementing developer attention on organizational shifts within the team.</li>
-      <li><strong>The Routing Layer Under the Terminal:</strong> Developers mapped the architecture of local agent switches, contrasting CC Switch's direct configuration mutations against Magpie's local proxy approach with Langfuse observability for full prompt tracing.</li>
-      <li><strong>Autonomous Media Pipelines:</strong> OpenMontage crossed 65,000 GitHub stars by turning Claude Code and Cursor into end-to-end video directors, generating structured multi-scene video assets for under $1.50 per run.</li>
-      <li><strong>Docker's Firewall Bypass on Agent VPSs:</strong> A sharp reminder for teams hosting autonomous agents on cloud VPSs: Docker modifies iptables directly, exposing container ports regardless of standard ufw rules unless bound explicitly to localhost.</li>
-      <li><strong>🎯 Worth Your Time:</strong> Four selected deep-dives on experience memory in coding agents (REM's 270-token structured summaries), Google's real-world 85-task PLE engineering benchmark, production trajectory-drift metrics, and holistic harness engineering.</li>
+      <li><strong>Quota Cuts Land:</strong> GPT Pro 200 subscribers lose the 20x Codex allowance on October 30 — 20x becomes 10x and weekly GPT-6 Pro messages drop from 200 to 100 at the same $200/month, with a one-off 62,500-credit sweetener instead of a price cut.</li>
+      <li><strong>Renters Read the Reset:</strong> One Codex user's two-week log — 100% allowance, twenty minutes to the 5-hour limit, nothing finished, back to Claude — is the cleanest illustration of why reset-based pricing is not the same as usable capacity.</li>
+      <li><strong>Sandboxing Leaves the Container:</strong> Anthropic open-sourced the runtime behind Claude Code's sandboxed bash tool, and it wraps processes at the OS level rather than spinning up Docker — the Chinese timeline's read was simply that the sandbox is finally inspectable.</li>
+      <li><strong>The Harness Gets Editable:</strong> Octopus OS ships a 45k-line Rust kernel where agents edit their own harness mid-task and system state lives in plain JSON files, after eight months of building — with a three-month desktop client built on the Codex source.</li>
+      <li><strong>Capex Moves Off the Balance Sheet:</strong> A well-argued thread on the Meta/Blue Owl Louisiana data-centre JV explains where the bubble risk actually sits — private credit funded by annuity premiums, locked in for ten years, with residual value pinned to one tenant.</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
       <span class="emoji">🧠</span>
-      <h2>The Claude Code Exodus</h2>
+      <h2>Memory and Multiplayer Agents</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag departure">Departure</span> @samuel_ys92: Thariq Shihipar Departs Anthropic</div>
-    <div class="item-body">Following Anthony Morris&#x27;s departure earlier this week, prominent Claude Code developer and public advocate Thariq Shihipar has left Anthropic. While Boris Cherny is recognized as the architect of Claude Code, Thariq was instrumental in demonstrating real internal team workflows to the public. Coming immediately before Anthropic&#x27;s expected public listing, the departures underscore growing developer attention around team continuity and product direction.</div>
+    <div class="item-title"><span class="tag mehdidjabri-bem-memory">Mehdidjabri-Bem-Memory</span> @mehdidjabri: Long-Term, Multiplayer Memory — #1 on BEAM</div>
+    <div class="item-body">A launch post with the two claims that matter: long-term memory for agents, shared across multiple agents rather than scoped to one session, and the top spot on BEAM, described as the largest public memory benchmark. Installation is a single prompt and the stack stays as-is. Whether the benchmark placement survives independent runs is the open question, but &#x27;keep your stack, add a past&#x27; is the right shape for the problem — memory as a layer, not a rewrite.</div>
     <div class="item-meta">
-      <a href="https://x.com/samuel_ys92/status/2113806118640320961" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag claude-code">Claude Code</span> @CtrlAltDwayne: &#x27;Claude Identified My Position as Redundant&#x27;</div>
-    <div class="item-body">The viral sentiment capturing the moment: after more than a year working on Claude Code, an engineer joked that during a routine refactoring pass, Claude identified his role as redundant and eliminated it. The humor resonated widely across developer communities because it highlights the cultural paradox of building self-improving coding tools.</div>
-    <div class="item-meta">
-      <a href="https://x.com/CtrlAltDwayne/status/2113949410799587828" target="_blank">View Tweet</a>
+      <a href="https://x.com/mehdidjabri/status/2110762633494184248" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag analysis">Analysis</span> @imjustnewatai: Tracking Pre-Listing Talent Flow</div>
-    <div class="item-body">The observation that framed the discussion: noting a cluster of Anthropic departures over the preceding two weeks. While high-growth startups naturally experience turnover ahead of liquidity events, developers are closely watching how much institutional memory in core tooling teams remains intact.</div>
+    <div class="item-title"><span class="tag miu21590-octopus-os">Miu21590-Octopus-Os</span> @miu21590: Octopus OS, an Agent Harness Agents Can Rewrite</div>
+    <div class="item-body">The most architecturally interesting build of the day: agents can edit their own harness mid-task, on their own, and self-improvement is not a separate stage bolted onto the loop — the architecture is just the environment they work in. The system state lives in JSON files (goals as environments, plus inputs, outputs and custom triggers) that agents can modify while working. Eight months of work, a 45k-line Rust kernel, and a three-month desktop app built on top of the Codex source. Open source, and usable today as a normal agent client.</div>
     <div class="item-meta">
-      <a href="https://x.com/imjustnewatai/status/2113820839850451337" target="_blank">View Tweet</a>
+      <a href="https://x.com/miu21590/status/2114095879632375944" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hwchase17-multiplayer-agents">Hwchase17-Multiplayer-Agents</span> @hwchase17: &#x27;Multiplayer Agents Is Way Harder Than Single Player&#x27;</div>
+    <div class="item-body">Six words from the LangChain founder, and the most honest sentence about the current state of agent infrastructure. His follow-up in the same thread adds the deployment side — agents now see pretty widespread adoption internally across all teams — so the difficulty is not adoption, it is coordination: multiple agents, shared state, and the handoffs between them. That gap is exactly where the memory and harness projects above are aiming.</div>
+    <div class="item-meta">
+      <a href="https://x.com/hwchase17/status/2114055063778070669" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💸</span>
+      <h2>Quota Economics</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag alleywu270684-gpt-pro-cut">Alleywu270684-Gpt-Pro-Cut</span> @alleywu270684: GPT Pro 200 Halves on October 30, Price Unchanged</div>
+    <div class="item-body">The specific numbers behind the reset-era frustration: October 29 is the last day of the old allowance, and from October 30 Codex and ChatGPT Work drop from 20x the Plus tier to 10x, while weekly GPT-6 Pro messages fall from 200 to 100 — at the same $200/month. Only accounts that subscribed between September 22 and 29 keep 20x until the cutover. Compensation is a one-time 62,500 credits (claimed value $2,500, expiring December 31), consumed after plan quota and not usable as API credit or to unlock Ultrafast. One genuine improvement: the 5-hour window limit is not coming back.</div>
+    <div class="item-meta">
+      <a href="https://x.com/alleywu270684/status/2113933350432026838" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag scottstts-codex-reset-log">Scottstts-Codex-Reset-Log</span> @scottstts: A Two-Week Diary of the Reset</div>
+    <div class="item-body">The funniest and most useful cost report of the day. Day one: opens Codex, sees 100%/100%, runs something, hits the 5-hour limit twenty minutes in with nothing finished, quits and does the work in Claude. Day two: sees 100%/100%, quits. Day three: never opens it. The lesson is not that the quota is small — it is that a reset that refills an allowance you cannot spend usefully is a retention metric, not capacity.</div>
+    <div class="item-meta">
+      <a href="https://x.com/scottstts/status/2113987166825009598" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag im-irushik-astra-quota">Im-Irushik-Astra-Quota</span> @Im_IrushiK: 41 Minutes for 6% of the Weekly Allowance</div>
+    <div class="item-body">A measured before-and-after on the $100 Codex Pro plan: a week ago a few simple Astra tasks could burn 15% of weekly quota in minutes; now Astra Max ran 41 minutes and consumed 6%, and Astra Light feels fast even without the 1.5x speed boost. He is asking whether this is caching and efficiency work or a model change. Either way it is the right way to report on quota — wall-clock, percentage, and the task, rather than a feeling.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Im_IrushiK/status/2113903260470009966" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔒</span>
+      <h2>Sandboxing and Data Hygiene</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag harden-369741-sandbox-runtime">Harden-369741-Sandbox-Runtime</span> @harden_369741: Anthropic Open-Sourced Claude Code&#x27;s Sandbox Runtime</div>
+    <div class="item-body">A correction to the assumption that agent sandboxing means Docker or nothing: Anthropic released the runtime that Claude Code actually uses for its sandboxed bash tool, and it is neither. sandbox-runtime wraps any process at the OS level, which means the boundary is the kernel&#x27;s permission model rather than a container image — cheaper to start, and auditable in a way a container is not. Worth reading before the next &#x27;just run it in a container&#x27; architecture decision.</div>
+    <div class="item-meta">
+      <a href="https://x.com/harden_369741/status/2114093030823342499" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag criscxuan-sandbox-open-source">Criscxuan-Sandbox-Open-Source</span> @criscxuan: &#x27;A-She Finally Did Something Right — the Sandbox Is Open&#x27;</div>
+    <div class="item-body">The Chinese timeline&#x27;s reaction to the same release, and a useful signal of what builders there cared about: not a feature, not a benchmark, but that the sandbox implementation is now inspectable. Eight hundred-plus likes on a two-line post with a link. When the most-liked reaction to a release is &#x27;we can read the code now&#x27;, that is a statement about how much the ecosystem distrusts opaque execution boundaries.</div>
+    <div class="item-meta">
+      <a href="https://x.com/criscxuan/status/2113809281661514182" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag yetone-magpie-redaction">Yetone-Magpie-Redaction</span> @yetone: Local Redaction Would Have Prevented This Week&#x27;s Incidents</div>
+    <div class="item-body">A short, pointed note after a run of security incidents: use Magpie&#x27;s local redaction before sending anything to a model, and the recent failures would not have happened. The bluntness is the value — the exposure in most of these cases is not a clever attack, it is a street address, a key or a customer name typed into an agent context that was never meant to hold it. Redaction at the edge, locally, before the request leaves the machine.</div>
+    <div class="item-meta">
+      <a href="https://x.com/yetone/status/2114070661341868122" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -218,104 +274,55 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🛠️</span>
-      <h2>The Routing Layer Under the Hood</h2>
+      <h2>Builds With Artefacts</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag architecture">Architecture</span> @HunziDaily: CC Switch vs. Magpie Implementation Tradeoffs</div>
-    <div class="item-body">A detailed breakdown of how developers swap models in Claude Code: CC Switch functions via direct local configuration modification (~/.claude/settings.json), whereas Magpie runs a local reverse proxy server (127.0.0.1:8080) that intercepts requests, counts tokens, rewrites headers, and forwards calls to arbitrary upstream providers. The proxy approach adds slight runtime overhead but decouples the agent CLI from proprietary vendor lock-in.</div>
-    <div class="item-meta">
-      <a href="https://x.com/HunziDaily/status/2113863053443756076" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag observability">Observability</span> @LinearUncle: Magpie Prompt Tracing with Langfuse</div>
-    <div class="item-body">Pairing local proxies with observability tooling: by wiring Magpie to a local Langfuse instance, engineers gain complete request-level prompt inspection, token attribution, and latency breakdown for every subagent call. Capturing full interaction traces locally makes it significantly easier to debug multi-step reasoning failures and runaway tool loops.</div>
-    <div class="item-meta">
-      <a href="https://x.com/LinearUncle/status/2113943764821774743" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag optimization">Optimization</span> @LanzhiAI: Codex CLI Cache Invalidation Fixes</div>
-    <div class="item-body">A technical recap of recent Codex CLI adjustments: connecting dots faster and ensuring mid-session reasoning adjustments no longer invalidate prompt cache prefixes. Protecting prompt cache hits during interactive steering drastically cuts both round-trip latency and token expenses on long coding sessions.</div>
-    <div class="item-meta">
-      <a href="https://x.com/LanzhiAI/status/2113805689101652126" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🤖</span>
-      <h2>Autonomous Workflows &amp; Production Harnesses</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag open-source">Open Source</span> @dandanetha: OpenMontage Passes 65K Stars on GitHub</div>
-    <div class="item-body">OpenMontage surged on GitHub by chaining Claude Code and Cursor into an automated video production studio. By orchestrating 12 pipelines, over 100 tools, and 700 agent skills, the harness decomposes a prompt into scripts, asset retrieval, narration, caption alignment, and ffmpeg assembly—producing 60-second animations and product overviews for $1.00 to $1.33 in API costs.</div>
+    <div class="item-title"><span class="tag dandanetha-openmontage">Dandanetha-Openmontage</span> @dandanetha: OpenMontage at 65k Stars, $1.33 per Short Film</div>
+    <div class="item-body">An AI video-editing project that topped GitHub with 65k+ stars: you describe the job to Claude Code or Cursor in plain language, and it writes scripts, sources footage, voices, subtitles and composites the result. The receipts are the interesting part — a 60-second Pixar-style short with story, camera moves, piano score and animated captions for $1.33 total; a product trailer under $1; and the ability to take a viral video apart into script rhythm, key frames and style, then return two or three alternative treatments. Twelve pipelines, 100+ tools and 700+ agent skills underneath.</div>
     <div class="item-meta">
       <a href="https://x.com/dandanetha/status/2113791582453301332" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag ux">UX</span> @rileybrown: Personal Agent UX vs. Raw Horsepower</div>
-    <div class="item-body">An unvarnished assessment of personal agent ergonomics: while Claude Code remains the benchmark for raw technical capability on deep coding tasks, Grokbot is capturing mindshare on speed and consumer UI execution. The contrast illustrates that as underlying foundation models converge, product victory depends on interaction design and friction removal.</div>
+    <div class="item-title"><span class="tag tvytlx-code-not-video">Tvytlx-Code-Not-Video</span> @tvytlx: 4,320 Frames, No Cuts, $187 — Because He Wrote Code Instead</div>
+    <div class="item-body">The best case study of the day on choosing the right tool. He first fed the whole song to a video model; every attempt landed 1.25-2 seconds late and the full film would have cost about $480. So he had Opus write 22,000 lines of Python in a week instead. Stems split via AI, beat tracking at 175 BPM, all 337 vocal lines timestamped, choreography expressed in code (&#x27;jump at bar 42&#x27;, &#x27;land on the snare at 58.37s&#x27;) and filled in by a physics engine with real gravity and stride. The character was 1,933 hand-picked drawings, each held for about two frames — that is where the stop-motion judder comes from. The test segment cost $0.30 with every beat hit; the finished film cost $187 after 12 abandoned renders. Precision to code, feel to the generative model.</div>
     <div class="item-meta">
-      <a href="https://x.com/rileybrown/status/2113773696863064377" target="_blank">View Tweet</a>
+      <a href="https://x.com/tvytlx/status/2113954908710051913" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag framework">Framework</span> @wlzh: InkOS Specialized Narrative Agent</div>
-    <div class="item-body">InkOS reached 10,500 GitHub stars by structuring long-form writing workflows into modular agent roles. Rather than relying on a single context window, the system separates story generation into discrete phases: world-building lore, character constraint tracking, outline branching, and chapter synthesis.</div>
+    <div class="item-title"><span class="tag adxtyahq-ai-engineering-labs">Adxtyahq-Ai-Engineering-Labs</span> @adxtyahq: 50+ Interactive Labs for AI Engineering</div>
+    <div class="item-body">A launch with the right pedagogy for this stack: instead of videos, interactive labs where you tweak tokenizers, attention, embeddings and KV caches live, train a small network in the browser and watch it converge, and build agentic workflows with tool calls and memory. LLMs, RAG, agents, evals and inference in one path. The reason it matters is the same reason agent engineering is hard to teach — most of the intuition lives in the failure modes, and you only get those by changing a parameter and watching what breaks.</div>
     <div class="item-meta">
-      <a href="https://x.com/wlzh/status/2113812872577093966" target="_blank">View Tweet</a>
+      <a href="https://x.com/adxtyahq/status/2114000416245703087" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🛡️</span>
-      <h2>Infrastructure &amp; Defensive Security</h2>
+      <span class="emoji">📊</span>
+      <h2>Market and Infrastructure Reality</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag security">Security</span> @Voxyz_ai: Docker Bypasses UFW on Linux VPSs</div>
-    <div class="item-body">A critical operational warning for developers running AI agents and self-hosted services on cloud VPS instances: by default, Docker writes directly to iptables, routing exposed container ports straight past Ubuntu&#x27;s Uncomplicated Firewall (ufw). Without binding published ports explicitly to 127.0.0.1 or configuring DOCKER-USER iptables chains, supposedly protected services are broadcast to the public internet.</div>
+    <div class="item-title"><span class="tag balder-capex-off-balance-sheet">Balder-Capex-Off-Balance-Sheet</span> @Balder13946731: The Bubble Risk Is in the Annuities, Not the Stock</div>
+    <div class="item-body">The most substantive sceptical thread of the day, and it argues everyone is watching the wrong instrument. The heaviest capex has moved off balance sheet: Meta&#x27;s Louisiana data centre is a joint venture with Blue Owl, over $20 billion, funded through private credit, funded in turn by insurers — Apollo owns Athene, KKR owns Global Atlantic — which collect annuity and life premiums. So a fixed annuity ends up backed by a building in a Louisiana cornfield, rated investment grade because the tenant is Meta. The building&#x27;s residual value depends on a single tenant, the machines depreciate in five or six years against a 15-20 year lease, and annuity holders cannot exit without surrender charges. The kicker: a regulated CIO restricted to investment grade has little choice but to buy the highest-yielding paper available, which is exactly this.</div>
     <div class="item-meta">
-      <a href="https://x.com/Voxyz_ai/status/2114009025528426980" target="_blank">View Tweet</a>
+      <a href="https://x.com/Balder13946731/status/2114132968390414655" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag infra">Infrastructure</span> @0xjackkk: From Proxy Fleets to Agent Fleets</div>
-    <div class="item-body">A breakdown of running an 8-VPS fleet ($221/year across commercial providers plus three free Oracle Cloud instances): initially built for personal VPN and proxy routing, the infrastructure is shifting into 24/7 autonomous worker nodes running background scrapers, scripts, and persistent agent runtimes.</div>
+    <div class="item-title"><span class="tag gusik4ever-finance-repos">Gusik4Ever-Finance-Repos</span> @gusik4ever: The Fastest-Growing Finance + AI Repos This Week</div>
+    <div class="item-body">A ranked list with real star deltas rather than vibes: Kronos, an open-source foundation model for candlestick charts trained on 45+ exchanges, up 2,653 stars with code unchanged since April; TradingAgents up 1,944 and now at 113k stars; day-trader-skill, eleven Claude skills including a &#x27;time machine&#x27; that replays a session 10,000 times, up 972 in four days; Vibe-Trading from HKUDS at 821; last30days-skill at 730, ranking results across Reddit, X, YouTube, HN and Polymarket by engagement and real money. The pattern worth noting is how many are agent skills rather than frameworks.</div>
     <div class="item-meta">
-      <a href="https://x.com/0xjackkk/status/2113897816267599980" target="_blank">View Tweet</a>
+      <a href="https://x.com/gusik4ever/status/2114001885413716163" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag throughput">Throughput</span> @StatsWire: Silent Throughput Boost on Codex Models</div>
-    <div class="item-body">Telemetric observations on OpenAI&#x27;s Codex backend: users noticed sudden throughput increases on GPT-6 Astra and 6.1 Sol models, jumping from standard baseline rates without downtime. The unannounced upgrade highlights ongoing server-side speculative decoding and inference optimization rollouts.</div>
+    <div class="item-title"><span class="tag krzyzanowskim-workers-cost">Krzyzanowskim-Workers-Cost</span> @krzyzanowskim: Cloudflare Workers at $42/Month Is a Trap</div>
+    <div class="item-body">A one-line cost correction from someone who builds on Apple platforms: running Workers around the clock costs roughly what a more powerful VPS costs for a full month — about $42 — so the serverless premium only makes sense when the workload is genuinely spiky. The framing is deliberately unkind (&#x27;it&#x27;s a trap&#x27;) and that is the useful part: continuous agent workloads look like serverless but behave like long-lived processes, and the billing model notices.</div>
     <div class="item-meta">
-      <a href="https://x.com/StatsWire/status/2113868030648218045" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🎨</span>
-      <h2>Perspective &amp; Craft</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag craft">Engineering &amp; Art</span> @johnnie: 10 Years of iPhone Portrait Mode</div>
-    <div class="item-body">A ten-year retrospective on building Apple&#x27;s Portrait Mode: the initial engineering team treated depth estimation purely as a stereoscopic disparity math problem, resulting in ugly boundary artifacts and synthetic-looking blur. The breakthrough came from classical oil portraiture—if the subject&#x27;s eyes are sharp, the human viewer forgives softness elsewhere. Pairing an ML eye-masking model with disparity maps allowed engineers to aggressively increase bokeh, turning edge errors into pleasing optical softness.</div>
-    <div class="item-meta">
-      <a href="https://x.com/johnnie/status/2114007844605612167" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag gamedev">Re-engineering</span> @MichalD1986: Recreating GTA 1997 with AI in Browser JavaScript</div>
-    <div class="item-body">A developer recreated the 1997 original Grand Theft Auto in browser-native JavaScript with AI writing the overwhelming majority of the codebase. The takeaway: as AI handles heavy code synthesis, engineering shifts away from typing syntax toward providing precise domain context and auditing runtime invariants.</div>
-    <div class="item-meta">
-      <a href="https://x.com/MichalD1986/status/2113949369334407506" target="_blank">View Tweet</a>
+      <a href="https://x.com/krzyzanowskim/status/2113955649822269891" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -326,31 +333,31 @@
       <h2>Worth Your Time</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag research">Paper</span> @arkyyang: REM — What to Store, Recall, and Forget in Agent Memory</div>
-    <div class="item-body">A breakdown of the NeurIPS 2026 CLEA Workshop paper on coding agent experience memory: compressing past execution trajectories into ~270-token structured summaries (bug diagnosis, root cause, fix, verification) outperforms dumping raw logs by 100x token efficiency without losing solve rate. Critically, gating detailed past edits until the agent hits a genuine failure signal—and evicting them immediately after—achieves higher benchmark success (27.6% vs 25.3%) while using fewer tokens (374K vs 423K per task).</div>
+    <div class="item-title"><span class="tag 0xveyyro-router-cost">0Xveyyro-Router-Cost</span> @0xVeyyro: $4.26 of Opus Becomes $1.0x With a Router</div>
+    <div class="item-body">A harder rerun of an earlier routing experiment: a database schema migration, 340 tests, 64 files. All-Opus would have cost $4.26; the router run came in around a dollar. The value is the workload — not a toy prompt, but a real refactor with a test suite to check the result — and the ratio is large enough to change how you budget agent work rather than just how you feel about it.</div>
     <div class="item-meta">
-      <a href="https://x.com/arkyyang/status/2113990583241125942" target="_blank">View Tweet</a>
+      <a href="https://x.com/0xVeyyro/status/2114074446648483494" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag eval">Benchmark</span> @randhir302: Google&#x27;s PLE Benchmark Tests Billable Engineering Work</div>
-    <div class="item-body">Google&#x27;s Project-Level Engineering (PLE) benchmark shifts evals from toy coding puzzles to 85 long-horizon tasks across mechanical, electrical, civil, and structural engineering. Tasks include 61-file project directories with CAD/BIM models, spreadsheets, and superseded distractors. Key findings: Claude Opus 5.5 scored 50.6% ($17.18/task), GPT-6 Astra scored 48.3%, and open-weight models scored under 7%. Notably, model capability exhibited a 50-point spread across benchmarks, dwarfing the median 3-point variance between different harness frameworks.</div>
+    <div class="item-title"><span class="tag 0xcortiq-kimi-price">0Xcortiq-Kimi-Price</span> @0xCortiq: Kimi K3.1 Pro at $2/$10 per Million Tokens</div>
+    <div class="item-body">Moonshot released Kimi K3.1 Pro on October 23 at $2 per million input tokens and $10 per million output — roughly half of Opus 5.5 on the headline numbers — and this post actually checks whether switching is worth it rather than stopping at the price. The reply worth reading is from an engineer noting that output tokens are the expensive side, so a model that talks 14% more eats most of the discount, and in agent loops that compounds because each step&#x27;s output feeds the next.</div>
     <div class="item-meta">
-      <a href="https://x.com/randhir302/status/2113901106556194884" target="_blank">View Tweet</a>
+      <a href="https://x.com/0xCortiq/status/2114067280447541586" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag evals">Metrics</span> @Kizuno18: Four Production Metrics for Agent Trajectory Drift</div>
-    <div class="item-body">Why code coverage is the wrong metric for autonomous agents: agents rarely fail from missed code branches; they fail from trajectory drift. The post outlines four metrics for real agent dashboards: Self-Correction Velocity (percentage of tool errors resolved within 2 turns without repeating arguments), Loop Circuit Breaker Frequency (catching repetitive file thrashing), Invariant Verification Coverage (requiring green tests and clean git trees before declaring completion), and Token Cost-to-Completion Ratio.</div>
+    <div class="item-title"><span class="tag govind-kivo-compaction">Govind-Kivo-Compaction</span> @Govind_vash02: Compaction Cut Context 33% and Cost Went Up</div>
+    <div class="item-body">A rare honest negative result. He added context compaction to kivo, his terminal coding agent with a hand-written loop and no framework: pass rate stayed at 100%, peak context dropped 33%, and cost went up anyway. That is the kind of finding that only comes from instrumenting your own harness, and it is a useful counterweight to the assumption that shorter context always means cheaper runs — compaction itself costs tokens, and the break-even depends on how often you trigger it.</div>
     <div class="item-meta">
-      <a href="https://x.com/Kizuno18/status/2113781075684086028" target="_blank">View Tweet</a>
+      <a href="https://x.com/Govind_vash02/status/2114067641484849548" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag harness">Primer</span> @i_amanchadha: Harness Engineering End-to-End Primer</div>
-    <div class="item-body">A primer on why the harness surrounding a model is a first-class capability variable: covering meta-harnesses that optimize surrounding tools around a fixed foundation model, trace-driven harness self-modification, durable memory structures, and sandboxed validation gates. As raw model weights commoditize, the engineering moat lies in the verification and execution harness.</div>
+    <div class="item-title"><span class="tag ethanwalkerman-one-agent">Ethanwalkerman-One-Agent</span> @ethanwalkerman: One Agent With Skills Beat the Specialist Crowd</div>
+    <div class="item-body">A summary of Anthropic&#x27;s new enterprise guidance with the number attached: a single agent that loads skills and tools on demand often beat both a giant prompt and a set of specialist subagents on quality, and one customer saw roughly 2x faster runtime. It lines up with the subagent-reduction advice circulating today, and it is a direct challenge to the reflex of splitting every workflow into a committee of agents. Test it on your own traces before reorganising anything.</div>
     <div class="item-meta">
-      <a href="https://x.com/i_amanchadha/status/2113777708039831607" target="_blank">View Tweet</a>
+      <a href="https://x.com/ethanwalkerman/status/2114063559449772373" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
