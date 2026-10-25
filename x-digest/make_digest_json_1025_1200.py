@@ -1,0 +1,173 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Sunday, October 25th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Subagents Measured, Not Assumed:</strong> A Stanford paper puts numbers on the thing everyone feels — with Claude Code's native centralized subagent, the main agent spent 73% of its time waiting on children, 44% of total agent compute went to wait bubbles, and on DeepSWE the accuracy fell from 71.67% to 50.00% while time and cost rose 15.9% and 65.1%.",
+        "<strong>The Fix Is Removing the Center:</strong> The same work proposes DeLM — an append-only shared state log plus an async task queue with no main agent — and reports 93.33% on Terminal-Bench for a two-agent setup and a 2.49x speedup at four agents, with bubbles down from 44% to 2%.",
+        "<strong>Quota Maths Gets Written Down:</strong> Codex Plus is quoted at 31.147M Astra tokens and 160M GPT-6.1 Sol tokens per week, a tenth of the $200 tier, while Codex 0.164.0 fixes a bug that double-counted context — 287K tokens read as 451K and triggering automatic compaction.",
+        "<strong>Research Agents Optimise, They Don't Invent:</strong> On Agent4Sci's 20 real ML-for-science benchmarks Claude Opus improved results by 10.4% relative, but mostly through hyperparameter tuning, optimizer swaps and ensembles; three lightweight skills — ideation, experiment management, scheduled self-check — took it to 20.1%.",
+        "<strong>The Bottleneck Is Electricity:</strong> Constellation's 890 MW to Google requires no new reactor, only an uprate under an NRC licence amendment, and Musk's stranded-compute remark reads as a statement about half-built shells rather than an oversupply of GPUs."
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "Subagent Economics and Shared Context",
+            "items": [
+                {
+                    "tag": "snwiki238337-delm-bubbles",
+                    "title": "@snwiki238337: 73% of the Main Agent's Time Is Spent Waiting",
+                    "body": "A close read of Stanford's DeLM paper (Azalia Mirhoseini's group) that turns 'multi-agent feels slow' into figures. On Terminal-Bench 4.0 long-horizon tasks, Claude Code with its native centralized subagent left the main agent waiting 73% of the time, and 44% of total agent compute went into waiting bubbles. On DeepSWE v1.1 repository debugging the cost was worse than wasted time: accuracy dropped from 71.67% single-agent to 50.00%, with time up 15.9% and cost up 65.1%. The proposed fix deletes the central agent altogether — every agent shares an append-only state log, publishes compressed findings the moment a submodule lands or a dead end is confirmed, mounts code files by reference, and pulls work from an async first-come queue. Two-agent DeLM scored 93.33% on Terminal-Bench in 64.77 minutes on Opus 5.5; four agents gave a 2.49x speedup with bubbles down to 2%; DeepSWE reached 90.83%, 7.5 points above the strongest centralized baseline. Reading shared context cost only 1.7–3.7% of the total task. Ablations are the part worth quoting to a sceptic: remove early publication, agent state visibility or the persistent shared context, and the two-agent speedup falls from 1.54–2.02x back to 0.82–1.09x. Plugins for Codex and Claude Code are open sourced.",
+                    "url": "https://x.com/snwiki238337/status/2114253870583189846"
+                },
+                {
+                    "tag": "necokeine-deepinfer-kv",
+                    "title": "@Necokeine: 890 Bytes of KV Cache per Token, So VRAM Stops Mattering",
+                    "body": "The clearest explanation of why DeepSeek's DeepInfer scheduler looks broken if you assume a normal model. DeepSeek 4.1F needs about 890 bytes of KV cache per token, which means a full 1M-token context costs roughly 890MB — under a gigabyte of VRAM. DeepSeek 4F needs four times that. Because the KV footprint is so small, DeepInfer ignores VRAM capacity when distributing tasks entirely and only limits batch size. The contrast with Kimi K3.1 is the point: about 27kB per token in bf16, roughly thirty times the overhead, and still fifteen times at FP8 — brutal for a model whose selling point is long context. If you are sizing hardware for a long-context deployment, this single coefficient explains more than any benchmark table.",
+                    "url": "https://x.com/Necokeine/status/2114211360997355712"
+                },
+                {
+                    "tag": "xudong-agent4sci",
+                    "title": "@Xudong07452910: Agent4Sci — Gains Are Engineering, Not Ideas",
+                    "body": "Anthropic's new paper put Claude Code, Codex and Gemini into 20 real ML-for-science benchmarks, letting them read papers, edit code, run experiments and try to beat the published best result. Every frontier agent found improvements, with Claude Opus averaging 10.4% relative gain. Then the authors read the trajectories: most of the gain came from familiar ML engineering — hyperparameter tuning, swapping optimizers, ensembling, repeated local search. The agents overestimated the novelty of their own ideas, left GPUs idle, and once they found one working direction kept grinding parameters nearby. Adding just three lightweight skills — research ideation, experiment management, and a scheduled self-check — lifted Opus from 10.4% to 20.1% and Codex from 4.4% to 8.1%. That is the useful conclusion: the bottleneck in research agents is judgement, and three skills bought more than extra compute did.",
+                    "url": "https://x.com/Xudong07452910/status/2114221415012442598"
+                }
+            ]
+        },
+        {
+            "emoji": "💸",
+            "title": "Quota Arithmetic",
+            "items": [
+                {
+                    "tag": "mylifcc-codex-plus-tokens",
+                    "title": "@mylifcc: Codex Plus, Denominated in Tokens",
+                    "body": "A short post that does what no pricing page does — states the plan in the unit you actually spend. Codex Plus gives about 31.147 million Astra tokens and 160 million GPT-6.1 Sol tokens per week, which he measures as one tenth of the $200 tier. Whatever the exact multipliers, writing a subscription as a weekly token budget is the only comparison that survives a change of model, and it makes the tier ladder legible at a glance.",
+                    "url": "https://x.com/mylifcc/status/2114167811635401204"
+                },
+                {
+                    "tag": "vincent-codex-0164-doublecount",
+                    "title": "@Vincent_AINotes: Codex 0.164.0 Fixes a Token Double-Count",
+                    "body": "A concrete reason to update rather than speculate about the 500K context announcement. Codex was double-counting context: one measured session used 287K tokens, was counted internally as 451K, and tripped automatic compaction long before the limit. OpenAI merged the fix and 0.164.0 ships it, with the PR linked in the post. If your sessions were compacting well under 350K, this is the cause, and the upgrade is the test — rerun the same task and watch where compaction actually fires.",
+                    "url": "https://x.com/Vincent_AINotes/status/2114268526546698725"
+                },
+                {
+                    "tag": "im-irushik-resets",
+                    "title": "@Im_IrushiK: A Free Reset Can Delete the Usage You Banked",
+                    "body": "The complaint is precise enough to be a spec. A global Codex reset restarts the seven-day timer and wipes whatever allowance you had carefully preserved — and the more expensive your plan, the more unused capacity you can lose. His proposals are all small: let users bank resets, don't restart the weekly timer, offer an opt-out, and announce resets inside Codex instead of on an employee's timeline. The underlying point is about product design rather than generosity — a bonus that can subtract from your balance is not a bonus, it is a variance you have to plan around.",
+                    "url": "https://x.com/Im_IrushiK/status/2114206023460470899"
+                },
+                {
+                    "tag": "insanekrishnaa-sol-high-cost",
+                    "title": "@insanekrishnaa: Thirty Minutes of Sol High, Half the Five-Hour Window",
+                    "body": "One data point on where the effort dial actually costs you. After noticing that Sol Medium was lasting much longer than before, he tested Sol High to see whether it had improved too: thirty minutes of use consumed half of the five-hour limit. The observation is worth keeping because it is comparative — the same account, the same kind of work, two effort settings, and a gap large enough that 'just turn it up' is no longer free advice.",
+                    "url": "https://x.com/insanekrishnaa/status/2114082429858451945"
+                }
+            ]
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Builds With Artefacts",
+            "items": [
+                {
+                    "tag": "ryrenz-jellyfish",
+                    "title": "@Ryrenz: Jellyfish — The Boring Part of AI Short Drama, Automated",
+                    "body": "The insight is that generating shots was never the hard part; keeping forty of them consistent was. Jellyfish takes a chapter of script, splits it into shots, and extracts characters, scenes, props, costumes and dialogue into shared assets that persist across shots, so a character does not change clothes between cuts. Keyframes, reference images and video prompts live in one workspace with per-shot or batch pre-checks, and text, image and video jobs share a task centre that shows progress and elapsed time across multiple model providers. Built by a single developer in Beijing, repository opened in March, now past 6,800 stars and 1,100 forks. The pattern generalises: when a creative pipeline stalls, the missing piece is usually the asset graph, not the model.",
+                    "url": "https://x.com/Ryrenz/status/2113981086556401762"
+                },
+                {
+                    "tag": "3three-gs-quant-skills",
+                    "title": "@3three_AI: Goldman's Quant Library Ships Claude Skills",
+                    "body": "gs-quant is Goldman Sachs' own quantitative toolkit, 12.9k stars, and the interesting part is not the library but the skills written around it: eight files, 1,847 lines, teaching Claude to use pricing, risk, portfolio, market data, backtesting, swaps, swaptions, FX options, delta hedging and transaction costs — including a list of the errors you will hit and how to fix them. Installation is a pip install plus `python -m gs_quant.skills install --global`, after which Claude calls it automatically when writing gs-quant code. The worked example is honest about what a result means: pull five years of daily prices, compute volatility, max drawdown, z-score, Bollinger bands and 60-day beta against SPY, then backtest buying below a z-score of -2 and selling at zero including fees, and compare it to buy-and-hold. If it does not beat holding after costs, it is not an edge.",
+                    "url": "https://x.com/3three_AI/status/2114257401809707058"
+                },
+                {
+                    "tag": "hermeswatcher-camofox",
+                    "title": "@HermesWatcher: Camofox — A Browser That Doesn't Look Like a Bot",
+                    "body": "Nous Research shipped an official Hermes plugin that solves the least glamorous blocker in agent work: sites that treat automation as an attack. Camofox is a Firefox fork with fingerprint spoofing built in, presenting as everyday Firefox rather than a headless client, running on your own machine with one profile per Hermes profile so your logins stay yours. It searches, clicks, types, scrolls and reads pages in a background browser while yours stays free, and there is no cloud browser in the path. Whether fingerprint spoofing is the right long-term answer to bot detection is a separate argument; for anyone whose agent currently dies at a Cloudflare challenge, it is a working answer today.",
+                    "url": "https://x.com/HermesWatcher/status/2114203682892099709"
+                }
+            ]
+        },
+        {
+            "emoji": "🔒",
+            "title": "Security and Data Boundaries",
+            "items": [
+                {
+                    "tag": "intcyberdigest-tailscale-flaws",
+                    "title": "@IntCyberDigest: 11 Unpatched Tailscale Flaws Published Without Disclosure",
+                    "body": "Researcher Erica Windisch skipped coordinated disclosure and published eleven unpatched Tailscale vulnerabilities. The finding that matters for anyone running a mesh across agent machines: in her lab, Tailscale SSH race conditions let a single compromised device obtain root on other servers and add a rogue node to the network. That turns one bad box into a lateral-movement platform, and the timing — announced before patches — means the practical response is to treat every node as a potential entry point rather than wait for a fix. Check what your tailnet ACLs actually permit between hosts.",
+                    "url": "https://x.com/IntCyberDigest/status/2114291878720151623"
+                },
+                {
+                    "tag": "blockinsight-google-privacy",
+                    "title": "@BlockInsight214: Google's Privacy Policy Gained One Exception",
+                    "body": "A single clause added to Google's privacy policy, effective October 16, and worth reading in the original rather than the summary: the promise not to use Drive, Gmail or Photos for personalised advertising now carries the condition 'unless you connect that data to Personal Intelligence'. It is off by default, advertisers still do not receive your mailbox or photo library, and sensitive categories remain excluded — so this is a scope change, not a breach. The two opt-outs are to disconnect the apps or disable personalisation for the search service. If you run agents against Google account data, the default is doing more work for you than you probably realised.",
+                    "url": "https://x.com/BlockInsight214/status/2114380714313765316"
+                },
+                {
+                    "tag": "xulijian-magpie-tos",
+                    "title": "@xulijian1994: The Magpie Question Nobody Answers",
+                    "body": "A fair sceptic's post about the tool everyone recommends. Magpie's interaction design is smooth and its reverse proxy and model routing are genuinely convenient, but that convenience is exactly the concern when the credentials behind it are official Claude and Codex subscriptions: usage that trips platform risk controls or terms can cost you the account, and the trade is a few minutes of setup against something you cannot recover. He is asking for long-term reports from people running it against official subscriptions rather than arguing the point. Worth reading before adopting it as infrastructure rather than as a convenience.",
+                    "url": "https://x.com/xulijian1994/status/2114351797779525733"
+                }
+            ]
+        },
+        {
+            "emoji": "⚡",
+            "title": "Power, Capex and Physical Constraints",
+            "items": [
+                {
+                    "tag": "balder-constellation-uprate",
+                    "title": "@Balder13946731: 890 MW With No New Reactor",
+                    "body": "The detail that reframes the AI power trade: Constellation's 890 MW commitment to Google involves no new reactor at all. It is an uprate — pushing existing units to higher output under an NRC licence amendment, so no new siting, no construction, and the decade-long build timeline simply does not apply. 890 MW is roughly one unit's worth. The consequence is that the first capacity to be monetised in the AI electricity shortage is the slack already sitting inside 1970s and 1980s reactors, which pays owners sooner than anything else in the queue; small modular reactors are still parked around 2030. His note that Wood's two new nuclear positions exclude NuScale is the kind of specific that separates a thesis from a theme.",
+                    "url": "https://x.com/Balder13946731/status/2114380542477217893"
+                },
+                {
+                    "tag": "mrpingchecks-musk-compute",
+                    "title": "@MrPingChecks: Musk Wasn't Calling a GPU Glut",
+                    "body": "A careful reconstruction of an apparent contradiction. Five days before saying plenty of compute would be stranded in half-built data centres, Musk told a SpaceX earnings call that every hyperscaler and dozens of small companies were pestering him to rent capacity — enough demand to lease out several times what he has. The reconciliation is that the binding constraint moved from chips to power and operating data-centre shells. He runs roughly half self-use, half rented at spot with no long-term contracts, and plans 20 GW of power and cooling next year against 10 GW of compute to plug in — electricity prepared at twice the rate of silicon. Nadella made the same point last October about chips sitting in inventory with nowhere to plug in, and FundaAI's arithmetic has power covering only half of next year's shipped chips. Nobody cancels orders either, because the first to blink loses the allocation.",
+                    "url": "https://x.com/MrPingChecks/status/2114301401895690271"
+                },
+                {
+                    "tag": "gneubig-b300-lab",
+                    "title": "@gneubig: A B300 in the Lab, and a Business Model Suggestion",
+                    "body": "Graham Neubig bought a B300 machine for his lab at CMU, intending to do LLM research on it, and is now wondering whether to serve deepseek-v4.1-flash tokens with DeepSeek's new inference code instead and fund the rest of the lab from the margin. It reads as a joke, and it is one, but it is the accurate kind: the spread between what a GPU costs a university and what inference sells for is wide enough that a single machine's opportunity cost is now a research-funding question. Worth a thought the next time someone argues academic labs cannot compete on compute.",
+                    "url": "https://x.com/gneubig/status/2114046665191514532"
+                }
+            ]
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "santhosh-harness-overhead",
+                    "title": "@santhosh_patell: 16,500 Tokens of Harness Before Your Code",
+                    "body": "The cleanest harness comparison available this week. Claude Code sends roughly 16,500 tokens of its own prompt and tool schemas on every step before it reads a line of your code. A new Shandong University paper ran it against mini-SWE-agent — about 100 lines of Python, one bash tool, 829 tokens of preamble — on SWE-bench Verified with the same models: pass rates landed within two points across 447 tasks, while cost per task differed by up to 3x between harnesses. The strangest result is the ablation: removing Claude Code's file-edit tools so Opus 5 had to edit through bash did not move the score. You can check your own overhead with /context. If the guardrails are worth 3x, pay it knowingly.",
+                    "url": "https://x.com/santhosh_patell/status/2114217102190186658"
+                },
+                {
+                    "tag": "chenbuilds-hyperframes",
+                    "title": "@ChenBuildsAI: HyperFrames — HTML In, MP4 Out, Deterministic",
+                    "body": "A first-hand test with the caveats left in, which is why it is worth reading. HyperFrames (heygen-com/hyperframes, 71K stars) is HTML in, MP4 out: npx hyperframes init, write a page with data attributes for timing, render — ten seconds of 1080p came out the other end with no model and no prompt lottery. Headless Chrome screenshots each frame and FFmpeg encodes it, so the same input yields the same video. That is the opposite trade from generative video: you lose surprise and gain repeatability, which is exactly what a pipeline needs. The honest limits: it refused to render until TMPDIR pointed at a real disk because /tmp was a 512MB memory disk, software GL fell back to screenshot capture at 44 seconds for ten near-blank seconds, and it wants Node 22 plus FFmpeg. Agent skills for Claude Code, Codex and Cursor ship with it, along with about 450 catalog blocks.",
+                    "url": "https://x.com/ChenBuildsAI/status/2114328095851176423"
+                },
+                {
+                    "tag": "dankornas-aos-dashboard",
+                    "title": "@DanKornas: A Read-Only Dashboard for Multi-Agent Sessions",
+                    "body": "The observability gap in multi-agent coding is that the only interface is a scrolling transcript. AOS Dashboard renders a session as a streaming project graph — agents, tasks, tokens, cost, file conflicts and alerts — available as a browser view, an `aos-dash` terminal view, an MCP server or a status line. It is read-only by design, so monitoring cannot steer the agents, and there is a lower-overhead 'Lines' view that drops particles and per-frame redraws when the display itself is competing for resources. The privacy detail is the one that will decide adoption: hooks do not log prompts, file contents or tool output, and task descriptions are redacted. MIT licensed, local only.",
+                    "url": "https://x.com/DanKornas/status/2114121447652360532"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
