@@ -1,0 +1,173 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Monday, October 26th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Cost Per Outcome Beats Price Per Token:</strong> One outbound run costs $1.49 instead of Clay's $10 because 320 profiles are screened first and only the 96 that pass get a paid lookup — while a 100-person team burned a ¥100k AI quota bundle in four months with no alerts and no remedy from the vendor.",
+        "<strong>The Harness Is the Variable:</strong> Auditing traces showed one harness silently ended 20% of runs on a fallback; rerunning the same model on a different harness moved it ahead of a stronger model, and a five-week Sentry routine opened 7 PRs, 6 of them merged.",
+        "<strong>Guardrails Are the Product:</strong> Claude Code's own team kept review but changed the question from 'did someone read every line' to 'which layer catches this', and merged PRs doubled June–September while the share needing a revert fell more than 40%.",
+        "<strong>Anthropic's S-1 Is Two Stories:</strong> H1 revenue of $16.3B against a $80.7B net loss that includes $26.6B of stock compensation, but Q2 posted $974M of GAAP operating profit and compute cost fell from 251% of revenue to 48%.",
+        "<strong>Verify Before You Believe the Benchmark:</strong> LiveBench 2.0 now ranks on cost per successful task — $6.90 for the top model, $0.76 for GPT-6.1 Sol, $0.18 for DeepSeek V4.1 Flash — and a new paper finds harness choice moves outcomes about as much as a rerun."
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "The Harness Around the Model",
+            "items": [
+                {
+                    "tag": "khazix-agent-pipeline",
+                    "title": "@Khazix0918: Five Days, One Visual Pipeline, Three Models in the Chain",
+                    "body": "A build report rather than a demo. The problem was sprawl: automations firing from a desktop app, from webhooks into a backend CLI, and from a hosted agent, with no single view of any of it. The first version was a plain web list, which he judged too boring, so the second became a Dyson-sphere-style miniature pipeline that routes each outgoing task to one of two agents — and is wired to real time and weather, so the town snows when it snows outside. The division of labour is the useful part: Claude Opus 5.5 built the visuals and the framework, then directed GPT-6 Astra to model and render the assets, while Codex ran the end-to-end tests on his own CI machine. Total spend is stated as roughly 30% of a Claude weekly allowance and two Codex allowances, which is the number to compare against your own attempts at this kind of tooling.",
+                    "url": "https://x.com/Khazix0918/status/2114343004471460341"
+                },
+                {
+                    "tag": "reignswords-cindy-teardown",
+                    "title": "@ReignSwords: Cloned the 490MB Repo Before Believing the Hype",
+                    "body": "He cloned the day's top GitHub project and read it instead of the README. What holds up: one task can be split across different harness and model combinations running in parallel — Claude Code and Codex mixed, switching models mid-run without dropping the workspace, memory or skills — and it can bill against subscriptions you already pay for rather than a second one. The scale is concrete: 34 packages, 13,007 TypeScript files, and a PR (#7229) merged at 17:02 the same day, so the repo is alive. The cold water is equally specific. Only the client is open source; the backend service is not in the repo, which the README admits. The official build ships TapDB analytics, and the documented one-line removal is stale — the call has moved to main-entry.tsx around line 223. Building it yourself drops it; installing the official binary does not.",
+                    "url": "https://x.com/ReignSwords/status/2114652755046564221"
+                },
+                {
+                    "tag": "guxiaochun-beacon-memory",
+                    "title": "@guxiaochun888: Beacon Turns Your Debugging Habits Into Portable Skills",
+                    "body": "The pitch is a specific annoyance: every time you switch between Claude Code, Cursor and Codex, you re-explain how you like a bug chased. Beacon distils a working session into a reusable skill and carries it across 20+ harnesses, so the correction you made once is available to the next tool. It is free and open source with a $5.5M seed round behind it — which is the arrangement worth noting, because it means the product being distributed is the client and the durable value is wherever the skills end up living. Install is a clone plus a hook into your existing agent flow. The claim to test on your own work is whether the distilled skill actually transfers between harnesses or merely transfers the prompt style.",
+                    "url": "https://x.com/guxiaochun888/status/2114527816209543465"
+                }
+            ]
+        },
+        {
+            "emoji": "💸",
+            "title": "Cost Per Outcome",
+            "items": [
+                {
+                    "tag": "jasonzhou-screen-first",
+                    "title": "@jasonzhou1993: $1.49 vs $10, and the Difference Is the Screener",
+                    "body": "The cleanest cost decomposition in today's feed. A 320-profile run costs $1.49 where the comparable Clay workflow costs $10, and the mechanism is not a cheaper model — it is ordering. A screener pass filters the 320 down to 96 that actually qualify, and only those 96 incur a paid enrichment lookup. The stated lesson is that most of a lead-data bill is spent on people you were never going to email. That generalises well past lead gen: any pipeline where a cheap classifier gates an expensive call converts a per-item cost into a per-qualified-item cost, and the ratio between the two is where the margin is.",
+                    "url": "https://x.com/jasonzhou1993/status/2114675661113848294"
+                },
+                {
+                    "tag": "nutllwhy-feishu-quota",
+                    "title": "@Nutllwhy: A ¥100k Quota Bundle Gone in Four Months, Silently",
+                    "body": "A procurement post-mortem worth reading as a warning about seat-based AI pricing. His company bought Feishu plus a ¥100k AI usage bundle for a 100-person business team. Four months later the bundle was nearly exhausted, with a single employee accounting for tens of thousands of renminbi of consumption — discovered only in retrospective analytics, because there were no alerts and no caps. The vendor's position, as he relays it, is that the training did not cover the limits, that the consumed quota stands, and that topping up costs full price. His boss is now refusing to renew. Whatever you think of the account, the failure mode is architectural: usage-based AI inside a per-seat product, with no per-user budget and no threshold notification, converts one enthusiastic user into a company-wide overrun.",
+                    "url": "https://x.com/Nutllwhy/status/2114654653023662153"
+                },
+                {
+                    "tag": "heloumaster-codex-56",
+                    "title": "@HelouMaster: Went Back to 5.6 Sol Because He Can't Feel 6.1",
+                    "body": "A downgrade report, which is rarer than an upgrade report. Daily Codex tasks went back to 5.6 Sol on three judgements: 6.1 Sol does not feel smarter on his work, 5.6 is visibly faster, and 5.6 consumes less quota. The last point is the one he flags as confusing — on published API pricing 6.1 Sol is actually cheaper than 5.6, so the subscription accounting is running in the opposite direction from the list price. That gap is the thing to watch if you budget on API rates: quota consumption per task is not derivable from price per token, and a cheaper model that takes more turns can cost more of a window.",
+                    "url": "https://x.com/HelouMaster/status/2114564270071448011"
+                }
+            ]
+        },
+        {
+            "emoji": "🔬",
+            "title": "Evals, Traces and Readability",
+            "items": [
+                {
+                    "tag": "wenhaocha-argon-harness",
+                    "title": "@wenhaocha1: The Harness Was Ending 20% of Runs",
+                    "body": "An audit finding rather than a benchmark result, and more useful for it. While reading traces, his team found the Pi Harness simply terminates the run whenever it hits a fallback — for example on a security task — and does so in about 20% of runs. Rerunning Gemini 4 Argon on the Antigravity Harness instead put it ahead of Astra and immediately behind Opus 5.5. Two things follow. First, a model's measured capability depends on what the scaffolding does at the edges, not just the sampling loop. Second, silent termination on fallback is a class of bug that inflates failure rates without ever appearing in an error log — worth grepping your own harness for.",
+                    "url": "https://x.com/wenhaocha1/status/2114559544156205413"
+                },
+                {
+                    "tag": "lijigang-readability-paper",
+                    "title": "@lijigang: Why Model Prose Is Hard to Read, and Two Rules That Help",
+                    "body": "He summarises a paper arguing that machine text is dense for a structural reason. Human language evolved for communication and tends toward uniform information density — short dependency distances, signal words at the right joints, no rare collocations — because that lowers the listener's processing load. Frontier models are now post-trained with RL on maths, code and reasoning, where being correct earns reward and being clear earns nothing, while a fixed context window rewards saying the same thing in fewer words. The result is pressure toward dense, short, low-redundancy prose. Two AGENTS.md rules follow directly: never drop the connective between two adjacent claims (the reader should not have to infer whether it is a contrast, a cause or an addition), and cap noun-modifier nesting at two layers — if you need three, explain the innermost concept in its own sentence first.",
+                    "url": "https://x.com/lijigang/status/2114553896437981204"
+                },
+                {
+                    "tag": "naceai-drex-search",
+                    "title": "@NaceAI: 62% Fewer Steps, 56% Fewer Tokens on Agentic Search",
+                    "body": "Vendor numbers, so treat the magnitudes as claims and the shape as the finding. Drex bills itself as decision-powered retrieval that replaces standard file search inside an agent loop, and reports 62% fewer steps to an answer, 56% of tokens saved, and a 4% performance gain across Claude Code, Codex, OpenCode, Hermes and Pi. The evaluation covers six professional-work benchmarks including OfficeQA, at 529 real queries. The interesting claim is not the accuracy delta — 4% is within noise on many suites — but the step count: if retrieval returns decisions rather than candidate documents, the agent stops iterating. That is testable on your own traces before you install anything.",
+                    "url": "https://x.com/NaceAI/status/2114731088337658286"
+                }
+            ]
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Releases Worth Opening",
+            "items": [
+                {
+                    "tag": "mylifcc-claude-seo",
+                    "title": "@mylifcc: 19 Agents and 26 Sub-skills Turned Into an SEO Audit",
+                    "body": "A 20.1k-star open-source project that packages Claude Code into a full-site SEO audit: 19 specialist agents, 26 sub-skills, and up to 17 agents running concurrently in the terminal. The substitution claim is concrete — a deep audit previously meant a few hundred dollars a month of Ahrefs or SEMrush, or a few thousand dollars and two weeks with an agency; here it is a URL and about 15 minutes at zero marginal cost. The scope is broader than classic SEO: crawling, redirects, Core Web Vitals, E-E-A-T scoring, headless rendering for React and Next.js pages, plus GEO checks for how likely a page is to be cited by ChatGPT, Perplexity, Gemini and Google AI Overviews, including llms.txt and WebMCP readiness. Output is a priority-ordered Markdown or PDF remediation plan. The author's own site reportedly took 10.8K organic GSC clicks in its first 12 weeks with mobile speed at 99.",
+                    "url": "https://x.com/mylifcc/status/2114567948400837070"
+                },
+                {
+                    "tag": "rivet-3-preview",
+                    "title": "@rivet_dev: 8ms Coldstarts, 78KB Per Actor, S3 as the Only Dependency",
+                    "body": "Rivet 3.0 preview is a storage-architecture release more than a feature release. The headline numbers: 8ms actor coldstarts, 0.7ms SQLite writes, and 78KB of RAM per actor, with S3 as the only dependency — no database to run alongside it. It runs embedded, self-hosted, or BYOC, which matters if the actor model was previously something you could only adopt by accepting a hosted platform. For anyone running long-lived agent state, the cost profile is the interesting part: the per-actor memory floor is what determines how many concurrent sessions a small box can hold, and 78KB changes that arithmetic by an order of magnitude compared with a container per session.",
+                    "url": "https://x.com/rivet_dev/status/2114732325674336580"
+                },
+                {
+                    "tag": "chasenliao-deeptutor",
+                    "title": "@chasenliao: DeepTutor at 43k Stars, With Memory You Can Inspect",
+                    "body": "HKUDS open-sourced an AI tutor that works from your own material rather than the open web: drop in textbooks, lecture notes and handouts, and it explains, generates problems, does deeper research and draws visual explanations in the same workspace. The design choice worth noting is a three-layer memory split into raw records, per-scenario key points, and an overall profile of the learner — each layer open and editable, so you can see and correct what it believes about you. Progress and wrong answers survive a new session. It also accepts Bilibili and YouTube links and lets you ask about a specific timestamp. Install is three lines (pip install -U deeptutor, then init and start), or hand the repo to Claude Code or Codex, which read the SKILL.md at the root and set it up.",
+                    "url": "https://x.com/chasen_liao/status/2114702883673501719"
+                }
+            ]
+        },
+        {
+            "emoji": "📈",
+            "title": "The Money Behind the Models",
+            "items": [
+                {
+                    "tag": "kshsb-anthropic-s1",
+                    "title": "@Kshsb783142: Anthropic's S-1, Read Line by Line",
+                    "body": "A long close read of the filing, and the juxtapositions are the story. Ticker ANT, listing targeted for the week of November 16, a raise that could reach $100B at a $1.5–2T valuation, with BofA, Deutsche, Morgan Stanley, JPM, Citi, UBS and BNP on the book. H1 revenue was $16.3B against $1.2B a year earlier — roughly 1,200% TTM growth — alongside a $80.7B net loss that includes $26.6B of restricted stock unit expense and $72B of accounting adjustment. Buried under that, Q2 produced $974M of GAAP operating profit, and compute and infrastructure costs fell from 251% of revenue to 48%. Cash and equivalents sit at $114.9B against $141.1B raised cumulatively. The part he flags as most alarming is the disclosed compute commitment, which the filing concedes was previously underestimated. Treat the accounting items as his reading, not the filing's own framing.",
+                    "url": "https://x.com/Kshsb783142/status/2114725471435042819"
+                },
+                {
+                    "tag": "assumesi-capex-debate",
+                    "title": "@assumeSi: $60B Per Gigawatt and a 15% Cost of Debt",
+                    "body": "Notes from a CASPA stage debate between SemiAnalysis's Dylan Patel and Bernstein's Stacy Rasgon. The cost of building one gigawatt of compute has gone from $40B to $60B, with financing, packaging substrates, HBM, optics and cleanrooms as the constraints. The hyperscaler argument is arithmetic: even pushing free cash flow to zero and borrowing, they cannot fund more than $2–2.5T of capex next year, while Meta alone carries $1.4T of on- and off-balance-sheet compute and data-centre commitments and has just reworked its equity structure to prepare for financing. Neoclouds make up roughly half of capacity under construction but borrow at 13–15% — VLTA's 12% coupon issued at 95 is close to 15% all-in, and CRWV's unsecured paper yields near that — so NVDA, AVGO and AMD are being pulled into credit backstops to keep that half of the market alive.",
+                    "url": "https://x.com/assumeSi/status/2114505233821012376"
+                },
+                {
+                    "tag": "bqlsj-hongguo-economics",
+                    "title": "@Bqlsj2023: Short Drama at ¥40B Against a ¥52B Box Office",
+                    "body": "One comparison that reframes a whole industry. Hongguo, ByteDance's short-drama app, is reported at ¥40B in revenue this year — roughly $6B — against a total Chinese theatrical box office of about ¥52B. The stack behind it is the argument: Fanqie has accumulated a large corpus of web fiction already validated by readers, Douyin supplies the cheapest large-scale traffic pool and the fastest test loop for a hook, Seedance-class video models collapse shooting and casting costs, and Hongguo plus PineDrama overseas closes the monetisation. Low script cost, low production cost, low acquisition cost — three cost advantages compounding in one pipeline. He adds that the overseas leg has barely started, which is the part still to be tested rather than assumed.",
+                    "url": "https://x.com/Bqlsj2023/status/2114609222130577531"
+                }
+            ]
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "androiduser-livebench-cost",
+                    "title": "@Android_user00: LiveBench 2.0 Ranks Cost Per Successful Task",
+                    "body": "The benchmark change that matters more than the leaderboard. LiveBench 2.0 now scores cost per successfully completed task rather than price per token, which is the only unit that survives contact with an agent loop. Claude Fable 5.1 takes first overall at 85.7 and first in coding at 97.7, but at $6.90 per successful task. GPT-6.1 Sol is 1.6 points back at 84.1 for $0.76 — a ninth of the price for a rounding error of score. Then the interesting one: DeepSeek V4.1 Flash ties Sol at 96.0 on real merged-PR bug fixes, with MIT-licensed open weights and $0.18 per successful task, 38x cheaper than Fable. The catch is stated rather than buried — on long agentic work it scores 77.9 against Fable's 40.9, meaning the cheap model wins short bursts and loses sustained autonomy.",
+                    "url": "https://x.com/Android_user00/status/2114725103691034707"
+                },
+                {
+                    "tag": "suheejesschoi-harness-paper",
+                    "title": "@suheejesschoi: What Does a Harness Buy? Mostly Tokens",
+                    "body": "A paper that directly attacks the intuition behind every harness rewrite. The authors ran Claude Code, OpenCode and mini-SWE-agent across five models on SWE-bench Verified. Across 447 tasks, the heaviest and lightest harnesses finished within 5 points of each other. On a 45-task hard subset, switching harnesses changed the outcome on 13% of tasks — comparable to simply rerunning the same configuration. The measured difference was mostly in tokens: cost per task moved as much as 3x for the same work. That is a useful deflation of the 'the harness is everything' line without going all the way to 'harnesses do not matter' — the paper is arguing that most of what a harness buys you is context efficiency, not capability.",
+                    "url": "https://x.com/suheejesschoi/status/2114704538196480330"
+                },
+                {
+                    "tag": "nicolasrouanne-sentry-routine",
+                    "title": "@nicolasrouanne: A Nightly Sentry Routine That Merged 6 of 7 PRs",
+                    "body": "Five weeks of a Claude Code routine that reads Sentry alerts posted into Slack at 01:00, finds the root cause in the monorepo, and opens a PR only when it is confident in the fix. The results: 7 PRs, 6 merged, and about fifteen alerts dismissed with a real diagnosis rather than silence. He is as clear about the two blind spots. First, the agent reasoned over Slack's summary of the alert, which is truncated — no full stack trace, no environment detail — so its diagnosis quality was capped by the notification format, not the model. Second, a fix that is confidently wrong is worse than no fix at 1am, which is why the PR gate and the merge review stay. The transferable design is the write-barrier: read everything, write only under confidence.",
+                    "url": "https://x.com/nicolasrouanne/status/2114628421951078514"
+                },
+                {
+                    "tag": "lummox-failing-test-first",
+                    "title": "@Lummox_eth: A Failing Test Before Another Prompt",
+                    "body": "Boris Cherny's advice, relayed with the example that makes it concrete: Claude Code needs a failing test before you send the next prompt. Three things get set up in the repo — the project rules, a reproducible failure, and a way for the model to check its own fix. The illustration is a checkout total: expected 10800 cents, actual 11000, because tax is applied before the discount instead of after. Once the failure is executable and the expected value is fixed, the model has a target it can iterate against without you in the loop. It is the least glamorous habit in agent work and the one that most reliably separates a session that converges from one that thrashes through plausible edits.",
+                    "url": "https://x.com/Lummox_eth/status/2114718890349502772"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
