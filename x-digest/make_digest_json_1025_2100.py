@@ -1,0 +1,179 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Sunday, October 25th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>An Advisor Beats a Committee:</strong> Anthropic's advisor pattern — one cheap model driving the task, a stronger one pulled in only before a plan locks, when an error repeats, and before done — scored 2.7 points higher on SWE-bench Multilingual than Sonnet alone for 11.9% less cost per task, while Anthropic's own multi-agent research found delegation runs 3–10x the tokens.",
+        "<strong>Effort Settings Are a Price, Not a Preference:</strong> Sol High consumed 51% of a five-hour Codex window in thirty minutes of use, and on the same Blender MCP task Astra burned 13% of quota in 26 minutes against Sol 6.1's 4% in 49.",
+        "<strong>Model Routing Pays If the Lanes Stay Small:</strong> A schema migration across 64 files and 340 tests cost $4.26 all-Opus and $1.03 routed, with Haiku doing six tasks on 720k tokens for $0.07 — and the write work still fitting on Sonnet at $0.21.",
+        "<strong>The Patch Is Now the Bottleneck:</strong> AI found the PHP flaws faster than the ecosystem could ship fixes, a honeypot is offering 0.02506816 BTC to anyone who breaks a pre-CVE PHP install, and modified copies of the ARTEX pentest framework keep circulating after its author stopped distributing it.",
+        "<strong>The Money Is Concentrated and Circulating:</strong> Ramp's data has 1% of companies accounting for 90% of AI spend, with 80% of that from unprofitable VC-backed startups, while Musk says lenders have almost completely cut funding to firms wholly dependent on AI data-centre revenue."
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "Harness Economics: Where the Tokens Go",
+            "items": [
+                {
+                    "tag": "stretchcloud-opus-advisor",
+                    "title": "@stretchcloud: Sonnet With Opus On Call Beats Opus All Day",
+                    "body": "The number worth keeping from Claude Code's new advisor tool: Sonnet paired with an Opus advisor scored 2.7 points higher on SWE-bench Multilingual than Sonnet alone, for 11.9% less cost per task. Haiku with the same advisor hit 41.2% on BrowseComp against 19.7% solo — trailing Sonnet by 29% on that score while costing 85% less per task than Sonnet would. Eve Legal told Anthropic that Haiku plus an Opus advisor matched frontier quality on document extraction at a fifth of the cost of running the frontier model directly. The mechanism is narrow on purpose: one model drives end to end, and the advisor is pulled in at exactly three moments — before a plan locks, when the same error repeats, and before the task is marked done. It never touches a file; it returns a plan, a correction or a stop signal, a few hundred tokens billed at its own rate. Against that, Anthropic's own research on multi-agent systems found the decompose-and-delegate pattern runs 3 to 10x the tokens of one agent doing the same work, mostly lost to duplicated context and handoffs.",
+                    "url": "https://x.com/stretchcloud/status/2114385748535156780"
+                },
+                {
+                    "tag": "0xveyyro-claude-router",
+                    "title": "@0xVeyyro: $4.26 All-Opus, $1.03 Routed, Same Launch Line",
+                    "body": "A rerun with harder work than the usual demo: a database schema migration, 340 tests, 64 files. All-Opus would have cost $4.26; the routed run cost $1.03, leaving 76% unburned. The split is the useful part. Haiku 5.5 took six tasks — scan 64 files, grep 27 imports, list 5 flaky tests, summarise 8 logs, run 340 tests, type-check and lint — on 720k tokens for $0.07. Sonnet 5.5 took the schema migration and two tests on 210k tokens for $0.42. Opus 5.5 read the diff and raised three flags on 134k tokens for $0.54, and every agent returns summaries only, so Opus never sees raw output. The correction to the obvious assumption is that the migration itself ran on Sonnet for $0.21 and Opus still caught three things reviewing it. One caveat he states rather than hides: past a 100k prompt Haiku costs five times its own rate, so each lane is deliberately kept small.",
+                    "url": "https://x.com/0xVeyyro/status/2114074446642483494"
+                },
+                {
+                    "tag": "maxt3chno-astra-vs-sol",
+                    "title": "@maxt3chno: Astra 13% / 26 min vs Sol 6.1 4% / 49 min",
+                    "body": "A side-by-side on one honest task: building a 3D model from scratch through Blender MCP. Astra drained 13% of quota in 26 minutes; Sol 6.1 used 4% and took 49 minutes. The framing — 'did OpenAI quietly route Sol somewhere stronger?' — is speculation, and he does not pretend otherwise. What is not speculation is the trade he measured: roughly a third of the quota for roughly twice the wall clock. For interactive work that may well be the right trade; for anything batched or overnight, the cheap model is buying you three more attempts at the same problem.",
+                    "url": "https://x.com/maxt3chno/status/2114297169180025009"
+                }
+            ]
+        },
+        {
+            "emoji": "💸",
+            "title": "Quota Arithmetic",
+            "items": [
+                {
+                    "tag": "shakhzod-sol-high",
+                    "title": "@shakhzod1001: Thirty Minutes of Sol High, Half the Window",
+                    "body": "One trial, stated plainly: half an hour of GPT-6.1-Sol High ate 51% of the five-hour limit, against Sol Medium running more than two hours nonstop. His claim that there is no large output gap between the two grades is the part to test on your own workload rather than accept — but the ratio is the kind of number you can plan around. If a single session can consume half a window in thirty minutes, the effort dial is not a quality preference, it is a budget decision you make before you start.",
+                    "url": "https://x.com/shakhzod1001/status/2114280818428310001"
+                },
+                {
+                    "tag": "vincent-magpie-usage",
+                    "title": "@cn_Vincentzyx: Same Output, Twice the Quota — 7% vs 16%",
+                    "body": "A controlled comparison that isolates the variable. Same account, Opus 5.5 at high effort, the same 'pelican riding a bicycle' HTML task, measured in five-hour quota: official interactive use 7% and 7%, `claude -p` 14%, Magpie 16% and 17%. He notes the `-p` output volume was nearly identical to the interactive run, so the doubling is not explained by more work being done. The plausible readings are per-request overhead or a different accounting path for non-interactive sessions, and he is asking Anthropic's team directly how usage is computed. That is the right question, because if headless invocation bills at twice the interactive rate, every agent wrapper built on a subscription is quietly twice as expensive as its author thinks.",
+                    "url": "https://x.com/cn_Vincentzyx/status/2114395054005792936"
+                },
+                {
+                    "tag": "heydengai-codex-quota",
+                    "title": "@heydengai: A Small Collector Ate a Week of Pro 5x",
+                    "body": "The complaint is specific enough to be useful. The project was a modest one — collect X trending topics, report them to a server, have an app fetch the data, then a human confirms — and it consumed an entire week of the Pro 5x quota on GPT-6.1 Sol Medium. His question is whether OpenAI has compared Codex and Claude Code on the same tasks and knows the quota gap. Whether or not it has, the practical lesson for anyone budgeting agent work is that 'a few lines of code' is not the unit of cost; the number of tool calls and retries per feature is, and a four-stage pipeline with a confirmation step is four stages of context.",
+                    "url": "https://x.com/heydengai/status/2114216884883345639"
+                }
+            ]
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Releases and Builds",
+            "items": [
+                {
+                    "tag": "elonmusk-grok-calls",
+                    "title": "@elonmusk: Grok Bot Now Makes the Phone Call",
+                    "body": "A capability announcement with the loop spelled out: Grok Bot will call a person or a business on your behalf, make the request, take notes on the response, and send you a note summarising the conversation. It is the least glamorous agent feature and probably the most useful — a large share of real-world tasks still terminate in a phone tree, and no amount of browser automation reaches them. Worth testing against the obvious failure mode: what it does when it reaches a human who asks who is calling and why.",
+                    "url": "https://x.com/elonmusk/status/2114365361068138990"
+                },
+                {
+                    "tag": "btrischetta-conclave",
+                    "title": "@btrischetta: Conclave — Thirteen Models, One Auditor From Another Company",
+                    "body": "Shipped free and open source after a September promise, and the design is more interesting than the aggregate answer. Conclave asks up to thirteen models at once — Claude, ChatGPT, Gemini, Grok, DeepSeek and others — has an independent synthesizer weigh their answers, then has a model from a different company audit the result for mistakes before you see it. Sources, audit and cost are all exposed. It runs on your own machine with your own API keys: no account, no subscription, no middleman, and you pay the labs only for what you use. Windows for now, which is the limitation to note if you were about to install it on a Mac. The premise — better answers come from disagreement that is then checked — is the same argument as the advisor pattern, one layer up.",
+                    "url": "https://x.com/btrischetta/status/2114432254172627095"
+                },
+                {
+                    "tag": "ding-liam-agent-stack",
+                    "title": "@ding_liam: Deleted Railway Hermes, Moved Nine Agents in an Afternoon",
+                    "body": "A migration report with the migration cost included: an afternoon to move every workflow and project off a Railway-hosted Hermes Agent to Grok Bot, plus a rethink of roles and reporting lines. His most transferable conclusion is about restraint — more bots is not better, and don't create group chats unless necessary, because token efficiency is a design constraint rather than an afterthought. The ranking of nine personal agents is opinion, clearly labelled as such, but the reasons are concrete: Grok Bot gets 1,000 free X searches a day, which he treats as effectively real-time X data on a $30/month Premium tier; Muse is judged the easiest ToC on-ramp with generous free quota; Duet runs on Opus 5.5 for $20/month; Dot sits inside ChatGPT at $100/month and, in his experience, forgets things and misses scheduled jobs; Cue's draw is calls and SMS; Hermes is for developers who will deploy and wire up keys themselves. He ends with 8 GB RAM, 8 vCPU and 100 GB of Railway credit now looking for a purpose.",
+                    "url": "https://x.com/ding_liam/status/2114260170171658707"
+                },
+                {
+                    "tag": "theo-ios-on-ubuntu",
+                    "title": "@theo: An iOS Simulator on Ubuntu, Driven Through a Mac Mini",
+                    "body": "A setup note rather than a product launch, and the kind of thing that quietly changes a workflow: he ran an iOS simulator on a machine booting Ubuntu, talking to a Mac mini connected through T3 Code, and calls it the best iOS development experience he has had. The interesting claim is architectural — the simulator does not need to live on the machine you are typing on, and once the remote box is just another endpoint, the OS you develop on stops constraining the platform you build for.",
+                    "url": "https://x.com/theo/status/2114267380818100402"
+                }
+            ]
+        },
+        {
+            "emoji": "🔒",
+            "title": "The Patch Gap",
+            "items": [
+                {
+                    "tag": "tspy-php2shell-honeypot",
+                    "title": "@tspy: 0.02506816 BTC for Anyone Who Breaks This PHP Box",
+                    "body": "Someone built a PHP site as a live test of how much attention php2shell is getting, and put a wallet key on it: 0.02506816 BTC, about $2,018 at the time of posting. The install runs a PHP version older than the CVE's release, so anyone who breaks in can read the key file directly. Whatever you think of the incentive design, it is a real measurement of how many automated scanners are pointed at this class of box right now — and a reminder that the exploit window is being probed continuously, not opportunistically.",
+                    "url": "https://x.com/tspy/status/2114393799095107838"
+                },
+                {
+                    "tag": "josephyala-php-fix-gap",
+                    "title": "@Josephyala: Finding the Flaw Was the Easy Half",
+                    "body": "The correction to the way AI vulnerability discovery usually gets reported. AI helped identify two serious flaws in PHP — and finding them turned out to be only part of the problem. The fixes then had to be prepared, packaged and distributed so administrators could install them before attackers got there. That last step is the one with the schedule risk, and it is the reason a record month for disclosed vulnerabilities is not the same thing as a record month for security. The bottleneck moved from discovery to distribution, and distribution runs at the speed of other people's maintenance windows.",
+                    "url": "https://x.com/Josephyala/status/2114277369326301521"
+                },
+                {
+                    "tag": "naypyidaw-artex-copies",
+                    "title": "@naypyidaw: ARTEX Was Withdrawn; the Forks Were Not",
+                    "body": "Per Nikkei, modified copies of ARTEX — a Chinese-developed autonomous AI penetration-testing framework — are circulating even after its developer stopped distributing the original, with abuse confirmed in attacks on Japanese companies. The point generalises past this one tool: once an autonomous attack framework is public, withdrawing it does not recall it, and every fork inherits the capability without the author's intent. For defenders the implication is that the tooling curve has already moved — the question is no longer whether an adversary can automate reconnaissance and exploitation, only how quickly your own patching closes the gap.",
+                    "url": "https://x.com/naypyidaw/status/2114358549153497147"
+                }
+            ]
+        },
+        {
+            "emoji": "⚡",
+            "title": "Compute, Capex and the Credit Question",
+            "items": [
+                {
+                    "tag": "ai-funss-inference-margin",
+                    "title": "@ai_funss: $8/hr of B300, $10–20/hr of Revenue",
+                    "body": "An attempt to reconstruct the arithmetic behind the inference resellers who report seven figures a month. Rent B300 capacity at $8/hour, serve DeepSeek 4.1, Kimi K3 or GLM 5.3 at around 100 tok/s, and the revenue lands at $10–20/hour; DeepSeek's own off-peak pricing can reach $38/hour, and on Vera Rubin he puts gross margin toward 80%+. The framing is deliberately unflattering — a few people vibe-coding a thin front end, renting cards, running Chinese open models, and taking the spread through a router — and the second-order point is the one worth thinking about: the margin exists because the closed labs keep tightening quotas and raising API prices, so the arbitrage is a direct function of the frontier labs' pricing power.",
+                    "url": "https://x.com/ai_funss/status/2114290357605425444"
+                },
+                {
+                    "tag": "artofspecuycky-ramp-concentration",
+                    "title": "@ArtofSpecuycky: 1% of Companies, 90% of AI Spend",
+                    "body": "Notes from the All-In episode that matter more than the bubble debate. Chamath cites Ramp's payment data: 1% of companies account for 90% of AI spend, and within that 90%, 80% comes from startups that are not yet profitable and are funded by venture money. He describes a loop — VC money to startup A, A buys model access from startup B, B uses the growth to raise from the same VCs — and estimates roughly 75% of the money is circulating inside the startup ecosystem rather than reaching traditional enterprises. The counter-signal in the same dataset is the one to watch: top spenders are shifting budget from closed APIs toward their own GPUs and private clusters, with one large US bank reportedly cutting AWS and GCP spend to build six private data centres. Jason's rebuttal is fair and worth holding alongside it — startups were also first to AWS and Facebook Ads, and that instinct was right.",
+                    "url": "https://x.com/ArtofSpecuycky/status/2114186998626070645"
+                },
+                {
+                    "tag": "watcherguru-musk-lenders",
+                    "title": "@WatcherGuru: Lenders Have Nearly Stopped Funding Data-Centre-Only Revenue",
+                    "body": "A one-line report of a Musk warning: lenders have almost completely cut off funding to companies whose revenue depends entirely on AI data centres. Treat it as a signal rather than a finding, because the claim arrives without the underlying venue or numbers. What makes it worth a line here is the asymmetry it implies — the same week that inference resellers are quoting 80% gross margins on rented capacity, the debt market is repricing the entities that own the buildings. Those two facts can both be true, and the spread between them is where the next twelve months of consolidation probably sits.",
+                    "url": "https://x.com/WatcherGuru/status/2114482312268366117"
+                },
+                {
+                    "tag": "balder-audi-georgia",
+                    "title": "@Balder13946731: The $4B Plant Isn't the Hard Part — the Visas Are",
+                    "body": "A useful corrective to the reshoring headline. Trump announced a $4 billion Audi plant in Georgia — the same state where, last September, ICE handcuffed more than 300 Korean engineers at a Hyundai-LG battery site and flew them back to Seoul. His argument is that money and equipment are the easy approvals; what a new line actually needs is the parent company's engineers on site for at least half a year to commission it, and those people are still travelling on B-1 and ESTA grey-zone status. Put yourself in the line manager's chair: would you put your German commissioning team on a flight to Atlanta this month? Capital announced is not capacity installed, and the constraint is immigration policy rather than steel.",
+                    "url": "https://x.com/Balder13946731/status/2114313668448125057"
+                }
+            ]
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "govind-compaction-cost",
+                    "title": "@Govind_vash02: Compaction Cut Context 33% and Raised the Bill",
+                    "body": "A rare thing: someone built their own coding agent, instrumented it with evals, and published an experiment that failed in an interesting direction. The task was nine files and four tickets on gpt-5-mini. With compaction off, ten runs averaged 16.5 steps, 14.7k peak input and 16k fresh input. Clearing at 8k tokens: 23.3 steps, 9.8k peak, but 46k fresh input, with two to seven clears per run. Clearing at 12k: 17.4 steps, 12.7k peak, 25k fresh input, exactly one clear per run. Pass rate stayed at 100% throughout and the bill went up anyway. Two mechanisms explain it. At 8k the threshold sits near the size of what the model is actively working on, so it cleared a file, re-read it next turn, and cleared again — ten file reads became fifteen, and one edit failed because the model wrote from memory of a file it no longer had. At 12k the cleared tokens had been cached at roughly a tenth of the price, and clearing changes the start of the conversation and invalidates the cache for everything after it; one clear needs about fourteen turns to pay for itself, and these runs had six to nine. Conclusion: with prompt caching, compaction buys room for long sessions, not savings on short tasks.",
+                    "url": "https://x.com/Govind_vash02/status/2114067641484849548"
+                },
+                {
+                    "tag": "brunooliveira-hermes-commits",
+                    "title": "@brunooliveira: 229 Commits, and Two Bugs That Should Scare You",
+                    "body": "Release notes written as a threat model, which is why they are worth reading in full. Two entries stand out. First: a cron job that named one MCP server by its toolset name never matched the allowlist check, so it ran with every enabled MCP server — asking for filesystem also granted github and slack, and a server explicitly disabled with `enabled: false` fell through the same way. Second: on platforms without buttons, the text `/approve` prompt cut commands at 200 characters, so a 320-character echo followed by `&& rm -rf` displayed no `rm -rf` at all. The fixes are proportionate — cards now show the call's arguments as JSON capped at 1,200 characters with API keys and tokens masked even when secret redaction is off, and the text prompt shows up to 3,000 characters — but the pattern is the lesson: the approval surface is part of the security boundary, and truncation is a vulnerability. Also noted: a gateway that crash-looped on Docker Desktop because sockets cannot be bind-mounted, fixed by falling back to a 0700 temporary directory, and one-shot runs that may now author skills at a cost of roughly 1,343 extra tokens per request.",
+                    "url": "https://x.com/brunooliveira/status/2114336661047795754"
+                },
+                {
+                    "tag": "omarsar0-cli-interface",
+                    "title": "@omarsar0: The CLI Is No Longer the Best Interface for Agents",
+                    "body": "A short argument from someone who has been a heavy CLI user and is changing his mind anyway. His claim is that the terminal was the right interface when the model was the bottleneck, and stopped being the right one as persistence, coordination, parallelisation, tool calling, memory and harness optimisation improved — at which point the interface becomes the thing holding the model back. The apps he names, Grok Bot and the Codex app, make multi-agent work and lifecycle management easier to run than a shell does. His rule of thumb is the falsifiable part: don't use an interface that keeps you from leveraging the model to its limits. You can disagree with the conclusion and still use the test — most people's tooling choices are habits formed when the constraints were different.",
+                    "url": "https://x.com/omarsar0/status/2114489246434173180"
+                }
+            ]
+        }
+    ]
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
