@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Tuesday, October 27th, 2026 — 12:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Tuesday, October 27th, 2026 — 12:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>Cheap Per Token Is Not Cheap Per Change:</strong> On CursorBench 4.0, DeepSeek V4.1 Flash at medium effort scored 46.3% for $0.80 a task while Opus 5 at extra-high scored 46.1% for $11.43 — but Flash burned about 398K tokens over 189 steps against Opus 5's 80K over 103.</li>
+      <li><strong>The Bill Is Per Finished Task:</strong> A Stevens Institute paper replaced per-step model calls with a solved-once controller on τ²-bench telecom, cutting Opus 5.5 from 15.6 calls and about $0.43 per chat to 0.43 calls and $0.012–0.024 while solving 114 of 114 tasks instead of 111.</li>
+      <li><strong>Harness Diversity Is Training Signal:</strong> A Renmin University team treated the harness as a five-part scaling dimension and lifted Qwen3-4B from 29.8 to 39.0 Pass@1, with policies trained on white-box harness variation transferring better to an unseen Claude Code harness than policies trained on Claude Code itself.</li>
+      <li><strong>Twenty-One Days, Target Missed:</strong> An agent run spent 21 days and 180 subagents building a CUDA inference engine on one RTX 3090 — 230M tokens, 1.7B cache reads, 699 context compactions and 83 hours of compacting — and reached about 250 tok/s prefill against llama.cpp's roughly 700.</li>
+      <li><strong>Scan the Skill Before You Install It:</strong> NVIDIA's SkillSpector found at least one vulnerability in 26.1% of 31,132 analysed agent skills and high-severity patterns suggesting likely malicious intent in 5.2%, with skills shipping executable scripts 2.12x more likely to be vulnerable.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧮</span>
+      <h2>Cheap Per Token, Not Per Change</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag everydevai-cursorboard">Everydevai-Cursorboard</span> @EveryDevAi: $0.80 Outscored $11.43 on Cursor&#x27;s Own Board</div>
+    <div class="item-body">The full CursorBench 4.0 table, read as a cost sheet rather than a leaderboard. DeepSeek V4.1 Flash at medium effort scored 46.3% at $0.80 per task; Opus 5 at extra-high scored 46.1% at $11.43. Effort level turns out to move the bill far more than the score: Opus 5.5 High is 56.0% at $3.97, while Max buys 1.8 points for $13.43, about 3.4x the cost. The cheap tiers cluster tightly — Sonnet 5.5 High 47.8% at $1.20, Flash Max 47.7% at $0.98, Haiku 5.5 extra-high 44.3% at $0.56. The catch is in the trajectory: Flash Medium averaged 189 steps and roughly 398K tokens per task against 103 steps and 80K for Opus 5, so cheap per task is not the same as fast, and it means more diff to review. These are Cursor&#x27;s numbers in Cursor&#x27;s harness on ambiguous multi-file tasks, and the Opus 5 row is the older model.</div>
+    <div class="item-meta">
+      <a href="https://x.com/EveryDevAi/status/2115080829974258045" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag degenofwallst-flash-fineprint">Degenofwallst-Flash-Fineprint</span> @DegenOfWallSt: 47.7% for $0.98, Over 187 Steps</div>
+    <div class="item-body">The same board with the fine print attached. Flash&#x27;s three effort levels: low 44.9% at $0.60 over about 291K tokens and 161 steps, high 45.6% at $0.77 over 385K and 186 steps, max 47.7% at $0.98 over 537K and 187 steps. The comparison that matters is the step count, because Sonnet 5.5 High ties Flash Max at 47.8% for $1.20 but does it in 41 steps and roughly 37K tokens — a fifth of the steps and a tenth of the tokens for 22 cents more. Haiku 5.5 Max lands 48.4% at $1.12, and Opus 5.5 Max still leads at 57.8% for $13.43, about 14x the price for ten points. His per-token rates for Flash: $0.30 input, $0.006 cache read, $1.20 output, flat across the full 1M context and outside the usage included in Cursor plans. Cursor&#x27;s own note that small score gaps may not be statistically meaningful is worth keeping next to all of it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/DegenOfWallSt/status/2115102734672175502" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag lenny-enderle-terra-math">Lenny-Enderle-Terra-Math</span> @lenny_enderle: 3 × 4 = 12, Not 9</div>
+    <div class="item-body">A short arithmetic check on a vendor claim. Terra&#x27;s list prices are $1 per million input, $0.05 cached input and $5 output, which makes cached input 20x cheaper than fresh input and output 5x input — for an agent loop that re-reads its context every step, the cache hit rate may matter more than the headline rate. OpenAI&#x27;s page then claims Terra is over 3x as token-efficient as Opus 5.5 at max effort, at one-fourth the price per token, for roughly 9x lower cost per task. Three times four is twelve, not nine, so part of the gap has to come from token mix or caching that the comparison does not show. He labels it as what it is: a vendor number that does not reconcile with its own factors.</div>
+    <div class="item-meta">
+      <a href="https://x.com/lenny_enderle/status/2115029598748496014" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💸</span>
+      <h2>The Unit Is the Finished Task</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag martinszerment-belem-tokens">Martinszerment-Belem-Tokens</span> @MartinSzerment: 48% More Tokens, a 38% Lower Bill</div>
+    <div class="item-body">DesignArena gave GPT-6.1 Terra and GPT-5.6 Terra the same prompt — build Lisbon&#x27;s Belém Tower at golden hour in the browser, with gulls, a sailboat and the 25 de Abril bridge in haze — and published both the output and the accounting. Terra burned 48% more tokens and took almost 4x longer, yet the run cost $0.047 against $0.077, because pricing fell from $2/$12 to $1/$5 per million tokens. The extra time bought arched windows, domed corner turrets and light on the Tagus; the older model produced a blockier tower, flat water and a bridge that was two bare posts. That is the trade in one image: more tokens, more wall clock, less money, and a visibly better result.</div>
+    <div class="item-meta">
+      <a href="https://x.com/MartinSzerment/status/2114970936554160193" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag itsharmanjot-bellman">Itsharmanjot-Bellman</span> @itsharmanjot: 98% Cheaper and Slightly More Tasks Solved</div>
+    <div class="item-body">A summary of &#x27;Bellman Language Models&#x27; from Stevens Institute, tested on τ²-bench telecom with AI-played customers. The observation: across 1,721 practice conversations there were only 69 distinct situations, and the last 179 chats added no new one, while the agent&#x27;s messages were 18,254 different strings. So instead of asking the model to decide every turn, they counted what worked per situation, solved the best move once, and let a small controller send it. On Opus 5.5 the first 114-task run went from 111 solved to 114, calls per chat fell from 15.6 to 0.43, the model was never called in 82 of 114 chats, cost per chat fell from about $0.43–0.49 to $0.012–0.024, and customer wait fell from 77.8 seconds to 2.5. Qwen3.8-27B went from 33 solved to 109 with 93% fewer calls, and a controller with no model at all solved 79%. The sting is the caveat: for coding rather than choosing moves, only 15–22% of turns were decidable in advance.</div>
+    <div class="item-meta">
+      <a href="https://x.com/itsharmanjot/status/2115013619553579497" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag miriamschwab-haiku-real-cost">Miriamschwab-Haiku-Real-Cost</span> @miriamschwab: 10x Cheaper on Paper, 8x in Practice</div>
+    <div class="item-body">A small production bill, which is rarer than a benchmark. Her site&#x27;s chat widget runs on Haiku; upgrading to Haiku 5.5 was advertised as 10x cheaper, but the new model counts text differently, so the same content came out roughly 30% more tokens and the real saving landed near 8x — about $2 a year for the widget. No drama, no leaderboard, just the arithmetic of a tokeniser change showing up in a bill, and a reminder that a published multiplier is a unit-price claim until you re-measure your own payloads.</div>
+    <div class="item-meta">
+      <a href="https://x.com/miriamschwab/status/2115081985093734598" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧱</span>
+      <h2>The Harness Is a Variable</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag charrylee-harness-scaling">Charrylee-Harness-Scaling</span> @CharryLee426: Train Across Harnesses, Not Inside One</div>
+    <div class="item-body">A Renmin University result that turns scaffold diversity from an eval nuisance into a training axis. The harness is factorised into five components — system prompt, tool interface, observation, context management and workflow — and training picks a compact subset with balanced factorial coverage, assigning tasks with locality-aware sampling. Evaluation uses 18 held-out harness combinations plus Claude Code as an unseen black-box harness. Numbers on Pass@1 averaged across ClawGym-Bench, JobBench-Easy and PinchBench: Qwen3-4B goes 29.8 to 39.0 with GRPO and 33.9 to 36.9 with PPO; Qwen3-30B-A3B goes 37.3 to 42.8 and 36.3 to 41.9. The finding worth keeping is the transfer result — policies trained on structured white-box variation beat policies trained directly on the single complex Claude Code harness when tested on it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/CharryLee426/status/2114934215611392220" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag oluwaphilemon-cuda-agents">Oluwaphilemon-Cuda-Agents</span> @Oluwaphilemon1: 21 Days and 180 Subagents Against llama.cpp</div>
+    <div class="item-body">The most honest long-run log in the sweep: Qwen3.8-27B trying to beat llama.cpp with a CUDA inference engine on a single RTX 3090. It failed on the primary objective and published the accounting anyway — 21 days, 180 subagents, 230M tokens processed, 1.7B cache-read tokens, 699 context compactions consuming 83 hours, about 12 human interventions, coordinated by DeepSeek Harness through vLLM. HyperQwen reached roughly 250 tok/s in prefill against llama.cpp&#x27;s roughly 700 in the tested configuration. The structural problem is the one worth copying into your own planning: the same 3090 powered both the agent and the benchmark, so the workflow had to stop vLLM, measure, and restart to keep working, and one subagent shut down vLLM while the orchestrator was still running. Writing code that works, preserving progress for weeks, and actually hitting a performance target turn out to be three separate problems.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Oluwaphilemon1/status/2114912451963896284" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag stretchcloud-five-sdks">Stretchcloud-Five-Sdks</span> @stretchcloud: Five Agent SDKs, One Reason</div>
+    <div class="item-body">A structural read of a week of SDK launches. Cursor shipped an Agent SDK that defines agents as code — prompts in Markdown, tools in TypeScript, deployed on Cursor&#x27;s hosted runtime or your own — with subagent routing, hooks into the agent loop, and built-in evals so a prompt change can be measured rather than guessed at. It is TypeScript only, public beta, and Cursor tells developers to parse tool-call schemas defensively because they are still unstable. The list it joins: Anthropic&#x27;s Claude Agent SDK, OpenAI&#x27;s AgentKit and Codex SDK, LangGraph, CrewAI. His argument is about distribution rather than abstraction — the SDK that wins sits inside a surface already open on a developer&#x27;s screen, so adopting it requires noticing a menu item rather than making a fresh architectural decision.</div>
+    <div class="item-meta">
+      <a href="https://x.com/stretchcloud/status/2114867924968014073" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧾</span>
+      <h2>The Claim and the Code</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag 0xwatkin-samsung-teardown">0Xwatkin-Samsung-Teardown</span> @0xWatkin: The TV Checked the Privacy Switch After the Work Was Done</div>
+    <div class="item-body">His account of two researchers&#x27; teardowns of a rooted Samsung TV, and the detail that makes it more than a privacy complaint. The set takes a screenshot every 500 milliseconds, including HDMI input, and ships it to nearly 400 partners; if the TV has no microphone, background processes reportedly borrow one over Bluetooth or from a soundbar. The lag has a cause: a 2.46M-parameter AlexNet — a 2012 model, `alex.tflite` — runs every two seconds on the TV&#x27;s weak CPU to guess what you are doing, except the colour channels are swapped, so it recognises nothing about 99% of the time and burns the CPU regardless. Turning off privacy tracking does not stop the inference: the code runs it first, then reads the switch before upload and throws the result away. The ending is the part that lands — the owner asked OpenAI to help reverse-engineer firmware on a TV he had bought, and the account was banned with the remaining $500 balance seized. Treat each specific as the poster&#x27;s report of the researchers&#x27; findings, not as an audit you have run.</div>
+    <div class="item-meta">
+      <a href="https://x.com/0xWatkin/status/2114519583117939131" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag zhouxiaoma-skillspector">Zhouxiaoma-Skillspector</span> @zhou_xiaoma: 26.1% of 31,132 Skills Had a Vulnerability</div>
+    <div class="item-body">NVIDIA open-sourced SkillSpector, a security scanner for agent skills across Claude Code, Codex, Gemini CLI and MCP-style packs. It does not execute the skill: the default path is fast static analysis, with optional LLM semantic checks comparing the claimed purpose against what the files appear to do. Coverage spans 17 categories including prompt injection, data exfiltration, privilege escalation, supply-chain issues and MCP tool poisoning. The cited research subset is the argument for using it — of 31,132 analysed skills, 26.1% had at least one vulnerability and 5.2% showed high-severity patterns suggesting likely malicious intent, with skills shipping executable scripts 2.12x more likely to be vulnerable (vendor and research figures). Practical habit: `skillspector scan ./my-skill/`, or `--no-llm` for a static-only run that keeps contents local, and treat critical or high findings as a gate rather than a vibe. He is explicit that he has not yet wired it into his own install path.</div>
+    <div class="item-meta">
+      <a href="https://x.com/zhou_xiaoma/status/2114953884447711550" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag thomaszhou-anti-sycophancy">Thomaszhou-Anti-Sycophancy</span> @thomaszhou_: &#x27;Right?&#x27; Is a Compliance Trigger</div>
+    <div class="item-body">A transferable fix built on an Anthropic paper about sycophancy: end a prompt with &#x27;right?&#x27; or &#x27;isn&#x27;t it?&#x27; — easy to do with voice input — and the model is being handed a preferred answer before it reasons. His patch goes into AGENT.md as three rules: treat confirmatory tags as neutral open hypotheses rather than instructions; never open a verification with &#x27;yes&#x27;, &#x27;exactly&#x27; or &#x27;no problem&#x27; before independently deriving the answer; and if the premise has a hole, a non-optimal approach or a factual error, say so in the first sentence and put technical accuracy and trade-offs above politeness. The mechanism is the interesting part — a one-word habit at the end of a sentence sets the prior for everything before it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/thomaszhou_/status/2114945631462871272" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛡️</span>
+      <h2>Governance Beats Capability</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag spiritofalyahw-math-governance">Spiritofalyahw-Math-Governance</span> @SpiritofAlyahw: A Math-Agent Post-Mortem Worth Reading in Full</div>
+    <div class="item-body">A long engineering memo answering what a project called PM-1 taught about math agents, and the conclusion is that most &#x27;math-agent failures&#x27; are not failures of algebra. The list is concrete: separate discovery from certification so the system that searches never grades its own claim; make branch scope a first-class object, because a fact proved in child branch B1 cannot silently become true at the parent and kill B2; give mathematical objects immutable typed identities, after a symbol collision produced a convincing false proof; use small deterministic agents for routine cells and keep the LLM as scout, planner and anomaly detector; seal the solver and then write metamorphic variants to test generalisation; bind a proof to the exact problem rather than to any true theorem, since a Lean proof of T does not certify C; require solver and checker to agree on the parsed object before reasoning starts; and treat HOLD as a successful outcome. His benchmark proposal follows from it — freeze the solver, generate unseen variants, then attack scope, identity, domain, parsing and proof binding, scoring wrong releases and honest holds rather than final-answer accuracy alone.</div>
+    <div class="item-meta">
+      <a href="https://x.com/SpiritofAlyahw/status/2114841051366355227" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag nomapoet-risk-tiers">Nomapoet-Risk-Tiers</span> @nomapoet: Risk Tiers, Not Author Trust</div>
+    <div class="item-body">Notes from an article on shipping code with agents, split into what a solo developer does and what a team does. Solo: before opening a PR, run the verification skills — tests, builds, diff reduction, end-to-end checks, UI against design guidelines — and give every pull request an AI review from a fresh-context agent focused on the diff. Team: define risk tiers with classifiers keyed to the change rather than the author, use one classifier to set the tier and a second to decide whether extra approval is still required even when the tier says no, and mark some paths as always needing another approval, such as sensitive code flagged by owners or CI workflow files. He also asks Claude for a short explainer of each change, which is the cheapest review artefact in the list.</div>
+    <div class="item-meta">
+      <a href="https://x.com/nomapoet/status/2114839598723723587" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag piebaldai-claude-2311">Piebaldai-Claude-2311</span> @PiebaldAI: 4,096 New Tokens of Permission Rules in Claude Code 2.1.311</div>
+    <div class="item-body">A diff of the system prompts rather than a feature announcement, which makes it the useful kind of release note. The additions include SDK fields for per-session model-request turn counts, streaming CPU time, chunk counts, startup GC measurements and a runtime tuning bitmask recorded without values; documentation for handoffs that depend on a rewind request; and plugin composer overlays with client opt-in and remote-session authorization limits. The governance changes are the ones to read twice: a system reminder that conversation activity is awareness rather than a fresh user instruction or approval, explicitly including edited messages that claim consent, and MCP connection-retry guidance with a cooldown. One tool description was removed — the standalone note that the working directory persists between Bash commands — and skill proposal rendering now allows updating your own uploaded skills even when they appear as plugin skills.</div>
+    <div class="item-meta">
+      <a href="https://x.com/PiebaldAI/status/2114863505807659503" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>Worth Your Time</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag shaomeng-cs329z-evals">Shaomeng-Cs329Z-Evals</span> @shao__meng: Stanford&#x27;s Agent Course, Lecture 10 — Evaluation as the Job</div>
+    <div class="item-body">Detailed notes from CS 329Z&#x27;s session with the Terminal-Bench and Harbor authors. The frame: software is moving from &#x27;the rules are the truth&#x27; to &#x27;the eval is the truth&#x27;, which makes the Evaluator the missing role and moves the specification from writing rules to writing evaluations. The numbers behind Terminal-Bench: 64 model cards, 171 contributors, 1K+ GitHub participants, 5K+ Discord, 7M+ benchmark runs, first commit around January 2025 against Claude Code&#x27;s February 2025 release. The task anatomy is the practical part — a 2D schematic to a STEP file graded by geometric assertions (valid STEP, watertight, volume, surface area, moments of inertia, convex hull, topology, mean curvature), with a directory convention of instruction.md, task.toml, environment/Dockerfile, solution/solve.sh and tests/test.sh. Also useful: verifier isolation so the agent cannot edit the grader, version semantics where a major bump means re-run everything and a minor bump means regrade, and the requirement that every trial ship its trajectory, logs, artefacts and reward.</div>
+    <div class="item-meta">
+      <a href="https://x.com/shao__meng/status/2114909091101573476" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gazun-theo-tstack">Gazun-Theo-Tstack</span> @GazunH26262: @theo Published tstack — Skills, Not a Prompt Dump</div>
+    <div class="item-body">A precise summary of a release rather than a reaction to it: Theo Browne published tstack alongside a 30.6-minute video, with the repo dropping in the same minute. The README describes day-to-day agent skills cleaned up for other people, working with Claude Code and Codex, installed by copying into ~/.claude/skills/ or ~/.codex/skills/, MIT licensed, with in-repo skills named full-send, babysit-pr and file-pr. What is open-sourced is a copyable workflow rather than another prompt collection, which raises the actual question: whether to keep permission-sensitive flows private or publish them and own the misuse risk. The poster is careful to say the video&#x27;s permission guidance should not be invented — read it rather than assume it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/GazunH26262/status/2114955121104769203" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
