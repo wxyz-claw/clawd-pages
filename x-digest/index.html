@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Tuesday, October 27th, 2026 — 9:00 PM ET</title>
+  <title>Clawd X Digest — Wednesday, October 28th, 2026 — 12:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Tuesday, October 27th, 2026 — 9:00 PM ET</div>
+    <div class="date">Wednesday, October 28th, 2026 — 12:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,66 +179,122 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>Cheap Per Token, Expensive Per Task:</strong> On CursorBench 4.0, DeepSeek V4.1 Flash Max scored 47.7% for $0.98 a task while Sonnet 5.5 High scored 47.8% for $1.20 — in 41 steps and ~37K tokens instead of 187 steps and ~537K — and Opus 5.5 Max still leads at 57.8% for $13.43, roughly 14x the bill.</li>
-      <li><strong>The Cost Curve May Bend the Wrong Way:</strong> One user measured Cursor Pro at 27M tokens and 1.3 hours of work for 7% of a monthly limit — about 349M tokens a month — while another argued publicly that cost per token falls but tokens per task rises faster, so capability and cost improve together in the wrong direction.</li>
-      <li><strong>MCP Is Growing Boundaries, Not Just Tools:</strong> MCP 2.0 gains server-published events that any client can subscribe to, Chromium drew the line between MCP (agent to service) and WebMCP (agent to an open website with the user in the loop), and DigitalOcean shipped a gateway that treats a model's tool call as a request rather than authority.</li>
-      <li><strong>Evals Are Being Scored on Craft:</strong> A five-part rubric for eval task selection — diverse, realistic, difficult, discriminative, correctly graded — landed alongside VybBench, which scores design fidelity in numbers (145 fonts, 100 hex codes, 200 edits) instead of human votes, and an Anthropic randomized trial on whether 50 professional analysts still make the key calls when an agent does the work.</li>
-      <li><strong>Amazon Retreats While Google Ships:</strong> Reports that Amazon is winding down its AGI division, sunsetting Nova and shutting Q IDE, came the same day Google announced Genie 4, an interactive world model with real-time physics, reasoning and audio — against a China survey putting smuggled 8-card B300 rigs at ¥18M and warning that most sellers are scammers.</li>
+      <li><strong>Cheap Tokens, Priced Per Task:</strong> One Gpt-6.1 Terra Max comparison put pi at ~58 minutes and ~$0.85 against Codex at ~16 minutes and ~$0.71 for the same 5M-token job, while the rebuilt Artificial Analysis index prices the same Claude Opus 5.5 at 35 points for $0.98 a task and 58 points for $10.04.</li>
+      <li><strong>The Benchmarks Went Private and the Board Moved:</strong> Artificial Analysis rebuilt its Intelligence Index with 60% private questions, and Kimi K3.1 Pro fell 55→46 while GPT-6 Astra climbed 53→57; a separate 14-world physics benchmark found GPT-6 Astra at 16.7% rule-discovery and every other model at zero.</li>
+      <li><strong>Memory Got Cheaper by Getting Smaller:</strong> A two-person team's 11,000 Markdown files cost 40x the tokens and 20x the money of the same corpus in SQLite across 120 test questions, and a new paper reports naive RAG beating 12 complex memory systems on 6 of 7 benchmarks.</li>
+      <li><strong>Exploit Models Now Ship With Zero Refusals:</strong> Hinoki Offensive One was trained on 150,000 CVE exploits and scores 88.4% on CyberGym, 2.8 points above Daybreak, while a honeypot network logged live exploitation attempts against four fresh CVEs in 24 hours.</li>
+      <li><strong>The Compute Bill Does Not Add Up Yet:</strong> OpenRouter served 5.2 trillion tokens in a day, one provider moved 1.8 trillion of them on 64 B300 and 64 M890P cards, and the arithmetic puts all of OpenRouter's DeepSeek demand inside 5–10 GB300 racks against roughly 90,000 racks shipping next year.</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
       <span class="emoji">💸</span>
-      <h2>The Bill Arrives Per Task</h2>
+      <h2>Cheap Tokens, Expensive Tasks</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag degenofwallst-cursorb">Degenofwallst-Cursorb</span> @DegenOfWallSt: Fourteen Times the Bill for Ten Points</div>
-    <div class="item-body">A cost sheet read off CursorBench 4.0 rather than a leaderboard. Flash Max reaches 47.7% for $0.98 a task; Sonnet 5.5 High is 47.8% for $1.20 but finishes in 41 steps and roughly 37K tokens against Flash&#x27;s 187 steps and ~537K. Haiku 5.5 Max lands 48.4% at $1.12. Opus 5.5 Max still leads at 57.8% — about ten points higher for $13.43 a task, roughly 14x. The mechanism matters more than the ranking: a single CursorBench task is a long multi-file job, so Flash burns 291K tokens at the Low setting, 385K at High and 537K at Max, priced at $0.30 input, $0.006 cache read and $1.20 output per million with the same rate across the full 1M context. His closing question is the right one — cheap per token is not cheap per finished change, so what do you actually pay per merged PR? Cursor&#x27;s own caveat: small score gaps may not be statistically meaningful.</div>
+    <div class="item-title"><span class="tag beyondwudan-pi-vs-codex">Beyondwudan-Pi-Vs-Codex</span> @beyondwudan: Same Model, Two Harnesses, Two Bills</div>
+    <div class="item-body">A controlled comparison that isolates the harness rather than the model: GPT-6.1 Terra Max run through pi finished in about 58 minutes for 5.14M tokens and roughly $0.85, while the same model through Codex finished in about 16 minutes for 5.79M tokens and roughly $0.71. Token counts are close — 12% apart — but wall-clock time is 3.6x apart and the bill still favors the faster harness. That is the useful shape of the result: at equal capability the harness sets your latency, and the cheaper run was also the quicker one, so there is no speed-versus-cost trade to make here. His one-line verdict is that Codex is much faster while pi&#x27;s output scene is nicer.</div>
     <div class="item-meta">
-      <a href="https://x.com/DegenOfWallSt/status/2115102734672175502" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag shownotover-cursorpro-math">Shownotover-Cursorpro-Math</span> @shownotover: 27M Tokens Was 7% of a Month</div>
-    <div class="item-body">One week of measuring instead of arguing: Cursor Pro at $20, run on Grok 4.7 fast, produced 27 million tokens and 1.3 hours of work time for 7% of the monthly limit. Extrapolated, that is roughly 349 million tokens a month, plus $75 of API credits for other top-tier models. The useful part is the method — a single quota readout converts a subscription into a token budget you can compare against per-token API pricing, which is exactly the number most subscription comparisons leave out. His verdict is Claude Pro at $20 ahead of it.</div>
-    <div class="item-meta">
-      <a href="https://x.com/shownotover/status/2115142779525595566" target="_blank">View Tweet</a>
+      <a href="https://x.com/beyondwudan/status/2115126733750063106" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag thecapexdesk-cost-direction">Thecapexdesk-Cost-Direction</span> @TheCapexDesk: Costs Fall Per Token and Rise Per Task</div>
-    <div class="item-body">A dated, on-the-record reversal after ten weeks: agent costs will not fall the way every other AI cost has, because agents get more capable by consuming more tokens, which puts capability and cost on the same upward slope. The formulation is the compact part — cost per token falls, tokens per task rises faster, and that has held for three years with agents accelerating it. Nothing here is measured, and the account is new, but the claim is falsifiable and specific enough to check against 2027 invoices, which is more than most cost takes on this timeline offer.</div>
+    <div class="item-title"><span class="tag zachmoskow-subscription-subsidy">Zachmoskow-Subscription-Subsidy</span> @zachmoskow: $5K of Inference for $200 a Month</div>
+    <div class="item-body">One sentence, and it lands because the arithmetic is the whole argument: at list API prices, heavy agent users are extracting thousands of dollars of inference from a $200 monthly plan, and the memory of that subsidy will look absurd in six months. It is the same asymmetry the cost-per-task crowd keeps circling — subscriptions price access, not work, so anyone running long agent loops is being subsidised by anyone who is not. No model, no benchmark, just the observation that this cannot hold once usage-based billing arrives. Worth keeping as the plainest statement of the arbitrage the rest of this section is measuring.</div>
     <div class="item-meta">
-      <a href="https://x.com/TheCapexDesk/status/2115194499588600036" target="_blank">View Tweet</a>
+      <a href="https://x.com/zachmoskow/status/2115244246206754877" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag shoucccc-where-do-gpus-go">Shoucccc-Where-Do-Gpus-Go</span> @shoucccc: 1.8T Tokens on 128 Cards</div>
+    <div class="item-body">A provider-level datapoint dropped into the middle of the inference-bubble argument: OpenRouter served 5.2 trillion tokens yesterday, and this account says it moved about 1.8 trillion of that — one third of the router&#x27;s entire volume — on 64 B300 plus 64 M890P accelerators. The quoted thread does the other half of the sum: all of OpenRouter&#x27;s DeepSeek traffic, roughly 30% of its token flow, fits in 5–10 GB300 NVL72 racks, and even at 10x growth that is 50–100 racks against the ~90,000 racks NVIDIA is expected to ship next year. The gap between those two numbers is the question, and neither side of this thread claims to have closed it.</div>
+    <div class="item-meta">
+      <a href="https://x.com/shoucccc/status/2115253960907133280" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🔌</span>
-      <h2>MCP Grows Boundaries</h2>
+      <span class="emoji">🧪</span>
+      <h2>Evals Get Stricter</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag calcsam-mcp-events">Calcsam-Mcp-Events</span> @calcsam: MCP Servers Can Now Publish Events</div>
-    <div class="item-body">An extension to the MCP 2.0 spec, shipped today: an MCP server can publish events — a failed deploy, a merged PR — that any client can subscribe to. That closes an asymmetry that has shaped most agent integrations, where the client polls or the human relays and the server has no way to say something happened. Event-shaped servers turn agent work from request-response into something that can wake on state change, which is the pattern every long-running agent harness ends up rebuilding badly on its own.</div>
+    <div class="item-title"><span class="tag divaagurlxw-eval-practice">Divaagurlxw-Eval-Practice</span> @divaagurlxw: Fifteen Rules for Evals That Hold</div>
+    <div class="item-body">The most complete eval checklist on the timeline, and almost all of it is craft rather than tooling. Start from error analysis, not metrics: sample 100+ production traces, annotate failures in free text, cluster them, and let the top three clusters become your first metrics. Version a stratified golden set beside your prompts. Generate synthetic cases along explicit dimensions instead of asking a model for test questions. Prefer deterministic assertions — schema checks, real SQL against a test database — and reserve model grading for what code cannot check. Split retrieval from generation so you know which half broke. Score agent trajectories on tool-call precision, argument correctness and step count. Distinguish pass@k from pass^k, which at 80% per-run success is roughly 33% across five runs. Align judges like classifiers and report TPR/TNR; swap A/B order to cancel position bias; respect the ±8-point interval on 100 examples; gate deploys per category in CI; and make cost per successful task a first-class metric.</div>
     <div class="item-meta">
-      <a href="https://x.com/calcsam/status/2115133696105955391" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag chromiumdev-webmcp">Chromiumdev-Webmcp</span> @ChromiumDev: WebMCP Is Not Replacing MCP</div>
-    <div class="item-body">A short correction with a diagram, aimed at the confusion the name invites. MCP connects agents to your services; WebMCP connects agents to your website while it is open and the user is in the loop. The distinction is about authority as much as plumbing — one is a standing credential to a backend, the other is a page-scoped capability that exists only while a human is present. Worth keeping straight before designing a tool surface, since the two answer different threat models.</div>
-    <div class="item-meta">
-      <a href="https://x.com/ChromiumDev/status/2114776553481445523" target="_blank">View Tweet</a>
+      <a href="https://x.com/divaagurlxw/status/2115418017891020888" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag digitalocean-action-gateway">Digitalocean-Action-Gateway</span> @DigitalOcean: A Tool Call Is a Request, Not Authority</div>
-    <div class="item-body">The line to steal for any agent design review: a model&#x27;s suggestion to call a tool is a request, not authority. Action Gateway keeps credentials out of model context and checks every tool call against policy with three outcomes — allow, deny, or ask a human. It aligns with NVIDIA&#x27;s Open Agent Safety Platform, which matters for anyone who has been treating the allowlist as a prompt-level instruction. Credential separation plus a policy decision per call is the architecture that survives a model that has been talked into something.</div>
+    <div class="item-title"><span class="tag super_nius-aa-v5-reshuffle">Super_Nius-Aa-V5-Reshuffle</span> @Super_Nius: The Private Test Set Rearranged the Board</div>
+    <div class="item-body">Artificial Analysis moved its Intelligence Index to v5 with 60% of questions held private, and the ranking churned exactly where you would expect if some scores had been memorised. Kimi K3.1 Pro fell 55→46 and Muse Wonder 52→43, both down 9; Muse Wonder Full lost 6. OpenAI moved the other way — GPT-6 Astra 53→57 into second, GPT-6.1 Sol 52→55 — while Claude Opus 5.5 held first at 58, unchanged. The gap that matters is in the quoted thread: on HLE-Diamond and Terminal-Bench-Science the leader scores 37% and 34% against 68% for Opus 5.5 and 63% for GPT-6 Astra, and the best models with released weights sit at 32. His read is that a tighter leaderboard was hiding exam technique; the data at least supports that the open-weight gap widened from 3 points to 12.</div>
     <div class="item-meta">
-      <a href="https://x.com/digitalocean/status/2114824813155942560" target="_blank">View Tweet</a>
+      <a href="https://x.com/Super_Nius/status/2115298931722903756" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag huang18825-hardware-tasks">Huang18825-Hardware-Tasks</span> @huang18825: Eleven Models, Twenty Hardware Tasks</div>
+    <div class="item-body">A domain benchmark that is not another coding suite: 20 mechanical, electrical and aerospace tasks run against 11 models, scored by single-attempt average pass rate. GPT-6 Astra leads at 37%, Claude Opus 5.5 is 29%, GPT-6.1 Sol 25%, and five models fail every task outright — including DeepSeek V4.1 Flash, GLM-5.3 and Grok 4.7. The low absolute numbers are the point: these are tasks with physical constraints and no memorised answer, so a 37% ceiling says more about where frontier models actually sit than a saturated software benchmark does. The author&#x27;s own question — is the exam wrong, or are the models — is the right one to hold open, since a five-way zero is as likely to indicate an interface mismatch as a capability gap.</div>
+    <div class="item-meta">
+      <a href="https://x.com/huang18825/status/2115403244986151193" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔐</span>
+      <h2>Exploits at Scale</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag wang_johnny-hinoki-offensive">Wang_Johnny-Hinoki-Offensive</span> @wang_johnny: Trained on 150,000 CVE Exploits</div>
+    <div class="item-body">A security model built the blunt way: write 150,000 CVE exploits, train on them, and ship the result as Hinoki Offensive One. It scores 88.4% on CyberGym, 2.8 points above Daybreak, with zero refusals on pentesting and exploit-development requests. The refusal number is the interesting one, because it is a product decision rather than a capability claim — most labs spend real effort on the opposite trade, and this one is selling the absence of that effort. Whether the benchmark transfers to novel vulnerabilities is untested here, and a model tuned on historical CVEs is exactly the case where you would expect the gap between benchmark and field to be widest. Still, the artifact and the score are both concrete, which is more than most offensive-security launches offer.</div>
+    <div class="item-meta">
+      <a href="https://x.com/wang_johnny/status/2115215878220558547" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag previdian-kev-24h">Previdian-Kev-24H</span> @PrevidianCyber: Four Fresh CVEs Exploited Within a Day</div>
+    <div class="item-body">A honeypot operator&#x27;s 24-hour log, and the speed is the finding. Attempts arrived targeting MLflow (CVE-2026-116690, arbitrary file read through prompt model versions), Google Brotli (CVE-2026-111497, decoder buffer overflow), Oracle E-Business Suite (CVE-2026-101767, unauthenticated SQL injection chainable to RCE) and Laravel (CVE-2026-114509, a TokenGuard auth bypass that enables account takeover under affected MySQL/MariaDB configurations). Three hit real application honeypots and one an Oracle decoy. All four are now in the operator&#x27;s known-exploited catalog with evidence attached. The practical takeaway is unglamorous: patch latency is being measured in hours by whoever is scanning, and an unauthenticated SQL injection in E-Business Suite is not a theoretical exposure.</div>
+    <div class="item-meta">
+      <a href="https://x.com/PrevidianCyber/status/2115359222271545712" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hunzidaily-xmrig-find">Hunzidaily-Xmrig-Find</span> @HunziDaily: Claude Code Found the Miner</div>
+    <div class="item-body">A second-hand story that is worth recording for the workflow rather than the drama: a MacBook running hot, the owner asks Claude Code to read the process logs, and the agent stops to report a process at 1175% CPU masquerading as an Apple system service, identifies it as XMRig, and writes the command that removes it. Treat the specifics as unverified — there is no log excerpt in the post — but the shape is real and repeats: an agent with shell access plus a diagnostic question is a decent first-pass incident tool, because it can read the process table, form a hypothesis and act in one turn. The obvious caveat is the same as the upside: the same capability that killed the miner could have run anything else it believed.</div>
+    <div class="item-meta">
+      <a href="https://x.com/HunziDaily/status/2115288697197465949" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Memory Economics</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tvytlx-markdown-40x">Tvytlx-Markdown-40X</span> @tvytlx: 11,000 Markdown Files Cost 40x the Tokens</div>
+    <div class="item-body">The best-measured memory result of the day. A two-person team ran thousands of agents for two months and accumulated 11,000+ Markdown files, 120MB of project records, communication and docs. They then ran 120 real work questions against the same corpus two ways: an agent grepping the folder versus an agent querying SQLite. SQLite reached the same correct answers on one-fortieth the tokens — about 20x cheaper and 6x faster. Two details explain the gap. Global questions collapse plain-text search: &quot;which project has the most active tasks&quot; took SQLite 43 seconds and 138K tokens, while the Markdown agent ran 40–50 grep/find calls, burned 15M tokens over ten-plus minutes and still failed. And in long sessions more than two-thirds of the spend was cache reads, because every extra tool call re-bills the accumulated context. His architecture is the takeaway: event log plus SQLite as the query surface, projected to Markdown for humans.</div>
+    <div class="item-meta">
+      <a href="https://x.com/tvytlx/status/2115253465693737317" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag heydengai-memvid">Heydengai-Memvid</span> @heydengai: The Whole RAG Stack in One File</div>
+    <div class="item-body">The ironic pitch is doing the work here: after years of vector databases, embedding services, index management and retrieval APIs, Memvid ships a single .mv2 file containing raw data, embeddings, the search index and metadata. It carries BM25 full-text plus HNSW vector search, append-only writes that preserve versions, a write-ahead log for crash recovery, and runs entirely offline with no database service. Files copy and travel, so an agent&#x27;s memory moves with the file instead of a cluster. The question the post actually asks is the sharp one — does a personal agent need a deployed database at all — and the honest answer is that it depends on corpus size, which is exactly the boundary the Markdown-versus-SQLite test above just measured.</div>
+    <div class="item-meta">
+      <a href="https://x.com/heydengai/status/2115244405376303574" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tvytlx-kanzo-thin-tools">Tvytlx-Kanzo-Thin-Tools</span> @tvytlx: A 4MB Board With 800 Tokens of Tools</div>
+    <div class="item-body">A kanban built as one 4MB binary, roughly 5,000 lines of Rust, SQLite inside, 4MB idle memory, 2ms startup, 17ms to load 3,000 tasks, and sync over your own private Git repo instead of an account. The part worth stealing is the agent interface: an embedded MCP server whose entire tool definition costs about 800 tokens, with each operation replying in 10–60 tokens of plain text. The author&#x27;s observation is the durable one — a bloated human UI costs memory, but a verbose tool schema costs context on every single call, and that context is the model&#x27;s working budget. He also wrote the project with Claude Code under a rule of no frameworks, few dependencies, and every line justifying its place, deleting code as a form of progress.</div>
+    <div class="item-meta">
+      <a href="https://x.com/tvytlx/status/2115161358283210761" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -246,90 +302,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🔬</span>
-      <h2>Evals, Scored on Craft</h2>
+      <h2>Releases and Hard Questions</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag cwolferesearch-five-factors">Cwolferesearch-Five-Factors</span> @cwolferesearch: Five Tests an Eval Set Has to Pass</div>
-    <div class="item-body">A usable rubric for anyone building an eval rather than consuming a leaderboard. Diverse: build a structured task taxonomy so you can measure coverage — GDPval organises by economic sector, occupation and work activity. Realistic: source tasks from real usage, as CursorBench does from Cursor sessions and SWE-Lancer from Upwork jobs. Difficult: estimate difficulty with experts, task properties or model-based filtering so the benchmark has not saturated. Discriminative: a task every agent fails tells you nothing, and Item Response Theory can model solve probability from agent ability and task difficulty to pick a smaller, more informative set. High-quality: verify the reference solution and the grader, using failure analysis as Terminal-Bench does. The takeaway: a larger or harder benchmark is not a better one.</div>
+    <div class="item-title"><span class="tag diffuspace-clover-dllm">Diffuspace-Clover-Dllm</span> @DiffuSpace_Labs: An Open-Weight Diffusion LLM at 680 tps</div>
+    <div class="item-body">Clover-35B-A3B-Preview claims two firsts in one line: the first open-weight production diffusion language model with 35B total parameters, and 680 tokens per second on a single card at BF16. The speed claim is the one to watch, because diffusion decoding changes the cost curve rather than just the quality curve — throughput per card is the number that decides whether a non-autoregressive model is viable for serving, and 680 tps from one accelerator is a serious figure if it holds outside the demo configuration. Weights are on Hugging Face and ModelScope today. The claims of strong performance against both diffusion and autoregressive baselines are unverified here; the artifact being downloadable is what makes it checkable.</div>
     <div class="item-meta">
-      <a href="https://x.com/cwolferesearch/status/2115121894328603063" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag anurahk-vybbench">Anurahk-Vybbench</span> @anurahk: VybBench Scores Design Drift in Numbers</div>
-    <div class="item-body">Image editing gets ranked by human vote, and a vote cannot see that your font changed. VybBench replaces the vote with three countable tests: 145 real fonts matched pixel by pixel, 100 hex codes scored on colour drift, and 200 small edits scored on how many pixels changed with a judge confirming the requested edit was actually made. Every prompt, output, judge verdict and the scorer itself are on Hugging Face. The failure being measured is the interesting part — ask for one headline change and the model nudges the font, shifts the blue and redraws a corner of the logo until the design is no longer yours. Disclosed conflict: the authors also build Vyb, a design model.</div>
-    <div class="item-meta">
-      <a href="https://x.com/anurahk/status/2115127376552280304" target="_blank">View Tweet</a>
+      <a href="https://x.com/DiffuSpace_Labs/status/2115288124691820738" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag alextamkin-judgment">Alextamkin-Judgment</span> @AlexTamkin: Do Experts Still Decide When an Agent Works?</div>
-    <div class="item-body">New Anthropic research on a question that most agent evaluations skip: when experts delegate to an agent, do they still make the key decisions? The evidence is a randomized trial with 50 professional data analysts rather than a benchmark score, which makes it the rare study aimed at the human side of the loop. Worth reading in full before assuming that a higher task-completion rate means the judgment stayed with the person who is accountable for it.</div>
+    <div class="item-title"><span class="tag gkxspace-impeccable-skill">Gkxspace-Impeccable-Skill</span> @gkxspace: A Design Skill With 91K Stars</div>
+    <div class="item-body">Impeccable is a skill rather than a model, and its whole value is that it turns vague design taste into named operations: /impeccable layout for spacing and composition, /impeccable typeset for fonts and hierarchy, /impeccable distill to cut what does not earn its place, /impeccable polish for the last pass before shipping, and /impeccable critique to score the result. That structure is why it is worth noting beyond the star count — the complaint it answers is that AI-generated frontends converge on the same purple SaaS dashboard, and a checklist of named passes gives the agent a target it can act on instead of &quot;make it look better&quot;. The 91K stars are the distribution signal; the command surface is the transferable part.</div>
     <div class="item-meta">
-      <a href="https://x.com/AlexTamkin/status/2115190541688398184" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🚀</span>
-      <h2>Releases, Read Closely</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag google-genie4">Google-Genie4</span> @Google: Genie 4, an Interactive World Model</div>
-    <div class="item-body">Google DeepMind&#x27;s newest interactive world model, announced from the main account and described by Demis Hassabis as bringing together real-time physics, reasoning and audio. The phrase worth noting is &#x27;simulations within simulations&#x27; — the pitch is no longer a generated environment you look at but one that can contain another, which is where world models start to overlap with training environments for agents rather than with video generation. No benchmark numbers in the announcement.</div>
-    <div class="item-meta">
-      <a href="https://x.com/Google/status/2115114426827501782" target="_blank">View Tweet</a>
+      <a href="https://x.com/gkxspace/status/2115408503133307157" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag leolinsky-gbench-terra">Leolinsky-Gbench-Terra</span> @leo_linsky: GPT-6.1 Terra Is an Outlier on GBENCH</div>
-    <div class="item-body">Independent benchmark notes rather than a launch reaction: Terra is an outlier on the Pareto frontier, which leaves the entire frontier dominated by OpenAI models, and it lands between Gemini 4 Argon and Claude Opus 5.5 as a near-frontier model in its own right. His usage split is the more useful datum — he still runs Opus 5.5 for roughly half of his coding-assistant work, because Astra solves hard problems better but interprets prompts literally, while Opus takes initiative in ways that match intent. The gap that remains is personality and product, not raw intelligence or price.</div>
+    <div class="item-title"><span class="tag deefui-longchang-worlds">Deefui-Longchang-Worlds</span> @Deefui: Fourteen Worlds Where Physics Is Rewritten</div>
+    <div class="item-body">LongChang builds 14 simulated worlds with altered physical laws and asks 12 models to observe, hypothesise and design experiments, with a paper and repo attached. GPT-6 Astra discovered the governing rule 16.7% of the time. The other eleven models scored zero. Increasing the experiment budget did not improve discovery rates, which is the part that matters: if more attempts do not help, the failure is not search or persistence, it is that the model cannot form the right hypothesis from the observations it has. That is a much sharper claim than a low benchmark score, and a falsifiable one — either a bigger budget moves the number or the bottleneck is representational. The authors&#x27; framing, that thinking outside the frame remains the open problem, is consistent with what the numbers show.</div>
     <div class="item-meta">
-      <a href="https://x.com/leo_linsky/status/2115177647378661551" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag suleyman-mai-image">Suleyman-Mai-Image</span> @mustafasuleyman: MAI-Image Claims #2 in Image Editing</div>
-    <div class="item-body">Microsoft AI says MAI-Image is now the second-ranked image edit model, ahead of Google, Meta, xAI and GPT-Image-2.5-Flare, with the playground open to test. A vendor claim on a vendor-selected arena ranking, so treat the position as a claim and the availability as the fact — the runnable playground is what makes it checkable in an afternoon.</div>
-    <div class="item-meta">
-      <a href="https://x.com/mustafasuleyman/status/2115099284224008200" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🏗️</span>
-      <h2>Where the Money and Compute Are Moving</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag srchvrs-amazon-agi">Srchvrs-Amazon-Agi</span> @srchvrs: Amazon Said to Be Winding Down AGI</div>
-    <div class="item-body">A report that Amazon&#x27;s AGI division is being shut down, that the Nova foundation models are being sunset, that Q IDE is closing, and that code-generation model training is being abandoned — i.e. a retreat from the layer where the labs compete on capability, back toward selling compute and tooling. Unconfirmed and worth a second source, but the direction is consistent with a company that has been losing the model race and winning the infrastructure one.</div>
-    <div class="item-meta">
-      <a href="https://x.com/srchvrs/status/2115075381703450651" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag alexzuo4-b300-survey">Alexzuo4-B300-Survey</span> @alexzuo4: B300 as the New Land Deed</div>
-    <div class="item-body">Field notes from a domestic China tour, with numbers rather than mood. The gap between top Chinese and US models is widening; the highest-ROI path to close it is buying cards and distilling. An 8-card B300 rig sells for about ¥4M in the US and smuggled for ¥14M, now ¥15M to ¥18M — and anyone claiming stock is mostly a scammer. The social consequence is the sharp part: with machines in hand, local governments, model companies and listed-company backers will lend you the money, so the rig functions as collateral, land deed and story. Everyone in the chain is as optimistic as a 2017 ICO investor; CPU capacity and even Alibaba Cloud sandboxes are sold out; brokers are the pessimists, because the narrative has already reached space-based compute leasing and humanoid data collection.</div>
-    <div class="item-meta">
-      <a href="https://x.com/alexzuo4/status/2114571458144026736" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag sdf302030-trending-arb">Sdf302030-Trending-Arb</span> @sdf302030: Selling the Missing Chinese Install Guide</div>
-    <div class="item-body">A distribution case study with a P&amp;L. The arbitrage: watch GitHub Trending for repos whose stars spike while Chinese tutorials do not exist, machine-translate the README, run the install yourself, then write up the errors and fixes as a beginner one-click deploy guide and sell it for ¥39–99. The repo is free; what sells is not stepping on the landmine. One repo sustains a few weeks of sales before it goes cold and the next one starts, so Trending becomes a topic pipeline. Two months of this came to ¥150K — a specific, transferable example of monetising the gap between English documentation and a non-English audience.</div>
-    <div class="item-meta">
-      <a href="https://x.com/sdf302030/status/2114750123809124558" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag yifanxu-agent-prs">Yifanxu-Agent-Prs</span> @yifanxu_ephai: The Agent PRs Were Actually Useful</div>
-    <div class="item-body">A maintainer&#x27;s honest reversal on LayerFS. Most issues in the recent batch did not come from contributors hitting problems in real use — they looked like agents digging through odd corners of the codebase. He expected to resent AI-generated contribution spam and found the opposite: many of the agents behind them produced small, well-scoped changes with matching tests, and the edge-case coverage improved in places nobody had thought to test. The signal for maintainers is that the cost of reviewing agent PRs is real but the coverage they buy is real too, and the difference between spam and contribution is whether tests came with the diff.</div>
-    <div class="item-meta">
-      <a href="https://x.com/yifanxu_ephai/status/2114884296536404218" target="_blank">View Tweet</a>
+      <a href="https://x.com/Deefui/status/2115351634402578519" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -340,17 +333,31 @@
       <h2>Worth Your Time</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag limestonehq-budgeted-audit">Limestonehq-Budgeted-Audit</span> @LimestoneHQ: A Budgeted Audit Prompt You Can Steal</div>
-    <div class="item-body">The best-constructed prompt on the timeline today, because most of it is constraints rather than instructions. The task is a seven-day Claude Code usage audit with three explicit blocks above it: a budget that notes every turn re-sends ~100K tokens of context, bans subagents and exploratory log reads, allows one standard-library Python script and at most two crash reruns, and asks for a re-runnable command. A logs block documents the JSONL layout, the usage fields including the 5-minute and 1-hour cache-write split, and the fact that one reply spans several lines so you must keep the line with the highest output_tokens per reply id. A measure block weights tokens by price ratio because cache reads swamp raw counts, and requires the buckets to sum to the total. A summary block caps output at 40 lines, and the whole thing ends by forbidding message text, prompts and file paths from being printed, since the logs contain secrets. Copy the structure: budget first, data layout second, measurement definition third, output contract last.</div>
+    <div class="item-title"><span class="tag kanikabk-naive-rag-wins">Kanikabk-Naive-Rag-Wins</span> @KanikaBK: Naive RAG Beat Twelve Memory Systems</div>
+    <div class="item-body">A paper result that should make anyone with a memory architecture nervous: naive RAG — raw history, a flat index, pure evidence handed to the model — beat 12 complex memory systems on 6 of 7 benchmarks, and finished in about five minutes, up to 30x faster than EverMemOS. Adding graphs, summaries or extracted atomic facts dropped accuracy by nearly 20 points, and the proposed mechanism is that those layers rewrite the context the agent needs before the agent sees it. That is the same failure the Markdown-versus-SQLite test found from the other direction: retrieval shape matters more than retrieval sophistication, and every transformation between the record and the model is a chance to lose the detail that decided the answer. Test the simple baseline before you build the graph.</div>
     <div class="item-meta">
-      <a href="https://x.com/LimestoneHQ/status/2115146078580551910" target="_blank">View Tweet</a>
+      <a href="https://x.com/KanikaBK/status/2115462850118590483" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag sermakarevich-memory-market">Sermakarevich-Memory-Market</span> @sermakarevich: Thirty Products for One Missing Feature</div>
-    <div class="item-body">A link post with a useful framing rather than a review: your agent forgets everything between sessions, and which of thirty memory products fixes that. The count is the finding. Cross-session memory has gone from a bug you patch with a file to a product category with thirty entrants, which means the harder question is no longer how to persist context but which persistence model matches the task — and that is a comparison nobody has run on the same workload yet.</div>
+    <div class="item-title"><span class="tag raghavmehta-manus-prefill">Raghavmehta-Manus-Prefill</span> @RaghavMehtaM1: Manus Reads 100 Tokens Per Token Written</div>
+    <div class="item-body">The clearest explanation of where agent cost actually lives. Manus reads roughly 100 tokens for every one it writes; a task is about 50 tool calls; every step re-reads the transcript to choose one short action. So the bill and the latency are almost entirely prefill, and the metric that governs both is KV-cache hit rate — $0.30 per million cached input versus $3 uncached on Sonnet. Cache only works on an identical prefix, so four practices keep it warm: no timestamp at the top of the system prompt (second-level accuracy means a miss on every call), append-only context with deterministically serialised JSON, a fixed tool list masked during decoding rather than removed, and prefix caching with session-affine routing when self-hosting on vLLM. The tool-naming trick is the elegant bit: prefixing every browser tool with browser_ and every shell tool with shell_ lets prefill up to that token lock the model into the group without a custom logits processor.</div>
     <div class="item-meta">
-      <a href="https://x.com/sermakarevich/status/2115087554877776113" target="_blank">View Tweet</a>
+      <a href="https://x.com/RaghavMehtaM1/status/2115449672844054780" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag schuer-aa-effort-cost">Schuer-Aa-Effort-Cost</span> @schuer_x: Effort Is Now Half the Score and 10x the Bill</div>
+    <div class="item-body">The numbers behind the rebuilt index, stated plainly. Claude Opus 5.5 scores 35 at low effort and 58 at max — the same model, 23 points apart, for 10x the cost per task ($0.98 versus $10.04). GPT-6.1 Sol at max lands within 4 points of Opus at $1.27 a task. Agent tasks carry 55% of the index weight and about 90% of output tokens, the median model now writes 59K output tokens per task against 35K previously, and 60% of v5 runs use private test sets. The practical consequence is that any leaderboard number without an effort label is now underspecified, and a model comparison that ignores effort is comparing budgets rather than capabilities.</div>
+    <div class="item-meta">
+      <a href="https://x.com/schuer_x/status/2115406349840363694" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag oluwaphilemon-qwen-cuda">Oluwaphilemon-Qwen-Cuda</span> @Oluwaphilemon1: 21 Days, 180 Subagents, Still 2.8x Slower</div>
+    <div class="item-body">The most honest long-horizon agent report of the week, because it failed its objective and published the telemetry anyway. Qwen3.8-27B spent 21 days building a CUDA inference engine to beat llama.cpp on one RTX 3090: 180 subagents, 230M tokens processed, 1.7B cache-read tokens, 699 context compactions costing 83 hours, and about 12 human interventions. It reached roughly 250 tokens/sec prefill against llama.cpp&#x27;s ~700 — about 36%, or 2.8x slower. Two failures are more instructive than the benchmark gap. A subagent shut down vLLM while the orchestrator was still using it, which is a resource-ownership problem rather than a coding problem. And the same GPU had to both run the agent and benchmark its output, so every measurement interrupted the work it was measuring. Sustaining a project for weeks and delivering a performance target are separate capabilities, and this run separated them cleanly.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Oluwaphilemon1/status/2115256049041129494" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
