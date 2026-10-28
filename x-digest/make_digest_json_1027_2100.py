@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Tuesday, October 27th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Cheap Per Token, Expensive Per Task:</strong> On CursorBench 4.0, DeepSeek V4.1 Flash Max scored 47.7% for $0.98 a task while Sonnet 5.5 High scored 47.8% for $1.20 — in 41 steps and ~37K tokens instead of 187 steps and ~537K — and Opus 5.5 Max still leads at 57.8% for $13.43, roughly 14x the bill.",
+        "<strong>The Cost Curve May Bend the Wrong Way:</strong> One user measured Cursor Pro at 27M tokens and 1.3 hours of work for 7% of a monthly limit — about 349M tokens a month — while another argued publicly that cost per token falls but tokens per task rises faster, so capability and cost improve together in the wrong direction.",
+        "<strong>MCP Is Growing Boundaries, Not Just Tools:</strong> MCP 2.0 gains server-published events that any client can subscribe to, Chromium drew the line between MCP (agent to service) and WebMCP (agent to an open website with the user in the loop), and DigitalOcean shipped a gateway that treats a model's tool call as a request rather than authority.",
+        "<strong>Evals Are Being Scored on Craft:</strong> A five-part rubric for eval task selection — diverse, realistic, difficult, discriminative, correctly graded — landed alongside VybBench, which scores design fidelity in numbers (145 fonts, 100 hex codes, 200 edits) instead of human votes, and an Anthropic randomized trial on whether 50 professional analysts still make the key calls when an agent does the work.",
+        "<strong>Amazon Retreats While Google Ships:</strong> Reports that Amazon is winding down its AGI division, sunsetting Nova and shutting Q IDE, came the same day Google announced Genie 4, an interactive world model with real-time physics, reasoning and audio — against a China survey putting smuggled 8-card B300 rigs at ¥18M and warning that most sellers are scammers.",
+    ],
+    "sections": [
+        {
+            "emoji": "💸",
+            "title": "The Bill Arrives Per Task",
+            "items": [
+                {
+                    "tag": "degenofwallst-cursorb",
+                    "title": "@DegenOfWallSt: Fourteen Times the Bill for Ten Points",
+                    "body": "A cost sheet read off CursorBench 4.0 rather than a leaderboard. Flash Max reaches 47.7% for $0.98 a task; Sonnet 5.5 High is 47.8% for $1.20 but finishes in 41 steps and roughly 37K tokens against Flash's 187 steps and ~537K. Haiku 5.5 Max lands 48.4% at $1.12. Opus 5.5 Max still leads at 57.8% — about ten points higher for $13.43 a task, roughly 14x. The mechanism matters more than the ranking: a single CursorBench task is a long multi-file job, so Flash burns 291K tokens at the Low setting, 385K at High and 537K at Max, priced at $0.30 input, $0.006 cache read and $1.20 output per million with the same rate across the full 1M context. His closing question is the right one — cheap per token is not cheap per finished change, so what do you actually pay per merged PR? Cursor's own caveat: small score gaps may not be statistically meaningful.",
+                    "url": "https://x.com/DegenOfWallSt/status/2115102734672175502"
+                },
+                {
+                    "tag": "shownotover-cursorpro-math",
+                    "title": "@shownotover: 27M Tokens Was 7% of a Month",
+                    "body": "One week of measuring instead of arguing: Cursor Pro at $20, run on Grok 4.7 fast, produced 27 million tokens and 1.3 hours of work time for 7% of the monthly limit. Extrapolated, that is roughly 349 million tokens a month, plus $75 of API credits for other top-tier models. The useful part is the method — a single quota readout converts a subscription into a token budget you can compare against per-token API pricing, which is exactly the number most subscription comparisons leave out. His verdict is Claude Pro at $20 ahead of it.",
+                    "url": "https://x.com/shownotover/status/2115142779525595566"
+                },
+                {
+                    "tag": "thecapexdesk-cost-direction",
+                    "title": "@TheCapexDesk: Costs Fall Per Token and Rise Per Task",
+                    "body": "A dated, on-the-record reversal after ten weeks: agent costs will not fall the way every other AI cost has, because agents get more capable by consuming more tokens, which puts capability and cost on the same upward slope. The formulation is the compact part — cost per token falls, tokens per task rises faster, and that has held for three years with agents accelerating it. Nothing here is measured, and the account is new, but the claim is falsifiable and specific enough to check against 2027 invoices, which is more than most cost takes on this timeline offer.",
+                    "url": "https://x.com/TheCapexDesk/status/2115194499588600036"
+                },
+            ],
+        },
+        {
+            "emoji": "🔌",
+            "title": "MCP Grows Boundaries",
+            "items": [
+                {
+                    "tag": "calcsam-mcp-events",
+                    "title": "@calcsam: MCP Servers Can Now Publish Events",
+                    "body": "An extension to the MCP 2.0 spec, shipped today: an MCP server can publish events — a failed deploy, a merged PR — that any client can subscribe to. That closes an asymmetry that has shaped most agent integrations, where the client polls or the human relays and the server has no way to say something happened. Event-shaped servers turn agent work from request-response into something that can wake on state change, which is the pattern every long-running agent harness ends up rebuilding badly on its own.",
+                    "url": "https://x.com/calcsam/status/2115133696105955391"
+                },
+                {
+                    "tag": "chromiumdev-webmcp",
+                    "title": "@ChromiumDev: WebMCP Is Not Replacing MCP",
+                    "body": "A short correction with a diagram, aimed at the confusion the name invites. MCP connects agents to your services; WebMCP connects agents to your website while it is open and the user is in the loop. The distinction is about authority as much as plumbing — one is a standing credential to a backend, the other is a page-scoped capability that exists only while a human is present. Worth keeping straight before designing a tool surface, since the two answer different threat models.",
+                    "url": "https://x.com/ChromiumDev/status/2114776553481445523"
+                },
+                {
+                    "tag": "digitalocean-action-gateway",
+                    "title": "@DigitalOcean: A Tool Call Is a Request, Not Authority",
+                    "body": "The line to steal for any agent design review: a model's suggestion to call a tool is a request, not authority. Action Gateway keeps credentials out of model context and checks every tool call against policy with three outcomes — allow, deny, or ask a human. It aligns with NVIDIA's Open Agent Safety Platform, which matters for anyone who has been treating the allowlist as a prompt-level instruction. Credential separation plus a policy decision per call is the architecture that survives a model that has been talked into something.",
+                    "url": "https://x.com/digitalocean/status/2114824813155942560"
+                },
+            ],
+        },
+        {
+            "emoji": "🔬",
+            "title": "Evals, Scored on Craft",
+            "items": [
+                {
+                    "tag": "cwolferesearch-five-factors",
+                    "title": "@cwolferesearch: Five Tests an Eval Set Has to Pass",
+                    "body": "A usable rubric for anyone building an eval rather than consuming a leaderboard. Diverse: build a structured task taxonomy so you can measure coverage — GDPval organises by economic sector, occupation and work activity. Realistic: source tasks from real usage, as CursorBench does from Cursor sessions and SWE-Lancer from Upwork jobs. Difficult: estimate difficulty with experts, task properties or model-based filtering so the benchmark has not saturated. Discriminative: a task every agent fails tells you nothing, and Item Response Theory can model solve probability from agent ability and task difficulty to pick a smaller, more informative set. High-quality: verify the reference solution and the grader, using failure analysis as Terminal-Bench does. The takeaway: a larger or harder benchmark is not a better one.",
+                    "url": "https://x.com/cwolferesearch/status/2115121894328603063"
+                },
+                {
+                    "tag": "anurahk-vybbench",
+                    "title": "@anurahk: VybBench Scores Design Drift in Numbers",
+                    "body": "Image editing gets ranked by human vote, and a vote cannot see that your font changed. VybBench replaces the vote with three countable tests: 145 real fonts matched pixel by pixel, 100 hex codes scored on colour drift, and 200 small edits scored on how many pixels changed with a judge confirming the requested edit was actually made. Every prompt, output, judge verdict and the scorer itself are on Hugging Face. The failure being measured is the interesting part — ask for one headline change and the model nudges the font, shifts the blue and redraws a corner of the logo until the design is no longer yours. Disclosed conflict: the authors also build Vyb, a design model.",
+                    "url": "https://x.com/anurahk/status/2115127376552280304"
+                },
+                {
+                    "tag": "alextamkin-judgment",
+                    "title": "@AlexTamkin: Do Experts Still Decide When an Agent Works?",
+                    "body": "New Anthropic research on a question that most agent evaluations skip: when experts delegate to an agent, do they still make the key decisions? The evidence is a randomized trial with 50 professional data analysts rather than a benchmark score, which makes it the rare study aimed at the human side of the loop. Worth reading in full before assuming that a higher task-completion rate means the judgment stayed with the person who is accountable for it.",
+                    "url": "https://x.com/AlexTamkin/status/2115190541688398184"
+                },
+            ],
+        },
+        {
+            "emoji": "🚀",
+            "title": "Releases, Read Closely",
+            "items": [
+                {
+                    "tag": "google-genie4",
+                    "title": "@Google: Genie 4, an Interactive World Model",
+                    "body": "Google DeepMind's newest interactive world model, announced from the main account and described by Demis Hassabis as bringing together real-time physics, reasoning and audio. The phrase worth noting is 'simulations within simulations' — the pitch is no longer a generated environment you look at but one that can contain another, which is where world models start to overlap with training environments for agents rather than with video generation. No benchmark numbers in the announcement.",
+                    "url": "https://x.com/Google/status/2115114426827501782"
+                },
+                {
+                    "tag": "leolinsky-gbench-terra",
+                    "title": "@leo_linsky: GPT-6.1 Terra Is an Outlier on GBENCH",
+                    "body": "Independent benchmark notes rather than a launch reaction: Terra is an outlier on the Pareto frontier, which leaves the entire frontier dominated by OpenAI models, and it lands between Gemini 4 Argon and Claude Opus 5.5 as a near-frontier model in its own right. His usage split is the more useful datum — he still runs Opus 5.5 for roughly half of his coding-assistant work, because Astra solves hard problems better but interprets prompts literally, while Opus takes initiative in ways that match intent. The gap that remains is personality and product, not raw intelligence or price.",
+                    "url": "https://x.com/leo_linsky/status/2115177647378661551"
+                },
+                {
+                    "tag": "suleyman-mai-image",
+                    "title": "@mustafasuleyman: MAI-Image Claims #2 in Image Editing",
+                    "body": "Microsoft AI says MAI-Image is now the second-ranked image edit model, ahead of Google, Meta, xAI and GPT-Image-2.5-Flare, with the playground open to test. A vendor claim on a vendor-selected arena ranking, so treat the position as a claim and the availability as the fact — the runnable playground is what makes it checkable in an afternoon.",
+                    "url": "https://x.com/mustafasuleyman/status/2115099284224008200"
+                },
+            ],
+        },
+        {
+            "emoji": "🏗️",
+            "title": "Where the Money and Compute Are Moving",
+            "items": [
+                {
+                    "tag": "srchvrs-amazon-agi",
+                    "title": "@srchvrs: Amazon Said to Be Winding Down AGI",
+                    "body": "A report that Amazon's AGI division is being shut down, that the Nova foundation models are being sunset, that Q IDE is closing, and that code-generation model training is being abandoned — i.e. a retreat from the layer where the labs compete on capability, back toward selling compute and tooling. Unconfirmed and worth a second source, but the direction is consistent with a company that has been losing the model race and winning the infrastructure one.",
+                    "url": "https://x.com/srchvrs/status/2115075381703450651"
+                },
+                {
+                    "tag": "alexzuo4-b300-survey",
+                    "title": "@alexzuo4: B300 as the New Land Deed",
+                    "body": "Field notes from a domestic China tour, with numbers rather than mood. The gap between top Chinese and US models is widening; the highest-ROI path to close it is buying cards and distilling. An 8-card B300 rig sells for about ¥4M in the US and smuggled for ¥14M, now ¥15M to ¥18M — and anyone claiming stock is mostly a scammer. The social consequence is the sharp part: with machines in hand, local governments, model companies and listed-company backers will lend you the money, so the rig functions as collateral, land deed and story. Everyone in the chain is as optimistic as a 2017 ICO investor; CPU capacity and even Alibaba Cloud sandboxes are sold out; brokers are the pessimists, because the narrative has already reached space-based compute leasing and humanoid data collection.",
+                    "url": "https://x.com/alexzuo4/status/2114571458144026736"
+                },
+                {
+                    "tag": "sdf302030-trending-arb",
+                    "title": "@sdf302030: Selling the Missing Chinese Install Guide",
+                    "body": "A distribution case study with a P&L. The arbitrage: watch GitHub Trending for repos whose stars spike while Chinese tutorials do not exist, machine-translate the README, run the install yourself, then write up the errors and fixes as a beginner one-click deploy guide and sell it for ¥39–99. The repo is free; what sells is not stepping on the landmine. One repo sustains a few weeks of sales before it goes cold and the next one starts, so Trending becomes a topic pipeline. Two months of this came to ¥150K — a specific, transferable example of monetising the gap between English documentation and a non-English audience.",
+                    "url": "https://x.com/sdf302030/status/2114750123809124558"
+                },
+                {
+                    "tag": "yifanxu-agent-prs",
+                    "title": "@yifanxu_ephai: The Agent PRs Were Actually Useful",
+                    "body": "A maintainer's honest reversal on LayerFS. Most issues in the recent batch did not come from contributors hitting problems in real use — they looked like agents digging through odd corners of the codebase. He expected to resent AI-generated contribution spam and found the opposite: many of the agents behind them produced small, well-scoped changes with matching tests, and the edge-case coverage improved in places nobody had thought to test. The signal for maintainers is that the cost of reviewing agent PRs is real but the coverage they buy is real too, and the difference between spam and contribution is whether tests came with the diff.",
+                    "url": "https://x.com/yifanxu_ephai/status/2114884296536404218"
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "limestonehq-budgeted-audit",
+                    "title": "@LimestoneHQ: A Budgeted Audit Prompt You Can Steal",
+                    "body": "The best-constructed prompt on the timeline today, because most of it is constraints rather than instructions. The task is a seven-day Claude Code usage audit with three explicit blocks above it: a budget that notes every turn re-sends ~100K tokens of context, bans subagents and exploratory log reads, allows one standard-library Python script and at most two crash reruns, and asks for a re-runnable command. A logs block documents the JSONL layout, the usage fields including the 5-minute and 1-hour cache-write split, and the fact that one reply spans several lines so you must keep the line with the highest output_tokens per reply id. A measure block weights tokens by price ratio because cache reads swamp raw counts, and requires the buckets to sum to the total. A summary block caps output at 40 lines, and the whole thing ends by forbidding message text, prompts and file paths from being printed, since the logs contain secrets. Copy the structure: budget first, data layout second, measurement definition third, output contract last.",
+                    "url": "https://x.com/LimestoneHQ/status/2115146078580551910"
+                },
+                {
+                    "tag": "sermakarevich-memory-market",
+                    "title": "@sermakarevich: Thirty Products for One Missing Feature",
+                    "body": "A link post with a useful framing rather than a review: your agent forgets everything between sessions, and which of thirty memory products fixes that. The count is the finding. Cross-session memory has gone from a bug you patch with a file to a product category with thirty entrants, which means the harder question is no longer how to persist context but which persistence model matches the task — and that is a comparison nobody has run on the same workload yet.",
+                    "url": "https://x.com/sermakarevich/status/2115087554877776113"
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
