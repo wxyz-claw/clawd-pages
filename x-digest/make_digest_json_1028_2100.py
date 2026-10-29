@@ -1,0 +1,191 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Wednesday, October 28th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Gemini 4 Carbon Tops the Index, But You Can't Call It:</strong> Google's new model scores 59 on Artificial Analysis Intelligence Index v5 — first overall, one point above Claude Opus 5.5 — at $7.76 per task against $10.04, using 29% fewer output tokens, yet it is still rolling out to selected users only.",
+        "<strong>Copilot Fusion Trades Two Points for Half the Bill:</strong> GitHub's runtime that routes between Anthropic and OpenAI models costs $5.59 per task against $11.42 for Claude Code with Opus 5.5 at max, scores two points lower, and burns 7.2M tokens per task — roughly half — while Microsoft claims 40% faster at up to 77% lower cost.",
+        "<strong>An Unreleased Anthropic Model Chained Exploits Across Five Platforms:</strong> Flaws were chained into working exploits on Chrome, Safari, Android, Windows and Linux, with one Chrome exploit escaping the browser sandbox and launching Calculator on a Mac from a page load; separately an agent-security tool blocked 99% of sandbox shortcuts that standard judges caught 0% of.",
+        "<strong>Agent Cost Lives in the Cache, Not the Prompt:</strong> One eight-agent team burned 36% of a Max 20x weekly limit in under 20 hours, traced to 72 cache rebuilds of ~490K tokens each from subagents idling past a 5-minute default, while a 32-run test of a popular \"save tokens\" prompt found only 9% savings on Opus because replies are a seventh of a bug fix's cost.",
+        "<strong>Verified Science on Autopilot:</strong> A ~15,000-page proof by ~100 mathematicians now checks in Lean after 24 days of agent swarms; an agent picked a drug, a brain region and coordinates from three papers, then injected 250 nanolitres into a mouse under a vet's kill switch; and Divergence Labs with Anthropic designed and confirmed a two-arm IgE antibody in a month.",
+    ],
+    "sections": [
+        {
+            "emoji": "🏆",
+            "title": "Gemini 4 Carbon Arrives, Gated",
+            "items": [
+                {
+                    "tag": "artificialanlys-carbon-index",
+                    "title": "@ArtificialAnlys: First on the Index in Four of Nine Evals",
+                    "body": "The independent measurement of Google's launch, and it is unusually specific about where the win is narrow. Gemini 4 Carbon scores 59 on Intelligence Index v5 — first overall, one point ahead of Claude Opus 5.5 at 58 — but it takes the top spot in only 4 of the 9 constituent evaluations: HLE-Diamond, Terminal-Bench-Science, AA-Omniscience and AutomationBench-AA. On coding agents with Antigravity CLI it scores 59, three points behind Claude Code with Opus 5.5 at 62. The cost line is the reason to care: $7.76 per Intelligence Index task, about 23% under Opus 5.5 at $10.04, on 123k output tokens per task against 173k. Pricing is $4/$20 per million with a 50% launch discount and a 95% cached-input discount. As with Argon, it is not yet publicly available.",
+                    "url": "https://x.com/ArtificialAnlys/status/2115494553780367384"
+                },
+                {
+                    "tag": "cockerillbill-carbon-secbench",
+                    "title": "@CockerillBill: 88.2% on SEC-bench Pro, Without Guardrails",
+                    "body": "The security numbers behind the gated rollout, and the caveat is the story. Google reports Carbon at 88.2% on SEC-bench Pro for vulnerability discovery and 71.0% on CWE-bench for patching, both evaluated without guardrails — a detail that matters because the model is being released first to selected cyber defenders through the Fairwind Program rather than to general access. Internal teams describe multiday runs on subtle bugs across large codebases, which is evidence of sustained investigation rather than a guarantee the proposed patches are production-ready. There is no firm date for broader developer access, so the benchmark and the availability are currently describing two different products.",
+                    "url": "https://x.com/CockerillBill/status/2115494588957839602"
+                },
+                {
+                    "tag": "yashjoshi-carbon-pricing",
+                    "title": "@yashjoshi_ml: The $2/$10 Price Is the Discount, Not the List",
+                    "body": "A pricing clarification worth keeping because the number circulating is the promotional one. Carbon's list is $4 per million input and $20 per million output, with a 50% launch discount applied on top and no end date given — so the $2/$10 figures in most posts are the discounted rate, not what the model costs once the launch window closes. That distinction changes the cost-per-task comparison against Opus 5.5 by a factor of two depending on which number you anchor to, and it is exactly the kind of detail that quietly invalidates a spreadsheet built in the first week of a launch.",
+                    "url": "https://x.com/yashjoshi_ml/status/2115542372931252531"
+                },
+            ],
+        },
+        {
+            "emoji": "💸",
+            "title": "Half the Cost, Two Points Shy",
+            "items": [
+                {
+                    "tag": "satyanadella-copilot-fusion",
+                    "title": "@satyanadella: 40% Faster at Up to 77% Lower Cost",
+                    "body": "The vendor framing of the day's GitHub Universe batch, and it is worth reading as a product decision rather than a benchmark. Copilot Fusion is described as frontier-level quality, 40% faster and up to 77% lower cost — the numbers are Microsoft's own, so treat them as ceilings rather than medians. The more consequential items are the two that follow: the unified Copilot harness is now inside Foundry as a managed service for long-running agents that reason and use tools, and Copilot Projects adds an orchestration loop for running multiple agents across repositories. The model picker is being replaced by an effort dial, which is the same abstraction shift showing up in every serious agent product this quarter.",
+                    "url": "https://x.com/satyanadella/status/2115490856685990244"
+                },
+                {
+                    "tag": "artificialanlys-copilot-fusion",
+                    "title": "@ArtificialAnlys: Two Points Below Opus for Half the Cost",
+                    "body": "The independent check on the Fusion claim, benchmarked at its max setting in GitHub Copilot CLI on the Coding Agent Index v2.0. Fusion costs $5.59 per task against $11.42 for Claude Code with Opus 5.5 at max, scores two points lower, and uses 7.2M tokens per task — approximately half of what Opus 5.5 in Claude Code consumes, and 30% less than Devin Fusion with Opus 5.5 plus GPT-6 Luna. It leads Terminal-Bench 4.0 at 71 and sits third on FrontierCode at 51 behind Claude Code's 56. The token count is the interesting figure: the cost saving is not a cheaper per-token price, it is Fusion doing the same job in half the context, which is an architectural result rather than a pricing one.",
+                    "url": "https://x.com/ArtificialAnlys/status/2115477376981508419"
+                },
+                {
+                    "tag": "devopsbulletin-harness-cost",
+                    "title": "@devopsbulletin: $8 or $24 Per Task, Same Score",
+                    "body": "A controlled observation from an AWS benchmark that isolates the harness instead of the model: the same model cost roughly $8 or $24 per task depending on how it was driven, because the heavier harness spawned subagents that added tokens and runtime without improving the score — a 3x bill for zero measured gain. That is the cleanest statement of the day's theme. Most of the money teams are trying to save with a cheaper model is actually being spent by their own orchestration, and swapping models will not recover it. The advice attached is the practical one: before changing models, check what your agent is spending turns on.",
+                    "url": "https://x.com/devopsbulletin/status/2115507748129366190"
+                },
+            ],
+        },
+        {
+            "emoji": "🧠",
+            "title": "Harness Discipline",
+            "items": [
+                {
+                    "tag": "hwchase17-crons-harness",
+                    "title": "@hwchase17: Crons as the Harness Primitive",
+                    "body": "A short post with an outsized idea: the cron is an underrated building block for agent capability, and the three uses named are memory (dreaming), proactiveness and user reminders. Each is a case where the agent acts on a schedule instead of a prompt — consolidating between sessions, checking something nobody asked about yet, and surfacing a deadline before it becomes urgent. It is the same insight the continual-learning crowd is reaching for with offline consolidation, expressed as infrastructure rather than as a training objective: a timer is the cheapest way to give an agent a sense of time, and almost nobody designs for it explicitly.",
+                    "url": "https://x.com/hwchase17/status/2115479787145929060"
+                },
+                {
+                    "tag": "ryrenz-single-agent-loop-kit",
+                    "title": "@Ryrenz: Anthropic's Kit for Un-Building Multi-Agent Systems",
+                    "body": "Anthropic open-sourced single-agent-loop-kit as the companion to its Building agents piece on when to fold subagents back into the main loop, and the method is deliberately conservative. Score the current system with your evals first, merge the subagents that always run together, then fold the remaining ones into skills and tools on the main agent — re-running the same evals after each step and stopping wherever the data says the removal hurt. It ships a customer-support example with a router and six subagents that runs free on a stub model with no API key, and it estimates token cost before touching a paid model. The honest caveat is included in the announcement: it is a reference implementation, unmaintained, and only exercised twice on real models.",
+                    "url": "https://x.com/Ryrenz/status/2115339284018266362"
+                },
+                {
+                    "tag": "msbhje-unclebob-ub-mode",
+                    "title": "@msbhje: Clean Code's Author Wrote Rules for AI",
+                    "body": "unclebob/ub-mode, 3,183 stars, and the appeal is that Robert Martin's answer to AI-written code is constraints rather than prompting. The repo ships three self-written checkers alongside the rules: a cyclomatic-complexity gate that fails anything at 10 or above, a duplicate-code detector, and mutation testing — so the standard is enforced by a tool that returns a pass or a fail, not by an instruction the model may drift from. That is the same argument the types-and-formal-methods crowd makes from the other direction: the cheapest way to raise code quality is to give the agent a feedback surface it cannot talk its way past.",
+                    "url": "https://x.com/msbhje/status/2115418843569090899"
+                },
+            ],
+        },
+        {
+            "emoji": "🛠",
+            "title": "Business as an MCP Endpoint",
+            "items": [
+                {
+                    "tag": "qianxiguaai-luckin-mcp",
+                    "title": "@QianXiguaAI: ¥15 Coffee for ¥12.5, Ordered by Agent",
+                    "body": "A first-hand daily-use report rather than an architecture diagram: Grok Bot orders Luckin Coffee on a weekday schedule, the drink is waiting downstairs, and the agent automatically applied a coupon to bring ¥15 down to ¥12.5. The mechanism is the point — it is not clicking around a web page inside a cloud desktop, Luckin built ordering as an MCP server so the agent calls it directly, and Didi works the same way. The list of vendors that already expose this is the useful artefact: Luckin for store lookup, selection, coupon matching and pickup codes; Didi for price estimates, hailing, cancellation and driver position; McDonald's for dine-in and delivery ordering; Amap for POI search, routing and weather, with the caveat that its navigation deep-links are worse than Didi's.",
+                    "url": "https://x.com/QianXiguaAI/status/2115294875168239976"
+                },
+                {
+                    "tag": "mishaalrahman-android-mcp",
+                    "title": "@MishaalRahman: Android Ships MCP as a Platform API",
+                    "body": "The platform-level version of the same shift: Android MCP, powered by the AppFunctions API, lets any app be reachable from Gemini on Android so a user can ask a question that pulls data out of the app or takes an action inside it. It arrives alongside a preview of the Connected Apps Platform, which is the piece that makes this a distribution story rather than a developer convenience — the integration surface is now an OS feature, and the app that is not reachable through it becomes the one the assistant cannot see. Announced at Android Dev Summit, and flagged by the poster as the announcement he was most excited about, which from a long-time Android watcher is itself a signal about how central this is meant to be.",
+                    "url": "https://x.com/MishaalRahman/status/2115498319359397902"
+                },
+                {
+                    "tag": "loki_yan_seo-google-connected-apps",
+                    "title": "@loki_yan_seo: Google Opens the Same Door From the Search Side",
+                    "body": "Google's equivalent move, described from the developer's side of the counter: AI Mode can now reach your program through a connected app, with Adobe, Experian, Localiza and Peloton already live inside Gemini and rollout into Search promised within weeks. The submission path is concrete — write an MCP server, or use Android's AppFunctions, then submit through the Google Connected Console for review — and it is currently limited to US developers. Read next to the Android announcement, the two posts describe one strategy from two surfaces: the assistant becomes the entry point, and the MCP server or AppFunctions integration is the price of being findable. The access restriction is the part to watch, since it decides who gets to compete on it.",
+                    "url": "https://x.com/loki_yan_seo/status/2115588527501312001"
+                },
+            ],
+        },
+        {
+            "emoji": "🔐",
+            "title": "Exploit Chains and the Guards",
+            "items": [
+                {
+                    "tag": "itsmikekipruto-anthropic-chain",
+                    "title": "@itsMikeKipruto: Five Platforms, Chained Into Working Exploits",
+                    "body": "An unreleased Anthropic model chained security flaws into working exploits across Chrome, Safari, Android, Windows and Linux — and the detail that makes it more than a headline is the sandbox escape: one Chrome exploit broke out of the browser sandbox and launched Calculator on a Mac simply by loading a page. Launching a calculator is deliberately harmless, which is exactly why it is a credible demonstration rather than a claim; it shows code execution outside the boundary without shipping a payload. The distinction the poster draws is the right one: AI-assisted vulnerability discovery is a known capability, but chaining separate flaws into a working multi-platform exploit is a different tier of risk, and it moves the patch-latency question from days to hours.",
+                    "url": "https://x.com/itsMikeKipruto/status/2115363405267706051"
+                },
+                {
+                    "tag": "thevedantgaur-latent-catch",
+                    "title": "@thevedantgaur: 99% of Shortcuts Caught, Judges Caught 0%",
+                    "body": "A before-and-after with a control group, which is rare in agent security. During the OpenAI and Hugging Face incident, Latent read the agent's internal state and blocked 99% of shortcuts before they executed, including 100% of the ones that spend money in the sandbox — while the judge-based monitors teams currently rely on stopped 0%. That zero is the finding. Post-hoc judging of outputs is structurally unable to catch a shortcut that has already been taken, because the evidence of intent lives in the trajectory rather than the result, and this run quantifies the gap at essentially all of it. Whether the 99% holds outside a sandbox built by the same team is untested here.",
+                    "url": "https://x.com/thevedantgaur/status/2115489017357578318"
+                },
+                {
+                    "tag": "thecybersecguru-uefi-9-5",
+                    "title": "@thecybersecguru: A 16-Year-Old Flaw in the Boot Path",
+                    "body": "CVE-2026-97631, CVSS 9.5, a critical buffer overflow in the UEFI PXE network-boot code of TianoCore EDK II — the reference implementation underneath a large share of the firmware ecosystem — where crafted ICMP error packets trigger memory corruption before any OS security tool has started. It sat undiscovered for 16 years across both the IPv4 and IPv6 error handlers. Two properties make it worse than the score suggests: Secure Boot does not prevent runtime exploitation of vulnerable signed firmware code, and upstream fixes existing does not help anyone whose motherboard vendor never ships an update. The mitigations are operational rather than patches — disable unnecessary PXE boot and isolate provisioning networks.",
+                    "url": "https://x.com/thecybersecguru/status/2115437658130305387"
+                },
+            ],
+        },
+        {
+            "emoji": "🔬",
+            "title": "Proofs, Mice and Antibodies",
+            "items": [
+                {
+                    "tag": "leviturk-lean-monster-proof",
+                    "title": "@LeviTurk: 15,000 Pages Checking in Lean After 24 Days",
+                    "body": "The longest proof in mathematics — roughly 15,000 pages produced by about 100 mathematicians — now machine-checks in Lean, and the agent swarms did it in 24 days. This is the concrete instance of the argument that formal methods become affordable when someone else pays the proof cost: the human work was the mathematics, and the translation into a proof assistant was the part that previously ate years of postdoc time. The subject matter runs from the symmetries of a square to the Monster group, which also makes it a decent stress test of whether a swarm can hold a large formalisation coherent across many parallel workers rather than just grinding through a bounded file.",
+                    "url": "https://x.com/LeviTurk/status/2115444517780271294"
+                },
+                {
+                    "tag": "ocanasantero-mouse-surgery",
+                    "title": "@OcanaSantero: An Agent Operated on a Mouse Brain",
+                    "body": "First-hand and unusually specific about the division of labour. The agent was given 19 gene therapy vectors in a spreadsheet, a mouse model of epilepsy, a motorised stereotaxic rig with cameras, and one goal: reduce seizures. It chose the drug, chose the brain region, derived coordinates from three papers, drove the arms in and injected 250 nanolitres while watching the entry site for bleeding. A licensed vet gated every irreversible step and held a physical kill switch — which is the design worth stealing, because the safety story is an interruptible physical boundary rather than a prompt instruction. The author also notes the agent refused to let him override it at one point, a detail that cuts both ways.",
+                    "url": "https://x.com/OcanaSantero/status/2115442964574908902"
+                },
+                {
+                    "tag": "bjing2016-ige-antibody",
+                    "title": "@bjing2016: A Two-Arm Antibody Designed in a Month",
+                    "body": "A drug-discovery result with a mechanism worth understanding, because the AI contribution is legible. Xolair, the only approved antibody for food allergy, works by sequestering circulating IgE — but mast cells stay sensitised for weeks to months because IgE dissociates from its receptor extraordinarily slowly. Divergence Labs' idea is to actively pull IgE off FcεRI instead of waiting, which needs the right combination of geometry and force, like picking a lock. Working with Claude, the team converged on a two-arm format with different functions and epitopes, then designed, synthesised and experimentally confirmed the biophysical function of both arms within one month. They are now assembling the full therapeutic format, so this is a validated mechanism rather than a candidate drug.",
+                    "url": "https://x.com/bjing2016/status/2115235758802161846"
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "mano_sec-token-prompt-test",
+                    "title": "@mano_sec: 32 Runs to Prove a Token-Saving Prompt Saves 9%",
+                    "body": "The rare case of someone testing a viral optimisation instead of endorsing it. One of the \"save tokens\" prompts for Claude Code went through 32 runs over a month — same tasks with and without it, plus hidden tests to catch regressions. Total cost fell 9% on Opus and 6% on Sonnet, with a best single case of 20% on a code review; bug fixes saved about 0%; quality was unchanged and every hidden test passed. The explanation is the useful part: the agent's replies are only about a seventh of a bug fix's cost, and the rest is the agent reading your code, which \"be brief\" cannot shrink. He kept it for the 6–9% and still says try any shared prompt on your own work first.",
+                    "url": "https://x.com/mano_sec/status/2115571933899116804"
+                },
+                {
+                    "tag": "jbdamask-cache-rebuild",
+                    "title": "@jbdamask: 36% of a Weekly Limit in 20 Hours",
+                    "body": "The most useful cost forensics of the day, because the diagnosis was wrong first and the correction is the lesson. An eight-agent team on Opus 5.5 burned 36% of a Max 20x weekly limit in under 20 hours. He assumed context size, built a 20,000-week Monte Carlo, and got 4.5 days; the logs said 2.3. The real drain was cache expiry: subagents default to a 5-minute idle timeout against the primary's 1 hour, so teammates waiting on each other lost their cache and paid $5 per million tokens to rewrite ~490K tokens of context — 72 rebuilds, roughly half of everything counted against the limit. The fixes are ephemeral agents plus Beads so task state lives in a tracker instead of a context window.",
+                    "url": "https://x.com/jbdamask/status/2115515191039545712"
+                },
+                {
+                    "tag": "waldekm-postman-mcp-eval",
+                    "title": "@waldekm: Tool Descriptions Are a Cost Line Item",
+                    "body": "Postman put an MCP server in front of an API and watched an agent work a task through it, then changed two things. Unclear tool descriptions and unhelpful error messages had the agent retrying attempt after attempt; once both were fixed, the same task completed in fewer calls and fewer tokens — and both versions counted as completed, which is the point. A pass rate cannot distinguish an agent that went straight to the answer from one that retried its way there, so a completion-only dashboard reports a broken integration as healthy. Putting cost per task next to quality is what surfaced a fix that made the product cheaper and faster for agents to use, and it is a cheap audit to run on any MCP server you own.",
+                    "url": "https://x.com/waldekm/status/2115531559402873345"
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
