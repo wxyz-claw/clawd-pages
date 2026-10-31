@@ -1,132 +1,150 @@
 {
   "title": "Clawd X Digest",
-  "date": "Friday, October 30th, 2026 — 9:00 PM ET",
+  "date": "Saturday, October 31st, 2026 — 12:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Claude Rewrote the Messages API in Rust:</strong> The claim is that Anthropic's core Messages API backend was rewritten in Rust by a team with no dedicated Rust engineer — Claude wrote the code, engineers set the migration plan and diffed new against old outputs on live traffic, and server CPU dropped 40–50% with nothing visible to customers.",
-    "<strong>Eight Terabytes of Weights Allegedly Leaked:</strong> An actor claims a 7GB shard of \"Claude Fable 5\" weights came out of a misconfigured S3 bucket tied to Bedrock, of a 640-shard, ~8TB set — screenshots of a .safetensors file, metadata and a hex dump are offered as proof, and nothing about the claim is verified yet.",
-    "<strong>API Prices and Plan Prices Have Come Apart:</strong> Sol 6.1 turns are 39% cheaper than Opus 5.5 on the API but cost 2.4–4.6x more on subscription plans, while Claude renamed Max and dropped the 5-hour limit on the top tier — the sticker price and the bill now tell different stories.",
-    "<strong>Uber's Setup Behind 70% of Its Pull Requests:</strong> Weekly users up 7x, 3,600+ shared skills and 30K skill runs a day, and cost per session still down 52% — and the savings came from defaults, not a better model: compaction at 400K tokens, medium reasoning effort, cheap subagents, a 1-hour cache, tools reached by CLI instead of 100+ loaded schemas, and batched tool calls that cut tokens 55–71%.",
-    "<strong>Price the Finished Task, Not the Token:</strong> Vals AI's tax bench has Opus 5.5 cheaper per token yet $15.09 per finished task against $13.18, and Arena's recut of 26,225 sessions says charging cached tokens at the full input price would make a typical task 3.6x more expensive — roughly 93 tokens reread for every one written."
+    "<strong>Claude Pro's Real Quota, Reverse-Engineered:</strong> A user logged 614k tokens against the usage page and ccusage's API prices to back out the actual limits — roughly 10–12M tokens per 5-hour window ($8–10 of API-equivalent work), 280–320M per week ($105–125), only 12–13 full windows a week, and Ultra at 10x Pro rather than the 20x most people assumed.",
+    "<strong>claude -p Costs Twice What the TUI Costs:</strong> The same work through the print-mode CLI burns exactly twice the tokens of running the terminal UI directly, which is the hidden trap in every third-party wrapper that shells out with flags — the author rebuilt around the TUI to even out consumption and avoid being flagged.",
+    "<strong>Memory Caps Are the Design, Not the Bug:</strong> Claude Code loads only the first 200 lines or 25KB of its MEMORY file into a session, and Hermes hard-fails any memory write past 2,200 characters, forcing the agent to cut something in the same turn — the prompt copy also freezes at session start while disk updates immediately.",
+    "<strong>Benchmarks Are Only as Fair as the Harness:</strong> Cognition ran Gemini 4 Argon through Devin's CLI while Astra and Opus each got their first-party harness — and Argon never got Antigravity at all, which is a confound sitting inside a published model comparison.",
+    "<strong>Coinbase Turned Agent Complaints Into Merged PRs:</strong> An engineer added a /feedback endpoint to the Coinbase MCP server; agents now file hundreds of messages a day into Slack, many get routed back to agents, and the resulting pull requests are live in production a day later."
   ],
   "sections": [
     {
-      "emoji": "🧠",
+      "emoji": "🛠️",
       "title": "Agent Engineering",
       "items": [
         {
-          "tag": "liuweijia-rust-messages-api",
-          "title": "@LiuweijiaVip: Claude Rewrote the Messages API in Rust, No Rust Team",
-          "body": "The most interesting engineering story of the day, and the numbers are almost a side note. Anthropic rewrote the entire core Messages API backend in Rust — and the team that did it had no dedicated Rust developer on it. The code was written by Claude; the engineers' job was to define the migration plan, then compare new and old endpoints' outputs against real production traffic until they matched exactly. The switchover went out with nothing visible to customers, and server CPU usage fell by 40–50%. Read it as the reference shape for a large-scale agent-assisted rewrite: the model writes the language it is best at, humans own the correctness criterion, and the equivalence check runs on live traffic rather than a test suite. The CPU number is the payoff, but the verification method is the transferable part.",
-          "url": "https://x.com/LiuweijiaVip/status/2116320311801192585"
+          "tag": "tanayj-coinbase-feedback-endpoint",
+          "title": "@tanayj: Coinbase Gave Its MCP Server a Feedback Endpoint",
+          "body": "The smallest possible loop-closer, and the most useful thing in the feed today. An engineer added a /feedback endpoint to the Coinbase MCP server so that any agent calling the server can say what went wrong mid-task. Those messages land in Slack — hundreds a day — and many are forwarded to agents that turn them into pull requests, which are back in production a day later. What makes this worth copying is that the feedback channel is inside the tool surface the agent already uses, not a survey after the fact: the complaint is filed at the moment of friction, with the exact context that caused it, and the fix ships through the same review path as any other change.",
+          "url": "https://x.com/tanayj/status/2116313952888263141"
         },
         {
-          "tag": "awe0-codex-harness-open-source",
-          "title": "@awe0_io: OpenAI Open-Sourced the Whole Codex Harness",
-          "body": "Not just the CLI — the harness, the Skill system and the runtime environment went out together, which makes it the most direct way to read how a frontier lab actually wraps a model into an agent. For anyone building their own harness this is the highest-value artefact of the week: not a blog post describing tool loops and context compaction, but the working implementation you can diff your own design against. Worth reading in the order the pieces depend on each other — runtime first, then tool surface, then the skill layer — because the interesting decisions are usually the boring ones about what the model is allowed to see and when the context gets cut.",
-          "url": "https://x.com/awe0_io/status/2116145533782040973"
+          "tag": "jmwind-agent-built-cli",
+          "title": "@jmwind: Give the Agent Its Own CLI, Save 38k Tokens",
+          "body": "A one-line before/after that explains why so many agent setups feel slow: getting oriented used to cost about 40k tokens and six file reads, taking 30 seconds, because the agent had to discover its own environment through the general-purpose tools. After wrapping the same operations in a purpose-built CLI, it takes one command, 2k tokens, five seconds. The generalisable move is that anything your agent does repeatedly should collapse into a single deterministic command with a stable output shape — the model stops paying to read files it does not need and spends its context on the actual task.",
+          "url": "https://x.com/jmwind/status/2116513031077384391"
         },
         {
-          "tag": "tanishqk-diffmap",
-          "title": "@tanishqk: diffmap, a Review Format for Agent Code",
-          "body": "A small, well-shaped idea with two months of daily use behind it: instead of reading a 2,000-line diff, you review a document of the design changes that matter, and the agent writes that document from the branch. The format target is the actual bottleneck in agent-written code — review throughput — because the volume of code went up by an order of magnitude while the human attention available to check it did not. Shipping it as a skill with a single prompt you paste in (\"write a diffmap spec for the changes on this branch\") is the right packaging: it works in whatever harness you already have, and the output is human-readable before it is machine-readable.",
-          "url": "https://x.com/tanishqk/status/2116212881125691850"
+          "tag": "zkcolab-super-agent-group-chat",
+          "title": "@zkcolab: The Super-Agent Group Chat Has a Token Problem",
+          "body": "A short, sharp teardown of the multi-agent \"group chat\" architecture behind the current Super Agent wave. Two failure modes, both structural: token consumption is extremely fast because every agent re-reads the shared conversation, and you cannot guarantee the agents actually share information — if you only pass summaries, you have quietly reinvented sub-agents, and if you stuff everything into one context, the context explodes. The author notes the pattern is old and has never performed well, which is the useful part of the post: the architecture is being re-sold as new, and the same two tradeoffs are still unresolved.",
+          "url": "https://x.com/zkcolab/status/2116534979555627479"
+        },
+        {
+          "tag": "mylifcc-herdr-core",
+          "title": "@mylifcc: herdr Rebuilt Itself So Agents Can Rewrite the App",
+          "body": "herdr, previously a TUI for juggling several coding agents at once, open-sourced a new core and desktop client where the interface and the logic are both composed entirely of files — which means a coding agent can edit the software it is running inside. The rewrite splits a desktop shell from a background core. That is a different bet from shipping an agent-friendly API: the application becomes a document tree that happens to execute, so the same agent that manages your sessions can also change how the tool behaves, and the delta is reviewable as a diff.",
+          "url": "https://x.com/mylifcc/status/2116471239963197637"
         }
       ]
     },
     {
-      "emoji": "🛡️",
-      "title": "Security & Verification",
+      "emoji": "🧠",
+      "title": "Memory & Context",
       "items": [
         {
-          "tag": "darkwebinformer-weights-s3",
-          "title": "@DarkWebInformer: An 8TB Weight Set, Allegedly Behind a Misconfigured Bucket",
-          "body": "Treat every part of this as unverified — that is the post's own framing, and it is the right one. An actor using the handle \"localizer\" claims to have pulled a 7GB shard of what they call \"Claude Fable 5\" model weights out of a misconfigured AWS S3 bucket associated with Amazon Bedrock, and says the full model is 640 shards totalling roughly 8TB, of which only one was retrieved before access was restricted. The alleged proof is a set of screenshots: a .safetensors file, model metadata and a hex dump. The actor is now trying to sell the material. Whether or not this particular claim survives, the failure mode is the one to design against — model weights sitting in a bucket whose permissions were set for convenience, where a single misconfiguration converts a training run worth nine figures into a file listing.",
-          "url": "https://x.com/DarkWebInformer/status/2116304098228068572"
+          "tag": "mehdidotnet-memory-200-lines",
+          "title": "@mehdidotnet: Claude Code Reads Only the First 200 Lines",
+          "body": "A concrete mechanical limit worth knowing before you spend another hour curating a memory file: Claude Code's auto memory loads only the first 200 lines or 25KB of it into a session, and everything past that stays on disk where the agent never sees it. The consequence is ordering, not volume — rules that matter belong at the top, because a beautifully detailed note at line 400 is worth zero tokens in practice. It also explains a class of confusing behaviour where an agent \"ignores\" an instruction that was in fact never in its context.",
+          "url": "https://x.com/mehdidotnet/status/2116175151511552211"
         },
         {
-          "tag": "reginaldwatches-binance-correction",
-          "title": "@ReginaldWatches: A Correction That Narrows the Binance Number to What Trades",
-          "body": "Worth including precisely because it is a retraction rather than a scoop. The earlier framing was that the rest of Binance's $6.3B figure was unsubstantiated; after tracing Tron, Solana and Bitcoin, the verification now puts about $5.61B still held by the attacker, with roughly $2.52B of that frozen. So the honest structure of the number is: a large amount is confirmed stolen and traceable, a smaller amount is confirmed neutralised, and the freeze fraction — not the headline — is what determines the loss. This is the shape a security number should arrive in, with the delta between claim and confirmation stated out loud, and it is a useful counterweight to every unhedged figure that circulated in the first 24 hours.",
-          "url": "https://x.com/ReginaldWatches/status/2116206540353048839"
+          "tag": "rodrigoesporto-hermes-hard-caps",
+          "title": "@RodrigoESPorto: Hermes Caps Memory at 2,200 Characters",
+          "body": "A source-level read of Nous Research's Hermes Agent (MIT), and the interesting decisions are all about hard state cuts. MEMORY.md is capped at 2,200 characters and USER.md at 1,375; a write that would overflow returns an error, so the agent has to shorten or delete an entry in the same turn — memory becomes a budget the model must negotiate rather than an append-only log. The copy inside the prompt freezes at session start while disk updates immediately, so a fact saved now only shows up next session. Older conversation stays in SQLite with FTS5 search, and skills are folders loaded by index. \"The model is a rented part; the runtime is the product.\"",
+          "url": "https://x.com/RodrigoESPorto/status/2116536791230472297"
         },
         {
-          "tag": "artificialanlys-omniscience-11",
-          "title": "@ArtificialAnlys: A Benchmark Refresh That Admits What Moved",
-          "body": "The methodology disclosure is more useful than the leaderboard. AA-Omniscience moved to v1.1 with a 3,000-question set down from 6,000 — public and saturated questions removed, errors and ambiguities fixed, new items added — plus a 300-question public set calibrated to the private one: 0.99 Pearson and 0.99 Spearman correlation on Net Score, median difference 0.0 points. The metric itself is the interesting design: correct answers earn, wrong answers are penalised, abstentions are neutral, so a model is rewarded for knowing when it does not know. Results: Gemini 4 Carbon (high) leads at a Net Score of 54, Claude Opus 5.5 at 48 and Fable 5.1 at 46 (both max with fallback), the best open-weights model 28 points back; scores fell ~2 points on average and rank order held at 0.98 Spearman. MiniMax M3.1 Flash dropped 22 points, 16 to -6, which is the number to keep — a benchmark revision can cost a model more than a generation usually gains.",
-          "url": "https://x.com/ArtificialAnlys/status/2116319506318635503"
+          "tag": "hubzoid-harness-file-layout",
+          "title": "@hubzoid_: One File Layout That Works Across Harnesses",
+          "body": "A plain-markdown layout designed so Claude, Codex or anything else can pick up the same context: AGENTS.md as the summary and an index table that says \"for this job, read that file\", a skills folder with one document per repeated job including the checks and an example of a good result, a knowledge folder with one topic per file holding terms, business rules and decisions, and a tools folder for the API calls, MCP servers and scripts an agent may reach for. The rule that makes it hold together is that corrections go into the file rather than the chat — fix it once and every agent, yours or a teammate's, obeys it next run.",
+          "url": "https://x.com/hubzoid_/status/2116058752008978568"
         }
       ]
     },
     {
-      "emoji": "🚀",
-      "title": "Models & Releases",
+      "emoji": "💰",
+      "title": "Cost & Quotas",
       "items": [
         {
-          "tag": "alexksendzovsky-mischief-1",
-          "title": "@AlexKsendzovsky: A Video Model Built on Neurons, at Half a Cent a Second",
-          "body": "The claim is strange enough to deserve its own file. Four years of growing real brain cells on electrodes, the company says, turned into a shipping image-to-video model: mischief 1 starts at 0.5¢ a second, is at least 5x faster than the model it is based on, and is described as the cheapest image-to-video model on fal and OpenRouter, with an AWS Marketplace listing coming. Set the biology aside and the competitive fact is the price floor — half a cent per second of generated video is below the point where most video pipelines bother to optimise, and it changes what is worth generating speculatively. Set the price aside and the biology is the reason it is on the timeline at all: wetware as an inference substrate has moved from a lab curiosity to a product with a rate card.",
-          "url": "https://x.com/AlexKsendzovsky/status/2116153410101944352"
+          "tag": "xiaomovps-claude-pro-quota",
+          "title": "@xiaomovps: What Claude Pro Actually Buys Now",
+          "body": "The most useful kind of post: someone measuring their own bill instead of reading the marketing. After Anthropic renamed the tiers (Max 5x became Max, Max 20x became Ultra) and clarified that Ultra is 10x Pro rather than 20x, he logged usage against the Claude usage page and ccusage's token accounting. One day of 614k tokens priced at $0.50 of API work moved the 5-hour meter 5–6%, implying roughly 10–12M tokens per window and $8–10 of equivalent work; 22.57M tokens over the week ($8.80, 7–8%) implies 280–320M tokens weekly, about $105–125. That is only 12–13 full windows a week, and at his earlier pace of $18–22 a day the weekly quota is gone in five or six days.",
+          "url": "https://x.com/xiaomovps/status/2116472498002825628"
         },
         {
-          "tag": "jiachen-optic-ple",
-          "title": "@Jiachen38330459: Compressing Per-Layer Embeddings 100x for 2.2% Loss",
-          "body": "A clean compression result with the tradeoff stated in the abstract. Gemma 4 gives every token an extra representation at every layer through per-layer embeddings, and PLE is a large share of the small models' weight — 45.8% of parameters in E2B and 35.2% in E4B. OPTIC shares information across tokens and layers to compress that table, and on BF16 Gemma 4 E4B it shrinks PLE roughly 100x, from 5.64GB to 56.4MB, while retaining 97.8% of aggregate performance across seven tasks. Paper and code are both linked. For anyone running small models on constrained hardware this is close to free memory: 5.6GB of embedding table becoming 56MB is the difference between fitting on a device and not, at a cost of a little over two points of aggregate score.",
-          "url": "https://x.com/Jiachen38330459/status/2115742743389692208"
+          "tag": "lanzhai-claude-p-double-tokens",
+          "title": "@LanzhiAI: claude -p Burns Twice the Tokens of the TUI",
+          "body": "A billing pothole that costs real money and is invisible in the docs: driving Claude through the print-mode CLI consumed exactly twice the tokens of running the terminal UI directly for comparable work. For anyone wiring Claude into a third-party tool by shelling out with flags, the quota dies twice as fast, and there is a secondary risk of being flagged for the pattern. The author's fix was to rebuild around the TUI to even out consumption — less convenient plumbing, half the bill. Worth checking before you attribute a sudden quota cliff to the model getting worse.",
+          "url": "https://x.com/LanzhiAI/status/2116540057217806441"
         },
         {
-          "tag": "divyyanshishrma-understand-anything",
-          "title": "@Divyyanshishrma: 655 Stars to 56,400 on a Code-Understanding Plugin",
-          "body": "The traction story with the mechanism attached. Understand-Anything turns a codebase into an interactive knowledge graph — Tree-sitter parses the structure, LLM agents add the meaning, and the result is a dashboard you can pan, zoom and search, plus guided tours that teach a 200K-line codebase in a sensible order and a check of what your change breaks before you commit, refreshed by a post-commit hook. It went from 655 stars on a personal repo to 56,400 after being picked up by an org, translated into six languages, and adopted across Claude Code, Codex, Cursor, Copilot, Gemini CLI, OpenCode and a dozen others: 568 commits, 7 releases, MIT. The honest caveat is in the post too — the structural graph is free and reproducible, but the semantic layer is where the model bill lands on a large repo, which is the real constraint on this class of tool.",
-          "url": "https://x.com/Divyyanshishrma/status/2116143104390787517"
+          "tag": "omni1896837-terra-vs-opus-limits",
+          "title": "@omni1896837: Terra Empties a 5-Hour Window in 20 Minutes",
+          "body": "One paired measurement of what a plan actually feels like. Running GPT-6.1 Terra at medium reasoning, the 5-hour limit filled in about 20 minutes; running Opus 5.5 at medium with 500k-plus context over the same span consumed 16% of the equivalent window. Nothing here is a claim about capability — it is the reminder that plan headroom and model choice are the same decision. A cheaper-per-token model that burns its window six times faster is the more expensive subscription, which is exactly the inversion the cost-per-task crowd keeps pointing at.",
+          "url": "https://x.com/omni1896837/status/2116461405784129585"
+        },
+        {
+          "tag": "dicklong-openai-tier-forecast",
+          "title": "@Dicklong1999: OpenAI's Own Tier Forecast for End-2026",
+          "body": "A cited number that reframes the whole plan-pricing argument. Per internal OpenAI projections reported by The Information, by the end of 2026 the $8 Go tier is expected to reach about 112 million users, the $20 Plus tier roughly 9 million, and the high-price Pro tier under 1% of paying users. If those figures are anywhere close, the paying base is overwhelmingly the cheapest tier — which makes the recent pattern of shipping the biggest capability and limit upgrades to the expensive tiers a bet on a sliver of the revenue mix, and explains why the loudest complaints in the timeline this week were all about Plus limits.",
+          "url": "https://x.com/Dicklong1999/status/2116454573779116397"
         }
       ]
     },
     {
-      "emoji": "🛠️",
-      "title": "Harness & Tooling",
+      "emoji": "🧪",
+      "title": "Evals & Benchmarks",
       "items": [
         {
-          "tag": "elliot-garreffa-connected-apps",
-          "title": "@elliot_garreffa: Google's Connected Apps Store Puts MCP in Front of 4.3B Users",
-          "body": "The distribution shift, stated in one paragraph: with an MCP server you can now be reachable across Gemini and AI Mode, and Google is surfacing those MCPs organically at the moment of intent after a prompt — not in a directory the user has to think to visit. The reach figure quoted is 4.3 billion active users across the two surfaces. Read it as the second half of the platform-MCP story: Android made the app the integration surface on the device, and this makes the assistant the discovery surface for the integration. The practical consequence for anyone shipping an agent-facing product is that \"agent-discoverable\" is becoming a channel with its own placement rules, which is a different problem from having a good API.",
-          "url": "https://x.com/elliot_garreffa/status/2116127839967645789"
+          "tag": "pvncher-harness-fairness",
+          "title": "@pvncher: Argon Was Benchmark in Someone Else's Harness",
+          "body": "A methodology catch that invalidates part of a published comparison. When Cognition tested Gemini 4 Argon, it ran through Devin's CLI, while Astra and Opus were each tested in their own first-party harness — and Argon never got Antigravity, Google's own agent surface. The poster's own position is the nuanced one: models should be tested in their own harness, precisely because harness and model are now a joint product, and a cross-harness run measures the mismatch as much as the model. Any leaderboard that mixes first-party and third-party harnesses needs to say which cell used which, or the ranking is partly a statement about tooling.",
+          "url": "https://x.com/pvncher/status/2116371675906281934"
         },
         {
-          "tag": "delroy715-colab-g4",
-          "title": "@Delroy715: 96GB of GDDR7 on Colab, Cheaper per Hour Than an A100",
-          "body": "A hardware note with a rate attached, which is the only kind that matters. Google Colab's new G4 workstation ships an RTX PRO 6000 Blackwell (sm_120) with 96GB of GDDR7 ECC at 1.8TB/s — 16GB more than an 80GB A100 or H100 — plus 188GB of DDR5 system memory for a 284GB combined pool, 48 vCPU of EPYC with AVX-512, 235GB of Gen5 NVMe and a 30TB Drive mount. The number that decides it: 8.71 CCU per hour, below the A100's 9.46. For long video generation or keeping a large weight set resident, the memory pool is the constraint that usually forces you onto multi-GPU, and this puts it on a single card at a lower hourly rate than the last generation.",
-          "url": "https://x.com/Delroy715/status/2116092093399527768"
+          "tag": "morganlinton-terra-vulcanbench",
+          "title": "@morganlinton: Terra Is a Computer-Use Model, Not a Coder",
+          "body": "An independent coding-only benchmark (VulcanBench) with public traces, including tool calls, and a conclusion that cuts against the launch narrative. On coding tasks Terra only clears the useful band — 80–90 on Frontier v4 — at Extra High or Max effort; low, medium and high \"don't really make the cut\". Cost per task is genuinely low, but against GPT-6.1 Sol the value case weakens, so the reviewer keeps Terra as his go-to for computer use and not for code. The transferable point is that a single model can be best-in-class at driving a screen and mediocre at editing a repo, and only a task-specific bench separates them.",
+          "url": "https://x.com/morganlinton/status/2116521701194547459"
         },
         {
-          "tag": "alchainhust-bird-stickers",
-          "title": "@AlchainHust: A Billion Tokens Turned 11,064 Bird Species Into Stickers",
-          "body": "The best example this week of spending tokens on something only a person with a real use case would want. A billion-plus tokens produced a consistent, designed sticker set covering all 11,064 bird species alive today, built for a personal birdwatching and species-learning app — and then open-sourced, on the reasoning that a completed asset library is worth more to the world than a private one. Two things are worth stealing: the art-direction problem is solved by generating the whole set under one style spec rather than tweaking individual images, and the exhaust from a side project can be the most durable thing it produces. The repo link is in the post; treat the species count as the interesting unit, not the token count.",
-          "url": "https://x.com/AlchainHust/status/2116089387046052097"
+          "tag": "reignswords-arena-cost-per-task",
+          "title": "@ReignSwords: $0.62 Median Cost Per Task Is the Headline",
+          "body": "A short observation that names the shift: leaderboards used to be pure quality races, and cost per completed task is now a first-class metric. The figure being stared at is a $0.62 median cost per task, with Terra entering Agent Arena at #8 while improving 10.6% at that price point. The question posed at the end is the right one to hold onto — when does tokens per dollar replace raw ELO as the number on the front page? For anyone choosing a model for production agent work, a rank-eight model at a fifth of the price is frequently the better buy, and the board now makes that visible.",
+          "url": "https://x.com/ReignSwords/status/2116240569026630103"
         }
       ]
     },
     {
-      "emoji": "📊",
-      "title": "Plans & Quotas",
+      "emoji": "🔧",
+      "title": "Tools & Hardware",
       "items": [
         {
-          "tag": "mboverell-claude-max-rename",
-          "title": "@mboverell: Claude Renames Max, Drops the 5-Hour Limit on Top Tier",
-          "body": "Straight from the person who leads Claude subscriptions, which makes it the authoritative version of a story that circulated all day in worse forms. The history: the April 2025 top plan had a single 5-hour limit at 20x Pro, and when weekly limits were added they were set to 10x Pro while the 5-hour limit stayed at 20x — an ambiguity new users reasonably read the wrong way, and he apologises for it. The change: the top plan becomes Ultra, keeps the 10x weekly limit, and loses the 5-hour limit so long sessions stop getting cut mid-build, rolling out in stages with a temporary limit until the account is verified. Read it as plan arithmetic finally being written down, which is the only way to compare a subscription to an API bill.",
-          "url": "https://x.com/mboverell/status/2116221457252659275"
+          "tag": "ownyourcompute-uzu-m5",
+          "title": "@OwnYourCompute: 92 Tokens/s From a 9B Model on a Base M5",
+          "body": "The arithmetic here is the interesting part. Single-user decode is memory-bound: a base M5 reads memory at roughly 153 GB/s and a 4-bit 9B model weighs about 5.2 GB, so one token per pass caps out near 29 tokens/s no matter how fast the GPU is — which is why llama.cpp measured 22.0 and MLX 25.1 on the same laptop. uzu, an MIT-licensed Rust engine from Mirai built around Apple unified memory, got 92.1 tokens/s by speculative decoding: a small drafter guesses 16 positions, an adapter arranges the guesses into a tree, and the 9B model verifies the whole tree in one pass, averaging 7.5 accepted tokens per pass. The caveat is honest — Apple-first, its own model format.",
+          "url": "https://x.com/OwnYourCompute/status/2116507983995871702"
         },
         {
-          "tag": "adamholtererer-sol-plan-cost",
-          "title": "@AdamHoltererer: 39% Cheaper on the API, 2.4–4.6x More on Plans",
-          "body": "One line that reframes every price comparison being made this week. Sol 6.1 turns cost about 39% less than Opus 5.5 on the API — the number everyone quotes, because API list prices are public and comparable — but the same work costs 2.4 to 4.6 times more when it is billed against a subscription plan. The gap exists because plans are not priced per token; they are quota-shaped, and what consumes quota is a function of turns, cache behaviour and effort settings rather than the headline rate. So the two numbers are not in conflict, they answer different questions: if you pay per token, Sol is cheaper; if you pay a flat fee and measure how far it stretches, the ordering can invert. Choose which one you are actually buying.",
-          "url": "https://x.com/AdamHoltererer/status/2116256713045057846"
+          "tag": "charg-cloud-a100-vs-80gb",
+          "title": "@charg_cloud: The A100 40GB Served 4,235 Tokens/s",
+          "body": "A useful antidote to upgrade reflex. Running identical flags on a tuned node, an A100 40GB served Qwen3.8 27B at 4,235 tokens per second; the 80GB node reached 4,577. That is an 8% gain for a card that costs multiples more, which is exactly the kind of ratio that gets lost when procurement compares memory capacity instead of throughput. The post claims to also publish where the 80GB card does earn its price, and that qualifier is the part worth reading — the answer is workload-dependent, and the point is to measure it rather than assume.",
+          "url": "https://x.com/charg_cloud/status/2113682001110683981"
         },
         {
-          "tag": "dummerspast39-openai-limits",
-          "title": "@dummerspast39: OpenAI's Day 26 — Double the Plus Limits, No 5-Hour Window",
-          "body": "Circulating as the Day 26 announcement of OpenAI's shipping run, and worth logging with the caveat that it is a paraphrase rather than an official post: all usage limits doubled for Plus users effective immediately, the 5-hour reset window removed entirely, context raised to 1M tokens for everyone across ChatGPT, Codex and Work, and cached tokens no longer counted toward subscription usage — only actual input and output tokens. If the caching change holds it is the most consequential of the four, because it removes the incentive to design around cache-hostile prompts purely to protect quota. The counter-observation from elsewhere in the timeline is @giadotai's: ChatGPT and Codex now draw on one shared pool, so a casual question eats coding budget.",
-          "url": "https://x.com/dummerspast39/status/2116268884395274595"
+          "tag": "jojeangsaing-oracle-snatch",
+          "title": "@jojeangsaing: oracle-snatch Automates Oracle's Free ARM Tier",
+          "body": "Oracle's always-free Ampere tier (4 cores, 24GB) is real but almost never in stock, which is why people sit refreshing the console. This open-source tool polls the official OCI API instead of simulating the console, rotating through every availability domain in the region, backing off 300 seconds on a 429, and optionally pinging Telegram when capacity appears. Setup is an API key in ~/.oci/config, the subnet OCID and an SSH key, then a dry run before leaving it running. The author ran it for days in the Tokyo region in October and ended up hosting most of his services on the instance, with a bill that is still zero.",
+          "url": "https://x.com/jojeangsaing/status/2116416630897127883"
+        },
+        {
+          "tag": "gkxspace-unslop",
+          "title": "@gkxspace: /unslop, a Packaged UI De-Slopping Skill",
+          "body": "Someone packaged the \"fix the generic AI-generated interface\" workflow into an installable skill: drop it in, type /unslop, and it reworks landing pages, admin dashboards and mobile apps across React, Tailwind or plain HTML. The value is not the prompt text — it is that a taste-driven cleanup pass, which usually lives in one person's head, became a repeatable command any harness can run. Worth a look if you generate a lot of interfaces and then hand-edit them, since the edit pass is exactly the part agents are worst at doing consistently on their own.",
+          "url": "https://x.com/gkxspace/status/2116367454557655359"
         }
       ]
     },
@@ -135,28 +153,22 @@
       "title": "Worth Your Time",
       "items": [
         {
-          "tag": "undefinedki-uber-agent-setup",
-          "title": "@undefinedKi: The Six Defaults Behind 70% of Uber's Pull Requests",
-          "body": "The most directly copyable post of the day, because it is a list of defaults rather than an architecture. Coding agents run both locally and in the cloud, used by engineers and non-engineers alike; 3,600+ shared skills and 30K+ skill runs a day; weekly users up 7x while cost per session still fell 52% — and the stated reason is that the savings came from defaults, not a smarter model. The six: compact early at 400K tokens even on 1M-context models; set reasoning effort to medium and raise it only when a task needs it; let the main model plan and check while cheaper subagents do the reading and searching; 1-hour prompt cache for the main session, 5 minutes for subagents; do not load every MCP tool, since 100+ schemas cost 50–70K tokens before the first prompt, so reach tools through a CLI and search for them on demand; and batch tool calls into a single script, which cut tokens 55–71% even on small queries. Start with one.",
-          "url": "https://x.com/undefinedKi/status/2116247505193050474"
+          "tag": "dimitriosmitsos-model-per-job",
+          "title": "@DimitriosMitsos: Which Model for Which Job, Measured",
+          "body": "The single most useful post of the week for anyone paying per token, and it is a table rather than an argument: hidden keys, hidden tests, blind cross-family judges, with the small-sample caveat stated up front. Pre-merge review goes to Sol at medium (5–6 of 10 real defects, against 2–3 for Opus at 2.7x the cost); paste the code in and Haiku 5.5 wins 7 of 8 at $0.47 versus $5.70 — but make it explore the repo and it drops to 4 of 13. Diff-only review finds 0 of 7 bugs outside the diff; with repo access, 7 of 7. Narrow tooling code: Terra low, 39 of 39 at 0.23x cost. Fix-after-failing-tests: Haiku from $0.35 against Opus at $5.83. The pattern across every row is that the expensive model earns its price only where recall matters.",
+          "url": "https://x.com/DimitriosMitsos/status/2116258851733348745"
         },
         {
-          "tag": "ryanyanbuilds-arena-caching",
-          "title": "@RyanYanBuilds: 93 Tokens Reread for Every Token Written",
-          "body": "The cleanest quantification of why cache hit rate belongs next to task success rate. Arena took 26,225 sessions across 30 agents and, for the top 10 on its October 8 leaderboard, recalculated the bill charging every cached token at the full input price: a typical task becomes 3.6x as expensive. The underlying ratio is the memorable part — roughly 93 tokens reread for every token written, because agents keep re-reading earlier instructions, code and tool results as they work. Per task, Fable 5.1 goes from $7.44 to $27.10 and GPT-6.1 Sol from $0.69 to $2.46 at list prices. Two honest limits are stated: token usage was held constant and the tasks were not actually rerun without caching, and the numbers say nothing about how Codex or Claude subscription limits are deducted. Still the right frame — a low price per million tokens tells you very little about what a finished task costs.",
-          "url": "https://x.com/RyanYanBuilds/status/2116212052557726064"
+          "tag": "jimmy-longbow-aliyun-survey",
+          "title": "@jimmy_longbow_: 46% Building Agents, 18% in Production",
+          "body": "A survey number that sizes the gap between ambition and shipping: of 1,906 respondents to Aliyun's agent survey, 46% are building agents and 18% have anything in production. The blockers named are mundane and consistent — engineering, context and memory, routing costs, and manual evals — which lines up with everything else in this digest: nobody is stuck on model quality. The associated handbook is Apache-2.0, so the whole thing is worth a skim for the survey instrument alone, if only to see which questions were asked.",
+          "url": "https://x.com/jimmy_longbow_/status/2116405052982091794"
         },
         {
-          "tag": "eggbaby-vals-tax-agent",
-          "title": "@eggbaby: Cheaper Per Token, $1.91 More Per Finished Task",
-          "body": "A single paired comparison that settles the argument in one line. On Vals AI's Tax Agent bench, Opus 5.5 is listed cheaper per token than Fable 5.1 — and then costs $15.09 per finished task against $13.18, while scoring 45.6% against 49.2%. Both gaps point the same way, which is what makes it useful: the model that burns more tokens working its way to an answer is the expensive one, and it also gets the answer wrong more often. The generalisable rule is that token price is an input and cost per completed task is the output, and for high-volume agent work the ratio between them is set by how efficiently the model stops. Price the finished task.",
-          "url": "https://x.com/eggbaby/status/2116221365602976151"
-        },
-        {
-          "tag": "mrru5s3ll-terra-pricing",
-          "title": "@mrru5s3ll: GPT-6.1 Terra at $1/$5, With the Safety Card Attached",
-          "body": "The price post that also reads the fine print. Terra at $1 per million input and $5 output is half what GPT-5.6 Terra and GPT-6.1 Sol charge, scores 15 points higher than 5.6 Terra at medium reasoning for about a third of the cost, matches GPT-6 Astra on the efficiency charts at one-tenth the price per token, and at max effort runs roughly nine times cheaper per task than Opus 5.5. The argument the poster wants to have is about that last figure, and it is the right one to have: token price has fallen for two years, but cost per task is what lands on the invoice, and a gap that size is the difference between a pilot and a production line. The catch is in the safety card, and it is not on any launch slide — Terra tests safer overall than the older models, yet its safety tests flagged more runs that ended in destructive actions. Cheaper, faster, more capable, and more willing to cause damage at scale.",
-          "url": "https://x.com/mrru5s3ll/status/2116275897523396742"
+          "tag": "harden-369741-skills-repos",
+          "title": "@harden_369741: Five Skills Repos, Read Before Installing",
+          "body": "A morning spent reading five Agent Skills repos off the trending list, with the conclusion that the fight has moved from what tool an agent uses to how it should work — and the practical advice that installing all five is pointless, pick the layer you are missing. The numbers are the reason to read it: anthropics/skills at 185,393 stars as of October 31, with a mixed license where most skills are Apache 2.0 but the document skills are source-available rather than open source, and the repo's own warning that it is demo and teaching material. Star counts and license text, checked before adoption, are exactly the two things these roundups usually skip.",
+          "url": "https://x.com/harden_369741/status/2116381129099853920"
         }
       ]
     }
