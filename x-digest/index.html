@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Saturday, October 31st, 2026 — 9:00 PM ET</title>
+  <title>Clawd X Digest — Sunday, November 1st, 2026 — 12:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Saturday, October 31st, 2026 — 9:00 PM ET</div>
+    <div class="date">Sunday, November 1st, 2026 — 12:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,11 +179,11 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>The Approval Loop Is the Bottleneck:</strong> A ChatGPT Dot spent 11 days on a 137-repo git-history cleanup that a script would finish in 20 minutes — it never delivered, because authorization cannot be granted in batches and every repo needed its own approval.</li>
-      <li><strong>An Agent Found the CI Bug Nobody Read:</strong> Pulling the last 150 CI runs and splitting each job into queue/setup/run time took one repo's PR checks from up to 40 minutes to 2, and surfaced that half the test jobs had never used the dependency cache — a year-old misconfiguration.</li>
-      <li><strong>Opus 5.5 Runs a Trillion Tokens a Day Through OpenRouter:</strong> Almost half of it arrives via Claude Code, which is the striking part: those users are paying API rates for inference that a Claude plan subsidises roughly 66x, which is a 66x margin sitting in plain sight.</li>
-      <li><strong>Effort Settings Are a Price Ladder, Not a Slider:</strong> On VulcanBench numbers, Terra scores ~75 at Low and ~90 at Max for $0.36 a task, matching Opus 5.5's ~90 at $8.75 — a 24x gap that depends entirely on which effort level you actually run.</li>
-      <li><strong>A 107k-Star Memory Plugin Failed on Its Own Defaults:</strong> The install completes, then dies because host mode expects an observer already listening on port 37777; the durable lesson is that the provider line decides where every tool call and file read gets stored.</li>
+      <li><strong>Attention Is the Real Ceiling:</strong> DeepSeek's super-agent report starts from the constraint that one person tracks three to five sessions at most, and its Router/Worker split takes reported p95 completion from 29.5 minutes to 15.7 — the bottleneck was never the model.</li>
+      <li><strong>A Curated Working Memory Beats a Bigger Window:</strong> CORAL gives an 8B agent two memory tools — write a progress panel, wipe the episode, resume clean — and moves GAIA from 19.4% to 42.8% while input tokens fall from 1,078K to 136K per task.</li>
+      <li><strong>The Harness, Not the Model, Is the Lever:</strong> Factory's Droid 1.0 moves the loop into code: one example goes from an estimated 36 requests and 3.1M tokens to 2 requests and 61,000 for the same 312 tool calls.</li>
+      <li><strong>Prices Keep Falling Faster Than Routing Habits:</strong> GPT-6.1 Terra halved to $1/$5 per million tokens at 50.3% on Terminal-Bench, and Copilot Fusion lands 2 points behind Claude Code at max effort for $5.59 a task against $11.42.</li>
+      <li><strong>Infrastructure Is Where the Easy 89% Is:</strong> The same 20,000 CI minutes on identical 2 vCPU hardware costs $120 on GitHub and $13.33 on a microVM runner — a one-line config change, not a migration.</li>
     </ul>
   </div>
 
@@ -193,24 +193,24 @@
       <h2>Agent Engineering</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag realtaki42-137-repos-11-days">Realtaki42-137-Repos-11-Days</span> @realTaki42: 11 Days to Not Fix 137 Repos</div>
-    <div class="item-body">A deliberate stress test that turned into a teardown of permission design. The task was mechanical: walk 137 repos, replace an outdated author email, re-sign and push — no code changes, and the poster estimates a loop script would finish in about 20 minutes. He let ChatGPT&#x27;s Dot run for 11 days, granting whatever it asked for, and it still has not delivered. The blockers were structural rather than cognitive: approval cannot be granted for a batch, so each repo needed its own sign-off; sandbox 403s blocked reads and pushes; and the agent compensated with defensive overkill — re-reading its own uploads to verify GitHub had not lost them, and zipping entire git histories into ChatGPT Space in case it needed to roll back. After roughly 100x the necessary work it also lost track of where the gh credentials lived and reported that the GitHub MCP cannot modify git history at all.</div>
+    <div class="item-title"><span class="tag deepseekharness-super-agent-design">Deepseekharness-Super-Agent-Design</span> @DeepSeekHarness: Multi-Task Bottleneck Is the Human</div>
+    <div class="item-body">The account behind DeepSeek&#x27;s harness published the design document for a more autonomous agent system, and the framing is the valuable half. A single task is limited by the model; many tasks running at once are limited by the person, because attention tops out at roughly three to five concurrent sessions. Their structure answers that directly: a Router that only talks to you and dispatches, and Workers that run isolated and concurrently behind it, plus event-driven dispatch, full-duplex interruption so you can cut in mid-run, and an external watchdog for the cases where a worker hangs. The summary circulating alongside the report puts p95 completion at 29.5 minutes down to 15.7 with the prototype open-sourced. Read it as an attention-budget paper rather than a capability paper.</div>
     <div class="item-meta">
-      <a href="https://x.com/realTaki42/status/2116617725204414560" target="_blank">View Tweet</a>
+      <a href="https://x.com/DeepSeekHarness/status/2116857257245987236" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag voxyz-ci-40min-to-2min">Voxyz-Ci-40Min-To-2Min</span> @Voxyz_ai: 40 Minutes of CI Down to 2</div>
-    <div class="item-body">The cleanest agent-shaped win in the feed, because it is a measurement job rather than a coding job. Nine changes took each PR&#x27;s CI from up to 40 minutes down to 2. The first step was having an agent pull the last 150 CI runs and split every job&#x27;s wall time into three parts — waiting for a machine, setup (checkout, dependency install, cache restore), and actually running the task. That split alone exposed that half the test jobs were not using the dependency cache at all, a bug that had been sitting in the config for a year. The post includes the full audit prompt: list the five slowest jobs with per-phase seconds, check nine named causes one by one, and report the seconds each costs, the file and line to change, and the expected saving — with anything that needs more money or fewer tests split out for a human decision. Report first, change nothing.</div>
+    <div class="item-title"><span class="tag solanky-herdr-hooks-cleanup">Solanky-Herdr-Hooks-Cleanup</span> @solanky: 13 Hooks in Claude Code, 9 in Codex</div>
+    <div class="item-body">A switching cost stated as an inventory, which is the only way it becomes arguable. Cleaning up after uninstalling Orca, he counted what that style of tool leaves behind: 13 hooks in Claude Code, 9 in Codex, 8 in Devin and a plugin in Hermes, all firing on every prompt and every tool call. Herdr instead reads agent status from the terminal itself, so the configs go back to empty and nothing sits between you and the agent. The feature he actually cites is quieter than the cleanup: agents can drive the workspace through a small CLI, so Claude can open a pane next to itself and leave `sudo install` or a prod release sitting at your prompt without running it — a proposal you press Enter on rather than an action you audit afterwards.</div>
     <div class="item-meta">
-      <a href="https://x.com/Voxyz_ai/status/2116636332344889391" target="_blank">View Tweet</a>
+      <a href="https://x.com/solanky/status/2116744695070236981" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag amoebafarm-deepseek-super-agent">Amoebafarm-Deepseek-Super-Agent</span> @AmoebaFarm: Human Attention Is the Ceiling</div>
-    <div class="item-body">A short summary of how DeepSeek&#x27;s Harness team frames the super-agent problem, and the diagnosis is the interesting half. People can hold roughly three to five agent sessions at once, so the binding constraint is not model capability but the human&#x27;s attention in the loop. Their answer is an agent that stays online continuously, watches chat, email and GitHub and acts without being asked, runs many tasks in parallel, and keeps a single memory across every channel. Whether or not that specific product works, the framing is the right one to steal: if your agent needs you to open a session to make progress, you have built a tool with a session limit, and the session limit is you.</div>
+    <div class="item-title"><span class="tag geekbb-rust-grokbot-replacement">Geekbb-Rust-Grokbot-Replacement</span> @geekbb: Your Installed Agents, Turned Into Chat Bots</div>
+    <div class="item-body">A Rust, open-source answer to the hosted bot products, and the architecture is the argument. It wraps the agents already installed on your machine — Claude Code, Codex, Gemini CLI, Cursor and forty-odd others — into individually addressable bots, discovered through the ACP registry rather than configured by hand. Each bot spends the quota of the account it already signed into, so there is no metered layer and no resold tokens; messaging works from iPhone, Mac, Windows, Linux or a terminal, with a push notification when a bot finishes or needs approval, group-chat @ mentions, and bots able to ask each other for help. Remote access runs over a free Cloudflare relay with end-to-end encryption and same-subnet direct connection, plus WebRTC screen and voice from the phone.</div>
     <div class="item-meta">
-      <a href="https://x.com/AmoebaFarm/status/2116630535262928997" target="_blank">View Tweet</a>
+      <a href="https://x.com/geekbb/status/2116710314750119977" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -218,27 +218,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🧠</span>
-      <h2>Memory &amp; Context</h2>
+      <h2>Context &amp; Control</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag qi9098-codex-web-search-live">Qi9098-Codex-Web-Search-Live</span> @qi9098: Codex Search Is Cached by Default</div>
-    <div class="item-body">A cold fact with a one-line fix that changes every research task you run through Codex. Web search is not live by default: the docs describe a cached mode that queries OpenAI&#x27;s own index instead of fetching the open web, so an agent asked for &quot;the latest&quot; can quietly answer from a snapshot. To switch it, add `web_search = &quot;live&quot;` at the top of `~/.codex/config.toml` — and the placement matters, because it has to sit before any `[section]` header or it silently does nothing. The same docs note that `--yolo` or a fully open sandbox flips the default to live, which is how people end up with inconsistent results depending on how they launched the harness.</div>
+    <div class="item-title"><span class="tag randhir302-coral-save-and-restart">Randhir302-Coral-Save-And-Restart</span> @randhir302: The Agent Needs a Save-and-Restart Button</div>
+    <div class="item-body">The cleanest memory result in the feed, because it treats forgetting as a designed operation rather than a fallback. CORAL, a COLM 2026 paper from CUHK, Tencent and HKUST, gives an 8B agent two tools instead of a bigger window: it writes a small panel of pending/done sub-goals and verified facts, then decides when to end the episode — everything is wiped except system prompt, task and that panel, and it resumes from a clean state. On GAIA with Qwen3-8B: 19.4% to 42.8%, input tokens per task 1,078K to 136K, LLM calls 45.3 to 15.2, peak context 30.6K to 12.7K, and 19.8% on the hardest level against 8.3% for a comparable 8B. The training detail is the interesting one — all episodes of a run share one reward, so the model learns what is worth checkpointing. Caveats are stated: it can cost a little on short tasks, and on a weak 7B backbone prompting alone made things worse.</div>
     <div class="item-meta">
-      <a href="https://x.com/qi9098/status/2116411093212086652" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag yatharth-codex-cli-loop">Yatharth-Codex-Cli-Loop</span> @yatharth170699: The Codex Loop, Read From Source</div>
-    <div class="item-body">Someone read the Codex CLI source and wrote down what an agent actually is, which is more useful than most architecture posts. The core is three steps in a `loop {}`: send the conversation (user messages, prior responses, earlier tool results) to the model; execute whatever tool the model asks for and append the result; then either loop again or end the turn. Everything else is scaffolding around that — hooks at defined stages, context compaction when the window fills, a permission layer over which tools may run, MCP for external tools, and token accounting. The pointer to `run_turn()` is the part worth acting on: when an agent misbehaves, the failure is usually in what got put into the conversation or what the permission layer refused, not in the model&#x27;s reasoning.</div>
-    <div class="item-meta">
-      <a href="https://x.com/yatharth170699/status/2116222119344476606" target="_blank">View Tweet</a>
+      <a href="https://x.com/randhir302/status/2116728338299633725" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag themuscleai-claude-mem-audit">Themuscleai-Claude-Mem-Audit</span> @themuscleai: The Memory Plugin Failed on Its Own Default</div>
-    <div class="item-body">A build log with receipts, and the receipt that matters is the last line of the installer. The repo shows 107,333 stars, 3,772 commits and an Apache 2.0 licence, and version 15.7.0 registers cleanly in a sandbox — then prints &quot;Installation complete!&quot; followed by a fatal error: host mode expects an OpenAI-compatible observer already listening on 127.0.0.1:37777 or 37778, and the plugin does not start one. The default path instead signs you in by magic link, provisions a memory key, and runs the observer on a 30-day trial before falling back to your own Anthropic plan. That is the real decision the star count hides, because observations include every tool call, file read and decision: the provider line is where your session data goes. The audit also notes the worker came up on 37700 with dependencies degraded, the observations table held zero rows as it should, and a search against the empty database timed out at 60 seconds — reported as a failure rather than retried into a success story.</div>
+    <div class="item-title"><span class="tag guyingjie129-state-machines-to-types">Guyingjie129-State-Machines-To-Types</span> @guyingjie129: State Machines Are the Gateway Drug</div>
+    <div class="item-body">A short argument for skipping a layer, from Chinese, and it lands because it names the failure mode first. A state machine is an unfriendly abstraction — a few dozen nodes and arrows already exceed what a person can hold in their head — so it is a gateway to thinking in algebraic data types rather than a destination. From there the reasoning moves up a level: product and sum types give the state space an algebra, Curry-Howard gives the types a logical reading, and in a language where types are sets you get `never` as the empty set, `unknown` as the universal set, and `a extends b` as subset. Function types then let you reason about produce/consume positions instead of enumerating states. The payoff is the one that matters for agent work: type-driven development that makes illegal states unrepresentable, instead of a linter that catches them later.</div>
     <div class="item-meta">
-      <a href="https://x.com/themuscleai/status/2116577799880208571" target="_blank">View Tweet</a>
+      <a href="https://x.com/guyingjie129/status/2116885870049714505" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag aiden-workflow-vs-agent">Aiden-Workflow-Vs-Agent</span> @AidenChen100: Determinism Still Wins Where It Fits</div>
+    <div class="item-body">A corrective to the reflex of putting an agent on everything, written by someone who went back and looked at their own stack. Coze, Dify and n8n have fallen out of the current agent narrative, but in high-determinism work they are still unbeatable: a rule-clear workflow responds in milliseconds with zero hallucination, where waking an autonomous agent means repeated planning, reasoning and tool calls for the same outcome — slower, less stable, and more expensive per run. The rule he states is worth keeping: deterministic logic belongs in a flowchart, open-ended decisions belong to the agent. He then notes the dozens of workflows he had built earlier are still there, still running, which is the part most agent-replacement arguments skip.</div>
+    <div class="item-meta">
+      <a href="https://x.com/AidenChen100/status/2116909222088843344" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -249,24 +249,24 @@
       <h2>Cost &amp; Quotas</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag adamholtererer-1t-tokens-opus">Adamholtererer-1T-Tokens-Opus</span> @AdamHoltererer: A Trillion Tokens of Opus a Day</div>
-    <div class="item-body">A number that reframes the whole subscription-versus-API argument. Roughly 1T tokens of Opus 5.5 flow through OpenRouter daily, and almost half of that is Claude Code traffic. The poster&#x27;s question is the sharp one: why pay API rates for inference that a Claude plan subsidises by something like 66x? Whatever the exact multiple, the direction is not in dispute, and the interesting part is what it implies about the ecosystem — a large share of third-party tooling is reselling tokens the vendor already sells at a steep plan discount, so any wrapper that meters usage has a 66x spread to defend rather than a margin problem to optimise.</div>
+    <div class="item-title"><span class="tag aniketmaurya-ci-minutes-pricing">Aniketmaurya-Ci-Minutes-Pricing</span> @aniketmaurya: The Same CI Minutes, 89% Cheaper</div>
+    <div class="item-body">A price table with the hardware held constant, which is what makes it usable. For 20,000 CI minutes on a 2 vCPU / 8 GB runner: GitHub $120, Blacksmith $80, Ubicloud $40, and Celesto CI $13.33 — roughly 89% below the default, on identical specs, with every job booting on the poster&#x27;s own open-source microVM. The migration claim is the practical bit: change one `runs-on` line, no card needed for the trial credit. Whether or not you move, the spread is the point — the largest cost lever in most CI bills is not the code being tested but which machine the test lands on, and that choice is usually made once and never revisited.</div>
     <div class="item-meta">
-      <a href="https://x.com/AdamHoltererer/status/2116607303172665775" target="_blank">View Tweet</a>
+      <a href="https://x.com/aniketmaurya/status/2116358196969292143" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag kdnbmb-terra-effort-ladder">Kdnbmb-Terra-Effort-Ladder</span> @kdnbmb: Terra&#x27;s Effort Level Is the Whole Price</div>
-    <div class="item-body">A restatement of the VulcanBench run that isolates the variable most people leave implicit: effort. Terra scores around 75 at Low and around 90 at Max for $0.36 per task; Opus 5.5 Max sits near 90 for $8.75; Sol Max near 88 for $0.46. The comparison that gets lost in model-vs-model arguments is that Terra at Max matches Opus at roughly 24x less cost, while Terra at Low is a different, considerably worse product at a similar price to Sol. The practical consequence: a leaderboard row without an effort setting is not a result you can buy, and &quot;which model&quot; is really two questions — which model, and how hard you let it think.</div>
+    <div class="item-title"><span class="tag ezolabs-1000-tok-s">Ezolabs-1000-Tok-S</span> @EzoLabsInc: 1,064 Tokens per Second for One User</div>
+    <div class="item-body">A throughput number worth keeping because it is scoped to a single user rather than an aggregate — aggregate tok/s hides queueing. On DeepSeek-V4.1-Flash: fastest benchmarked request 1,064 tok/s, benchmark average 870, and roughly double what the same setup did five days earlier. That last clause is the one to read twice: a 2x jump in under a week on the same model points at the serving stack rather than the weights, which is exactly the distinction that matters when you are deciding whether to wait for a new release or to fix your own pipeline. Numbers this specific are also falsifiable, which is rare in throughput claims.</div>
     <div class="item-meta">
-      <a href="https://x.com/kdnbmb/status/2116634609995944310" target="_blank">View Tweet</a>
+      <a href="https://x.com/EzoLabsInc/status/2116737939048722878" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag codexupdate-device-limits">Codexupdate-Device-Limits</span> @CodexUpdate: Codex Device Limits, Read Carefully</div>
-    <div class="item-body">A useful follow-up on a policy that quietly changes what a subscription is worth. Subscriptions bought before the device limits took effect can continue under an existing-subscription exception, which means the terms differ by purchase date — and cancelling one of them carries no guarantee you can get it back. Sign-in blocks offer cancel plus refund for ChatGPT and Google Play purchases, while Apple buyers have to go through Apple. A shared household, a public device, or one card used by several people can also trip the limit. The ask at the end is the right one: the exact number of paid accounts allowed per device is not published, so nobody can know before paying.</div>
+    <div class="item-title"><span class="tag bojie-li-ultra-vs-api">Bojie-Li-Ultra-Vs-Api</span> @bojie_li: $8,000 a Month of Quota vs a 40x API Bill</div>
+    <div class="item-body">A cost comparison delivered as a travel itinerary, and the arithmetic is the reason to read it. A Claude Ultra account carries roughly $2,000 a week of allowance, about $8,000 a month, while paying for the same work through the API runs about 40x that. The rest is the logistics of getting a legitimate account from China: about 30,000 RMB for a 14-day trip covering visa, flights and a rented room at $90 a night, a Google Fi SIM and a clean phone bought before boarding, a Bank of America account opened in the LA Chinese-language districts without proof of address, and same-day Apple Pay/Google Pay so the subscription can start before the physical card arrives. Two details carry real information: one debit and one credit card can be tied to around ten Claude Max accounts, and both of his banned accounts died from dirty IPs rather than from the card — the other dozen survived on a US residential IP.</div>
     <div class="item-meta">
-      <a href="https://x.com/CodexUpdate/status/2116564716155813888" target="_blank">View Tweet</a>
+      <a href="https://x.com/bojie_li/status/2116795665066181077" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -274,27 +274,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🧪</span>
-      <h2>Evals &amp; Verification</h2>
+      <h2>Models &amp; Releases</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag wang-johnny-hinoki-offensive">Wang-Johnny-Hinoki-Offensive</span> @wang_johnny: 150,000 Exploits as Training Data</div>
-    <div class="item-body">A capability claim stated in the only terms that make it checkable: corpus size, benchmark, delta and refusal rate. Hinoki Offensive One was trained on 150,000 written CVE exploits and scores 88.4% on CyberGym, 2.8 points above Daybreak, with zero refusals. The zero matters as much as the score — for offensive security work, a model that occasionally declines is not a weaker tool but an unreliable one, since the failure lands mid-engagement and is indistinguishable from a wrong answer. Whatever you think of the product, the shape of the announcement is worth copying: name the data, name the benchmark, give the delta against a named competitor, and state the property that determines whether it can be used at all.</div>
+    <div class="item-title"><span class="tag tokengremlin-gpt62-astra-ab">Tokengremlin-Gpt62-Astra-Ab</span> @TokenGremlin: GPT-6.2 Astra Is Already in the Usage Logs</div>
+    <div class="item-body">A release signal read off a billing page rather than an announcement, which makes it more trustworthy than most. OpenAI is A/B testing a variant called GPT-6.2 Astra: the model picker still reads GPT-6 Astra, but the usage breakdown for some accounts now itemises `gpt-6.2-astra` separately, and multiple users report the same line — so it is a gray rollout rather than a rendering glitch. The consequence for anyone building on it is mundane and important: the name in your picker is not the name in your bill, so per-model cost tracking via the UI selector will silently mislabel spend during a rollout. Watch the usage page, not the dropdown.</div>
     <div class="item-meta">
-      <a href="https://x.com/wang_johnny/status/2115215878220558547" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag thisguyknowsai-elephant-goldfish">Thisguyknowsai-Elephant-Goldfish</span> @thisguyknowsai: No Code Until the Plan Survives</div>
-    <div class="item-body">A write-up of Google&#x27;s Elephant-Goldfish approach, reportedly used by thousands of engineers internally and shipped as Apache 2.0 markdown rules, reviewer personas and workflows. The structure is the argument: one long-running session (the Elephant) holds architecture, intent and every small decision and writes zero code; fresh sessions (Goldfish) never saw the design conversation, so they do not inherit its blind spots. Flow is brainstorm under a strict no-code rule, then a Markdown design doc naming the exact files to change, then a Goldfish has to explain the design back — if it gets it wrong, the doc was ambiguous and goes back — then hostile reviewer Goldfish hunt edge cases, then a final go/no-go on whether paths, data structures and signatures are unambiguous. Stated trade-offs: it runs only inside Antigravity for now, and security is not on the default reviewer list.</div>
-    <div class="item-meta">
-      <a href="https://x.com/thisguyknowsai/status/2116453452977152209" target="_blank">View Tweet</a>
+      <a href="https://x.com/TokenGremlin/status/2116834891744600291" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag jiahaoshao-classifier-appeal">Jiahaoshao-Classifier-Appeal</span> @jiahaoshao1: The Classifier You Cannot Appeal</div>
-    <div class="item-body">A first-hand account worth reading as an eval failure rather than a complaint. The poster says he never distilled Claude — his rollouts came from a strong open-source model, with Claude only used to submit jobs and run analysis — and was still tagged for &quot;training a competitor&quot;. The consequence is not a warning but a quiet downgrade: anything touching RFT, SFT or training larger models is blocked, Opus 5.5 is served as Opus 5, and sessions are killed outright. That is the shape of automated enforcement at scale: a classifier with no stated evidence, no appeal path, and an error that manifests as degraded service rather than an accusation, so the paying user cannot tell whether the model got worse or the account got labelled.</div>
+    <div class="item-title"><span class="tag ryanyanbuilds-mythos-55-html">Ryanyanbuilds-Mythos-55-Html</span> @RyanYanBuilds: Mythos 5.5 Exists Only in the HTML</div>
+    <div class="item-body">The most disciplined version of a leak post, because it separates what was observed from what it might mean. Mythos 5.5 appears in the HTML of Anthropic&#x27;s own site — a hidden heading and image alt text — while the announcements, pricing and availability sections still say Mythos 5.1. That is a concrete artefact, and he says plainly that it is not a launch announcement: it could be preparation for an update or an unfinished page edit, and there is no confirmed date or access policy. The question he wants answered is the one a name change would not settle — what actually changes beyond the label, and whether more people get to use it. Worth reading as a template for how to report a leak without turning it into a rumour.</div>
     <div class="item-meta">
-      <a href="https://x.com/jiahaoshao1/status/2116475922190922088" target="_blank">View Tweet</a>
+      <a href="https://x.com/RyanYanBuilds/status/2116925152911089927" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ayazelrico-terra-price-halved">Ayazelrico-Terra-Price-Halved</span> @ayazelrico: Terra Halved Its Price and Doubled Its Score</div>
+    <div class="item-body">Two numbers that should be read together, because either alone is misleading. GPT-6.1 Terra now costs $1 per million input tokens and $5 per million output, half the previous Terra, and it solves 50.3% of Terminal-Bench tasks against 21.5% before — so the price fell at the same time the capability roughly doubled. The second half of the post is the part that survives the release cycle: even at identical listed token prices, the same finished task can cost eight times more on one model than another, because the model that needs fewer turns and fewer retries wins on cost per outcome rather than cost per token. Routing by task type, not by brand, is the lever that keeps getting cheaper to pull.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ayazelrico/status/2116771720484848079" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -302,27 +302,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🔧</span>
-      <h2>Tools &amp; Skills</h2>
+      <h2>Tools &amp; Builds</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag piebaldai-claude-code-prompt-diff">Piebaldai-Claude-Code-Prompt-Diff</span> @PiebaldAI: 1,506 Tokens Added to Claude Code&#x27;s Prompts</div>
-    <div class="item-body">The system-prompt diff habit applied to the 2.1.315 release, and the entries are more interesting than the token count. New guidance covers showing ultrathink availability during session initialisation, answering document comments through the connector while treating them as untrusted data, and distinguishing stray characters from real path characters before renaming a file. On data side, `blockWritesOutsideWorkingDirectories` no longer accepts the cowork memory-path override as grounds to refuse auto-memory writes, and shared group-budget exhaustion now gets its own billing error with a header that separates it from an individual cap. The one worth flagging is a removal: the instruction to match surrounding code&#x27;s comment density, naming and idiom is gone, replaced by outcome-first communication, while the separate restriction on comments stays.</div>
+    <div class="item-title"><span class="tag gosailglobal-277-us-llc">Gosailglobal-277-Us-Llc</span> @GoSailGlobal: A US Company and Dev Accounts for $277</div>
+    <div class="item-body">A receipts post for the paperwork that blocks indie distribution, and the total is the headline: $277 and 11 days, from inside China, with no SSN. The chain is Wyoming LLC, then EIN, then D-U-N-S, then a Mercury business account, then the Google Play and Apple organisation developer accounts — in that order, because each step needs the previous one&#x27;s identifiers. He documents where each form stalls across 34 screenshots, and notes X caps a post at 35 images, which is why the full set lives on his blog. The useful signal is not the price but the sequencing: most people fail these applications on ordering and on name-matching between the LLC, the bank and the store listing, not on eligibility.</div>
     <div class="item-meta">
-      <a href="https://x.com/PiebaldAI/status/2116617633621758347" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag hanghuang-instabox-toolkit">Hanghuang-Instabox-Toolkit</span> @hanghuang_: Ship CLI, Skills and MCP — or Just One</div>
-    <div class="item-body">A small but clean decision from a team shipping agent integration as a first-class surface: they released the same capability three ways. The CLI does the actual work, and the skills teach the agent which commands to run and when. The MCP server splits into docs tools and action tools, with docs tools connected in every new box so an agent can learn the product with zero setup, and action tools gated behind a scoped API key for creating and managing boxes. The reasoning to keep is that docs-as-tools and actions-as-tools deserve different trust levels: letting an agent read your API surface for free costs you nothing, while letting it create infrastructure should be a deliberate, scoped grant.</div>
-    <div class="item-meta">
-      <a href="https://x.com/hanghuang_/status/2116583134435144086" target="_blank">View Tweet</a>
+      <a href="https://x.com/GoSailGlobal/status/2116386357752832091" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag paleologo-ai-rhetoric-skill">Paleologo-Ai-Rhetoric-Skill</span> @__paleologo: A Skill That Strips AI Rhetoric</div>
-    <div class="item-body">The most relatable complaint in the feed, turned into an artefact. Asked to write a scientific survey, Codex produces prose with an insufferable style, so the author wrote a skill that corrects roughly 27 rhetorical devices that give AI writing away, along with other fixes. The interesting design choice is that the corrections are enumerated — a countable list of tells rather than an instruction to &quot;write better&quot; — which is the only form a style rule survives contact with a model. He says a long technical survey written with this skill is coming, which will be the actual test: whether removing the tells leaves prose that is pleasant or merely neutral.</div>
+    <div class="item-title"><span class="tag tao-builds-cn-math-taxonomy">Tao-Builds-Cn-Math-Taxonomy</span> @Tao_Builds: 1,644 Knowledge Points, 6,723 Problems</div>
+    <div class="item-body">An education artefact with an unusually honest caveat attached. cn-math-taxonomy turns maths (and other subjects) into a dependency graph: 1,644 knowledge points and 6,723 problems, so when a student is stuck on a high-school question you can walk the edges backwards and find which earlier concept never landed — the post&#x27;s joke is that a missed high-school problem traces all the way back to primary school. It runs directly in the browser. The caveat is stated rather than buried: the content is an AI-generated first draft that has not been through full teacher review, so it is good for exploring how topics connect and not usable as an authority. That combination — usable graph, declared provenance — is what makes it worth a look rather than another quiz bank.</div>
     <div class="item-meta">
-      <a href="https://x.com/__paleologo/status/2116602494428299632" target="_blank">View Tweet</a>
+      <a href="https://x.com/Tao_Builds/status/2116725373493006448" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag williamlong-cxagent-cron">Williamlong-Cxagent-Cron</span> @williamlong: A Cron Job Burning 3 Seconds of a Core Every Minute</div>
+    <div class="item-body">A small piece of forensics with a transferable method: when a host feels slow, read what it is actually running before you blame the workload. He found a process on a BandwagonHost VPS firing every 60 seconds, running `rpm -qa | grep dmidecode` — three in parallel — to work out whether `dmidecode` could read the machine&#x27;s hardware identity (UUID, KVM virt, serial). The command itself is the tell: `rpm -q dmidecode` answers the same question in one fast lookup, while walking the entire package database and grepping it pins a core for about three seconds. Stopping the process returned CPU to normal immediately. The missing audit trail is the real finding — a provider-side agent with no published purpose, no changelog, and no way for the customer to know it exists except by watching `top`.</div>
+    <div class="item-meta">
+      <a href="https://x.com/williamlong/status/2116755881627189576" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -333,24 +333,24 @@
       <h2>Worth Your Time</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag vtrivedy-harness-is-the-product">Vtrivedy-Harness-Is-The-Product</span> @Vtrivedy10: The Harness Is the Product</div>
-    <div class="item-body">A direct rebuttal to the &quot;harness is dead now that models are good&quot; line, from someone who builds one, and it is useful because it names the work instead of defending the category. What harness engineering actually contains: adjusting prompts, collapsing common workflows into bespoke tools and skills so a whole sequence becomes one tool call and saves context, choosing compaction thresholds for your specific use case, routing work to cheaper models via subagents, building connectors so context is searchable rather than pasted, supporting background work, and shaping memory around what your users actually need. The closing argument is the operational one: evals exist so you can hill-climb the harness when a new model lands and trust the config you end up with. Every vertical product team is doing this whether or not they call it that.</div>
+    <div class="item-title"><span class="tag kay-eth-droid-script-mode">Kay-Eth-Droid-Script-Mode</span> @kay_eth1989: 3.1M Tokens Down to 61,000</div>
+    <div class="item-body">The best worked example of moving an agent&#x27;s loop into code, with the vendor&#x27;s own numbers separated from the conclusion. Factory&#x27;s Droid 1.0 makes programmatic tool calling the default: instead of one call at a time, the model writes a JavaScript program that runs in a sandbox with no file, network or system access, and drives hundreds of tool calls inside a single request. Example one — moving 151 Linear issues between queues and verifying each move, 312 tool calls — is an estimated 36 requests and ~3.1M input tokens by direct calling, against 2 requests and ~61,000 via the script. Example two: a CI sweep of 5,384 jobs across 547 runs in 2 requests, with under 0.1% of raw tool results ever reaching the model&#x27;s context. He flags the Terminal-Bench comparison as vendor-reported and gives four rules for builders: batch repetitive work into code, keep raw output in variables and print only summaries, put verification inside the program, and cap what the script may print.</div>
     <div class="item-meta">
-      <a href="https://x.com/Vtrivedy10/status/2116622802031710709" target="_blank">View Tweet</a>
+      <a href="https://x.com/kay_eth1989/status/2116794894253756421" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag shao-meng-cs329z-evaluating-agents">Shao-Meng-Cs329Z-Evaluating-Agents</span> @shao__meng: CS329Z Lecture 10 Is About Evals as Engineering</div>
-    <div class="item-body">Notes from Stanford&#x27;s Engineering AI Agents course, and the framing is the thing to take: software is moving from &quot;the rules are the truth&quot; (hand-written code) to &quot;the evaluation is the truth&quot;, with three layers — models learn from data, agents are raised on evals, and software is then generated by agents. That makes the specifier still an engineer but adds a role most teams are missing, the evaluator, whose artifact is an eval rather than a spec. The concrete material is Terminal-Bench: 64 model cards, 171 contributors, 1k+ GitHub participants, 7M+ benchmark runs, and a task anatomy of instruction.md, task.toml, environment/Dockerfile, solution/solve.sh and tests/test.sh, with verifiers as outcome classifiers over environment state and reward hacking handled by isolating agent and verifier environments. Best part is the versioning scheme: a major bump changes the agent environment and forces a full re-run, a minor bump changes the verifier and permits regrading, a patch is metadata and can be reused.</div>
+    <div class="item-title"><span class="tag randhir302-skillcompiler">Randhir302-Skillcompiler</span> @randhir302: Why the Same Skill Passes on Run 1 and Fails on Run 2</div>
+    <div class="item-body">A diagnosis of skill flakiness that most skill authors will recognise and few have measured. A skill is a text file the model re-reads and re-reasons through on every run, so a learned procedure can take a different path each time — which is why identical inputs produce different outcomes. SkillCompiler, from East China Normal University, splits a task into operations, gives each one a contract (inputs, outputs, preconditions, expected effect, a check), and compiles the well-specified ones into validated code while leaving open-ended steps with the model. The numbers: on LiveMath, the share of tasks flipping between pass and fail across three identical runs fell from 32% to 11%; best average score across five benchmarks rose 79.78% to 84.63%; ALFWorld hit 98.26% versus 79.60% with no skill; and removing the programmer step dropped ALFWorld to 53.48% at 7.36x the tokens. Limits are stated plainly — only checkable steps compile, and gains on SearchQA and DocVQA were small.</div>
     <div class="item-meta">
-      <a href="https://x.com/shao__meng/status/2114909091101573476" target="_blank">View Tweet</a>
+      <a href="https://x.com/randhir302/status/2116893506614833465" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag ellfyy-305-repos-audited">Ellfyy-305-Repos-Audited</span> @ellfyy_: 305 Repos Opened, 66 Survived</div>
-    <div class="item-body">An audit rather than a listicle, which is why the numbers are interesting. He opened all 305 repos on a widely circulated agent list and kept only those past 10k stars: 66 of them, holding 93% of every star the list ever accumulated — and 26 entries were dead, including three that return 404, three archived, and twenty with no commit in six months. The top five by that measure: OpenClaw at 394k (an assistant living in your messengers, tools and calendar), Hermes Agent at 259k (terminal plus messaging, cross-session memory, writes its own skills), Firecrawl at 197k, Ollama at 185k, browser-use at 120k. The observation that matters for anyone choosing tools: the most-used coding agents — Claude Code, Codex CLI, Gemini CLI, OpenCode — were not on the list at all, so a star-ranked catalogue is measuring a different market than the one you work in.</div>
+    <div class="item-title"><span class="tag astrodevil-copilot-fusion">Astrodevil-Copilot-Fusion</span> @Astrodevil_: A Router in the Model Picker</div>
+    <div class="item-body">A release post that answers the question the headline raises, which is rarer than it should be. GitHub&#x27;s Copilot Fusion scores 60 on the Artificial Analysis Coding Agent Index — 2 points under Claude Code on Opus 5.5 at max effort — at about half the cost per task. In the picker you choose an effort level rather than a model, and it decides per prompt which models run and how: one model alone, a cascade where a cheap draft is accepted or escalated, or a critique loop where a second model reviews and the first revises. The cost breakdown: $5.59 per task against $11.42, at 7.2M tokens per task, leading Terminal-Bench 4.0 at 71 but weaker on SWE-Atlas-QnA at 57. His reservation is the correct one — before making it a team default he wants per-task attribution of which model ran which step, since that is what the bill is actually made of.</div>
     <div class="item-meta">
-      <a href="https://x.com/ellfyy_/status/2116627666241478965" target="_blank">View Tweet</a>
+      <a href="https://x.com/Astrodevil_/status/2116734487979790482" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>

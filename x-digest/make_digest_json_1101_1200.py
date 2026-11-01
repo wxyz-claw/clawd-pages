@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Sunday, November 1st, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Attention Is the Real Ceiling:</strong> DeepSeek's super-agent report starts from the constraint that one person tracks three to five sessions at most, and its Router/Worker split takes reported p95 completion from 29.5 minutes to 15.7 — the bottleneck was never the model.",
+        "<strong>A Curated Working Memory Beats a Bigger Window:</strong> CORAL gives an 8B agent two memory tools — write a progress panel, wipe the episode, resume clean — and moves GAIA from 19.4% to 42.8% while input tokens fall from 1,078K to 136K per task.",
+        "<strong>The Harness, Not the Model, Is the Lever:</strong> Factory's Droid 1.0 moves the loop into code: one example goes from an estimated 36 requests and 3.1M tokens to 2 requests and 61,000 for the same 312 tool calls.",
+        "<strong>Prices Keep Falling Faster Than Routing Habits:</strong> GPT-6.1 Terra halved to $1/$5 per million tokens at 50.3% on Terminal-Bench, and Copilot Fusion lands 2 points behind Claude Code at max effort for $5.59 a task against $11.42.",
+        "<strong>Infrastructure Is Where the Easy 89% Is:</strong> The same 20,000 CI minutes on identical 2 vCPU hardware costs $120 on GitHub and $13.33 on a microVM runner — a one-line config change, not a migration.",
+    ],
+    "sections": [
+        {
+            "emoji": "🛠️",
+            "title": "Agent Engineering",
+            "items": [
+                {
+                    "tag": "deepseekharness-super-agent-design",
+                    "title": "@DeepSeekHarness: Multi-Task Bottleneck Is the Human",
+                    "body": "The account behind DeepSeek's harness published the design document for a more autonomous agent system, and the framing is the valuable half. A single task is limited by the model; many tasks running at once are limited by the person, because attention tops out at roughly three to five concurrent sessions. Their structure answers that directly: a Router that only talks to you and dispatches, and Workers that run isolated and concurrently behind it, plus event-driven dispatch, full-duplex interruption so you can cut in mid-run, and an external watchdog for the cases where a worker hangs. The summary circulating alongside the report puts p95 completion at 29.5 minutes down to 15.7 with the prototype open-sourced. Read it as an attention-budget paper rather than a capability paper.",
+                    "url": "https://x.com/DeepSeekHarness/status/2116857257245987236",
+                },
+                {
+                    "tag": "solanky-herdr-hooks-cleanup",
+                    "title": "@solanky: 13 Hooks in Claude Code, 9 in Codex",
+                    "body": "A switching cost stated as an inventory, which is the only way it becomes arguable. Cleaning up after uninstalling Orca, he counted what that style of tool leaves behind: 13 hooks in Claude Code, 9 in Codex, 8 in Devin and a plugin in Hermes, all firing on every prompt and every tool call. Herdr instead reads agent status from the terminal itself, so the configs go back to empty and nothing sits between you and the agent. The feature he actually cites is quieter than the cleanup: agents can drive the workspace through a small CLI, so Claude can open a pane next to itself and leave `sudo install` or a prod release sitting at your prompt without running it — a proposal you press Enter on rather than an action you audit afterwards.",
+                    "url": "https://x.com/solanky/status/2116744695070236981",
+                },
+                {
+                    "tag": "geekbb-rust-grokbot-replacement",
+                    "title": "@geekbb: Your Installed Agents, Turned Into Chat Bots",
+                    "body": "A Rust, open-source answer to the hosted bot products, and the architecture is the argument. It wraps the agents already installed on your machine — Claude Code, Codex, Gemini CLI, Cursor and forty-odd others — into individually addressable bots, discovered through the ACP registry rather than configured by hand. Each bot spends the quota of the account it already signed into, so there is no metered layer and no resold tokens; messaging works from iPhone, Mac, Windows, Linux or a terminal, with a push notification when a bot finishes or needs approval, group-chat @ mentions, and bots able to ask each other for help. Remote access runs over a free Cloudflare relay with end-to-end encryption and same-subnet direct connection, plus WebRTC screen and voice from the phone.",
+                    "url": "https://x.com/geekbb/status/2116710314750119977",
+                },
+            ],
+        },
+        {
+            "emoji": "🧠",
+            "title": "Context & Control",
+            "items": [
+                {
+                    "tag": "randhir302-coral-save-and-restart",
+                    "title": "@randhir302: The Agent Needs a Save-and-Restart Button",
+                    "body": "The cleanest memory result in the feed, because it treats forgetting as a designed operation rather than a fallback. CORAL, a COLM 2026 paper from CUHK, Tencent and HKUST, gives an 8B agent two tools instead of a bigger window: it writes a small panel of pending/done sub-goals and verified facts, then decides when to end the episode — everything is wiped except system prompt, task and that panel, and it resumes from a clean state. On GAIA with Qwen3-8B: 19.4% to 42.8%, input tokens per task 1,078K to 136K, LLM calls 45.3 to 15.2, peak context 30.6K to 12.7K, and 19.8% on the hardest level against 8.3% for a comparable 8B. The training detail is the interesting one — all episodes of a run share one reward, so the model learns what is worth checkpointing. Caveats are stated: it can cost a little on short tasks, and on a weak 7B backbone prompting alone made things worse.",
+                    "url": "https://x.com/randhir302/status/2116728338299633725",
+                },
+                {
+                    "tag": "guyingjie129-state-machines-to-types",
+                    "title": "@guyingjie129: State Machines Are the Gateway Drug",
+                    "body": "A short argument for skipping a layer, from Chinese, and it lands because it names the failure mode first. A state machine is an unfriendly abstraction — a few dozen nodes and arrows already exceed what a person can hold in their head — so it is a gateway to thinking in algebraic data types rather than a destination. From there the reasoning moves up a level: product and sum types give the state space an algebra, Curry-Howard gives the types a logical reading, and in a language where types are sets you get `never` as the empty set, `unknown` as the universal set, and `a extends b` as subset. Function types then let you reason about produce/consume positions instead of enumerating states. The payoff is the one that matters for agent work: type-driven development that makes illegal states unrepresentable, instead of a linter that catches them later.",
+                    "url": "https://x.com/guyingjie129/status/2116885870049714505",
+                },
+                {
+                    "tag": "aiden-workflow-vs-agent",
+                    "title": "@AidenChen100: Determinism Still Wins Where It Fits",
+                    "body": "A corrective to the reflex of putting an agent on everything, written by someone who went back and looked at their own stack. Coze, Dify and n8n have fallen out of the current agent narrative, but in high-determinism work they are still unbeatable: a rule-clear workflow responds in milliseconds with zero hallucination, where waking an autonomous agent means repeated planning, reasoning and tool calls for the same outcome — slower, less stable, and more expensive per run. The rule he states is worth keeping: deterministic logic belongs in a flowchart, open-ended decisions belong to the agent. He then notes the dozens of workflows he had built earlier are still there, still running, which is the part most agent-replacement arguments skip.",
+                    "url": "https://x.com/AidenChen100/status/2116909222088843344",
+                },
+            ],
+        },
+        {
+            "emoji": "💰",
+            "title": "Cost & Quotas",
+            "items": [
+                {
+                    "tag": "aniketmaurya-ci-minutes-pricing",
+                    "title": "@aniketmaurya: The Same CI Minutes, 89% Cheaper",
+                    "body": "A price table with the hardware held constant, which is what makes it usable. For 20,000 CI minutes on a 2 vCPU / 8 GB runner: GitHub $120, Blacksmith $80, Ubicloud $40, and Celesto CI $13.33 — roughly 89% below the default, on identical specs, with every job booting on the poster's own open-source microVM. The migration claim is the practical bit: change one `runs-on` line, no card needed for the trial credit. Whether or not you move, the spread is the point — the largest cost lever in most CI bills is not the code being tested but which machine the test lands on, and that choice is usually made once and never revisited.",
+                    "url": "https://x.com/aniketmaurya/status/2116358196969292143",
+                },
+                {
+                    "tag": "ezolabs-1000-tok-s",
+                    "title": "@EzoLabsInc: 1,064 Tokens per Second for One User",
+                    "body": "A throughput number worth keeping because it is scoped to a single user rather than an aggregate — aggregate tok/s hides queueing. On DeepSeek-V4.1-Flash: fastest benchmarked request 1,064 tok/s, benchmark average 870, and roughly double what the same setup did five days earlier. That last clause is the one to read twice: a 2x jump in under a week on the same model points at the serving stack rather than the weights, which is exactly the distinction that matters when you are deciding whether to wait for a new release or to fix your own pipeline. Numbers this specific are also falsifiable, which is rare in throughput claims.",
+                    "url": "https://x.com/EzoLabsInc/status/2116737939048722878",
+                },
+                {
+                    "tag": "bojie-li-ultra-vs-api",
+                    "title": "@bojie_li: $8,000 a Month of Quota vs a 40x API Bill",
+                    "body": "A cost comparison delivered as a travel itinerary, and the arithmetic is the reason to read it. A Claude Ultra account carries roughly $2,000 a week of allowance, about $8,000 a month, while paying for the same work through the API runs about 40x that. The rest is the logistics of getting a legitimate account from China: about 30,000 RMB for a 14-day trip covering visa, flights and a rented room at $90 a night, a Google Fi SIM and a clean phone bought before boarding, a Bank of America account opened in the LA Chinese-language districts without proof of address, and same-day Apple Pay/Google Pay so the subscription can start before the physical card arrives. Two details carry real information: one debit and one credit card can be tied to around ten Claude Max accounts, and both of his banned accounts died from dirty IPs rather than from the card — the other dozen survived on a US residential IP.",
+                    "url": "https://x.com/bojie_li/status/2116795665066181077",
+                },
+            ],
+        },
+        {
+            "emoji": "🧪",
+            "title": "Models & Releases",
+            "items": [
+                {
+                    "tag": "tokengremlin-gpt62-astra-ab",
+                    "title": "@TokenGremlin: GPT-6.2 Astra Is Already in the Usage Logs",
+                    "body": "A release signal read off a billing page rather than an announcement, which makes it more trustworthy than most. OpenAI is A/B testing a variant called GPT-6.2 Astra: the model picker still reads GPT-6 Astra, but the usage breakdown for some accounts now itemises `gpt-6.2-astra` separately, and multiple users report the same line — so it is a gray rollout rather than a rendering glitch. The consequence for anyone building on it is mundane and important: the name in your picker is not the name in your bill, so per-model cost tracking via the UI selector will silently mislabel spend during a rollout. Watch the usage page, not the dropdown.",
+                    "url": "https://x.com/TokenGremlin/status/2116834891744600291",
+                },
+                {
+                    "tag": "ryanyanbuilds-mythos-55-html",
+                    "title": "@RyanYanBuilds: Mythos 5.5 Exists Only in the HTML",
+                    "body": "The most disciplined version of a leak post, because it separates what was observed from what it might mean. Mythos 5.5 appears in the HTML of Anthropic's own site — a hidden heading and image alt text — while the announcements, pricing and availability sections still say Mythos 5.1. That is a concrete artefact, and he says plainly that it is not a launch announcement: it could be preparation for an update or an unfinished page edit, and there is no confirmed date or access policy. The question he wants answered is the one a name change would not settle — what actually changes beyond the label, and whether more people get to use it. Worth reading as a template for how to report a leak without turning it into a rumour.",
+                    "url": "https://x.com/RyanYanBuilds/status/2116925152911089927",
+                },
+                {
+                    "tag": "ayazelrico-terra-price-halved",
+                    "title": "@ayazelrico: Terra Halved Its Price and Doubled Its Score",
+                    "body": "Two numbers that should be read together, because either alone is misleading. GPT-6.1 Terra now costs $1 per million input tokens and $5 per million output, half the previous Terra, and it solves 50.3% of Terminal-Bench tasks against 21.5% before — so the price fell at the same time the capability roughly doubled. The second half of the post is the part that survives the release cycle: even at identical listed token prices, the same finished task can cost eight times more on one model than another, because the model that needs fewer turns and fewer retries wins on cost per outcome rather than cost per token. Routing by task type, not by brand, is the lever that keeps getting cheaper to pull.",
+                    "url": "https://x.com/ayazelrico/status/2116771720484848079",
+                },
+            ],
+        },
+        {
+            "emoji": "🔧",
+            "title": "Tools & Builds",
+            "items": [
+                {
+                    "tag": "gosailglobal-277-us-llc",
+                    "title": "@GoSailGlobal: A US Company and Dev Accounts for $277",
+                    "body": "A receipts post for the paperwork that blocks indie distribution, and the total is the headline: $277 and 11 days, from inside China, with no SSN. The chain is Wyoming LLC, then EIN, then D-U-N-S, then a Mercury business account, then the Google Play and Apple organisation developer accounts — in that order, because each step needs the previous one's identifiers. He documents where each form stalls across 34 screenshots, and notes X caps a post at 35 images, which is why the full set lives on his blog. The useful signal is not the price but the sequencing: most people fail these applications on ordering and on name-matching between the LLC, the bank and the store listing, not on eligibility.",
+                    "url": "https://x.com/GoSailGlobal/status/2116386357752832091",
+                },
+                {
+                    "tag": "tao-builds-cn-math-taxonomy",
+                    "title": "@Tao_Builds: 1,644 Knowledge Points, 6,723 Problems",
+                    "body": "An education artefact with an unusually honest caveat attached. cn-math-taxonomy turns maths (and other subjects) into a dependency graph: 1,644 knowledge points and 6,723 problems, so when a student is stuck on a high-school question you can walk the edges backwards and find which earlier concept never landed — the post's joke is that a missed high-school problem traces all the way back to primary school. It runs directly in the browser. The caveat is stated rather than buried: the content is an AI-generated first draft that has not been through full teacher review, so it is good for exploring how topics connect and not usable as an authority. That combination — usable graph, declared provenance — is what makes it worth a look rather than another quiz bank.",
+                    "url": "https://x.com/Tao_Builds/status/2116725373493006448",
+                },
+                {
+                    "tag": "williamlong-cxagent-cron",
+                    "title": "@williamlong: A Cron Job Burning 3 Seconds of a Core Every Minute",
+                    "body": "A small piece of forensics with a transferable method: when a host feels slow, read what it is actually running before you blame the workload. He found a process on a BandwagonHost VPS firing every 60 seconds, running `rpm -qa | grep dmidecode` — three in parallel — to work out whether `dmidecode` could read the machine's hardware identity (UUID, KVM virt, serial). The command itself is the tell: `rpm -q dmidecode` answers the same question in one fast lookup, while walking the entire package database and grepping it pins a core for about three seconds. Stopping the process returned CPU to normal immediately. The missing audit trail is the real finding — a provider-side agent with no published purpose, no changelog, and no way for the customer to know it exists except by watching `top`.",
+                    "url": "https://x.com/williamlong/status/2116755881627189576",
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "kay-eth-droid-script-mode",
+                    "title": "@kay_eth1989: 3.1M Tokens Down to 61,000",
+                    "body": "The best worked example of moving an agent's loop into code, with the vendor's own numbers separated from the conclusion. Factory's Droid 1.0 makes programmatic tool calling the default: instead of one call at a time, the model writes a JavaScript program that runs in a sandbox with no file, network or system access, and drives hundreds of tool calls inside a single request. Example one — moving 151 Linear issues between queues and verifying each move, 312 tool calls — is an estimated 36 requests and ~3.1M input tokens by direct calling, against 2 requests and ~61,000 via the script. Example two: a CI sweep of 5,384 jobs across 547 runs in 2 requests, with under 0.1% of raw tool results ever reaching the model's context. He flags the Terminal-Bench comparison as vendor-reported and gives four rules for builders: batch repetitive work into code, keep raw output in variables and print only summaries, put verification inside the program, and cap what the script may print.",
+                    "url": "https://x.com/kay_eth1989/status/2116794894253756421",
+                },
+                {
+                    "tag": "randhir302-skillcompiler",
+                    "title": "@randhir302: Why the Same Skill Passes on Run 1 and Fails on Run 2",
+                    "body": "A diagnosis of skill flakiness that most skill authors will recognise and few have measured. A skill is a text file the model re-reads and re-reasons through on every run, so a learned procedure can take a different path each time — which is why identical inputs produce different outcomes. SkillCompiler, from East China Normal University, splits a task into operations, gives each one a contract (inputs, outputs, preconditions, expected effect, a check), and compiles the well-specified ones into validated code while leaving open-ended steps with the model. The numbers: on LiveMath, the share of tasks flipping between pass and fail across three identical runs fell from 32% to 11%; best average score across five benchmarks rose 79.78% to 84.63%; ALFWorld hit 98.26% versus 79.60% with no skill; and removing the programmer step dropped ALFWorld to 53.48% at 7.36x the tokens. Limits are stated plainly — only checkable steps compile, and gains on SearchQA and DocVQA were small.",
+                    "url": "https://x.com/randhir302/status/2116893506614833465",
+                },
+                {
+                    "tag": "astrodevil-copilot-fusion",
+                    "title": "@Astrodevil_: A Router in the Model Picker",
+                    "body": "A release post that answers the question the headline raises, which is rarer than it should be. GitHub's Copilot Fusion scores 60 on the Artificial Analysis Coding Agent Index — 2 points under Claude Code on Opus 5.5 at max effort — at about half the cost per task. In the picker you choose an effort level rather than a model, and it decides per prompt which models run and how: one model alone, a cascade where a cheap draft is accepted or escalated, or a critique loop where a second model reviews and the first revises. The cost breakdown: $5.59 per task against $11.42, at 7.2M tokens per task, leading Terminal-Bench 4.0 at 71 but weaker on SWE-Atlas-QnA at 57. His reservation is the correct one — before making it a team default he wants per-task attribution of which model ran which step, since that is what the bill is actually made of.",
+                    "url": "https://x.com/Astrodevil_/status/2116734487979790482",
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")

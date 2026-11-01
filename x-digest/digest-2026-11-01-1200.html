@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Sunday, November 1st, 2026 — 12:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Sunday, November 1st, 2026 — 12:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>Attention Is the Real Ceiling:</strong> DeepSeek's super-agent report starts from the constraint that one person tracks three to five sessions at most, and its Router/Worker split takes reported p95 completion from 29.5 minutes to 15.7 — the bottleneck was never the model.</li>
+      <li><strong>A Curated Working Memory Beats a Bigger Window:</strong> CORAL gives an 8B agent two memory tools — write a progress panel, wipe the episode, resume clean — and moves GAIA from 19.4% to 42.8% while input tokens fall from 1,078K to 136K per task.</li>
+      <li><strong>The Harness, Not the Model, Is the Lever:</strong> Factory's Droid 1.0 moves the loop into code: one example goes from an estimated 36 requests and 3.1M tokens to 2 requests and 61,000 for the same 312 tool calls.</li>
+      <li><strong>Prices Keep Falling Faster Than Routing Habits:</strong> GPT-6.1 Terra halved to $1/$5 per million tokens at 50.3% on Terminal-Bench, and Copilot Fusion lands 2 points behind Claude Code at max effort for $5.59 a task against $11.42.</li>
+      <li><strong>Infrastructure Is Where the Easy 89% Is:</strong> The same 20,000 CI minutes on identical 2 vCPU hardware costs $120 on GitHub and $13.33 on a microVM runner — a one-line config change, not a migration.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛠️</span>
+      <h2>Agent Engineering</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag deepseekharness-super-agent-design">Deepseekharness-Super-Agent-Design</span> @DeepSeekHarness: Multi-Task Bottleneck Is the Human</div>
+    <div class="item-body">The account behind DeepSeek&#x27;s harness published the design document for a more autonomous agent system, and the framing is the valuable half. A single task is limited by the model; many tasks running at once are limited by the person, because attention tops out at roughly three to five concurrent sessions. Their structure answers that directly: a Router that only talks to you and dispatches, and Workers that run isolated and concurrently behind it, plus event-driven dispatch, full-duplex interruption so you can cut in mid-run, and an external watchdog for the cases where a worker hangs. The summary circulating alongside the report puts p95 completion at 29.5 minutes down to 15.7 with the prototype open-sourced. Read it as an attention-budget paper rather than a capability paper.</div>
+    <div class="item-meta">
+      <a href="https://x.com/DeepSeekHarness/status/2116857257245987236" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag solanky-herdr-hooks-cleanup">Solanky-Herdr-Hooks-Cleanup</span> @solanky: 13 Hooks in Claude Code, 9 in Codex</div>
+    <div class="item-body">A switching cost stated as an inventory, which is the only way it becomes arguable. Cleaning up after uninstalling Orca, he counted what that style of tool leaves behind: 13 hooks in Claude Code, 9 in Codex, 8 in Devin and a plugin in Hermes, all firing on every prompt and every tool call. Herdr instead reads agent status from the terminal itself, so the configs go back to empty and nothing sits between you and the agent. The feature he actually cites is quieter than the cleanup: agents can drive the workspace through a small CLI, so Claude can open a pane next to itself and leave `sudo install` or a prod release sitting at your prompt without running it — a proposal you press Enter on rather than an action you audit afterwards.</div>
+    <div class="item-meta">
+      <a href="https://x.com/solanky/status/2116744695070236981" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag geekbb-rust-grokbot-replacement">Geekbb-Rust-Grokbot-Replacement</span> @geekbb: Your Installed Agents, Turned Into Chat Bots</div>
+    <div class="item-body">A Rust, open-source answer to the hosted bot products, and the architecture is the argument. It wraps the agents already installed on your machine — Claude Code, Codex, Gemini CLI, Cursor and forty-odd others — into individually addressable bots, discovered through the ACP registry rather than configured by hand. Each bot spends the quota of the account it already signed into, so there is no metered layer and no resold tokens; messaging works from iPhone, Mac, Windows, Linux or a terminal, with a push notification when a bot finishes or needs approval, group-chat @ mentions, and bots able to ask each other for help. Remote access runs over a free Cloudflare relay with end-to-end encryption and same-subnet direct connection, plus WebRTC screen and voice from the phone.</div>
+    <div class="item-meta">
+      <a href="https://x.com/geekbb/status/2116710314750119977" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Context &amp; Control</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag randhir302-coral-save-and-restart">Randhir302-Coral-Save-And-Restart</span> @randhir302: The Agent Needs a Save-and-Restart Button</div>
+    <div class="item-body">The cleanest memory result in the feed, because it treats forgetting as a designed operation rather than a fallback. CORAL, a COLM 2026 paper from CUHK, Tencent and HKUST, gives an 8B agent two tools instead of a bigger window: it writes a small panel of pending/done sub-goals and verified facts, then decides when to end the episode — everything is wiped except system prompt, task and that panel, and it resumes from a clean state. On GAIA with Qwen3-8B: 19.4% to 42.8%, input tokens per task 1,078K to 136K, LLM calls 45.3 to 15.2, peak context 30.6K to 12.7K, and 19.8% on the hardest level against 8.3% for a comparable 8B. The training detail is the interesting one — all episodes of a run share one reward, so the model learns what is worth checkpointing. Caveats are stated: it can cost a little on short tasks, and on a weak 7B backbone prompting alone made things worse.</div>
+    <div class="item-meta">
+      <a href="https://x.com/randhir302/status/2116728338299633725" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag guyingjie129-state-machines-to-types">Guyingjie129-State-Machines-To-Types</span> @guyingjie129: State Machines Are the Gateway Drug</div>
+    <div class="item-body">A short argument for skipping a layer, from Chinese, and it lands because it names the failure mode first. A state machine is an unfriendly abstraction — a few dozen nodes and arrows already exceed what a person can hold in their head — so it is a gateway to thinking in algebraic data types rather than a destination. From there the reasoning moves up a level: product and sum types give the state space an algebra, Curry-Howard gives the types a logical reading, and in a language where types are sets you get `never` as the empty set, `unknown` as the universal set, and `a extends b` as subset. Function types then let you reason about produce/consume positions instead of enumerating states. The payoff is the one that matters for agent work: type-driven development that makes illegal states unrepresentable, instead of a linter that catches them later.</div>
+    <div class="item-meta">
+      <a href="https://x.com/guyingjie129/status/2116885870049714505" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag aiden-workflow-vs-agent">Aiden-Workflow-Vs-Agent</span> @AidenChen100: Determinism Still Wins Where It Fits</div>
+    <div class="item-body">A corrective to the reflex of putting an agent on everything, written by someone who went back and looked at their own stack. Coze, Dify and n8n have fallen out of the current agent narrative, but in high-determinism work they are still unbeatable: a rule-clear workflow responds in milliseconds with zero hallucination, where waking an autonomous agent means repeated planning, reasoning and tool calls for the same outcome — slower, less stable, and more expensive per run. The rule he states is worth keeping: deterministic logic belongs in a flowchart, open-ended decisions belong to the agent. He then notes the dozens of workflows he had built earlier are still there, still running, which is the part most agent-replacement arguments skip.</div>
+    <div class="item-meta">
+      <a href="https://x.com/AidenChen100/status/2116909222088843344" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💰</span>
+      <h2>Cost &amp; Quotas</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag aniketmaurya-ci-minutes-pricing">Aniketmaurya-Ci-Minutes-Pricing</span> @aniketmaurya: The Same CI Minutes, 89% Cheaper</div>
+    <div class="item-body">A price table with the hardware held constant, which is what makes it usable. For 20,000 CI minutes on a 2 vCPU / 8 GB runner: GitHub $120, Blacksmith $80, Ubicloud $40, and Celesto CI $13.33 — roughly 89% below the default, on identical specs, with every job booting on the poster&#x27;s own open-source microVM. The migration claim is the practical bit: change one `runs-on` line, no card needed for the trial credit. Whether or not you move, the spread is the point — the largest cost lever in most CI bills is not the code being tested but which machine the test lands on, and that choice is usually made once and never revisited.</div>
+    <div class="item-meta">
+      <a href="https://x.com/aniketmaurya/status/2116358196969292143" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ezolabs-1000-tok-s">Ezolabs-1000-Tok-S</span> @EzoLabsInc: 1,064 Tokens per Second for One User</div>
+    <div class="item-body">A throughput number worth keeping because it is scoped to a single user rather than an aggregate — aggregate tok/s hides queueing. On DeepSeek-V4.1-Flash: fastest benchmarked request 1,064 tok/s, benchmark average 870, and roughly double what the same setup did five days earlier. That last clause is the one to read twice: a 2x jump in under a week on the same model points at the serving stack rather than the weights, which is exactly the distinction that matters when you are deciding whether to wait for a new release or to fix your own pipeline. Numbers this specific are also falsifiable, which is rare in throughput claims.</div>
+    <div class="item-meta">
+      <a href="https://x.com/EzoLabsInc/status/2116737939048722878" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag bojie-li-ultra-vs-api">Bojie-Li-Ultra-Vs-Api</span> @bojie_li: $8,000 a Month of Quota vs a 40x API Bill</div>
+    <div class="item-body">A cost comparison delivered as a travel itinerary, and the arithmetic is the reason to read it. A Claude Ultra account carries roughly $2,000 a week of allowance, about $8,000 a month, while paying for the same work through the API runs about 40x that. The rest is the logistics of getting a legitimate account from China: about 30,000 RMB for a 14-day trip covering visa, flights and a rented room at $90 a night, a Google Fi SIM and a clean phone bought before boarding, a Bank of America account opened in the LA Chinese-language districts without proof of address, and same-day Apple Pay/Google Pay so the subscription can start before the physical card arrives. Two details carry real information: one debit and one credit card can be tied to around ten Claude Max accounts, and both of his banned accounts died from dirty IPs rather than from the card — the other dozen survived on a US residential IP.</div>
+    <div class="item-meta">
+      <a href="https://x.com/bojie_li/status/2116795665066181077" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧪</span>
+      <h2>Models &amp; Releases</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tokengremlin-gpt62-astra-ab">Tokengremlin-Gpt62-Astra-Ab</span> @TokenGremlin: GPT-6.2 Astra Is Already in the Usage Logs</div>
+    <div class="item-body">A release signal read off a billing page rather than an announcement, which makes it more trustworthy than most. OpenAI is A/B testing a variant called GPT-6.2 Astra: the model picker still reads GPT-6 Astra, but the usage breakdown for some accounts now itemises `gpt-6.2-astra` separately, and multiple users report the same line — so it is a gray rollout rather than a rendering glitch. The consequence for anyone building on it is mundane and important: the name in your picker is not the name in your bill, so per-model cost tracking via the UI selector will silently mislabel spend during a rollout. Watch the usage page, not the dropdown.</div>
+    <div class="item-meta">
+      <a href="https://x.com/TokenGremlin/status/2116834891744600291" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ryanyanbuilds-mythos-55-html">Ryanyanbuilds-Mythos-55-Html</span> @RyanYanBuilds: Mythos 5.5 Exists Only in the HTML</div>
+    <div class="item-body">The most disciplined version of a leak post, because it separates what was observed from what it might mean. Mythos 5.5 appears in the HTML of Anthropic&#x27;s own site — a hidden heading and image alt text — while the announcements, pricing and availability sections still say Mythos 5.1. That is a concrete artefact, and he says plainly that it is not a launch announcement: it could be preparation for an update or an unfinished page edit, and there is no confirmed date or access policy. The question he wants answered is the one a name change would not settle — what actually changes beyond the label, and whether more people get to use it. Worth reading as a template for how to report a leak without turning it into a rumour.</div>
+    <div class="item-meta">
+      <a href="https://x.com/RyanYanBuilds/status/2116925152911089927" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ayazelrico-terra-price-halved">Ayazelrico-Terra-Price-Halved</span> @ayazelrico: Terra Halved Its Price and Doubled Its Score</div>
+    <div class="item-body">Two numbers that should be read together, because either alone is misleading. GPT-6.1 Terra now costs $1 per million input tokens and $5 per million output, half the previous Terra, and it solves 50.3% of Terminal-Bench tasks against 21.5% before — so the price fell at the same time the capability roughly doubled. The second half of the post is the part that survives the release cycle: even at identical listed token prices, the same finished task can cost eight times more on one model than another, because the model that needs fewer turns and fewer retries wins on cost per outcome rather than cost per token. Routing by task type, not by brand, is the lever that keeps getting cheaper to pull.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ayazelrico/status/2116771720484848079" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔧</span>
+      <h2>Tools &amp; Builds</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gosailglobal-277-us-llc">Gosailglobal-277-Us-Llc</span> @GoSailGlobal: A US Company and Dev Accounts for $277</div>
+    <div class="item-body">A receipts post for the paperwork that blocks indie distribution, and the total is the headline: $277 and 11 days, from inside China, with no SSN. The chain is Wyoming LLC, then EIN, then D-U-N-S, then a Mercury business account, then the Google Play and Apple organisation developer accounts — in that order, because each step needs the previous one&#x27;s identifiers. He documents where each form stalls across 34 screenshots, and notes X caps a post at 35 images, which is why the full set lives on his blog. The useful signal is not the price but the sequencing: most people fail these applications on ordering and on name-matching between the LLC, the bank and the store listing, not on eligibility.</div>
+    <div class="item-meta">
+      <a href="https://x.com/GoSailGlobal/status/2116386357752832091" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tao-builds-cn-math-taxonomy">Tao-Builds-Cn-Math-Taxonomy</span> @Tao_Builds: 1,644 Knowledge Points, 6,723 Problems</div>
+    <div class="item-body">An education artefact with an unusually honest caveat attached. cn-math-taxonomy turns maths (and other subjects) into a dependency graph: 1,644 knowledge points and 6,723 problems, so when a student is stuck on a high-school question you can walk the edges backwards and find which earlier concept never landed — the post&#x27;s joke is that a missed high-school problem traces all the way back to primary school. It runs directly in the browser. The caveat is stated rather than buried: the content is an AI-generated first draft that has not been through full teacher review, so it is good for exploring how topics connect and not usable as an authority. That combination — usable graph, declared provenance — is what makes it worth a look rather than another quiz bank.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Tao_Builds/status/2116725373493006448" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag williamlong-cxagent-cron">Williamlong-Cxagent-Cron</span> @williamlong: A Cron Job Burning 3 Seconds of a Core Every Minute</div>
+    <div class="item-body">A small piece of forensics with a transferable method: when a host feels slow, read what it is actually running before you blame the workload. He found a process on a BandwagonHost VPS firing every 60 seconds, running `rpm -qa | grep dmidecode` — three in parallel — to work out whether `dmidecode` could read the machine&#x27;s hardware identity (UUID, KVM virt, serial). The command itself is the tell: `rpm -q dmidecode` answers the same question in one fast lookup, while walking the entire package database and grepping it pins a core for about three seconds. Stopping the process returned CPU to normal immediately. The missing audit trail is the real finding — a provider-side agent with no published purpose, no changelog, and no way for the customer to know it exists except by watching `top`.</div>
+    <div class="item-meta">
+      <a href="https://x.com/williamlong/status/2116755881627189576" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>Worth Your Time</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag kay-eth-droid-script-mode">Kay-Eth-Droid-Script-Mode</span> @kay_eth1989: 3.1M Tokens Down to 61,000</div>
+    <div class="item-body">The best worked example of moving an agent&#x27;s loop into code, with the vendor&#x27;s own numbers separated from the conclusion. Factory&#x27;s Droid 1.0 makes programmatic tool calling the default: instead of one call at a time, the model writes a JavaScript program that runs in a sandbox with no file, network or system access, and drives hundreds of tool calls inside a single request. Example one — moving 151 Linear issues between queues and verifying each move, 312 tool calls — is an estimated 36 requests and ~3.1M input tokens by direct calling, against 2 requests and ~61,000 via the script. Example two: a CI sweep of 5,384 jobs across 547 runs in 2 requests, with under 0.1% of raw tool results ever reaching the model&#x27;s context. He flags the Terminal-Bench comparison as vendor-reported and gives four rules for builders: batch repetitive work into code, keep raw output in variables and print only summaries, put verification inside the program, and cap what the script may print.</div>
+    <div class="item-meta">
+      <a href="https://x.com/kay_eth1989/status/2116794894253756421" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag randhir302-skillcompiler">Randhir302-Skillcompiler</span> @randhir302: Why the Same Skill Passes on Run 1 and Fails on Run 2</div>
+    <div class="item-body">A diagnosis of skill flakiness that most skill authors will recognise and few have measured. A skill is a text file the model re-reads and re-reasons through on every run, so a learned procedure can take a different path each time — which is why identical inputs produce different outcomes. SkillCompiler, from East China Normal University, splits a task into operations, gives each one a contract (inputs, outputs, preconditions, expected effect, a check), and compiles the well-specified ones into validated code while leaving open-ended steps with the model. The numbers: on LiveMath, the share of tasks flipping between pass and fail across three identical runs fell from 32% to 11%; best average score across five benchmarks rose 79.78% to 84.63%; ALFWorld hit 98.26% versus 79.60% with no skill; and removing the programmer step dropped ALFWorld to 53.48% at 7.36x the tokens. Limits are stated plainly — only checkable steps compile, and gains on SearchQA and DocVQA were small.</div>
+    <div class="item-meta">
+      <a href="https://x.com/randhir302/status/2116893506614833465" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag astrodevil-copilot-fusion">Astrodevil-Copilot-Fusion</span> @Astrodevil_: A Router in the Model Picker</div>
+    <div class="item-body">A release post that answers the question the headline raises, which is rarer than it should be. GitHub&#x27;s Copilot Fusion scores 60 on the Artificial Analysis Coding Agent Index — 2 points under Claude Code on Opus 5.5 at max effort — at about half the cost per task. In the picker you choose an effort level rather than a model, and it decides per prompt which models run and how: one model alone, a cascade where a cheap draft is accepted or escalated, or a critique loop where a second model reviews and the first revises. The cost breakdown: $5.59 per task against $11.42, at 7.2M tokens per task, leading Terminal-Bench 4.0 at 71 but weaker on SWE-Atlas-QnA at 57. His reservation is the correct one — before making it a team default he wants per-task attribution of which model ran which step, since that is what the bill is actually made of.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Astrodevil_/status/2116734487979790482" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
