@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Saturday, October 31st, 2026 — 12:00 PM ET</title>
+  <title>Clawd X Digest — Saturday, October 31st, 2026 — 9:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Saturday, October 31st, 2026 — 12:00 PM ET</div>
+    <div class="date">Saturday, October 31st, 2026 — 9:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,11 +179,11 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>Claude Pro's Real Quota, Reverse-Engineered:</strong> A user logged 614k tokens against the usage page and ccusage's API prices to back out the actual limits — roughly 10–12M tokens per 5-hour window ($8–10 of API-equivalent work), 280–320M per week ($105–125), only 12–13 full windows a week, and Ultra at 10x Pro rather than the 20x most people assumed.</li>
-      <li><strong>claude -p Costs Twice What the TUI Costs:</strong> The same work through the print-mode CLI burns exactly twice the tokens of running the terminal UI directly, which is the hidden trap in every third-party wrapper that shells out with flags — the author rebuilt around the TUI to even out consumption and avoid being flagged.</li>
-      <li><strong>Memory Caps Are the Design, Not the Bug:</strong> Claude Code loads only the first 200 lines or 25KB of its MEMORY file into a session, and Hermes hard-fails any memory write past 2,200 characters, forcing the agent to cut something in the same turn — the prompt copy also freezes at session start while disk updates immediately.</li>
-      <li><strong>Benchmarks Are Only as Fair as the Harness:</strong> Cognition ran Gemini 4 Argon through Devin's CLI while Astra and Opus each got their first-party harness — and Argon never got Antigravity at all, which is a confound sitting inside a published model comparison.</li>
-      <li><strong>Coinbase Turned Agent Complaints Into Merged PRs:</strong> An engineer added a /feedback endpoint to the Coinbase MCP server; agents now file hundreds of messages a day into Slack, many get routed back to agents, and the resulting pull requests are live in production a day later.</li>
+      <li><strong>The Approval Loop Is the Bottleneck:</strong> A ChatGPT Dot spent 11 days on a 137-repo git-history cleanup that a script would finish in 20 minutes — it never delivered, because authorization cannot be granted in batches and every repo needed its own approval.</li>
+      <li><strong>An Agent Found the CI Bug Nobody Read:</strong> Pulling the last 150 CI runs and splitting each job into queue/setup/run time took one repo's PR checks from up to 40 minutes to 2, and surfaced that half the test jobs had never used the dependency cache — a year-old misconfiguration.</li>
+      <li><strong>Opus 5.5 Runs a Trillion Tokens a Day Through OpenRouter:</strong> Almost half of it arrives via Claude Code, which is the striking part: those users are paying API rates for inference that a Claude plan subsidises roughly 66x, which is a 66x margin sitting in plain sight.</li>
+      <li><strong>Effort Settings Are a Price Ladder, Not a Slider:</strong> On VulcanBench numbers, Terra scores ~75 at Low and ~90 at Max for $0.36 a task, matching Opus 5.5's ~90 at $8.75 — a 24x gap that depends entirely on which effort level you actually run.</li>
+      <li><strong>A 107k-Star Memory Plugin Failed on Its Own Defaults:</strong> The install completes, then dies because host mode expects an observer already listening on port 37777; the durable lesson is that the provider line decides where every tool call and file read gets stored.</li>
     </ul>
   </div>
 
@@ -193,31 +193,24 @@
       <h2>Agent Engineering</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag tanayj-coinbase-feedback-endpoint">Tanayj-Coinbase-Feedback-Endpoint</span> @tanayj: Coinbase Gave Its MCP Server a Feedback Endpoint</div>
-    <div class="item-body">The smallest possible loop-closer, and the most useful thing in the feed today. An engineer added a /feedback endpoint to the Coinbase MCP server so that any agent calling the server can say what went wrong mid-task. Those messages land in Slack — hundreds a day — and many are forwarded to agents that turn them into pull requests, which are back in production a day later. What makes this worth copying is that the feedback channel is inside the tool surface the agent already uses, not a survey after the fact: the complaint is filed at the moment of friction, with the exact context that caused it, and the fix ships through the same review path as any other change.</div>
+    <div class="item-title"><span class="tag realtaki42-137-repos-11-days">Realtaki42-137-Repos-11-Days</span> @realTaki42: 11 Days to Not Fix 137 Repos</div>
+    <div class="item-body">A deliberate stress test that turned into a teardown of permission design. The task was mechanical: walk 137 repos, replace an outdated author email, re-sign and push — no code changes, and the poster estimates a loop script would finish in about 20 minutes. He let ChatGPT&#x27;s Dot run for 11 days, granting whatever it asked for, and it still has not delivered. The blockers were structural rather than cognitive: approval cannot be granted for a batch, so each repo needed its own sign-off; sandbox 403s blocked reads and pushes; and the agent compensated with defensive overkill — re-reading its own uploads to verify GitHub had not lost them, and zipping entire git histories into ChatGPT Space in case it needed to roll back. After roughly 100x the necessary work it also lost track of where the gh credentials lived and reported that the GitHub MCP cannot modify git history at all.</div>
     <div class="item-meta">
-      <a href="https://x.com/tanayj/status/2116313952888263141" target="_blank">View Tweet</a>
+      <a href="https://x.com/realTaki42/status/2116617725204414560" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag jmwind-agent-built-cli">Jmwind-Agent-Built-Cli</span> @jmwind: Give the Agent Its Own CLI, Save 38k Tokens</div>
-    <div class="item-body">A one-line before/after that explains why so many agent setups feel slow: getting oriented used to cost about 40k tokens and six file reads, taking 30 seconds, because the agent had to discover its own environment through the general-purpose tools. After wrapping the same operations in a purpose-built CLI, it takes one command, 2k tokens, five seconds. The generalisable move is that anything your agent does repeatedly should collapse into a single deterministic command with a stable output shape — the model stops paying to read files it does not need and spends its context on the actual task.</div>
+    <div class="item-title"><span class="tag voxyz-ci-40min-to-2min">Voxyz-Ci-40Min-To-2Min</span> @Voxyz_ai: 40 Minutes of CI Down to 2</div>
+    <div class="item-body">The cleanest agent-shaped win in the feed, because it is a measurement job rather than a coding job. Nine changes took each PR&#x27;s CI from up to 40 minutes down to 2. The first step was having an agent pull the last 150 CI runs and split every job&#x27;s wall time into three parts — waiting for a machine, setup (checkout, dependency install, cache restore), and actually running the task. That split alone exposed that half the test jobs were not using the dependency cache at all, a bug that had been sitting in the config for a year. The post includes the full audit prompt: list the five slowest jobs with per-phase seconds, check nine named causes one by one, and report the seconds each costs, the file and line to change, and the expected saving — with anything that needs more money or fewer tests split out for a human decision. Report first, change nothing.</div>
     <div class="item-meta">
-      <a href="https://x.com/jmwind/status/2116513031077384391" target="_blank">View Tweet</a>
+      <a href="https://x.com/Voxyz_ai/status/2116636332344889391" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag zkcolab-super-agent-group-chat">Zkcolab-Super-Agent-Group-Chat</span> @zkcolab: The Super-Agent Group Chat Has a Token Problem</div>
-    <div class="item-body">A short, sharp teardown of the multi-agent &quot;group chat&quot; architecture behind the current Super Agent wave. Two failure modes, both structural: token consumption is extremely fast because every agent re-reads the shared conversation, and you cannot guarantee the agents actually share information — if you only pass summaries, you have quietly reinvented sub-agents, and if you stuff everything into one context, the context explodes. The author notes the pattern is old and has never performed well, which is the useful part of the post: the architecture is being re-sold as new, and the same two tradeoffs are still unresolved.</div>
+    <div class="item-title"><span class="tag amoebafarm-deepseek-super-agent">Amoebafarm-Deepseek-Super-Agent</span> @AmoebaFarm: Human Attention Is the Ceiling</div>
+    <div class="item-body">A short summary of how DeepSeek&#x27;s Harness team frames the super-agent problem, and the diagnosis is the interesting half. People can hold roughly three to five agent sessions at once, so the binding constraint is not model capability but the human&#x27;s attention in the loop. Their answer is an agent that stays online continuously, watches chat, email and GitHub and acts without being asked, runs many tasks in parallel, and keeps a single memory across every channel. Whether or not that specific product works, the framing is the right one to steal: if your agent needs you to open a session to make progress, you have built a tool with a session limit, and the session limit is you.</div>
     <div class="item-meta">
-      <a href="https://x.com/zkcolab/status/2116534979555627479" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag mylifcc-herdr-core">Mylifcc-Herdr-Core</span> @mylifcc: herdr Rebuilt Itself So Agents Can Rewrite the App</div>
-    <div class="item-body">herdr, previously a TUI for juggling several coding agents at once, open-sourced a new core and desktop client where the interface and the logic are both composed entirely of files — which means a coding agent can edit the software it is running inside. The rewrite splits a desktop shell from a background core. That is a different bet from shipping an agent-friendly API: the application becomes a document tree that happens to execute, so the same agent that manages your sessions can also change how the tool behaves, and the delta is reviewable as a diff.</div>
-    <div class="item-meta">
-      <a href="https://x.com/mylifcc/status/2116471239963197637" target="_blank">View Tweet</a>
+      <a href="https://x.com/AmoebaFarm/status/2116630535262928997" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -228,24 +221,24 @@
       <h2>Memory &amp; Context</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag mehdidotnet-memory-200-lines">Mehdidotnet-Memory-200-Lines</span> @mehdidotnet: Claude Code Reads Only the First 200 Lines</div>
-    <div class="item-body">A concrete mechanical limit worth knowing before you spend another hour curating a memory file: Claude Code&#x27;s auto memory loads only the first 200 lines or 25KB of it into a session, and everything past that stays on disk where the agent never sees it. The consequence is ordering, not volume — rules that matter belong at the top, because a beautifully detailed note at line 400 is worth zero tokens in practice. It also explains a class of confusing behaviour where an agent &quot;ignores&quot; an instruction that was in fact never in its context.</div>
+    <div class="item-title"><span class="tag qi9098-codex-web-search-live">Qi9098-Codex-Web-Search-Live</span> @qi9098: Codex Search Is Cached by Default</div>
+    <div class="item-body">A cold fact with a one-line fix that changes every research task you run through Codex. Web search is not live by default: the docs describe a cached mode that queries OpenAI&#x27;s own index instead of fetching the open web, so an agent asked for &quot;the latest&quot; can quietly answer from a snapshot. To switch it, add `web_search = &quot;live&quot;` at the top of `~/.codex/config.toml` — and the placement matters, because it has to sit before any `[section]` header or it silently does nothing. The same docs note that `--yolo` or a fully open sandbox flips the default to live, which is how people end up with inconsistent results depending on how they launched the harness.</div>
     <div class="item-meta">
-      <a href="https://x.com/mehdidotnet/status/2116175151511552211" target="_blank">View Tweet</a>
+      <a href="https://x.com/qi9098/status/2116411093212086652" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag rodrigoesporto-hermes-hard-caps">Rodrigoesporto-Hermes-Hard-Caps</span> @RodrigoESPorto: Hermes Caps Memory at 2,200 Characters</div>
-    <div class="item-body">A source-level read of Nous Research&#x27;s Hermes Agent (MIT), and the interesting decisions are all about hard state cuts. MEMORY.md is capped at 2,200 characters and USER.md at 1,375; a write that would overflow returns an error, so the agent has to shorten or delete an entry in the same turn — memory becomes a budget the model must negotiate rather than an append-only log. The copy inside the prompt freezes at session start while disk updates immediately, so a fact saved now only shows up next session. Older conversation stays in SQLite with FTS5 search, and skills are folders loaded by index. &quot;The model is a rented part; the runtime is the product.&quot;</div>
+    <div class="item-title"><span class="tag yatharth-codex-cli-loop">Yatharth-Codex-Cli-Loop</span> @yatharth170699: The Codex Loop, Read From Source</div>
+    <div class="item-body">Someone read the Codex CLI source and wrote down what an agent actually is, which is more useful than most architecture posts. The core is three steps in a `loop {}`: send the conversation (user messages, prior responses, earlier tool results) to the model; execute whatever tool the model asks for and append the result; then either loop again or end the turn. Everything else is scaffolding around that — hooks at defined stages, context compaction when the window fills, a permission layer over which tools may run, MCP for external tools, and token accounting. The pointer to `run_turn()` is the part worth acting on: when an agent misbehaves, the failure is usually in what got put into the conversation or what the permission layer refused, not in the model&#x27;s reasoning.</div>
     <div class="item-meta">
-      <a href="https://x.com/RodrigoESPorto/status/2116536791230472297" target="_blank">View Tweet</a>
+      <a href="https://x.com/yatharth170699/status/2116222119344476606" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag hubzoid-harness-file-layout">Hubzoid-Harness-File-Layout</span> @hubzoid_: One File Layout That Works Across Harnesses</div>
-    <div class="item-body">A plain-markdown layout designed so Claude, Codex or anything else can pick up the same context: AGENTS.md as the summary and an index table that says &quot;for this job, read that file&quot;, a skills folder with one document per repeated job including the checks and an example of a good result, a knowledge folder with one topic per file holding terms, business rules and decisions, and a tools folder for the API calls, MCP servers and scripts an agent may reach for. The rule that makes it hold together is that corrections go into the file rather than the chat — fix it once and every agent, yours or a teammate&#x27;s, obeys it next run.</div>
+    <div class="item-title"><span class="tag themuscleai-claude-mem-audit">Themuscleai-Claude-Mem-Audit</span> @themuscleai: The Memory Plugin Failed on Its Own Default</div>
+    <div class="item-body">A build log with receipts, and the receipt that matters is the last line of the installer. The repo shows 107,333 stars, 3,772 commits and an Apache 2.0 licence, and version 15.7.0 registers cleanly in a sandbox — then prints &quot;Installation complete!&quot; followed by a fatal error: host mode expects an OpenAI-compatible observer already listening on 127.0.0.1:37777 or 37778, and the plugin does not start one. The default path instead signs you in by magic link, provisions a memory key, and runs the observer on a 30-day trial before falling back to your own Anthropic plan. That is the real decision the star count hides, because observations include every tool call, file read and decision: the provider line is where your session data goes. The audit also notes the worker came up on 37700 with dependencies degraded, the observations table held zero rows as it should, and a search against the empty database timed out at 60 seconds — reported as a failure rather than retried into a success story.</div>
     <div class="item-meta">
-      <a href="https://x.com/hubzoid_/status/2116058752008978568" target="_blank">View Tweet</a>
+      <a href="https://x.com/themuscleai/status/2116577799880208571" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -256,31 +249,24 @@
       <h2>Cost &amp; Quotas</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag xiaomovps-claude-pro-quota">Xiaomovps-Claude-Pro-Quota</span> @xiaomovps: What Claude Pro Actually Buys Now</div>
-    <div class="item-body">The most useful kind of post: someone measuring their own bill instead of reading the marketing. After Anthropic renamed the tiers (Max 5x became Max, Max 20x became Ultra) and clarified that Ultra is 10x Pro rather than 20x, he logged usage against the Claude usage page and ccusage&#x27;s token accounting. One day of 614k tokens priced at $0.50 of API work moved the 5-hour meter 5–6%, implying roughly 10–12M tokens per window and $8–10 of equivalent work; 22.57M tokens over the week ($8.80, 7–8%) implies 280–320M tokens weekly, about $105–125. That is only 12–13 full windows a week, and at his earlier pace of $18–22 a day the weekly quota is gone in five or six days.</div>
+    <div class="item-title"><span class="tag adamholtererer-1t-tokens-opus">Adamholtererer-1T-Tokens-Opus</span> @AdamHoltererer: A Trillion Tokens of Opus a Day</div>
+    <div class="item-body">A number that reframes the whole subscription-versus-API argument. Roughly 1T tokens of Opus 5.5 flow through OpenRouter daily, and almost half of that is Claude Code traffic. The poster&#x27;s question is the sharp one: why pay API rates for inference that a Claude plan subsidises by something like 66x? Whatever the exact multiple, the direction is not in dispute, and the interesting part is what it implies about the ecosystem — a large share of third-party tooling is reselling tokens the vendor already sells at a steep plan discount, so any wrapper that meters usage has a 66x spread to defend rather than a margin problem to optimise.</div>
     <div class="item-meta">
-      <a href="https://x.com/xiaomovps/status/2116472498002825628" target="_blank">View Tweet</a>
+      <a href="https://x.com/AdamHoltererer/status/2116607303172665775" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag lanzhai-claude-p-double-tokens">Lanzhai-Claude-P-Double-Tokens</span> @LanzhiAI: claude -p Burns Twice the Tokens of the TUI</div>
-    <div class="item-body">A billing pothole that costs real money and is invisible in the docs: driving Claude through the print-mode CLI consumed exactly twice the tokens of running the terminal UI directly for comparable work. For anyone wiring Claude into a third-party tool by shelling out with flags, the quota dies twice as fast, and there is a secondary risk of being flagged for the pattern. The author&#x27;s fix was to rebuild around the TUI to even out consumption — less convenient plumbing, half the bill. Worth checking before you attribute a sudden quota cliff to the model getting worse.</div>
+    <div class="item-title"><span class="tag kdnbmb-terra-effort-ladder">Kdnbmb-Terra-Effort-Ladder</span> @kdnbmb: Terra&#x27;s Effort Level Is the Whole Price</div>
+    <div class="item-body">A restatement of the VulcanBench run that isolates the variable most people leave implicit: effort. Terra scores around 75 at Low and around 90 at Max for $0.36 per task; Opus 5.5 Max sits near 90 for $8.75; Sol Max near 88 for $0.46. The comparison that gets lost in model-vs-model arguments is that Terra at Max matches Opus at roughly 24x less cost, while Terra at Low is a different, considerably worse product at a similar price to Sol. The practical consequence: a leaderboard row without an effort setting is not a result you can buy, and &quot;which model&quot; is really two questions — which model, and how hard you let it think.</div>
     <div class="item-meta">
-      <a href="https://x.com/LanzhiAI/status/2116540057217806441" target="_blank">View Tweet</a>
+      <a href="https://x.com/kdnbmb/status/2116634609995944310" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag omni1896837-terra-vs-opus-limits">Omni1896837-Terra-Vs-Opus-Limits</span> @omni1896837: Terra Empties a 5-Hour Window in 20 Minutes</div>
-    <div class="item-body">One paired measurement of what a plan actually feels like. Running GPT-6.1 Terra at medium reasoning, the 5-hour limit filled in about 20 minutes; running Opus 5.5 at medium with 500k-plus context over the same span consumed 16% of the equivalent window. Nothing here is a claim about capability — it is the reminder that plan headroom and model choice are the same decision. A cheaper-per-token model that burns its window six times faster is the more expensive subscription, which is exactly the inversion the cost-per-task crowd keeps pointing at.</div>
+    <div class="item-title"><span class="tag codexupdate-device-limits">Codexupdate-Device-Limits</span> @CodexUpdate: Codex Device Limits, Read Carefully</div>
+    <div class="item-body">A useful follow-up on a policy that quietly changes what a subscription is worth. Subscriptions bought before the device limits took effect can continue under an existing-subscription exception, which means the terms differ by purchase date — and cancelling one of them carries no guarantee you can get it back. Sign-in blocks offer cancel plus refund for ChatGPT and Google Play purchases, while Apple buyers have to go through Apple. A shared household, a public device, or one card used by several people can also trip the limit. The ask at the end is the right one: the exact number of paid accounts allowed per device is not published, so nobody can know before paying.</div>
     <div class="item-meta">
-      <a href="https://x.com/omni1896837/status/2116461405784129585" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag dicklong-openai-tier-forecast">Dicklong-Openai-Tier-Forecast</span> @Dicklong1999: OpenAI&#x27;s Own Tier Forecast for End-2026</div>
-    <div class="item-body">A cited number that reframes the whole plan-pricing argument. Per internal OpenAI projections reported by The Information, by the end of 2026 the $8 Go tier is expected to reach about 112 million users, the $20 Plus tier roughly 9 million, and the high-price Pro tier under 1% of paying users. If those figures are anywhere close, the paying base is overwhelmingly the cheapest tier — which makes the recent pattern of shipping the biggest capability and limit upgrades to the expensive tiers a bet on a sliver of the revenue mix, and explains why the loudest complaints in the timeline this week were all about Plus limits.</div>
-    <div class="item-meta">
-      <a href="https://x.com/Dicklong1999/status/2116454573779116397" target="_blank">View Tweet</a>
+      <a href="https://x.com/CodexUpdate/status/2116564716155813888" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -288,27 +274,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🧪</span>
-      <h2>Evals &amp; Benchmarks</h2>
+      <h2>Evals &amp; Verification</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag pvncher-harness-fairness">Pvncher-Harness-Fairness</span> @pvncher: Argon Was Benchmark in Someone Else&#x27;s Harness</div>
-    <div class="item-body">A methodology catch that invalidates part of a published comparison. When Cognition tested Gemini 4 Argon, it ran through Devin&#x27;s CLI, while Astra and Opus were each tested in their own first-party harness — and Argon never got Antigravity, Google&#x27;s own agent surface. The poster&#x27;s own position is the nuanced one: models should be tested in their own harness, precisely because harness and model are now a joint product, and a cross-harness run measures the mismatch as much as the model. Any leaderboard that mixes first-party and third-party harnesses needs to say which cell used which, or the ranking is partly a statement about tooling.</div>
+    <div class="item-title"><span class="tag wang-johnny-hinoki-offensive">Wang-Johnny-Hinoki-Offensive</span> @wang_johnny: 150,000 Exploits as Training Data</div>
+    <div class="item-body">A capability claim stated in the only terms that make it checkable: corpus size, benchmark, delta and refusal rate. Hinoki Offensive One was trained on 150,000 written CVE exploits and scores 88.4% on CyberGym, 2.8 points above Daybreak, with zero refusals. The zero matters as much as the score — for offensive security work, a model that occasionally declines is not a weaker tool but an unreliable one, since the failure lands mid-engagement and is indistinguishable from a wrong answer. Whatever you think of the product, the shape of the announcement is worth copying: name the data, name the benchmark, give the delta against a named competitor, and state the property that determines whether it can be used at all.</div>
     <div class="item-meta">
-      <a href="https://x.com/pvncher/status/2116371675906281934" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag morganlinton-terra-vulcanbench">Morganlinton-Terra-Vulcanbench</span> @morganlinton: Terra Is a Computer-Use Model, Not a Coder</div>
-    <div class="item-body">An independent coding-only benchmark (VulcanBench) with public traces, including tool calls, and a conclusion that cuts against the launch narrative. On coding tasks Terra only clears the useful band — 80–90 on Frontier v4 — at Extra High or Max effort; low, medium and high &quot;don&#x27;t really make the cut&quot;. Cost per task is genuinely low, but against GPT-6.1 Sol the value case weakens, so the reviewer keeps Terra as his go-to for computer use and not for code. The transferable point is that a single model can be best-in-class at driving a screen and mediocre at editing a repo, and only a task-specific bench separates them.</div>
-    <div class="item-meta">
-      <a href="https://x.com/morganlinton/status/2116521701194547459" target="_blank">View Tweet</a>
+      <a href="https://x.com/wang_johnny/status/2115215878220558547" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag reignswords-arena-cost-per-task">Reignswords-Arena-Cost-Per-Task</span> @ReignSwords: $0.62 Median Cost Per Task Is the Headline</div>
-    <div class="item-body">A short observation that names the shift: leaderboards used to be pure quality races, and cost per completed task is now a first-class metric. The figure being stared at is a $0.62 median cost per task, with Terra entering Agent Arena at #8 while improving 10.6% at that price point. The question posed at the end is the right one to hold onto — when does tokens per dollar replace raw ELO as the number on the front page? For anyone choosing a model for production agent work, a rank-eight model at a fifth of the price is frequently the better buy, and the board now makes that visible.</div>
+    <div class="item-title"><span class="tag thisguyknowsai-elephant-goldfish">Thisguyknowsai-Elephant-Goldfish</span> @thisguyknowsai: No Code Until the Plan Survives</div>
+    <div class="item-body">A write-up of Google&#x27;s Elephant-Goldfish approach, reportedly used by thousands of engineers internally and shipped as Apache 2.0 markdown rules, reviewer personas and workflows. The structure is the argument: one long-running session (the Elephant) holds architecture, intent and every small decision and writes zero code; fresh sessions (Goldfish) never saw the design conversation, so they do not inherit its blind spots. Flow is brainstorm under a strict no-code rule, then a Markdown design doc naming the exact files to change, then a Goldfish has to explain the design back — if it gets it wrong, the doc was ambiguous and goes back — then hostile reviewer Goldfish hunt edge cases, then a final go/no-go on whether paths, data structures and signatures are unambiguous. Stated trade-offs: it runs only inside Antigravity for now, and security is not on the default reviewer list.</div>
     <div class="item-meta">
-      <a href="https://x.com/ReignSwords/status/2116240569026630103" target="_blank">View Tweet</a>
+      <a href="https://x.com/thisguyknowsai/status/2116453452977152209" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jiahaoshao-classifier-appeal">Jiahaoshao-Classifier-Appeal</span> @jiahaoshao1: The Classifier You Cannot Appeal</div>
+    <div class="item-body">A first-hand account worth reading as an eval failure rather than a complaint. The poster says he never distilled Claude — his rollouts came from a strong open-source model, with Claude only used to submit jobs and run analysis — and was still tagged for &quot;training a competitor&quot;. The consequence is not a warning but a quiet downgrade: anything touching RFT, SFT or training larger models is blocked, Opus 5.5 is served as Opus 5, and sessions are killed outright. That is the shape of automated enforcement at scale: a classifier with no stated evidence, no appeal path, and an error that manifests as degraded service rather than an accusation, so the paying user cannot tell whether the model got worse or the account got labelled.</div>
+    <div class="item-meta">
+      <a href="https://x.com/jiahaoshao1/status/2116475922190922088" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -316,34 +302,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🔧</span>
-      <h2>Tools &amp; Hardware</h2>
+      <h2>Tools &amp; Skills</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag ownyourcompute-uzu-m5">Ownyourcompute-Uzu-M5</span> @OwnYourCompute: 92 Tokens/s From a 9B Model on a Base M5</div>
-    <div class="item-body">The arithmetic here is the interesting part. Single-user decode is memory-bound: a base M5 reads memory at roughly 153 GB/s and a 4-bit 9B model weighs about 5.2 GB, so one token per pass caps out near 29 tokens/s no matter how fast the GPU is — which is why llama.cpp measured 22.0 and MLX 25.1 on the same laptop. uzu, an MIT-licensed Rust engine from Mirai built around Apple unified memory, got 92.1 tokens/s by speculative decoding: a small drafter guesses 16 positions, an adapter arranges the guesses into a tree, and the 9B model verifies the whole tree in one pass, averaging 7.5 accepted tokens per pass. The caveat is honest — Apple-first, its own model format.</div>
+    <div class="item-title"><span class="tag piebaldai-claude-code-prompt-diff">Piebaldai-Claude-Code-Prompt-Diff</span> @PiebaldAI: 1,506 Tokens Added to Claude Code&#x27;s Prompts</div>
+    <div class="item-body">The system-prompt diff habit applied to the 2.1.315 release, and the entries are more interesting than the token count. New guidance covers showing ultrathink availability during session initialisation, answering document comments through the connector while treating them as untrusted data, and distinguishing stray characters from real path characters before renaming a file. On data side, `blockWritesOutsideWorkingDirectories` no longer accepts the cowork memory-path override as grounds to refuse auto-memory writes, and shared group-budget exhaustion now gets its own billing error with a header that separates it from an individual cap. The one worth flagging is a removal: the instruction to match surrounding code&#x27;s comment density, naming and idiom is gone, replaced by outcome-first communication, while the separate restriction on comments stays.</div>
     <div class="item-meta">
-      <a href="https://x.com/OwnYourCompute/status/2116507983995871702" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag charg-cloud-a100-vs-80gb">Charg-Cloud-A100-Vs-80Gb</span> @charg_cloud: The A100 40GB Served 4,235 Tokens/s</div>
-    <div class="item-body">A useful antidote to upgrade reflex. Running identical flags on a tuned node, an A100 40GB served Qwen3.8 27B at 4,235 tokens per second; the 80GB node reached 4,577. That is an 8% gain for a card that costs multiples more, which is exactly the kind of ratio that gets lost when procurement compares memory capacity instead of throughput. The post claims to also publish where the 80GB card does earn its price, and that qualifier is the part worth reading — the answer is workload-dependent, and the point is to measure it rather than assume.</div>
-    <div class="item-meta">
-      <a href="https://x.com/charg_cloud/status/2113682001110683981" target="_blank">View Tweet</a>
+      <a href="https://x.com/PiebaldAI/status/2116617633621758347" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag jojeangsaing-oracle-snatch">Jojeangsaing-Oracle-Snatch</span> @jojeangsaing: oracle-snatch Automates Oracle&#x27;s Free ARM Tier</div>
-    <div class="item-body">Oracle&#x27;s always-free Ampere tier (4 cores, 24GB) is real but almost never in stock, which is why people sit refreshing the console. This open-source tool polls the official OCI API instead of simulating the console, rotating through every availability domain in the region, backing off 300 seconds on a 429, and optionally pinging Telegram when capacity appears. Setup is an API key in ~/.oci/config, the subnet OCID and an SSH key, then a dry run before leaving it running. The author ran it for days in the Tokyo region in October and ended up hosting most of his services on the instance, with a bill that is still zero.</div>
+    <div class="item-title"><span class="tag hanghuang-instabox-toolkit">Hanghuang-Instabox-Toolkit</span> @hanghuang_: Ship CLI, Skills and MCP — or Just One</div>
+    <div class="item-body">A small but clean decision from a team shipping agent integration as a first-class surface: they released the same capability three ways. The CLI does the actual work, and the skills teach the agent which commands to run and when. The MCP server splits into docs tools and action tools, with docs tools connected in every new box so an agent can learn the product with zero setup, and action tools gated behind a scoped API key for creating and managing boxes. The reasoning to keep is that docs-as-tools and actions-as-tools deserve different trust levels: letting an agent read your API surface for free costs you nothing, while letting it create infrastructure should be a deliberate, scoped grant.</div>
     <div class="item-meta">
-      <a href="https://x.com/jojeangsaing/status/2116416630897127883" target="_blank">View Tweet</a>
+      <a href="https://x.com/hanghuang_/status/2116583134435144086" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag gkxspace-unslop">Gkxspace-Unslop</span> @gkxspace: /unslop, a Packaged UI De-Slopping Skill</div>
-    <div class="item-body">Someone packaged the &quot;fix the generic AI-generated interface&quot; workflow into an installable skill: drop it in, type /unslop, and it reworks landing pages, admin dashboards and mobile apps across React, Tailwind or plain HTML. The value is not the prompt text — it is that a taste-driven cleanup pass, which usually lives in one person&#x27;s head, became a repeatable command any harness can run. Worth a look if you generate a lot of interfaces and then hand-edit them, since the edit pass is exactly the part agents are worst at doing consistently on their own.</div>
+    <div class="item-title"><span class="tag paleologo-ai-rhetoric-skill">Paleologo-Ai-Rhetoric-Skill</span> @__paleologo: A Skill That Strips AI Rhetoric</div>
+    <div class="item-body">The most relatable complaint in the feed, turned into an artefact. Asked to write a scientific survey, Codex produces prose with an insufferable style, so the author wrote a skill that corrects roughly 27 rhetorical devices that give AI writing away, along with other fixes. The interesting design choice is that the corrections are enumerated — a countable list of tells rather than an instruction to &quot;write better&quot; — which is the only form a style rule survives contact with a model. He says a long technical survey written with this skill is coming, which will be the actual test: whether removing the tells leaves prose that is pleasant or merely neutral.</div>
     <div class="item-meta">
-      <a href="https://x.com/gkxspace/status/2116367454557655359" target="_blank">View Tweet</a>
+      <a href="https://x.com/__paleologo/status/2116602494428299632" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -354,24 +333,24 @@
       <h2>Worth Your Time</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag dimitriosmitsos-model-per-job">Dimitriosmitsos-Model-Per-Job</span> @DimitriosMitsos: Which Model for Which Job, Measured</div>
-    <div class="item-body">The single most useful post of the week for anyone paying per token, and it is a table rather than an argument: hidden keys, hidden tests, blind cross-family judges, with the small-sample caveat stated up front. Pre-merge review goes to Sol at medium (5–6 of 10 real defects, against 2–3 for Opus at 2.7x the cost); paste the code in and Haiku 5.5 wins 7 of 8 at $0.47 versus $5.70 — but make it explore the repo and it drops to 4 of 13. Diff-only review finds 0 of 7 bugs outside the diff; with repo access, 7 of 7. Narrow tooling code: Terra low, 39 of 39 at 0.23x cost. Fix-after-failing-tests: Haiku from $0.35 against Opus at $5.83. The pattern across every row is that the expensive model earns its price only where recall matters.</div>
+    <div class="item-title"><span class="tag vtrivedy-harness-is-the-product">Vtrivedy-Harness-Is-The-Product</span> @Vtrivedy10: The Harness Is the Product</div>
+    <div class="item-body">A direct rebuttal to the &quot;harness is dead now that models are good&quot; line, from someone who builds one, and it is useful because it names the work instead of defending the category. What harness engineering actually contains: adjusting prompts, collapsing common workflows into bespoke tools and skills so a whole sequence becomes one tool call and saves context, choosing compaction thresholds for your specific use case, routing work to cheaper models via subagents, building connectors so context is searchable rather than pasted, supporting background work, and shaping memory around what your users actually need. The closing argument is the operational one: evals exist so you can hill-climb the harness when a new model lands and trust the config you end up with. Every vertical product team is doing this whether or not they call it that.</div>
     <div class="item-meta">
-      <a href="https://x.com/DimitriosMitsos/status/2116258851733348745" target="_blank">View Tweet</a>
+      <a href="https://x.com/Vtrivedy10/status/2116622802031710709" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag jimmy-longbow-aliyun-survey">Jimmy-Longbow-Aliyun-Survey</span> @jimmy_longbow_: 46% Building Agents, 18% in Production</div>
-    <div class="item-body">A survey number that sizes the gap between ambition and shipping: of 1,906 respondents to Aliyun&#x27;s agent survey, 46% are building agents and 18% have anything in production. The blockers named are mundane and consistent — engineering, context and memory, routing costs, and manual evals — which lines up with everything else in this digest: nobody is stuck on model quality. The associated handbook is Apache-2.0, so the whole thing is worth a skim for the survey instrument alone, if only to see which questions were asked.</div>
+    <div class="item-title"><span class="tag shao-meng-cs329z-evaluating-agents">Shao-Meng-Cs329Z-Evaluating-Agents</span> @shao__meng: CS329Z Lecture 10 Is About Evals as Engineering</div>
+    <div class="item-body">Notes from Stanford&#x27;s Engineering AI Agents course, and the framing is the thing to take: software is moving from &quot;the rules are the truth&quot; (hand-written code) to &quot;the evaluation is the truth&quot;, with three layers — models learn from data, agents are raised on evals, and software is then generated by agents. That makes the specifier still an engineer but adds a role most teams are missing, the evaluator, whose artifact is an eval rather than a spec. The concrete material is Terminal-Bench: 64 model cards, 171 contributors, 1k+ GitHub participants, 7M+ benchmark runs, and a task anatomy of instruction.md, task.toml, environment/Dockerfile, solution/solve.sh and tests/test.sh, with verifiers as outcome classifiers over environment state and reward hacking handled by isolating agent and verifier environments. Best part is the versioning scheme: a major bump changes the agent environment and forces a full re-run, a minor bump changes the verifier and permits regrading, a patch is metadata and can be reused.</div>
     <div class="item-meta">
-      <a href="https://x.com/jimmy_longbow_/status/2116405052982091794" target="_blank">View Tweet</a>
+      <a href="https://x.com/shao__meng/status/2114909091101573476" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag harden-369741-skills-repos">Harden-369741-Skills-Repos</span> @harden_369741: Five Skills Repos, Read Before Installing</div>
-    <div class="item-body">A morning spent reading five Agent Skills repos off the trending list, with the conclusion that the fight has moved from what tool an agent uses to how it should work — and the practical advice that installing all five is pointless, pick the layer you are missing. The numbers are the reason to read it: anthropics/skills at 185,393 stars as of October 31, with a mixed license where most skills are Apache 2.0 but the document skills are source-available rather than open source, and the repo&#x27;s own warning that it is demo and teaching material. Star counts and license text, checked before adoption, are exactly the two things these roundups usually skip.</div>
+    <div class="item-title"><span class="tag ellfyy-305-repos-audited">Ellfyy-305-Repos-Audited</span> @ellfyy_: 305 Repos Opened, 66 Survived</div>
+    <div class="item-body">An audit rather than a listicle, which is why the numbers are interesting. He opened all 305 repos on a widely circulated agent list and kept only those past 10k stars: 66 of them, holding 93% of every star the list ever accumulated — and 26 entries were dead, including three that return 404, three archived, and twenty with no commit in six months. The top five by that measure: OpenClaw at 394k (an assistant living in your messengers, tools and calendar), Hermes Agent at 259k (terminal plus messaging, cross-session memory, writes its own skills), Firecrawl at 197k, Ollama at 185k, browser-use at 120k. The observation that matters for anyone choosing tools: the most-used coding agents — Claude Code, Codex CLI, Gemini CLI, OpenCode — were not on the list at all, so a star-ranked catalogue is measuring a different market than the one you work in.</div>
     <div class="item-meta">
-      <a href="https://x.com/harden_369741/status/2116381129099853920" target="_blank">View Tweet</a>
+      <a href="https://x.com/ellfyy_/status/2116627666241478965" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
