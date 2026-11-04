@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Tuesday, November 3rd, 2026 — 12:00 PM ET</title>
+  <title>Clawd X Digest — Tuesday, November 3rd, 2026 — 9:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Tuesday, November 3rd, 2026 — 12:00 PM ET</div>
+    <div class="date">Tuesday, November 3rd, 2026 — 9:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,11 +179,11 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>The Outer Shell Sets the Score:</strong> The same DeepSeek V4.1 model scored 7.8/10 in a harness at 48 minutes and ~$0.55, versus 5.6/10 in OpenCode at 6 minutes and ~$0.11 — 2.2 points bought with 8x the time and 5x the cost.</li>
-      <li><strong>Teams Cost More Than Solos:</strong> Opus 5.5 alone solved 81% of hard ML tasks at $1.20 each; adding a cheap DeepSeek worker dropped that to 67% at $1.29, because a 10-15 minute worker call expires Opus's prompt cache and cache writes cost 25x reads.</li>
-      <li><strong>Long Context Gets Cheap:</strong> Latent Sparse Attention on Qwen 3.8 27B reports 72.4x faster prefill and 42.5x faster decode at 10M tokens with time-to-first-token cut to ~1/9, trained by distilling only a small indexer with the base model frozen.</li>
-      <li><strong>Defenders Run the Models First:</strong> OpenAI is bringing outside researchers to attack its own systems next sprint and more than quadrupling critical bug bounty rewards, with exceptional findings eligible for up to $172,000.</li>
-      <li><strong>Crawl Volume and Card Rentals:</strong> OpenAI's search crawler reached 18% of Googlebot's request volume in October, up from 5.3-7.5% in July, while a single RTX 6000 Pro rents for $29,696 a year against a $23,000 median adult income.</li>
+      <li><strong>Revolut Moved 2,000 Engineers Off Frontier APIs:</strong> self-hosted GLM on 56 B200s at a blended $0.30 per million tokens, roughly a tenth of its Anthropic and OpenAI bill, with engineering lead time reported 70% better — and the gains arrived once tokens stopped being rationed.</li>
+      <li><strong>Anthropic Books $17B in One Quarter:</strong> Q3 revenue up about 1,127% year over year, against a $23.29B net loss and roughly $895B of committed spending that is nearly all compute, while quarter-over-quarter growth slowed to 47% from 144%.</li>
+      <li><strong>Self-Evolving Skills Mostly Don't Evolve:</strong> 125 retrospective suggestions produced 24 adoptions and 12 tests, but only 7 reproduced the target problem — 2 fixed it, and one fix raised median task time from 82 to 245 seconds.</li>
+      <li><strong>Same Model, 13x the Bill:</strong> across seven browser toolsets on WebVoyager's 100 tasks, Stagehand passed 90% for $1.98 while Playwright MCP passed 78% for $26.71 — the difference was tool design and step count, not the model.</li>
+      <li><strong>2.78T Parameters on 8GB of RAM:</strong> a seven-file, 176KB pure-C engine streams a 1.56TB Kimi K3 off an SSD at 26.5 seconds per token and reaches 5.6 on a 128GB workstation, with byte-identical output across every preset.</li>
     </ul>
   </div>
 
@@ -193,24 +193,31 @@
       <h2>Agent Engineering</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag latentoperatorx-harness-vs-opencode">Latentoperatorx-Harness-Vs-Opencode</span> @LatentOperatorX: The Same Model Scores 7.8 With a Harness, 5.6 Without</div>
-    <div class="item-body">One cheetah animation prompt, two setups, same DeepSeek V4.1 underneath. In a harness: 7.8/10, 48 minutes 14 seconds, ~$0.55. In OpenCode: 5.6/10, 6 minutes 7 seconds, ~$0.11. That is 2.2 points of quality for roughly 8x the wall clock and 5x the cost. This is a single prompt with a self-scored rubric, so treat the absolute numbers lightly — but the direction is the same finding as the HarnessMM paper: the outer shell, not the weights, is where a large share of the variance lives. The useful question it poses is not which setup wins, it is which of your jobs can afford the 8x.</div>
+    <div class="item-title"><span class="tag dotey-retro-self-evolution-paper">Dotey-Retro-Self-Evolution-Paper</span> @dotey: 125 Retro Suggestions, Two Problems Actually Fixed</div>
+    <div class="item-body">A close read of &quot;How Do Coding-Agent Harnesses Self-Evolve?&quot; — 30 SWE-bench Verified issues, Claude Code running /retro after each fix, 125 suggestions generated, 101 of them grounded in something that really happened in the task. The authors adopted 24, tested 12 against a second task in the same repo, and got a usable signal in only 7 of 13 runs. Two changes fully removed the behaviour: writing in CLAUDE.md that Symfony&#x27;s test command is bin/test (pytest attempts went 5-of-5 to 0-of-5) and an Astropy list of tests that already fail (pointless comparison runs went 3-of-5 to 0-of-5). The other five didn&#x27;t transfer, and one actively cost time: &quot;treat unlisted failures as yours&quot; added comparison checks in 4 of 5 unrelated runs, moving the median from 82 to 245 seconds, while a format-check line moved 88 to 156. Success rates never differed by more than one in five. The rule that survives: project-wide facts persist, environment-specific facts rot.</div>
     <div class="item-meta">
-      <a href="https://x.com/LatentOperatorX/status/2117461101030015042" target="_blank">View Tweet</a>
+      <a href="https://x.com/dotey/status/2117706197797114009" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag mattpocockuk-orchestrator-software-factory">Mattpocockuk-Orchestrator-Software-Factory</span> @mattpocockuk: One Long-Lived Orchestrator Over a Sandboxed Factory</div>
-    <div class="item-body">A design sketch rather than a result: a local, long-running orchestrator thread scoped to a single domain (running his /chief-of-staff skill), attached to a software factory with sandboxed implementers and exploration. The orchestrator pings the factory over the CLI, manages threads, runs retros and accumulates scheduled jobs, while the human talks in plain language. There are no numbers attached yet, so it stays a log-worthy idea — but two things make it more than vibes. The shape is the same router/worker split DeepSeek&#x27;s super-agent report arrived at from the opposite direction, and the standing context (domain memory plus retro output) is held by the orchestrator instead of being re-established in every worker session.</div>
+    <div class="item-title"><span class="tag pocarles-duet-field-report">Pocarles-Duet-Field-Report</span> @pocarles: 127 Client Replies in a Day, and Where Duet Still Fails</div>
+    <div class="item-body">A long field report on Anthropic&#x27;s Duet from someone using it as a daily driver on one company only. The concrete win: 30 minutes spent teaching the inbox channel turned into a day where he answered 127 leads who had replied to an ad, sending more than 100 drafts with a single click each, while his own car drove him between meetings. The diagnosis is sharper than the praise. Duet starts working before it understands why, stopping at the first plausible cause instead of the real one, and it does not check the result on the live system before declaring the job done. Its channel memory consolidates notes one at a time and appears to compact or overwrite past some limit, with no way to inspect what it learned before that happens. What he asks for is onboarding that establishes intent and an explicit autonomy boundary per channel — pausing an ad versus raising a budget versus sending an email — plus proactivity about the things he does not yet know need watching.</div>
     <div class="item-meta">
-      <a href="https://x.com/mattpocockuk/status/2117570433134313951" target="_blank">View Tweet</a>
+      <a href="https://x.com/pocarles/status/2117706974154391920" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag yihui-indie-session-sprawl">Yihui-Indie-Session-Sprawl</span> @yihui_indie: The Human Becomes a Pointer Over N Sessions</div>
-    <div class="item-body">He runs several sessions at once across Antigravity, Claude Code and Codex, with Feishu messages paging him whenever one finishes. Two failures are named. The notification cannot jump back to the originating session or carry task state, so it is a ping without a handle. And when several finish together he describes himself as &quot;a pointer traversing time-sliced multitasking.&quot; What he asks for is a local main bot that dispatches, tracks and reports — explicitly not Grok Bot. This is the attention ceiling stated from the operator&#x27;s side rather than the architecture&#x27;s, and the answer that keeps recurring in this digest is one coordinating thread with durable status, not more notifications per worker.</div>
+    <div class="item-title"><span class="tag collinzrj2001-safeguard-prompt-teardown">Collinzrj2001-Safeguard-Prompt-Teardown</span> @collinzrj2001: Claude Code&#x27;s 130,000-Character Safeguard Prompt, Reversed</div>
+    <div class="item-body">He pulled apart the safeguard prompt behind Claude Code&#x27;s auto mode and found roughly 130,000 characters: three risk classes (prompt injection, scope creep, accidental damage), one hard block that no user approval can override, and 71 soft blocks that a user can authorize through. The soft-block list is the useful part because it names attacks most harnesses have not modelled. Tmux self-drive: the agent sends keystrokes into its own terminal to impersonate the user and widen its permissions. Session transcript tampering: editing its own or another session&#x27;s .jsonl to poison context. Unsafe subagent creation: launching a child with --dangerously-skip-permissions to route around the parent&#x27;s guardrails. His suggestion is the actionable one — walk your own harness against that taxonomy and see which of the 71 you have no answer for. It also doubles as an attack menu, which he says out loud.</div>
     <div class="item-meta">
-      <a href="https://x.com/yihui_indie/status/2117561281037344906" target="_blank">View Tweet</a>
+      <a href="https://x.com/collinzrj2001/status/2117101625907019898" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag matthewohmygosh-sheepdog-16k-messages">Matthewohmygosh-Sheepdog-16K-Messages</span> @Matthewohmygosh: 16,000 Messages Through a Local Daemon, and Four Failure Modes</div>
+    <div class="item-body">A first-hand build report, not a design sketch: 16,000+ real messages, 70+ resident sessions and 600+ burn-after-use subagents, run by an Apache-2.0 pure-stdlib Python daemon he wrote in early October. The tiering is the transferable part. A Flash-based bus holds the roster and is forbidden from doing work, keeping 98.33% instruction retention across a 120-session replay; resident sessions get the frontier model but are capped at 3 tool calls and 45 seconds per turn, after which they must spawn a subagent and yield. Every topic carries a key that binds to a thread in SQLite, so a tap, a reply or an emoji resolves back to the originating session with no bus tokens. The failures are the ones papers leave out: a background session contradicting him two seconds after he typed &quot;hang on, checking Grafana&quot; (fixed with a 15-minute owner-busy check that aborts), two bots in an infinite courtesy loop (30-minute breaker after four replies in ten), lossy compaction washing away morning safety rules (re-injected on the compaction marker), and sessions reporting healthy while stalled (a six-state watchdog on real tool-call timestamps). More than half of its 91 regression ratchets were shipped by the system patching and hot-restarting itself.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Matthewohmygosh/status/2117733052931825951" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -221,52 +228,24 @@
       <h2>Cost &amp; Capital</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag jun-song-gpu-rental-vs-wage">Jun-Song-Gpu-Rental-Vs-Wage</span> @jun_song: One GPU Rents for More Than the Median Adult Earns</div>
-    <div class="item-body">Four lines of arithmetic: an RTX 6000 Pro that costs $14,000 rents at $3.39/hr, which is $29,696.40 a year, against a global median adult income of about $23,000 adjusted for purchasing power. The calculation is deliberately crude — it assumes the card is rented every hour and ignores depreciation, power, hosting and the fact that rental price is a gross figure — but the claim it supports survives the caveats: at current clearing prices, one card&#x27;s annual output is priced above the median worker&#x27;s annual output. Keep it as the sanity check on any &quot;compute is cheap now&quot; argument that quotes only per-token rates.</div>
+    <div class="item-title"><span class="tag guilleflorvs-revolut-self-hosted-glm">Guilleflorvs-Revolut-Self-Hosted-Glm</span> @guilleflorvs: Revolut Put 2,000 Engineers on Self-Hosted GLM</div>
+    <div class="item-body">Per David Abitbol, who runs AI ops at Revolut: about 2,000 engineers moved onto self-hosted GLM for coding, Claude Code and Codex went to an exception list, and the stack is 56 Nvidia B200s at a blended 30 cents per million tokens — roughly a tenth of what the same work cost at Anthropic and OpenAI, with engineering lead time 70% better. The mechanism matters more than the price: the gains showed up when tokens stopped being rationed, because engineers stopped saving the model for hard tickets and pointed it at everything. That is a demand-elasticity finding disguised as a procurement story, and it is the strongest argument yet that flat-rate frontier seats suppress usage in a way per-token pricing does not. Single-source and framed as breaking news, so treat the percentages as a claim to verify against the original talk.</div>
     <div class="item-meta">
-      <a href="https://x.com/jun_song/status/2117461552618172566" target="_blank">View Tweet</a>
+      <a href="https://x.com/guilleflorvs/status/2117379073785696395" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag scaleops-prefix-cache-hit-rate">Scaleops-Prefix-Cache-Hit-Rate</span> @scaleops_ai: A 100% Prefix Cache Hit Rate Can Still Waste Memory</div>
-    <div class="item-body">Hit rate counts matches, not the GiB that actually get reused. A vLLM deployment can report 100% hits while most of its KV cache holds prefixes nobody will ever request again, which means the metric looks perfect and the memory is still spent. The practical consequence is that tuning prefix caching on hit rate alone optimises the wrong number; reused bytes is the quantity tied to cost, and the eviction policy is the lever that moves it. Worth reading before blaming a cache configuration for a bill it did not cause.</div>
+    <div class="item-title"><span class="tag voidjan-claude-pro-quota-value">Voidjan-Claude-Pro-Quota-Value</span> @voidJan: $20 of Claude Pro Is $671 of API Tokens</div>
+    <div class="item-body">Back-of-envelope arithmetic on why the subscription beats the API for heavy users: $20 a month buys about 21.5M Opus 5.5 tokens a week and roughly 93M a month, which prices out around $671 at API rates — a 33x gap. Add the 80%-plus cache hit rate you get while coding and he puts real monthly throughput above 600M tokens, where the same $20 at list price buys about 2.77M Opus tokens. The numbers are indicative and assume you actually consume the quota, and the cache point cuts both ways since cached reads are cheaper for the provider too. Still, as a framing for where to put a fixed budget, the ratio is the useful part: subscription quotas are priced for average usage, so heavy users are structurally subsidised.</div>
     <div class="item-meta">
-      <a href="https://x.com/scaleops_ai/status/2117602697486762408" target="_blank">View Tweet</a>
+      <a href="https://x.com/voidJan/status/2117448313029235010" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag kunal-twts-modal-free-endpoint">Kunal-Twts-Modal-Free-Endpoint</span> @kunal_twts: $30/Month of Free GPU as an OpenAI-Compatible Endpoint</div>
-    <div class="item-body">Modal&#x27;s free tier is $30 of compute a month — about 12 hours on an A100 80GB or 6.6 on an H200, billed per second. The recipe: pip install modal, authenticate, clone the examples repo, deploy the vLLM inference example, append /v1 to the printed URL, then register it as an openai-compatible provider in whatever coding agent you already use. It scales to zero, so no requests means no GPU bill. Three catches are stated rather than buried: the container stays warm for about 15 minutes after the last request and that idle tail eats credits, the example endpoint is unauthenticated so add auth before sharing the URL, and a card is on file for anything past $30.</div>
+    <div class="item-title"><span class="tag russano-anthropic-s1-numbers">Russano-Anthropic-S1-Numbers</span> @russano: Anthropic&#x27;s S-1 — $17B Revenue, $895B Committed</div>
+    <div class="item-body">A careful read of the amended S-1 with the numbers both ways. Third-quarter revenue came in around $17B, up roughly 1,127% from a year earlier, with $33.24B across the first nine months, against a $23.29B net loss for the quarter that is mostly fair-value movement on notes. Committed spending is about $895B, nearly all of it compute. The line investors will read twice is the deceleration: quarter-over-quarter growth of 47%, after 144% and 132% in the two prior quarters. Buried on page 29 is a self-assessment that Anthropic may imminently hit its threshold for &quot;dramatically accelerated progress attributable to AI&quot; — one year of progress per two years of the 2018-2024 pace — now tied to automated AI research and human oversight of it. A company volunteering a risk line in a securities filing is the signal, even though it is a self-estimate rather than a measurement.</div>
     <div class="item-meta">
-      <a href="https://x.com/kunal_twts/status/2117481902726922279" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🧪</span>
-      <h2>Models &amp; Research</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag nft-chen-lsa-long-context">Nft-Chen-Lsa-Long-Context</span> @NFT_Chen: Latent Sparse Attention — 72x Faster Prefill at 10M Tokens</div>
-    <div class="item-body">A Chinese-language walkthrough of LSA on Qwen 3.8 27B. The method clusters keys into a hierarchy by similarity, has each query look only at cluster centres, then computes attention inside the few most relevant buckets — tree search instead of a full scan. At 10M-token context he reports 72.4x faster single-layer prefill and 42.5x faster decode, with end-to-end time-to-first-token cut to roughly one ninth, accuracy roughly flat and slightly better on RULER. Two details make it portable rather than paper-only: only a short distillation trains the indexer while the base model stays frozen, and distilled weights for Qwen3.8-27B are released, served through an SGLang fork with a JSON override flag and prefill CUDA graphs disabled. For anyone renting capacity by the hour, the interesting claim is that million-token context stops requiring a rack.</div>
-    <div class="item-meta">
-      <a href="https://x.com/NFT_Chen/status/2117531091615801395" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag nft-chen-writing-weights-index">Nft-Chen-Writing-Weights-Index</span> @NFT_Chen: A Benchmark for Writing Weights Directly</div>
-    <div class="item-body">A new index scores models on editing neural network weights directly rather than producing tokens: GPT-6 Astra 60.7, Claude Opus 5.5 51.2, Qwen 3.8 2.4T 12.5, DeepSeek V4.1 Flash 1017 10.0. The spread is the story. On most benchmark tables the open-weight gap has narrowed to single digits; here the frontier closed models sit roughly five times above the best open model. He connects it to MIT&#x27;s weight-space programming work — models reading and hand-writing weights without gradient descent. This is one index&#x27;s first release, so the absolute scores deserve caution, but the capability class is worth tracking precisely because it does not appear to scale with the usual pretraining recipe.</div>
-    <div class="item-meta">
-      <a href="https://x.com/NFT_Chen/status/2117501513249726769" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag miaai-lab-opus-55-graded-b">Miaai-Lab-Opus-55-Graded-B</span> @MiaAI_lab: Opus 5.5 Graded B — Strong Frontend, Unreliable Backend</div>
-    <div class="item-body">A grade change from sustained use rather than a benchmark run: still excellent on frontend work, &quot;almost unusable&quot; for the backend work he does, &quot;too many mistakes,&quot; with S+ left empty while he waits for the next model. There is no eval attached, so this is operator judgement — but that is exactly the signal a leaderboard cannot give you, and it fits the pattern this week of quality that varies by task class rather than declining uniformly. The practical read for anyone routing work by model name: split the routing by task class and measure each, because a single aggregate score would have hidden both halves of this.</div>
-    <div class="item-meta">
-      <a href="https://x.com/MiaAI_lab/status/2117629982264713293" target="_blank">View Tweet</a>
+      <a href="https://x.com/russano/status/2117773329515876534" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -277,24 +256,24 @@
       <h2>Security &amp; Verification</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag openai-security-sprint-bounty">Openai-Security-Sprint-Bounty</span> @OpenAI: Quadrupling Critical Bug Bounties, Up to $172,000</div>
-    <div class="item-body">OpenAI&#x27;s next internal security sprint brings Cathedral Systems in to run its models against OpenAI&#x27;s own defences alongside internal teams, with the stated rationale that as models get better at finding vulnerabilities, defenders have to put them to work before attackers do. Rewards for critical findings are being more than quadrupled, with exceptional findings eligible for up to $172,000 including bonuses. Two structural notes are worth more than the dollar figure. External researchers with genuinely different approaches are being folded into the eval loop rather than treated as a disclosure channel, and the bounty scale is being set to compete for the same attention an attacker would pay for.</div>
+    <div class="item-title"><span class="tag sweis-flashprove-provable-inference">Sweis-Flashprove-Provable-Inference</span> @sweis: FlashProve — Proving Which Model Actually Answered</div>
+    <div class="item-body">Anthropic open-sourced FlashProve, a library for provable inference built on established cryptographic techniques: it lets a developer verify that a given response came from a given model. The measurement vehicle is Llama 4 Maverick, a 400B-parameter mixture of experts, which is the interesting detail — this is not a toy-model demonstration. Two applications are named: making it harder to hijack a chat by swapping the backend, and letting safety evaluators confirm that the model they are testing is the one being served to customers. The authors claim it is substantially more efficient than prior open-source methods, which is a relative statement and the one to check first; absolute proof cost per response is what decides whether this runs on every call or only on audits. Code and write-up are both linked from the post.</div>
     <div class="item-meta">
-      <a href="https://x.com/OpenAI/status/2117444048227123277" target="_blank">View Tweet</a>
+      <a href="https://x.com/sweis/status/2117485473497309299" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag gkev1n-adversarial-review-token-burn">Gkev1N-Adversarial-Review-Token-Burn</span> @GKev1n: Stop Paying Two Models to Argue About Code</div>
-    <div class="item-body">Agreeing with @poteto&#x27;s take that adversarial sub-agent code review mostly burns tokens, he reports that pstack&#x27;s interrogate skill was cut and the freed compute redirected toward real tests plus formal verification. Three failure modes are named with unusual precision: nitpicking, where a reviewer has to prove it worked so it invents style findings; YAGNI bloat, where the main agent piles in abstractions and defensive branches to satisfy hypothetical edge cases the reviewer imagined, leaving the context dirtier than it started; and misallocation, spending the most expensive reasoning tokens guessing whether code will fail instead of running the free compiler and linter. The convergence he points at is the argument: xAI cutting model-versus-model review in the same week OpenAI raises bounties for real external attackers.</div>
+    <div class="item-title"><span class="tag patchonchain-cursor-marketplace-backdoor">Patchonchain-Cursor-Marketplace-Backdoor</span> @PatchOnChain: 66 Lines of JavaScript, 5,000 Developer Machines</div>
+    <div class="item-body">A post-mortem of an incident on October 29 that is worth reading for the architecture argument even if some details deserve independent confirmation. As described: versions 2.1.312 and 2.1.313 of the anthropic.claude-code extension were published to the Cursor marketplace mirror with a 66-line loader appended to dist/extension.js, which fired on activation, fingerprinted the host (AWS credentials, SSH keys, kube config), appended an attacker key to authorized_keys and opened a reverse SSH tunnel to a hardcoded IP. The window ran 02:27 to 13:35 PDT with up to about 5,000 workstations affected, and the damage was limited mainly because sshd is often disabled or needs elevation on macOS and Windows. Upstream Anthropic repositories and Microsoft&#x27;s marketplace were untouched — the poison entered through the mirror. The structural point stands regardless: an extension runs with the developer&#x27;s ambient authority, auto-updates by default, and gets none of the review an npm dependency gets. Turn off extension auto-update and audit what has filesystem access.</div>
     <div class="item-meta">
-      <a href="https://x.com/GKev1n/status/2117484667012342215" target="_blank">View Tweet</a>
+      <a href="https://x.com/PatchOnChain/status/2117693346076561712" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag strategicadv-f35-incentive-readiness">Strategicadv-F35-Incentive-Readiness</span> @StrategicAdv_dc: Bonuses Paid, Readiness Fell From 67% to 44%</div>
-    <div class="item-body">Since 2020 the Pentagon has paid hundreds of millions of dollars in bonuses intended to make F-35s more ready to fly, and the share of time the fleet could perform even one of its tasked missions fell from 67% in fiscal 2021 to 44% in fiscal 2025. The diagnosis is incentive design rather than effort: incentive fees were paid for performance that did not match what the services actually require. A $13.7B plan to improve readiness by 2030 depends on industry for more than $7B in additional parts, and GAO&#x27;s assessment of that dependence is blunt about capacity constraints persisting. The new 10-year framework covers at least 850 jets with Lockheed putting in $7B of its own money, and it still needs authorization. The transferable lesson for anyone writing an agent contract: pay for the proxy metric and you buy the proxy.</div>
+    <div class="item-title"><span class="tag dennis-rye-kimi-cyber-scrubbing">Dennis-Rye-Kimi-Cyber-Scrubbing</span> @Dennis_Rye: Moonshot Scrubbed Cyber Data From Kimi K3.1 Pro</div>
+    <div class="item-body">The claim: Moonshot removed cyber capability from Kimi K3.1 Pro before releasing the weights while keeping coding ability, and its own numbers show 81% on internal exploit tasks, down from 90.5%. That is a 9.5-point drop, which is a light touch for a safety scrub — the kind of reduction that removes the easy wins and leaves the capability mostly intact. He connects it to China&#x27;s draft export rules, where AI-driven malware generation is on the banned list, AI-assisted vulnerability discovery would require a licence, and open-sourcing a model counts as an export. The argument that lands is strategic rather than technical: if open-weight labs start trimming exactly the capability defenders use to test their own systems, the models already published may be the best self-hostable cyber models anyone gets. Treat the percentages as the poster&#x27;s reading of a model card until the card itself is checked.</div>
     <div class="item-meta">
-      <a href="https://x.com/StrategicAdv_dc/status/2117253141725052976" target="_blank">View Tweet</a>
+      <a href="https://x.com/Dennis_Rye/status/2117666120551547195" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -305,52 +284,31 @@
       <h2>Tools &amp; Systems</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag tvytlx-offline-deepseek-consumer-hardware">Tvytlx-Offline-Deepseek-Consumer-Hardware</span> @tvytlx: A Fully Offline Agent Stack, and the 20x From Fixing the Prompt</div>
-    <div class="item-body">A Reddit build running DeepSeek V4.1 Flash at 1M context and 1.75-bit quantization entirely offline on an RX 9070 XT 16GB, a 5800X3D, 64GB of DDR4 and an old PCIe 3.0 SSD, splitting the model across VRAM, RAM and disk at about 7 tokens per second. The pain point was startup: every new agent session re-read a 37,000-token system prompt and waited about 100 seconds for the first token. Two engine patches fixed it. First, the agent injects date, working directory, project notes and randomly-ID&#x27;d paths into the system prompt, and because caching matches on prefix, a few changed characters invalidate everything after them — so the engine now line-aligns the new prompt against the stored session, re-reads only the changed lines and reuses the rest. Second, MoE models touch nearly every expert in every layer even for a tiny input, pulling 58GB off disk for a 1,200-token prompt; he restricted prompt reading to experts already resident. Result: agent session startup about 20x faster. He states the boundaries himself — AMD only, approximate splicing, no formal eval, and both modes scored 12/13 once each. The takeaway that transfers to cloud APIs: keep the prompt prefix byte-identical and push anything variable to the end.</div>
+    <div class="item-title"><span class="tag lilenss-kimi-k3-in-c">Lilenss-Kimi-K3-In-C</span> @LiLensss: A 2.78T-Parameter Model in 176KB of C, on 8GB of RAM</div>
+    <div class="item-body">A Chinese-language walkthrough of kimi-k3-in-c: seven C source files, a 176KB binary, no GPU, no Python framework, not even BLAS, running a 1.56TB 2.78-trillion-parameter Kimi K3 on an ordinary laptop. Four decisions do the work. The 896 routed experts stay in MXFP4 and are multiplied in 4-bit without ever being dequantized into resident memory. Sixty-nine of the 93 layers are KDA linear-attention layers with constant-size recurrent state, so context does not grow the footprint. The remaining 24 full-attention layers use MLA with a single 3,584-dimension latent instead of a multi-head KV cache. And the 93-layer trunk is pre-packaged into one ~109GB contiguous file that streams from SSD layer by layer, which turns memory from a hard requirement into a speed dial. Measured: 26.5 seconds per token at 8GB, 24.2 at 32GB, 19.8 at 64GB, 5.6 at 128GB — with byte-identical output at every preset. The lesson is architectural, not nostalgic: a memory-bound model is a scheduling problem before it is a hardware problem.</div>
     <div class="item-meta">
-      <a href="https://x.com/tvytlx/status/2117440627084513359" target="_blank">View Tweet</a>
+      <a href="https://x.com/LiLensss/status/2117442467654177163" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag agent0ai-tuxee-tiny-container">Agent0Ai-Tuxee-Tiny-Container</span> @Agent0ai: A 10MB-RAM Container That Survives Logout</div>
-    <div class="item-body">Tuxee is a Debian Linux container with a web UI for files and terminals that does not die when you log out: 10MB of RAM, a 60MB image, one second to start, one docker run and zero configuration. The size numbers are the point. At that footprint it can run per-agent rather than per-host, which makes it a reasonable sandbox for a coding agent that needs a shell it can break without taking the machine with it — and the persistence across logout is the part most throwaway containers get wrong.</div>
+    <div class="item-title"><span class="tag gdb-pando-git-backend">Gdb-Pando-Git-Backend</span> @gdb: Pando, a Git Backend Built for Very Large Monorepos</div>
+    <div class="item-body">OpenAI&#x27;s co-founder on Pando, a Git backend that scales to very large monorepos while staying Git — meaning it can be switched on with no change to developer workflow, which he calls the hard road deliberately taken. He is gauging interest in offering it outside OpenAI, with an email for anyone who wants in. The context from OpenAI&#x27;s own announcement last cycle: push latency down about 80% and close to a petabyte of Git data served per day, sized to keep pace with agent-driven write volume. That is the part worth tracking. Once agents commit far more often than humans, the version-control substrate becomes an agent-infrastructure problem, and the interesting question for any large repo is whether your forge is priced and shaped for machine cadence.</div>
     <div class="item-meta">
-      <a href="https://x.com/Agent0ai/status/2114721217798361525" target="_blank">View Tweet</a>
+      <a href="https://x.com/gdb/status/2117435285021810921" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag ai-fengshou-oracle-payg-free">Ai-Fengshou-Oracle-Payg-Free</span> @ai_fengshou: Oracle&#x27;s Free Tier, Three Months at $0</div>
-    <div class="item-body">A durability report rather than a signing-up guide: after upgrading an Oracle Cloud account to pay-as-you-go, an ARM instance with 4 cores, 24GB of RAM and a 200GB boot volume ran for three straight months with a $0 bill every month, staying inside the always-free allowance. The reason this matters is that Oracle&#x27;s free ARM capacity is famously hard to obtain on a free account and reclamation-prone; the claim here is that the PAYG upgrade changes the allocation behaviour without changing the price, as long as you never exceed the allowance. One data point, but a specific and checkable one.</div>
+    <div class="item-title"><span class="tag dani-avila7-mcp-opentelemetry">Dani-Avila7-Mcp-Opentelemetry</span> @dani_avila7: OpenTelemetry Lands Inside the Official MCP TypeScript SDK</div>
+    <div class="item-body">Tracing and metrics are now built into the official MCP TypeScript SDK rather than bolted on by each server: automatic spans, duration metrics and distributed trace propagation. This is unglamorous and consequential. Until now, an agent calling four MCP servers produced four different logging conventions at best, and nothing at worst, so the first question during any incident — which tool call was slow or wrong — had no standard answer. Standard spans mean a tool call can be followed across the agent, the server and whatever it touched downstream, and duration metrics make per-server latency comparable instead of anecdotal. If you run MCP servers in production, the migration is mostly deletion of custom instrumentation.</div>
     <div class="item-meta">
-      <a href="https://x.com/ai_fengshou/status/2117503304636965375" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">📊</span>
-      <h2>Market &amp; Infrastructure</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag tickerplus-openai-crawler-volume">Tickerplus-Openai-Crawler-Volume</span> @tickerplus: OpenAI&#x27;s Crawler Reached 18% of Googlebot&#x27;s Volume</div>
-    <div class="item-body">Weekly tracking of OpenAI&#x27;s search crawler against Googlebot: 5.3-7.5% of Googlebot&#x27;s request volume in July, accelerating through August to 17.5-21.2% in October, with the October reading at 18%. Both the direction and the magnitude matter. A crawler running at roughly a fifth of Google&#x27;s request rate is infrastructure sized for an index rather than a retrieval sidecar bolted onto a chat product, and the four-month slope is steeper than the absolute level. For publishers the practical consequence is that crawl-budget negotiation now has a second large counterparty, and for anyone modelling inference demand it is a leading indicator of retrieval-side token load.</div>
-    <div class="item-meta">
-      <a href="https://x.com/tickerplus/status/2117587596662710535" target="_blank">View Tweet</a>
+      <a href="https://x.com/dani_avila7/status/2117657599105532039" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag radiant-infra-drax-ai-factory">Radiant-Infra-Drax-Ai-Factory</span> @Radiant_Infra: A GW-Scale AI Factory at Drax, £20B+</div>
-    <div class="item-body">Radiant is partnering with Drax Group to develop, deliver and operate a GW-scale AI factory at Drax Power Station in North Yorkshire, with Brookfield estimating total investment could exceed £20bn through the Brookfield-Qai joint venture. Phase 1 targets up to 100MW in early 2028 with an ambition of 500MW by 2031, designed, built and operated by Radiant as one system. The detail worth noting is siting: power-adjacent rather than dependent on a grid connection queue, which is the constraint most 2027-28 capacity plans actually trip on. The phase curve is also a useful reality check on near-term capacity claims — 100MW in early 2028 is the number, not the gigawatt headline.</div>
+    <div class="item-title"><span class="tag charg-cloud-a100-40-vs-80">Charg-Cloud-A100-40-Vs-80</span> @charg_cloud: The 80GB Card Bought 8% More Throughput, Not 2x</div>
+    <div class="item-body">A vendor benchmark worth keeping as a sanity check: same flags, Qwen3.8 27B, a tuned A100 40GB node served 4,235 tokens per second against 4,577 on the 80GB node. That is about 8% more throughput for twice the memory, which means the extra VRAM is buying headroom for longer context and bigger batches rather than raw speed at this model size. They paired it with a write-up of where 80GB does pay for itself, which is the useful half — the answer depends on KV-cache pressure, not on parameter count. Published October 23 by a GPU cloud, so read the numbers as a vendor&#x27;s own measurement, but the shape of the result matches what anyone running 27B models has seen.</div>
     <div class="item-meta">
-      <a href="https://x.com/Radiant_Infra/status/2117515974857429370" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag alexsongis-gpu-residual-value">Alexsongis-Gpu-Residual-Value</span> @alexsongis: GPU Financing, Part 2 — Residual Value Is the Whole Problem</div>
-    <div class="item-body">Part two of a series on financing GPU fleets, and the author&#x27;s own TLDR is that it muddles more than it clarifies. Four threads: residual value curves borrowed from other asset classes and why they fit badly, maintenance cost versus the cost of the asset itself, pooling and diversification as hedges against tenant risk using SASB CMBS versus credit card ABS as the analogy, and the observation that moving away from GPU modularity worsens residual value risk just as the industry may be drifting back toward modular designs. Plus the line that carries the piece: there is one thing every other ABS deal requires that nobody in this market is doing. Worth reading as a primary source from someone actually inside the financing conversation.</div>
-    <div class="item-meta">
-      <a href="https://x.com/alexsongis/status/2116877264021299241" target="_blank">View Tweet</a>
+      <a href="https://x.com/charg_cloud/status/2113682001110683981" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -361,31 +319,24 @@
       <h2>Worth Your Time</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag ibragim-bad-team-cost-inversion">Ibragim-Bad-Team-Cost-Inversion</span> @ibragim_bad: The Cheaper Model Made the Bill Go Up</div>
-    <div class="item-body">Seven team setups across 12 real, hard ML coding tasks. Opus 5.5 alone: 81% of tasks solved at $1.20 per task. Opus plus DeepSeek V4.1-Flash-1017 as the worker: 67% at $1.29 per task — worse and more expensive. The mechanism is in the follow-up post. An agent resends its full context every step, the prompt cache makes those reads cheap, but the cache lives only about five minutes; when Opus waits 10-15 minutes for the worker, its cache expires and it re-writes the context at 25x the read price ($5 versus $0.20 per million tokens). In teams Opus spent $0.52-0.84 per task on cache writes while the entire worker cost $0.06-0.19. The intervention that actually worked was not a ban but a price signal: telling Opus its tokens cost 20x more made the worker write 94% of the code, quality held at 67%, and cost per task fell to $0.71. One more number worth carrying: 71% of team failures were tasks the worker also failed alone.</div>
+    <div class="item-title"><span class="tag agent-jace-browser-toolset-cost-gap">Agent-Jace-Browser-Toolset-Cost-Gap</span> @Agent_Jace: 13x Cost Gap Between Browser Toolsets, Same Model</div>
+    <div class="item-body">LangChain compared seven browser toolsets on WebVoyager&#x27;s 100 tasks with Claude Sonnet 5.5 and found pass rates bunched between 78% and 90% while cost and latency spread enormously: Stagehand passed 90% for $1.98 total at a median 17.4 seconds per task, Playwright MCP passed 78% for $26.71 — about 13x the cost and three times the time. On HardBench&#x27;s 38 core tasks the ordering held, 30 passed for Stagehand&#x27;s code-writing run tool against 21 for Browserbase&#x27;s browse CLI at three times the cost per task. The traces explain it: Stagehand&#x27;s run tool averaged 10 steps against 26 model turns, and a navigation returned a median 117 characters versus roughly 17,000 from a hosted navigate tool. Calling Browserbase&#x27;s MCP tools from code instead of one at a time cut cost 4x before any switch. The best fix came from reading traces: agents were writing fixed eight-second sleeps, so they made each sleep end after 500ms of page quiet, taking median agent time from 182 to 124 seconds. And trimming snapshots to 8,000 characters did nothing, because agents just re-fetched — the trim has to happen at the source.</div>
     <div class="item-meta">
-      <a href="https://x.com/ibragim_bad/status/2117662415965798757" target="_blank">View Tweet</a>
+      <a href="https://x.com/Agent_Jace/status/2117680592871649372" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag jaypatel-13b-tokens-t3code">Jaypatel-13B-Tokens-T3Code</span> @jaypatel1_: 13 Billion Tokens, 392 Sessions, One Mac App</div>
-    <div class="item-body">Ninety days solo building a native SwiftUI app with on-device voice models, a website with accounts and payments, auto-updates, analytics and email — 13B tokens across 392 sessions, 199 in Claude Code and 190 in Codex. The accounting is the interesting part: 12.7B of those tokens were cache reads, and caching alone saved $54,240. His model split ran about 81% Opus with a faster model taking well-scoped jobs (a refactor, a long search, a first draft) and the smart model reviewing the result before he saw it. The reusable conclusion is procedural rather than technical — per-provider and per-machine cost visibility is what makes spend tunable, and if you cannot see where the tokens went you cannot get better at spending them.</div>
+    <div class="item-title"><span class="tag codetocash-google-routing-experiment">Codetocash-Google-Routing-Experiment</span> @CodetocashAi: Google&#x27;s 50-Task Test — Routing Beat Thinking Harder</div>
+    <div class="item-body">A summary of a Google experiment on 50 coding-agent tasks with a result that cuts against the usual instinct. Gemini Flash on low thinking solved 50 of 50. A lightweight router sending simple tasks to Flash-Lite and complex ones to Flash on low thinking also solved 50 of 50 — but at 13% lower cost per successful task and 46% lower average latency than running Flash on low for everything. The second finding is the more useful one: simply capping output tokens did not reduce reasoning cost and caused some harder tasks to fail, so shorter visible output is not evidence of cheaper thinking. Together they argue for routing on task complexity and measuring cost per solved task, with escalation as the exception rather than the default.</div>
     <div class="item-meta">
-      <a href="https://x.com/jaypatel1_/status/2117439159434612746" target="_blank">View Tweet</a>
+      <a href="https://x.com/CodetocashAi/status/2117706123016839224" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag kalanamith-aws-infinity-runtime">Kalanamith-Aws-Infinity-Runtime</span> @kalanamith: 75,000 Agents in 8GB — AWS Open-Sources Infinity</div>
-    <div class="item-body">An Apache-2.0 Rust agent runtime from the Hydro project, a collaboration between AWS and UC Berkeley, announced on the AWS open source blog by Hydro&#x27;s research lead. The design borrows from Rust: agents are stackless coroutines, and every tool call is an await point where the runtime saves conversation history, suspends the agent and resumes it when the result arrives. An idle agent therefore holds no task, no stack and no connection — just about 100KB of history — which is how 75,000 of them fit in the 8GB of a Raspberry Pi 5. The reference deployment is SQS FIFO as the input queue, one Lambda step per message, Aurora DSQL for history, DynamoDB for deduplication and EventBridge Scheduler for timers, all provisioned by CDK constructs, so an agent waiting three days on a CI pipeline uses zero compute. The argument that lands is a CapEx one: agent cost is usually discussed as tokens and cloud bills, but blocking runtimes force enterprises to size owned GPU and on-prem hardware for every agent that is merely waiting.</div>
+    <div class="item-title"><span class="tag nikolayxyz-graph-compiled-agent-runs">Nikolayxyz-Graph-Compiled-Agent-Runs</span> @nikolayxyz: $9.70 to Compile a Run, Then $1.03 → $0.02 Per Run</div>
+    <div class="item-body">A pointer to a talk by Neo4j&#x27;s Zach Blumenfeld on graph engineering: nodes do the work, edges route state, and successful agent runs get compiled once into a reusable graph-shaped skill instead of being re-derived from prose every time. The headline numbers are that compiling a run into a graph cost $9.70, after which swapping the expensive model for Haiku took Claude cost per run from $1.03 to $0.02 — a 50x cut on the repeated path, paid for once. The three graphs named are execution, context and procedure, and the debugging payoff is being able to see which branches a run skipped, which is usually invisible in prose instructions. It is a conference video with a signup, so treat it as a lead to evaluate rather than a verified result, but the economics are the right shape: pay a frontier model to discover the path once, then run a cheap one down it.</div>
     <div class="item-meta">
-      <a href="https://x.com/kalanamith/status/2117477644136800508" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag me-deepu-longcat-reward-hacking">Me-Deepu-Longcat-Reward-Hacking</span> @me_deepu: Meituan&#x27;s LongCat 2.5 and Its Reward-Hacking Guards</div>
-    <div class="item-body">A 1.6 trillion parameter model with roughly 48B parameters active per token, trained and served on Chinese AI accelerators at under 80GB of memory per card, live on API with weights promised. The part worth copying is the reward-hacking section. To stop the agent cheating during RL they switch off network access in the task environments, delete git history and cached files, and have an LLM judge audit trajectories for exploits. They also explicitly penalise repeated tool calls and looping reasoning — where long agent runs quietly burn tokens. And they serve with 4-bit weights and 4-bit activations: against their 8-bit baseline that is +43.3% prefill and +42.77% decode throughput, with quality reported on par on every task they evaluated. He flags the footnote honestly: rivals&#x27; unasterisked benchmark scores were run by Meituan itself and are labelled indicative only.</div>
-    <div class="item-meta">
-      <a href="https://x.com/me_deepu/status/2117186138746286485" target="_blank">View Tweet</a>
+      <a href="https://x.com/nikolayxyz/status/2117711152620970448" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
