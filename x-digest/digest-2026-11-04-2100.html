@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — Wednesday, November 4th, 2026 — 9:00 PM ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">Wednesday, November 4th, 2026 — 9:00 PM ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>High Signal Summary</h3>
+    <ul>
+      <li><strong>948 Kernel Bugs for $1.2M:</strong> OpenAI's autonomous discovery-and-patch pipeline validated and patched 948 Linux kernel local privilege-escalation flaws in a single run — about $1,270 of API spend per flaw.</li>
+      <li><strong>Status Lines Were Eating the Quota:</strong> Claude Code background subagents used to re-read their entire conversation every 30 seconds just to update a status line; Haiku 5.5 writing it from short notes cuts that cost by roughly 99%.</li>
+      <li><strong>A 65B Model Claiming the Open-Weight Crown:</strong> Ricursive's Ripple-65B Preview reports state of the art among U.S. open-weight models on agentic coding, ahead of Muse Spark Open-816B, Beam-501B, Inkling-975B and Nemotron 3 Ultra-550B.</li>
+      <li><strong>2 Trillion Tokens a Month Is Not an Eval Strategy:</strong> PostHog, at 2T+ LLM tokens monthly, moved from gut feel to custom benchmarks and published the failure modes — parallel runs, open-ended tasks, and no single number that survives them.</li>
+      <li><strong>Texas Freezes New AI Data Centers:</strong> the governor's halt covers 27% of planned U.S. capacity, an Ohio 10GW Nvidia project leased to OpenAI for $105B is in question, and Goldman puts 45% of planned capacity at risk of short-term bans.</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>Releases &amp; Capability</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ricursive-ripple-65b">Ricursive-Ripple-65B</span> @RicursiveAI: Ripple-65B — A Dense 65B Trained From Scratch</div>
+    <div class="item-body">Ricursive released Ripple-65B Preview, a dense 65B model pretrained from scratch, and claims a new state of the art for U.S. open-weight models on agentic coding — ahead of models three to fifteen times its size: Muse Spark Open-816B, Beam-501B, Inkling-975B and Nemotron 3 Ultra-550B. The interesting number is the one they did not lead with: dense at 65B, not a mixture of experts, which makes it cheap to serve and easy to fine-tune relative to the 500B-plus MoEs it is being compared against. Treat the ranking as a vendor claim until the task-level results are out, but the size class is the story — capability per parameter keeps falling faster on agentic coding than on general benchmarks.</div>
+    <div class="item-meta">
+      <a href="https://x.com/RicursiveAI/status/2118046765857546733" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ollama-kimi-k31-pro-cloud">Ollama-Kimi-K31-Pro-Cloud</span> @ollama: Kimi K3.1 Pro Lands on Ollama Cloud, U.S.-Hosted</div>
+    <div class="item-body">Moonshot&#x27;s Kimi K3.1 Pro is now served by Ollama Cloud: 2.8T total parameters with 104B activated per token, positioned for coding, 3D creation and financial research. Two details carry the post. First, the hosting is explicitly U.S.-based with full zero data retention, which is the part enterprise buyers actually need before a Chinese open-weight model clears procurement. Second, the run command is the whole onboarding — `ollama run kimi-k3.1-pro:cloud` — no weights to download and no GPU to size. At 104B activated this is a sparse model in the same family as the Kimi K3 build that runs in 176KB of C elsewhere in the feed; the difference here is that someone else is holding the 1.5TB of weights.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ollama/status/2118068379378651192" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag openai-devs-gpt-image-26">Openai-Devs-Gpt-Image-26</span> @OpenAIDevs: GPT-Image-2.6 Reaches Codex and the API</div>
+    <div class="item-body">Two new API image models, Flare and Sunburst, arrive with GPT-Image-2.6 in Codex and the API. The headline is throughput — 50% faster generation than before — but the durable detail is the one about edit consistency: at medium or high quality, Sunburst holds details steadier from one edit to the next. That is the property that decides whether an image model is usable inside an agent loop, where the same asset gets revised ten times and each revision has to preserve what was already approved. A faster model that drifts forces a human review pass on every iteration, which costs more than the generation ever did.</div>
+    <div class="item-meta">
+      <a href="https://x.com/OpenAIDevs/status/2118124753340756055" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛠️</span>
+      <h2>Agent Engineering</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claudedevs-subagent-status-cheap">Claudedevs-Subagent-Status-Cheap</span> @ClaudeDevs: The Status Line Was 99% of the Subagent Bill</div>
+    <div class="item-body">Claude Code background subagents update a status line every 30 seconds, and every one of those updates used to re-read the subagent&#x27;s whole conversation. Now Haiku 5.5 writes the status from short notes instead, and Claude&#x27;s developer account puts the saving at about 99% per update. This is the cheapest kind of win and the easiest to miss: not a model change, not a prompt change, but noticing that a cosmetic UI element was paying full context price forty times per session. The generalisable rule is to audit every periodic write in a long-running agent for what it re-reads — heartbeats, progress bars and status strings are usually the most expensive lines in the system.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ClaudeDevs/status/2118063143167693011" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ladyxtel-living-brain-memory-layer">Ladyxtel-Living-Brain-Memory-Layer</span> @ladyxtel: Memory Decoupled From the Model — 92.2% on LoCoMo</div>
+    <div class="item-body">Living Brain is pitched as one persistent store shared across ChatGPT, Claude, Cursor, Codex and your own agents: write in one, retrieve in any. The published numbers are 92.2% on LoCoMo, 464ms median retrieval, and up to 22.6x fewer tokens per question. The architectural claim is the one worth testing — memory as a layer with its own API and MCP surface, so swapping the reasoning model does not throw away what the system learned. The obvious caveat is that 22.6x fewer tokens per question says nothing about the tokens spent building and maintaining the store, and LoCoMo rewards exactly the long-horizon recall a dedicated store should win. Still, this is the third independent team this week to treat context as infrastructure rather than as a bigger window.</div>
+    <div class="item-meta">
+      <a href="https://x.com/ladyxtel/status/2117980022250316282" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag maritime-agent-box-pricing">Maritime-Agent-Box-Pricing</span> @maritime_sh: A Persistent Computer for Your Agent, $1/Month</div>
+    <div class="item-body">Maritime (YC F26) is selling the boring substrate: an always-on box that keeps the agent&#x27;s files, bills unlimited awake hours, and wakes in about a second. Pricing is 2GB for $1 a month, 4GB for $2, 8GB for $4. The numbers matter because they price the alternative to stateless function calls — most agent designs pay for persistence either in re-sent context or in a container that idles at full rate. At $1 a month, keeping a filesystem alive between runs is cheaper than the tokens it takes to reconstruct state, which quietly changes what architecture is affordable for a personal assistant or a long-running background job.</div>
+    <div class="item-meta">
+      <a href="https://x.com/maritime_sh/status/2118037308419055939" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag steipete-individual-limits">Steipete-Individual-Limits</span> @steipete: Per-Human Token Limits Are the Wrong Unit</div>
+    <div class="item-body">Quoting a report that Apple is cutting employee AI budgets — daily limits from $300 down to $200, with $100 planned and some teams at $25 — Peter Steinberger argues the individual limit is becoming a category error. His framing: as capability rises you support an agent that represents the project, running loops and evolving the codebase, and the humans merely curate the automations. The implication is that budgets should attach to work rather than to seats, because one engineer&#x27;s agent may legitimately burn a hundred times what another&#x27;s does in a day. Whether or not you buy the conclusion, the contrast is the useful part of today&#x27;s feed: one large company tightening per-head allowances while small teams are re-pricing compute per outcome.</div>
+    <div class="item-meta">
+      <a href="https://x.com/steipete/status/2118116514700386439" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔒</span>
+      <h2>Security &amp; Verification</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag openai-autonomous-kernel-vuln-pipeline">Openai-Autonomous-Kernel-Vuln-Pipeline</span> @OpenAI: 948 Linux Kernel LPEs Found, Validated and Patched</div>
+    <div class="item-body">OpenAI&#x27;s security researchers built an autonomous pipeline that discovers, exploits and patches vulnerabilities, then ran it once against the Linux kernel: 948 local privilege-escalation bugs validated with generated patches, at a total API cost of $1.2 million. Do the division and it is roughly $1,270 per validated, patched flaw — still expensive by human-audit standards only if you assume a human finds one. The framing detail is &quot;validated&quot;, not just &quot;reported&quot;: the pipeline had to demonstrate the escalation before writing a patch, which is the step that separates this from a very confident static analyser. Distribution is now the bottleneck, not discovery, which is a problem the kernel security process was never sized for.</div>
+    <div class="item-meta">
+      <a href="https://x.com/OpenAI/status/2118119451401048497" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag barrettlyon-cve-2026-98432-filter">Barrettlyon-Cve-2026-98432-Filter</span> @BarrettLyon: The Exact nftables Rules for CVE-2026-98432</div>
+    <div class="item-body">Doxxnet published the filter it runs in production against CVE-2026-98432, with the nftables rules and the RFC behind each one, so an ISP, host, VPN or mesh operator can make the exploit undeliverable to every Linux box behind them. This is the shape defensive work should take: not a severity score and a vendor advisory, but a copy-paste rule set with the reasoning attached, published by someone running it. If you operate any border, the useful exercise is comparing your current rules against theirs — the failure mode in cases like this is rarely a missing block, it is a block placed one hop too deep.</div>
+    <div class="item-meta">
+      <a href="https://x.com/BarrettLyon/status/2118026261947711745" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag 0xmishoko-claude-code-repo-deletion">0Xmishoko-Claude-Code-Repo-Deletion</span> @0xmishoko: One Missing Pair of Quotes Deleted a Year of Work</div>
+    <div class="item-body">A first-hand post-mortem of the failure mode every agent user fears: Claude Code removed a repository — .git, every commit, every branch — in one command, with no prompt and on a top model. The reported cause is a single unquoted path expansion, meaning the destructive target resolved to something other than what the instruction named. The lesson is not &quot;the model is unsafe&quot;; it is that shell strings are a lossy interface between intent and effect, and the quoting bug that a shellcheck run would catch in human code is exactly the one an agent will reproduce confidently. Concretely: no agent should hold write access to a repo&#x27;s history without a snapshot, and destructive verbs deserve an allow-list rather than a confirmation prompt.</div>
+    <div class="item-meta">
+      <a href="https://x.com/0xmishoko/status/2118045586217980014" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📊</span>
+      <h2>Cost, Evals &amp; Infra</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag posthog-2t-tokens-custom-benchmarks">Posthog-2T-Tokens-Custom-Benchmarks</span> @posthog: 2 Trillion Tokens a Month, and No Trust in Gut Feel</div>
+    <div class="item-body">PostHog says it spends more than 2 trillion LLM tokens a month, a number large enough that &quot;does the agent feel better&quot; stops being an acceptable change-control process, so the team built custom benchmarks and wrote up what broke. The problems named are the ones that make off-the-shelf evals useless for a product team: parallel runs that interfere with each other, and open-ended tasks with no single correct output to score. Worth reading for the methodology rather than the verdict — the hard part of internal evals is not the harness, it is agreeing on what a correct answer looks like before you have one to compare against.</div>
+    <div class="item-meta">
+      <a href="https://x.com/posthog/status/2118040832544768386" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag charg-cloud-a100-40-vs-80">Charg-Cloud-A100-40-Vs-80</span> @charg_cloud: The 80GB Card Bought 8% More Throughput, Not 2x</div>
+    <div class="item-body">A vendor benchmark worth keeping as a sanity check: same flags, Qwen3.8 27B, a tuned A100 40GB node served 4,235 tokens per second against 4,577 on the 80GB node — about 8% more throughput for twice the memory. The extra VRAM is buying headroom for longer context and bigger batches, not raw speed at this model size, and they paired the numbers with a write-up of where 80GB does pay for itself. Read it as a GPU cloud&#x27;s own measurement, but the shape of the result matches what anyone serving 27B models has seen: memory is a capacity decision, and throughput is a different axis.</div>
+    <div class="item-meta">
+      <a href="https://x.com/charg_cloud/status/2113682001110683981" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag autonomyadam-texas-datacenter-freeze">Autonomyadam-Texas-Datacenter-Freeze</span> @AutonomyAdam: Texas Moves to Freeze New AI Data Centers</div>
+    <div class="item-body">A Chinese-language market note pulling three numbers together: the Texas governor wants an immediate freeze on new AI data-center construction, and Texas accounts for 27% of planned U.S. capacity; an Ohio 10GW Nvidia project — $105B, leased to OpenAI — is also in question; and Goldman estimates 45% of planned capacity could face short-term bans. Price reaction in the post: NVDA down 1.5%, Micron down more than 5%. The framing line is the one to keep — AI infrastructure has run into the ballot box for the first time — because power and local permitting, not chips, are the constraint that a capex plan cannot route around.</div>
+    <div class="item-meta">
+      <a href="https://x.com/AutonomyAdam/status/2118085178606367220" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag mylifcc-anthropic-claude-code-departures">Mylifcc-Anthropic-Claude-Code-Departures</span> @mylifcc: Three Claude Code Leads Left in Eleven Days, Pre-IPO</div>
+    <div class="item-body">Anthropic filed its S-1 on October 26 and, per this Chinese-language write-up, lost three of Claude Code&#x27;s original core in the eleven days around it: Thariq Shihipar (CLI ecosystem and Skills) and Anthony Morris (desktop) on October 24, then product lead Cat Wu on November 3 — on top of designer Jenny Wen leaving for Cursor earlier in the year. The reported headcount context is 940 people at the end of 2024 against 5,300 by late September 2026. The analysis is speculative, but the observation is not: the people who built a product from a few-person internal script into a cash cow tend to leave when the work becomes compliance, enterprise audits and layered reporting. Read it as labour-market signal about what scaling does to product teams, not as a verdict on the IPO.</div>
+    <div class="item-meta">
+      <a href="https://x.com/mylifcc/status/2118116581507023262" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Craft &amp; Context</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag kay2289123-agent-critical-thinking">Kay2289123-Agent-Critical-Thinking</span> @Kay2289123: Six Habits Against &quot;AI Cognitive Suicide&quot;</div>
+    <div class="item-body">A Chinese-language response to Addy Osmani&#x27;s piece on critical thinking when agents do the work, and the most practical thing in the feed today. The diagnosis: output looks flawless, so the reviewer approves, approves, approves, and the judgement muscle atrophies. The six habits are unusually concrete — have the agent quiz you and show evidence rather than only answers; be honest about how much of a conclusion you actually understand; form your own guess before asking so the model has something to argue against; interrogate which decisions the model made on your behalf; write prompts by voice so you cannot type without thinking; and hold one hard rule, that if you would not put your name on the output you do not approve it. That last one is a usable acceptance test, not a slogan.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Kay2289123/status/2118134770731495702" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tvytlx-little-book-generative-ai">Tvytlx-Little-Book-Generative-Ai</span> @tvytlx: 195 Pages That Flatten the Model Zoo Into One Derivation</div>
+    <div class="item-body">Tianhua Chen put a 195-page book on arXiv, The Little Book of Generative AI Foundations, and its trick is refusing to treat model families as separate species: every generative model is approximating a data distribution and sampling from it. From PCA, add a probabilistic assumption and you have probabilistic PCA; swap the linear map for a network and you have a VAE; split the latent transform into many noising and denoising steps and you have diffusion; apply the chain rule to the joint distribution instead and you have the autoregressive models under today&#x27;s LLMs. WGAN and energy models fall out where the normalising constant becomes intractable. The v2 revision adds visual explanations and roughly ten times the file size. Useless if you only call APIs; genuinely useful if you want to know why a model class has the limits it has.</div>
+    <div class="item-meta">
+      <a href="https://x.com/tvytlx/status/2117865426143039860" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag shenpengwdh-altman-india-podcast">Shenpengwdh-Altman-India-Podcast</span> @shenpengwdh: Altman&#x27;s 5% Retention and the Case for Shipping Early</div>
+    <div class="item-body">Notes from a hour-plus Altman interview on an Indian podcast, with the early-OpenAI decisions as the substance. The number: the internal ChatGPT build retained about 5%, most of management wanted to wait, and Altman shipped anyway — on the argument that the first version always embarrasses you and that a small group who love it beats a large group who find it fine. He adds the caveat himself that the metric was flawed. Two other lines are worth keeping: he rarely overrides a room of smart people, and when he does he treats it as a high-cost, probably-wrong bet that needs unusual conviction; and his test for avoiding yes-men is keeping people he has worked with for a decade and rewarding those who pushed back hard when he was wrong. The career line — twenty years of experience can be one year repeated twenty times — is the one that stings.</div>
+    <div class="item-meta">
+      <a href="https://x.com/shenpengwdh/status/2117948012257493157" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>Worth Your Time</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag alishohadaee-long-context-cost">Alishohadaee-Long-Context-Cost</span> @alishohadaee: 256K Context Costs 3.6–7x More, and Compaction Nearly Works</div>
+    <div class="item-body">A close read of &quot;You don&#x27;t need long context&quot; (Belcak, Molchanov et al., Nov 3) with the numbers that matter: serving at 256K instead of 16K costs 3.6x to 7x more per generated token across GLM 5.2, Kimi K2.6 and Qwen 3 Coder Next, measured from H100 throughput. The proposed fix is compaction — when context crosses a threshold the agent writes down the task, its plan and the artefacts it still needs, then restarts from that — with long documents left as files the agent greps in pieces, which scored up to 40 points higher than pasting the whole input. The extreme version, one action per context, kept Opus 4.5 at 70.2% on SWE-bench Verified versus 70.0% with full history while peak context fell from 130–200K to 15–37K tokens, for estimated savings of 2.2x to 8.8x. The honest caveats are included and are the reason to trust the rest: costs are estimated from throughput and list prices rather than real bills, compaction is lossy, and Qwen 3 Coder Next collapsed from 53.0% to 3.6% at the tightest setting.</div>
+    <div class="item-meta">
+      <a href="https://x.com/alishohadaee/status/2117980479945355427" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag omkarray9-voice-agent-judge-calibration">Omkarray9-Voice-Agent-Judge-Calibration</span> @OmkarRay9: A Judge That Agreed With Humans 33% of the Time, Then 92%</div>
+    <div class="item-body">Notes from Upstart and Coval&#x27;s talk on running voice agents on regulated lending calls, built around one trajectory: at launch their LLM judge agreed with human reviewers on 33% of compliance calls; about eleven months later, 92%. The playbook is the transferable part — write the PRD as pass/fail rules on a transcript, build a golden set with a minimum of 200 labelled calls and 30 real failures before trusting any judge, then track judge-human agreement per criterion rather than as one score. Two traps are named precisely: at a 95% pass rate an &quot;always pass&quot; judge scores 95% agreement, so report recall on real failures against a holdout; and a transcript judge cannot catch a confident wrong fact, so amounts, dates and status must be checked against the system of record. In their data roughly one in six flags was the judge being wrong, which is why they made the eval owner a real role.</div>
+    <div class="item-meta">
+      <a href="https://x.com/OmkarRay9/status/2117202723657732594" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag me-deepu-longcat-25-reward-hacking">Me-Deepu-Longcat-25-Reward-Hacking</span> @me_deepu: Meituan&#x27;s 1.6T Model and the Anti-Cheat Section Worth Copying</div>
+    <div class="item-body">LongCat 2.5 is 1.6 trillion parameters with about 48B active per token, trained and served on Chinese accelerators with under 80GB of memory per card, and it ships with the part most model posts omit: how they stopped the agent cheating during RL. Network access is switched off inside the task environments, git history and cached files are deleted, and an LLM judge audits trajectories for exploits; repeated tool calls and looping reasoning are penalised — which is also where long agent runs quietly burn tokens. The serving numbers are the practical ones: 4-bit weights and 4-bit activations against their 8-bit baseline, prefill throughput up 43.3% and decode up 42.77%, with quality reported on par on every task they evaluated. The footnote is a nice touch of honesty — rival benchmark scores without an asterisk were run by Meituan itself and are labelled indicative only.</div>
+    <div class="item-meta">
+      <a href="https://x.com/me_deepu/status/2117186138746286485" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>

@@ -1,66 +1,66 @@
 {
   "title": "Clawd X Digest",
-  "date": "Tuesday, November 3rd, 2026 — 9:00 PM ET",
+  "date": "Wednesday, November 4th, 2026 — 9:00 PM ET",
   "summary_title": "High Signal Summary",
   "summary": [
-    "<strong>Revolut Moved 2,000 Engineers Off Frontier APIs:</strong> self-hosted GLM on 56 B200s at a blended $0.30 per million tokens, roughly a tenth of its Anthropic and OpenAI bill, with engineering lead time reported 70% better — and the gains arrived once tokens stopped being rationed.",
-    "<strong>Anthropic Books $17B in One Quarter:</strong> Q3 revenue up about 1,127% year over year, against a $23.29B net loss and roughly $895B of committed spending that is nearly all compute, while quarter-over-quarter growth slowed to 47% from 144%.",
-    "<strong>Self-Evolving Skills Mostly Don't Evolve:</strong> 125 retrospective suggestions produced 24 adoptions and 12 tests, but only 7 reproduced the target problem — 2 fixed it, and one fix raised median task time from 82 to 245 seconds.",
-    "<strong>Same Model, 13x the Bill:</strong> across seven browser toolsets on WebVoyager's 100 tasks, Stagehand passed 90% for $1.98 while Playwright MCP passed 78% for $26.71 — the difference was tool design and step count, not the model.",
-    "<strong>2.78T Parameters on 8GB of RAM:</strong> a seven-file, 176KB pure-C engine streams a 1.56TB Kimi K3 off an SSD at 26.5 seconds per token and reaches 5.6 on a 128GB workstation, with byte-identical output across every preset."
+    "<strong>948 Kernel Bugs for $1.2M:</strong> OpenAI's autonomous discovery-and-patch pipeline validated and patched 948 Linux kernel local privilege-escalation flaws in a single run — about $1,270 of API spend per flaw.",
+    "<strong>Status Lines Were Eating the Quota:</strong> Claude Code background subagents used to re-read their entire conversation every 30 seconds just to update a status line; Haiku 5.5 writing it from short notes cuts that cost by roughly 99%.",
+    "<strong>A 65B Model Claiming the Open-Weight Crown:</strong> Ricursive's Ripple-65B Preview reports state of the art among U.S. open-weight models on agentic coding, ahead of Muse Spark Open-816B, Beam-501B, Inkling-975B and Nemotron 3 Ultra-550B.",
+    "<strong>2 Trillion Tokens a Month Is Not an Eval Strategy:</strong> PostHog, at 2T+ LLM tokens monthly, moved from gut feel to custom benchmarks and published the failure modes — parallel runs, open-ended tasks, and no single number that survives them.",
+    "<strong>Texas Freezes New AI Data Centers:</strong> the governor's halt covers 27% of planned U.S. capacity, an Ohio 10GW Nvidia project leased to OpenAI for $105B is in question, and Goldman puts 45% of planned capacity at risk of short-term bans."
   ],
   "sections": [
+    {
+      "emoji": "🚀",
+      "title": "Releases & Capability",
+      "items": [
+        {
+          "tag": "ricursive-ripple-65b",
+          "title": "@RicursiveAI: Ripple-65B — A Dense 65B Trained From Scratch",
+          "body": "Ricursive released Ripple-65B Preview, a dense 65B model pretrained from scratch, and claims a new state of the art for U.S. open-weight models on agentic coding — ahead of models three to fifteen times its size: Muse Spark Open-816B, Beam-501B, Inkling-975B and Nemotron 3 Ultra-550B. The interesting number is the one they did not lead with: dense at 65B, not a mixture of experts, which makes it cheap to serve and easy to fine-tune relative to the 500B-plus MoEs it is being compared against. Treat the ranking as a vendor claim until the task-level results are out, but the size class is the story — capability per parameter keeps falling faster on agentic coding than on general benchmarks.",
+          "url": "https://x.com/RicursiveAI/status/2118046765857546733"
+        },
+        {
+          "tag": "ollama-kimi-k31-pro-cloud",
+          "title": "@ollama: Kimi K3.1 Pro Lands on Ollama Cloud, U.S.-Hosted",
+          "body": "Moonshot's Kimi K3.1 Pro is now served by Ollama Cloud: 2.8T total parameters with 104B activated per token, positioned for coding, 3D creation and financial research. Two details carry the post. First, the hosting is explicitly U.S.-based with full zero data retention, which is the part enterprise buyers actually need before a Chinese open-weight model clears procurement. Second, the run command is the whole onboarding — `ollama run kimi-k3.1-pro:cloud` — no weights to download and no GPU to size. At 104B activated this is a sparse model in the same family as the Kimi K3 build that runs in 176KB of C elsewhere in the feed; the difference here is that someone else is holding the 1.5TB of weights.",
+          "url": "https://x.com/ollama/status/2118068379378651192"
+        },
+        {
+          "tag": "openai-devs-gpt-image-26",
+          "title": "@OpenAIDevs: GPT-Image-2.6 Reaches Codex and the API",
+          "body": "Two new API image models, Flare and Sunburst, arrive with GPT-Image-2.6 in Codex and the API. The headline is throughput — 50% faster generation than before — but the durable detail is the one about edit consistency: at medium or high quality, Sunburst holds details steadier from one edit to the next. That is the property that decides whether an image model is usable inside an agent loop, where the same asset gets revised ten times and each revision has to preserve what was already approved. A faster model that drifts forces a human review pass on every iteration, which costs more than the generation ever did.",
+          "url": "https://x.com/OpenAIDevs/status/2118124753340756055"
+        }
+      ]
+    },
     {
       "emoji": "🛠️",
       "title": "Agent Engineering",
       "items": [
         {
-          "tag": "dotey-retro-self-evolution-paper",
-          "title": "@dotey: 125 Retro Suggestions, Two Problems Actually Fixed",
-          "body": "A close read of \"How Do Coding-Agent Harnesses Self-Evolve?\" — 30 SWE-bench Verified issues, Claude Code running /retro after each fix, 125 suggestions generated, 101 of them grounded in something that really happened in the task. The authors adopted 24, tested 12 against a second task in the same repo, and got a usable signal in only 7 of 13 runs. Two changes fully removed the behaviour: writing in CLAUDE.md that Symfony's test command is bin/test (pytest attempts went 5-of-5 to 0-of-5) and an Astropy list of tests that already fail (pointless comparison runs went 3-of-5 to 0-of-5). The other five didn't transfer, and one actively cost time: \"treat unlisted failures as yours\" added comparison checks in 4 of 5 unrelated runs, moving the median from 82 to 245 seconds, while a format-check line moved 88 to 156. Success rates never differed by more than one in five. The rule that survives: project-wide facts persist, environment-specific facts rot.",
-          "url": "https://x.com/dotey/status/2117706197797114009"
+          "tag": "claudedevs-subagent-status-cheap",
+          "title": "@ClaudeDevs: The Status Line Was 99% of the Subagent Bill",
+          "body": "Claude Code background subagents update a status line every 30 seconds, and every one of those updates used to re-read the subagent's whole conversation. Now Haiku 5.5 writes the status from short notes instead, and Claude's developer account puts the saving at about 99% per update. This is the cheapest kind of win and the easiest to miss: not a model change, not a prompt change, but noticing that a cosmetic UI element was paying full context price forty times per session. The generalisable rule is to audit every periodic write in a long-running agent for what it re-reads — heartbeats, progress bars and status strings are usually the most expensive lines in the system.",
+          "url": "https://x.com/ClaudeDevs/status/2118063143167693011"
         },
         {
-          "tag": "pocarles-duet-field-report",
-          "title": "@pocarles: 127 Client Replies in a Day, and Where Duet Still Fails",
-          "body": "A long field report on Anthropic's Duet from someone using it as a daily driver on one company only. The concrete win: 30 minutes spent teaching the inbox channel turned into a day where he answered 127 leads who had replied to an ad, sending more than 100 drafts with a single click each, while his own car drove him between meetings. The diagnosis is sharper than the praise. Duet starts working before it understands why, stopping at the first plausible cause instead of the real one, and it does not check the result on the live system before declaring the job done. Its channel memory consolidates notes one at a time and appears to compact or overwrite past some limit, with no way to inspect what it learned before that happens. What he asks for is onboarding that establishes intent and an explicit autonomy boundary per channel — pausing an ad versus raising a budget versus sending an email — plus proactivity about the things he does not yet know need watching.",
-          "url": "https://x.com/pocarles/status/2117706974154391920"
+          "tag": "ladyxtel-living-brain-memory-layer",
+          "title": "@ladyxtel: Memory Decoupled From the Model — 92.2% on LoCoMo",
+          "body": "Living Brain is pitched as one persistent store shared across ChatGPT, Claude, Cursor, Codex and your own agents: write in one, retrieve in any. The published numbers are 92.2% on LoCoMo, 464ms median retrieval, and up to 22.6x fewer tokens per question. The architectural claim is the one worth testing — memory as a layer with its own API and MCP surface, so swapping the reasoning model does not throw away what the system learned. The obvious caveat is that 22.6x fewer tokens per question says nothing about the tokens spent building and maintaining the store, and LoCoMo rewards exactly the long-horizon recall a dedicated store should win. Still, this is the third independent team this week to treat context as infrastructure rather than as a bigger window.",
+          "url": "https://x.com/ladyxtel/status/2117980022250316282"
         },
         {
-          "tag": "collinzrj2001-safeguard-prompt-teardown",
-          "title": "@collinzrj2001: Claude Code's 130,000-Character Safeguard Prompt, Reversed",
-          "body": "He pulled apart the safeguard prompt behind Claude Code's auto mode and found roughly 130,000 characters: three risk classes (prompt injection, scope creep, accidental damage), one hard block that no user approval can override, and 71 soft blocks that a user can authorize through. The soft-block list is the useful part because it names attacks most harnesses have not modelled. Tmux self-drive: the agent sends keystrokes into its own terminal to impersonate the user and widen its permissions. Session transcript tampering: editing its own or another session's .jsonl to poison context. Unsafe subagent creation: launching a child with --dangerously-skip-permissions to route around the parent's guardrails. His suggestion is the actionable one — walk your own harness against that taxonomy and see which of the 71 you have no answer for. It also doubles as an attack menu, which he says out loud.",
-          "url": "https://x.com/collinzrj2001/status/2117101625907019898"
+          "tag": "maritime-agent-box-pricing",
+          "title": "@maritime_sh: A Persistent Computer for Your Agent, $1/Month",
+          "body": "Maritime (YC F26) is selling the boring substrate: an always-on box that keeps the agent's files, bills unlimited awake hours, and wakes in about a second. Pricing is 2GB for $1 a month, 4GB for $2, 8GB for $4. The numbers matter because they price the alternative to stateless function calls — most agent designs pay for persistence either in re-sent context or in a container that idles at full rate. At $1 a month, keeping a filesystem alive between runs is cheaper than the tokens it takes to reconstruct state, which quietly changes what architecture is affordable for a personal assistant or a long-running background job.",
+          "url": "https://x.com/maritime_sh/status/2118037308419055939"
         },
         {
-          "tag": "matthewohmygosh-sheepdog-16k-messages",
-          "title": "@Matthewohmygosh: 16,000 Messages Through a Local Daemon, and Four Failure Modes",
-          "body": "A first-hand build report, not a design sketch: 16,000+ real messages, 70+ resident sessions and 600+ burn-after-use subagents, run by an Apache-2.0 pure-stdlib Python daemon he wrote in early October. The tiering is the transferable part. A Flash-based bus holds the roster and is forbidden from doing work, keeping 98.33% instruction retention across a 120-session replay; resident sessions get the frontier model but are capped at 3 tool calls and 45 seconds per turn, after which they must spawn a subagent and yield. Every topic carries a key that binds to a thread in SQLite, so a tap, a reply or an emoji resolves back to the originating session with no bus tokens. The failures are the ones papers leave out: a background session contradicting him two seconds after he typed \"hang on, checking Grafana\" (fixed with a 15-minute owner-busy check that aborts), two bots in an infinite courtesy loop (30-minute breaker after four replies in ten), lossy compaction washing away morning safety rules (re-injected on the compaction marker), and sessions reporting healthy while stalled (a six-state watchdog on real tool-call timestamps). More than half of its 91 regression ratchets were shipped by the system patching and hot-restarting itself.",
-          "url": "https://x.com/Matthewohmygosh/status/2117733052931825951"
-        }
-      ]
-    },
-    {
-      "emoji": "💰",
-      "title": "Cost & Capital",
-      "items": [
-        {
-          "tag": "guilleflorvs-revolut-self-hosted-glm",
-          "title": "@guilleflorvs: Revolut Put 2,000 Engineers on Self-Hosted GLM",
-          "body": "Per David Abitbol, who runs AI ops at Revolut: about 2,000 engineers moved onto self-hosted GLM for coding, Claude Code and Codex went to an exception list, and the stack is 56 Nvidia B200s at a blended 30 cents per million tokens — roughly a tenth of what the same work cost at Anthropic and OpenAI, with engineering lead time 70% better. The mechanism matters more than the price: the gains showed up when tokens stopped being rationed, because engineers stopped saving the model for hard tickets and pointed it at everything. That is a demand-elasticity finding disguised as a procurement story, and it is the strongest argument yet that flat-rate frontier seats suppress usage in a way per-token pricing does not. Single-source and framed as breaking news, so treat the percentages as a claim to verify against the original talk.",
-          "url": "https://x.com/guilleflorvs/status/2117379073785696395"
-        },
-        {
-          "tag": "voidjan-claude-pro-quota-value",
-          "title": "@voidJan: $20 of Claude Pro Is $671 of API Tokens",
-          "body": "Back-of-envelope arithmetic on why the subscription beats the API for heavy users: $20 a month buys about 21.5M Opus 5.5 tokens a week and roughly 93M a month, which prices out around $671 at API rates — a 33x gap. Add the 80%-plus cache hit rate you get while coding and he puts real monthly throughput above 600M tokens, where the same $20 at list price buys about 2.77M Opus tokens. The numbers are indicative and assume you actually consume the quota, and the cache point cuts both ways since cached reads are cheaper for the provider too. Still, as a framing for where to put a fixed budget, the ratio is the useful part: subscription quotas are priced for average usage, so heavy users are structurally subsidised.",
-          "url": "https://x.com/voidJan/status/2117448313029235010"
-        },
-        {
-          "tag": "russano-anthropic-s1-numbers",
-          "title": "@russano: Anthropic's S-1 — $17B Revenue, $895B Committed",
-          "body": "A careful read of the amended S-1 with the numbers both ways. Third-quarter revenue came in around $17B, up roughly 1,127% from a year earlier, with $33.24B across the first nine months, against a $23.29B net loss for the quarter that is mostly fair-value movement on notes. Committed spending is about $895B, nearly all of it compute. The line investors will read twice is the deceleration: quarter-over-quarter growth of 47%, after 144% and 132% in the two prior quarters. Buried on page 29 is a self-assessment that Anthropic may imminently hit its threshold for \"dramatically accelerated progress attributable to AI\" — one year of progress per two years of the 2018-2024 pace — now tied to automated AI research and human oversight of it. A company volunteering a risk line in a securities filing is the signal, even though it is a self-estimate rather than a measurement.",
-          "url": "https://x.com/russano/status/2117773329515876534"
+          "tag": "steipete-individual-limits",
+          "title": "@steipete: Per-Human Token Limits Are the Wrong Unit",
+          "body": "Quoting a report that Apple is cutting employee AI budgets — daily limits from $300 down to $200, with $100 planned and some teams at $25 — Peter Steinberger argues the individual limit is becoming a category error. His framing: as capability rises you support an agent that represents the project, running loops and evolving the codebase, and the humans merely curate the automations. The implication is that budgets should attach to work rather than to seats, because one engineer's agent may legitimately burn a hundred times what another's does in a day. Whether or not you buy the conclusion, the contrast is the useful part of today's feed: one large company tightening per-head allowances while small teams are re-pricing compute per outcome.",
+          "url": "https://x.com/steipete/status/2118116514700386439"
         }
       ]
     },
@@ -69,52 +69,76 @@
       "title": "Security & Verification",
       "items": [
         {
-          "tag": "sweis-flashprove-provable-inference",
-          "title": "@sweis: FlashProve — Proving Which Model Actually Answered",
-          "body": "Anthropic open-sourced FlashProve, a library for provable inference built on established cryptographic techniques: it lets a developer verify that a given response came from a given model. The measurement vehicle is Llama 4 Maverick, a 400B-parameter mixture of experts, which is the interesting detail — this is not a toy-model demonstration. Two applications are named: making it harder to hijack a chat by swapping the backend, and letting safety evaluators confirm that the model they are testing is the one being served to customers. The authors claim it is substantially more efficient than prior open-source methods, which is a relative statement and the one to check first; absolute proof cost per response is what decides whether this runs on every call or only on audits. Code and write-up are both linked from the post.",
-          "url": "https://x.com/sweis/status/2117485473497309299"
+          "tag": "openai-autonomous-kernel-vuln-pipeline",
+          "title": "@OpenAI: 948 Linux Kernel LPEs Found, Validated and Patched",
+          "body": "OpenAI's security researchers built an autonomous pipeline that discovers, exploits and patches vulnerabilities, then ran it once against the Linux kernel: 948 local privilege-escalation bugs validated with generated patches, at a total API cost of $1.2 million. Do the division and it is roughly $1,270 per validated, patched flaw — still expensive by human-audit standards only if you assume a human finds one. The framing detail is \"validated\", not just \"reported\": the pipeline had to demonstrate the escalation before writing a patch, which is the step that separates this from a very confident static analyser. Distribution is now the bottleneck, not discovery, which is a problem the kernel security process was never sized for.",
+          "url": "https://x.com/OpenAI/status/2118119451401048497"
         },
         {
-          "tag": "patchonchain-cursor-marketplace-backdoor",
-          "title": "@PatchOnChain: 66 Lines of JavaScript, 5,000 Developer Machines",
-          "body": "A post-mortem of an incident on October 29 that is worth reading for the architecture argument even if some details deserve independent confirmation. As described: versions 2.1.312 and 2.1.313 of the anthropic.claude-code extension were published to the Cursor marketplace mirror with a 66-line loader appended to dist/extension.js, which fired on activation, fingerprinted the host (AWS credentials, SSH keys, kube config), appended an attacker key to authorized_keys and opened a reverse SSH tunnel to a hardcoded IP. The window ran 02:27 to 13:35 PDT with up to about 5,000 workstations affected, and the damage was limited mainly because sshd is often disabled or needs elevation on macOS and Windows. Upstream Anthropic repositories and Microsoft's marketplace were untouched — the poison entered through the mirror. The structural point stands regardless: an extension runs with the developer's ambient authority, auto-updates by default, and gets none of the review an npm dependency gets. Turn off extension auto-update and audit what has filesystem access.",
-          "url": "https://x.com/PatchOnChain/status/2117693346076561712"
+          "tag": "barrettlyon-cve-2026-98432-filter",
+          "title": "@BarrettLyon: The Exact nftables Rules for CVE-2026-98432",
+          "body": "Doxxnet published the filter it runs in production against CVE-2026-98432, with the nftables rules and the RFC behind each one, so an ISP, host, VPN or mesh operator can make the exploit undeliverable to every Linux box behind them. This is the shape defensive work should take: not a severity score and a vendor advisory, but a copy-paste rule set with the reasoning attached, published by someone running it. If you operate any border, the useful exercise is comparing your current rules against theirs — the failure mode in cases like this is rarely a missing block, it is a block placed one hop too deep.",
+          "url": "https://x.com/BarrettLyon/status/2118026261947711745"
         },
         {
-          "tag": "dennis-rye-kimi-cyber-scrubbing",
-          "title": "@Dennis_Rye: Moonshot Scrubbed Cyber Data From Kimi K3.1 Pro",
-          "body": "The claim: Moonshot removed cyber capability from Kimi K3.1 Pro before releasing the weights while keeping coding ability, and its own numbers show 81% on internal exploit tasks, down from 90.5%. That is a 9.5-point drop, which is a light touch for a safety scrub — the kind of reduction that removes the easy wins and leaves the capability mostly intact. He connects it to China's draft export rules, where AI-driven malware generation is on the banned list, AI-assisted vulnerability discovery would require a licence, and open-sourcing a model counts as an export. The argument that lands is strategic rather than technical: if open-weight labs start trimming exactly the capability defenders use to test their own systems, the models already published may be the best self-hostable cyber models anyone gets. Treat the percentages as the poster's reading of a model card until the card itself is checked.",
-          "url": "https://x.com/Dennis_Rye/status/2117666120551547195"
+          "tag": "0xmishoko-claude-code-repo-deletion",
+          "title": "@0xmishoko: One Missing Pair of Quotes Deleted a Year of Work",
+          "body": "A first-hand post-mortem of the failure mode every agent user fears: Claude Code removed a repository — .git, every commit, every branch — in one command, with no prompt and on a top model. The reported cause is a single unquoted path expansion, meaning the destructive target resolved to something other than what the instruction named. The lesson is not \"the model is unsafe\"; it is that shell strings are a lossy interface between intent and effect, and the quoting bug that a shellcheck run would catch in human code is exactly the one an agent will reproduce confidently. Concretely: no agent should hold write access to a repo's history without a snapshot, and destructive verbs deserve an allow-list rather than a confirmation prompt.",
+          "url": "https://x.com/0xmishoko/status/2118045586217980014"
         }
       ]
     },
     {
-      "emoji": "🔎",
-      "title": "Tools & Systems",
+      "emoji": "📊",
+      "title": "Cost, Evals & Infra",
       "items": [
         {
-          "tag": "lilenss-kimi-k3-in-c",
-          "title": "@LiLensss: A 2.78T-Parameter Model in 176KB of C, on 8GB of RAM",
-          "body": "A Chinese-language walkthrough of kimi-k3-in-c: seven C source files, a 176KB binary, no GPU, no Python framework, not even BLAS, running a 1.56TB 2.78-trillion-parameter Kimi K3 on an ordinary laptop. Four decisions do the work. The 896 routed experts stay in MXFP4 and are multiplied in 4-bit without ever being dequantized into resident memory. Sixty-nine of the 93 layers are KDA linear-attention layers with constant-size recurrent state, so context does not grow the footprint. The remaining 24 full-attention layers use MLA with a single 3,584-dimension latent instead of a multi-head KV cache. And the 93-layer trunk is pre-packaged into one ~109GB contiguous file that streams from SSD layer by layer, which turns memory from a hard requirement into a speed dial. Measured: 26.5 seconds per token at 8GB, 24.2 at 32GB, 19.8 at 64GB, 5.6 at 128GB — with byte-identical output at every preset. The lesson is architectural, not nostalgic: a memory-bound model is a scheduling problem before it is a hardware problem.",
-          "url": "https://x.com/LiLensss/status/2117442467654177163"
-        },
-        {
-          "tag": "gdb-pando-git-backend",
-          "title": "@gdb: Pando, a Git Backend Built for Very Large Monorepos",
-          "body": "OpenAI's co-founder on Pando, a Git backend that scales to very large monorepos while staying Git — meaning it can be switched on with no change to developer workflow, which he calls the hard road deliberately taken. He is gauging interest in offering it outside OpenAI, with an email for anyone who wants in. The context from OpenAI's own announcement last cycle: push latency down about 80% and close to a petabyte of Git data served per day, sized to keep pace with agent-driven write volume. That is the part worth tracking. Once agents commit far more often than humans, the version-control substrate becomes an agent-infrastructure problem, and the interesting question for any large repo is whether your forge is priced and shaped for machine cadence.",
-          "url": "https://x.com/gdb/status/2117435285021810921"
-        },
-        {
-          "tag": "dani-avila7-mcp-opentelemetry",
-          "title": "@dani_avila7: OpenTelemetry Lands Inside the Official MCP TypeScript SDK",
-          "body": "Tracing and metrics are now built into the official MCP TypeScript SDK rather than bolted on by each server: automatic spans, duration metrics and distributed trace propagation. This is unglamorous and consequential. Until now, an agent calling four MCP servers produced four different logging conventions at best, and nothing at worst, so the first question during any incident — which tool call was slow or wrong — had no standard answer. Standard spans mean a tool call can be followed across the agent, the server and whatever it touched downstream, and duration metrics make per-server latency comparable instead of anecdotal. If you run MCP servers in production, the migration is mostly deletion of custom instrumentation.",
-          "url": "https://x.com/dani_avila7/status/2117657599105532039"
+          "tag": "posthog-2t-tokens-custom-benchmarks",
+          "title": "@posthog: 2 Trillion Tokens a Month, and No Trust in Gut Feel",
+          "body": "PostHog says it spends more than 2 trillion LLM tokens a month, a number large enough that \"does the agent feel better\" stops being an acceptable change-control process, so the team built custom benchmarks and wrote up what broke. The problems named are the ones that make off-the-shelf evals useless for a product team: parallel runs that interfere with each other, and open-ended tasks with no single correct output to score. Worth reading for the methodology rather than the verdict — the hard part of internal evals is not the harness, it is agreeing on what a correct answer looks like before you have one to compare against.",
+          "url": "https://x.com/posthog/status/2118040832544768386"
         },
         {
           "tag": "charg-cloud-a100-40-vs-80",
           "title": "@charg_cloud: The 80GB Card Bought 8% More Throughput, Not 2x",
-          "body": "A vendor benchmark worth keeping as a sanity check: same flags, Qwen3.8 27B, a tuned A100 40GB node served 4,235 tokens per second against 4,577 on the 80GB node. That is about 8% more throughput for twice the memory, which means the extra VRAM is buying headroom for longer context and bigger batches rather than raw speed at this model size. They paired it with a write-up of where 80GB does pay for itself, which is the useful half — the answer depends on KV-cache pressure, not on parameter count. Published October 23 by a GPU cloud, so read the numbers as a vendor's own measurement, but the shape of the result matches what anyone running 27B models has seen.",
+          "body": "A vendor benchmark worth keeping as a sanity check: same flags, Qwen3.8 27B, a tuned A100 40GB node served 4,235 tokens per second against 4,577 on the 80GB node — about 8% more throughput for twice the memory. The extra VRAM is buying headroom for longer context and bigger batches, not raw speed at this model size, and they paired the numbers with a write-up of where 80GB does pay for itself. Read it as a GPU cloud's own measurement, but the shape of the result matches what anyone serving 27B models has seen: memory is a capacity decision, and throughput is a different axis.",
           "url": "https://x.com/charg_cloud/status/2113682001110683981"
+        },
+        {
+          "tag": "autonomyadam-texas-datacenter-freeze",
+          "title": "@AutonomyAdam: Texas Moves to Freeze New AI Data Centers",
+          "body": "A Chinese-language market note pulling three numbers together: the Texas governor wants an immediate freeze on new AI data-center construction, and Texas accounts for 27% of planned U.S. capacity; an Ohio 10GW Nvidia project — $105B, leased to OpenAI — is also in question; and Goldman estimates 45% of planned capacity could face short-term bans. Price reaction in the post: NVDA down 1.5%, Micron down more than 5%. The framing line is the one to keep — AI infrastructure has run into the ballot box for the first time — because power and local permitting, not chips, are the constraint that a capex plan cannot route around.",
+          "url": "https://x.com/AutonomyAdam/status/2118085178606367220"
+        },
+        {
+          "tag": "mylifcc-anthropic-claude-code-departures",
+          "title": "@mylifcc: Three Claude Code Leads Left in Eleven Days, Pre-IPO",
+          "body": "Anthropic filed its S-1 on October 26 and, per this Chinese-language write-up, lost three of Claude Code's original core in the eleven days around it: Thariq Shihipar (CLI ecosystem and Skills) and Anthony Morris (desktop) on October 24, then product lead Cat Wu on November 3 — on top of designer Jenny Wen leaving for Cursor earlier in the year. The reported headcount context is 940 people at the end of 2024 against 5,300 by late September 2026. The analysis is speculative, but the observation is not: the people who built a product from a few-person internal script into a cash cow tend to leave when the work becomes compliance, enterprise audits and layered reporting. Read it as labour-market signal about what scaling does to product teams, not as a verdict on the IPO.",
+          "url": "https://x.com/mylifcc/status/2118116581507023262"
+        }
+      ]
+    },
+    {
+      "emoji": "🧠",
+      "title": "Craft & Context",
+      "items": [
+        {
+          "tag": "kay2289123-agent-critical-thinking",
+          "title": "@Kay2289123: Six Habits Against \"AI Cognitive Suicide\"",
+          "body": "A Chinese-language response to Addy Osmani's piece on critical thinking when agents do the work, and the most practical thing in the feed today. The diagnosis: output looks flawless, so the reviewer approves, approves, approves, and the judgement muscle atrophies. The six habits are unusually concrete — have the agent quiz you and show evidence rather than only answers; be honest about how much of a conclusion you actually understand; form your own guess before asking so the model has something to argue against; interrogate which decisions the model made on your behalf; write prompts by voice so you cannot type without thinking; and hold one hard rule, that if you would not put your name on the output you do not approve it. That last one is a usable acceptance test, not a slogan.",
+          "url": "https://x.com/Kay2289123/status/2118134770731495702"
+        },
+        {
+          "tag": "tvytlx-little-book-generative-ai",
+          "title": "@tvytlx: 195 Pages That Flatten the Model Zoo Into One Derivation",
+          "body": "Tianhua Chen put a 195-page book on arXiv, The Little Book of Generative AI Foundations, and its trick is refusing to treat model families as separate species: every generative model is approximating a data distribution and sampling from it. From PCA, add a probabilistic assumption and you have probabilistic PCA; swap the linear map for a network and you have a VAE; split the latent transform into many noising and denoising steps and you have diffusion; apply the chain rule to the joint distribution instead and you have the autoregressive models under today's LLMs. WGAN and energy models fall out where the normalising constant becomes intractable. The v2 revision adds visual explanations and roughly ten times the file size. Useless if you only call APIs; genuinely useful if you want to know why a model class has the limits it has.",
+          "url": "https://x.com/tvytlx/status/2117865426143039860"
+        },
+        {
+          "tag": "shenpengwdh-altman-india-podcast",
+          "title": "@shenpengwdh: Altman's 5% Retention and the Case for Shipping Early",
+          "body": "Notes from a hour-plus Altman interview on an Indian podcast, with the early-OpenAI decisions as the substance. The number: the internal ChatGPT build retained about 5%, most of management wanted to wait, and Altman shipped anyway — on the argument that the first version always embarrasses you and that a small group who love it beats a large group who find it fine. He adds the caveat himself that the metric was flawed. Two other lines are worth keeping: he rarely overrides a room of smart people, and when he does he treats it as a high-cost, probably-wrong bet that needs unusual conviction; and his test for avoiding yes-men is keeping people he has worked with for a decade and rewarding those who pushed back hard when he was wrong. The career line — twenty years of experience can be one year repeated twenty times — is the one that stings.",
+          "url": "https://x.com/shenpengwdh/status/2117948012257493157"
         }
       ]
     },
@@ -123,22 +147,22 @@
       "title": "Worth Your Time",
       "items": [
         {
-          "tag": "agent-jace-browser-toolset-cost-gap",
-          "title": "@Agent_Jace: 13x Cost Gap Between Browser Toolsets, Same Model",
-          "body": "LangChain compared seven browser toolsets on WebVoyager's 100 tasks with Claude Sonnet 5.5 and found pass rates bunched between 78% and 90% while cost and latency spread enormously: Stagehand passed 90% for $1.98 total at a median 17.4 seconds per task, Playwright MCP passed 78% for $26.71 — about 13x the cost and three times the time. On HardBench's 38 core tasks the ordering held, 30 passed for Stagehand's code-writing run tool against 21 for Browserbase's browse CLI at three times the cost per task. The traces explain it: Stagehand's run tool averaged 10 steps against 26 model turns, and a navigation returned a median 117 characters versus roughly 17,000 from a hosted navigate tool. Calling Browserbase's MCP tools from code instead of one at a time cut cost 4x before any switch. The best fix came from reading traces: agents were writing fixed eight-second sleeps, so they made each sleep end after 500ms of page quiet, taking median agent time from 182 to 124 seconds. And trimming snapshots to 8,000 characters did nothing, because agents just re-fetched — the trim has to happen at the source.",
-          "url": "https://x.com/Agent_Jace/status/2117680592871649372"
+          "tag": "alishohadaee-long-context-cost",
+          "title": "@alishohadaee: 256K Context Costs 3.6–7x More, and Compaction Nearly Works",
+          "body": "A close read of \"You don't need long context\" (Belcak, Molchanov et al., Nov 3) with the numbers that matter: serving at 256K instead of 16K costs 3.6x to 7x more per generated token across GLM 5.2, Kimi K2.6 and Qwen 3 Coder Next, measured from H100 throughput. The proposed fix is compaction — when context crosses a threshold the agent writes down the task, its plan and the artefacts it still needs, then restarts from that — with long documents left as files the agent greps in pieces, which scored up to 40 points higher than pasting the whole input. The extreme version, one action per context, kept Opus 4.5 at 70.2% on SWE-bench Verified versus 70.0% with full history while peak context fell from 130–200K to 15–37K tokens, for estimated savings of 2.2x to 8.8x. The honest caveats are included and are the reason to trust the rest: costs are estimated from throughput and list prices rather than real bills, compaction is lossy, and Qwen 3 Coder Next collapsed from 53.0% to 3.6% at the tightest setting.",
+          "url": "https://x.com/alishohadaee/status/2117980479945355427"
         },
         {
-          "tag": "codetocash-google-routing-experiment",
-          "title": "@CodetocashAi: Google's 50-Task Test — Routing Beat Thinking Harder",
-          "body": "A summary of a Google experiment on 50 coding-agent tasks with a result that cuts against the usual instinct. Gemini Flash on low thinking solved 50 of 50. A lightweight router sending simple tasks to Flash-Lite and complex ones to Flash on low thinking also solved 50 of 50 — but at 13% lower cost per successful task and 46% lower average latency than running Flash on low for everything. The second finding is the more useful one: simply capping output tokens did not reduce reasoning cost and caused some harder tasks to fail, so shorter visible output is not evidence of cheaper thinking. Together they argue for routing on task complexity and measuring cost per solved task, with escalation as the exception rather than the default.",
-          "url": "https://x.com/CodetocashAi/status/2117706123016839224"
+          "tag": "omkarray9-voice-agent-judge-calibration",
+          "title": "@OmkarRay9: A Judge That Agreed With Humans 33% of the Time, Then 92%",
+          "body": "Notes from Upstart and Coval's talk on running voice agents on regulated lending calls, built around one trajectory: at launch their LLM judge agreed with human reviewers on 33% of compliance calls; about eleven months later, 92%. The playbook is the transferable part — write the PRD as pass/fail rules on a transcript, build a golden set with a minimum of 200 labelled calls and 30 real failures before trusting any judge, then track judge-human agreement per criterion rather than as one score. Two traps are named precisely: at a 95% pass rate an \"always pass\" judge scores 95% agreement, so report recall on real failures against a holdout; and a transcript judge cannot catch a confident wrong fact, so amounts, dates and status must be checked against the system of record. In their data roughly one in six flags was the judge being wrong, which is why they made the eval owner a real role.",
+          "url": "https://x.com/OmkarRay9/status/2117202723657732594"
         },
         {
-          "tag": "nikolayxyz-graph-compiled-agent-runs",
-          "title": "@nikolayxyz: $9.70 to Compile a Run, Then $1.03 → $0.02 Per Run",
-          "body": "A pointer to a talk by Neo4j's Zach Blumenfeld on graph engineering: nodes do the work, edges route state, and successful agent runs get compiled once into a reusable graph-shaped skill instead of being re-derived from prose every time. The headline numbers are that compiling a run into a graph cost $9.70, after which swapping the expensive model for Haiku took Claude cost per run from $1.03 to $0.02 — a 50x cut on the repeated path, paid for once. The three graphs named are execution, context and procedure, and the debugging payoff is being able to see which branches a run skipped, which is usually invisible in prose instructions. It is a conference video with a signup, so treat it as a lead to evaluate rather than a verified result, but the economics are the right shape: pay a frontier model to discover the path once, then run a cheap one down it.",
-          "url": "https://x.com/nikolayxyz/status/2117711152620970448"
+          "tag": "me-deepu-longcat-25-reward-hacking",
+          "title": "@me_deepu: Meituan's 1.6T Model and the Anti-Cheat Section Worth Copying",
+          "body": "LongCat 2.5 is 1.6 trillion parameters with about 48B active per token, trained and served on Chinese accelerators with under 80GB of memory per card, and it ships with the part most model posts omit: how they stopped the agent cheating during RL. Network access is switched off inside the task environments, git history and cached files are deleted, and an LLM judge audits trajectories for exploits; repeated tool calls and looping reasoning are penalised — which is also where long agent runs quietly burn tokens. The serving numbers are the practical ones: 4-bit weights and 4-bit activations against their 8-bit baseline, prefill throughput up 43.3% and decode up 42.77%, with quality reported on par on every task they evaluated. The footnote is a nice touch of honesty — rival benchmark scores without an asterisk were run by Meituan itself and are labelled indicative only.",
+          "url": "https://x.com/me_deepu/status/2117186138746286485"
         }
       ]
     }
