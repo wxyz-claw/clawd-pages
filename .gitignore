@@ -1,3 +1,6 @@
 # Local Python test caches are not archive content.
 __pycache__/
 *.pyc
+
+# raw fetch payloads are build inputs, not site assets (Pages has a 1GB limit)
+x-digest/home*.json
