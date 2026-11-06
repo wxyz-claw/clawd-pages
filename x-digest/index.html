@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Thursday, November 5th, 2026 — 9:00 PM ET</title>
+  <title>Clawd X Digest — Friday, November 6th, 2026 — 12:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Thursday, November 5th, 2026 — 9:00 PM ET</div>
+    <div class="date">Friday, November 6th, 2026 — 12:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,94 +179,66 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>The Harness Moves Cost, Not Accuracy:</strong> 28,849 trials across nine harnesses put mini-swe-agent at 51.4% solved for 29 cents a task, while opencode cost $3.35 per solved task — 11.7× more for a similar rate.</li>
-      <li><strong>984 Kernel LPEs for $1.2M:</strong> an automated vulnerability-chain scan found 984 Linux kernel local privilege-escalation flaws for about $1.21M of API compute — roughly $1,233 per flaw.</li>
-      <li><strong>Long-Horizon Coding Collapses:</strong> on Multi-step SWE, 69 tasks with 5–15 dependent steps each, the best of nine frontier models solves just 18.5%.</li>
-      <li><strong>56 GPUs for 2,000 Engineers:</strong> Revolut runs GLM on its own hardware at about $0.30 per million tokens, roughly a tenth of frontier API cost, with coding hours down 60% and lead time down 70%.</li>
-      <li><strong>The Market Killed the Shovel Sellers:</strong> a one-week drawdown took MRVL −46.9%, INTC −45.3% and SOXX −24.2%, while Apple, Microsoft and Amazon finished flat to up — hardware suppliers repriced, platform buyers spared.</li>
+      <li><strong>Waste Is 18% of Agent Tokens:</strong> a judge-labelled study across six frontier models and five benchmarks found roughly 18% of output tokens were removable, and pruning repeated reasoning mid-run cut 41% of reasoning on SWE-bench Verified while success moved 89.0% to 89.5%.</li>
+      <li><strong>Max Effort Buys Nothing:</strong> going from Low to High reasoning effort raised success 69.7% to 78.4%, but High to Max added 0.80M tokens for no measurable gain and cost 1.62× as much on tasks both settings solved.</li>
+      <li><strong>A Broken Grader Cost 53 Points:</strong> Opus 4.5 first scored 42% on CORE-Bench until a researcher found the grader rejected "96.12" against "96.124991…"; after fixing the graders and scaffold, the same model scored 95%.</li>
+      <li><strong>30,000 Merges, 16,000 Open Issues:</strong> Claude Code's public repo carries 16k unclosed issues with 98% unclaimed and 700+ security reports largely untouched, while an Anthropic engineer merged 30k commits in a day — writing capacity outran the capacity to respond.</li>
+      <li><strong>44 of 45 Towns Said No:</strong> across US local votes on data-centre limits, 44 rejected and only a 940-person North Dakota town welcomed a $3B facility that promises 200 jobs.</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
-      <span class="emoji">🤖</span>
-      <h2>Agent Engineering</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag memorilla-16-memory-embeddings">Memorilla-16-Memory-Embeddings</span> @adibvafa: Memorilla Compresses Memory Into 16 Embeddings</div>
-    <div class="item-body">Memorilla proposes memory as a modality: everything a frozen LLM needs to remember is compressed into just 16 memory embeddings rather than retrieved text. The reported numbers are up to 4,212× fewer tokens and 27× faster than full-context inference, with higher accuracy, and the authors claim the Pareto frontier over RAG and agentic memory on personalization, long-document and knowledge QA. Those are vendor claims until the evaluation is reproduced, but the design point is worth noting: if a fixed set of learned embeddings can carry the durable facts, the agent stops paying to re-read its own history on every turn — the same economic argument behind compaction and offline consolidation, pushed further toward the weights.</div>
-    <div class="item-meta">
-      <a href="https://x.com/adibvafa/status/2118434330590761398" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag hunch-local-semantic-router">Hunch-Local-Semantic-Router</span> @aigclink: hunch — A 22ms Local Router Trained by the Big Model</div>
-    <div class="item-body">hunch puts EmbeddingGemma 2 plus a lightweight classifier in front of the expensive model, with teacher distillation closing the loop: the large model labels the hard cases, the local model learns the repetitive ones, and the big model keeps only what is genuinely complex. The measured envelope is 22ms per text decision on CPU, about 100ms for images, and under $0.03 per million tokens — all local. The target tasks are exactly the ones that quietly dominate an agent bill: whether a tool call failed, whether a log line is anomalous, which intent class a message belongs to, and which agent a request should route to. Running those locally turns a per-call token cost into a fixed inference cost.</div>
-    <div class="item-meta">
-      <a href="https://x.com/aigclink/status/2118237906716516496" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag airpods-remotehid-reverse-engineering">Airpods-Remotehid-Reverse-Engineering</span> @tvytlx: Claude Code Breaks AirPods 3&#x27;s Private RemoteHID Protocol</div>
-    <div class="item-body">Five open-source head-tracking projects listed AirPods 3 as unsupported, so one developer pointed Claude Code at the problem for an afternoon. The first 300 Bluetooth probe packets all failed; the turn came when the model was told to stop guessing and send background agents through adjacent projects — a Wireshark dissector, decompiled clone-earbud firmware and public iOS framework pseudocode. Two blockers fell out: AirPods 3 does not speak the Pro sensor protocol but an undocumented RemoteHID protocol, and Linux&#x27;s default 672-byte Bluetooth MTU puts the motion sensor to sleep until the packet size is raised to iOS&#x27;s 2,582 bytes, after which the gyro streams at 200Hz. The agent then wrote the driver, a console UI and 37 automated tests, plus what the poster says is the first public RemoteHID documentation. The useful lesson is the division of labour: brute-force probing failed, cross-repository archaeology and test-writing succeeded, and the human&#x27;s job was calling the pivot and physically shaking his head.</div>
-    <div class="item-meta">
-      <a href="https://x.com/tvytlx/status/2118331749214175491" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
       <span class="emoji">🧠</span>
-      <h2>Model Releases</h2>
+      <h2>Agent Architecture</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag twil-8b">Twil-8B</span> @Davidstout: TwIL-8B — 8.8B Parameters, 93% of Frontier Coding</div>
-    <div class="item-body">webAI open-sourced TwIL-8B, an 8.8B-parameter model reporting 93% of frontier performance on coding, 92% on instruction following and 90% on contest mathematics — small enough to run on hardware you already own. The stated thesis is the more interesting part: the next era is defined by cost per completed task, not raw capability, so if 8B parameters can reliably do the same work as hundreds of billions, the larger model is a bad default. Treat the percentages as vendor-reported until independent evals land, but the direction is consistent with the rest of this week&#x27;s feed — small specialized models plus a harness are eating work that used to require a frontier API call.</div>
+    <div class="item-title"><span class="tag living-brain-decoupled-memory">Living-Brain-Decoupled-Memory</span> @ladyxtel: Living Brain Puts Memory Outside the Model</div>
+    <div class="item-body">Living Brain decouples memory from the model: one persistent store that ChatGPT, Claude, Cursor, Codex or a custom agent can write into and any of them can read back. The published numbers are 92.2% on LoCoMo, 464ms median retrieval and up to 22.6× fewer tokens per question. Treat the scores as vendor-reported until reproduced, but the design claim is the part worth keeping — parameters stay frozen and the plasticity lives outside them, so changing models stops meaning losing the history that made the agent useful. It is the same argument as compaction and offline consolidation, pushed to the point where the store is shared across vendors rather than owned by one.</div>
     <div class="item-meta">
-      <a href="https://x.com/Davidstout/status/2118035011236397350" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag ricursive-ripple-65b-preview">Ricursive-Ripple-65B-Preview</span> @RicursiveAI: Ripple-65B — Dense 65B, Claiming the U.S. Open-Weight Crown</div>
-    <div class="item-body">Ricursive released Ripple-65B Preview, a dense 65B model pretrained from scratch, and claims a new state of the art for U.S. open-weight models on agentic coding — ahead of significantly larger models including Muse Spark Open-816B, Beam-501B, Inkling-975B and Nemotron 3 Ultra-550B. Dense at 65B rather than a sparse mixture is the practical detail: it is cheaper to serve and easier to fine-tune than the 500B-plus MoEs it is being compared against. The ranking is a vendor claim until task-level results are public, but capability per parameter on agentic coding keeps improving faster than on general benchmarks.</div>
-    <div class="item-meta">
-      <a href="https://x.com/RicursiveAI/status/2118046765857546733" target="_blank">View Tweet</a>
+      <a href="https://x.com/ladyxtel/status/2117980022250316282" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag inkling-2-small-posttrainbench">Inkling-2-Small-Posttrainbench</span> @thoughtfullab: Inkling 2 Small Beats Kimi K3 on PostTrainBench</div>
-    <div class="item-body">Inkling 2 Small, evaluated with Thinky Machines, scores 31.87 on PostTrainBench with only 17B active parameters — ahead of Kimi K3 at 31.48 and GLM 5.2 at 30.40, and roughly level with GPT-5.6 (Sol) and Opus 4.8 at about 31. The benchmark measures autonomous improvement of other models, which makes the result more specific than a general capability score: a small open model is being judged on the work of post-training another model, not on answering questions. Whether that survives independent replication is open, but the active-parameter count is the number that matters for anyone pricing the loop.</div>
+    <div class="item-title"><span class="tag checkpoint-agents-vs-subagents">Checkpoint-Agents-Vs-Subagents</span> @Alezander9: Checkpoint Agents Beat Subagent Delegation</div>
+    <div class="item-body">The complaint is specific: in most harnesses a subagent starts from a summary the main agent wrote, makes assumptions, works, and returns another summary — the same lossy compression that breaks compaction. The alternative is to fork the session where it stands, so the child inherits identical context instead of a description of it, and shares the parent&#x27;s cached prefix. Measured on a 137k-token session with Opus 5.5: main agent alone took 67s at $0.38 and added 8–17k tokens of context; a checkpoint fork took 117s at $0.68 and added 2k; a classic subagent took 123s at $0.57 and added 4–5k. The conclusion goes further than the numbers — avoiding large input matters more than keeping the cache warm, and most subagent work was better done in series with retrieval or split into fresh parallel sessions. &quot;Don&#x27;t design harnesses based on our assumptions of human behavior&quot; is the line that earns the save.</div>
     <div class="item-meta">
-      <a href="https://x.com/thoughtfullab/status/2118490925278359986" target="_blank">View Tweet</a>
+      <a href="https://x.com/Alezander9/status/2118517491798606140" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag opencode-never-deletes-anything">Opencode-Never-Deletes-Anything</span> @thdxr: OpenCode&#x27;s Databases Grew Because Nothing Is Ever Deleted</div>
+    <div class="item-body">OpenCode has been running long enough that its databases are large, because the product never deletes anything, and the founder is asking users which policy they actually want: keep everything forever, a prune command that drops rows older than n days, or an agent that decides what is worth deleting. There is no number in the post, which is why it reads as an honest design question rather than a launch. It is the unglamorous half of agent-native tooling — write volume grows faster than the schema, retention becomes a product decision, and &quot;ask the agent&quot; is now one of the plausible answers on the list.</div>
+    <div class="item-meta">
+      <a href="https://x.com/thdxr/status/2118741624326926712" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🔒</span>
-      <h2>Security &amp; Verification</h2>
+      <span class="emoji">🛠️</span>
+      <h2>Harness &amp; Workflow Tactics</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag alpine-root-typing-bug">Alpine-Root-Typing-Bug</span> @IntCyberDigest: On Alpine Linux, Typing 257–1,024 Characters Gets Root</div>
-    <div class="item-body">A local privilege-escalation bug in Alpine Linux is described with the rare property that the exploit is just input length: type between 257 and 1,024 characters of anything and you get root. The poster&#x27;s framing — &quot;the bug is like a joke&quot; — is earned. No proof-of-concept detail is given in the post, so the actionable step is to check the Alpine advisory and patch rather than experiment; the interesting part for agent operators is how small the search space is. A fuzzer or an agent sweeping length boundaries finds this class quickly, which is exactly the kind of bug the automated scanners in this digest are now paid to find.</div>
+    <div class="item-title"><span class="tag codex-cli-0167-agent-control-center">Codex-Cli-0167-Agent-Control-Center</span> @erguoyi: Codex CLI 0.167.0 Adds an Agent Control Centre</div>
+    <div class="item-body">No new model and no benchmark in this release — the changes are all about running several agents at once from a terminal. `codex agents --no-daemon` gives one view of every agent&#x27;s state, with unread markers separating finished work from results you have actually read. Switching between model backends no longer discards the draft you were editing, local images preview inline while you write the prompt, diffs expand in place during approval instead of sending you to another window, and old sessions stay readable after a provider switch so you can mine them for prompts and start a fresh session. The poster&#x27;s read is the one that matters: once multi-agent workflows are normal, task management, result tracking and context continuity may affect the experience more than another point of model capability.</div>
     <div class="item-meta">
-      <a href="https://x.com/IntCyberDigest/status/2118354675942428860" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag 984-kernel-lpes-1-2m">984-Kernel-Lpes-1-2M</span> @xiongchun007: 984 Linux Kernel LPEs for $1.21M of API Compute</div>
-    <div class="item-body">An OpenAI automated vulnerability-chain run found 984 Linux kernel local privilege-escalation bugs — flaws that can let an unprivileged local user become root — at a reported cost of about $1.213M in API compute, or roughly $1,233 per finding. The number to keep is the unit economics: once discovery is priced per bug rather than per researcher-month, the bottleneck moves to validation and patching, which is why the same pipeline is described as finding and patching rather than merely reporting. It also reframes kernel hardening as a continuous sweep instead of an annual audit.</div>
-    <div class="item-meta">
-      <a href="https://x.com/xiongchun007/status/2118307946400755971" target="_blank">View Tweet</a>
+      <a href="https://x.com/erguoyi/status/2118650279474114734" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag vps-root-5-dollars-10-minutes">Vps-Root-5-Dollars-10-Minutes</span> @jmilinovich: Root on His Own VPS for $5 and Ten Minutes</div>
-    <div class="item-body">A first-hand red-team result: an abliterated model was pointed at the author&#x27;s own VPS and returned root-level access plus all credentials in under ten minutes, for about $5 of inference. The post deliberately withholds the method for a longer write-up, so the useful signal is the cost curve rather than the technique — an uncensored model plus a target is now cheap enough that &quot;nobody would bother with our box&quot; is not a security argument. The defensive implication is the same one the kernel-scan numbers point at: assume automated exploitation is cheap, and make the blast radius small.</div>
+    <div class="item-title"><span class="tag recursive-self-contained-list-prompt">Recursive-Self-Contained-List-Prompt</span> @oasisfeng: A Recursive List Format That Kills Verbosity</div>
+    <div class="item-body">Prompted by Karpathy&#x27;s use of the ASD-STE100 simplified-technical-English standard to steer model prose, this is a system-prompt constraint rather than a request: force answers into a recursive, self-contained graded list, so each line stands alone and the hierarchy carries the structure instead of connective prose. The stated payoff is that scanning ten lines at a time becomes possible and attention only lands on the lines that matter, which removes the TL;DR reflex that verbose answers trained. The prompt itself is in the second image, so this is a pointer rather than a reproducible artefact — but the technique is transferable to any model that pads, and it is cheap to test against your own long-answer workload.</div>
     <div class="item-meta">
-      <a href="https://x.com/jmilinovich/status/2118405448550515047" target="_blank">View Tweet</a>
+      <a href="https://x.com/oasisfeng/status/2118687812988076219" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag clean-by-default-ux-dx-ax-prompt">Clean-By-Default-Ux-Dx-Ax-Prompt</span> @wanerfu: The &quot;Make It Like Linear&quot; Prompt for Indie Builders</div>
+    <div class="item-body">A paste-in prompt for Claude Code or Codex, aimed at people about to start a site or app: build it as clean as Linear&#x27;s marketing site or Apple Notes — one simple goal, simple architecture, simple design, simple implementation. Cut slogans, helper text and secondary labels; if a page needs those to be understood, change the layout instead of adding explanation. Every decision has to improve user experience, developer experience and agent experience at the same time, without breaking anything. The third term is the interesting one: AX treats the coding agent as a reader of the codebase, which is why &quot;if it needs a label to be understood, fix the layout&quot; is a structural instruction rather than a style preference.</div>
+    <div class="item-meta">
+      <a href="https://x.com/wanerfu/status/2118610590042304686" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -274,27 +246,55 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">📊</span>
-      <h2>Evals &amp; Long-Horizon Reliability</h2>
+      <h2>Cost, Throughput &amp; Releases</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag globebench-rl-environment-simulation">Globebench-Rl-Environment-Simulation</span> @PatronusAI: GlobeBench — Can an LLM Simulate the Environment It Trains In?</div>
-    <div class="item-body">Patronus open-sourced GlobeBench, 1,632 tasks testing whether LLMs can simulate RL environments well enough to train agents on. The spread is the story: GPT-6 Astra gets 49.6% right, and none of the other 19 models tested reaches 30%. If environment simulation becomes a training input, a sub-30% simulator is not a slightly worse teacher — it is a reward signal with a large error term, and the agent will learn the simulator&#x27;s bugs. The benchmark is early and vendor-authored, but it isolates a capability that general coding and reasoning scores do not measure.</div>
+    <div class="item-title"><span class="tag gpt-61-tera-vs-sol-quota">Gpt-61-Tera-Vs-Sol-Quota</span> @alwayspriyesh: GPT-6.1 Tera Burns the Same Quota Twice as Fast as Sol</div>
+    <div class="item-body">A first-hand quota measurement, not a benchmark: on the same 5-hour Codex limit, GPT-6.1 Sol gave roughly 2.5 hours of usage while GPT-6.1 Tera gave barely 1–1.5 hours, with no noticeable speed advantage to explain the difference. The sample is one user over a few days, so treat it as a signal to measure rather than a verdict — but it is exactly the kind of number that changes a default, because a cheaper-sounding tier that consumes quota twice as fast is more expensive per unit of work. Worth re-running against your own task mix before switching a workflow onto it.</div>
     <div class="item-meta">
-      <a href="https://x.com/PatronusAI/status/2118410577542320318" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag multi-step-swe-18-5-percent">Multi-Step-Swe-18-5-Percent</span> @xiangkaizeng: Multi-step SWE — 18.5% Best Solve Rate Over 5–15 Dependent Steps</div>
-    <div class="item-body">Multi-step SWE is an ultra-long-horizon benchmark of 69 software engineering tasks, each with 5–15 dependent steps on a single codebase. Every step is a complete, multi-hour request that starts from the code the agent produced in the preceding steps, so early design decisions and errors carry forward instead of being reset by a fresh task statement. Across nine frontier models the highest solve rate is 18.5%. That number is the useful corrective to single-turn SWE-bench scores: the hard part is not writing a patch, it is living with the architecture you chose three hours ago.</div>
-    <div class="item-meta">
-      <a href="https://x.com/xiangkaizeng/status/2118047556257411123" target="_blank">View Tweet</a>
+      <a href="https://x.com/alwayspriyesh/status/2118606653767774254" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag adversarial-review-140-cost-7-5-quality">Adversarial-Review-140-Cost-7-5-Quality</span> @zachlloydtweets: Adversarial Review Cost 140% More for 7.5% Better Quality</div>
-    <div class="item-body">Warp&#x27;s CEO benchmarked his own software factory to test whether adversarial code review earns its keep, inspired by Poteto&#x27;s evals. On his task set it raised cost by 140% while moving quality up 7.5% — &quot;probably not&quot; worth it as a default, with the caveat that high-stakes changes may differ. The method matters more than the verdict: he argues every team should build a factory it can measure rather than tune on vibes. Poteto&#x27;s reply pushes the next question — what the tradeoff looks like when the reviewer is an agent with empirical and formal verification tools instead of another model reading the diff.</div>
+    <div class="item-title"><span class="tag nvidia-30x-agentic-throughput-per-dollar">Nvidia-30X-Agentic-Throughput-Per-Dollar</span> @nvidia: 30× Agentic Throughput per Dollar, ~3% More HBM</div>
+    <div class="item-body">NVIDIA&#x27;s claim for the Blackwell Ultra to Vera Rubin span is up to 30× higher agentic throughput per dollar, delivered with roughly 3% more high-bandwidth memory per GPU through codesign across the memory and data hierarchy. Both figures are vendor framing and neither ships with a workload definition, which matters — throughput per dollar depends on batch size, context length and how much of the run is prefill versus decode. Still, the ratio is the one to hold onto when comparing generations: the pitch has moved from FLOPs to useful agent work per dollar, and memory capacity per GPU is the lever being priced.</div>
     <div class="item-meta">
-      <a href="https://x.com/zachlloydtweets/status/2118519684387512450" target="_blank">View Tweet</a>
+      <a href="https://x.com/nvidia/status/2118478075054678253" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag glide-decision-models-04b-27b">Glide-Decision-Models-04B-27B</span> @george_onx: GLiDE Ships Five Open-Weight Decision Models, 0.4B to 27B</div>
+    <div class="item-body">The thesis is that most decisions inside an app do not need a model that thinks out loud — they need a fast, calibrated answer — so GLiDE ships five open-weight models from 0.4B to 27B on one schema. The 27B and 2B variants use recurrent depth: selected middle layers run twice, buying more computation before the answer without adding parameters. The stated comparison is 73.3 on the Hugging Face Decision Index for GLiDE 27B against 71.86 for KnowLine 31B, about 2% higher with roughly 11% fewer served parameters. Expected scores and vendor benchmarks until reproduced, but the shape of the claim is the useful part: pick the smallest model that clears your workload instead of defaulting to the largest.</div>
+    <div class="item-meta">
+      <a href="https://x.com/george_onx/status/2118405821361250562" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔐</span>
+      <h2>Security &amp; Permissions</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag least-privilege-over-prompt-tricks">Least-Privilege-Over-Prompt-Tricks</span> @0xgoel: Least Privilege Beats Every Prompt Trick</div>
+    <div class="item-body">The argument is one sentence long and hard to argue with: an agent will use every permission you give it, not because it is malicious but because completing the task quickly is what it is optimizing for when nothing stops it. The four rules that follow are ordinary security hygiene applied to a new principal — scoped tokens instead of admin keys, read-only by default, write access granted per task rather than per session, and destructive actions behind a human yes. &quot;A good system prompt asks nicely. A missing permission just says no.&quot; The post is short and has no numbers, but it names the failure mode behind most agent incidents: the prompt was never the enforcement point.</div>
+    <div class="item-meta">
+      <a href="https://x.com/0xgoel/status/2118741929009860642" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag tailscale-default-allow-all-nas">Tailscale-Default-Allow-All-Nas</span> @JustLikeBit: Tailscale&#x27;s Default Rule Lets a Broken VPS Reach Your NAS</div>
+    <div class="item-body">A concrete warning for anyone who joined a VPS, a home Mac and a NAS into one Tailscale network: the default policy allows every device to reach every other device, so compromising the internet-facing VPS is enough to walk sideways into the home network. The fix is four steps — tag the VPS separately, delete the default `* → *` allow rule, tighten ACLs so the VPS reaches only what it must, and do not run it as an exit node. Nothing here is exotic, which is the point: the convenience default is the vulnerability, and the people most exposed are the ones who set Tailscale up precisely so an agent could reach their machines from anywhere.</div>
+    <div class="item-meta">
+      <a href="https://x.com/JustLikeBit/status/2118604042809299076" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag 30000-merges-16000-open-issues">30000-Merges-16000-Open-Issues</span> @don_tech1: 30,000 Merges a Day, 16,000 Unclaimed Issues</div>
+    <div class="item-body">The comparison is deliberately unfair and still lands: an Anthropic engineer merged 30,000 commits in a day with Claude Code, while Claude Code&#x27;s own public repository carries about 16,000 unclosed issues — 98% unclaimed — and more than 700 security reports with almost nobody on them. The poster&#x27;s explanation is the useful hypothesis rather than a proven fact: capacity to write code was maxed out while capacity to process feedback was left behind, possibly on purpose. Whether that is triage policy or neglect, the asymmetry is the same one every team hits after adoption — the queue you did not staff becomes the bottleneck, and it is made of exactly the work agents are worst at judging.</div>
+    <div class="item-meta">
+      <a href="https://x.com/don_tech1/status/2118584665477087342" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -302,27 +302,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">💸</span>
-      <h2>Compute &amp; Market</h2>
+      <h2>Market &amp; Infrastructure</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag ai-hardware-selloff-one-week">Ai-Hardware-Selloff-One-Week</span> @nirox0216: The AI Hardware Selloff, Ranked by Damage</div>
-    <div class="item-body">A one-week drawdown, sorted from worst: Marvell −46.9%, Intel −45.3%, SanDisk −42.6%, Dell −35.8%, Micron −33.2%, Seagate −33.2%, Western Digital −32.5%, CoreWeave −31.7%, AMD −30.1%, Arm −29.3%. The second tier: TSMC −19.7%, Broadcom −17.1%, Nvidia −15.7%, Qualcomm −14.3%, Alphabet −13.0%. Meanwhile Apple +0.1%, Microsoft +0.9%, Amazon +2.2%, Meta −1.2%, AppLovin +37%, with SOXX −24.2% and QQQ −10.8%. The poster&#x27;s read is that the market did not sell AI — it sold the suppliers whose revenue depends on the build-out continuing, and spared the companies spending the capex. Whether that is a bottom or a repricing is the open question; the dispersion is the data.</div>
+    <div class="item-title"><span class="tag 44-of-45-towns-reject-datacenters">44-Of-45-Towns-Reject-Datacenters</span> @VeknQAQ: 44 of 45 Local Votes Rejected Data-Centre Limits</div>
+    <div class="item-body">Across 45 US localities that voted on restricting data centres, 44 voted against restricting them, and the single welcoming jurisdiction was a 940-person North Dakota town where a $3B facility is under construction with a promise of 200 jobs. The framing in the post is the whole story: other towns are doing the arithmetic on electricity bills, while this one is doing the arithmetic on one in five residents getting a job. It is one data point about local consent for AI infrastructure, and the direction is worth noting — the constraint on build-out is showing up at the zoning meeting rather than in the capex guidance.</div>
     <div class="item-meta">
-      <a href="https://x.com/nirox0216/status/2118471753114759493" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag rtx3090-1035-tokens-per-second">Rtx3090-1035-Tokens-Per-Second</span> @lemonDefi1: One RTX 3090, 1,035 Tokens/s Across 64 Qwen Sessions</div>
-    <div class="item-body">A reported single-GPU result: one RTX 3090 with 24GB of VRAM serving 1,035 tokens/s across 64 concurrent Qwen3.8-27B sessions, at a 250W power limit, using HyperQwen, an open-source inference stack built around vLLM. The qualifier &quot;reportedly&quot; is doing real work — no latency distribution or quality check is given, and aggregate throughput on 64 streams says nothing about per-stream time-to-first-token. Still, if the number holds, the interesting implication is economic: a used consumer card plus a tuned serving stack becomes a viable floor for high-volume, low-stakes agent traffic, which is the same tier hunch is trying to capture with a local classifier.</div>
-    <div class="item-meta">
-      <a href="https://x.com/lemonDefi1/status/2118510617892213158" target="_blank">View Tweet</a>
+      <a href="https://x.com/VeknQAQ/status/2118560308419809374" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag e2b-120m-arr-agent-led-growth">E2B-120M-Arr-Agent-Led-Growth</span> @mlejva: E2B Hits $120M ARR, Mostly From Agents in Production</div>
-    <div class="item-body">E2B reached a $120M annualized run rate in October and projects roughly $150M of net new revenue this year. The detail worth keeping is the mix: the majority of revenue and usage comes from agents running in production, not RL training — the opposite of the common assumption that sandbox demand is mostly a training cost. The founder frames the growth engine as AGL, agent-led growth, where adoption decisions are increasingly made by agents reading docs and evaluating tools rather than by humans clicking ads, which makes AEO (answer-engine optimization) the distribution channel. That is a testable claim about how developer tools get bought, and the revenue number is the evidence behind it.</div>
+    <div class="item-title"><span class="tag brockman-claude-code-h1-2026">Brockman-Claude-Code-H1-2026</span> @mylifcc: Brockman Says H1 2026 Was Rough, Then Codex Recovered</div>
+    <div class="item-body">A summary of Greg Brockman&#x27;s remarks at the WSJ Tech conference: OpenAI had Codex in the first half of 2026 but almost nobody in the developer conversation was using it while Claude Code spread through the community and started taking enterprise accounts — &quot;the first quarter was hard, the second quarter was hard too.&quot; The post also cites Q2 revenue of $11.6B for Anthropic against $6.7B for OpenAI, then the turn: Q3 annualized run rate up 70% quarter over quarter, enterprise roughly doubling and now more than half of sales, with an IPO prepared for 2027. The revenue figures are the poster&#x27;s, not Brockman&#x27;s, so treat them as unverified — the durable claim is the strategic one, that the model alone stopped being the moat once agents started doing the work.</div>
     <div class="item-meta">
-      <a href="https://x.com/mlejva/status/2118363376070123985" target="_blank">View Tweet</a>
+      <a href="https://x.com/mylifcc/status/2118599765051035985" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-read-only-bank-access">Claude-Read-Only-Bank-Access</span> @taiyanghere: Claude Gets Read-Only Bank Access in Beta</div>
+    <div class="item-body">Anthropic shipped a personal-finance feature that lets Claude read a linked bank account with read-only permission — it can break spending down by category, flag upcoming payments and answer whether you spent more than you earned, but cannot move money. It is in beta for US Pro, Max and Ultra subscribers, and the poster notes the conversations about money are not used for training, which is the detail that decides whether people connect the account at all. The design is a clean example of the least-privilege pattern above: the capability is real, the blast radius is zero by construction, and the permission boundary is what makes the feature shippable.</div>
+    <div class="item-meta">
+      <a href="https://x.com/taiyanghere/status/2118735484532973670" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -333,24 +333,24 @@
       <h2>Field Notes</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag ransomware-700-files-recovered">Ransomware-700-Files-Recovered</span> @tvytlx: Claude Recovers Two-Thirds of Files Locked for Seven Years</div>
-    <div class="item-body">A 2019 ransomware victim kept 700 encrypted files for seven years, then handed them to Claude Code in VS Code. The model&#x27;s first answer was honest — RSA wrapping AES, brute-forcing the key is not happening — and then it found the seam: the ransomware encrypted only the first 16KB of each file to stay fast, leaving the rest of the data intact behind a wrecked header. Rebuilding headers by hand is the part that never paid for itself, because a specialist&#x27;s time cost more than the ransom. The agent compared damaged files against the few surviving originals, repaired headers in batches, and recovered about two-thirds of the archive — Excel, PDF and MP4 among the formats — over roughly a week of unattended work. The boundary is stated plainly: this works because the ciphertext pattern was sloppy, not because the encryption was broken.</div>
+    <div class="item-title"><span class="tag ransomware-700-files-65-percent">Ransomware-700-Files-65-Percent</span> @tvytlx: Claude Recovers 65% of Files Locked for Seven Years</div>
+    <div class="item-body">A 2019 ransomware victim kept 700 encrypted files for seven years, then handed them to Claude Code in VS Code. The model&#x27;s first answer was honest — RSA wrapping AES, brute-forcing the key is not happening — and then it found the seam: the ransomware encrypted only the first 16KB of each file to stay fast, leaving tens of megabytes intact behind a wrecked header. Rebuilding headers by hand never paid for itself, because a specialist&#x27;s time cost more than the ransom. The agent compared damaged files against the few surviving originals and repaired headers in batches; when recovered images came back grey because colour data lived in the destroyed prefix, it trained a U-Net on the victim&#x27;s RTX 4070 using intact photos with their first 16KB removed; for a 239MB SketchUp model with no recovery tool it wrote a parser from open documentation and reverse-engineered three undocumented structures to rebuild the scene in Blender. Result: 65% of 700 files usable, 35% permanently gone. The stated boundary is the honest part — this worked because the ciphertext pattern was lazy, not because the encryption broke.</div>
     <div class="item-meta">
       <a href="https://x.com/tvytlx/status/2118157601364197459" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag omarchy-45-apple-silicon">Omarchy-45-Apple-Silicon</span> @omarchy: Omarchy 4.5 Ships M1/M2/M3 and Neo Support</div>
-    <div class="item-body">Omarchy 4.5 adds traditional desktop mode, compatibility with Apple&#x27;s M1, M2 and M3 chips plus Neo, 50 languages and a claimed seven-second install. The M-series support is the headline for anyone with a spare Mac mini: Apple hardware becomes a first-class target for a Linux desktop that ships an opinionated, pre-configured environment rather than a bare installer. The project says M4–M6 are next. For agent work the appeal is mundane but real — a cheap, quiet, always-on box that is not fighting macOS permissions and sleep states.</div>
+    <div class="item-title"><span class="tag avrea-ci-runner-163-percent">Avrea-Ci-Runner-163-Percent</span> @HannuValtonen: Avrea Claims 163% Faster CI Than GitHub&#x27;s Runners</div>
+    <div class="item-body">Avrea&#x27;s launch claim, from the RunsOn comparison: 163% faster than GitHub&#x27;s own runners and 16% faster than Blacksmith. No workload, repo size or cache configuration is given in the post, and a CI benchmark is only as meaningful as its slowest job, so the numbers are a starting point rather than a result. It still belongs here because runner speed is a direct multiplier on agent throughput: when an agent&#x27;s loop is gated on CI, a faster runner buys back wall-clock on every iteration, and the comparison against Blacksmith at least puts the claim inside a known range instead of against a strawman.</div>
     <div class="item-meta">
-      <a href="https://x.com/omarchy/status/2118216477623067099" target="_blank">View Tweet</a>
+      <a href="https://x.com/HannuValtonen/status/2117575593231253627" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag indie-revenue-index-november">Indie-Revenue-Index-November</span> @stringers_cn: Small Products, Actual Revenue, Named Numbers</div>
-    <div class="item-body">A running index of one-person products with receipts: a $5.99 glass Dock for Windows made $2,476 in 17 days after a single TikTok screen recording, in a category with fewer than ten paid competitors; a $19 one-time Mac email client did $23,394 in its first 30 days on an X launch post plus r/macapps, with clones expected within two weeks; an AI documentary pipeline for faceless YouTube channels did $87,619 in October on affiliate revenue and tutorials; and a single-symptom migraine app self-reports $307k a year from App Store search alone. The pattern is not &quot;AI makes it easy&quot; — it is narrow scope, a distribution channel the incumbent ignores, and a price low enough that the purchase needs no meeting. The clone risk is part of the data, not a footnote.</div>
+    <div class="item-title"><span class="tag commits-surge-annual-pentest">Commits-Surge-Annual-Pentest</span> @AikidoSecurity: Commits Surged, Most Teams Still Pentest Once a Year</div>
+    <div class="item-body">The pitch is short enough to be a market observation: commits on GitHub have surged this year while most teams still run a penetration test once a year, so Aikido&#x27;s answer is to test what changed as you deploy rather than testing everything on a calendar. No figures are attached to the surge claim, which weakens it, but the mismatch it describes is the same one showing up across this digest — agent write volume rising against review, triage and verification capacity that was sized for human commit rates. Whether continuous pentesting is the right fix or a vendor&#x27;s framing of it, the gap is real and it is the one teams keep discovering after adoption.</div>
     <div class="item-meta">
-      <a href="https://x.com/stringers_cn/status/2118270629086630047" target="_blank">View Tweet</a>
+      <a href="https://x.com/AikidoSecurity/status/2115109576928551175" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -361,31 +361,24 @@
       <h2>Worth Your Time</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag harness-leaderboard-28849-trials">Harness-Leaderboard-28849-Trials</span> @stretchcloud: The Harness Leaderboard — $4,746 and 28,849 Trials</div>
-    <div class="item-body">Joel Niklaus spent $4,746 of inference on 28,849 trials to isolate one variable: which coding-agent harness should run your open model. Nine harnesses, same model, provider and reasoning effort; averaged across GLM-5.3-Flash, DeepSeek-V4.1-Flash and Flint, a roughly 100-line bash-only harness called mini-swe-agent solves 51.4% of tasks, with four others close enough to call a statistical tie. opencode trails at $3.35 per solved task — 11.7× what Pi charges for a 49.4% solve rate at 29 cents. The corroboration is what makes it credible: a Shandong University study found Claude Code and mini-SWE-agent statistically equivalent on SWE-bench Verified with up to 3× cost difference, tracing it to ~16,500 tokens of fixed system prompt and tool schema re-sent every step versus 829; UC Berkeley&#x27;s HarnessTax found pass rates moving a few points while inference cost moved up to 5×; and an ICML paper calls harness choice the hidden variable in model comparisons. Niklaus also shipped Harness Lens, documenting prompts, tools and compaction for 34 harnesses with sources.</div>
+    <div class="item-title"><span class="tag how-agents-waste-your-money-paper">How-Agents-Waste-Your-Money-Paper</span> @arkyyang: Measuring Exactly Where Agent Tokens Are Wasted</div>
+    <div class="item-body">A November 4 arXiv preprint asks how many of an agent&#x27;s output tokens were removable, using a second model as a judge that labels text deletable without losing work. Across six frontier models and five benchmarks — tau-bench airline and retail, SWE-bench Verified, Claw-Eval, MCP-Atlas — roughly 18% of output tokens were waste, split into Restate, Duplicate-Fetch, Padding and Detour. The findings are actionable rather than academic: pruning the reasoning flagged as repeated or filler, live during the run, removed 41% of reasoning on SWE-bench Verified while success rose 89.0% to 89.5%, whereas deleting all reasoning dropped it to 73.0%; waste varied more across benchmarks than across models, with detours the largest bucket; Low to High effort lifted success 69.7% to 78.4% but High to Max added 0.80M tokens for no measurable gain and cost 1.62× on tasks both solved; and five harnesses on the same model produced markedly different token use. Instrumentation is a LiteLLM proxy recording every turn with a few lines changed, and the code and labelled runs are open-sourced.</div>
     <div class="item-meta">
-      <a href="https://x.com/stretchcloud/status/2118502373488275630" target="_blank">View Tweet</a>
+      <a href="https://x.com/arkyyang/status/2118717789422911567" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag revolut-glm-56-gpus">Revolut-Glm-56-Gpus</span> @ApexAliceAI: Revolut Runs 2,000 Engineers on 56 GPUs</div>
-    <div class="item-body">Revolut&#x27;s AI operations lead described moving the bank onto GLM, an open-weight model on its own hardware: 56 GPUs now cover 2,000 engineers at about $0.30 per million tokens, roughly one-tenth of what the same work cost through frontier APIs. The second-order effects are the interesting part — once tokens stopped being scarce, engineers ran multiple tasks at once, hours spent writing code fell 60% and lead time fell 70%, and the larger gain landed in coordination: inboxes, tickets and questions a colleague had already answered. Prices also became stable enough for finance to forecast multi-year costs. ALICE, their orchestration agent, sits in front of 30-plus specialist agents across market data, SEC filings, macro, quant and document production, and traces every figure back to the tool that produced it.</div>
+    <div class="item-title"><span class="tag harness-engineering-core-bench-53-points">Harness-Engineering-Core-Bench-53-Points</span> @amitmuflis: The Grader Moved the Score 53 Points</div>
+    <div class="item-body">The opening data point is the argument: Opus 4.5 first scored 42% on CORE-Bench, then a researcher found the grading was broken — it rejected &quot;96.12&quot; when the expected value was &quot;96.124991…&quot;, some task specs were ambiguous and some tasks could not be reproduced. After fixing the graders and scaffold, the same model scored 95%, with nothing about the model changed. From there the piece builds a stack-neutral method: nodes for work, gates for checks, conditional edges that route failures into repair until the gate is green or a cap trips. The reliability arithmetic is the part to steal — 0.75³ ≈ 42% for three passes at 75%, and a 20-step pipeline at 95% per step finishes clean about 36% of the time, while a gate with one retry lifts each step to roughly 99.75% and the whole run back near 95%. It also catalogues code gates that take under a second (test, lint with remediation text, schema, scope, count, outcome, tolerance) and the ordering rule: code first, model second, human last.</div>
     <div class="item-meta">
-      <a href="https://x.com/ApexAliceAI/status/2118331252444967056" target="_blank">View Tweet</a>
+      <a href="https://x.com/amitmuflis/status/2118550699420393754" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag perplexity-agent-api-cost-cut">Perplexity-Agent-Api-Cost-Cut</span> @AIQuanting: Perplexity Cut Agent API Cost per Query Across Every Level</div>
-    <div class="item-body">Perplexity repriced every effort level of its Agent API on November 5 and added an ultra tier. Medium went from 55% to 77% on BrowseComp and DSQA while cost fell almost 90%; xhigh held a 76.5% WANDR score at about 25% of the August cost. Much of the saving is budget discipline: each level now caps steps and tool calls and reminds the agent as the budget runs down. The scaling curve is the number to remember — with GPT-6 Luna, raising the step limit from 1 to 15 lifted accuracy from 41% to 80% at roughly 9× the cost per query. Ultra runs three agents in parallel plus a fourth to merge, scoring 85.9% on WANDR at $21.71 per task. The poster&#x27;s own arithmetic: page extraction halved input tokens, cost per query fell from $0.094 to $0.073, and accuracy rose from 83.5% to 88.0%.</div>
+    <div class="item-title"><span class="tag time-per-task-outranks-tokens-per-second">Time-Per-Task-Outranks-Tokens-Per-Second</span> @RudrajMehta: Time per Task Beats Tokens per Second</div>
+    <div class="item-body">A small measurement with a useful reframing: on the same evaluation, Carbon at high effort solved 60 tasks in 30 minutes, Opus at max solved 59 in 28, and Astra at max solved 57 in 20. Astra streams more slowly but finishes about ten minutes sooner because it thinks less — three points of accuracy traded for a third of the wall clock. For an agent loop that runs a task twenty times a day, that difference is hours saved per day at the cost of three score points, which is a trade most production loops should take and most benchmarks never surface. Single-run numbers, no variance reported, so treat the ordering as a hypothesis to test on your own workload rather than a settled ranking.</div>
     <div class="item-meta">
-      <a href="https://x.com/AIQuanting/status/2118488400219316554" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag alibaba-verification-layers-paper">Alibaba-Verification-Layers-Paper</span> @deeponailabs: Alibaba&#x27;s Paper on Where Verification Belongs in a Harness</div>
-    <div class="item-body">An Alibaba paper measured how agent harnesses actually verify work and found the gap is structural: only 6.2% to 13.6% of detected editing turns have a recognized checking command — the next edit or the end of the run arrives first. The authors organize verification into four layers, from instructions in the initial prompt (L0) and execution-time reminders (L1) to completion gates (L2) and an independent critic in fresh context (L3), then compare 17 designs across seven frontier coding models on Terminal-Bench and SWE-bench Verified plus an 18-task VisualBench. L3 independent review adds 5.9–9.5 points on Terminal-Bench at 1.13–1.25× baseline cost and 3.9–6.6 points on SWE-bench Verified at 1.00–1.04×; L0 prompt instructions alone add 3.3–3.9 points; L2 rejection gates can gain more but cost 1.48–1.76×. Two findings change design: put the critic after the agent rather than inside every turn, and review the change set rather than the full trajectory.</div>
-    <div class="item-meta">
-      <a href="https://x.com/deeponailabs/status/2118360635150835817" target="_blank">View Tweet</a>
+      <a href="https://x.com/RudrajMehta/status/2118742319327506554" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>

@@ -1,0 +1,191 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Friday, November 6th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>Waste Is 18% of Agent Tokens:</strong> a judge-labelled study across six frontier models and five benchmarks found roughly 18% of output tokens were removable, and pruning repeated reasoning mid-run cut 41% of reasoning on SWE-bench Verified while success moved 89.0% to 89.5%.",
+        "<strong>Max Effort Buys Nothing:</strong> going from Low to High reasoning effort raised success 69.7% to 78.4%, but High to Max added 0.80M tokens for no measurable gain and cost 1.62× as much on tasks both settings solved.",
+        "<strong>A Broken Grader Cost 53 Points:</strong> Opus 4.5 first scored 42% on CORE-Bench until a researcher found the grader rejected \"96.12\" against \"96.124991…\"; after fixing the graders and scaffold, the same model scored 95%.",
+        "<strong>30,000 Merges, 16,000 Open Issues:</strong> Claude Code's public repo carries 16k unclosed issues with 98% unclaimed and 700+ security reports largely untouched, while an Anthropic engineer merged 30k commits in a day — writing capacity outran the capacity to respond.",
+        "<strong>44 of 45 Towns Said No:</strong> across US local votes on data-centre limits, 44 rejected and only a 940-person North Dakota town welcomed a $3B facility that promises 200 jobs.",
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "Agent Architecture",
+            "items": [
+                {
+                    "tag": "living-brain-decoupled-memory",
+                    "title": "@ladyxtel: Living Brain Puts Memory Outside the Model",
+                    "body": "Living Brain decouples memory from the model: one persistent store that ChatGPT, Claude, Cursor, Codex or a custom agent can write into and any of them can read back. The published numbers are 92.2% on LoCoMo, 464ms median retrieval and up to 22.6× fewer tokens per question. Treat the scores as vendor-reported until reproduced, but the design claim is the part worth keeping — parameters stay frozen and the plasticity lives outside them, so changing models stops meaning losing the history that made the agent useful. It is the same argument as compaction and offline consolidation, pushed to the point where the store is shared across vendors rather than owned by one.",
+                    "url": "https://x.com/ladyxtel/status/2117980022250316282",
+                },
+                {
+                    "tag": "checkpoint-agents-vs-subagents",
+                    "title": "@Alezander9: Checkpoint Agents Beat Subagent Delegation",
+                    "body": "The complaint is specific: in most harnesses a subagent starts from a summary the main agent wrote, makes assumptions, works, and returns another summary — the same lossy compression that breaks compaction. The alternative is to fork the session where it stands, so the child inherits identical context instead of a description of it, and shares the parent's cached prefix. Measured on a 137k-token session with Opus 5.5: main agent alone took 67s at $0.38 and added 8–17k tokens of context; a checkpoint fork took 117s at $0.68 and added 2k; a classic subagent took 123s at $0.57 and added 4–5k. The conclusion goes further than the numbers — avoiding large input matters more than keeping the cache warm, and most subagent work was better done in series with retrieval or split into fresh parallel sessions. \"Don't design harnesses based on our assumptions of human behavior\" is the line that earns the save.",
+                    "url": "https://x.com/Alezander9/status/2118517491798606140",
+                },
+                {
+                    "tag": "opencode-never-deletes-anything",
+                    "title": "@thdxr: OpenCode's Databases Grew Because Nothing Is Ever Deleted",
+                    "body": "OpenCode has been running long enough that its databases are large, because the product never deletes anything, and the founder is asking users which policy they actually want: keep everything forever, a prune command that drops rows older than n days, or an agent that decides what is worth deleting. There is no number in the post, which is why it reads as an honest design question rather than a launch. It is the unglamorous half of agent-native tooling — write volume grows faster than the schema, retention becomes a product decision, and \"ask the agent\" is now one of the plausible answers on the list.",
+                    "url": "https://x.com/thdxr/status/2118741624326926712",
+                },
+            ],
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Harness & Workflow Tactics",
+            "items": [
+                {
+                    "tag": "codex-cli-0167-agent-control-center",
+                    "title": "@erguoyi: Codex CLI 0.167.0 Adds an Agent Control Centre",
+                    "body": "No new model and no benchmark in this release — the changes are all about running several agents at once from a terminal. `codex agents --no-daemon` gives one view of every agent's state, with unread markers separating finished work from results you have actually read. Switching between model backends no longer discards the draft you were editing, local images preview inline while you write the prompt, diffs expand in place during approval instead of sending you to another window, and old sessions stay readable after a provider switch so you can mine them for prompts and start a fresh session. The poster's read is the one that matters: once multi-agent workflows are normal, task management, result tracking and context continuity may affect the experience more than another point of model capability.",
+                    "url": "https://x.com/erguoyi/status/2118650279474114734",
+                },
+                {
+                    "tag": "recursive-self-contained-list-prompt",
+                    "title": "@oasisfeng: A Recursive List Format That Kills Verbosity",
+                    "body": "Prompted by Karpathy's use of the ASD-STE100 simplified-technical-English standard to steer model prose, this is a system-prompt constraint rather than a request: force answers into a recursive, self-contained graded list, so each line stands alone and the hierarchy carries the structure instead of connective prose. The stated payoff is that scanning ten lines at a time becomes possible and attention only lands on the lines that matter, which removes the TL;DR reflex that verbose answers trained. The prompt itself is in the second image, so this is a pointer rather than a reproducible artefact — but the technique is transferable to any model that pads, and it is cheap to test against your own long-answer workload.",
+                    "url": "https://x.com/oasisfeng/status/2118687812988076219",
+                },
+                {
+                    "tag": "clean-by-default-ux-dx-ax-prompt",
+                    "title": "@wanerfu: The \"Make It Like Linear\" Prompt for Indie Builders",
+                    "body": "A paste-in prompt for Claude Code or Codex, aimed at people about to start a site or app: build it as clean as Linear's marketing site or Apple Notes — one simple goal, simple architecture, simple design, simple implementation. Cut slogans, helper text and secondary labels; if a page needs those to be understood, change the layout instead of adding explanation. Every decision has to improve user experience, developer experience and agent experience at the same time, without breaking anything. The third term is the interesting one: AX treats the coding agent as a reader of the codebase, which is why \"if it needs a label to be understood, fix the layout\" is a structural instruction rather than a style preference.",
+                    "url": "https://x.com/wanerfu/status/2118610590042304686",
+                },
+            ],
+        },
+        {
+            "emoji": "📊",
+            "title": "Cost, Throughput & Releases",
+            "items": [
+                {
+                    "tag": "gpt-61-tera-vs-sol-quota",
+                    "title": "@alwayspriyesh: GPT-6.1 Tera Burns the Same Quota Twice as Fast as Sol",
+                    "body": "A first-hand quota measurement, not a benchmark: on the same 5-hour Codex limit, GPT-6.1 Sol gave roughly 2.5 hours of usage while GPT-6.1 Tera gave barely 1–1.5 hours, with no noticeable speed advantage to explain the difference. The sample is one user over a few days, so treat it as a signal to measure rather than a verdict — but it is exactly the kind of number that changes a default, because a cheaper-sounding tier that consumes quota twice as fast is more expensive per unit of work. Worth re-running against your own task mix before switching a workflow onto it.",
+                    "url": "https://x.com/alwayspriyesh/status/2118606653767774254",
+                },
+                {
+                    "tag": "nvidia-30x-agentic-throughput-per-dollar",
+                    "title": "@nvidia: 30× Agentic Throughput per Dollar, ~3% More HBM",
+                    "body": "NVIDIA's claim for the Blackwell Ultra to Vera Rubin span is up to 30× higher agentic throughput per dollar, delivered with roughly 3% more high-bandwidth memory per GPU through codesign across the memory and data hierarchy. Both figures are vendor framing and neither ships with a workload definition, which matters — throughput per dollar depends on batch size, context length and how much of the run is prefill versus decode. Still, the ratio is the one to hold onto when comparing generations: the pitch has moved from FLOPs to useful agent work per dollar, and memory capacity per GPU is the lever being priced.",
+                    "url": "https://x.com/nvidia/status/2118478075054678253",
+                },
+                {
+                    "tag": "glide-decision-models-04b-27b",
+                    "title": "@george_onx: GLiDE Ships Five Open-Weight Decision Models, 0.4B to 27B",
+                    "body": "The thesis is that most decisions inside an app do not need a model that thinks out loud — they need a fast, calibrated answer — so GLiDE ships five open-weight models from 0.4B to 27B on one schema. The 27B and 2B variants use recurrent depth: selected middle layers run twice, buying more computation before the answer without adding parameters. The stated comparison is 73.3 on the Hugging Face Decision Index for GLiDE 27B against 71.86 for KnowLine 31B, about 2% higher with roughly 11% fewer served parameters. Expected scores and vendor benchmarks until reproduced, but the shape of the claim is the useful part: pick the smallest model that clears your workload instead of defaulting to the largest.",
+                    "url": "https://x.com/george_onx/status/2118405821361250562",
+                },
+            ],
+        },
+        {
+            "emoji": "🔐",
+            "title": "Security & Permissions",
+            "items": [
+                {
+                    "tag": "least-privilege-over-prompt-tricks",
+                    "title": "@0xgoel: Least Privilege Beats Every Prompt Trick",
+                    "body": "The argument is one sentence long and hard to argue with: an agent will use every permission you give it, not because it is malicious but because completing the task quickly is what it is optimizing for when nothing stops it. The four rules that follow are ordinary security hygiene applied to a new principal — scoped tokens instead of admin keys, read-only by default, write access granted per task rather than per session, and destructive actions behind a human yes. \"A good system prompt asks nicely. A missing permission just says no.\" The post is short and has no numbers, but it names the failure mode behind most agent incidents: the prompt was never the enforcement point.",
+                    "url": "https://x.com/0xgoel/status/2118741929009860642",
+                },
+                {
+                    "tag": "tailscale-default-allow-all-nas",
+                    "title": "@JustLikeBit: Tailscale's Default Rule Lets a Broken VPS Reach Your NAS",
+                    "body": "A concrete warning for anyone who joined a VPS, a home Mac and a NAS into one Tailscale network: the default policy allows every device to reach every other device, so compromising the internet-facing VPS is enough to walk sideways into the home network. The fix is four steps — tag the VPS separately, delete the default `* → *` allow rule, tighten ACLs so the VPS reaches only what it must, and do not run it as an exit node. Nothing here is exotic, which is the point: the convenience default is the vulnerability, and the people most exposed are the ones who set Tailscale up precisely so an agent could reach their machines from anywhere.",
+                    "url": "https://x.com/JustLikeBit/status/2118604042809299076",
+                },
+                {
+                    "tag": "30000-merges-16000-open-issues",
+                    "title": "@don_tech1: 30,000 Merges a Day, 16,000 Unclaimed Issues",
+                    "body": "The comparison is deliberately unfair and still lands: an Anthropic engineer merged 30,000 commits in a day with Claude Code, while Claude Code's own public repository carries about 16,000 unclosed issues — 98% unclaimed — and more than 700 security reports with almost nobody on them. The poster's explanation is the useful hypothesis rather than a proven fact: capacity to write code was maxed out while capacity to process feedback was left behind, possibly on purpose. Whether that is triage policy or neglect, the asymmetry is the same one every team hits after adoption — the queue you did not staff becomes the bottleneck, and it is made of exactly the work agents are worst at judging.",
+                    "url": "https://x.com/don_tech1/status/2118584665477087342",
+                },
+            ],
+        },
+        {
+            "emoji": "💸",
+            "title": "Market & Infrastructure",
+            "items": [
+                {
+                    "tag": "44-of-45-towns-reject-datacenters",
+                    "title": "@VeknQAQ: 44 of 45 Local Votes Rejected Data-Centre Limits",
+                    "body": "Across 45 US localities that voted on restricting data centres, 44 voted against restricting them, and the single welcoming jurisdiction was a 940-person North Dakota town where a $3B facility is under construction with a promise of 200 jobs. The framing in the post is the whole story: other towns are doing the arithmetic on electricity bills, while this one is doing the arithmetic on one in five residents getting a job. It is one data point about local consent for AI infrastructure, and the direction is worth noting — the constraint on build-out is showing up at the zoning meeting rather than in the capex guidance.",
+                    "url": "https://x.com/VeknQAQ/status/2118560308419809374",
+                },
+                {
+                    "tag": "brockman-claude-code-h1-2026",
+                    "title": "@mylifcc: Brockman Says H1 2026 Was Rough, Then Codex Recovered",
+                    "body": "A summary of Greg Brockman's remarks at the WSJ Tech conference: OpenAI had Codex in the first half of 2026 but almost nobody in the developer conversation was using it while Claude Code spread through the community and started taking enterprise accounts — \"the first quarter was hard, the second quarter was hard too.\" The post also cites Q2 revenue of $11.6B for Anthropic against $6.7B for OpenAI, then the turn: Q3 annualized run rate up 70% quarter over quarter, enterprise roughly doubling and now more than half of sales, with an IPO prepared for 2027. The revenue figures are the poster's, not Brockman's, so treat them as unverified — the durable claim is the strategic one, that the model alone stopped being the moat once agents started doing the work.",
+                    "url": "https://x.com/mylifcc/status/2118599765051035985",
+                },
+                {
+                    "tag": "claude-read-only-bank-access",
+                    "title": "@taiyanghere: Claude Gets Read-Only Bank Access in Beta",
+                    "body": "Anthropic shipped a personal-finance feature that lets Claude read a linked bank account with read-only permission — it can break spending down by category, flag upcoming payments and answer whether you spent more than you earned, but cannot move money. It is in beta for US Pro, Max and Ultra subscribers, and the poster notes the conversations about money are not used for training, which is the detail that decides whether people connect the account at all. The design is a clean example of the least-privilege pattern above: the capability is real, the blast radius is zero by construction, and the permission boundary is what makes the feature shippable.",
+                    "url": "https://x.com/taiyanghere/status/2118735484532973670",
+                },
+            ],
+        },
+        {
+            "emoji": "🧰",
+            "title": "Field Notes",
+            "items": [
+                {
+                    "tag": "ransomware-700-files-65-percent",
+                    "title": "@tvytlx: Claude Recovers 65% of Files Locked for Seven Years",
+                    "body": "A 2019 ransomware victim kept 700 encrypted files for seven years, then handed them to Claude Code in VS Code. The model's first answer was honest — RSA wrapping AES, brute-forcing the key is not happening — and then it found the seam: the ransomware encrypted only the first 16KB of each file to stay fast, leaving tens of megabytes intact behind a wrecked header. Rebuilding headers by hand never paid for itself, because a specialist's time cost more than the ransom. The agent compared damaged files against the few surviving originals and repaired headers in batches; when recovered images came back grey because colour data lived in the destroyed prefix, it trained a U-Net on the victim's RTX 4070 using intact photos with their first 16KB removed; for a 239MB SketchUp model with no recovery tool it wrote a parser from open documentation and reverse-engineered three undocumented structures to rebuild the scene in Blender. Result: 65% of 700 files usable, 35% permanently gone. The stated boundary is the honest part — this worked because the ciphertext pattern was lazy, not because the encryption broke.",
+                    "url": "https://x.com/tvytlx/status/2118157601364197459",
+                },
+                {
+                    "tag": "avrea-ci-runner-163-percent",
+                    "title": "@HannuValtonen: Avrea Claims 163% Faster CI Than GitHub's Runners",
+                    "body": "Avrea's launch claim, from the RunsOn comparison: 163% faster than GitHub's own runners and 16% faster than Blacksmith. No workload, repo size or cache configuration is given in the post, and a CI benchmark is only as meaningful as its slowest job, so the numbers are a starting point rather than a result. It still belongs here because runner speed is a direct multiplier on agent throughput: when an agent's loop is gated on CI, a faster runner buys back wall-clock on every iteration, and the comparison against Blacksmith at least puts the claim inside a known range instead of against a strawman.",
+                    "url": "https://x.com/HannuValtonen/status/2117575593231253627",
+                },
+                {
+                    "tag": "commits-surge-annual-pentest",
+                    "title": "@AikidoSecurity: Commits Surged, Most Teams Still Pentest Once a Year",
+                    "body": "The pitch is short enough to be a market observation: commits on GitHub have surged this year while most teams still run a penetration test once a year, so Aikido's answer is to test what changed as you deploy rather than testing everything on a calendar. No figures are attached to the surge claim, which weakens it, but the mismatch it describes is the same one showing up across this digest — agent write volume rising against review, triage and verification capacity that was sized for human commit rates. Whether continuous pentesting is the right fix or a vendor's framing of it, the gap is real and it is the one teams keep discovering after adoption.",
+                    "url": "https://x.com/AikidoSecurity/status/2115109576928551175",
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "how-agents-waste-your-money-paper",
+                    "title": "@arkyyang: Measuring Exactly Where Agent Tokens Are Wasted",
+                    "body": "A November 4 arXiv preprint asks how many of an agent's output tokens were removable, using a second model as a judge that labels text deletable without losing work. Across six frontier models and five benchmarks — tau-bench airline and retail, SWE-bench Verified, Claw-Eval, MCP-Atlas — roughly 18% of output tokens were waste, split into Restate, Duplicate-Fetch, Padding and Detour. The findings are actionable rather than academic: pruning the reasoning flagged as repeated or filler, live during the run, removed 41% of reasoning on SWE-bench Verified while success rose 89.0% to 89.5%, whereas deleting all reasoning dropped it to 73.0%; waste varied more across benchmarks than across models, with detours the largest bucket; Low to High effort lifted success 69.7% to 78.4% but High to Max added 0.80M tokens for no measurable gain and cost 1.62× on tasks both solved; and five harnesses on the same model produced markedly different token use. Instrumentation is a LiteLLM proxy recording every turn with a few lines changed, and the code and labelled runs are open-sourced.",
+                    "url": "https://x.com/arkyyang/status/2118717789422911567",
+                },
+                {
+                    "tag": "harness-engineering-core-bench-53-points",
+                    "title": "@amitmuflis: The Grader Moved the Score 53 Points",
+                    "body": "The opening data point is the argument: Opus 4.5 first scored 42% on CORE-Bench, then a researcher found the grading was broken — it rejected \"96.12\" when the expected value was \"96.124991…\", some task specs were ambiguous and some tasks could not be reproduced. After fixing the graders and scaffold, the same model scored 95%, with nothing about the model changed. From there the piece builds a stack-neutral method: nodes for work, gates for checks, conditional edges that route failures into repair until the gate is green or a cap trips. The reliability arithmetic is the part to steal — 0.75³ ≈ 42% for three passes at 75%, and a 20-step pipeline at 95% per step finishes clean about 36% of the time, while a gate with one retry lifts each step to roughly 99.75% and the whole run back near 95%. It also catalogues code gates that take under a second (test, lint with remediation text, schema, scope, count, outcome, tolerance) and the ordering rule: code first, model second, human last.",
+                    "url": "https://x.com/amitmuflis/status/2118550699420393754",
+                },
+                {
+                    "tag": "time-per-task-outranks-tokens-per-second",
+                    "title": "@RudrajMehta: Time per Task Beats Tokens per Second",
+                    "body": "A small measurement with a useful reframing: on the same evaluation, Carbon at high effort solved 60 tasks in 30 minutes, Opus at max solved 59 in 28, and Astra at max solved 57 in 20. Astra streams more slowly but finishes about ten minutes sooner because it thinks less — three points of accuracy traded for a third of the wall clock. For an agent loop that runs a task twenty times a day, that difference is hours saved per day at the cost of three score points, which is a trade most production loops should take and most benchmarks never surface. Single-run numbers, no variance reported, so treat the ordering as a hypothesis to test on your own workload rather than a settled ranking.",
+                    "url": "https://x.com/RudrajMehta/status/2118742319327506554",
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
