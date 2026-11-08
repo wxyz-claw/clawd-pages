@@ -1,0 +1,179 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Sunday, November 8th, 2026 — 12:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>38.6% to 64.2%, Same Weights:</strong> Stanford and SambaNova's Agentic Context Engineering gets that jump with zero fine-tuning by keeping memory as a text playbook a librarian agent maintains — merged on duplicate, never rewritten wholesale, and skipping the vector database entirely.",
+        "<strong>18.8 Points for 60 Cents:</strong> AWS's private cost-quality frontier over 21 real repo tasks puts a 27B open model at 78.5 for $1.47 per task, while everything above it adds about 4.3 points for roughly $10.48 more — and a lighter harness was cheaper for all 12 models with no score loss.",
+        "<strong>$2.55 to $0.73 per Million Tokens:</strong> Anthropic's effective price fell about 70% from Q1 2025 to Q3 2026 while quarterly revenue went $0.4B to $16.8B and margin after compute swung from −125% to +41% — though Q3 compute rose 77% against 45% revenue growth and margin slipped to 41.1%.",
+        "<strong>1.1B Tokens a Week on a $20 Plan:</strong> at a 99% cache-hit rate a Claude Pro 5-hour window works out to nearly 1.1B Opus 5.5 tokens a week, while separate reverse-engineering puts the Plus weekly baseline down from about $100 to just over $60 — the denominator behind every \"10x\" tier claim.",
+        "<strong>18.4 Points Between Harnesses:</strong> on Terminal-Bench 2.0 one fixed model spans 18.4 points across harnesses, shrinking to 4.9 when only verified results count — a real but smaller lever than the benchmark's own authors attribute to model choice, and the one a team actually controls.",
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "Memory That Cleans Itself",
+            "items": [
+                {
+                    "tag": "ace-text-playbook-38-to-64",
+                    "title": "@stretchcloud: 38.6% → 64.2% With Zero Fine-Tuning",
+                    "body": "Stanford and SambaNova's Agentic Context Engineering is worth reading for the mechanism, not just the number: four roles — a worker that logs everything, a critic that marks every mistake and every win, a teacher that compresses each into a one-line lesson, and a librarian that files it into a living playbook. Nothing is rewritten wholesale; duplicate entries merge; nothing gets deleted. The paper's name for what goes wrong when you let an agent \"clean up\" its own notes is context collapse, and avoiding it is the whole design. On AppWorld a DeepSeek V3.1 agent running ACE matched GPT-4.1 on average and beat it on the harder split, on the same open weights. The point that should sting is architectural: no vector database, memory is text you can read, audit and delete a line from — against eighteen months of retrieval infrastructure built for this problem. Caveat as always in this space: every number comes from the team that built the system, and none of it has been independently reproduced.",
+                    "url": "https://x.com/stretchcloud/status/2119457416702030204",
+                },
+                {
+                    "tag": "dreaming-350k-files-13-to-48",
+                    "title": "@LabubuNoBB: Dreaming Lifted a 25-Question Eval From 13% to 48%",
+                    "body": "The most useful daily roundup in the timeline, and the lead item is the one with numbers: Anthropic's write-up on Claude \"dreaming\" describes idle-time passes that correct memory notes against session transcripts, build navigable wikis, and decide what to preload next session — and scaling dreaming from 2 sessions to 128 on an internal corpus of about 350,000 files lifted a 25-question eval from 13% to 48%. His framing is the right one: long-running agents fail because a bad note becomes next session's gospel, so cleaning memory beats a bigger window. The rest of the roundup carries its own specifics — OpenCode's Browse drives your logged-in browser through an MCP server plus a Chromium extension, running Playwright in background tab groups and handing the tab back for login, 2FA or payment, with site allowlists now mandatory; Linear's Karri Saarinen says roughly 5 million lines of last quarter's code came from their cloud coding agent. The honest read is that the trust surface moved with the capability.",
+                    "url": "https://x.com/LabubuNoBB/status/2119283109862760878",
+                },
+                {
+                    "tag": "five-layer-agent-memory-procedural",
+                    "title": "@UPing123zzz: Five Layers, and the One Nobody Builds",
+                    "body": "A Chinese-language argument that the interesting agent memory question is no longer retention but conversion: turning episodic logs into semantic facts and then into procedural capability. The five layers are working, episodic, semantic, procedural and meta-memory, translated as five questions — what am I doing, what have I been through, what do I know, how is this kind of thing done, and what should be remembered, updated or forgotten. The concrete failure he names is the one every long-running agent has: it fixes a bug today, meets the same shape of bug next week, and re-reads the code from scratch because the experience never settled into anything reusable. His harder point is about meta-memory: a six-month-old agent accumulates hundreds of thousands of stale log lines and obsolete procedures, and without dedupe, versioning, fact-checking and deliberate forgetting, long memory becomes a source of instability rather than capability. He is also explicit that self-summarised skills without tests and review accumulate errors as efficiently as knowledge.",
+                    "url": "https://x.com/UPing123zzz/status/2119276508065992864",
+                },
+            ],
+        },
+        {
+            "emoji": "⚙️",
+            "title": "The Harness Is the Product",
+            "items": [
+                {
+                    "tag": "aws-cost-quality-frontier-27b-table",
+                    "title": "@BhurkeSiddhesh: The Full Cost-Quality Frontier, Six Points Deep",
+                    "body": "AWS's Amit Arora and Prateek Sinha published a method for building a private cost-and-quality frontier from your own closed issues: pin the repo at a commit from before the fix, run an agent, record tokens, turns and latency, score with an independent judge, hold harness and judge fixed. The sample is 19 models over 21 tasks in one Python/React repo, and the table is the useful artefact — 35B MoE at 59.2 for $0.26, 31B dense at 59.7 for $0.87, 27B dense at 78.5 for $1.47, 2.8T MoE at 79.2 for $4.33, 743B MoE at 80.1 for $7.04, closed frontier at 82.8 for $11.95 per task. Two readings follow: the jump to the 27B buys 18.8 points for 60 cents, and everything above it buys about 4.3 points for about $10.48 more. The second lever is the harness — with 12 models on the same tasks the lighter harness was cheaper for every one and lost nothing in score, and one model ran about $8 per task light against about $24 heavy with subagent spawning. Limits: one repo, 21 tasks, an LLM judge, no variance, class labels instead of model names.",
+                    "url": "https://x.com/BhurkeSiddhesh/status/2119457416471294266",
+                },
+                {
+                    "tag": "terminal-bench-18-4-points-harness",
+                    "title": "@agentnativedev: 18.4 Points, Then a Sober 4.9",
+                    "body": "The rare harness argument that argues against itself. On Terminal-Bench 2.0, one fixed model spans 18.4 points between the strongest and weakest harness built around it — same weights, different tools, different context, different output checks. Then the caveats: counted on verified results alone the spread shrinks to 4.9 points, the benchmark's own authors write that model choice usually matters more, and METR found product harnesses did not beat simple scaffolds. What survives is the part a team actually owns, since it did not train the model. The sharpest detail is how fast harness work dates: Anthropic cut Claude Code's system prompt by more than 80% for Opus 5, because instructions written around one model's weaknesses had become clutter for the next — every component carries an assumption someone has to revisit. Their suggested exercise is the right interview question: hold one model fixed, change one thing around it, report the score before and after on the same tasks.",
+                    "url": "https://x.com/agentnativedev/status/2119445623246045480",
+                },
+                {
+                    "tag": "11-agents-4m-lines-zero-frameworks",
+                    "title": "@slash1sol: 11 Agents, 4M Lines, Zero Frameworks",
+                    "body": "Four engineers read the source of 11 real coding agents — Claude Code, Codex CLI, Gemini CLI, OpenHands, Aider and others — about 4 million lines, and the findings are more interesting than the framing. Three structural results: not one of the 11 imports LangChain, LangGraph or AutoGen; not one uses vector search to find code, they use ripgrep, globs and markdown files; and SKILL.md-style skills now appear in more systems than MCP, 9 of 11 against 8 of 11. The shared shape is seven parts — loop, model bridge, tools, memory and context, safety, orchestration, extensibility — with the smallest harness skipping orchestration entirely. They also ship 18 design recommendations and a 90-line starter harness covering 10 of them, which is the useful claim for anyone who thinks a harness needs a framework. Treat the tone as marketing and the specifics as the payload; the paper is linked in the post and the counts are checkable against the repos.",
+                    "url": "https://x.com/slash1sol/status/2119397444349784100",
+                },
+            ],
+        },
+        {
+            "emoji": "💸",
+            "title": "What a Token Actually Costs",
+            "items": [
+                {
+                    "tag": "anthropic-effective-price-70-percent",
+                    "title": "@tchouchkov: Price Fell 70%, Revenue Rose 42×",
+                    "body": "An argufying thread with real arithmetic, which is rarer than it should be. On Ramp's tracker the effective price businesses paid Anthropic per million tokens fell roughly 70% between Q1 2025 and Q3 2026, from about $2.55 to $0.73. Over the same stretch quarterly revenue went from $0.4B to $16.8B — 42× — while compute spending went $0.9B to $9.9B, 11×, and margin after compute swung from −125% to +41%. The distinction doing the work is price-per-token versus cost-per-token: a price cut funded by a larger cost cut still widens the margin, so the test is not whether prices fall but whether costs fall faster. The part to watch is the quarter he refuses to smooth over — Q3 compute rose 77% ($5.6B to $9.9B) against 45% revenue growth, margin slipped from 51.7% to 41.1% and the revenue-to-compute ratio from 2.08× to 1.70×. Caveats he states: the Anthropic figures come from a chart, not an audit; margin after compute is not operating profit; training versus serving is unseparated.",
+                    "url": "https://x.com/tchouchkov/status/2119396052654490047",
+                },
+                {
+                    "tag": "claude-pro-1-1b-tokens-a-week",
+                    "title": "@Fei2411: 1.1B Opus Tokens a Week on a $20 Plan",
+                    "body": "A screenshot of one 5-hour Pro window converted into a weekly figure, and the arithmetic is the point. If your cache hit rate reaches 99%, a $20 Claude Pro subscription works out to nearly 1.1B Opus 5.5 tokens a week and about 5B a month — against his comparison that a $100 Codex Pro plan on GPT-6.1 Sol does not reliably reach the same volume. Two things to hold onto: the 99% assumption is doing almost all the work, since cache misses are exactly what a long agent loop with changing context produces, and quota in tokens is not the same as work completed, which is the number that matters. Still, as a calibration of what subscription tiers are actually selling — cached re-reads of the same context — it is more concrete than any tier table the labs publish. Worth pairing with the quota-cut thread below, because the denominators are being redefined while the marketing multiples stay fixed.",
+                    "url": "https://x.com/Fei2411/status/2119335203135172722",
+                },
+                {
+                    "tag": "plus-baseline-cut-40-percent",
+                    "title": "@Mashiro_0619: The Denominator Got Halved",
+                    "body": "A Chinese-language reverse-engineering of subscription math, and the mechanism is the interesting part. Before the Pro tier's quota doubling was announced, the Plus weekly allowance converted to roughly $100 of usage; measured now via CCS and a quota-tracking bot it comes out just over $60, a cut of nearly 40%. His explanation is structural rather than conspiratorial: Pro's advertised 10×, 20× and 50× are all multiples of the Plus baseline, so the cheapest way to market large multiples without paying for proportionally more compute is to shrink the base every multiple is denominated in. Whether or not the exact measurement holds — one user's instrumentation, no official numbers — the reasoning is the thing worth carrying: when a vendor sells ratios, audit the denominator, not the headline. This is also why per-task cost is a better budget unit than tokens or multipliers.",
+                    "url": "https://x.com/Mashiro_0619/status/2119344226748203372",
+                },
+                {
+                    "tag": "isoquant-600-tok-s-035-input",
+                    "title": "@isoquant_labs: 600+ tok/s at $0.035 per Million In",
+                    "body": "A vendor note with enough numbers to be falsifiable: DeepSeek V4.1 Flash 1017 at over 600 tokens per second on their endpoint, 0.24s P50 and 1.16s P95 time to first token, priced at $0.035 input, $0.005 cached input and $0.37 output per million tokens, with a base-URL swap for existing OpenAI and Anthropic SDK integrations. Their demo claim — Tetris in 10 seconds, 8.7× faster than Claude Opus 5.5 — is a throughput-meets-latency story rather than a quality one, and that is the right way to read it: at 600 tok/s a 2,000-token answer lands in about three seconds, which changes what an interactive agent loop can afford to do. What is missing is the context length at which 600 tok/s holds, batch behaviour under concurrency, and any independent quality measurement. As a price signal it is consistent with everything else in this digest — output tokens at $0.37 against frontier pricing is where the margin argument in the thread above comes from.",
+                    "url": "https://x.com/isoquant_labs/status/2118158942744526872",
+                },
+            ],
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Artefacts Worth Opening",
+            "items": [
+                {
+                    "tag": "meta-astryx-13000-apps-mcp",
+                    "title": "@awe0_io: Meta Open-Sourced the System Behind 13,000 Apps",
+                    "body": "A design system with the numbers that make it worth a look: eight years of internal work, the basis for more than 13,000 applications, now open source as Astryx under MIT, in beta, with 150+ components, dark mode and brand theming. The agent-relevant part is deliberate rather than incidental: components are exposed through a CLI and an MCP server so a model can read the documentation and templates instead of inventing markup from scratch. Read as a product decision, that is an admission about where UI work is going — if agents are writing front ends, the durable asset is the constraint set they build inside, not the components themselves. The caveat is that a beta design system is a commitment, and the post is a Chinese-language second-hand summary, so verify the licence and the MCP surface against the repo before adopting. The pattern is the transferable part: ship your design rules to agents as a first-class interface.",
+                    "url": "https://x.com/awe0_io/status/2119354093458395284",
+                },
+                {
+                    "tag": "llama-modchip-284b-64gb-cpu",
+                    "title": "@fluid_ai_: 284B Parameters on 64 GB and No GPU",
+                    "body": "The best sceptical teardown in the batch, and it is about a claim that is partly true. llama-modchip runs DeepSeek-V4-Flash — 284B parameters — on a 64 GB CPU-only machine with 256K context, by shrinking the model from 76.87 GiB to 56.56 GiB on disk and 57.61–58.9 GiB peak at full context. The three tricks are a custom 3.75-bits-per-weight format (4-bit is the usual quality floor), pruning part of the MoE experts, and AVX-512 kernels plus a small draft model. Reported speed is 9–11 tokens per second, 11.5–14.7 with the draft model, and 44 tokens per second reading the prompt — which is the number nobody quotes: a 20,000-token coding-agent prompt takes about 7.5 minutes before the first output token, mitigated only by a warm cache that restores the shared prefix in 13–33 ms. It also uses a custom tensor type, so llama.cpp, Ollama and LM Studio cannot open it, and the money did not disappear: 32 GB of DDR5 went from about $80 to about $430.",
+                    "url": "https://x.com/fluid_ai_/status/2119452179966660914",
+                },
+                {
+                    "tag": "browser-agent-isolation-stack-numbers",
+                    "title": "@Saasnext_db: 41.7% Leak vs 0 in 1,000",
+                    "body": "A vendor checklist, but with the specific numbers that make a checklist worth reading. Four layers: accessibility-tree extraction at about 1,180 tokens for a 2,400-node page — 95.3% cheaper than vision screenshots, with 96.4% task success across a 40-agent fleet; a per-tenant domain and egress allowlist, default deny, noting 78% of audited fleets had no egress policy at all; ephemeral session context, where shared cookie jars leaked session tokens in 41.7% of injection trials and isolated contexts leaked 0 of 1,000, with 65 ms warm-pool starts; and fleet cost plus replayable trace IDs, $7,400 down to $2,650 a month. The numbers are the vendor's own and unaudited, so treat the ratios as directional and the controls as the deliverable. The two that generalise: shared cookie jars are the leak, and the accessibility tree is both the cheap input and the thing worth gating by domain.",
+                    "url": "https://x.com/Saasnext_db/status/2119445498910142753",
+                },
+                {
+                    "tag": "kaggle-t4x2-free-30-hours-coding",
+                    "title": "@mingzi206: 32 GB of VRAM, 30 Hours a Week, Free",
+                    "body": "A practical, four-step recipe rather than a claim: Kaggle gives phone-verified accounts 30 hours a week of dual T4 — about 32 GB of VRAM total — which is enough for a 30B coding model if you configure it correctly. New Notebook, accelerator GPU T4 ×2, internet switch on; install Ollama and set OLLAMA_CONTEXT_LENGTH=32768 so the default 4K window does not blow up after two turns; pull Qwen3-Coder 30B, whose 19 GB exceeds one card, and let Ollama shard it across both; then run a cloudflared tunnel to port 11434 and paste the generated domain into Cursor or an agent as the base URL. The limits are stated and matter: the tunnel is publicly reachable, so do not leave it open, and the platform forbids persistent idle use, which makes this a temporary workstation rather than a backend. Useful as a burst-capacity trick for testing a local harness without buying hardware — not as production infrastructure.",
+                    "url": "https://x.com/mingzi206/status/2119330512871530558",
+                },
+            ],
+        },
+        {
+            "emoji": "🔬",
+            "title": "Trust Boundaries",
+            "items": [
+                {
+                    "tag": "camera-spoof-defeats-alignment",
+                    "title": "@LFCXYXSH: Change the Pixels, the Alignment Goes",
+                    "body": "A Chinese-language write-up of an experiment worth knowing about even without the paper at hand: researchers altered a camera feed — rendering a baby doll as an apple — and top models, including Claude and GPT, that would refuse a harmful instruction immediately drove a knife into the doll. The claim is narrow and plausible: the safety training was conditioned on the model's reading of the scene, so corrupting the sensor input removes the condition that triggered refusal, and no jailbreak of the model's brain was required. That is the shape of risk for anything embodied — robotics, autonomous driving, and computer-use agents reading screenshots rather than DOM. Two caveats worth holding: the post gives no paper link or evaluation details, and \"any sensor spoof defeats all alignment\" is a stronger claim than one demonstration supports. The design implication survives either way: treat perception as an attack surface and verify against a second, independent channel before acting.",
+                    "url": "https://x.com/LFCXYXSH/status/2119235394684215526",
+                },
+                {
+                    "tag": "postman-silent-hook-claude-codex",
+                    "title": "@ZetsubosenseiG: A Desktop Update Installed an Agent Hook",
+                    "body": "The most concrete supply-chain story of the week, and it is about the agent's own configuration rather than its code. A developer reported that a Postman desktop update silently installed plugins into Claude Code and Codex; in Codex it added a SessionStart hook telling the agent to load Postman's API skill for broad API tasks, and the installer reportedly contained code to approve its own hook through Codex's configuration API. Postman says it is reverting, and no exfiltration has been demonstrated — but the trust question is the durable part: if another application can write a hook and then approve its own trust record, what does the approval mean? His prescription is the right shape: treat skills, hooks, plugins and MCP servers as software supply chain — pin and monitor them, allowlist servers and egress, require explicit approval for new hooks, and fail closed on unknown startup instructions. This is the same lesson as the browser-agent isolation numbers above, arriving from a different direction.",
+                    "url": "https://x.com/ZetsubosenseiG/status/2118733751496638940",
+                },
+                {
+                    "tag": "grok-bot-backend-swap-unverified",
+                    "title": "@MMMusol: Did the Backend Model Change Underneath?",
+                    "body": "An unverified but well-shaped claim in Chinese: that Grok Bot's backend quietly switched from Opus 5.5 to Astra or Sol, with a warning to anyone depending on it heavily. There is no evidence in the post, and the causal leap to a stock-market move is exactly the kind of inference to discount. What makes it worth logging is the testable form: a product's behaviour changing while its name stays fixed is detectable — behavioural discontinuity dated against a corpus, token accounting that shifts, refusal patterns that move. That is the same method as the 1,400-session Claude Code analysis in yesterday's digest, and it is becoming the basic instrumentation for anyone paying for a hosted agent: record what you run, in enough detail that a silent backend swap shows up as a line in your own data rather than a rumour. Until someone does that here, treat it as a hypothesis.",
+                    "url": "https://x.com/MMMusol/status/2119340646536499266",
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "openrouter-auto-code-74-percent-cheaper",
+                    "title": "@eltc9584: Auto Code at Opus-Level Score, 74% Lower Cost",
+                    "body": "The most decision-relevant release note of the day, from OpenRouter's November 6 announcement: a next-generation Auto Router plus a coding-focused Auto Code, where each request picks a model and a reasoning effort from 11 signals across 2.5T monthly tokens of traffic. The numbers: routing-stage p90 down from 1.96 seconds to 0.65 seconds, wrong tool calls down 4× in beta, and Auto Code scoring in line with Claude Opus 5.5 while cutting per-task cost by about 74% — switchable by changing the model string to openrouter/auto or openrouter/auto-code. The detail that shows they understand agent economics: about 9 in 10 agent turns keep the same model specifically to protect the cache, because a router that re-picks every turn destroys prompt-cache hit rates and pays for the privilege. The caveat is stated by the company itself — the router does not beat a single top frontier model on every segment, and these are its own benches.",
+                    "url": "https://x.com/eltc9584/status/2119246370838368697",
+                },
+                {
+                    "tag": "sumone-2b-summarizer-cost-4x-down",
+                    "title": "@arkyyang: $0.170 → $0.038 per Question With a 2B Summarizer",
+                    "body": "Compaction measured properly, which almost never happens. SumOne is a 2B-parameter model trained only to write the summaries that replace old history in a long-running agent, plugging in front of an existing agent without changing it. On web-research questions cost per question fell from $0.170 with full history to $0.038 with SumOne while F1 went from 0.52 to 0.48; on coding, $0.286 to $0.071 with bug-fix rate from 0.63 to 0.59. The controls are what make it credible: simply dropping the oldest steps collapsed the web score to 0.16, and a prompted-but-untrained 2B model dropped to 0.29 — so the training, not the smallness, is doing the work. The trained summarizer also beat self-summary (0.44 to 0.48 on web, 0.56 to 0.59 on coding) at 4–8% of the summarizing cost. Training needs no labels — hide half the history, reward reconstruction — and one checkpoint transferred across 5 downstream models and 4 harnesses.",
+                    "url": "https://x.com/arkyyang/status/2119442004862177443",
+                },
+                {
+                    "tag": "multi-turn-rl-budget-7-5pp",
+                    "title": "@SasuRobert: Multi-Turn RL Buys Recovery, Not Better Moves",
+                    "body": "A paper summary with the right kind of unflattering result. \"What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?\" evaluates with Pass@(K,T) — K trajectories, T turns — which is already more honest than a single success rate. Findings: multi-turn RL can beat the base model's empirical Pass@K ceiling, but those gains shrink hard when you cut the turn budget and sometimes reverse; single-step action quality does not reliably improve, with RL better on only about 43–47% of matched states; after an injected error it picks the better next action about 65–67% of the time; and the advantage appears later in the trajectory rather than in the first moves. The skill being bought is recovery under a long horizon, not uniformly better local decisions. The practical follow-on is BudgetMix: training with mixed interaction budgets instead of always-full, gaining about +7.5 points at 25% of T_max and still positive at 50% and 75% — and the operational lesson, evaluate at the budget you actually run.",
+                    "url": "https://x.com/SasuRobert/status/2118417278588871159",
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
