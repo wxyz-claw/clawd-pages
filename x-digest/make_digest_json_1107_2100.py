@@ -1,0 +1,179 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Saturday, November 7th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>CI Is the Second Bill:</strong> one team's CI bill grew an order of magnitude in a month chasing fast runners for agent PRs, and a price comparison puts fully productized runners two orders of magnitude above the DIY version — the premium is orchestration, not compute.",
+        "<strong>14.5M vs 3.2M Tokens, 1.6× the Cost:</strong> on Artificial Analysis's Coding Agent Index v2.0, Claude Code at max effort burns 4.5× the tokens and 3.7× the turns of Codex per task, yet costs $11.42 against $7.04 — volume and price per token are separate levers.",
+        "<strong>$1.29 → $0.71 per Task:</strong> telling a model its tokens cost 20× more, instead of banning it from coding, halved the bill across 12 tasks while the worker still wrote 94% of the code and completion stayed at 67%.",
+        "<strong>$330k vs $167k a Year per Server:</strong> Microsoft walking away from its Oracle capacity is best read through depreciation — a $1M box costs 3-year accounting $330k of annual profit and 6-year accounting $167k, and the older H100s underneath now rent for $2.64/hour against $8.",
+        "<strong>92.8 on the Search Set, 40.3 Everywhere Else:</strong> RRSI's legal-work run shows an unconstrained harness evolving to a 92.8 search score and a 40.3 average on three unseen benchmarks; constraining the search lowered the search score to 90.5 and raised the unseen average to 43.6 with the model frozen.",
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "The Second Bill: CI, Sandboxes & Idle Capacity",
+            "items": [
+                {
+                    "tag": "ci-bill-10x-runners-50x-premium",
+                    "title": "@CalvinGrunewald: The CI Bill Grew 10× in a Month",
+                    "body": "First-hand and specific: their CI bill grew by an order of magnitude in one month trying to keep CI fast across all the PRs agentic development produced, and he calls that unsustainable. The analysis behind the chart is the useful part — sandbox and runner vendors are almost certainly stacking margin on OSS firecracker or containerd with a proprietary orchestrator on top, so fully productized runners come out two orders of magnitude above the DIY version, and he cites a 50× premium in the case he looked at. Which means the cost driver in a fully agentic shop is not only tokens: it is the number of times code gets executed, and the fix is either self-solved orchestration against cloud providers directly or your own hardware. The caveat is that he is selling the conclusion from one company's data with no unit economics shown, and operating these systems does teach lessons you cannot vibe-code — the open question is whether those lessons are worth 50×.",
+                    "url": "https://x.com/CalvinGrunewald/status/2119159153209778632",
+                },
+                {
+                    "tag": "deepseek-go-usage-35-percent-3x-gpu",
+                    "title": "@fanjiewang: Usage Up 35%, GPU Capacity 3×'d Last Week",
+                    "body": "A rare supply-side datapoint from inside a serving operation: DeepSeek Flash traffic on Go is recovering, usage up 35% week over week, after they tripled GPU capacity last week and are on track to double it again this week. Three weeks of that arithmetic is a 6× capacity expansion against a 35% weekly demand rise — the kind of ratio that explains why inference pricing keeps falling while total spend keeps climbing. It is also the counterweight to every \"compute is overbuilt\" claim in this digest: capacity decisions here are being made against observed demand, not against a depreciation schedule. Single operator, no absolute numbers, so treat the percentages as directional; the pattern to watch is whether capacity growth tracks usage or keeps running ahead of it.",
+                    "url": "https://x.com/fanjiewang/status/2119148229329850695",
+                },
+                {
+                    "tag": "cnc-simulation-no-mcp-50-percent-quota",
+                    "title": "@Lookexing: No Skill, No MCP, 50% of a Weekly Quota Gone",
+                    "body": "The most honest computer-use story in the batch, in Chinese: he took a job simulating CNC turning, assumed something this widely used must have a skill or an MCP server, discovered there was neither, and fell back to computer use. Four hours later the agent had burned 50% of a Pro plan's weekly quota and still was not done, and he is not a CNC specialist. The transferable lesson is about capability sourcing rather than about model choice: when a domain has no programmatic surface, the fallback is a screenshot-and-click loop that pays for pixels on every step, and the cost is measured in quota rather than in dollars, which makes it easy to discover too late. The right move before quoting the job was to check for a documented API, a file format, or a headless driver — and to price the absence of one into the estimate.",
+                    "url": "https://x.com/Lookexing/status/2119089163610017959",
+                },
+            ],
+        },
+        {
+            "emoji": "⚡",
+            "title": "Serving, Speed & What Actually Ships",
+            "items": [
+                {
+                    "tag": "vercel-ai-gateway-1000-tok-s",
+                    "title": "@vercel_dev: DeepSeek V4.1 Flash at 1,000+ Tokens per Second",
+                    "body": "An official availability note with one number: the Ultrafast variant of DeepSeek V4.1 Flash 1017 is on AI Gateway at over 1,000 tokens per second, addressable as `deepseek/deepseek-v4.1-flash-1017-ultrafast` for coding, reasoning and agents. The point of listing it is the integration shape — one model string, no new SDK, which is the practical version of the claim that switching providers should be a base-URL change. What the post does not give is the context length at which 1,000 tok/s holds, the batch size, or the price, and those three decide whether the number is usable in an agent loop or only in a demo. At 1,000 tok/s a 2,000-token answer lands in two seconds, which changes the design calculus for anything where a human is waiting.",
+                    "url": "https://x.com/vercel_dev/status/2119119166510862752",
+                },
+                {
+                    "tag": "nvidia-30x-agentic-throughput-per-dollar",
+                    "title": "@nvidia: 30× Agentic Throughput per Dollar, on ~3% More HBM",
+                    "body": "The vendor claim is precise enough to argue with: NVIDIA codesign from Blackwell Ultra to Vera Rubin delivers up to 30× higher agentic throughput per dollar, with roughly 3% more high-bandwidth memory per GPU. That combination is the interesting part — a 3% memory increase cannot produce 30× throughput, so the multiple has to come from the rest of the stack, and \"agentic throughput\" is a workload definition where KV-cache reuse and long-context batching dominate. Which is exactly the lever that matters for agents and is invisible in a tokens-per-second spec sheet. Vendor number, and \"up to\" is doing real work; the useful reading is that the competitive axis has moved from FLOPs to memory hierarchy and cache behaviour, and that per-dollar-per-agent-task is now the number NVIDIA chooses to advertise.",
+                    "url": "https://x.com/nvidia/status/2118478075054678253",
+                },
+                {
+                    "tag": "chatgpt-dot-cloud-computer-apps",
+                    "title": "@diegocabezas01: The App List on ChatGPT Dot's Cloud Computer",
+                    "body": "A plain inventory that says more than most launch posts: the cloud computer behind ChatGPT Dot ships Blender, GIMP, Inkscape, Kdenlive, Godot, FreeCAD, KiCad, QGIS, 3D Slicer and Chromium. Read as a product decision, that is a bet that the agent's value comes from operating real desktop software — 3D modelling, video editing, PCB design, GIS, medical imaging — rather than from an API catalogue, which is the same conclusion the accessibility-tree tools in this batch reach from the other direction. It also sets the evaluation bar: an agent that can open KiCad and route a board is a different claim from one that can write a KiCad file. No performance numbers here, so this is a capability list to test rather than a result — but the list is the most concrete statement yet about which work these systems are aimed at.",
+                    "url": "https://x.com/diegocabezas01/status/2119139068445401330",
+                },
+            ],
+        },
+        {
+            "emoji": "🛠️",
+            "title": "Builder Artefacts",
+            "items": [
+                {
+                    "tag": "elephant-goldfish-context-split-plugin",
+                    "title": "@GoogleCloudTech: Elephant-Goldfish, Spec by Deep Context, Test by No Context",
+                    "body": "An open-source plugin built on a clean asymmetry: a deep-context agent drafts the spec, then zero-context subagents stress-test it before any code is written, and the human makes the architectural calls and approves the spec. The mechanism is worth stealing even if you never install it — the reason agents ship confidently broken work is that the agent that wrote the plan also judges it, carrying all the assumptions that produced the plan. A fresh context has none of them, so it asks the questions the author already answered silently. It works with Antigravity, Claude, Codex and ChatGPT, which makes it a prompt-level pattern rather than a vendor lock. No benchmark, no case study, so the claim is architectural plausibility: separating spec authorship from spec review is cheap, and spec review is where the expensive mistakes are still catchable.",
+                    "url": "https://x.com/GoogleCloudTech/status/2119203243054023128",
+                },
+                {
+                    "tag": "2600-threejs-3d-models-500k",
+                    "title": "@heizolshao: 2,600 3D Models, Each One a Program",
+                    "body": "A Chinese-language pointer to a developer who open-sourced 2,600 3D models and reportedly received $500k of Google support for it. The structural detail is what makes it relevant here: each model is not a mesh file but a program — a three.js ES module — with parameters for appearance, state, season, colour and clothing, so a consumer adjusts values instead of modelling variants. That is a very agent-friendly artefact shape, because it turns a design task into parameter selection and gives a model something it can reason about and diff. Star counts and the funding figure are the author's framing, and the post puts the URL in the replies, so the numbers to verify are the licence and whether the modules actually compose. The pattern — procedural assets over baked geometry — is the transferable part.",
+                    "url": "https://x.com/heizolshao/status/2119010722474545311",
+                },
+                {
+                    "tag": "opencode-week-ships-hex-browse-rune",
+                    "title": "@thdxr: Five Ships in a Week, None of Them an Essay",
+                    "body": "A terse changelog from the OpenCode co-founder: hex for talking to an agent, browse for letting agents drive your browser, rune for building native apps, DeepSeek at $100 for $10, and a new site — plus the joke that he wrote zero essays about what a software factory is, so they will be punished. The list is useful as a map of where a serious agent toolchain is being built out: the conversation surface, the browser as a tool, native app output, and cheap inference as a bundled commodity. It also reads as a position in the argument running through this digest — ship the primitives, skip the category branding. No metrics on any of the five, so this is a set of things to try rather than evidence; the most load-bearing item is browse, because browser control is where token bills and reliability both go wrong.",
+                    "url": "https://x.com/thdxr/status/2119209943454888082",
+                },
+            ],
+        },
+        {
+            "emoji": "🔬",
+            "title": "Verification & Workflow Tactics",
+            "items": [
+                {
+                    "tag": "1400-claude-code-sessions-nov-3-shift",
+                    "title": "@shanemelaugh: 1,400 Sessions Say Something Changed on Nov 3",
+                    "body": "The method is the interesting part, even if the conclusion is contested: he had Gemini 4 Argon analyse 1,400 Claude Code sessions and reports that on November 3 the reasoning pattern took a sharp turn while the model name stayed the same. That is a testable shape of claim — a behavioural discontinuity dated against a corpus — and it is the kind of instrumentation teams should be running on their own traffic, because a silent model update that changes how reasoning is spent changes both quality and bill. The obvious weaknesses are that the corpus is one user's sessions and the analyst is another model, so drift in the analyser is indistinguishable from drift in the subject. Still: \"is it nerfed?\" is the question every paying user asks, and this is at least an attempt to answer it with data instead of vibes.",
+                    "url": "https://x.com/shanemelaugh/status/2119192075505893695",
+                },
+                {
+                    "tag": "15-principles-redistribute-human-and-agent",
+                    "title": "@UPing123zzz: 15 Principles for Redistributing the Work",
+                    "body": "A Chinese-language reading of a 15-principle essay on agent software development, and the diagnosis is the sharp one: most people using Codex and Claude Code still run the Copilot loop — hand over a task, wait, check it yourself, ask for fixes — so the human remains the bottleneck while appearing to use an agent. Three of the principles he unpacks are portable. Prompt the what, not the how: specify goal, constraints and acceptance criteria rather than the file structure and the steps. Don't iterate with the agent, let it build tools to iterate: generate 20 design variants and a comparison page, or four hypotheses with experiments, instead of 20 rounds of \"make it nicer\". And ask for irrefutable proof: not \"done\" but a callable endpoint, a generated file, a reproducible log — because a claim of completion and completion are different objects. The fourth, making the whole SDLC legible to the agent, is the precondition for all three.",
+                    "url": "https://x.com/UPing123zzz/status/2118624242556399660",
+                },
+                {
+                    "tag": "one-paragraph-simplicity-prompt-ux-dx-ax",
+                    "title": "@wanerfu: The Simplicity Prompt, With AX as a Third Criterion",
+                    "body": "A copy-paste paragraph for the start of a web or app build: make it as clean as Linear's site or Apple Notes — simple goal, simple architecture, simple design, simple implementation; cut slogans, hint text and secondary labels, and if a page needs those to be understood, change the layout instead. The line that makes it more than taste is the criterion: every decision must improve user experience, developer experience and agent experience at once, without breaking anything. Adding AX to the usual UX/DX pair is the concrete idea — a layout that is legible to a model reading the DOM is also easier to test and easier to maintain, so the constraint pays twice. It is a prompt, not a measurement, and \"clean\" is exactly the word agents interpret differently; the value is in naming what gets cut and what must not regress.",
+                    "url": "https://x.com/wanerfu/status/2118610590042304686",
+                },
+                {
+                    "tag": "500-dollars-a-day-ads-agents-burn-80-percent",
+                    "title": "@notmiramurati: $500/Day, 80% Burned by Noon",
+                    "body": "A small experiment with a clean comparison: frontier models were given $500/day on a simulated X ads account, and they burned 80% of it by noon, bid on everything, never paused a losing ad group, and killed the winners. Their own small post-trained model got relevant clicks 2.3× cheaper. That is the failure mode people miss when they talk about agent competence — the models were not unable to operate the interface, they were unable to hold a strategy across steps: no budget pacing, no pruning of losers, no protection for what was working. It is one vendor's simulation, results attached to a link, and the task is adversarial by design; but the diagnostic is general. If the loop has no explicit rule about when to stop spending and what to keep, a capable model will optimise the local step and destroy the global objective.",
+                    "url": "https://x.com/notmiramurati/status/2118650778604724684",
+                },
+            ],
+        },
+        {
+            "emoji": "💸",
+            "title": "Market Arithmetic",
+            "items": [
+                {
+                    "tag": "oracle-lease-depreciation-330k-vs-167k",
+                    "title": "@StAlphaResearch: The Lease Ends, the Depreciation Doesn't",
+                    "body": "A Chinese-language teardown of Microsoft declining to renew its 2023 multi-year Oracle AI compute lease, framed as part of a re-evaluation of over $80B of external cloud commitments across Oracle, CoreWeave, Nebius and Nscale, with the stated reason that Hopper/H100-era hardware has become less useful. The arithmetic is the part worth keeping: a $1M server depreciated over 3 years takes $330k of annual profit, over 6 years only $167k, so lengthening schedules flatters margins in the period and leaves residual book value when the contract ends. Renters signed 3-year terms and can walk; the landlords hold 2023 hardware with half its net value undepreciated and the loans still outstanding, which resolves as either collapsing rents — H100 on-demand cited at $8 down to $2.64 — or write-downs. This is an argument, not an audit, and the tone is apocalyptic; but the mechanism it names, term mismatch between leases and asset life, is checkable in the filings.",
+                    "url": "https://x.com/StAlphaResearch/status/2118883449977376939",
+                },
+                {
+                    "tag": "frontier-release-delays-valuation-arithmetic",
+                    "title": "@Bryan_Explorer: Why the Big Releases Keep Slipping",
+                    "body": "A speculative but numerate read on why Fable 5.5 and GPT-6.2 Astra have both landed later than leaks suggested. His five reasons in order: money pressure, since Anthropic's imminent IPO valuation has reportedly compressed from $2T in early October to $1.2–1.3T; the market now asks for revenue and cost rather than narrative after an AI stock selloff; safety incidents — OpenAI reportedly cancelled GPT-6.1 Astra in September after internal testing failed, Fable 5 paused for nearly three weeks in June over export controls, and Gemini 4 Carbon went only to select security teams; nobody wants to release first and be the comparison baseline; and the gains may be small, with GPT-6.2 widely believed to continue training on the shelved 6.1 base rather than start fresh. The last point is the falsifiable one: if the next round is a continuation rather than a new base, benchmark deltas should be incremental. Everything here is inference from public reporting, and he says so.",
+                    "url": "https://x.com/Bryan_Explorer/status/2119063098854453598",
+                },
+                {
+                    "tag": "satmux-3-cents-per-hour-4x-wifi",
+                    "title": "@Zen_with_AI: Three Cents an Hour to Fix In-Flight Wi-Fi",
+                    "body": "The best cost-per-outcome artefact in this batch, and it has nothing to do with models: in-flight Wi-Fi is slow not because of bandwidth but because the 443 proxy keeps dropping, with each handshake paying a 620ms satellite round trip. satmux rents a small ground server at three cents an hour, multiplexes 12 BBR connections through it with compression, and measures six concurrent sites dropping from 19 seconds to 5.3 seconds. It is pure Python with zero dependencies and it is open source, which is what makes the claim checkable. The transferable shape is the one that shows up all over this digest: the bottleneck was a protocol behaviour, not capacity, and the fix was routing around it for less than a rounding error per hour. Three cents an hour is also a useful calibration for what \"cheap infrastructure\" actually means now.",
+                    "url": "https://x.com/Zen_with_AI/status/2119183452436418613",
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "coding-agent-index-tokens-vs-cost",
+                    "title": "@BhurkeSiddhesh: 4.5× the Tokens, 1.6× the Cost",
+                    "body": "Two lines off Artificial Analysis's Coding Agent Index v2.0 that together make a point most comparisons miss: Claude Code at max effort uses 14.5M tokens and 146 turns per task, Codex at max effort uses 3.2M and 39, yet the cost difference is only 1.6× — $11.42 against $7.04. A 4.5× token gap and a 3.7× turn gap collapsing to 1.6× in dollars means the price per token differs by roughly a third in the other direction, so \"which agent is expensive\" depends on which of the two numbers you are looking at. For anyone budgeting an agent fleet, that is the argument for reporting cost per completed task alongside tokens, and for checking whether the turn count is buying accuracy or just re-reading context. Single-source summary of a third-party index, so verify the effort settings before quoting it.",
+                    "url": "https://x.com/BhurkeSiddhesh/status/2119139068386877702",
+                },
+                {
+                    "tag": "cost-reminder-halves-bill-94-percent-code",
+                    "title": "@devopsbulletin: A Cost Reminder Cut the Bill from $1.29 to $0.71",
+                    "body": "A small experiment with a result worth copying: across 12 tasks, instead of banning Opus from writing code, they told it that its tokens cost 20× more — and the bill per task fell from $1.29 to $0.71 while task completion stayed at 67% and the worker model still wrote 94% of the code. Halving the cost with no measured quality loss is the kind of result that usually comes from a harness change, and here it came from a sentence in the prompt: the model spent its expensive tokens on the part that needed judgement and delegated the volume. The caveats are real — 12 tasks, one model pairing, completion unchanged at a modest 67%, and no note on variance — but the mechanism is the one this digest keeps finding: cost is a routing decision, and telling the model the price is cheaper than forbidding it the work.",
+                    "url": "https://x.com/devopsbulletin/status/2119113446901838217",
+                },
+                {
+                    "tag": "rrsi-harness-overfits-search-set",
+                    "title": "@ShuohaoLiao: 92.8 on the Search Set, 40.3 on Unseen Work",
+                    "body": "The most useful cautionary number of the day, from RRSI's legal-work experiment: letting the harness evolve without constraints raised the search-set score to 92.8 while the average on three unseen benchmarks sat at 40.3. Constraining the search — no bundled edits, no task-specific shortcuts, no machinery that has not earned its cost — lowered the search score to 90.5 and raised the unseen average to 43.6, with the underlying model frozen throughout. A second run makes it concrete: one candidate added verification reminders, gained 1.69 points and spent 26.1% more tokens, and was rejected because the gain sat inside the calibrated noise band. The price of discipline is stated too — 2.42M policy tokens per trial against 1.56M for the unevolved baseline. If your agent is tuned against the same jobs it is graded on, this is the failure mode, and it costs 3.3 points of search score to avoid.",
+                    "url": "https://x.com/ShuohaoLiao/status/2119080528292782576",
+                },
+                {
+                    "tag": "ultracode-moves-the-plan-not-the-spend",
+                    "title": "@nyxienyxie: Ultracode Doesn't Save Tokens, It Moves the Plan",
+                    "body": "A docs-based correction to a viral heuristic: \"opus plans, haiku scans, sonnet ships\" is not a token-saving trick. The distinction that matters is who holds the loop — with subagents, Claude decides turn by turn and results land in its context; with workflows, a script decides, results stay in script variables, and Claude only sees the final answer. That keeps the main session clean, which is a context win, not a spend win, and according to the docs ultracode uses more tokens per request and hits limits sooner. The other correction is mechanical: the model split is not automatic, so a stage with no model named runs on your session model, and you have to ask for the split explicitly. Good fit is a 500-file migration; bad fit is a one-line fix. Worth reading before adopting the slogan.",
+                    "url": "https://x.com/nyxienyxie/status/2119210757766230503",
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")

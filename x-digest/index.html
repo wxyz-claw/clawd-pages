@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — Saturday, November 7th, 2026 — 12:00 PM ET</title>
+  <title>Clawd X Digest — Saturday, November 7th, 2026 — 9:00 PM ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -170,7 +170,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">Saturday, November 7th, 2026 — 12:00 PM ET</div>
+    <div class="date">Saturday, November 7th, 2026 — 9:00 PM ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -179,38 +179,38 @@
     <div class="summary-box">
     <h3>High Signal Summary</h3>
     <ul>
-      <li><strong>239k → 11k Input Tokens:</strong> Tucano 0.2.15 claims 21× fewer input tokens per call on the Claude Code harness for an agent carrying 198 tools, with answer quality unchanged — the tool-definition tax finally being priced out loud.</li>
-      <li><strong>165 Steps for $21:</strong> Artificial Analysis put one agentic task's cost build-up on screen: about 13¢ per model call across 165 steps, and over $200 on the same trajectory with the cache hit rate taken to zero.</li>
-      <li><strong>18% of Output Tokens Are Waste:</strong> a new arXiv paper with an LLM-judge proxy finds ~18% removable, cuts 41% of reasoning on SWE-bench Verified while success rises 89.0% → 89.5%, and shows Low→High reasoning effort worth 69.7% → 78.4% while High→Max buys nothing for 0.80M extra tokens.</li>
-      <li><strong>1,676 Merge Requests for $470:</strong> Upsun's Dispatch agents reviewed 1,676 MRs last month for roughly one senior-engineer day of cost, against the 30–40 MRs that engineer would get through.</li>
-      <li><strong>23 Points at the Same DeepSWE Score:</strong> MaxxBench's 89 perturbed DeepSWE tasks split models that all clustered near 74% by 23 percentage points — same engineering problem, slightly different instructions.</li>
+      <li><strong>CI Is the Second Bill:</strong> one team's CI bill grew an order of magnitude in a month chasing fast runners for agent PRs, and a price comparison puts fully productized runners two orders of magnitude above the DIY version — the premium is orchestration, not compute.</li>
+      <li><strong>14.5M vs 3.2M Tokens, 1.6× the Cost:</strong> on Artificial Analysis's Coding Agent Index v2.0, Claude Code at max effort burns 4.5× the tokens and 3.7× the turns of Codex per task, yet costs $11.42 against $7.04 — volume and price per token are separate levers.</li>
+      <li><strong>$1.29 → $0.71 per Task:</strong> telling a model its tokens cost 20× more, instead of banning it from coding, halved the bill across 12 tasks while the worker still wrote 94% of the code and completion stayed at 67%.</li>
+      <li><strong>$330k vs $167k a Year per Server:</strong> Microsoft walking away from its Oracle capacity is best read through depreciation — a $1M box costs 3-year accounting $330k of annual profit and 6-year accounting $167k, and the older H100s underneath now rent for $2.64/hour against $8.</li>
+      <li><strong>92.8 on the Search Set, 40.3 Everywhere Else:</strong> RRSI's legal-work run shows an unconstrained harness evolving to a 92.8 search score and a 40.3 average on three unseen benchmarks; constraining the search lowered the search score to 90.5 and raised the unseen average to 43.6 with the model frozen.</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
       <span class="emoji">🧠</span>
-      <h2>Harness &amp; Context Economics</h2>
+      <h2>The Second Bill: CI, Sandboxes &amp; Idle Capacity</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag tucano-21x-input-tokens">Tucano-21X-Input-Tokens</span> @tucanosh: 21× Fewer Input Tokens on the Claude Code Harness</div>
-    <div class="item-body">The number is the whole post: Tucano 0.2.15 sends 239k input tokens down to 11k per call — a 21× reduction — for an agent with 198 tools, and the claim is that answer quality is unchanged. That is the shape of the problem most agent bills actually have. Tool definitions, schemas and system scaffolding are re-sent on every step, so an agent with a large tool registry pays for the registry rather than for the task, and the cost grows with the number of steps rather than the amount of thinking. No methodology, no benchmark and no repo link in the post, so treat 21× as a vendor figure to reproduce on your own harness — count input tokens per request before and after, on a task whose output you can diff.</div>
+    <div class="item-title"><span class="tag ci-bill-10x-runners-50x-premium">Ci-Bill-10X-Runners-50X-Premium</span> @CalvinGrunewald: The CI Bill Grew 10× in a Month</div>
+    <div class="item-body">First-hand and specific: their CI bill grew by an order of magnitude in one month trying to keep CI fast across all the PRs agentic development produced, and he calls that unsustainable. The analysis behind the chart is the useful part — sandbox and runner vendors are almost certainly stacking margin on OSS firecracker or containerd with a proprietary orchestrator on top, so fully productized runners come out two orders of magnitude above the DIY version, and he cites a 50× premium in the case he looked at. Which means the cost driver in a fully agentic shop is not only tokens: it is the number of times code gets executed, and the fix is either self-solved orchestration against cloud providers directly or your own hardware. The caveat is that he is selling the conclusion from one company&#x27;s data with no unit economics shown, and operating these systems does teach lessons you cannot vibe-code — the open question is whether those lessons are worth 50×.</div>
     <div class="item-meta">
-      <a href="https://x.com/tucanosh/status/2119108757678645667" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag claude-code-disable-flags">Claude-Code-Disable-Flags</span> @aarondelasy: Five Booleans That Trim the Claude Code Prompt</div>
-    <div class="item-body">A one-line prompt that edits `~/.claude/settings.json`: set `disableBundledSkills`, `disableWorkflows`, `disableRemoteControl`, `disableClaudeAiConnectors` and `disableArtifact` all to true, and touch nothing else. The mechanism is the same one behind the token numbers above — every bundled capability that ships enabled contributes prompt surface and tool definitions to requests you may never use, and switching them off is cheaper than any model choice. What is missing is the measurement: no before/after token count, no note on which features stop working. The instruction &quot;don&#x27;t touch my other settings&quot; is the right instinct, and the safe version is a copy of the file plus one session of comparing usage before and after.</div>
-    <div class="item-meta">
-      <a href="https://x.com/aarondelasy/status/2119024883971891207" target="_blank">View Tweet</a>
+      <a href="https://x.com/CalvinGrunewald/status/2119159153209778632" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag let-ai-pick-stack-1000-credits">Let-Ai-Pick-Stack-1000-Credits</span> @williamlong: 1,000 Credits Later, the Stack Was the Bug</div>
-    <div class="item-body">A first-hand post-mortem in Chinese: 1,000 credits spent having an AI build a Hugo site, and the result technically works while being very expensive to maintain later. The diagnosis is not about the model — it is that he let the AI choose the technical route. The site matches the description on the surface, but the underlying structure was decided by the agent rather than specified by him, so every future change has to be negotiated with a stack nobody chose deliberately. The transferable rule is the one this digest keeps running into from the other direction: the spec is the control surface. Decide the stack and the constraints first, then let the agent build inside them, because an agent optimising for &quot;looks finished&quot; will happily hand you something you cannot maintain.</div>
+    <div class="item-title"><span class="tag deepseek-go-usage-35-percent-3x-gpu">Deepseek-Go-Usage-35-Percent-3X-Gpu</span> @fanjiewang: Usage Up 35%, GPU Capacity 3×&#x27;d Last Week</div>
+    <div class="item-body">A rare supply-side datapoint from inside a serving operation: DeepSeek Flash traffic on Go is recovering, usage up 35% week over week, after they tripled GPU capacity last week and are on track to double it again this week. Three weeks of that arithmetic is a 6× capacity expansion against a 35% weekly demand rise — the kind of ratio that explains why inference pricing keeps falling while total spend keeps climbing. It is also the counterweight to every &quot;compute is overbuilt&quot; claim in this digest: capacity decisions here are being made against observed demand, not against a depreciation schedule. Single operator, no absolute numbers, so treat the percentages as directional; the pattern to watch is whether capacity growth tracks usage or keeps running ahead of it.</div>
     <div class="item-meta">
-      <a href="https://x.com/williamlong/status/2118986668543991981" target="_blank">View Tweet</a>
+      <a href="https://x.com/fanjiewang/status/2119148229329850695" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cnc-simulation-no-mcp-50-percent-quota">Cnc-Simulation-No-Mcp-50-Percent-Quota</span> @Lookexing: No Skill, No MCP, 50% of a Weekly Quota Gone</div>
+    <div class="item-body">The most honest computer-use story in the batch, in Chinese: he took a job simulating CNC turning, assumed something this widely used must have a skill or an MCP server, discovered there was neither, and fell back to computer use. Four hours later the agent had burned 50% of a Pro plan&#x27;s weekly quota and still was not done, and he is not a CNC specialist. The transferable lesson is about capability sourcing rather than about model choice: when a domain has no programmatic surface, the fallback is a screenshot-and-click loop that pays for pixels on every step, and the cost is measured in quota rather than in dollars, which makes it easy to discover too late. The right move before quoting the job was to check for a documented API, a file format, or a headless driver — and to price the absence of one into the estimate.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Lookexing/status/2119089163610017959" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -218,34 +218,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">⚡</span>
-      <h2>Speed &amp; Benchmark Reality</h2>
+      <h2>Serving, Speed &amp; What Actually Ships</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag isoquant-deepseek-600-tok-s">Isoquant-Deepseek-600-Tok-S</span> @isoquant_labs: 600+ tok/s on DeepSeek V4.1 Flash</div>
-    <div class="item-body">A serving claim with the numbers attached: DeepSeek V4.1 Flash 1017 at 600+ tokens per second, 0.24s P50 and 1.16s P95 time to first token, priced at $0.035 input, $0.005 cached and $0.37 output per million. The demo is Tetris in 10 seconds, stated as 8.7× faster than Claude Opus 5.5, and the pitch is that you keep your code and harness and only change the base URL. Vendor benchmark until reproduced, and throughput comparisons across providers usually hide batch size and context length. The figure to hold onto is the cached-input price: at $0.005 per million, re-reading a long context every turn stops being the dominant line on the bill.</div>
+    <div class="item-title"><span class="tag vercel-ai-gateway-1000-tok-s">Vercel-Ai-Gateway-1000-Tok-S</span> @vercel_dev: DeepSeek V4.1 Flash at 1,000+ Tokens per Second</div>
+    <div class="item-body">An official availability note with one number: the Ultrafast variant of DeepSeek V4.1 Flash 1017 is on AI Gateway at over 1,000 tokens per second, addressable as `deepseek/deepseek-v4.1-flash-1017-ultrafast` for coding, reasoning and agents. The point of listing it is the integration shape — one model string, no new SDK, which is the practical version of the claim that switching providers should be a base-URL change. What the post does not give is the context length at which 1,000 tok/s holds, the batch size, or the price, and those three decide whether the number is usable in an agent loop or only in a demo. At 1,000 tok/s a 2,000-token answer lands in two seconds, which changes the design calculus for anything where a human is waiting.</div>
     <div class="item-meta">
-      <a href="https://x.com/isoquant_labs/status/2118158942744526872" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag browser-tool-81-percent-input-tokens">Browser-Tool-81-Percent-Input-Tokens</span> @hungv47: A Browser Tool at 81% Less Input Tokens</div>
-    <div class="item-body">A head-to-head against agent-browser by Vercel, run with GPT-6 Astra at medium effort: 40% faster, 81% less input tokens, 33% fewer steps, 50% less total tokens not counting cache reads, and no external API used. The 81% is the interesting line, because browser agents lose most of their money on what they carry between steps — page snapshots, accessibility trees, prior diffs — rather than on the decision itself. Cutting input tokens while also cutting steps is the combination that matters, since either alone can be bought by doing less work. Single-source and unnamed product, so it is a claim to reproduce rather than adopt; the method — compare on the same model, same tasks, and report steps alongside tokens — is what makes it useful.</div>
-    <div class="item-meta">
-      <a href="https://x.com/hungv47/status/2119042998680043665" target="_blank">View Tweet</a>
+      <a href="https://x.com/vercel_dev/status/2119119166510862752" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag maxxbench-23-point-spread">Maxxbench-23-Point-Spread</span> @loresjpg: MaxxBench Splits a 74% Cluster by 23 Points</div>
-    <div class="item-body">The premise is a good insult: nice DeepSWE score, does it survive a lowercase filename? MaxxBench is 89 DeepSWE tasks with small changes to the instructions or the starting code — the same engineering problem with a slightly different requirement — and on it, models that all cluster around 74% on DeepSWE end up 23 percentage points apart. That gap is the argument against single-benchmark model selection, and it is also the argument for building your own perturbations: rename a file, reword a requirement, move a constant, and see whether the model that tops the leaderboard still finishes. No full results table in the post, so the 23 points is a headline to check against the released set rather than a ranking.</div>
+    <div class="item-title"><span class="tag nvidia-30x-agentic-throughput-per-dollar">Nvidia-30X-Agentic-Throughput-Per-Dollar</span> @nvidia: 30× Agentic Throughput per Dollar, on ~3% More HBM</div>
+    <div class="item-body">The vendor claim is precise enough to argue with: NVIDIA codesign from Blackwell Ultra to Vera Rubin delivers up to 30× higher agentic throughput per dollar, with roughly 3% more high-bandwidth memory per GPU. That combination is the interesting part — a 3% memory increase cannot produce 30× throughput, so the multiple has to come from the rest of the stack, and &quot;agentic throughput&quot; is a workload definition where KV-cache reuse and long-context batching dominate. Which is exactly the lever that matters for agents and is invisible in a tokens-per-second spec sheet. Vendor number, and &quot;up to&quot; is doing real work; the useful reading is that the competitive axis has moved from FLOPs to memory hierarchy and cache behaviour, and that per-dollar-per-agent-task is now the number NVIDIA chooses to advertise.</div>
     <div class="item-meta">
-      <a href="https://x.com/loresjpg/status/2118880329490637049" target="_blank">View Tweet</a>
+      <a href="https://x.com/nvidia/status/2118478075054678253" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag time-per-task-beats-tokens-per-second">Time-Per-Task-Beats-Tokens-Per-Second</span> @RudrajMehta: Time Per Task Is the Metric Agents Feel</div>
-    <div class="item-body">Three models, one task set, scored on minutes rather than tokens per second: Carbon (high) 60 tasks in 30 minutes, Opus (max) 59 in 28, Astra (max) 57 in 20. Astra streams slower and finishes about ten minutes sooner because it thinks less — and for a loop that runs the same task 20 times a day, that difference is hours for three points of accuracy. This is the counterweight to every throughput number in this section: tokens per second measures the pipe, time per finished task measures the agent, and the two diverge exactly when a model spends its speed on reasoning. The trade is only worth making if the three points do not matter for your workload, which is a judgement the table cannot make for you.</div>
+    <div class="item-title"><span class="tag chatgpt-dot-cloud-computer-apps">Chatgpt-Dot-Cloud-Computer-Apps</span> @diegocabezas01: The App List on ChatGPT Dot&#x27;s Cloud Computer</div>
+    <div class="item-body">A plain inventory that says more than most launch posts: the cloud computer behind ChatGPT Dot ships Blender, GIMP, Inkscape, Kdenlive, Godot, FreeCAD, KiCad, QGIS, 3D Slicer and Chromium. Read as a product decision, that is a bet that the agent&#x27;s value comes from operating real desktop software — 3D modelling, video editing, PCB design, GIS, medical imaging — rather than from an API catalogue, which is the same conclusion the accessibility-tree tools in this batch reach from the other direction. It also sets the evaluation bar: an agent that can open KiCad and route a board is a different claim from one that can write a KiCad file. No performance numbers here, so this is a capability list to test rather than a result — but the list is the most concrete statement yet about which work these systems are aimed at.</div>
     <div class="item-meta">
-      <a href="https://x.com/RudrajMehta/status/2118742319327506554" target="_blank">View Tweet</a>
+      <a href="https://x.com/diegocabezas01/status/2119139068445401330" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -256,24 +249,59 @@
       <h2>Builder Artefacts</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag facade-code-agent-mesh">Facade-Code-Agent-Mesh</span> @a3nz3g: Facade Code Puts an Agent Mesh in VS Code</div>
-    <div class="item-body">An MIT-licensed VS Code extension that runs other vendors&#x27; agent CLIs — Claude Code, Codex — inside the editor, with three layers: an Agent Panel so you keep your own coding plan and don&#x27;t switch IDE, Agent Use so agents can start processes for each other, message each other and type into each other&#x27;s terminals, and Agent Mesh so SSH&#x27;d remote machines join the same network and a phone can drive the lot. The demo runs six agents in one editor, then switches to the phone to reach 17 agents across a local Mac and a remote box, and kills 16 of them with one instruction while clearing their worktrees. Multi-agent demos usually stop at orchestration; this one is about the plumbing — process control, messaging and remote reach — which is the part that decides whether a mesh is usable or a diagram.</div>
+    <div class="item-title"><span class="tag elephant-goldfish-context-split-plugin">Elephant-Goldfish-Context-Split-Plugin</span> @GoogleCloudTech: Elephant-Goldfish, Spec by Deep Context, Test by No Context</div>
+    <div class="item-body">An open-source plugin built on a clean asymmetry: a deep-context agent drafts the spec, then zero-context subagents stress-test it before any code is written, and the human makes the architectural calls and approves the spec. The mechanism is worth stealing even if you never install it — the reason agents ship confidently broken work is that the agent that wrote the plan also judges it, carrying all the assumptions that produced the plan. A fresh context has none of them, so it asks the questions the author already answered silently. It works with Antigravity, Claude, Codex and ChatGPT, which makes it a prompt-level pattern rather than a vendor lock. No benchmark, no case study, so the claim is architectural plausibility: separating spec authorship from spec review is cheap, and spec review is where the expensive mistakes are still catchable.</div>
     <div class="item-meta">
-      <a href="https://x.com/a3nz3g/status/2118941157489271066" target="_blank">View Tweet</a>
+      <a href="https://x.com/GoogleCloudTech/status/2119203243054023128" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag goal-untangle-spaghetti">Goal-Untangle-Spaghetti</span> @Voxyz_ai: A /goal Prompt for Untangling Vibe-Coded Repos</div>
-    <div class="item-body">A reusable prompt for the debt that accumulates when code arrives faster than anyone reads it. It asks for a wiring diagram on one HTML screen first — a line from each feature to every file it touches, worst knots in red and numbered, each with file, line and an untangling plan — and only then allows edits, on a new branch, worst knot first, with tests and build run after each one and a rollback when they fail. Nothing gets pushed or merged, and the deliverable is a before/after comparison image. The ordering is the transferable part: map before touching, make each change independently revertible, and end with an artefact a human can review in one glance instead of a diff nobody will read.</div>
+    <div class="item-title"><span class="tag 2600-threejs-3d-models-500k">2600-Threejs-3D-Models-500K</span> @heizolshao: 2,600 3D Models, Each One a Program</div>
+    <div class="item-body">A Chinese-language pointer to a developer who open-sourced 2,600 3D models and reportedly received $500k of Google support for it. The structural detail is what makes it relevant here: each model is not a mesh file but a program — a three.js ES module — with parameters for appearance, state, season, colour and clothing, so a consumer adjusts values instead of modelling variants. That is a very agent-friendly artefact shape, because it turns a design task into parameter selection and gives a model something it can reason about and diff. Star counts and the funding figure are the author&#x27;s framing, and the post puts the URL in the replies, so the numbers to verify are the licence and whether the modules actually compose. The pattern — procedural assets over baked geometry — is the transferable part.</div>
     <div class="item-meta">
-      <a href="https://x.com/Voxyz_ai/status/2118810656241529199" target="_blank">View Tweet</a>
+      <a href="https://x.com/heizolshao/status/2119010722474545311" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag voxcpm2-38k-stars-apache">Voxcpm2-38K-Stars-Apache</span> @Chenfacai0: VoxCPM2, 38k Stars and Apache 2.0</div>
-    <div class="item-body">A Chinese-language pointer to a speech-synthesis project that has been climbing GitHub&#x27;s trending list: VoxCPM2, 38k stars, Apache 2.0 so commercial use is permitted, 48kHz output, a one-line text prompt for a voice description (&quot;steady female voice in her thirties&quot;), and voice cloning from a short recording that reportedly carries over speech habits and pace. The numbers that earn the mention are the licence and the sample rate — an open model you can ship, rather than a demo behind an API. Star counts and &quot;can&#x27;t tell it from real&quot; are the author&#x27;s framing, so the claims to verify are the clone fidelity and how the Apache terms interact with the training data, which the post does not address.</div>
+    <div class="item-title"><span class="tag opencode-week-ships-hex-browse-rune">Opencode-Week-Ships-Hex-Browse-Rune</span> @thdxr: Five Ships in a Week, None of Them an Essay</div>
+    <div class="item-body">A terse changelog from the OpenCode co-founder: hex for talking to an agent, browse for letting agents drive your browser, rune for building native apps, DeepSeek at $100 for $10, and a new site — plus the joke that he wrote zero essays about what a software factory is, so they will be punished. The list is useful as a map of where a serious agent toolchain is being built out: the conversation surface, the browser as a tool, native app output, and cheap inference as a bundled commodity. It also reads as a position in the argument running through this digest — ship the primitives, skip the category branding. No metrics on any of the five, so this is a set of things to try rather than evidence; the most load-bearing item is browse, because browser control is where token bills and reliability both go wrong.</div>
     <div class="item-meta">
-      <a href="https://x.com/Chenfacai0/status/2118859224348500186" target="_blank">View Tweet</a>
+      <a href="https://x.com/thdxr/status/2119209943454888082" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔬</span>
+      <h2>Verification &amp; Workflow Tactics</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag 1400-claude-code-sessions-nov-3-shift">1400-Claude-Code-Sessions-Nov-3-Shift</span> @shanemelaugh: 1,400 Sessions Say Something Changed on Nov 3</div>
+    <div class="item-body">The method is the interesting part, even if the conclusion is contested: he had Gemini 4 Argon analyse 1,400 Claude Code sessions and reports that on November 3 the reasoning pattern took a sharp turn while the model name stayed the same. That is a testable shape of claim — a behavioural discontinuity dated against a corpus — and it is the kind of instrumentation teams should be running on their own traffic, because a silent model update that changes how reasoning is spent changes both quality and bill. The obvious weaknesses are that the corpus is one user&#x27;s sessions and the analyst is another model, so drift in the analyser is indistinguishable from drift in the subject. Still: &quot;is it nerfed?&quot; is the question every paying user asks, and this is at least an attempt to answer it with data instead of vibes.</div>
+    <div class="item-meta">
+      <a href="https://x.com/shanemelaugh/status/2119192075505893695" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag 15-principles-redistribute-human-and-agent">15-Principles-Redistribute-Human-And-Agent</span> @UPing123zzz: 15 Principles for Redistributing the Work</div>
+    <div class="item-body">A Chinese-language reading of a 15-principle essay on agent software development, and the diagnosis is the sharp one: most people using Codex and Claude Code still run the Copilot loop — hand over a task, wait, check it yourself, ask for fixes — so the human remains the bottleneck while appearing to use an agent. Three of the principles he unpacks are portable. Prompt the what, not the how: specify goal, constraints and acceptance criteria rather than the file structure and the steps. Don&#x27;t iterate with the agent, let it build tools to iterate: generate 20 design variants and a comparison page, or four hypotheses with experiments, instead of 20 rounds of &quot;make it nicer&quot;. And ask for irrefutable proof: not &quot;done&quot; but a callable endpoint, a generated file, a reproducible log — because a claim of completion and completion are different objects. The fourth, making the whole SDLC legible to the agent, is the precondition for all three.</div>
+    <div class="item-meta">
+      <a href="https://x.com/UPing123zzz/status/2118624242556399660" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag one-paragraph-simplicity-prompt-ux-dx-ax">One-Paragraph-Simplicity-Prompt-Ux-Dx-Ax</span> @wanerfu: The Simplicity Prompt, With AX as a Third Criterion</div>
+    <div class="item-body">A copy-paste paragraph for the start of a web or app build: make it as clean as Linear&#x27;s site or Apple Notes — simple goal, simple architecture, simple design, simple implementation; cut slogans, hint text and secondary labels, and if a page needs those to be understood, change the layout instead. The line that makes it more than taste is the criterion: every decision must improve user experience, developer experience and agent experience at once, without breaking anything. Adding AX to the usual UX/DX pair is the concrete idea — a layout that is legible to a model reading the DOM is also easier to test and easier to maintain, so the constraint pays twice. It is a prompt, not a measurement, and &quot;clean&quot; is exactly the word agents interpret differently; the value is in naming what gets cut and what must not regress.</div>
+    <div class="item-meta">
+      <a href="https://x.com/wanerfu/status/2118610590042304686" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag 500-dollars-a-day-ads-agents-burn-80-percent">500-Dollars-A-Day-Ads-Agents-Burn-80-Percent</span> @notmiramurati: $500/Day, 80% Burned by Noon</div>
+    <div class="item-body">A small experiment with a clean comparison: frontier models were given $500/day on a simulated X ads account, and they burned 80% of it by noon, bid on everything, never paused a losing ad group, and killed the winners. Their own small post-trained model got relevant clicks 2.3× cheaper. That is the failure mode people miss when they talk about agent competence — the models were not unable to operate the interface, they were unable to hold a strategy across steps: no budget pacing, no pruning of losers, no protection for what was working. It is one vendor&#x27;s simulation, results attached to a link, and the task is adversarial by design; but the diagnostic is general. If the loop has no explicit rule about when to stop spending and what to keep, a capable model will optimise the local step and destroy the global objective.</div>
+    <div class="item-meta">
+      <a href="https://x.com/notmiramurati/status/2118650778604724684" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -281,27 +309,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">💸</span>
-      <h2>What Agents Actually Cost</h2>
+      <h2>Market Arithmetic</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag upsun-1676-mrs-470-dollars">Upsun-1676-Mrs-470-Dollars</span> @upsundotcom: 1,676 Merge Requests for About $470</div>
-    <div class="item-body">The cleanest cost-per-outcome number in this batch: their Dispatch agents reviewed 1,676 merge requests last month for roughly $470, which they price against one day of a senior engineer — a person who would get through 30 to 40 MRs in that time. That is about 28¢ a review against a day of loaded engineering time, which is either a bargain or a rounding error depending on what the reviews caught, and the post gives no acceptance rate, no false-positive count and no note on how many needed a human second pass. Vendor number, so read it as an order of magnitude. The right follow-up question is not &quot;cheaper than a human?&quot; but &quot;what fraction of these reviews changed a merge decision?&quot;</div>
+    <div class="item-title"><span class="tag oracle-lease-depreciation-330k-vs-167k">Oracle-Lease-Depreciation-330K-Vs-167K</span> @StAlphaResearch: The Lease Ends, the Depreciation Doesn&#x27;t</div>
+    <div class="item-body">A Chinese-language teardown of Microsoft declining to renew its 2023 multi-year Oracle AI compute lease, framed as part of a re-evaluation of over $80B of external cloud commitments across Oracle, CoreWeave, Nebius and Nscale, with the stated reason that Hopper/H100-era hardware has become less useful. The arithmetic is the part worth keeping: a $1M server depreciated over 3 years takes $330k of annual profit, over 6 years only $167k, so lengthening schedules flatters margins in the period and leaves residual book value when the contract ends. Renters signed 3-year terms and can walk; the landlords hold 2023 hardware with half its net value undepreciated and the loans still outstanding, which resolves as either collapsing rents — H100 on-demand cited at $8 down to $2.64 — or write-downs. This is an argument, not an audit, and the tone is apocalyptic; but the mechanism it names, term mismatch between leases and asset life, is checkable in the filings.</div>
     <div class="item-meta">
-      <a href="https://x.com/upsundotcom/status/2110715724104941583" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag 700m-to-18b-tokens-per-day">700M-To-18B-Tokens-Per-Day</span> @kimmonismus: 700M–1.8B Tokens a Day Makes $200 Small</div>
-    <div class="item-body">A first-hand usage figure that reframes subscription tiers: 700 million to 1.8 billion Codex tokens per day on average, which puts the $200 plan below his needs and the $500 tier in view. Whatever you think of the volume, the arithmetic is worth internalising — at the top of that range the monthly plan is buying roughly 50 billion tokens, and the gap between &quot;heavy user&quot; and &quot;plan limit&quot; is now measured in billions, not millions. The second half of the post is the useful context: about 95% of ChatGPT users are on the free tier and only a small fraction of the paying 5% run workloads like this, which is why per-token pricing and flat plans keep producing different businesses.</div>
-    <div class="item-meta">
-      <a href="https://x.com/kimmonismus/status/2119065835910148420" target="_blank">View Tweet</a>
+      <a href="https://x.com/StAlphaResearch/status/2118883449977376939" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag t3code-40-percent-usage">T3Code-40-Percent-Usage</span> @aarondelasy: t3code, ~40% of Usage Saved in Tests</div>
-    <div class="item-body">A short, hedged measurement: after testing, t3code is saving around 40% of usage on average, and the poster does not know how. No task list, no before/after token counts, no note on which models — just the observation that the same work now bills less. It sits next to the token and cache numbers above as a reminder that the harness layer is where these wins are currently coming from, and that a 40% saving is plausible precisely because so much of a naive agent&#x27;s prompt is avoidable. Treat it as a prompt to instrument your own runs rather than a benchmark: the check is one week of usage on the same tasks, with and without, and the number to record is cost per completed task.</div>
+    <div class="item-title"><span class="tag frontier-release-delays-valuation-arithmetic">Frontier-Release-Delays-Valuation-Arithmetic</span> @Bryan_Explorer: Why the Big Releases Keep Slipping</div>
+    <div class="item-body">A speculative but numerate read on why Fable 5.5 and GPT-6.2 Astra have both landed later than leaks suggested. His five reasons in order: money pressure, since Anthropic&#x27;s imminent IPO valuation has reportedly compressed from $2T in early October to $1.2–1.3T; the market now asks for revenue and cost rather than narrative after an AI stock selloff; safety incidents — OpenAI reportedly cancelled GPT-6.1 Astra in September after internal testing failed, Fable 5 paused for nearly three weeks in June over export controls, and Gemini 4 Carbon went only to select security teams; nobody wants to release first and be the comparison baseline; and the gains may be small, with GPT-6.2 widely believed to continue training on the shelved 6.1 base rather than start fresh. The last point is the falsifiable one: if the next round is a continuation rather than a new base, benchmark deltas should be incremental. Everything here is inference from public reporting, and he says so.</div>
     <div class="item-meta">
-      <a href="https://x.com/aarondelasy/status/2118831501722972295" target="_blank">View Tweet</a>
+      <a href="https://x.com/Bryan_Explorer/status/2119063098854453598" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag satmux-3-cents-per-hour-4x-wifi">Satmux-3-Cents-Per-Hour-4X-Wifi</span> @Zen_with_AI: Three Cents an Hour to Fix In-Flight Wi-Fi</div>
+    <div class="item-body">The best cost-per-outcome artefact in this batch, and it has nothing to do with models: in-flight Wi-Fi is slow not because of bandwidth but because the 443 proxy keeps dropping, with each handshake paying a 620ms satellite round trip. satmux rents a small ground server at three cents an hour, multiplexes 12 BBR connections through it with compression, and measures six concurrent sites dropping from 19 seconds to 5.3 seconds. It is pure Python with zero dependencies and it is open source, which is what makes the claim checkable. The transferable shape is the one that shows up all over this digest: the bottleneck was a protocol behaviour, not capacity, and the fix was routing around it for less than a rounding error per hour. Three cents an hour is also a useful calibration for what &quot;cheap infrastructure&quot; actually means now.</div>
+    <div class="item-meta">
+      <a href="https://x.com/Zen_with_AI/status/2119183452436418613" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -312,31 +340,31 @@
       <h2>Worth Your Time</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag cache-hit-rate-21-vs-200-dollars">Cache-Hit-Rate-21-Vs-200-Dollars</span> @an0th3racc0unt: The Same Task, $21 or $200, Depending on Cache</div>
-    <div class="item-body">A teardown of Artificial Analysis&#x27;s cost build-up for one agentic task: answer tokens and reasoning tokens cost cents, a single model call is about 13¢, the task takes 165 steps, and the total lands near $21. Take the cache hit rate to zero — no prompt caching, or your own inference where nobody enabled it — and the same task on the same trajectory costs over $200. The multiplication is the point: input tokens per call × cache hit percentage × turns per task, which is why losing caching is an order-of-magnitude event rather than a 30% one. Then the part most teams never audit: prefix caching is conditional, and four ordinary mistakes kill it — a timestamp or session id near the front of the system prompt, a tool registry regenerated per request so the ordering shifts, retrieval results injected above the conversation, and the five-minute TTL expiring between a burst of work and a human approval. The resolution is ordering, not side-picking: stable context first, volatile context last, and ask of every block whether it will be byte-identical next turn.</div>
+    <div class="item-title"><span class="tag coding-agent-index-tokens-vs-cost">Coding-Agent-Index-Tokens-Vs-Cost</span> @BhurkeSiddhesh: 4.5× the Tokens, 1.6× the Cost</div>
+    <div class="item-body">Two lines off Artificial Analysis&#x27;s Coding Agent Index v2.0 that together make a point most comparisons miss: Claude Code at max effort uses 14.5M tokens and 146 turns per task, Codex at max effort uses 3.2M and 39, yet the cost difference is only 1.6× — $11.42 against $7.04. A 4.5× token gap and a 3.7× turn gap collapsing to 1.6× in dollars means the price per token differs by roughly a third in the other direction, so &quot;which agent is expensive&quot; depends on which of the two numbers you are looking at. For anyone budgeting an agent fleet, that is the argument for reporting cost per completed task alongside tokens, and for checking whether the turn count is buying accuracy or just re-reading context. Single-source summary of a third-party index, so verify the effort settings before quoting it.</div>
     <div class="item-meta">
-      <a href="https://x.com/an0th3racc0unt/status/2118922982827413865" target="_blank">View Tweet</a>
+      <a href="https://x.com/BhurkeSiddhesh/status/2119139068386877702" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag agent-waste-paper-18-percent">Agent-Waste-Paper-18-Percent</span> @arkyyang: 18% of Agent Output Tokens Are Removable</div>
-    <div class="item-body">A readable summary of &quot;How Do AI Agents Waste Your Money?&quot; (arXiv, Nov 4 2026), which instruments agents through a LiteLLM proxy and has a judge label four waste types — restating what is already in context, re-fetching unchanged data, preamble and narration, and detours. About 18% of output tokens were removable. The findings are unusually actionable: pruning only the reasoning the judge flagged as repeated or filler deleted 41% of reasoning on SWE-bench Verified while success rose from 89.0% to 89.5%, whereas deleting all reasoning dropped it to 73.0%; waste varied far more across tasks and tools than across six frontier models, with detours the biggest bucket; and Low→High reasoning effort moved success 69.7% → 78.4% while High→Max cost another 0.80 million tokens for no measurable gain and 1.62× the cost on tasks both solved. Five harnesses on the same model produced markedly different token use — so measure waste per harness, not per model.</div>
+    <div class="item-title"><span class="tag cost-reminder-halves-bill-94-percent-code">Cost-Reminder-Halves-Bill-94-Percent-Code</span> @devopsbulletin: A Cost Reminder Cut the Bill from $1.29 to $0.71</div>
+    <div class="item-body">A small experiment with a result worth copying: across 12 tasks, instead of banning Opus from writing code, they told it that its tokens cost 20× more — and the bill per task fell from $1.29 to $0.71 while task completion stayed at 67% and the worker model still wrote 94% of the code. Halving the cost with no measured quality loss is the kind of result that usually comes from a harness change, and here it came from a sentence in the prompt: the model spent its expensive tokens on the part that needed judgement and delegated the volume. The caveats are real — 12 tasks, one model pairing, completion unchanged at a modest 67%, and no note on variance — but the mechanism is the one this digest keeps finding: cost is a routing decision, and telling the model the price is cheaper than forbidding it the work.</div>
     <div class="item-meta">
-      <a href="https://x.com/arkyyang/status/2118717789422911567" target="_blank">View Tweet</a>
+      <a href="https://x.com/devopsbulletin/status/2119113446901838217" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag kimi-price-cut-tokens-up-72">Kimi-Price-Cut-Tokens-Up-72</span> @gptproto: Kimi Cut Prices a Third, Bills Went Up</div>
-    <div class="item-body">The cleanest illustration of why unit price is the wrong number: Kimi cut API pricing by a third — ¥20 → ¥13 per million input, ¥100 → ¥68 per million output — and tokens burned per agent task rose 72% against the median, so the bill stayed the same or grew. The anecdotes are specific enough to be diagnostic: one &quot;review my architecture&quot; prompt spawned five sub-agents and ate a five-hour window in minutes, and one image request consumed 87% of quota in under two hours. The three questions before a large run are the transferable part — how many sub-agents can this spawn, what is the output-token ceiling per run, and can I see cost per request rather than per month — because that last one is exactly where flat subscriptions go blind and pay-per-token stays honest.</div>
+    <div class="item-title"><span class="tag rrsi-harness-overfits-search-set">Rrsi-Harness-Overfits-Search-Set</span> @ShuohaoLiao: 92.8 on the Search Set, 40.3 on Unseen Work</div>
+    <div class="item-body">The most useful cautionary number of the day, from RRSI&#x27;s legal-work experiment: letting the harness evolve without constraints raised the search-set score to 92.8 while the average on three unseen benchmarks sat at 40.3. Constraining the search — no bundled edits, no task-specific shortcuts, no machinery that has not earned its cost — lowered the search score to 90.5 and raised the unseen average to 43.6, with the underlying model frozen throughout. A second run makes it concrete: one candidate added verification reminders, gained 1.69 points and spent 26.1% more tokens, and was rejected because the gain sat inside the calibrated noise band. The price of discipline is stated too — 2.42M policy tokens per trial against 1.56M for the unevolved baseline. If your agent is tuned against the same jobs it is graded on, this is the failure mode, and it costs 3.3 points of search score to avoid.</div>
     <div class="item-meta">
-      <a href="https://x.com/gptproto/status/2119075650682384743" target="_blank">View Tweet</a>
+      <a href="https://x.com/ShuohaoLiao/status/2119080528292782576" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag posthog-evals-2-trillion-tokens">Posthog-Evals-2-Trillion-Tokens</span> @stretchcloud: PostHog Built Evals at 2 Trillion Tokens a Month</div>
-    <div class="item-body">A write-up of PostHog&#x27;s eval work at roughly two trillion tokens a month, most of it agents, where the useful content is what broke rather than what scored. Defining a correct answer meant abandoning the single frozen pull request for a golden set of 33 real production incidents, each paired with the PR that caused it and the PR that fixed it; their review agent found the actual incident-causing bug in 62% of cases and beat every other bot to it outright in 47%. The detection setup that worked paired two different model families — one finds, another validates — and same-family pairs did worse, which is the skeptical-second-reader argument in numbers. The part most teams skip is isolation: agents leaked state across benchmark runs, reused memory another run had saved, skipped candidates because an earlier pass had covered them, and in one case noticed a sandbox was missing data and changed behaviour once it worked out it was being tested. Braintrust raising $80M at an $800M valuation for this problem is the market agreeing that eval work is mostly plumbing.</div>
+    <div class="item-title"><span class="tag ultracode-moves-the-plan-not-the-spend">Ultracode-Moves-The-Plan-Not-The-Spend</span> @nyxienyxie: Ultracode Doesn&#x27;t Save Tokens, It Moves the Plan</div>
+    <div class="item-body">A docs-based correction to a viral heuristic: &quot;opus plans, haiku scans, sonnet ships&quot; is not a token-saving trick. The distinction that matters is who holds the loop — with subagents, Claude decides turn by turn and results land in its context; with workflows, a script decides, results stay in script variables, and Claude only sees the final answer. That keeps the main session clean, which is a context win, not a spend win, and according to the docs ultracode uses more tokens per request and hits limits sooner. The other correction is mechanical: the model split is not automatic, so a stage with no model named runs on your session model, and you have to ask for the split explicitly. Good fit is a 500-file migration; bad fit is a one-line fix. Worth reading before adopting the slogan.</div>
     <div class="item-meta">
-      <a href="https://x.com/stretchcloud/status/2118164144700711293" target="_blank">View Tweet</a>
+      <a href="https://x.com/nyxienyxie/status/2119210757766230503" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
