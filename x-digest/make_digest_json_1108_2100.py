@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "Sunday, November 8th, 2026 — 9:00 PM ET",
+    "summary_title": "High Signal Summary",
+    "summary": [
+        "<strong>4.5× the Tokens, 1.6× the Bill:</strong> On Artificial Analysis's Coding Agent Index v2.0, Claude Code at Opus 5.5 max burns 14.5M tokens and 146 turns per task against Codex's 3.2M and 39 — yet costs $11.42 against $7.04, because token volume and price per token are separate levers.",
+        "<strong>97.4% From Cache, 72.9% of the Bill:</strong> In one production coding-agent trace almost every input token is a cache read, and those reads still carry most of the modelled API cost — a cache hit is cheaper work, not free work.",
+        "<strong>Ultracode Moves the Plan, Not the Spend:</strong> The viral \"opus plans, haiku scans, sonnet ships\" split changes who holds the loop — a script instead of the main session — and per the docs it uses more tokens per request and hits limits sooner.",
+        "<strong>4.5 Hours on a $20 Plan:</strong> Two independent testers ran GPT-6.2 Sol nonstop for hours on Plus, dozens of Three.js and WebGPU builds under 10% of a $200 Pro allowance, and both put the limit headroom above the design taste as the real story.",
+        "<strong>3,777 Comments on 2,570 PRs:</strong> T3 Code's owner says a bot that reviews every PR with slop comments gets banned, and the account that role-played doing exactly that wore the number as a badge — ungated agent review is a liability, not coverage.",
+    ],
+    "sections": [
+        {
+            "emoji": "🧪",
+            "title": "The Review Loop Bites Back",
+            "items": [
+                {
+                    "tag": "formal-verification-skill-per-subsystem",
+                    "title": "@poteto: One Verification Skill per Subsystem",
+                    "body": "The prompt is short enough to steal whole: \"use /create-formal-verification-skill to model these state machines, one skill per subsystem, and use /statechart to visualize my most important user flows.\" Both skills ship in pstack. The interesting part is what it implies about where verification lives — not a checklist in a PR template, but a generated artefact per subsystem, produced once and then re-run, with the diagram coming out of the same model rather than being drawn by hand and left to rot. It is the cheapest version of the 2026-10-27 argument that types and formal methods become affordable the moment agents pay the proof cost: the skill is the payment mechanism, and the statechart is the thing you show a reviewer who will never read the proof.",
+                    "url": "https://x.com/poteto/status/2119521036660314339",
+                },
+                {
+                    "tag": "t3-code-bot-review-ban",
+                    "title": "@theo: Point a Bot at Every PR and You Get Banned",
+                    "body": "A one-line policy from the person who owns the repo, and it is the sentence more agent teams need to write down: \"If you set up a bot to 'review' every PR on the T3 Code repo with nonstop slop comments, you will be banned.\" The generalisation is that review capacity was already the constraint before agents — the 2026-11-06 argument that review is the bottleneck to instrument — and a reviewer that comments on everything does not add capacity, it converts a scarce human attention budget into a notification queue. The rule worth copying is scope, not tone: a review bot should be pointed at a diff class it can actually adjudicate, and stay silent on the rest.",
+                    "url": "https://x.com/theo/status/2119567959052231138",
+                },
+                {
+                    "tag": "3777-comments-2570-prs-satire",
+                    "title": "@maria_rcks: 3,777 Comments Across 2,570 PRs",
+                    "body": "The joke carries the number, which is why it is worth a slot. An account posting in the voice of an over-eager review bot reports being banned from t3code after 3,777 comments spread over 2,570 different PRs, thanks \"every contributor who put up with me,\" and announces it is joining Anthropic. That ratio is the whole point: 1.47 comments per pull request, which is roughly one unsolicited opinion per diff regardless of whether the diff needed one. Read it as satire and it is still the clearest illustration in the timeline of what agent-driven write volume does to a review surface, and of why the guardrail discussion has moved from \"can the agent review\" to \"what is it allowed to say unprompted.\"",
+                    "url": "https://x.com/maria_rcks/status/2119576963870495168",
+                },
+            ],
+        },
+        {
+            "emoji": "⚡",
+            "title": "Three Testers, One Release",
+            "items": [
+                {
+                    "tag": "gpt-6-2-sol-under-10pct-allowance",
+                    "title": "@TokenGremlin: Dozens of Builds, Under 10% of a $200 Plan",
+                    "body": "A tester with a Pro allowance reporting from his own usage rather than a benchmark: dozens of Three.js, WebGPU and HTML builds barely dented 10% of the $200 monthly allowance, first responses were already presentable instead of needing rounds of \"make it prettier,\" and he rates the design taste above Opus 5.5's while getting better results than GPT-6 Astra even in Max mode. The headline claim is the boring one and probably the load-bearing one — that the limit headroom is what changed the experience, not the scores. Treat the taste comparison as a preference with no eval behind it; treat the usage figure as the number that decides whether you can use the thing all day.",
+                    "url": "https://x.com/TokenGremlin/status/2119490708876955697",
+                },
+                {
+                    "tag": "gpt-6-2-sol-4-5-hours-plus",
+                    "title": "@Mr_Salio: 4.5 Hours Nonstop on the $20 Plan",
+                    "body": "The second independent limit datapoint, and a more aggressive one: on the $20 Plus plan, routing GPT-6.1 Max into GPT-6.2 Sol, he ran continuously for roughly four and a half hours — multiple Three.js demos, a web-design test, coding experiments and his own project — before hitting a limit at all. His read is that this release fixes quality and usable limits together. Two testers reporting the same shape from different tiers is worth more than either alone, and it is the first concrete counter to the 2026-11-08 12:00 digest's finding that the Plus weekly baseline had been quietly cut to just over $60: the denominator may still be smaller, but the per-token burn on this model is reportedly low enough to mask it.",
+                    "url": "https://x.com/Mr_Salio/status/2119515145382633524",
+                },
+                {
+                    "tag": "gpt-6-2-sol-three-js-defensive",
+                    "title": "@Khazix0918: Routed Early, Aesthetics and Refusals Both Moved",
+                    "body": "A Chinese-language report from someone grey-routed onto GPT-6.2 Sol before general availability, and the useful bit is that he tested two things at once. He ran a long Three.js prompt asking for a 3D interactive page on \"the end of time\" — composition, lighting, materials, particles, animation, atmosphere, mouse interaction — with an explicit instruction to finish development, run it and test it, and his verdict was that the aesthetic output was the strongest he had seen. Separately he reports noticeably better behaviour on defensive and safety-adjacent prompts, which is the part that rarely gets measured in a launch thread. The prompt itself is a decent template: name the dimensions, forbid the plan, demand a tested artefact.",
+                    "url": "https://x.com/Khazix0918/status/2119507514459144677",
+                },
+            ],
+        },
+        {
+            "emoji": "🐜",
+            "title": "Coordination Without Meetings",
+            "items": [
+                {
+                    "tag": "stigmergy-agent-environment-traces",
+                    "title": "@xiaomanhedy: Agents Should Leave Traces, Not Send Messages",
+                    "body": "The best architectural framing in the timeline, borrowed from biology. Ants never message each other — one changes the environment, the next reads the trace and acts, which is stigmergy. His argument is that multi-agent systems copy the worst part of a large company instead of the best part of a colony: reporting, alignment and approval rounds, so doubling the agent count quadruples the traffic between them. The alternative he proposes is a shared live context that agents mutate directly — write state, leave a trace, trigger the next step — with no point-to-point pleasantries. There is no benchmark here, which is the honest caveat, but it is a falsifiable design claim: if your agents spend most of their tokens telling each other what they are about to do, the coordination cost is the bug and a shared artefact is the fix.",
+                    "url": "https://x.com/xiaomanhedy/status/2119402051570483265",
+                },
+                {
+                    "tag": "posthog-mcp-analytics-leaderboard",
+                    "title": "@posthog: A Public Leaderboard of Models, Harnesses and Tools",
+                    "body": "PostHog published the MCP analytics it already collects and turned it into a leaderboard of the models, harnesses and tools actually being called in production, which is a different measurement from a benchmark and a rare one. The framing — \"MCP analytics is the new web analytics\" — is a vendor line, but the artefact is real and the incentive is aligned in the useful direction: a company publishing its own traffic distribution is staking credibility on numbers other people can compare against their own stack. Worth opening for the shape of the distribution rather than any single rank, and worth bookmarking as the kind of telemetry that did not exist a year ago, when nobody could say which harnesses teams had actually standardised on.",
+                    "url": "https://x.com/posthog/status/2112574313434112435",
+                },
+                {
+                    "tag": "antiburn-unused-skills-context-audit",
+                    "title": "@antiburn_ai: Find the Tokens You Are Not Using",
+                    "body": "A small tool aimed at the least-instrumented line item in most agent budgets: the context you pay for on every turn but never read. antiburn looks for unused skills and oversized context — the instructions, skill files and setup prose that ship with every request and earn none of them — and it is free, open source and local. The post itself is a one-liner with no numbers, so it earns its place on the problem rather than the proof, and the problem is well documented by this point: the 2026-10-29 quota teardown put per-step context re-read at 80–90k tokens, and the 12:00 digest's cache arithmetic showed that even cache-priced input is most of the modelled bill. An audit that deletes what you never use is the cheapest possible optimisation.",
+                    "url": "https://x.com/antiburn_ai/status/2118521162774818920",
+                },
+            ],
+        },
+        {
+            "emoji": "🏗",
+            "title": "Cheaper Rails",
+            "items": [
+                {
+                    "tag": "avrea-runner-163pct-faster",
+                    "title": "@HannuValtonen: 163% Faster Than GitHub's Own Runner",
+                    "body": "A CI number with a named comparison rather than a vague multiplier: on the RunsOn benchmark, Avrea posts 163% faster than GitHub-hosted runners and 16% faster than Blacksmith, with the founder crediting the team and linking the product. Two things make it worth reading past the claim. First, the 16% gap to Blacksmith is the credible part — a vendor claiming to beat a well-known competitor by a small margin is making a checkable statement, whereas \"163% faster\" is measured against a baseline nobody benchmarks against on purpose. Second, agent-driven commit volume is exactly what makes runner latency a budget line: the 2026-11-02 note on agent write volume reshaping the VCS and CI substrate applies directly, and wall-clock per job is the number that compounds.",
+                    "url": "https://x.com/HannuValtonen/status/2117575593231253627",
+                },
+                {
+                    "tag": "nvidia-30x-agentic-throughput-per-dollar",
+                    "title": "@nvidia: 30× Agentic Throughput per Dollar, 3% More HBM",
+                    "body": "The vendor's own framing of the memory argument, and it is unusually specific about the mechanism: from Blackwell Ultra to Vera Rubin, codesign delivers up to 30× higher agentic throughput per dollar with roughly 3% more high-bandwidth memory per GPU. The asymmetry is the point — a single-digit increase in memory capacity is being claimed against a 30× throughput-per-dollar improvement, which only makes sense if the win comes from how the memory hierarchy is used rather than how much of it exists. Treat the 30× as a projection with no independent measurement attached, and treat the \"3% more HBM\" as the more informative half: it is an admission that agentic workloads are bound by bytes moved through the hierarchy, not by raw FLOPs.",
+                    "url": "https://x.com/nvidia/status/2118478075054678253",
+                },
+                {
+                    "tag": "alibaba-esa-free-cdn-3200-nodes",
+                    "title": "@zsansan4: A Free CDN Tier With 3,200+ Nodes",
+                    "body": "The free-tier unlock of the evening, written with the caveats attached rather than buried. Alibaba Cloud's ESA free plan is permanently zero-cost with no metered traffic or request billing — pick the free tier when adding a site, no redemption code, no task completion — across 3,200+ global nodes with basic DDoS protection and a free certificate, one free site per account on the Chinese console. The limits are stated up front: overseas nodes only by default, mainland acceleration needs real-name verification plus an ICP filing, no SLA, and it is explicitly suited to personal projects and testing rather than anything you would page someone about. That last sentence is what makes the post trustworthy — a free-tier post that names its own failure mode is a different artefact from a promo.",
+                    "url": "https://x.com/zsansan4/status/2119534233530339766",
+                },
+            ],
+        },
+        {
+            "emoji": "🎨",
+            "title": "Artefacts Worth Opening",
+            "items": [
+                {
+                    "tag": "2600-three-js-modules-500k-google",
+                    "title": "@heizolshao: 2,600 3D Models, Each One a Program",
+                    "body": "The scale is the story: a developer open-sourced roughly 2,600 3D models where each model is not a mesh file but a JavaScript program — a three.js ES module with parameters for appearance, state, season, colour and clothing — and picked up $500,000 of Google support for it. That distinction is the whole reason it belongs in a digest about agents. A .glb is a fixed thing an agent can only place; a parameterised module is a thing an agent can reason about and rewrite, so the library becomes a vocabulary rather than an asset dump. For games, animation, 3D sites and portfolios the practical claim is that you can hand the module to a coding agent and adjust it in place, which is exactly the argument for treating code-shaped assets as the default in an agent-driven pipeline.",
+                    "url": "https://x.com/heizolshao/status/2119010722474545311",
+                },
+                {
+                    "tag": "vorssaint-gpl-30k-stars-mac",
+                    "title": "@Chenfacai0: One GPL App Replacing the Utility Subscriptions",
+                    "body": "A Mac utility recommendation with the details that make it checkable: Vorssaint is GPL-3.0, carries 30,000+ GitHub stars, and covers window management, per-app volume, clipboard history, keep-awake and Dock previews in a modular build that stays light on battery — the pitch being one open-source binary instead of a stack of paid subscriptions. The reason it clears the bar is not the feature list, which is commodity, but the economics: a 30k-star GPL project is the version of this category that cannot enshittify into a subscription, and for anyone running a machine as an agent host, keep-awake and clipboard management are operational requirements rather than conveniences.",
+                    "url": "https://x.com/Chenfacai0/status/2118974483855798320",
+                },
+                {
+                    "tag": "sharpen-in-your-own-words-music",
+                    "title": "@poteto: \"I Lack the Vocabulary to Describe What I Want\"",
+                    "body": "The most transferable prompt technique of the week, from someone with zero music experience who had a bot score and animate a track. The trick is not a better description, it is admitting the description is missing: he told the agent \"I lack the vocabulary to describe what I want,\" then used /sharpen from pstack to turn a clumsy brief — gameboyish music, variations of a main melody transitioning seamlessly, like Genshin — into a real specification, and /in-your-own-words to confirm the agent had understood before it built anything. He then reused the same pair for the video, getting a storyboard and animatic first. The general rule: when you cannot name the thing, make naming it the agent's first task, and make it read the spec back to you before it starts producing.",
+                    "url": "https://x.com/poteto/status/2119313621188849806",
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "Worth Your Time",
+            "items": [
+                {
+                    "tag": "cache-97pct-input-72pct-cost",
+                    "title": "@FranciscoFurey: A Cache Hit Is Not Free Work",
+                    "body": "Two numbers from a real production trace that reframe the whole cost conversation: 97.4% of input tokens are cache reads, and cache reads are still 72.9% of the modelled API cost. Everyone building agents has absorbed the folk wisdom that caching makes input nearly free, and this is the arithmetic saying otherwise — the hit rate is high precisely because agent loops re-send enormous context, so the surviving 72.9% is a tax on a very large base. His conclusion is the right unit: the number that matters is cost per verified task, not cost per token or cache-hit percentage, because a cheap loop that never finishes is the expensive one. Worth the minute for anyone who has quoted a cache discount as if it were a bill.",
+                    "url": "https://x.com/FranciscoFurey/status/2119505881138114813",
+                },
+                {
+                    "tag": "ultracode-workflow-not-subagent",
+                    "title": "@nyxienyxie: Ultracode Moves the Plan, Not the Spend",
+                    "body": "A useful correction to a tip that has been circulating as a cost saver. \"Opus plans, haiku scans, sonnet ships\" is viral as a way to burn fewer tokens, but the distinction that matters is who holds the loop: with subagents Claude decides turn by turn and every result lands back in its context, whereas with workflows a script decides and results stay in script variables, so the main session only ever sees the final answer. That keeps the context clean — it does not reduce spend, and per the documentation ultracode uses more tokens per request and reaches limits sooner. The model split is not automatic either; an unnamed stage runs on your session model. Her prompt template names each stage explicitly, isolates each edit, and verifies every finding before reporting, with the honest scoping note that a 500-file migration fits and a one-line fix does not.",
+                    "url": "https://x.com/nyxienyxie/status/2119210757766230503",
+                },
+                {
+                    "tag": "coding-agent-index-tokens-vs-cost",
+                    "title": "@BhurkeSiddhesh: 4.5× the Tokens, 1.6× the Cost",
+                    "body": "A single line of benchmark arithmetic that separates two things usually reported as one. On Artificial Analysis's Coding Agent Index v2.0, Claude Code at Opus 5.5 max consumes 14.5M tokens and 146 turns per task; Codex at GPT-6 Astra max consumes 3.2M and 39. The token gap is 4.5×, the cost gap is only 1.6× — $11.42 against $7.04 — because the cheaper-per-token harness is the one spending the tokens. The practical consequence is that \"which agent is expensive\" depends on which lever you are standing on, and a harness that burns 4.5× the volume while winning on cost per task is a harness with a cache strategy, not a broken loop. Same caveat as every index: the tasks, the judge and the harness settings decide the result.",
+                    "url": "https://x.com/BhurkeSiddhesh/status/2119139068386877702",
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
