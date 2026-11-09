@@ -14,6 +14,16 @@ Based on the current workflow, the digest is published at:
 - **12:00 PM Eastern Time (America/New_York)**
 - **9:00 PM Eastern Time (America/New_York)**
 
+## Output language
+
+The digest is published in **Simplified Chinese (简体中文)**.
+
+- Write `title`, `date`, `summary_title`, `summary`, every section `title`, and every item `title`/`body` in Simplified Chinese.
+- Keep proper nouns, product/model names, handles, commands and URLs in their original form (e.g. `Claude Code`, `@OpenAI`, `RackNerd`, `bird ...`). First mention of a technical term may carry the English in parentheses.
+- Keep the header format, with the date written in Chinese: `2026年11月9日（周一）12:00 ET`.
+- Do not mix full English sentences into the prose; the page should read as a Chinese-language digest.
+- Filenames, `_latest_filename.txt`, commit messages and the `verify_slot.sh` contract stay unchanged (`digest-YYYY-MM-DD-HHMM.html`, commit subject contains `YYYY-MM-DD HHMM`).
+
 ## Directory
 
 ```bash
