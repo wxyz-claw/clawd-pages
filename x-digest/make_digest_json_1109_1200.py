@@ -1,0 +1,167 @@
+import json
+from pathlib import Path
+
+digest_data = {
+    "title": "Clawd X Digest",
+    "date": "2026年11月9日（周一）12:00 ET",
+    "summary_title": "高信号摘要",
+    "summary": [
+        "<strong>413 个文件 vs 10 个文件：</strong>Anthropic 的 Agent 记忆实测里，Sonnet 3.7 把记忆库堆到 413 个文件、近 98 万字符，连续 17 个回合只在新建和删除文件、一步没走，最后只拿到 1 枚徽章；同场的新模型只写 10 个文件就拿下 4 枚。",
+        "<strong>90% 的选择听过期文档的：</strong>十月一项针对 Claude Code 与 Codex 的研究发现，当代码与过期的 CLAUDE.md / AGENTS.md 冲突时，Agent 有 90% 的选择跟着文档走，而不是跟着代码走。",
+        "<strong>3/30 变成 16/30：</strong>GPT-6.1 Terra 在大改动任务上从 medium 档换到 xhigh，30 次里成功次数从 3 次涨到 16 次，单次成本从 $0.11 涨到 $0.31——档位是花钱买成功率，不是买速度。",
+        "<strong>60 倍的成本差：</strong>Artificial Analysis 决策指数 v2 里，每百万任务成本从 $14 到 $859，GLiDE v1.2 的标价只比 Drex Max v1.1 高 33%，账单却高近 8 倍——按文档计费还是按题计费决定的。",
+        "<strong>74 个隐私 SEV：</strong>Meta 的 JiTTests 让 LLM 生成「注定失败」的测试，589 名工程师参与、真阳性率 60%，2026 上半年在 diff 阶段拦下 74 个隐私 SEV，整体发生率降 20%。",
+    ],
+    "sections": [
+        {
+            "emoji": "🧠",
+            "title": "记忆不是越多越好",
+            "items": [
+                {
+                    "tag": "anthropic-components-of-agent-memory",
+                    "title": "@mylifcc：Anthropic 记忆实测，松鼠收集癖 vs 一条克制",
+                    "body": "这篇总结的是 Anthropic 工程团队的《Components of Agent Memory》内部实测，最有说服力的部分是一个翻车案例：让不同代际的 Claude 带着记忆文件夹去玩《宝可梦红版》。Sonnet 3.7 认为每场战斗、每个路人都可能有用，各建一个文件，玩到第 10,000 步时记忆库已经 413 个文件、近 98 万字符；随后连续 17 个回合里新建 6 个文件、删掉 9 个文件，游戏一步没走，最后只拿到 1 枚徽章。同场的新模型只写 10 个文件就拿下 4 枚徽章，克制规则只有一条：屏幕上能直接读出的状态（金钱、坐标）一律不记。四层架构里最值得抄的是「做梦」这个后台步骤——会话结束后回翻原始对话、改掉记错的假设，宝可梦测试里正是靠它修正了一条错笔记才走出月见山。文末三个坑都是可验证的：对新一代 Opus 只给一句「有记忆文件夹可用」，数据库测试从 0.564 涨到 0.828，一旦手动加一条「只记失败教训」的规则，提分丢掉大半；MEMORY.md 自动加载层被硬截断在前 200 行或 25KB；4 个 Agent 同写一张共享条款表，57 条核心条款丢了 16 条，改成各占一页后全部保住。",
+                    "url": "https://x.com/mylifcc/status/2119717128257634685",
+                },
+                {
+                    "tag": "stale-claudemd-90pct-follow",
+                    "title": "@LimestoneHQ：90% 的选择跟着过期文档走",
+                    "body": "一个应该被所有维护 AGENTS.md 的人记住的数字：在十月针对 Claude Code 与 Codex 的研究中，当仓库里的 CLAUDE.md / AGENTS.md 与真实代码冲突时，Agent 在 90% 的选择上遵循了过期的文档。这正好解释了为什么「Agent 明明读了代码还是做错」会反复出现——它读了，但把文档当成了更高优先级的真相。这条帖子的价值在于把问题从「提示词写得好不好」挪到了「文档是不是还在描述这个仓库」，作者说一句话就修掉了大部分。可操作的动作很朴素：把 AGENTS.md 当成代码来维护，改架构时同步改文档，或者干脆让 Agent 在动手前先报告「文档与代码不一致的地方」，而不是让它自己挑一个信。",
+                    "url": "https://x.com/LimestoneHQ/status/2119808229236699466",
+                },
+                {
+                    "tag": "decision-profiling-vs-function-profiling",
+                    "title": "@Barret_China：从 Function Profiling 到 Decision Profiling",
+                    "body": "他推荐 DeepSeek Harness 的 Context 与 Agent-Team 两个插件，但真正的观点是调试对象变了。以前线上出问题，复现不了就 attach 到进程、下断点、看变量和调用路径；现在 Agent as a Service 成为常态，要调试的是「执行太慢、效果太差、太费钱、同一任务每次路径都不同」。所以他给了一个分层的方法论：单个 Session 的调试器要能在某个决策节点暂停、改条件、Fork 出不同路径，再用 Replay 和 Evaluation 比较结果；系统级调试则要从大量执行轨迹里找出反复出现的低效决策、无效探索和失败模式，反过来改 Context 的组织方式、工具设计、执行策略，甚至整个 Harness 架构。这是本周把「Agent 可观测性」讲得最具体的一条，也是少数把工具和调试动作对上号的描述。",
+                    "url": "https://x.com/Barret_China/status/2119427366892257490",
+                },
+            ],
+        },
+        {
+            "emoji": "💵",
+            "title": "档位账、订阅账、自建账",
+            "items": [
+                {
+                    "tag": "gpt-6-1-terra-medium-vs-xhigh",
+                    "title": "@BrenBuilds：xhigh 买的是成功率，不是速度",
+                    "body": "一组可以直接拿去申请预算的数字：同一个 GPT-6.1 Terra，在大改动任务上 medium 档 30 次里成功 3 次，xhigh 档成功 16 次；小修复的成功率从 60% 提到 85%；单次成本从 $0.11 涨到 $0.31。换算下来，大改动每次成功成本从约 $1.10 降到约 $0.58——贵三倍的档位反而更便宜，因为它把失败重试的次数砍掉了。这是本周对「推理档位」最清晰的成本论证：档位不是给所有任务都调的，是要按任务类型分开算的，小修复的收益（+25 个百分点）远不如大改动的收益（5 倍成功率）。任何按 token 单价做决策的表格都会得出相反结论。",
+                    "url": "https://x.com/BrenBuilds/status/2119798249385050566",
+                },
+                {
+                    "tag": "8-25-threads-under-20pct-200-plan",
+                    "title": "@theo：同时跑 8–25 个线程，用不到 20% 的 $200 套餐",
+                    "body": "一句来自重度使用者的容量数据：一整天同时挂着 8 到 25 个 Opus 5.5 线程，累计用掉不到 $200 Claude 订阅额度的 20%。这个数字的意义不在于「便宜」，而在于它给出了并行度的上限感——如果 25 个并发线程只吃掉五分之一，那限制你开多少个 Agent 的就不是额度，而是你读结果的速度。他自己在同一周的结论是「$200 档现在能榨出的价值高得离谱」。把它和上午另一条「为什么我 token 用得飞快」对照着看更有意思：并行线程数上去之后，成本增长的斜率取决于每个线程是否真的需要独立的上下文，而不是线程数本身。",
+                    "url": "https://x.com/theo/status/2119632946663653740",
+                },
+                {
+                    "tag": "m5-pro-local-qwen-worse-than-subscription",
+                    "title": "@xumuai：为省 $100 订阅，买了台 M5 Pro",
+                    "body": "一个诚实的反向案例，价值在于它把「本地部署」这笔账算完整了：为了省每月 $100 的 Claude 订阅，分期买了 64G / 2T 的 MacBook M5 Pro 去跑 Qwen3.8-27B-Q4_K_M，折腾几天才部署起来，结果在生产项目里的表现还不如那份订阅。这里没有给出 benchmark，只有一个使用者的判断，所以别把它当成「本地模型不行」的证据；但它是「用硬件资本开支替换订阅费用」这类决策的一个真实样本——一次性支出、持续维护时间、以及最关键的「够不够用」，三项里最容易低估的是第三项。判断标准其实很简单：先拿 20 个真实任务跑一遍本地模型，再决定要不要买卡。",
+                    "url": "https://x.com/xumuai/status/2119564089508983151",
+                },
+            ],
+        },
+        {
+            "emoji": "🧪",
+            "title": "验证：让失败先发生",
+            "items": [
+                {
+                    "tag": "meta-jittests-589-engineers",
+                    "title": "@Meta_Engineers：让 LLM 写「注定失败」的测试",
+                    "body": "思路很干脆：与其让 AI 像人类评审一样读 diff，不如让它写一个可执行的测试，专门证明这个改动引入了 bug——Just-in-Time Tests（JiTTests）。研究做了一年，已经进入 Meta 的基础设施：589 名工程师参与，报告的真正例率 60%；2026 年上半年在 diff 阶段拦下 74 个隐私 SEV，使隐私 SEV 的整体发生率下降 20%。这三个数字的分工很清楚：60% 说明有一半的警报是噪声，74 说明噪声之上仍然有真实收益，20% 是最终对业务指标的影响。值得抄的不是「用 AI 写测试」这个说法，而是「测试必须会在改动上失败」这个约束——它把评审从意见变成了可执行的反例，也让「通过了但没用」这类测试无处藏身。",
+                    "url": "https://x.com/Meta_Engineers/status/2119829872738714070",
+                },
+                {
+                    "tag": "decision-index-v2-cost-per-million-tasks",
+                    "title": "@ArtificialAnlys：决策指数 v2，60 倍成本差从哪来",
+                    "body": "新版把 45% 的权重换成私有数据集（v1 是 25%），并把头条指标改成同时奖励正确率和校准置信度：答对得 50 分以上、答错 50 分以下，置信度在各自半区内加减分。真正有信息量的是成本那一节——每百万任务成本在决策模型之间差 60 倍以上，Celeris-1.1（$14）、Decider v1.2（$68）、Drex Max v1.1（$102）在帕累托前沿上，Clef 要 $859。而 GLiDE v1.2 的标价只比 Drex Max v1.1 高 33%，账单却高近 8 倍，原因是计费口径：前者按文档计一次输入、所有问题共用，后者每道题都重新计一次文档输入。结论对任何做批量文档抽取的人都成立：先看计费单位，再看单价。同一份报告里语言模型确实更高分（Haiku 5.5 Max 77、GPT-6 Luna Max 76），但后者每百万任务 $1,530、每任务 11.34 秒，对比 $102 和 275 毫秒。",
+                    "url": "https://x.com/ArtificialAnlys/status/2119578471559213411",
+                },
+                {
+                    "tag": "implicit-state-machine-prompt-critique",
+                    "title": "@guyingjie129：那条爆火的「隐式状态机」prompt 错在哪",
+                    "body": "针对本周流传的「找出我应用里所有隐式状态机」提示词，这是最扎实的一条反驳，而且反驳的方式本身是技术性的：把 is_a / is_b / is_c 合成 a | b | c、再用迁移锁定合法转换，那其实是把 Product type 变成 Sum type，决定这次转换是否合法的是 Domain model 里的 OR 与 AND，不是「状态机」这个概念。所以在不提供 Domain model 的前提下，模型只能靠平均的、常识的、代码上下文里指向性强的信号去猜，代码越干净越准，隐式状态机越多越不准；机械执行的结果等于把代码 desugar 成更低级的形态。他给的替代提示词值得直接抄：先找仓库里最重要的几处类型安全违规，只在领域驱动下做类型建模，先在 domain model 上对齐认知，再落成 Types，再在类型检查器辅助下落成代码——最后你会发现代码里没有隐式状态机了，因为你根本没在想状态机。",
+                    "url": "https://x.com/guyingjie129/status/2119824543971975305",
+                },
+            ],
+        },
+        {
+            "emoji": "🛠",
+            "title": "交付现场的细节",
+            "items": [
+                {
+                    "tag": "simonw-collapse-ai-pr-descriptions",
+                    "title": "@simonw：把 AI 写的 PR 描述折起来",
+                    "body": "一个成本几乎为零的习惯，但正好治本周最常被抱怨的那件事：他开始把 AI 生成的大段 PR 描述塞进 GitHub Markdown 支持的 <details><summary> 折叠块里，理由是让「PR slop」不那么消耗人。这里的判断很准——问题不在于 AI 写的描述不准确，而在于它把评审最需要的那几行（改了什么、为什么、怎么验证）稀释在了几百字里。折叠不是隐藏信息，是给信息分层：结论留在外面，过程收进去，需要的人点开。任何在 PR 里贴 Agent 完整思考过程的团队都应该先改这一条，它比再写一份「PR 模板规范」便宜得多。",
+                    "url": "https://x.com/simonw/status/2119650353142747181",
+                },
+                {
+                    "tag": "pinky-agent-controls-phone",
+                    "title": "@DIYgod：让任何 Agent 用上你的手机，Pinky 开源",
+                    "body": "新项目 Pinky 解决的问题很具体：Agent 能操作电脑，但操作不了你口袋里的 iPhone / Android。它让任何 AI Agent 接管手机，Mac、Windows、Linux 都能跑，原生应用、安装包十几 MB，开源免费。设计上值得看的是权限的默认值——付款前会停下来等你点头，发消息、删除也可以设成先问，随时能接管，每一步都有录屏。这基本是「Agent 操作真实设备」这一类工具的正确形态：把不可逆动作变成需要确认的动作，把过程变成可回放的证据，而不是先给全权再补日志。对照本周另一条 accessibility-tree 电脑操作的思路，手机端这块一直是缺口，原因不是技术，是没有人在默认值上认真。",
+                    "url": "https://x.com/DIYgod/status/2119268531678441646",
+                },
+                {
+                    "tag": "non-programmer-codex-workbenches",
+                    "title": "@tthallos：没有编程背景的人用 Codex 做出了什么",
+                    "body": "一个朋友的真实交付物，读起来像体检报告：没有编程背景但有客户资源，上个月用 Codex 做了一堆工作台，已经有付费意愿的客户；因为没用 git，开发和上线全靠 Codex 客户端里的会话完成，最后发过来一个 1 个多 G 的压缩包，还是 Codex 在服务器上打的包；翻了三层目录才找到代码，Python 写的 API，数据库是 sqlite，而最离谱的是其中一个子产品总共十几个 API，却建了 3 个数据库。这条不属于「Agent 真厉害」也不属于「Agent 真糟糕」，它描述的是一个新的中间状态：能跑、能收钱、但没人能接手。判断标准因此不是代码质量，而是「第二个工程师要花多久才能改一行」——这个指标现在还没人测，但它会决定这一批产品能活多久。",
+                    "url": "https://x.com/tthallos/status/2119513077653921992",
+                },
+            ],
+        },
+        {
+            "emoji": "🌐",
+            "title": "平台与硬件的位移",
+            "items": [
+                {
+                    "tag": "html-in-canvas-chrome-157",
+                    "title": "@ChromiumDev：HTML-in-Canvas，内容对 Agent 依然可读",
+                    "body": "Chrome 157 上线的 HTML-in-Canvas 让 DOM 内容可以被画进 canvas，同时保持完全可交互，包括作为 3D 场景的贴图。官方列的收益里，最不该被忽略的是后两条：对屏幕阅读器与 AI Agent 完全可访问，以及浏览器自带的翻译和「页内查找」继续可用。这两条其实是在纠 canvas 时代的老毛病——一旦界面画进 canvas，语义树就消失了，无障碍工具和 Agent 都只能看像素。对做 Agent 浏览器或 computer-use 的人来说，这条意味着「画得像 canvas、读起来像 DOM」不再是二选一；对做前端的人来说，它把「为了效果牺牲可访问性」这个借口又拿掉一个。",
+                    "url": "https://x.com/ChromiumDev/status/2119814186561638756",
+                },
+                {
+                    "tag": "nvidia-30x-agentic-throughput-per-dollar",
+                    "title": "@nvidia：每美元 agentic 吞吐提升到 30 倍",
+                    "body": "厂商口径，但数字足够具体，值得记下来当基准：从 Blackwell Ultra 到 Vera Rubin，官方称共同设计带来最高 30 倍的「每美元 agentic 吞吐」，而每 GPU 的高带宽内存只增加约 3%。这个对比的要点不是 30 倍，而是分子分母的不同增速——如果内存只多 3%，那 30 倍只能来自单位 token 的计算效率、互连和调度，也就是说 agent 负载的瓶颈正在从「装不装得下」转向「单位成本能跑多少步」。对做容量规划的人来说，这意味着沿用「按 HBM 容量估并发」的老模型会严重低估下一代机器的实际可用吞吐。",
+                    "url": "https://x.com/nvidia/status/2118478075054678253",
+                },
+                {
+                    "tag": "gemma-4-31b-modelscope-1000tps",
+                    "title": "@mingzi206：Gemma 4 31B 跑在免费 24G 显存上，上千 t/s",
+                    "body": "一条实测记录：把 Gemma 4 31B（18G 量化）部署到 ModelScope 免费的 8 核 / 32GB 内存 / 24G 显存环境，自测速度上千 token/s。这类数字的价值不在精度，而在于它标出了「免费额度能跑多大模型」这条线的位置——31B 级别、单卡 24G、还能上千 t/s，意味着大量非前沿任务（分类、抽取、改写、批量总结）已经不需要付费 API。同样的逻辑本周还有一条：把 DeepSeek 284B 压进 64GB 内存、不用显卡跑起来，作者的建议是先拿 20 个真实任务试，再决定要不要买卡。两条合起来是一个可执行的判断顺序：先用免费额度验证够不够用，再谈硬件。",
+                    "url": "https://x.com/mingzi206/status/2119810384869908836",
+                },
+            ],
+        },
+        {
+            "emoji": "🎯",
+            "title": "值得你花时间",
+            "items": [
+                {
+                    "tag": "nvidia-discard-history-one-note",
+                    "title": "@LilMGenius：把历史全扔掉，只留一条笔记",
+                    "body": "11 月 3 日 NVIDIA 展示的一件事，数字干净得可以直接引用：让编码 Agent 在每次动作之后丢掉全部历史、只保留一条短笔记，Opus 4.5 在 SWE-bench Verified 上从 70.0 变成 70.2，峰值上下文从 200K token 降到 16K。也就是说，那 184K 的对话历史对最终成绩的贡献是负的——不是中性，是略微有害。这条和本周 Anthropic 那个「413 个文件只拿 1 枚徽章」的案例是同一个结论的两种证法：一个是记忆文件膨胀，一个是上下文膨胀，都在证明「保留更多」不等于「知道更多」。作者把这条纪律整理成了 skills（先复述任务、再动手），这类把论文结论压成可执行习惯的工作，比再写一篇总结有用。",
+                    "url": "https://x.com/LilMGenius/status/2119664544322887742",
+                },
+                {
+                    "tag": "18pct-removable-tokens-waste-paper",
+                    "title": "@Jayanth_V79：可删的 token 占 18%，但浪费能超过一次成功",
+                    "body": "新论文的结论可以浓缩成两句：6 个模型、4 个 Agent benchmark，用 LLM judge 判定约 18% 的输出 token 是可删的；而在 45% 以上的任务上，一个 Agent 浪费掉的量比另一个 Agent 完成整个任务所用的还多。第二句才是重点——它说明浪费不是均匀摊在每一步的，而是集中在少数任务上，所以「平均 token 效率」这种指标会把它抹平。作者的落点是成本口径：每个成功任务的成本，比总 token 数更能说明问题。这也解释了为什么这一周所有靠谱的成本讨论都收敛到同一个单位，而不是每百万 token 的报价。",
+                    "url": "https://x.com/Jayanth_V79/status/2119801562646114710",
+                },
+                {
+                    "tag": "posthog-2-trillion-tokens-own-benchmarks",
+                    "title": "@stretchcloud：每月两万亿 token 之后，只能自己造 benchmark",
+                    "body": "PostHog 的规模数字先放在这儿：每月两万亿 token，大部分来自 Agent。到那个量级之后，「感觉还行」不再可用，他们于是自己做评测，而写出来的最有价值的部分不是结论而是困难——第一步就卡在「什么算正确答案」：拿一个冻结的 PR，用 0 到 13 分的 rubric 打分，逐步拆到工具调用、检索质量、失败步骤。这条适合任何准备买评测服务的人读，因为它是从买方视角写的踩坑记录：当你的 Agent 在真实仓库上跑，任何公共 benchmark 的分布都和你的分布不一样，能复用的只有方法论。",
+                    "url": "https://x.com/stretchcloud/status/2118164144700711293",
+                },
+            ],
+        },
+    ],
+}
+
+out_path = Path("/Users/jwang/clawd-pages/x-digest/digest.json")
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(digest_data, f, indent=2, ensure_ascii=False)
+
+print(f"Successfully wrote {out_path}")
