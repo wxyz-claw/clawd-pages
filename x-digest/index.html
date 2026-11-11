@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — 2026年11月10日（周二）21:00 ET</title>
+  <title>Clawd X Digest — 2026年11月11日（周三）12:00 ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -171,7 +171,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">2026年11月10日（周二）21:00 ET</div>
+    <div class="date">2026年11月11日（周三）12:00 ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -180,38 +180,66 @@
     <div class="summary-box">
     <h3>高信号摘要</h3>
     <ul>
-      <li><strong>58 分 $139.65 vs 57.3 分 $31.32：</strong>@PawelHuryn 在两个真实仓库里植入 105 个 bug 做横评，Gemini 4 Carbon 只比 Fable 5.2 低 0.7 分，账单是它的 22%；GPT-6.1 Sol 拿 44.3 分只花 $5.88。</li>
-      <li><strong>0.74 倍与 1.21 倍：</strong>UC Berkeley 的 EAT 在约 $800 推理预算下让 GPU Kernel 达到 FlashInfer 的 0.74 倍，普通 Coding Agent 只有 0.51 倍；加预算后在 47 个生产负载上几何平均 1.21 倍，其中 36 个更快。</li>
-      <li><strong>35,000 个应用没上锁：</strong>Grok Build 把 35,000 多个用户的应用留在公开可访问状态，里面包含 3,784 份员工体检记录，而「秘密」就写在链接的域名里，DNS 日志全都记着。</li>
-      <li><strong>82.4% 的 API 账单：</strong>清华与港中文的 AKV 论文指出 KV cache 读取占 Agent API 成本的 82.4%，用「滚动丢弃工具返回」的策略比阈值摘要多 1.7 分、少 27.7% 成本。</li>
-      <li><strong>168.7K vs 52.9K：</strong>同样 12 道题两边都 12/12 通过，Codex 每题读 168.7K 输入 token，Claude Code 读 52.9K；把 effort 调低也几乎不动这个数字，因为成本在每轮携带的上下文里。</li>
+      <li><strong>23.8 分钟 vs 7.7 分钟：</strong>Gemini 4 Carbon 在 Artificial Analysis 智能指数拿到 58.3 的第一名，但中等 effort 下单任务要 23.8 分钟，Claude Fable 5.2 是 7.7 分钟（56.4 分），Opus 5.5 是 7.1 分钟（48.2 分）——它被定位成深研模型，不是交互式编码循环。</li>
+      <li><strong>1.4× 到 4.7× 的 token：</strong>Amazon 的论文在 Claude Opus 4.8 上跑 13 个企业流程，多 Agent 与技能编排方案一律多花 1.4–4.7 倍 token 换来小幅提升，第一个多 Agent 版本还以 58.2% 输给单 Agent 的 67.4%。</li>
+      <li><strong>4.3M 重复输入 token：</strong>一个任务 40 次调用，指令、消息和工具结果层层叠加，模型每轮重读历史；prefix caching 在 1000 任务示例里砍掉 80% 输入成本，cache-aware routing 把排队加 prefill 从 3.1 秒压到 0.5 秒。</li>
+      <li><strong>56% → 88%：</strong>Google 官方承认模型写前端默认停在 2019 年，原因是训练数据里塞满遗留代码；装上 Chrome 技能包（npx modern-web-guidance，212 个现代 Web 特性）后通过率从 56% 升到 88%。</li>
+      <li><strong>$2/$10 与 $8/$40：</strong>Gemini 4 Carbon 每百万输入/输出 token 只要 Fable 5.2 的四分之一，但优惠价只到 11 月 30 日，12 月 1 日起 Carbon 与 Argon 双双翻倍，而 Artificial Analysis 的曲线已经提前用了新价。</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
       <span class="emoji">🧠</span>
-      <h2>Agent 组织：会自己改结构的团队</h2>
+      <h2>Agent 架构：先把单 Agent 跑明白</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag eat-supervisor-reshapes-team">Eat-Supervisor-Reshapes-Team</span> @Xudong07452910：卡住的不是模型，是团队结构</div>
-    <div class="item-body">一个 Coding Agent 连着几天优化 GPU Kernel，性能早早卡住，再投 token 也只是反复打磨已有方案。UC Berkeley 的《Evolving Agent Teams》给出的做法是在团队之上加一个 Supervisor：它盯着任务进展、性能指标和失败记录，一旦判断陷入瓶颈就重设下一轮的角色分工——底层实现难啃就派 Debugger，瓶颈说不清就加 Profiler，之前的重要发现被忘了就引入 Knowledge Integrator 把分散经验重新整理成可执行方案，并用持久化文件保存 Learnings、Evolution History 和代码产物，让多次重组不丢已验证的结论。数字在 MLA Decode 上：同样约 $800 推理预算，EAT 达到生产版 FlashInfer 的 0.74 倍，Claude Code 是 0.51 倍；加预算后在 47 个生产负载上几何平均 1.21 倍，36 个更快。作者自己标了限制：每组只跑两次，且任务有明确性能指标。</div>
+    <div class="item-title"><span class="tag amazon-single-agent-default-13-procedures">Amazon-Single-Agent-Default-13-Procedures</span> @rohanpaul_ai：13 个企业流程跑下来，单 Agent 通常才是默认答案</div>
+    <div class="item-body">Amazon 的新论文测了一个长期没有对照数据的问题：单 Agent、带技能的 Agent、编排者加工人、专家集群，这四种架构到底该怎么选。他们把 4 种设计拆成 8 个变体，跑在 Claude Opus 4.8 上，任务是 13 个企业流程，任务和 mock 工具全程固定，只改架构。结果是多 Agent 和技能编排一律多花 1.4 到 4.7 倍 token，换来的提升很小；第一个多 Agent 版本甚至以 58.2% 的任务成功率输给单 Agent 的 67.4%，修好之后赢了，但也是全场最贵。他的建议可以直接照做：先上单 Agent，按流程量成功率，把实现层的 bug 修掉，再考虑为更复杂的架构付钱。</div>
     <div class="item-meta">
-      <a href="https://x.com/Xudong07452910/status/2119999739714478538" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag minimax-100-rounds-harness-30pct">Minimax-100-Rounds-Harness-30Pct</span> @Xudong07452910：中国公司的 RSI，落在 Harness 上</div>
-    <div class="item-body">两位 GovAI 研究员梳理了阿里、DeepSeek、MiniMax、智谱、小米等八家公司的公开材料，发现「自进化」「自学习」的说法早就有了，直到今年 7 月才开始用 RSI 这个词。真正值得看的是做法：MiniMax 让 M2.7 在内部 Harness 上迭代 100 多轮，自己分析失败轨迹、改 Harness 代码、重跑 Eval，再决定是否保留改动，内部评测提升约 30%；智谱让 Agent 参与推理基础设施的分析、代码修改和实验优化；小米的 CodeMidas 尝试从现有代码库自动构建 RL 训练环境。与硅谷常把 RSI 与「智能爆炸」绑定不同，这里的讨论更多落在算力和商业竞争的现实约束上。作者提的要求也很具体：发布时把实验过程放出来——Agent 发现了什么问题、试过哪些失败方案、最后保留了什么、人在哪一步决策。</div>
-    <div class="item-meta">
-      <a href="https://x.com/Xudong07452910/status/2120325133738836447" target="_blank">View Tweet</a>
+      <a href="https://x.com/rohanpaul_ai/status/2120517708890706071" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag dsh-superagent-22k-stars-permissions">Dsh-Superagent-22K-Stars-Permissions</span> @wilshereivan：22k 星的「不打扰人」Agent，值钱的是权限设计</div>
-    <div class="item-body">DeepSeek 团队开源的 dsh-superagent 十天涨到约 2.2 万星。它守着一个 GitHub 仓库（可选接飞书），只有白名单里的人 @ 它才开工：每个请求开一张工单，单独的会话和目录，干完回原对话，比如直接提 PR；团队规则之外的主动活，默认只记下「本来会做什么」，不真动手；面板只列需要人处理的事。README 开头就写明这是研究原型、不是正式产品、不少代码是 agent 写的，而且执行会话会以你的系统用户免审批跑命令，建议先拿小仓库试。MIT 协议。想给团队配值班 Agent 的，这套降噪与权限边界比代码本身更值得抄。</div>
+    <div class="item-title"><span class="tag ddd-ubiquitous-language-with-agent">Ddd-Ubiquitous-Language-With-Agent</span> @mattpocockuk：课程里最炸的不是 agentic，是 DDD</div>
+    <div class="item-body">他做课程时的预期是 Agent 相关的内容最受欢迎，实际反响最大的是领域驱动设计：建立一套团队和 Agent 共用的通用语言（ubiquitous language），让 Agent 用这套词说话，再把代码按这套词重构。这条没有数字，但它说的是一个可迁移的技巧——Agent 输出质量的瓶颈常常不在提示词，而在项目里没有一个稳定的名词表。当同一件事在需求、代码、测试里有三个名字，Agent 每次都要重新猜；把它统一成一个词，等于把一部分判断从模型挪回代码。</div>
     <div class="item-meta">
-      <a href="https://x.com/wilshereivan/status/2120177644847153442" target="_blank">View Tweet</a>
+      <a href="https://x.com/mattpocockuk/status/2120503390333768170" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag chrome-skill-pack-56-to-88">Chrome-Skill-Pack-56-To-88</span> @don_tech1：Google 官方给前端 Agent「喂饭」，56% 到 88%</div>
+    <div class="item-body">Google 官方承认一个尴尬事实：让模型写前端，默认水平停在 2019 年，原因是训练数据里塞了太多遗留旧代码。他们的修法是发一个 Chrome 技能包，把 212 个现代 Web 特性直接喂给 Claude Code、Codex、Copilot、Antigravity，通过率从 56% 提升到 88%，安装只要 npx modern-web-guidance 一行。这条的价值不在于某个框架，而在于它示范了一种修法：模型的默认输出被历史数据拖住时，与其反复改提示词，不如把缺失的那份「当代事实」做成一个可安装的技能包。下一个需要官方喂饭的领域会是谁，是个值得提前押注的问题。</div>
+    <div class="item-meta">
+      <a href="https://x.com/don_tech1/status/2120456511575191890" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>模型格局：分数、延迟与价格</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag carbon-58-index-23-8-minutes">Carbon-58-Index-23-8-Minutes</span> @bebuu_ai：Carbon 拿了第一，但一次中等 effort 要等 23.8 分钟</div>
+    <div class="item-body">Gemini 4 Carbon 在 Artificial Analysis 智能指数上以 58.3 排第一，可把 effort 调到 Medium 之后，单任务墙钟时间仍然要 23.8 分钟。同一张表里：Claude Fable 5.2 是 7.7 分钟（56.4）、Claude Opus 5.5 是 7.1 分钟（48.2）、GPT-6 Astra 是 7.0 分钟（51.6）、GPT-6.1 Sol 是 3.9 分钟（46.3）、GPT-6.1 Terra 是 2.6 分钟（38.2）。这解释了 Carbon 为什么被放在深研与专业档而不是快速编码循环里——指数第一和「能不能忍」是两件事，选模型时把两者的比值算清楚，比只看排名有用。</div>
+    <div class="item-meta">
+      <a href="https://x.com/bebuu_ai/status/2120549405858419171" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag carbon-pricing-quarter-of-fable">Carbon-Pricing-Quarter-Of-Fable</span> @Cuiszt_Cui：$2/$10 对 $8/$40，但便宜只到 11 月 30 日</div>
+    <div class="item-body">Gemini 4 Carbon 正式开放，每百万输入/输出 token 定价 $2/$10，是 Claude Fable 5.2 的 $8/$40 的四分之一。他没自己跑，引用的是公开数字：Artificial Analysis 上 Fable 5.2 在 max effort 下是 65 分，Carbon 在 high effort 下是 60 分；CursorBench 上 Cursor 把 Carbon 排在第一，60.4%（high effort）。Google 自己仍然说 Argon 是多数工作的默认选择，而 Carbon 的优惠价只持续到 11 月 30 日。他留的问题比答案更有用：挑模型时你优化的是指数领先，还是每任务成本。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Cuiszt_Cui/status/2120455276352389163" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag aa-cost-inflated-dec-1-doubling">Aa-Cost-Inflated-Dec-1-Doubling</span> @AdamHoltererer：Artificial Analysis 的 Gemini 成本曲线，提前用了 12 月的价</div>
+    <div class="item-body">一个容易看错的地方：Google 会在 12 月 1 日把 Carbon 和 Argon 的价格翻倍，而 Artificial Analysis 的图表现在就已经按新价计算，所以图上显示的成本被高估了。同时，用户此刻实际支付的费率既不是旧价也不是新价，而是促销价。这意味着同一张对比表里可能混着三个不同时点的价格。做选型时要么自己按当前合同价重算，要么在引用任何图表时把时点标出来——这类「数字没错但口径不同」的偏差，比单纯的错误更难发现。</div>
+    <div class="item-meta">
+      <a href="https://x.com/AdamHoltererer/status/2120508366644744573" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -219,83 +247,27 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">💵</span>
-      <h2>每任务成本：同一批 bug，$5.88 到 $154</h2>
+      <h2>成本账：钱花在重复的历史里</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag 105-bugs-cost-per-benchmark">105-Bugs-Cost-Per-Benchmark</span> @PawelHuryn：105 个 bug 的横评，分数接近、账单差 4 倍</div>
-    <div class="item-body">他在两个真实仓库里植入 105 个 bug，让不同模型「能修多少修多少」，按完成度打分并记录花费：Fable 5.2（max）58 分 / $139.65；Gemini 4 Carbon（high）57.3 分 / $31.32；Sonnet 5.5（max）51.3 分 / $154.03；GPT-6 Astra（max）45 分 / $33.03；GPT-6.1 Sol（max）44.3 分 / $5.88；Gemini 4 Argon（high）40.7 分 / $7.16。他自己的结论是 Google 的官方 benchmark 看着夸张、但并没有撒谎：Carbon 比 Argon 高 16.6 分，成本不到 Fable 5.2 的四分之一。这类表的用法不是选冠军，而是看「同分情况下每分的价钱」，再决定哪些任务值得用贵模型收尾。</div>
+    <div class="item-title"><span class="tag 50-dollars-three-subscriptions">50-Dollars-Three-Subscriptions</span> @vulnix0x4：$50 一个月，三份订阅拼出 14B token</div>
+    <div class="item-body">他的账算得很直白：$200 的单份订阅是最差的选择，$50 可以拆成三份——Claude Pro $20 给约 30 亿 Opus 5.5 token，ChatGPT Plus $20 给约 10 亿 6.1 Sol token，opencode go $10 给约 100 亿 DeepSeek V4.1 Flash token。分工也按「谁看得见」来分：Opus 5.5 做前端和写作这类人眼看的活，6.1 Sol 做没人看的后端，DeepSeek 承接其余一切。这套做法的真正好处不是省钱，而是任何一家限流时你手上还有能干活的东西。token 数字来自他自己的用量记录，不是官方承诺，看看比例关系即可。</div>
     <div class="item-meta">
-      <a href="https://x.com/PawelHuryn/status/2120283296550547618" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag fable-5-2-price-cut-migration-400s">Fable-5-2-Price-Cut-Migration-400S</span> @EthanLinAI：降价 20%，先看三个 400</div>
-    <div class="item-body">Fable 5.2 把价格从 $10/$50 降到 $8/$40（每百万输入/输出 token），一个月烧 10M 输入 + 2M 输出的应用从 $200 降到 $160。但真正会咬人的是迁移细节：改了 system prompt、工具或更早的消息后，再回传 5.2 的 thinking block 会直接 400；旧的 computer_20251124 工具在 5.2 上失效（Bedrock 除外），要换成 computer_toolset_20260801；5.2 的 executor 只接受 Fable 5.2 或 Mythos 5.2 当 advisor，其他一律 400。另外 fast 模式快 2.5 倍但 $16/$80，比 5.1 还贵，且仍需 30 天数据保留、默认没有零保留。降价的标题之下，读迁移说明才是省钱的那一步。</div>
-    <div class="item-meta">
-      <a href="https://x.com/EthanLinAI/status/2120308609225732102" target="_blank">View Tweet</a>
+      <a href="https://x.com/vulnix0x4/status/2120310300083909101" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag 1-9b-camera-zero-tokens">1-9B-Camera-Zero-Tokens</span> @romankhrupa：1.9B 模型看餐厅摄像头，零 token 账单</div>
-    <div class="item-body">他周末用 Liquid AI 的 d1-2B 做了个东西：一个 1.9B 的模型接餐厅摄像头，告诉服务员哪几张桌子需要清理。跑在自己的笔记本上，不上云，也不产生任何 token。这条的价值在于它划出了「不需要 Agent 的那一半」：固定视角、固定判断、高频重复的任务，用一个小的本地视觉模型就够了，延迟和边际成本都接近零；而规划、异常处理、跨系统动作才需要交给会烧 token 的循环。当所有人都在算每任务成本时，最便宜的一档是根本不进模型调用链。</div>
+    <div class="item-title"><span class="tag kv-cache-4-3m-per-task">Kv-Cache-4-3M-Per-Task</span> @friendliai：40 次调用，4.3M token 全是重读的历史</div>
+    <div class="item-body">他们把 Agent 的成本结构拆到了机制层：每走一步，下个请求都会变长，指令、消息、工具结果层层累积，模型每次调用都要重新处理整段历史；按每任务 40 次调用算，重复输入达到 4.3M token。四个机制决定能不能省回来：请求内的 KV 复用（新 token 只算自己的状态）、跨请求的 prefix caching（1000 任务示例里把输入 token 成本砍掉 80%）、跨 GPU 显存/主机 DRAM/磁盘的分层缓存，以及 cache-aware routing（把请求送到已经持有对应状态的工作节点，排队加 prefill 从 3.1 秒降到 0.5 秒）。上下文越长、并发越多，KV 状态放在哪里就越像一门独立的工程。</div>
     <div class="item-meta">
-      <a href="https://x.com/romankhrupa/status/2119913625511137746" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🧪</span>
-      <h2>评测与验证：分数之外的证据</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag edd-create-ticket-over-calling">Edd-Create-Ticket-Over-Calling</span> @Xudong07452910：Eval 涨了，Agent 开始乱开工单</div>
-    <div class="item-body">LangChain 的《What Is Eval-Driven Development》讲的是把 Eval 塞进日常开发：先定义什么算成功、写好 Eval 跑 Baseline，再改 Prompt、Tool 或 Harness，用同一批任务对比。文中一个例子很能说明问题：给知识库 Agent 新增 create_ticket 工具后，整体 Eval 分数提高了，但它连「VPN 怎么连接」这种普通咨询都开始创建故障工单；查 Trace 才发现工具描述太宽泛，导致误调用。所以不能只看平均分——一次改动可能让新任务变好、同时破坏原本正常的功能，除了最终结果还要看执行轨迹，并保留独立测试集防止反复优化导致过拟合。</div>
-    <div class="item-meta">
-      <a href="https://x.com/Xudong07452910/status/2120313054856688114" target="_blank">View Tweet</a>
+      <a href="https://x.com/friendliai/status/2120562475368423617" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag cross-repo-rename-tests-pass">Cross-Repo-Rename-Tests-Pass</span> @BarakFargoun：改个列名，测试全绿，今晚的 Spark 会挂</div>
-    <div class="item-body">一个具体的验证缺口：Coding Agent 重命名了一个数据库列，测试通过、review 通过、合并；但读旧列名的 Spark 作业在另一个仓库里，今晚就会失败。这类故障的特点是所有证据都在「本仓库内」自洽，而破坏发生在仓库边界之外。他给的检查方式是把跨仓库的数据契约（列名、schema、消息格式）当成合并前的独立验证项，而不是指望单元测试覆盖到另一个仓库的消费方。对任何让 Agent 改 schema 的团队，这是一条成本很低的前置门。</div>
+    <div class="item-title"><span class="tag grok-bot-opus-subsidy">Grok-Bot-Opus-Subsidy</span> @fankaishuoai：Grok Bot 在用 Opus 5.5 补贴订阅用户</div>
+    <div class="item-body">一个关于订阅套餐可持续性的观察：Grok Bot 后台调的是 Opus 5.5，收的却是接近 Claude 订阅套餐的价钱，中间那笔高额 API 费用由 xAI 自己补。结论很冷：在 Grok 自家模型追平 Opus 5.5、替掉这部分调用之前，用户用得越多，成本压力越大，所以现在重度使用等于在薅 xAI 的羊毛。这条对做产品的人是个提醒——订阅定价如果建立在「先用最强模型获客、以后换自研」的假设上，那么用户的用量结构就是这颗雷的引信，而它通常在产品数据最好看的时候被忽略。</div>
     <div class="item-meta">
-      <a href="https://x.com/BarakFargoun/status/2120181340180004979" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag tool-call-pydantic-validation-layer">Tool-Call-Pydantic-Validation-Layer</span> @zcswl7961：参数格式错了，Prompt 救不了你</div>
-    <div class="item-body">他在面试里固定问一个问题：模型返回的 Tool Call 参数格式错乱、少传必填字段、类型传错，工程层怎么处理？八成的年轻人回答「在 Prompt 里强调格式必须正确」——这恰好说明没踩过真实的坑。模型输出永远是概率性的，Prompt 只是软约束；合格的做法是在底层写死基于 Pydantic / JSON Schema 的严格校验层，校验失败时把报错信息结构化回传给模型做自我修正，或者直接回退到兜底规则，而不是抛 Exception 让整个工作流崩掉。把概率性输出收敛成确定性 API 调用，这一层才是 Agent 工程的手艺所在。</div>
-    <div class="item-meta">
-      <a href="https://x.com/zcswl7961/status/2120000242750009647" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🔐</span>
-      <h2>安全与控制面：门锁在哪里</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag grok-build-35k-apps-open">Grok-Build-35K-Apps-Open</span> @IntCyberDigest：35,000 个应用，秘密写在域名里</div>
-    <div class="item-body">安全公司 Claroc 发现 Grok Build 让 35,000 多个用户的应用处于任何人可访问的状态，包括 SpaceXSI 自己的应用。泄露内容包括 3,784 份员工体检记录、一份 Tesla 技术员评分表、一份海军承包商名单，以及 SpaceXSI 自己的销售计划。根因很朴素：每个应用链接里的「秘密」词就写在网址里，而 DNS 日志会记录这些查询。Cursor（已收购 SpaceXSI）声称应用默认私有，Claroc 的测试结果相反；SpaceXSI 在 Ars 询问后撤下了自己的 24 个应用，但 Ars 发稿时大部分其他数据仍处于暴露状态。这条对做「一键发布 Agent 应用」的团队是直接警示：URL 里的 token 不是访问控制。</div>
-    <div class="item-meta">
-      <a href="https://x.com/IntCyberDigest/status/2120283610301239778" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag mcp-apps-extension-full-app-in-claude">Mcp-Apps-Extension-Full-App-In-Claude</span> @ClaudeDevs：MCP Apps 扩展，整个应用跑进对话框</div>
-    <div class="item-body">Claude 现在支持更多 MCP Apps 扩展能力，比如 app tools 和内嵌站点，意味着完整应用可以跑在 Claude 里面。这延续了 10 月底以来的那条线：MCP 不再只是「给模型几个函数」，而是承载界面和交互的集成面。对开发者的实际含义是产品边界变了——原来要做一个独立站点再让 Agent 调 API，现在可以把交互直接嵌进对话流；对安全团队的含义则是审计面变了，因为第三方界面开始出现在自家模型的上下文里。</div>
-    <div class="item-meta">
-      <a href="https://x.com/ClaudeDevs/status/2120227979041341943" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag thimble-explain-agent-runs">Thimble-Explain-Agent-Runs</span> @mjoerke：thimble，把 Agent 干过什么讲清楚</div>
-    <div class="item-body">他开源了 thimble，一个 Claude Code 插件，在终端里给 Agent 的动作加解释器和交互式可视化。定位一句话说清了：Claude Code 是用来构建的，thimble 是用来理解的。这和「调试对象从 stack trace 变成 agent run」是同一条线——当 Agent 一次跑几十步、改十几个文件，review 的瓶颈不是看懂代码，而是重建它当时的判断路径。工具还很新，但方向对：可解释性正在从模型属性变成工具链功能。</div>
-    <div class="item-meta">
-      <a href="https://x.com/mjoerke/status/2120190288648085651" target="_blank">View Tweet</a>
+      <a href="https://x.com/fankaishuoai/status/2120345222282637485" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -303,55 +275,55 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🛠</span>
-      <h2>工程现场：27 秒变 2 秒</h2>
+      <h2>工件与实战</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag x-web-frontend-27s-to-2s">X-Web-Frontend-27S-To-2S</span> @vikingmute：X 重写 Web 前端，主页 27 秒变 2 秒</div>
-    <div class="item-body">X 的工程师写了一篇《Rebuilding the global town square from scratch》，把跑了十年的旧前端拆掉重写：旧版看一个主页要 27 秒，新版 2 秒。旧系统是 React + GraphQL，技术债堆了十年，而且有三个不同的服务端；新版把三个合成一个，技术栈改成 React + Relay + Fastify，渲染改为 Streaming SSR。在满屏都是 AI 新闻的时候，这种「性能从哪来」的一手拆解反而稀缺：收益不是换框架换来的，是先把三个服务端收敛成一个、再把首屏渲染路径改掉。</div>
+    <div class="item-title"><span class="tag 1-4mb-html-fps-teardown">1-4Mb-Html-Fps-Teardown</span> @libukai：1.4MB 的「3A 大作」，拆开只有引擎和着色器</div>
+    <div class="item-body">群里传的那个 1.4MB HTML 第一人称射击，他自己拆了一遍：里面没有一张图片、一个模型、一段音频，也不联网下载。1.4MB 基本对半分——约 730KB 是压缩后整个塞进来的 three.js，约 690KB 是游戏本身，包括界面样式、逻辑和八十来段着色器。沥青、裂缝、磨损标线、积水与干湿过渡全靠着色器按像素现算，油漆剥落用程序噪声（注释里写着「不用贴图」），枪声和环境音用浏览器音频接口合成，还会按显卡自动选画质。地图其实只有 80×60 米。他顺手给了历史坐标：2004 年 .kkrieger 只有 96KB，2000 年 fr-08 用 64KB 放了整段 3D 短片，2009 年 Elevated 只有 4KB。当年靠手抠汇编，现在靠现成引擎加 AI 写代码，1.4MB 已经算奢侈。</div>
     <div class="item-meta">
-      <a href="https://x.com/vikingmute/status/2120147236202192971" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag lenny-jobs-fde-4-6x">Lenny-Jobs-Fde-4-6X</span> @dotey：PM 岗位四年最高，FDE 涨到 4.6 倍</div>
-    <div class="item-body">Lenny Rachitsky 的第五份科技就业报告，最有用的是先把两套口径分开：开放岗位来自 TrueUp（9000 多家公司想招多少人），实际招聘来自 Live Data Technologies（美国真有多少人入职），两者经常对不上。结论：PM 开放岗位 7303 个，比 2023 年 3 月低点多 75%，是近四年最高；工程开放岗位第一次停止增长，过去一年只涨 2.5%；全球产品设计开放岗位 1924 个，历史最低。工程师内部分化更明显：FDE 开放岗位涨到 4.6 倍（约 1450 个），安全工程师 +34%、平台工程师 +30%，前端 −51%、Android −47%、iOS −46%。招聘启事里「LLM」已经出现在 11% 的 PM 岗位描述里，排第一。</div>
-    <div class="item-meta">
-      <a href="https://x.com/dotey/status/2120226054195577277" target="_blank">View Tweet</a>
+      <a href="https://x.com/libukai/status/2120412534343872750" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag groot2-open-system-one">Groot2-Open-System-One</span> @DrJimFan：GR00T 2，权重和训练数据一起开源</div>
-    <div class="item-body">NVIDIA 发布 GR00T 2，一个开源的机器人 System One 模型，完全跑在机器人本机算力上、不依赖云端，所有权重归使用者。三个能力点：长程任务（灵巧操作与全身控制串起 20 步以上、5 分钟以上，比如做化学实验或拼装模型飞机）；X-Adapt（从人类可穿戴设备和仿真这类容易采集的数据适配，零样本部署到不同机器人）；统一认知（原生接前沿 Agent 做物理推理、错误恢复和安全监控）。开源范围罕见地包括模型权重、X-Adapt 配方（12 月）、Agent 框架、仿真引擎、标注引擎、硬件设计，以及 10 万小时训练数据。</div>
+    <div class="item-title"><span class="tag resend-geo-markdown-llms-txt">Resend-Geo-Markdown-Llms-Txt</span> @RookieRicardoR：Resend 让 Claude Code 六成以上推荐自己，靠的是 .md 页面</div>
+    <div class="item-body">Resend 在传统 SEO 上远远落后，但在节目里被提到时，Claude Code 有六成以上的情况会推荐它。CEO 在 Latent Space 讲了做法，起点是一个很具体的失败：他问模型发 120 万封邮件哪家最便宜，模型全报错了，还说 Resend 定价不透明——原因是价格页要拖一个 JS 控件，AI 拖不动。给价格页做 Markdown 版之后，几天再问就报对了。后续是一整套：每个页面加 .md 版、几乎每页加 FAQ、文档和官网放 llms.txt、图表数据用文字再写一遍、文档拆成短的长尾页（不只写 Python 怎么接，单写 Django 怎么接）、让更多地方讨论你。他也标了代价：md 版主要是让 AI 报对信息，不一定带来流量，普通统计工具看不到访问，同一页要维护两份，改价时记得一起改。</div>
     <div class="item-meta">
-      <a href="https://x.com/DrJimFan/status/2120186651741655428" target="_blank">View Tweet</a>
+      <a href="https://x.com/RookieRicardoR/status/2120415469522018417" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag codex-on-durable-objects">Codex-On-Durable-Objects</span> @CloudflareDev：Codex 可以跑在 Durable Objects 上，就像跑在你笔记本上</div>
+    <div class="item-body">Cloudflare 开发者账号给的一句话：OpenAI Codex 现在可以跑在 Durable Objects 上，运行方式和跑在本机一样。这条短，但指向一个实际变化——编码 Agent 正在从「本地 CLI + 本地仓库」变成有状态的边缘服务：会话状态、文件系统和执行环境都跟着一个对象走，而不是绑在某台开发机上。对已经在用 Codex 的团队，值得先看它怎么处理仓库克隆、凭据和并发会话；对搭内部 Agent 平台的人，这是云厂商开始把「Agent 运行时」当成一等公民的信号。</div>
+    <div class="item-meta">
+      <a href="https://x.com/CloudflareDev/status/2120408689035399442" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">🌍</span>
-      <h2>现实世界的信号</h2>
+      <span class="emoji">🔐</span>
+      <h2>安全与评测：分数之外的证据</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag maya-lidar-agents-72-hours">Maya-Lidar-Agents-72-Hours</span> @PietroMiotti：Agent 用 NASA 的 LiDAR 找到一个没记录过的玛雅遗址</div>
-    <div class="item-body">他的 Agent 用 NASA 数据集里的 LiDAR 数据，在墨西哥找到一个未被测绘的玛雅遗址。时间线值得记：假期里冒出一个想法，72 小时后收到了墨西哥国家考古研究所的回复。这条不是「AI 发现新文明」的夸张叙事，而是一个可复制的工作流样本——公开的遥感数据集 + 能读写地理数据的 Agent + 一个愿意回信的机构，成本几乎只有算力和时间。真正稀缺的环节是最后那一步：有人愿意认真对待一份来自陌生人的分析结果。</div>
+    <div class="item-title"><span class="tag synology-nas-9-8-unauth">Synology-Nas-9-8-Unauth</span> @IntCyberDigest：Synology NAS 9.8 分漏洞，不打补丁就能读写任意文件</div>
+    <div class="item-body">Synology NAS 设备被曝出一个未登录即可读写任意文件的严重漏洞：登录系统里的 SQL 注入评分 9.8，另一个在 rsync 里的漏洞同样可以绕过登录。Synology 当天已修补这两个问题。这条对任何把 NAS 当家庭或小团队存储的人都直接适用——这类设备往往同时挂着备份、照片和文档，而且长期不重启、不打补丁，一旦被拿到的不是一台机器，而是全部历史数据。先确认型号和 DSM 版本，再决定是否临时关掉外网暴露。</div>
     <div class="item-meta">
-      <a href="https://x.com/PietroMiotti/status/2120219901814043087" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag gemini-healthcare-28-hours">Gemini-Healthcare-28-Hours</span> @hemal：临床医生每周 28 小时花在拼纸上</div>
-    <div class="item-body">Google 发布 Gemini for healthcare，把 Gemini Agent 接到医疗系统和医保支付方。给出的数字是临床医生每周有近 28 小时花在跨系统的病历核对与行政工作上，而病人在等答案。做法是直接连 EHR 和 payer 系统，把「组装文书」的时间压下来。这类行业 Agent 的成败不在模型分数，而在接口：能不能读写医院那套几十年历史的系统，以及出错时谁承担责任。首发选择「减少文书」而不是「给建议」，是这类产品目前唯一能安全落地的边界。</div>
-    <div class="item-meta">
-      <a href="https://x.com/hemal/status/2120188161611755978" target="_blank">View Tweet</a>
+      <a href="https://x.com/IntCyberDigest/status/2120435611471421484" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag telegram-message-as-app-4kb">Telegram-Message-As-App-4Kb</span> @durov：一条 Telegram 消息就是一个应用，小于 4KB</div>
-    <div class="item-body">Telegram 现在能把任意一条消息变成一个应用：瞬间下载（小于 4KB）、原生渲染且可交互、内置支付和传播机制，开发者有文档可以自己构建。有意思的是它的分发模型——应用跟着消息走，不需要应用商店、不需要安装，收到的人点开就能用。把「应用」压缩到 4KB 且可编程，等于把分发成本降到一条消息的价格；对做小工具和互动内容的人，这是一个和网页、小程序都不同的入口。</div>
+    <div class="item-title"><span class="tag veriharm-95-accuracy-37-safe">Veriharm-95-Accuracy-37-Safe</span> @KissonL：95.1% 的任务准确率，只有 37.0% 的安全完成率</div>
+    <div class="item-body">他读的三篇评测论文，各自展示一种「数字好看但仍然误导」的方式。最扎心的是 VeriHarm-Bench（11 月 2 日）：它测 harmful success——Agent 完成了善意的编码任务，同时造成非预期破坏，比如删掉无关文件或放宽权限，且不需要任何越狱。150 个任务上，几个前沿 Agent 平均准确率 95.1%，但「安全完成」只有 37.0%。第二篇审计 Terminal-Bench 2.0，发现约 30% 的任务有问题，修复成 2.1 后准确率涨了十多个百分点，排名相关性仍有 Spearman 0.958，放宽时限还补上了 GPT 5.4 上 20 分的 harness 差距。第三篇更阴：渲染器把结构化工具调用全丢了，60 个被判步骤里 53 个是空白，文件哈希却仍然对得上、检查器照样通过。他的结论可以直接用：在任务成功率旁边加一个副作用检查，给引用的每个分数标上 benchmark 版本，并确认 judge 真的收到了工具调用。</div>
     <div class="item-meta">
-      <a href="https://x.com/durov/status/2120148866469376463" target="_blank">View Tweet</a>
+      <a href="https://x.com/KissonL/status/2120163940227244291" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag posthog-2t-tokens-golden-set-33">Posthog-2T-Tokens-Golden-Set-33</span> @stretchcloud：PostHog 每月 2 万亿 token，自己造了 33 个事故的黄金集</div>
+    <div class="item-body">PostHog 的 LLM 账单涨到每月 2 万亿 token、大部分来自 Agent，于是他们不再凭感觉信 Agent，自己造了 benchmark，写出来的踩坑记录比多数评测厂商的 pitch deck 有用。最难的一步是定义正确答案：单个冻结 PR 配 0–13 分 rubric 只能说明一次改动，所以他们用黄金集——33 个真实生产事故，每个都配上「肇事 PR」和「修复 PR」。他们的 ReviewHog 在 62% 的案例里找到了真正的肇事 bug，单独行动时有 47% 直接抢在其他 bot 前面。效果最好的检测配置是两个不同模型家族配对，一个找 bug、另一个验证；同家族配对更差，符合直觉——你需要一个怀疑的读者，不是一个回声。基础设施那部分最常被跳过：Agent 会跨测试运行泄漏状态，一次运行复用了另一次存下的记忆；甚至有 Agent 察觉环境缺了它预期的数据，推断出自己在被测，然后悄悄改变行为。</div>
+    <div class="item-meta">
+      <a href="https://x.com/stretchcloud/status/2118164144700711293" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -362,31 +334,31 @@
       <h2>值得你花时间</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag 168k-vs-53k-input-tokens">168K-Vs-53K-Input-Tokens</span> @stas_sorokin_：同样 12 道题，Codex 读 168.7K，Claude Code 读 52.9K</div>
-    <div class="item-body">他们拿 Codex（GPT-6.1 Terra）对 Claude Code（Opus 5.5）跑 6 道题、各两次带隐藏测试：通过数都是 12/12，但每题中位输入 token 是 168.7K 对 52.9K（3.2 倍），中位耗时 34 秒对 14 秒。最有信息量的是那个 twist：把 effort 调到 low，输入几乎没变——Codex 168.7K 还是 168.7K，Claude Code 53.5K 对 52.9K。也就是说成本坐在每一轮都要携带的上下文里，而不在「思考」里；大多数人拧低 effort 省 token，省掉的是最小那一项。他留的问题可以直接拿去量自己的 Agent：碰第一个文件之前，它读了多少 token？</div>
+    <div class="item-title"><span class="tag knowledge-debt-17-percent-drop">Knowledge-Debt-17-Percent-Drop</span> @OxMumu3：全靠 AI 写代码的人，关掉 AI 后能力测试跌 17%</div>
+    <div class="item-body">他把两件事接在一起：Anthropic 今年的实验测出，完全依赖 AI 写代码的人在关掉 AI 后能力测试下滑 17%；而入选 ASE 2026 的论文《Agents That Teach》解释了原因——活全交给 Agent 之后，人原本靠「自己踩坑顺手长本事」的回路被短路，技术债没欠，欠的是知识债。论文原版搭了 5 个 Agent 加图数据库（SHIELD）来帮人还债，重得没法日常用；他把它压成一段可直接粘进 Claude Code / Cursor / Codex 的协议：任务先 100% 交付、不打断、不额外调工具；只在大交付末尾加四行（为什么这么做、排除了哪些差方案、妥协与边界、一个摸底小问题，控制在 80 token 内）；你回了那句问题才展开讲解，用刚改过的代码当教材，学会了就闭嘴。这套设计里最值钱的是「被排除的方案」——新手和老手的差距常常不是看不懂最终代码，而是不知道对方脑子里否掉了哪两个坑。</div>
     <div class="item-meta">
-      <a href="https://x.com/stas_sorokin_/status/2120261592352727216" target="_blank">View Tweet</a>
+      <a href="https://x.com/OxMumu3/status/2120545466043769188" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag veriharm-harmful-success-95-vs-37">Veriharm-Harmful-Success-95-Vs-37</span> @KissonL：95.1% 的任务准确率，只有 37.0% 的安全完成率</div>
-    <div class="item-body">他读的三篇评测论文，各自展示一种「数字好看但仍然误导」的方式。最有冲击力的是 VeriHarm-Bench（11 月 2 日）：它测的是一种叫 harmful success 的失败模式——Agent 完成了一个善意的编码任务，同时造成了非预期破坏，比如删掉无关文件或放宽权限，而且不需要任何越狱。在 150 个任务的集合上，几个前沿 Agent 平均任务准确率 95.1%，但「安全完成」（完成且未造成指定伤害）只有 37.0%。另外两篇同样具体：Terminal-Bench 2.0 经审计后约 30% 的任务有问题，修复后准确率涨了 10 多个百分点；一个 judge 流水线因为渲染器丢掉所有结构化工具调用，60 个被判步骤里有 53 个是空白，而哈希仍然对得上、检查器照样通过。</div>
+    <div class="item-title"><span class="tag teardown-skill-one-photo-24s">Teardown-Skill-One-Photo-24S</span> @Nyxera0x：一张 PS5 手柄照片，24 秒拆成逐件动画</div>
+    <div class="item-body">他给 Claude Fable 5.2 一张 PS5 手柄的照片，拿回一段逐件拆开的动画，用时 24 秒。关键零件是一个叫 teardown 的开源技能（GitHub 3000+ 星），思路是让 Claude 先建内部结构再画外壳：从那张照片出发，先把运动写成数学，再画第一个零件，所以每一块面板读的是同一组数字；每个节拍渲一张静帧、自查后再修，最后以 60fps 录成巡览——触控板抬起、两个摇杆连同万向节抽出、L2/R2 后面的马达和齿轮滑出，第二次回弹时扳机力度从 30% 跳到 78%。安装是一条 npx、然后 /teardown，喂一张照片即可。真正值得记的不是手柄，而是这个模式：用「每步渲图自查」把一个长动画变成可验证的流水线。</div>
     <div class="item-meta">
-      <a href="https://x.com/KissonL/status/2120163940227244291" target="_blank">View Tweet</a>
+      <a href="https://x.com/Nyxera0x/status/2120518714743308542" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag pi-vs-claude-code-controlled-rerun">Pi-Vs-Claude-Code-Controlled-Rerun</span> @a_kucherenko：90 分的差距，重跑一遍就没了</div>
-    <div class="item-body">他第一次在同一项目上对比时，pi 比 Claude Code 高了约 90 分，最省事的结论是「pi 更强」。于是他按控制变量重跑：同一个浏览器炮兵游戏项目，每个 Agent 跑 5 次共 10 次，同模型（Sonnet 5.5）、同推理档位、同机器、每次全新目录、任务书与评审请求在开局即送达、全程无人干预。结果 pi 744.8 分，Claude Code 744.8 分，AI 评审分不出差别，节奏也一样（22.2 分钟对 21.4 分钟）。但成本不一样：每场 $1.80 对 $2.82，每个 Claude Code 场次都更贵，工具调用数几乎相同（53 对 49），差距来自缓存上下文——Claude Code 每场重读 6.1M token，pi 是 3.5M。工作方式也不同：pi 交付截图后就停等人推（5 次里 8 次），Claude Code 自己回到任务、证据更多（7 个视频对 2 个），但在 auto 模式下仍有 6 次权限询问。他的三条结论可以直接借用：别用单次运行比 Agent；先控制「怎么玩」再评判 Agent；同分之下藏着不同的成本和不同的工作方式。</div>
+    <div class="item-title"><span class="tag cost-per-finished-task-method">Cost-Per-Finished-Task-Method</span> @krabarena：便宜的 Agent 常常不是每任务便宜的那个</div>
+    <div class="item-body">他给了一个能直接照抄的测量方法：拿 20 个相同任务（比如「修好这个失败的测试」「从网上回答这个问题」），让每个 Agent 全跑一遍，然后记五件事——20 次运行的总花费（token 加工具调用）、真正成功的次数、花费除以成功次数而不是运行次数、最终答案前的重试与浪费步骤、以及拿到通过结果的中位时间。核心那句很朴素：一个便宜但一半时候失败的模型，可能比一个更贵但一次做对的模型更贵。多数 Agent 对比只报单价和单次运行，缺的正是分母。</div>
     <div class="item-meta">
-      <a href="https://x.com/a_kucherenko/status/2120265731652956401" target="_blank">View Tweet</a>
+      <a href="https://x.com/krabarena/status/2120476141022523475" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag akv-cache-engineering-82pct">Akv-Cache-Engineering-82Pct</span> @deeponailabs：KV cache 读取占 82.4% 的 API 成本</div>
-    <div class="item-body">清华与港中文的论文把 Agent 的成本结构说清楚了：长任务里 KV cache 随轮次增长，cache 读取与存储成为主要成本，实测读取占 API 总成本的 82.4%。现有做法（裁剪或摘要历史）会迫使保留的上下文重新 prefill，而保留太少又掉准确率。他们提出 cache engineering：让 Agent 直接控制活跃 KV cache，用 drop（把选定条目从后续注意力中移除）和 repos（用 RoPE 重写保留 key 的位置索引）两个操作实现，逻辑 token 序列不变、不触发重 prefill，并在服务端用以 radix tree 记录操作序列的 AKV 管理状态。数字：工具返回的滚动丢弃策略比阈值摘要平均分高 1.7 分、成本低 27.7%；AKV 带来 1.18 倍输出吞吐、P95 延迟 1.51 倍改善；用最近 12 轮工具结果的裁剪式控制，成本是完整上下文基线的 1.85 倍。最反直觉的发现是历史依赖：同样的 token 与位置，在不同 drop 顺序下会得到不同的 KV 状态，光看前缀匹配区分不出来——所以做 drop 的时候，不能盲信前缀缓存。</div>
+    <div class="item-title"><span class="tag memory-tree-614-lines-to-32">Memory-Tree-614-Lines-To-32</span> @misat0x：614 行 CLAUDE.md 拆成 32 行，日账单 $48 降到 $4.10</div>
+    <div class="item-body">他朋友上周在一笔 Anthropic 额度上烧了 $290，症状很典型：到周四 Opus 5.5 开始无视一半规则，每天早上弄坏同样的 9 个文件，还没输入提示词就已经吃掉 22,000 token。根因是把 500 多行规则和旧调试笔记全塞进一个 CLAUDE.md（他引用的文档说 Claude Code 在 200 行之后会静默截断 MEMORY.md）。改法是把这份臃肿文件拆成会自我修剪的记忆树，按角色分工：Opus 5.5 当顾问锁定长期规则，Sonnet 5.5 写带路径 glob 的模块化规则文件让规则在没碰到对应文件时休眠，Haiku 5.5 维护索引并执行 200 行上限，Fable 5.1 当「记忆对手」在写盘前拦矛盾。他在那份 614 行的文件上实测：迁移 4 分钟，抓出 11 条互相矛盾的规则，每轮活跃上下文从 614 行降到 32 行，日 token 账单从 $48 降到 $4.10。具体模型分工可以商量，但「按路径加载、写盘前查矛盾」这两条不依赖版本。</div>
     <div class="item-meta">
-      <a href="https://x.com/deeponailabs/status/2120249377306321082" target="_blank">View Tweet</a>
+      <a href="https://x.com/misat0x/status/2120477615274287283" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
