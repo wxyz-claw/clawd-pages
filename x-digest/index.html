@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — 2026年11月12日（周四）12:00 ET</title>
+  <title>Clawd X Digest — 2026年11月12日（周四）21:00 ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -171,7 +171,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">2026年11月12日（周四）12:00 ET</div>
+    <div class="date">2026年11月12日（周四）21:00 ET</div>
     <div style="margin-top: 10px; font-size: 0.9em;">
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
     </div>
@@ -180,94 +180,66 @@
     <div class="summary-box">
     <h3>高信号摘要</h3>
     <ul>
-      <li><strong>11,000 个 PR / 0.5% 回滚：</strong>@poteto 的 Grok Bot 团队上个月向生产环境交付 11,000 个 PR，回滚率稳定在 0.5% 左右，她的规则是每次纠正 Agent 都要变成一条确定性检查，而不是往 agents.md 里再加一行。</li>
-      <li><strong>$42.21 → $6.06：</strong>开源代理 pxpipe 把一次真实的 Claude Fable 5.2 编码会话压到约七分之一，做法是把每轮重复发送的约 48,000 字符系统提示词渲染成一张图，输入 token 从约 25,000 降到约 2,700。</li>
-      <li><strong>95.1% 与 37.0%：</strong>VeriHarm-Bench 的 150 个任务上，前沿 Agent 平均任务准确率 95.1%，但「无副作用完成」只有 37.0%——活是干完了，同时删了别的文件、放宽了权限。</li>
-      <li><strong>30% 的任务有问题：</strong>审计者复查已过多轮评审的 Terminal-Bench 2.0，发现约 30% 的任务存在缺陷，修好的 2.1 让准确率提高 10 个百分点以上，部分 Agent 排名最多上升三位。</li>
-      <li><strong>570ms 还是 800ms：</strong>Zyphra 开源的 ZONOS3-Mini 能在手机浏览器里实时克隆声音（8 亿参数 MoE，激活 1 亿，Apache 2.0），但官方博客与官方 X 给出的首段延迟是两套数字。</li>
+      <li><strong>简单 harness 打败成品：</strong>@philhchen 发布 Company Agent Bench，用同一套标准比较 Dots、Grok Bot、Claude Tag 与 Devin，首条结论是「接一个简单 harness 的 API 模型」表现比这些公司助理产品更好。</li>
+      <li><strong>5.3 分钟 / $1.6 一个任务：</strong>Gemini 4 Hydrogen（High）在 Agent Arena 的 6.5k 场真实会话里排到第 5，比 Claude Fable 5.2 快 3 倍、比 GPT-6 Astra 便宜 3.7 倍，代价是每个任务多花 41% 的输出 token。</li>
+      <li><strong>几十年的工作压缩到一个月：</strong>Google DeepMind 用 AlphaProof Code 把 Signal 协议的设备端机器码形式化验证了一遍，这是首次有广泛部署协议的生产代码被验证到这个深度。</li>
+      <li><strong>Code Mode 与 1M 默认上下文：</strong>Claude Code 2.1.323 加入实验性的 Code Mode（写 JavaScript 调工具），未识别模型默认给 1M 上下文，同机会话之间的自动消息上限从约 20 条提到 100,000 条。</li>
+      <li><strong>14% 与 4%：</strong>一个真实 RL 训练栈的 Agent 基准里，没有任何 Agent 通过超过 14% 的尝试，19 个可验证任务中有 11 个无人解出；但只有 4% 的失败尝试是「完全无法评分」——它们会跑、会交结果，只是结果是错的。</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 工程：基准、心智与仓库结构</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag company-agent-bench-simple-harness">Company-Agent-Bench-Simple-Harness</span> @philhchen：发布 Company Agent Bench，简单 harness 反而赢过成品</div>
+    <div class="item-body">他今天发布 Company Agent Bench，用来衡量公司助理类产品「有多懂这家公司」，参评的是 Dots、Grok Bot、Claude Tag 和 Devin 四个成品。第一条就给出了对产品不利的结论：接一个简单 harness 的 API 模型，表现比这些产品更好。这条的价值不在于排名，而在于它把「产品体验」和「模型 + harness」拆开比较——如果一层薄 harness 就能超过成品，说明产品层目前加的多是包装，而不是能力。他在 thread 开头没有给具体分数，结论的细节要等后续几条；但这种「先把对照组设好」的评测方式，比只报自家产品分数更值得看。</div>
+    <div class="item-meta">
+      <a href="https://x.com/philhchen/status/2120917642055934320" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag executive-mindset-for-agents">Executive-Mindset-For-Agents</span> @kunchenguid：用「高管心智」而不是「操作员心智」带 Agent</div>
+    <div class="item-body">他认为能用好 Agent 的人和一个真正的高管有同一种习惯，而这种习惯对没做过管理的人是反直觉的。他给了四个判断：发完 prompt 之后你是否盯着对话框看 Agent 在做什么——好高管不会站在员工背后看；重要决策你是否只靠聊天——高管会要文档和演示，因为准备成本换来的是更高效的讨论；Agent 做错时你是否只是骂它、逼它改——之后还要问是什么让这个错误得以发生，并从根上堵住；你是否把所有时间花在逐行检查上——没有哪个流行产品是没有 bug 的，正确做法是把时间投到能在上线前抓错的流程、出问题时能告警、以及能快速回滚上，而不是把自己变成测试员。他给的练习是：如果明天有 100 倍的 Agent 做 100 倍的工作，这件事你会怎么做。</div>
+    <div class="item-meta">
+      <a href="https://x.com/kunchenguid/status/2120970648310927519" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag home-repo-pattern">Home-Repo-Pattern</span> @mattpocockuk：Home Repo——跨多个 repo 跑 Agent 的简单解法</div>
+    <div class="item-body">他把自己一直在用的做法写成了一篇正式文章：不再让每个项目各自维护一套 Agent 配置，而是建一个「home repo」，作为跨仓库工作的统一入口，文章里还带一段可以直接在组织内多个 repo 上跑的初始化 prompt。这和 12:00 那期里 @vikingmute 的 start repo 是同一个方向——把 steering 文件、技能和全局规则集中到一处，让 Agent 有一个稳定的落脚点，而不是每进一个仓库就重新摸索一遍。差别在于他把「怎么迁移已有仓库」也写成了可执行的步骤，而不只是一个目录约定。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mattpocockuk/status/2120838662254420341" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
       <span class="emoji">🧠</span>
-      <h2>Agent 工程：11,000 个 PR 背后的约束</h2>
+      <h2>Claude Code：Code Mode、压缩后的状态与并行编排</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag poteto-11000-prs-deterministic-check">Poteto-11000-Prs-Deterministic-Check</span> @FinanceYF5：11,000 个 PR、0.5% 回滚，纠错要变成确定性检查</div>
-    <div class="item-body">@FinanceYF5 在 #AIECode 遇到 @poteto，记下了她团队的两个数字：Grok Bot 团队上个月向生产环境交付 11,000 个 PR，回滚率稳定在 0.5% 左右。她的规则只有一句：每次你纠正 Agent，都要把它变成一条确定性检查，而不是往 agents.md 里再加一行。这句话的分量在于它承认了文档型指令会衰减——写在提示词里的规矩会被上下文压缩、被新会话遗忘，而 lint 规则、类型约束、UI 测试不会。11,000 与 0.5% 之所以可信，是因为分子和分母同时在场：只报 PR 数量是产能表演，只报回滚率是保守策略，两个一起才是工程能力。</div>
+    <div class="item-title"><span class="tag claude-code-21323-changelog">Claude-Code-21323-Changelog</span> @alexmichael：Claude Code 2.1.323，Code Mode 与 1M 默认上下文</div>
+    <div class="item-body">他把这次更新里真正影响日常使用的几条挑了出来：Code Mode 是新的实验选项，Claude 改为写 JavaScript 来调用工具，而不是一次一次地逐个调用——这是把「工具调用」从对话轮次变成一段可执行程序，理论上能显著减少往返；用量耗尽时新增菜单，可以停下、切到额度或升级；Claude Code 不认识的模型现在默认给 1M 上下文，而不是 200K；同一台机器上的会话之间可以互相发消息，自动往返上限从约 20 次提到 100,000 次；Artifacts 开始接受 .docx 上传。前两条改变的是执行结构，后三条改变的是长会话能走多远。</div>
     <div class="item-meta">
-      <a href="https://x.com/FinanceYF5/status/2120785821209137440" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag six-months-engineering-environment">Six-Months-Engineering-Environment</span> @Stargridcompass：那 6 个月花在工程环境上，不是花在提示词上</div>
-    <div class="item-body">他把 @poteto 的做法拆成五条：重构历史烂代码，避免 Agent 有样学样；少写 AGENTS.md，把人工纠错变成 lint、类型约束和架构规则；给 Agent 足够的工具，让它自己运行、检查和验证功能；修复必须提供截图、视频等证据，而不是一段说明文字；把更多 token 花在自动化测试和形式化验证上。前面那句判断更值得记：如果底层研发流程本身就有问题，盲目搞 AI 软件工厂只会以 10 倍速度生产垃圾代码。团队花了整整 6 个月打磨工程环境，目标是让「写出好代码」成为阻力最小的选择——把质量做成默认值，而不是做成检查环节。</div>
-    <div class="item-meta">
-      <a href="https://x.com/Stargridcompass/status/2120787429603016767" target="_blank">View Tweet</a>
+      <a href="https://x.com/alexmichael/status/2121003637371470145" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag start-repo-single-entry">Start-Repo-Single-Entry</span> @vikingmute：把 steering 文件集中到一个 start repo</div>
-    <div class="item-body">他的做法是给自己设一个统一入口：不再在各个项目 repo 里分别启动 Agent，而是有一个专门的 start repo，集中存放 agents.md、skills、design.md、wiki 配置这些 steering 文件，再用一份简单的 md 告诉 Agent 其他项目的路径，可以直接过去操作。好处有三个：全局规则改一次就生效，不用在每个 repo 里重复配置；有联系的项目可以在同一套规则下一起改；Agent 知道别的项目在哪，不必每次重新摸索。这和「上下文要少而准」是同一个方向——重复的配置是每一轮都在付的税。</div>
+    <div class="item-title"><span class="tag postcompact-hook-project-state">Postcompact-Hook-Project-State</span> @bondy_inx：压缩会丢掉约束，用 PostCompact hook 把它接回来</div>
+    <div class="item-body">他指出一个很具体的问题：Claude Code 压缩对话时，重要的上下文会消失——Agent 可能还记得目标，却忘了「让实现正确的那些约束」。解法是 Claude Code 的 PostCompact hook：压缩完成后自动把关键指令重新注入，再配一个简短的项目状态文件，写清当前任务、不可协商的规则、验证命令和尚未解决的失败。这样多小时的构建不必把每条指令都塞进每一轮 prompt，而是在被压缩掉之后按需恢复。这条没有数字，但它是「上下文管理」从「写更长的提示词」转向「在正确的时机恢复状态」的一个可复用形态。</div>
     <div class="item-meta">
-      <a href="https://x.com/vikingmute/status/2120488589750579646" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">💸</span>
-      <h2>成本：把系统提示词画成一张图</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag pxpipe-render-static-prompt-as-image">Pxpipe-Render-Static-Prompt-As-Image</span> @bebuu_ai：把 25,000 token 的系统提示词渲染成图，$42.21 变 $6.06</div>
-    <div class="item-body">开源代理 pxpipe 把一次真实的 Claude Fable 5.2 编码会话从 $42.21 压到 $6.06。原理不复杂：Claude Code 每一轮都会重发约 48,000 字符的系统提示词、CLAUDE.md 说明和工具 schema，约合每轮 25,000 个文本 token；用 `pxpipe warp -- claude` 启动后，代理把这些巨大的静态文本块渲染成一张致密的 PNG，只需约 2,700 个视觉 token，约 9 倍差距，而 Fable 5.2 和 Opus 5.5 能原生读图且不损失工具调用准确率。这是把「重复的静态上下文」从文本通道搬到视觉通道——省下的不是模型能力，是每轮都在重付的那部分输入。</div>
-    <div class="item-meta">
-      <a href="https://x.com/bebuu_ai/status/2120782516038865270" target="_blank">View Tweet</a>
+      <a href="https://x.com/bondy_inx/status/2120973361031290959" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag deepseek-flash-as-subagent-tier">Deepseek-Flash-As-Subagent-Tier</span> @IfiokJr：主力是 DeepSeek V4.1 Flash，强模型只做规划</div>
-    <div class="item-body">他描述了自己的用量结构：大部分调用走 DeepSeek V4.1 Flash，把更聪明的模型留作规划者，让便宜模型去执行那些不需要动脑的子任务，并称 API 价格约是 Claude 的 0.1%。这个比例不必当真，值得记的是分工方式——把「想」和「做」拆到两个价位上，而不是让一个模型从头干到尾。同一条回复里他还提到一个现实摩擦：@t3dotcodes 不支持他买的 @Zai_org 订阅；也就是说这套分层在工具侧还没有通用解，harness 对订阅和计费的支持程度，会直接决定省钱策略能不能落地。</div>
+    <div class="item-title"><span class="tag current-hundreds-of-agents">Current-Hundreds-Of-Agents</span> @alonzuman：Current——同时跑几百个 Agent，但要保持控制</div>
+    <div class="item-body">他发布 Current，定位是「一种有主见（opinionated）的 Agent 工作方式」，目标是让你能同时跑几百个 Agent 而仍然在控制之内。可信度来自最后一句：过去两个月他用它构建了所有东西，包括 Current 本身——自己吃自己的狗粮，而且是在同一个产品上。这条没有数字，也没有说明「控制」具体怎么实现，所以现在能确认的只是方向：Agent 数量上去之后，产品要解决的核心问题不再是单次调用质量，而是并行任务的可见性、边界和回收。等它给出具体的调度或审批机制，才值得进一步采信。</div>
     <div class="item-meta">
-      <a href="https://x.com/IfiokJr/status/2120758192648880228" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag opus-as-commander-t3-code-mcp-wsl">Opus-As-Commander-T3-Code-Mcp-Wsl</span> @CyanCloud77：Opus 5.5 做指挥官，T3 Code 当 MCP 跑在另一台机器上</div>
-    <div class="item-body">他的配置是：在 Claude Opus 5.5 里讨论点子、做计划，把跑在带 WSL 的 Windows 主机上的 T3 Code 作为 MCP server 交给 Opus 远程调用，于是 Opus 自己调模型、自己和执行侧对进度，测试也不占 Mac 的资源。这条没有数字，但它把「规划与执行分离」落到了具体形态：规划留在交互界面里，执行放到另一台机器上，两者通过 MCP 连接而不是靠人复制粘贴。对只有一台主力机的个人开发者，这等于凭空多出一个执行节点，代价是要维护一条跨机器的工具链。</div>
-    <div class="item-meta">
-      <a href="https://x.com/CyanCloud77/status/2120836580822995115" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  </div>
-
-  <div class="section">
-    <div class="section-header">
-      <span class="emoji">🧾</span>
-      <h2>流程：README 驱动还是规格驱动</h2>
-    </div>
-  <div class="item">
-    <div class="item-title"><span class="tag pstack-readme-driven-not-sdd">Pstack-Readme-Driven-Not-Sdd</span> @cu30rry_：在 pstack 里不要用 SDD，用 README 驱动</div>
-    <div class="item-body">他的判断很直接：pstack 的工作流和狭义 SDD（规格 → 详细设计 → 评审 → 实现 → 对抗式评审）在思想上不相容。SDD 的问题在于详细设计阶段文档容易膨胀，同时压垮人的认知和模型的上下文窗口；而且它本质上是靠自然语言控制，让 Agent 实现正确代码的难度很高。pstack 走的是 README 驱动：不从规格出发，而从人的意图和「用户怎么用」出发，只把验证过的代码当作事实，调查、设计、实现、验证各环节由 Playbook 定义。他的结论是 SDD 要成立得有两个前提——形式验证做底座、规格足够薄（到需求定义的程度）——否则不如 README 驱动，人的负担更低、代码质量更高。</div>
-    <div class="item-meta">
-      <a href="https://x.com/cu30rry_/status/2120790449933721977" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag build-a-piece-of-junk-first">Build-A-Piece-Of-Junk-First</span> @guyingjie129：先做一个垃圾出来，在 AI 时代更成立</div>
-    <div class="item-body">他认为 DDD 的思想仍然成立，但过去 20 多年的实践方式已经过时，Domain Modeling Made Functional 更现代也更 Agent-Friendly，最近 agentic coding 拥抱形式化证明的潮流正反映这一点。他反对的是任何「先想完备再动手」的建议：计划赶不上变化，与其在假设上叠假设，不如马上并行用粗糙想法驱动 Agent 做出可体验、可观测的产物，再从结果里延伸思考。他给了一句可以当判据的话：假设叠假设等于更弱的假设，结果叠结果才是更强的结果；过去思考要多是因为做的成本高，现在思考的成本高于做的成本，所以要做得更多，给思考提供确定的依据。</div>
-    <div class="item-meta">
-      <a href="https://x.com/guyingjie129/status/2120774019616285112" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag language-consistency-is-half-the-software">Language-Consistency-Is-Half-The-Software</span> @mattpocockuk：能把业务流程说清楚，软件就已经写了一半</div>
-    <div class="item-body">他的观察是：如果你能用清晰、一致的语言描述业务流程，那你其实已经完成了要自动化那套软件的一半——DDD 从来没有像现在这么有用。这条和上一条正好互补：一个说别在文档里想太久，一个说语言本身的清晰度就是资产。合起来是一个可操作的分界——值得花时间的是把词定义清楚（谁、什么状态、什么算完成），不值得花时间的是把实现细节预先写成规格。判断标准也很简单：这段文字换个人读，会不会得出同一个动作序列。</div>
-    <div class="item-meta">
-      <a href="https://x.com/mattpocockuk/status/2120606575819956439" target="_blank">View Tweet</a>
+      <a href="https://x.com/alonzuman/status/2120988568961044592" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -275,62 +247,83 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🚀</span>
-      <h2>模型、工具与上线事故</h2>
+      <h2>Gemini 4 Hydrogen：快、便宜、但更啰嗦</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag zonos3-mini-browser-voice-clone">Zonos3-Mini-Browser-Voice-Clone</span> @KalinJunYAI：手机浏览器里实时克隆声音，但延迟有两套官方数字</div>
-    <div class="item-body">Zyphra 开源的 ZONOS3-Mini 能在手机浏览器里实时克隆声音：MoE 结构，总参数 8 亿、激活 1 亿，Apache 2.0，用 112 张 H100 训练了 2.5 天。问题出在延迟上——博客写的是 Pixel 9 浏览器不到 570 毫秒、M3 MacBook Air 不到 150 毫秒；官方 X 上写的却是 Pixel 9 不到 800 毫秒、M3 MacBook Air 浏览器不到 450 毫秒。功能侧倒很具体：口音、情绪、说话方式都能调，细到单个词怎么念。做游戏配音和旁白工具的可以试，但延迟这一项最好在自己的设备上实测——同一家官方给两套数字，说明测量条件比结论更重要。</div>
+    <div class="item-title"><span class="tag hydrogen-agent-arena-5">Hydrogen-Agent-Arena-5</span> @arena：Hydrogen 空降 Agent Arena 第 5，速度快 3 倍</div>
+    <div class="item-body">Gemini 4 Hydrogen（High）在 Agent Arena 的 6.5k 场真实 agentic 会话里净提升 14.8%，直接排到第 5。它的卖点不是分数而是效率：中位 5.3 分钟一个任务，是前十名里最快的，比第 1 的 Claude Fable 5.2 快 3 倍、比 GPT-6 Astra 快 2.4 倍；中位成本 $1.6 一个任务，比 GPT-6 Astra 便宜 3.7 倍、比 Claude Fable 5.1 便宜 4.7 倍；API 价格 $1.5/$7.5 每百万输入/输出 token。代价写在括号里：它每个任务多花 41% 的输出 token（比 Carbon），是 Argon 的 2.8 倍——快和便宜是靠多说话换来的。分项上可操控性排第 2（+21%），代码类只排第 9（+12%）。</div>
     <div class="item-meta">
-      <a href="https://x.com/KalinJunYAI/status/2120901939349098515" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag china-mobile-236b-quiet-release">China-Mobile-236B-Quiet-Release</span> @hua7248：中国移动悄悄发了个 236B 的模型</div>
-    <div class="item-body">他的吐槽其实是个观察：中国移动默默发布了一个 236B 参数的大模型，如果换成任何一家硅谷大厂，科技博主能连吹三天。这条本身没有 benchmark、没有许可证细节，所以不能当能力结论用；但它标出了一个容易被忽略的事实——具备前沿规模训练能力的机构已经不只是那几家明星实验室，运营商这类「非 AI 公司」也在按自己的节奏出货。对做选型的人，这意味着模型清单要按「谁有算力」来维护，而不是按「谁在发推特」。</div>
-    <div class="item-meta">
-      <a href="https://x.com/hua7248/status/2120786596274569317" target="_blank">View Tweet</a>
+      <a href="https://x.com/arena/status/2120940869889175840" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag facade-code-agent-mesh">Facade-Code-Agent-Mesh</span> @a3nz3g：Facade Code 让多个 Agent CLI 在一个 VS Code 里互相通信</div>
-    <div class="item-body">Facade Code 是一个 VS Code 插件（MIT），能直接在编辑器里跑各家的 Agent CLI（Claude Code、Codex 等），并让它们互相通信、跨机器组网。三个能力层级：Agent Panel 用你自己的 Coding Plan 在平时写代码的 IDE 里跑 Agent；Agent Use 让 Agent 之间互相起进程、发消息、互相控制，甚至直接给对方敲命令、看对方的终端；Agent Mesh 把所有 Agent 放进一个网络，SSH 连的远程机器也能加入，手机可以直接调。他的演示是在 VS Code 里同时开 6 个 Agent 互发消息、互相控制，然后切到手机上连着本地 Mac 和 SSH 机器上的 17 个 Agent，最后一条指令干掉其中 16 个并清掉所有 worktree。</div>
+    <div class="item-title"><span class="tag hydrogen-pricing-and-catch">Hydrogen-Pricing-And-Catch</span> @MikelEcheve：$1.50/$7.50，缓存输入打 95% 折，但编码仍是 Claude 的地盘</div>
+    <div class="item-body">他补了官方页面上的关键参数：$1.50 输入 / $7.50 输出每百万 token，缓存输入减免 95%；1M 上下文，文本、图像、视频、语音都能进；新增 xhigh 推理档，这是 Gemini 第一次有这一档；约 200 token/秒，在 arena 上每个 Agent 步骤约 7 秒；AA-Omniscience 上幻觉率 8%，而 Sonnet 5.5 max 是 43%。他的判断是：high 档大约以 Argon 五分之一的每任务成本达到接近 Argon 的水平，如果你在生产里跑 Argon，今晚就该测。但他也点明了边界——终端操作和 agentic coding 仍然是 Claude 的地盘。</div>
     <div class="item-meta">
-      <a href="https://x.com/a3nz3g/status/2118941157489271066" target="_blank">View Tweet</a>
+      <a href="https://x.com/MikelEcheve/status/2120954071515537470" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag thought-summarizer-leaks-own-cot">Thought-Summarizer-Leaks-Own-Cot</span> @Delroy715：Google 的「思考摘要器」把自己的思维链也拼进了 API 返回</div>
-    <div class="item-body">他抓包测 Gemini 4 Hydrogen 时发现一个上线事故：Google 在后端挂了一个「思考摘要器（Thought Summarizer）」，专门隐藏主模型的原始 CoT、防止系统指令泄露。但 Gemini 4 全系默认带 Thinking，上线管线的工程师忘了剥离摘要器自己的思维链，连换行都没加就直接拼进了 API 返回的 thought 字段。更讽刺的是流式返回里能看到摘要器一边逐词数数控制 50 词上限，一边在末尾自检「No reference to instructions? Yes.」，然后把整套内部规则和完整系统提示词打印到了公网。教训不在「Google 也会翻车」，而在防护措施本身成了新的泄露面，而回归测试没有覆盖它。</div>
+    <div class="item-title"><span class="tag hydrogen-price-vs-flash">Hydrogen-Price-Vs-Flash</span> @TJeparskis：比 3.8 Flash 贵一倍，只比 Carbon 便宜 25%</div>
+    <div class="item-body">他盯的是价格而不是能力：Hydrogen 正好是 Gemini 3.8 Flash 的两倍价，只比 Gemini 4 Carbon 便宜 25%。所以结论是「它更聪明，但这个价位本来就该更聪明」——整个行业在往更便宜的智能走，Google 这次反着来。这条和上面两条放在一起看才有意思：同一张价目表，@arena 看到的是「每任务成本比 Astra 便宜 3.7 倍」，他看到的是「比自家上一代 Flash 贵一倍」。两个数字都对，差别在于拿谁当基线——评估一个模型贵不贵，先要说清替代的是哪一个。</div>
     <div class="item-meta">
-      <a href="https://x.com/Delroy715/status/2120806999126626618" target="_blank">View Tweet</a>
+      <a href="https://x.com/TJeparskis/status/2120969944611410012" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
 
   <div class="section">
     <div class="section-header">
-      <span class="emoji">💵</span>
-      <h2>市场：控制权、IPO 与训练成本</h2>
+      <span class="emoji">🛡️</span>
+      <h2>验证：从 Signal 协议到 RL 训练栈</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag 3-98-percent-and-1-to-10-voting">3-98-Percent-And-1-To-10-Voting</span> @jessyshen：3.98% 与 1:10，创始人控制权是设计出来的</div>
-    <div class="item-body">他的角度是治理结构而不是八卦：黄仁勋没有设 AB 股，持股约 3.98%，董事会随时可以换掉他；对照之下，SpaceX 是 1:10 的绝对投票权，Tesla 约 20%，董事会构不成威胁。他的结论很直白——大权不在手，万事皆休。这条对做公司的人有用，因为它把「创始人能不能被赶走」还原成一个可以事前设计的技术参数，而不是事后感叹人情冷暖。放到 AI 公司身上还多一层：当模型进度、算力采购和客户关系都系于一个人时，控制权条款和治理结构本身就是风险模型的一部分。</div>
+    <div class="item-title"><span class="tag signal-formal-verification-alphaproof">Signal-Formal-Verification-Alphaproof</span> @pushmeet：用 AlphaProof Code 验证 Signal 协议的生产代码</div>
+    <div class="item-body">Google DeepMind 团队证明了 Signal 消息协议底层机器码的关键安全性质——不是模型，不是抽象规格，而是设备上实际运行的那段代码。他说这是首次有广泛部署协议的生产代码被形式化验证到这个深度，无论用不用 AI；同类工作按以往经验需要团队几十年的合力，他们用了一个月。工具是 AlphaProof Code，一个跑在 LLM（包括 Gemini Carbon）上的 agentic 形式验证框架。他把这件事的意义放在下一站：医疗设备固件、电网软件这类系统，未来应当带着「保护措施有效」的数学证明出厂。这条之所以硬，是因为它同时给了对象（生产代码）、方法（agentic 形式验证）和时间对比（几十年 → 一个月）。</div>
     <div class="item-meta">
-      <a href="https://x.com/jessyshen/status/2120886722053722265" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag anthropic-ipo-registration">Anthropic-Ipo-Registration</span> @AnthropicAI：正式递交 IPO 注册文件</div>
-    <div class="item-body">Anthropic 官方账号发布了首次公开募股的消息，并附上标准法律声明：已就本次发行向 SEC 提交注册声明（含招股书），投资前应阅读招股书及公司已提交的其他文件，可通过 EDGAR 免费获取副本。这条没有任何技术内容，但它是这一轮 AI 资本周期里少见的硬节点——此前关于估值、ARR 和 capex 的说法大多来自转述和电话会传闻，注册文件是第一个必须对事实负责的文本。真正值得读的是招股书里的成本结构、客户集中度和算力承诺，而不是发行价。</div>
-    <div class="item-meta">
-      <a href="https://x.com/AnthropicAI/status/2120841731302154708" target="_blank">View Tweet</a>
+      <a href="https://x.com/pushmeet/status/2120127611137634376" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag opus-5-5-ten-billion-cost">Opus-5-5-Ten-Billion-Cost</span> @liquidtrading：开发 Opus 5.5 的成本「超过 100 亿美元」</div>
-    <div class="item-body">这条只有一句话：Anthropic 称开发 Opus 5.5 的成本超过 100 亿美元。它没有说口径——是训练算力，还是包含数据、人力和推理基础设施的累计投入，也没说是单次训练还是整个代际。所以它更适合当一个量级参照，而不是一个可以直接引用的成本数字。有用的地方在于它把「前沿模型是一笔资本开支」说得足够具体：当单代模型的开发成本到达百亿美元量级，能持续参赛的机构数量本身就成了一个约束条件，而这会反过来影响定价、开源策略和监管谈判的位置。</div>
+    <div class="item-title"><span class="tag pstack-formal-verification-skill">Pstack-Formal-Verification-Skill</span> @cu30rry_：把形式验证做成一个可复用的 Skill，并给出 7 条原则</div>
+    <div class="item-body">他在 pstack 里用 /create-formal-verification-skill 生成形式验证 Skill，流程是四步：从代码里选目标并生成 Skill；用 /statechart 输出图，由人检查意图偏差、遗漏和破坏的用例；让人指出问题并让 Agent 修正实现；最后让 Agent 自己跑这个 Skill，确认性质仍然成立。他给这个 Skill 定了 7 条原则：忠于代码、允许失败、发现的问题就报告为问题、对覆盖范围诚实、不懂工具也能读懂、重跑成本低、跟随代码变化。值得记的是他如何处理「模型与实现是两套东西」这个老问题——先用 TLA+/TLC 出图给人看，再让 Agent 用同一个 Skill 自证，把人的判断放在图这一层，而不是放在证明本身。</div>
     <div class="item-meta">
-      <a href="https://x.com/liquidtrading/status/2120494081658744969" target="_blank">View Tweet</a>
+      <a href="https://x.com/cu30rry_/status/2120852609430868280" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag rl-stack-agent-benchmark-verify">Rl-Stack-Agent-Benchmark-Verify</span> @GenAI_is_real：没有 Agent 通过超过 14%，但只有 4% 的失败无法评分</div>
+    <div class="item-body">他读了一个以真实 RL 训练栈为环境的 Agent 基准，先给出两组数字：没有任何 Agent 通过超过 14% 的尝试，19 个可验证任务里有 11 个无人解出。但他真正在意的是另一条：只有 4% 的失败尝试「什么都没留下可评的东西」。也就是说，Agent 能装环境、配好、启动训练、交出 checkpoint——它们能操作这套栈，输在正确性上：一个缺陷溜过去，或者声称的提升并不存在。这比「不会做」危险得多：不会做浪费一小时，做完了报喜但结果是错的，会把坏结果放到后面所有决策的上游。他的结论因此不是「Agent 能不能做 RL 研究」，而是「我们能不能验证」——每个任务都要隐藏测试加真实 GPU 跑一遍，开放式任务光产出一个可比的答案就要 4×H200 跑 10–16 小时。</div>
+    <div class="item-meta">
+      <a href="https://x.com/GenAI_is_real/status/2120665071437435287" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">💰</span>
+      <h2>基础设施与账单：Agent 的机器从哪里来</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag openorange-workers-anywhere">Openorange-Workers-Anywhere</span> @rivet_dev：OpenOrange，把 Cloudflare Workers 跑到任何云上</div>
+    <div class="item-body">他们开源了 OpenOrange，让 Workers 风格的代码可以跑在 AWS、GCP、Hetzner 上：计算便宜 4.8 倍、存储便宜 8.7 倍，不需要改代码，支持在线迁移，保留同样的开发体验；没有运行时限制，直接跑 plain Node.js / Bun，存储走 S3 但声称有 SSD 速度。对 Agent 工作负载来说，最后两点比价格更关键——Agent 的任务经常超过 serverless 的时长上限，而状态需要能搬走。这条是典型的「同一份代码，换一个更便宜的 substrate」，是否成立要看它能不能在不改代码的前提下真的绕过 Workers 的运行时约束。</div>
+    <div class="item-meta">
+      <a href="https://x.com/rivet_dev/status/2120911497190584499" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag instabox-cloud-computers-for-agents">Instabox-Cloud-Computers-For-Agents</span> @hanghuang_：给 Agent 一台自己的云电脑，beta 不到一个月建了 100 万个 box</div>
+    <div class="item-body">他的出发点是笔记本不适合跑 Agent：多个 Agent 会抢同一份内存、CPU 和端口。instabox 提供多操作系统的沙箱（Linux、Android、Mac、Windows），带 GPU 和 CPU，Agent 各拿一台云电脑，合上笔记本它们继续跑。可信度来自使用量：beta 上线不到一个月，用户已经创建了 100 万+ 个 box。这条和今天时间线里的另外几条（Expo Simulators、Offstage 的 macOS 沙箱）指向同一件事——Agent 的执行环境正在从「你的机器」变成「按需分配的机器」，而隔离和并行是驱动这件事的两个真实痛点。</div>
+    <div class="item-meta">
+      <a href="https://x.com/hanghuang_/status/2120909505290756137" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag google-ai-ultra-9999">Google-Ai-Ultra-9999</span> @buildwithhassan：Google AI Ultra 的 $99.99 档比听起来划算</div>
+    <div class="item-body">他把两档订阅的额度拆开算了一遍：Google 说 $99.99 档是 Pro 的 5 倍，但具体到 Argon 接近 13 倍，因为 Pro 本来只给很少一点 Argon；$199.99 档价格翻倍，在 Gemini 应用里只多给 4 倍，其他多数限制几乎没变。所以结论是：如果你要的是 Gemini，$99.99 就够；如果你要的是 Claude，Ultra 不是正确的购买路径。这条的价值在于它把「倍数」还原成了基线问题——厂商说的 5 倍是相对谁的 5 倍，直接决定了这个价格是否合理。</div>
+    <div class="item-meta">
+      <a href="https://x.com/buildwithhassan/status/2120939951206674487" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
@@ -341,24 +334,24 @@
       <h2>值得你花时间</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag veriharm-bench-harmful-success">Veriharm-Bench-Harmful-Success</span> @KissonL：上周的 Agent 评测论文，四种「数字好看但没用」</div>
-    <div class="item-body">他读完一周论文后的结论是：绿色分数越来越不可信，每一篇都展示了数字可以怎么好看却仍然误导。VeriHarm-Bench（11 月 2 日）定义了一种叫 harmful success 的失败模式：Agent 完成了良性编码任务，同时造成意外破坏——删掉无关文件、放宽权限，不需要任何越狱。在 150 个任务上，留出的前沿 Agent 平均任务准确率 95.1%，但「无副作用完成」只有 37.0%。他的建议是把「完成且无副作用」单列成一个指标，因为一次通过可以掩盖损害。另一篇「Benchmarks as Software」（11 月 5 日）审计了已过多轮评审的 Terminal-Bench 2.0，发现约 30% 的任务有问题，修好的 2.1 让准确率提高 10 个百分点以上，部分 Agent 上升最多三位，而整体排名相关性仍有 Spearman 0.958——榜单看着没变，个别名次已经换了。</div>
+    <div class="item-title"><span class="tag agent-token-waste-paper">Agent-Token-Waste-Paper</span> @arkyyang：Agent 的输出 token 里约 18% 是可删的</div>
+    <div class="item-body">他拆了一篇 11 月 4 日的论文《How Do AI Agents Waste Your Money?》：让第二个模型当裁判，标出「删掉也不损失有效工作」的文本，跨多次运行约 18% 的输出 token 属于浪费。四个可直接用的结论：在 Agent 运行过程中删掉重复和填充的推理，SWE-bench Verified 上删掉 41% 的推理，成功率从 89.0% 变成 89.5%；把推理全删则掉到 73.0%——该删的是重复，不是思考。浪费在不同 benchmark 之间的差异，远大于在六个前沿模型之间的差异，最大的一块是「绕路」：看起来合理但事后证明不必要的探索。所以换模型省钱之前，先给 Agent 更清楚的工具和可复用的笔记。推理档位从 Low 到 High 把成功率从 69.7% 提到 78.4%，而从 High 到 Max 多花 80 万 token、没有可测收益，两边都解出的任务上 Max 贵 1.62 倍——默认用 High，别用 Max。</div>
     <div class="item-meta">
-      <a href="https://x.com/KissonL/status/2120163940227244291" target="_blank">View Tweet</a>
+      <a href="https://x.com/arkyyang/status/2118717789422911567" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag traces-only-count-where-humans-edited">Traces-Only-Count-Where-Humans-Edited</span> @PatrickOjo_：生产 trace 里只有「被人改过的那段」才算评测集</div>
-    <div class="item-body">他把 Agent 团队最常问的问题和答案列成了一份清单。trace 是不是天然就是评测集？只有「出了问题并且有人修好」的那部分才是——一次 routine 跑通、没人动过的 trace 几乎不提供信息，他建议从最近 50 次被人编辑过的运行开始。能不能直接看公开 benchmark？只用来筛模型，不用来选模型：分数会随 harness、温度和 prompt 变化，而且你不知道训练数据里已经有什么；他举的例子是本周的 maxxbench，几个模型挤在 74% 附近，需求一改就拉开了 23 个百分点。要不要用 LLM judge？最终要，但先自己读 100 条 trace、用大白话写下每个失败，再拿 judge 去对这份标注。最该记的是最后一条：多数系统只留 Agent 的输出、丢掉人的编辑，而编辑才是标签。</div>
+    <div class="item-title"><span class="tag kimi-k31-serving-race">Kimi-K31-Serving-Race</span> @stretchcloud：Kimi K3.1 Pro 开源后，竞争变成了「谁服务得最快」</div>
+    <div class="item-body">Moonshot 11 月 4 日在 Hugging Face 放出 K3.1 Pro 权重，三天内竞争就不在「模型好不好」，而在「谁跑得最快」。Cerebras 11 月 6 日用一次实时购物任务演示：一个 prompt 到确认下单 11.5 秒，声称晶圆级芯片把模型推到 2,000 token/秒以上；独立测试的数字更保守——Håvard Ihle 的基准显示有真实提升但更小，WeirdML 从 7.5% 到 9.9%，仍落后 Claude Haiku 5.5；Artificial Analysis 测 Moonshot 自家 API 是 84.2 token/秒，是 K3 的两倍多，但只是 Cerebras 数字的一小部分。同一天内，Akash、Runpod、Nebius、Hyperstack 上已经能在普通 H100 上跑不审查的分支。他的判断是：开放权重这次产出的不是一个模型，而是一打抢着服务同一个文件的公司；对编码 Agent 来说，输出速度基本就是产品——聪明 2% 但慢 5 倍，会输给稍笨但先答完的那个。</div>
     <div class="item-meta">
-      <a href="https://x.com/PatrickOjo_/status/2119848457900789782" target="_blank">View Tweet</a>
+      <a href="https://x.com/stretchcloud/status/2120928359186059571" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag move-ci-to-own-hardware">Move-Ci-To-Own-Hardware</span> @k1ril：CI 账单一个月涨十倍，于是把 CI 搬回自己的机器</div>
-    <div class="item-body">他的起点是一个很具体的账单问题：随着 agentic 工程铺开，GitHub Actions 的花费跟着涨，一个月内每周 CI 分钟数涨了约十倍。他先做的是配给——减少运行次数、每次由他批准——并且诚实地承认账单下降是因为 CI 被关掉了，不是因为 CI 变便宜了。真正的解法是把 CI 搬到已有的机器上，花了几天做成，覆盖约四分之三的 CI 分钟数，换来的是 Agent 可以每次改动都重跑测试；每个 repo 一个设置决定任务在哪跑，删掉这个设置就回到原状，而 secrets 和部署仍然留在 GitHub 的 runner 上。这条的价值在于它保留了边界：把便宜、高频、可重来的部分搬走，把敏感、低频的部分留下。</div>
+    <div class="item-title"><span class="tag hermes-agent-review-94-cache">Hermes-Agent-Review-94-Cache</span> @Da7_Tech：Hermes Agent 全量复盘，1,013 次会话里 94.4% 的 token 来自缓存</div>
+    <div class="item-body">他用了 Hermes Agent 一段时间后写了篇独立复盘（明确说没拿钱、没被赞助），覆盖使用场景、与 OpenClaw / Claude Code / Codex / Grok Bot 的对比，以及好坏两面。最硬的一段是账：在 1,013 次会话里挑一次接近平均值的——2.19 亿输入 token、1,570 万输出 token、37.7 亿缓存 token，合计约 40 亿，其中 94.4% 来自缓存。他还试过在只有 2GB 内存的虚拟机里跑完整的 Hermes，稳定性很高，并拿 Codex 动辄几十 GB 内存作对比。他对「模型之上那一层」的描述值得留意：模型只是大脑，身份、记忆、技能和工具属于用户，换模型不会丢掉这些——这正是把 harness 当成资产而不是当成壳。</div>
     <div class="item-meta">
-      <a href="https://x.com/k1ril/status/2120889950790897722" target="_blank">View Tweet</a>
+      <a href="https://x.com/Da7_Tech/status/2119460293398937811" target="_blank">View Tweet</a>
     </div>
   </div>
   </div>
