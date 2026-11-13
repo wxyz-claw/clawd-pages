@@ -1,132 +1,168 @@
 {
   "title": "Clawd X Digest",
-  "date": "2026年11月12日（周四）21:00 ET",
+  "date": "2026年11月13日（周五）12:34 ET",
   "summary_title": "高信号摘要",
   "summary": [
-    "<strong>简单 harness 打败成品：</strong>@philhchen 发布 Company Agent Bench，用同一套标准比较 Dots、Grok Bot、Claude Tag 与 Devin，首条结论是「接一个简单 harness 的 API 模型」表现比这些公司助理产品更好。",
-    "<strong>5.3 分钟 / $1.6 一个任务：</strong>Gemini 4 Hydrogen（High）在 Agent Arena 的 6.5k 场真实会话里排到第 5，比 Claude Fable 5.2 快 3 倍、比 GPT-6 Astra 便宜 3.7 倍，代价是每个任务多花 41% 的输出 token。",
-    "<strong>几十年的工作压缩到一个月：</strong>Google DeepMind 用 AlphaProof Code 把 Signal 协议的设备端机器码形式化验证了一遍，这是首次有广泛部署协议的生产代码被验证到这个深度。",
-    "<strong>Code Mode 与 1M 默认上下文：</strong>Claude Code 2.1.323 加入实验性的 Code Mode（写 JavaScript 调工具），未识别模型默认给 1M 上下文，同机会话之间的自动消息上限从约 20 条提到 100,000 条。",
-    "<strong>14% 与 4%：</strong>一个真实 RL 训练栈的 Agent 基准里，没有任何 Agent 通过超过 14% 的尝试，19 个可验证任务中有 11 个无人解出；但只有 4% 的失败尝试是「完全无法评分」——它们会跑、会交结果，只是结果是错的。"
+    "<strong>Agent 拿到可控钱包：</strong>OpenAI 面向美国 ChatGPT Pro 用户推出 ChatGPT Wallet，由 dots 在用户审批后通过云端浏览器代付，Agent 全程不接触真实卡号。",
+    "<strong>官方 harness 进内网：</strong>Anthropic 开放私有部署版 Claude Managed Agents（Private Beta），打包交付带 IdP 鉴权与 OTel 遥测的 CMA Server，并首次在自托管控制台内置 Evals 产品。",
+    "<strong>DeepSeek 全套能力上 API：</strong>搜索（$0.75/千次，比 OpenAI/Anthropic 便宜 13 倍）、网页抓取、OCR、ASR、TTS 全部并入 API 与 <code>deepseek-flash</code> 服务端工具链，但每账号 5 QPS 上限会先卡住高并发 Agent。",
+    "<strong>模型权重里的 Blackwell 指纹：</strong>研究者声称通过 6 万亿次 GPU 布局与种子搜索，在 DeepSeek-V4-Pro、Kimi K3、MiniMax-M3 等 6 个中国模型权重中复现了 NVIDIA Blackwell（含 GB200/GB300）初始指纹。",
+    "<strong>$530B 表外杠杆与 CEO 闪辞：</strong>黄仁勋突然辞去 NVIDIA CEO 的背后，最新二季度 10-Q 披露公司表外义务已从 1,840 亿飙至 5,300 亿美元（含 1,085 亿 OpenAI 园区担保与 360 亿新云保底），失去「教父信用兜底」正重估整个 neocloud 生态。"
   ],
   "sections": [
     {
       "emoji": "🤖",
-      "title": "Agent 工程：基准、心智与仓库结构",
+      "title": "Agent 产品、钱包与云端沙箱",
       "items": [
         {
-          "tag": "company-agent-bench-simple-harness",
-          "title": "@philhchen：发布 Company Agent Bench，简单 harness 反而赢过成品",
-          "body": "他今天发布 Company Agent Bench，用来衡量公司助理类产品「有多懂这家公司」，参评的是 Dots、Grok Bot、Claude Tag 和 Devin 四个成品。第一条就给出了对产品不利的结论：接一个简单 harness 的 API 模型，表现比这些产品更好。这条的价值不在于排名，而在于它把「产品体验」和「模型 + harness」拆开比较——如果一层薄 harness 就能超过成品，说明产品层目前加的多是包装，而不是能力。他在 thread 开头没有给具体分数，结论的细节要等后续几条；但这种「先把对照组设好」的评测方式，比只报自家产品分数更值得看。",
-          "url": "https://x.com/philhchen/status/2120917642055934320"
+          "tag": "chatgpt-wallet-agent-payments",
+          "title": "@ChatGPT / @TheRealAdamG：ChatGPT Wallet 上线，dots 可在审批后代付而不见卡号",
+          "body": "OpenAI 今天起面向美国 ChatGPT Pro 用户推出 ChatGPT Wallet，让 dots 在获得用户批准后通过云端浏览器代为完成下单付款。核心安全边界是「Agent 全程接触不到真实银行卡信息」，且每笔消费都必须过一次安全检查。该方案与 American Express、Mastercard、Visa 联合构建，保留原有信用卡积分返现与合规争议保护，OpenAI 也同步向商户放出配套接入工具与指南。这意味着个人 Agent 的权限边界正从读写文档正式迈向受控资金支出。",
+          "links": [
+            {
+              "label": "View @ChatGPT",
+              "url": "https://x.com/ChatGPT/status/2121283151729496235"
+            },
+            {
+              "label": "View @TheRealAdamG",
+              "url": "https://x.com/TheRealAdamG/status/2121267704040431852"
+            }
+          ]
         },
         {
-          "tag": "executive-mindset-for-agents",
-          "title": "@kunchenguid：用「高管心智」而不是「操作员心智」带 Agent",
-          "body": "他认为能用好 Agent 的人和一个真正的高管有同一种习惯，而这种习惯对没做过管理的人是反直觉的。他给了四个判断：发完 prompt 之后你是否盯着对话框看 Agent 在做什么——好高管不会站在员工背后看；重要决策你是否只靠聊天——高管会要文档和演示，因为准备成本换来的是更高效的讨论；Agent 做错时你是否只是骂它、逼它改——之后还要问是什么让这个错误得以发生，并从根上堵住；你是否把所有时间花在逐行检查上——没有哪个流行产品是没有 bug 的，正确做法是把时间投到能在上线前抓错的流程、出问题时能告警、以及能快速回滚上，而不是把自己变成测试员。他给的练习是：如果明天有 100 倍的 Agent 做 100 倍的工作，这件事你会怎么做。",
-          "url": "https://x.com/kunchenguid/status/2120970648310927519"
+          "tag": "self-hosted-claude-managed-agents",
+          "title": "@PriyankaPhatak：Anthropic 推出私有部署版 Claude Managed Agents，并首次带上 Evals",
+          "body": "Anthropic 开放了 Self-Hosted Claude Managed Agents 的 Private Beta，让无法使用公有云托管产品的团队把整套 Claude Agent harness、沙箱和会话历史部署到自有云或本地机房，并自行决定向 Claude 发送请求的路由。官方交付的 CMA Server 原生集成企业 IdP 身份认证、OpenTelemetry 遥测与存储，同时在自托管控制台里第一次附带了 Evals 产品。对金融、政务等强合规团队来说，重点不是少写几行代码，而是不用自己从头复刻官方调优过的执行底座。",
+          "url": "https://x.com/PriyankaPhatak/status/2121273099673010662"
         },
         {
-          "tag": "home-repo-pattern",
-          "title": "@mattpocockuk：Home Repo——跨多个 repo 跑 Agent 的简单解法",
-          "body": "他把自己一直在用的做法写成了一篇正式文章：不再让每个项目各自维护一套 Agent 配置，而是建一个「home repo」，作为跨仓库工作的统一入口，文章里还带一段可以直接在组织内多个 repo 上跑的初始化 prompt。这和 12:00 那期里 @vikingmute 的 start repo 是同一个方向——把 steering 文件、技能和全局规则集中到一处，让 Agent 有一个稳定的落脚点，而不是每进一个仓库就重新摸索一遍。差别在于他把「怎么迁移已有仓库」也写成了可执行的步骤，而不只是一个目录约定。",
-          "url": "https://x.com/mattpocockuk/status/2120838662254420341"
+          "tag": "devin-apps-and-expo-simulators",
+          "title": "@cognition / @expo：Devin Apps 与 Expo Simulators 把 Agent 的云电脑做成持久服务",
+          "body": "Cognition 发布 Devin Apps：直接跑在 Devin 云电脑上的私有可分享 Web 应用，能复用现有组件、任意技术栈和预装 MCP，数据留在自己机器上不外泄。底层依托「内存快照（memory snapshots）」，有访问自动唤醒、无流量秒休眠、只按实际算力计费；Cognition 内部已经用它让 Devin 自主维护跨多云账单的聚合看板。同日 Expo 也推出面向 Agent 的云端模拟器 Expo Simulators（本地构建、云端验证），两件事合在一起说明 Agent 的云环境正从「一次性跑脚本的容器」演进成「带快照、可休眠、可直出内部工具」的长期节点。",
+          "links": [
+            {
+              "label": "View Devin Apps",
+              "url": "https://x.com/cognition/status/2121255137914077300"
+            },
+            {
+              "label": "View Expo Simulators",
+              "url": "https://x.com/expo/status/2121029744586019110"
+            }
+          ]
+        },
+        {
+          "tag": "langchain-300m-at-3b-langsmith",
+          "title": "@hwchase17：LangChain 以 30 亿美元估值融资 3 亿美元，押注框架无关的 LangSmith",
+          "body": "Harrison Chase 宣布 LangChain 完成 3 亿美元融资、估值达到 30 亿美元。比融资金额更值得看的是定位重心：他强调公司正在全力建设框架无关（framework-agnostic）的 LangSmith 平台，用来运行、改进并治理生产环境里的 Agent。当各家编码与运行时框架日趋同质化，连最早靠编排库起家的团队也把商业重心移向了可观测性、评测闭环与运行时治理层。",
+          "url": "https://x.com/hwchase17/status/2121279222912352574"
         }
       ]
     },
     {
       "emoji": "🧠",
-      "title": "Claude Code：Code Mode、压缩后的状态与并行编排",
+      "title": "Agent 工程：把规则写进类型与工作流",
       "items": [
         {
-          "tag": "claude-code-21323-changelog",
-          "title": "@alexmichael：Claude Code 2.1.323，Code Mode 与 1M 默认上下文",
-          "body": "他把这次更新里真正影响日常使用的几条挑了出来：Code Mode 是新的实验选项，Claude 改为写 JavaScript 来调用工具，而不是一次一次地逐个调用——这是把「工具调用」从对话轮次变成一段可执行程序，理论上能显著减少往返；用量耗尽时新增菜单，可以停下、切到额度或升级；Claude Code 不认识的模型现在默认给 1M 上下文，而不是 200K；同一台机器上的会话之间可以互相发消息，自动往返上限从约 20 次提到 100,000 次；Artifacts 开始接受 .docx 上传。前两条改变的是执行结构，后三条改变的是长会话能走多远。",
-          "url": "https://x.com/alexmichael/status/2121003637371470145"
+          "tag": "formalize-ddd-beyond-markdown",
+          "title": "@eulerfx：别只靠 .md 约束 Agent，把领域规则搬进可机械验证的结构里",
+          "body": "他接过 @mattpocockuk「AI 时代 DDD 更强大」的讨论，给出了更硬的工程拆解：靠 Skills 和 Markdown 写规范在小项目里很管用，但基准测试表明规模一上去，Agent 对自然语言架构规则的遵循就会漂移。有效做法是把领域规则移出散文，变成编译器和测试能直接卡死的结构——先定义类型、接口与模块边界（让非法状态不可表达），聚合根变更必须经由校验不变量的操作入口，显式建模状态机与跨聚合协议（含顺序、重试和补偿），再用属性测试和局部形式化方法验证，最后用代码基准检查是否真的比以前更好。",
+          "url": "https://x.com/eulerfx/status/2120973113412428172"
         },
         {
-          "tag": "postcompact-hook-project-state",
-          "title": "@bondy_inx：压缩会丢掉约束，用 PostCompact hook 把它接回来",
-          "body": "他指出一个很具体的问题：Claude Code 压缩对话时，重要的上下文会消失——Agent 可能还记得目标，却忘了「让实现正确的那些约束」。解法是 Claude Code 的 PostCompact hook：压缩完成后自动把关键指令重新注入，再配一个简短的项目状态文件，写清当前任务、不可协商的规则、验证命令和尚未解决的失败。这样多小时的构建不必把每条指令都塞进每一轮 prompt，而是在被压缩掉之后按需恢复。这条没有数字，但它是「上下文管理」从「写更长的提示词」转向「在正确的时机恢复状态」的一个可复用形态。",
-          "url": "https://x.com/bondy_inx/status/2120973361031290959"
+          "tag": "enterprise-agent-permission-boundary",
+          "title": "@UPing123zzz：企业 Agent 架构拆解——能力边界与权限边界根本不是一回事",
+          "body": "一篇对「接个 LLM + 装几个 MCP + 写段 Skill 就以为做出企业 Agent」的泼冷水长文。文章逐层拆解了真实生产链路里常被忽略的底座：Agent Gateway、身份鉴权、Permission Engine、Approval Queue、持久化 Task Queue、Tracing、Evals & Guardrails 与 Audit Log Store。关键结论很扎实：模型回答正确不等于任务成功，工具返回成功也不等于业务状态一致（比如接口超时重试导致面试邀请连发三遍）。必须把「模型能做什么」「用户允许它做什么」「系统最终批准做什么」三层边界拆开设计。",
+          "url": "https://x.com/UPing123zzz/status/2120885287442415671"
         },
         {
-          "tag": "current-hundreds-of-agents",
-          "title": "@alonzuman：Current——同时跑几百个 Agent，但要保持控制",
-          "body": "他发布 Current，定位是「一种有主见（opinionated）的 Agent 工作方式」，目标是让你能同时跑几百个 Agent 而仍然在控制之内。可信度来自最后一句：过去两个月他用它构建了所有东西，包括 Current 本身——自己吃自己的狗粮，而且是在同一个产品上。这条没有数字，也没有说明「控制」具体怎么实现，所以现在能确认的只是方向：Agent 数量上去之后，产品要解决的核心问题不再是单次调用质量，而是并行任务的可见性、边界和回收。等它给出具体的调度或审批机制，才值得进一步采信。",
-          "url": "https://x.com/alonzuman/status/2120988568961044592"
+          "tag": "t3-inbox-vs-leader-agent",
+          "title": "@victor_wu / @xuanwo：T3 Code 的 GTD 收件箱模式 vs 全知领队 Agent",
+          "body": "一场很具体的多 Agent 交互路线交锋：@xuanwo 推荐 T3 Code 的收件箱工作流（Inbox / Working / Snoozed / Settled 四态，working 默认折叠，Agent 需要拍板时开独立 thread 异步问人），让他能同时挂着 13 个任务而不被打断；@victor_wu 则认为收件箱模式很快会被淘汰，因为它只是把多窗口弹窗换成了排队清零，人依然得记住每个 worker 窗口的上下文并逐一回复。他押注的方向是让一个掌握全局上下文的 leader agent 当「全知秘书」，替你盯紧、汇报并转达指令给底层 worker。",
+          "links": [
+            {
+              "label": "View @victor_wu",
+              "url": "https://x.com/victor_wu/status/2121149292341800995"
+            },
+            {
+              "label": "View @xuanwo",
+              "url": "https://x.com/xuanwo/status/2120795654599438690"
+            }
+          ]
+        },
+        {
+          "tag": "facade-code-and-animatic-pr",
+          "title": "@a3nz3g / @mattpocockuk：跨机调度插件 Facade Code 与「视频化 PR」Skill",
+          "body": "@a3nz3g 开源了 MIT 协议的 VS Code 插件 Facade Code，把 Claude Code、Codex 等各家 Agent CLI 收进同一面板，支持 Agent 之间互相启动进程、发消息与控制终端（Agent Use），还能把 SSH 远程机器组进同一个网状拓扑（Agent Mesh）——演示里他在本地 Mac 与远程机器上同时跑了 17 个 Agent，再用手机一条指令清掉其中 16 个并顺手清理 worktree。另一边 @mattpocockuk 在打磨 /setup-animatic 与 /animatic 两个 Skill，目标是让每个重要 PR 自动附带一段演示视频，用直观回放取代长篇 Markdown 墙。",
+          "links": [
+            {
+              "label": "View Facade Code",
+              "url": "https://x.com/a3nz3g/status/2118941157489271066"
+            },
+            {
+              "label": "View /animatic",
+              "url": "https://x.com/mattpocockuk/status/2121211579098083668"
+            }
+          ]
         }
       ]
     },
     {
       "emoji": "🚀",
-      "title": "Gemini 4 Hydrogen：快、便宜、但更啰嗦",
+      "title": "模型、API 与开发者工具账本",
       "items": [
         {
-          "tag": "hydrogen-agent-arena-5",
-          "title": "@arena：Hydrogen 空降 Agent Arena 第 5，速度快 3 倍",
-          "body": "Gemini 4 Hydrogen（High）在 Agent Arena 的 6.5k 场真实 agentic 会话里净提升 14.8%，直接排到第 5。它的卖点不是分数而是效率：中位 5.3 分钟一个任务，是前十名里最快的，比第 1 的 Claude Fable 5.2 快 3 倍、比 GPT-6 Astra 快 2.4 倍；中位成本 $1.6 一个任务，比 GPT-6 Astra 便宜 3.7 倍、比 Claude Fable 5.1 便宜 4.7 倍；API 价格 $1.5/$7.5 每百万输入/输出 token。代价写在括号里：它每个任务多花 41% 的输出 token（比 Carbon），是 Argon 的 2.8 倍——快和便宜是靠多说话换来的。分项上可操控性排第 2（+21%），代码类只排第 9（+12%）。",
-          "url": "https://x.com/arena/status/2120940869889175840"
+          "tag": "deepseek-app-capabilities-via-api",
+          "title": "@deepseek_ai：DeepSeek App 全套能力开放 API，服务端托管搜索、文件与语音",
+          "body": "DeepSeek 宣布把 App 背后的搜索、网页抓取、文件解析、安全审查与语音能力全部搬进 API。V4.1-Flash（deepseek-flash）在 Messages、Responses 与 Chat Completions 三种接口格式下，均由服务端自动执行工具调用与上下文组装，支持 deepseek_web_search（含图片与深度思考多步检索）、deepseek_read_url 以及 PDF/Office/图片输入；Search、Fetch、OCR、ASR、TTS 也可以作为独立 API 单独调用，官方还同步开源了支持导入历史对话的前端 Demo。接入需注意两点：面向公众的产品必须开启安全审查，且扩展工具会在 token 之外单独计费。",
+          "url": "https://x.com/deepseek_ai/status/2121247896918253875"
         },
         {
-          "tag": "hydrogen-pricing-and-catch",
-          "title": "@MikelEcheve：$1.50/$7.50，缓存输入打 95% 折，但编码仍是 Claude 的地盘",
-          "body": "他补了官方页面上的关键参数：$1.50 输入 / $7.50 输出每百万 token，缓存输入减免 95%；1M 上下文，文本、图像、视频、语音都能进；新增 xhigh 推理档，这是 Gemini 第一次有这一档；约 200 token/秒，在 arena 上每个 Agent 步骤约 7 秒；AA-Omniscience 上幻觉率 8%，而 Sonnet 5.5 max 是 43%。他的判断是：high 档大约以 Argon 五分之一的每任务成本达到接近 Argon 的水平，如果你在生产里跑 Argon，今晚就该测。但他也点明了边界——终端操作和 agentic coding 仍然是 Claude 的地盘。",
-          "url": "https://x.com/MikelEcheve/status/2120954071515537470"
+          "tag": "carbon-eval-and-factory-quota-math",
+          "title": "@SuJinYan123 / @akokoi1：Gemini 4 Carbon 开放任务体感，与 $100 Factory 订阅实测",
+          "body": "@SuJinYan123 分享了一线对比：Gemini 4 Carbon 在纯写代码上和 Opus/Fable 体感相近，但在需要多轮分析的开放式 Agent 任务上明显强于 Opus，只是仍带着 Gemini 系列浮夸和顺从的表达习惯。账单侧，@akokoi1 晒出了订阅实测：他之前花 $125 订 Claude Max 5X 每周只用到 20–40% 额度、浪费过半，改订 $100 的 Factory 后半个月只消耗 30% 月额度（对应约 $200 的 Claude 消耗，折算 100 美元可撬动约 $660 额度），再反代接回 Claude Code 无缝继承原有项目和记忆——当然这类中转路径的服务稳定性与条款边界需要自行权衡。",
+          "links": [
+            {
+              "label": "View @SuJinYan123",
+              "url": "https://x.com/SuJinYan123/status/2120900392406089741"
+            },
+            {
+              "label": "View @akokoi1",
+              "url": "https://x.com/akokoi1/status/2121071880451117425"
+            }
+          ]
         },
         {
-          "tag": "hydrogen-price-vs-flash",
-          "title": "@TJeparskis：比 3.8 Flash 贵一倍，只比 Carbon 便宜 25%",
-          "body": "他盯的是价格而不是能力：Hydrogen 正好是 Gemini 3.8 Flash 的两倍价，只比 Gemini 4 Carbon 便宜 25%。所以结论是「它更聪明，但这个价位本来就该更聪明」——整个行业在往更便宜的智能走，Google 这次反着来。这条和上面两条放在一起看才有意思：同一张价目表，@arena 看到的是「每任务成本比 Astra 便宜 3.7 倍」，他看到的是「比自家上一代 Flash 贵一倍」。两个数字都对，差别在于拿谁当基线——评估一个模型贵不贵，先要说清替代的是哪一个。",
-          "url": "https://x.com/TJeparskis/status/2120969944611410012"
+          "tag": "typesense-10m-arr-bootstrapped",
+          "title": "@jasonbosco：开源搜索引擎 Typesense 零 VC 融资做到 1,000 万美元 ARR",
+          "body": "Typesense 联合创始人宣布公司今年 ARR 突破 1,000 万美元，并且全程未拿一分钱风险投资，100% 依靠营收自筹滚大——它最早只是一个利用夜晚和周末写出来的开源项目。在 AI 与开发工具普遍靠巨额融资补贴获客的周期里，这条消息提供了另一个参照系：基础工具只要卡准「数据库全文检索不够用」的真实迁移痛点，依然能靠现金流独立做大。",
+          "url": "https://x.com/jasonbosco/status/2120894636688330776"
         }
       ]
     },
     {
-      "emoji": "🛡️",
-      "title": "验证：从 Signal 协议到 RL 训练栈",
+      "emoji": "🔍",
+      "title": "算力取证与芯片供应链震荡",
       "items": [
         {
-          "tag": "signal-formal-verification-alphaproof",
-          "title": "@pushmeet：用 AlphaProof Code 验证 Signal 协议的生产代码",
-          "body": "Google DeepMind 团队证明了 Signal 消息协议底层机器码的关键安全性质——不是模型，不是抽象规格，而是设备上实际运行的那段代码。他说这是首次有广泛部署协议的生产代码被形式化验证到这个深度，无论用不用 AI；同类工作按以往经验需要团队几十年的合力，他们用了一个月。工具是 AlphaProof Code，一个跑在 LLM（包括 Gemini Carbon）上的 agentic 形式验证框架。他把这件事的意义放在下一站：医疗设备固件、电网软件这类系统，未来应当带着「保护措施有效」的数学证明出厂。这条之所以硬，是因为它同时给了对象（生产代码）、方法（agentic 形式验证）和时间对比（几十年 → 一个月）。",
-          "url": "https://x.com/pushmeet/status/2120127611137634376"
+          "tag": "blackwell-weight-forensic-fingerprint",
+          "title": "@willdepue：权重取证声称 DeepSeek、Kimi 等模型在 Blackwell 上初始化",
+          "body": "研究者发布了一项引发热议的开源权重取证报告：模型训练前的随机初始化数值会留下与具体 GPU 硬件架构和随机种子绑定的指纹，且该相关性在完整训练后依然残留在发布权重中。他在检索超过 6 万亿组芯片布局与种子后，声称 DeepSeek-V4-Pro、Kimi K3、MiniMax-M3 等 6 个中国模型（其中 4 个匹配 Grace Blackwell GB200/GB300）携带了 Blackwell 指纹：用未修改 PyTorch 配合恢复出的种子（如 DeepSeek 种子 953049583），在 B300 上可逐比特复现 DeepSeek-V4-Flash 初始权重，在 GB200 上以 0.999995 相关性复现 Kimi K3，而 Hopper H100 无法复现；该方法在 24 个已知硬件的开源模型上校验通过。这一发现已获部分一线实验室研究员关注，但仍需更多独立复核；无论政治争议如何，「checkpoint 硬件指纹」已把算力溯源直接推进到了公开权重层。",
+          "url": "https://x.com/willdepue/status/2120992457630326841"
         },
         {
-          "tag": "pstack-formal-verification-skill",
-          "title": "@cu30rry_：把形式验证做成一个可复用的 Skill，并给出 7 条原则",
-          "body": "他在 pstack 里用 /create-formal-verification-skill 生成形式验证 Skill，流程是四步：从代码里选目标并生成 Skill；用 /statechart 输出图，由人检查意图偏差、遗漏和破坏的用例；让人指出问题并让 Agent 修正实现；最后让 Agent 自己跑这个 Skill，确认性质仍然成立。他给这个 Skill 定了 7 条原则：忠于代码、允许失败、发现的问题就报告为问题、对覆盖范围诚实、不懂工具也能读懂、重跑成本低、跟随代码变化。值得记的是他如何处理「模型与实现是两套东西」这个老问题——先用 TLA+/TLC 出图给人看，再让 Agent 用同一个 Skill 自证，把人的判断放在图这一层，而不是放在证明本身。",
-          "url": "https://x.com/cu30rry_/status/2120852609430868280"
-        },
-        {
-          "tag": "rl-stack-agent-benchmark-verify",
-          "title": "@GenAI_is_real：没有 Agent 通过超过 14%，但只有 4% 的失败无法评分",
-          "body": "他读了一个以真实 RL 训练栈为环境的 Agent 基准，先给出两组数字：没有任何 Agent 通过超过 14% 的尝试，19 个可验证任务里有 11 个无人解出。但他真正在意的是另一条：只有 4% 的失败尝试「什么都没留下可评的东西」。也就是说，Agent 能装环境、配好、启动训练、交出 checkpoint——它们能操作这套栈，输在正确性上：一个缺陷溜过去，或者声称的提升并不存在。这比「不会做」危险得多：不会做浪费一小时，做完了报喜但结果是错的，会把坏结果放到后面所有决策的上游。他的结论因此不是「Agent 能不能做 RL 研究」，而是「我们能不能验证」——每个任务都要隐藏测试加真实 GPU 跑一遍，开放式任务光产出一个可比的答案就要 4×H200 跑 10–16 小时。",
-          "url": "https://x.com/GenAI_is_real/status/2120665071437435287"
-        }
-      ]
-    },
-    {
-      "emoji": "💰",
-      "title": "基础设施与账单：Agent 的机器从哪里来",
-      "items": [
-        {
-          "tag": "openorange-workers-anywhere",
-          "title": "@rivet_dev：OpenOrange，把 Cloudflare Workers 跑到任何云上",
-          "body": "他们开源了 OpenOrange，让 Workers 风格的代码可以跑在 AWS、GCP、Hetzner 上：计算便宜 4.8 倍、存储便宜 8.7 倍，不需要改代码，支持在线迁移，保留同样的开发体验；没有运行时限制，直接跑 plain Node.js / Bun，存储走 S3 但声称有 SSD 速度。对 Agent 工作负载来说，最后两点比价格更关键——Agent 的任务经常超过 serverless 的时长上限，而状态需要能搬走。这条是典型的「同一份代码，换一个更便宜的 substrate」，是否成立要看它能不能在不改代码的前提下真的绕过 Workers 的运行时约束。",
-          "url": "https://x.com/rivet_dev/status/2120911497190584499"
-        },
-        {
-          "tag": "instabox-cloud-computers-for-agents",
-          "title": "@hanghuang_：给 Agent 一台自己的云电脑，beta 不到一个月建了 100 万个 box",
-          "body": "他的出发点是笔记本不适合跑 Agent：多个 Agent 会抢同一份内存、CPU 和端口。instabox 提供多操作系统的沙箱（Linux、Android、Mac、Windows），带 GPU 和 CPU，Agent 各拿一台云电脑，合上笔记本它们继续跑。可信度来自使用量：beta 上线不到一个月，用户已经创建了 100 万+ 个 box。这条和今天时间线里的另外几条（Expo Simulators、Offstage 的 macOS 沙箱）指向同一件事——Agent 的执行环境正在从「你的机器」变成「按需分配的机器」，而隔离和并行是驱动这件事的两个真实痛点。",
-          "url": "https://x.com/hanghuang_/status/2120909505290756137"
-        },
-        {
-          "tag": "google-ai-ultra-9999",
-          "title": "@buildwithhassan：Google AI Ultra 的 $99.99 档比听起来划算",
-          "body": "他把两档订阅的额度拆开算了一遍：Google 说 $99.99 档是 Pro 的 5 倍，但具体到 Argon 接近 13 倍，因为 Pro 本来只给很少一点 Argon；$199.99 档价格翻倍，在 Gemini 应用里只多给 4 倍，其他多数限制几乎没变。所以结论是：如果你要的是 Gemini，$99.99 就够；如果你要的是 Claude，Ultra 不是正确的购买路径。这条的价值在于它把「倍数」还原成了基线问题——厂商说的 5 倍是相对谁的 5 倍，直接决定了这个价格是否合理。",
-          "url": "https://x.com/buildwithhassan/status/2120939951206674487"
+          "tag": "nvidia-530b-off-balance-sheet-post-jensen",
+          "title": "@MrPingChecks：黄仁勋闪辞之后，比绯闻更硬的是英伟达 $530B 表外账单",
+          "body": "在黄仁勋突然辞任 NVIDIA CEO、CFO Colette Kress 暂代（距 Q3 财报仅剩 5 天，且传出公司接洽 ARM CEO Rene Haas）之后，@MrPingChecks 翻出了二季度 10-Q 财报里更致命的结构风险：英伟达表外义务总额已从上季度的 1,840 亿美元暴增至 5,300 亿美元。这笔账包括飙升到 2,790 亿美元的供应与产能承诺（锁下 2027 年 HBM4 约 $3.0–$3.3/Gb 的低价，比 AMD、谷歌等低约两成）、1,085 亿美元代 OpenAI 俄亥俄园区做的土地电力担保、360 亿美元「新云（neocloud）」收入包销保底以及 200 亿美元数据中心租约，账上还握着 990 亿美元股权投资。过去靠黄仁勋个人威望撑起的「英伟达央行」信用兜底与无 COO 扁平体制（~60 位 VP 单线汇报）一旦交给更保守的职业经理人，依赖兜底融资的新云厂商和 GPU 现货租价都可能面对重新定价。",
+          "links": [
+            {
+              "label": "View @MrPingChecks",
+              "url": "https://x.com/MrPingChecks/status/2121084895812571380"
+            },
+            {
+              "label": "View @mylifcc",
+              "url": "https://x.com/mylifcc/status/2121030531823591860"
+            }
+          ]
         }
       ]
     },
@@ -135,22 +171,28 @@
       "title": "值得你花时间",
       "items": [
         {
-          "tag": "agent-token-waste-paper",
-          "title": "@arkyyang：Agent 的输出 token 里约 18% 是可删的",
-          "body": "他拆了一篇 11 月 4 日的论文《How Do AI Agents Waste Your Money?》：让第二个模型当裁判，标出「删掉也不损失有效工作」的文本，跨多次运行约 18% 的输出 token 属于浪费。四个可直接用的结论：在 Agent 运行过程中删掉重复和填充的推理，SWE-bench Verified 上删掉 41% 的推理，成功率从 89.0% 变成 89.5%；把推理全删则掉到 73.0%——该删的是重复，不是思考。浪费在不同 benchmark 之间的差异，远大于在六个前沿模型之间的差异，最大的一块是「绕路」：看起来合理但事后证明不必要的探索。所以换模型省钱之前，先给 Agent 更清楚的工具和可复用的笔记。推理档位从 Low 到 High 把成功率从 69.7% 提到 78.4%，而从 High 到 Max 多花 80 万 token、没有可测收益，两边都解出的任务上 Max 贵 1.62 倍——默认用 High，别用 Max。",
-          "url": "https://x.com/arkyyang/status/2118717789422911567"
+          "tag": "coremem-prospective-anchor-memory",
+          "title": "@arnaudmercier：CoReMem——只存文件路径与测试命令锚点，现有跨任务记忆都在倒赔 token",
+          "body": "耶鲁与清华等团队 11 月 12 日发布的论文（arXiv:2611.17316）直击连续代码任务里的记忆开销问题。作者先拿同一 repo 上接力完成的 ChainSWE 任务做了基准对照：现有跨任务记忆方案（完整历史、Mem0、MemOp、ReasoningBank）花在记忆模块本身的 token 全都大于它们省下的探索消耗，没有一个能同时降低步数和总 token。CoReMem 通过前瞻式片段估值（在继承同一仓库状态下测算去掉某段历史后下一步多走多少步），发现真正省力的是「去哪看（文件路径与行号）」和「跑什么验证（可执行测试命令）」两类锚点，而大段推理叙事和 diff 正文只会白烧预算；再配合溯源门控信用分配微调模型学会按锚点跳过盲目探索，最终让 27B 模型解决率从 21.0% 升至 25.7%，步数减少 17%，缓存感知总 token 减少 11%，单位 token 解决率提升 41%。",
+          "url": "https://x.com/arnaudmercier/status/2121148024420172087"
         },
         {
-          "tag": "kimi-k31-serving-race",
-          "title": "@stretchcloud：Kimi K3.1 Pro 开源后，竞争变成了「谁服务得最快」",
-          "body": "Moonshot 11 月 4 日在 Hugging Face 放出 K3.1 Pro 权重，三天内竞争就不在「模型好不好」，而在「谁跑得最快」。Cerebras 11 月 6 日用一次实时购物任务演示：一个 prompt 到确认下单 11.5 秒，声称晶圆级芯片把模型推到 2,000 token/秒以上；独立测试的数字更保守——Håvard Ihle 的基准显示有真实提升但更小，WeirdML 从 7.5% 到 9.9%，仍落后 Claude Haiku 5.5；Artificial Analysis 测 Moonshot 自家 API 是 84.2 token/秒，是 K3 的两倍多，但只是 Cerebras 数字的一小部分。同一天内，Akash、Runpod、Nebius、Hyperstack 上已经能在普通 H100 上跑不审查的分支。他的判断是：开放权重这次产出的不是一个模型，而是一打抢着服务同一个文件的公司；对编码 Agent 来说，输出速度基本就是产品——聪明 2% 但慢 5 倍，会输给稍笨但先答完的那个。",
-          "url": "https://x.com/stretchcloud/status/2120928359186059571"
+          "tag": "three-labs-same-three-bets",
+          "title": "@stretchcloud：7 周内连发的 Grok Bot、Muse 与 dots，做出了完全相同的 3 个架构押注",
+          "body": "这篇对比把 2026 年三大常驻个人 Agent（Grok Bot、Meta Muse、OpenAI dots）为什么长得这么像讲得很透：模型、云虚拟机、记忆与定时心跳这些部件 OpenClaw 早就有，三家大厂真正不约而同收敛到同一套工程设计的是三件事——① 状态留在服务端而非本地电脑，执行机随时可休眠、打补丁或从快照重建；② 把上下文当成按 prompt cache 计价的硬预算，决定一天唤醒几十次后的单任务成本；③ 面对 Simon Willison 总结的「致命三连（私有数据 + 不可信外部内容 + 对外通信）」，一律不让基座模型直接拍板外发，而是把「提议动作」和「策略放行」拆开（Muse 走 Sentinel、dots 走独立自动审查流程、Grok Bot 走独立审查模型）。作者的判断很清楚：个人 Agent 赛道的「提议 vs 审批」安全隔离层，会比模型能力更早形成行业标准。",
+          "url": "https://x.com/stretchcloud/status/2121259792970747971"
         },
         {
-          "tag": "hermes-agent-review-94-cache",
-          "title": "@Da7_Tech：Hermes Agent 全量复盘，1,013 次会话里 94.4% 的 token 来自缓存",
-          "body": "他用了 Hermes Agent 一段时间后写了篇独立复盘（明确说没拿钱、没被赞助），覆盖使用场景、与 OpenClaw / Claude Code / Codex / Grok Bot 的对比，以及好坏两面。最硬的一段是账：在 1,013 次会话里挑一次接近平均值的——2.19 亿输入 token、1,570 万输出 token、37.7 亿缓存 token，合计约 40 亿，其中 94.4% 来自缓存。他还试过在只有 2GB 内存的虚拟机里跑完整的 Hermes，稳定性很高，并拿 Codex 动辄几十 GB 内存作对比。他对「模型之上那一层」的描述值得留意：模型只是大脑，身份、记忆、技能和工具属于用户，换模型不会丢掉这些——这正是把 harness 当成资产而不是当成壳。",
-          "url": "https://x.com/Da7_Tech/status/2119460293398937811"
+          "tag": "deepseek-search-pricing-vs-5qps-cap",
+          "title": "@MartinSzerment：DeepSeek 搜索比 OpenAI/Anthropic 便宜 13 倍，但 5 QPS 上限会先卡住并发",
+          "body": "这条直接补齐了 DeepSeek 官方发布图背后的生产选型账本：DeepSeek API 的 Search 和 Fetch 按每千次 $0.75 计费，而 OpenAI 和 Anthropic 是 $10/千次——一个跑 50 次搜索的 Agent 任务，工具费在 DeepSeek 不到 4 美分，在另两家要 50 美分；1 美分在 Anthropic 只够 1 次搜索，在 deepseek-flash 上大约能买 33K 输入 token。但他在迁移前标出了两个硬门槛：每账号 Search 与 Fetch 限流只有 5 QPS，几十个并发 Agent 一起跑立刻撞墙；欧洲企业还会马上卡在数据驻留合规审查上。此外他还给出一个规模数字：DeepSeek 自家 Agent 应用 Harness 的日活用户从 9 月底的 27.1 万涨到了 11 月 4 日的 154 万。",
+          "url": "https://x.com/MartinSzerment/status/2121274255564239288"
+        },
+        {
+          "tag": "rex-terminal-28-pane-agent-restore",
+          "title": "@quatermain32：28 个窗格的终端 Agent 重启恢复脚本，以及首次重启清空列表的坑",
+          "body": "一条特别接地气的一线工程随笔：作者在 Rex 终端里跨 8 个工作区常驻 20 多个 Claude Code 和 Amp 会话，Mac 跑了 25 天重启后，终端恢复了窗格布局和工作目录，却丢掉了「哪个窗格连着哪个会话及启动参数」的映射关系。他让 Agent 写了个 618 行脚本，每 3 分钟保存各窗格运行命令，并支持用 JSON 模板把整个项目（含多个 Agent 窗格）一键「停泊」或重新拉起。第一次重启测试脚本直接踩坑——它开机看到空窗格，误以为是人手关掉了 Agent，把 26 个窗格的登记表删到只剩 2 个。加上防误删保护后，当天终端更新再重启，一条快捷键就把全部 28 个窗格和后台服务原样拉回各自对话，还顺手验证了把 6 窗格 5 Agent 的 PR Marmot 项目收起后再完整复原。",
+          "url": "https://x.com/quatermain32/status/2121293912430072261"
         }
       ]
     }

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月13日（周五）12:34 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月13日（周五）12:34 ET</div>
+    <div style="margin-top: 10px; font-size: 0.9em;">
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">View Archive</a>
+    </div>
+  </header>
+
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>Agent 拿到可控钱包：</strong>OpenAI 面向美国 ChatGPT Pro 用户推出 ChatGPT Wallet，由 dots 在用户审批后通过云端浏览器代付，Agent 全程不接触真实卡号。</li>
+      <li><strong>官方 harness 进内网：</strong>Anthropic 开放私有部署版 Claude Managed Agents（Private Beta），打包交付带 IdP 鉴权与 OTel 遥测的 CMA Server，并首次在自托管控制台内置 Evals 产品。</li>
+      <li><strong>DeepSeek 全套能力上 API：</strong>搜索（$0.75/千次，比 OpenAI/Anthropic 便宜 13 倍）、网页抓取、OCR、ASR、TTS 全部并入 API 与 <code>deepseek-flash</code> 服务端工具链，但每账号 5 QPS 上限会先卡住高并发 Agent。</li>
+      <li><strong>模型权重里的 Blackwell 指纹：</strong>研究者声称通过 6 万亿次 GPU 布局与种子搜索，在 DeepSeek-V4-Pro、Kimi K3、MiniMax-M3 等 6 个中国模型权重中复现了 NVIDIA Blackwell（含 GB200/GB300）初始指纹。</li>
+      <li><strong>$530B 表外杠杆与 CEO 闪辞：</strong>黄仁勋突然辞去 NVIDIA CEO 的背后，最新二季度 10-Q 披露公司表外义务已从 1,840 亿飙至 5,300 亿美元（含 1,085 亿 OpenAI 园区担保与 360 亿新云保底），失去「教父信用兜底」正重估整个 neocloud 生态。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 产品、钱包与云端沙箱</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag chatgpt-wallet-agent-payments">Chatgpt-Wallet-Agent-Payments</span> @ChatGPT / @TheRealAdamG：ChatGPT Wallet 上线，dots 可在审批后代付而不见卡号</div>
+    <div class="item-body">OpenAI 今天起面向美国 ChatGPT Pro 用户推出 ChatGPT Wallet，让 dots 在获得用户批准后通过云端浏览器代为完成下单付款。核心安全边界是「Agent 全程接触不到真实银行卡信息」，且每笔消费都必须过一次安全检查。该方案与 American Express、Mastercard、Visa 联合构建，保留原有信用卡积分返现与合规争议保护，OpenAI 也同步向商户放出配套接入工具与指南。这意味着个人 Agent 的权限边界正从读写文档正式迈向受控资金支出。</div>
+    <div class="item-meta">
+      <a href="https://x.com/ChatGPT/status/2121283151729496235" target="_blank">View @ChatGPT</a>
+      <a href="https://x.com/TheRealAdamG/status/2121267704040431852" target="_blank">View @TheRealAdamG</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag self-hosted-claude-managed-agents">Self-Hosted-Claude-Managed-Agents</span> @PriyankaPhatak：Anthropic 推出私有部署版 Claude Managed Agents，并首次带上 Evals</div>
+    <div class="item-body">Anthropic 开放了 Self-Hosted Claude Managed Agents 的 Private Beta，让无法使用公有云托管产品的团队把整套 Claude Agent harness、沙箱和会话历史部署到自有云或本地机房，并自行决定向 Claude 发送请求的路由。官方交付的 CMA Server 原生集成企业 IdP 身份认证、OpenTelemetry 遥测与存储，同时在自托管控制台里第一次附带了 Evals 产品。对金融、政务等强合规团队来说，重点不是少写几行代码，而是不用自己从头复刻官方调优过的执行底座。</div>
+    <div class="item-meta">
+      <a href="https://x.com/PriyankaPhatak/status/2121273099673010662" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag devin-apps-and-expo-simulators">Devin-Apps-And-Expo-Simulators</span> @cognition / @expo：Devin Apps 与 Expo Simulators 把 Agent 的云电脑做成持久服务</div>
+    <div class="item-body">Cognition 发布 Devin Apps：直接跑在 Devin 云电脑上的私有可分享 Web 应用，能复用现有组件、任意技术栈和预装 MCP，数据留在自己机器上不外泄。底层依托「内存快照（memory snapshots）」，有访问自动唤醒、无流量秒休眠、只按实际算力计费；Cognition 内部已经用它让 Devin 自主维护跨多云账单的聚合看板。同日 Expo 也推出面向 Agent 的云端模拟器 Expo Simulators（本地构建、云端验证），两件事合在一起说明 Agent 的云环境正从「一次性跑脚本的容器」演进成「带快照、可休眠、可直出内部工具」的长期节点。</div>
+    <div class="item-meta">
+      <a href="https://x.com/cognition/status/2121255137914077300" target="_blank">View Devin Apps</a>
+      <a href="https://x.com/expo/status/2121029744586019110" target="_blank">View Expo Simulators</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag langchain-300m-at-3b-langsmith">Langchain-300M-At-3B-Langsmith</span> @hwchase17：LangChain 以 30 亿美元估值融资 3 亿美元，押注框架无关的 LangSmith</div>
+    <div class="item-body">Harrison Chase 宣布 LangChain 完成 3 亿美元融资、估值达到 30 亿美元。比融资金额更值得看的是定位重心：他强调公司正在全力建设框架无关（framework-agnostic）的 LangSmith 平台，用来运行、改进并治理生产环境里的 Agent。当各家编码与运行时框架日趋同质化，连最早靠编排库起家的团队也把商业重心移向了可观测性、评测闭环与运行时治理层。</div>
+    <div class="item-meta">
+      <a href="https://x.com/hwchase17/status/2121279222912352574" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>Agent 工程：把规则写进类型与工作流</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag formalize-ddd-beyond-markdown">Formalize-Ddd-Beyond-Markdown</span> @eulerfx：别只靠 .md 约束 Agent，把领域规则搬进可机械验证的结构里</div>
+    <div class="item-body">他接过 @mattpocockuk「AI 时代 DDD 更强大」的讨论，给出了更硬的工程拆解：靠 Skills 和 Markdown 写规范在小项目里很管用，但基准测试表明规模一上去，Agent 对自然语言架构规则的遵循就会漂移。有效做法是把领域规则移出散文，变成编译器和测试能直接卡死的结构——先定义类型、接口与模块边界（让非法状态不可表达），聚合根变更必须经由校验不变量的操作入口，显式建模状态机与跨聚合协议（含顺序、重试和补偿），再用属性测试和局部形式化方法验证，最后用代码基准检查是否真的比以前更好。</div>
+    <div class="item-meta">
+      <a href="https://x.com/eulerfx/status/2120973113412428172" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag enterprise-agent-permission-boundary">Enterprise-Agent-Permission-Boundary</span> @UPing123zzz：企业 Agent 架构拆解——能力边界与权限边界根本不是一回事</div>
+    <div class="item-body">一篇对「接个 LLM + 装几个 MCP + 写段 Skill 就以为做出企业 Agent」的泼冷水长文。文章逐层拆解了真实生产链路里常被忽略的底座：Agent Gateway、身份鉴权、Permission Engine、Approval Queue、持久化 Task Queue、Tracing、Evals &amp; Guardrails 与 Audit Log Store。关键结论很扎实：模型回答正确不等于任务成功，工具返回成功也不等于业务状态一致（比如接口超时重试导致面试邀请连发三遍）。必须把「模型能做什么」「用户允许它做什么」「系统最终批准做什么」三层边界拆开设计。</div>
+    <div class="item-meta">
+      <a href="https://x.com/UPing123zzz/status/2120885287442415671" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag t3-inbox-vs-leader-agent">T3-Inbox-Vs-Leader-Agent</span> @victor_wu / @xuanwo：T3 Code 的 GTD 收件箱模式 vs 全知领队 Agent</div>
+    <div class="item-body">一场很具体的多 Agent 交互路线交锋：@xuanwo 推荐 T3 Code 的收件箱工作流（Inbox / Working / Snoozed / Settled 四态，working 默认折叠，Agent 需要拍板时开独立 thread 异步问人），让他能同时挂着 13 个任务而不被打断；@victor_wu 则认为收件箱模式很快会被淘汰，因为它只是把多窗口弹窗换成了排队清零，人依然得记住每个 worker 窗口的上下文并逐一回复。他押注的方向是让一个掌握全局上下文的 leader agent 当「全知秘书」，替你盯紧、汇报并转达指令给底层 worker。</div>
+    <div class="item-meta">
+      <a href="https://x.com/victor_wu/status/2121149292341800995" target="_blank">View @victor_wu</a>
+      <a href="https://x.com/xuanwo/status/2120795654599438690" target="_blank">View @xuanwo</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag facade-code-and-animatic-pr">Facade-Code-And-Animatic-Pr</span> @a3nz3g / @mattpocockuk：跨机调度插件 Facade Code 与「视频化 PR」Skill</div>
+    <div class="item-body">@a3nz3g 开源了 MIT 协议的 VS Code 插件 Facade Code，把 Claude Code、Codex 等各家 Agent CLI 收进同一面板，支持 Agent 之间互相启动进程、发消息与控制终端（Agent Use），还能把 SSH 远程机器组进同一个网状拓扑（Agent Mesh）——演示里他在本地 Mac 与远程机器上同时跑了 17 个 Agent，再用手机一条指令清掉其中 16 个并顺手清理 worktree。另一边 @mattpocockuk 在打磨 /setup-animatic 与 /animatic 两个 Skill，目标是让每个重要 PR 自动附带一段演示视频，用直观回放取代长篇 Markdown 墙。</div>
+    <div class="item-meta">
+      <a href="https://x.com/a3nz3g/status/2118941157489271066" target="_blank">View Facade Code</a>
+      <a href="https://x.com/mattpocockuk/status/2121211579098083668" target="_blank">View /animatic</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🚀</span>
+      <h2>模型、API 与开发者工具账本</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag deepseek-app-capabilities-via-api">Deepseek-App-Capabilities-Via-Api</span> @deepseek_ai：DeepSeek App 全套能力开放 API，服务端托管搜索、文件与语音</div>
+    <div class="item-body">DeepSeek 宣布把 App 背后的搜索、网页抓取、文件解析、安全审查与语音能力全部搬进 API。V4.1-Flash（deepseek-flash）在 Messages、Responses 与 Chat Completions 三种接口格式下，均由服务端自动执行工具调用与上下文组装，支持 deepseek_web_search（含图片与深度思考多步检索）、deepseek_read_url 以及 PDF/Office/图片输入；Search、Fetch、OCR、ASR、TTS 也可以作为独立 API 单独调用，官方还同步开源了支持导入历史对话的前端 Demo。接入需注意两点：面向公众的产品必须开启安全审查，且扩展工具会在 token 之外单独计费。</div>
+    <div class="item-meta">
+      <a href="https://x.com/deepseek_ai/status/2121247896918253875" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag carbon-eval-and-factory-quota-math">Carbon-Eval-And-Factory-Quota-Math</span> @SuJinYan123 / @akokoi1：Gemini 4 Carbon 开放任务体感，与 $100 Factory 订阅实测</div>
+    <div class="item-body">@SuJinYan123 分享了一线对比：Gemini 4 Carbon 在纯写代码上和 Opus/Fable 体感相近，但在需要多轮分析的开放式 Agent 任务上明显强于 Opus，只是仍带着 Gemini 系列浮夸和顺从的表达习惯。账单侧，@akokoi1 晒出了订阅实测：他之前花 $125 订 Claude Max 5X 每周只用到 20–40% 额度、浪费过半，改订 $100 的 Factory 后半个月只消耗 30% 月额度（对应约 $200 的 Claude 消耗，折算 100 美元可撬动约 $660 额度），再反代接回 Claude Code 无缝继承原有项目和记忆——当然这类中转路径的服务稳定性与条款边界需要自行权衡。</div>
+    <div class="item-meta">
+      <a href="https://x.com/SuJinYan123/status/2120900392406089741" target="_blank">View @SuJinYan123</a>
+      <a href="https://x.com/akokoi1/status/2121071880451117425" target="_blank">View @akokoi1</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag typesense-10m-arr-bootstrapped">Typesense-10M-Arr-Bootstrapped</span> @jasonbosco：开源搜索引擎 Typesense 零 VC 融资做到 1,000 万美元 ARR</div>
+    <div class="item-body">Typesense 联合创始人宣布公司今年 ARR 突破 1,000 万美元，并且全程未拿一分钱风险投资，100% 依靠营收自筹滚大——它最早只是一个利用夜晚和周末写出来的开源项目。在 AI 与开发工具普遍靠巨额融资补贴获客的周期里，这条消息提供了另一个参照系：基础工具只要卡准「数据库全文检索不够用」的真实迁移痛点，依然能靠现金流独立做大。</div>
+    <div class="item-meta">
+      <a href="https://x.com/jasonbosco/status/2120894636688330776" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔍</span>
+      <h2>算力取证与芯片供应链震荡</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag blackwell-weight-forensic-fingerprint">Blackwell-Weight-Forensic-Fingerprint</span> @willdepue：权重取证声称 DeepSeek、Kimi 等模型在 Blackwell 上初始化</div>
+    <div class="item-body">研究者发布了一项引发热议的开源权重取证报告：模型训练前的随机初始化数值会留下与具体 GPU 硬件架构和随机种子绑定的指纹，且该相关性在完整训练后依然残留在发布权重中。他在检索超过 6 万亿组芯片布局与种子后，声称 DeepSeek-V4-Pro、Kimi K3、MiniMax-M3 等 6 个中国模型（其中 4 个匹配 Grace Blackwell GB200/GB300）携带了 Blackwell 指纹：用未修改 PyTorch 配合恢复出的种子（如 DeepSeek 种子 953049583），在 B300 上可逐比特复现 DeepSeek-V4-Flash 初始权重，在 GB200 上以 0.999995 相关性复现 Kimi K3，而 Hopper H100 无法复现；该方法在 24 个已知硬件的开源模型上校验通过。这一发现已获部分一线实验室研究员关注，但仍需更多独立复核；无论政治争议如何，「checkpoint 硬件指纹」已把算力溯源直接推进到了公开权重层。</div>
+    <div class="item-meta">
+      <a href="https://x.com/willdepue/status/2120992457630326841" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag nvidia-530b-off-balance-sheet-post-jensen">Nvidia-530B-Off-Balance-Sheet-Post-Jensen</span> @MrPingChecks：黄仁勋闪辞之后，比绯闻更硬的是英伟达 $530B 表外账单</div>
+    <div class="item-body">在黄仁勋突然辞任 NVIDIA CEO、CFO Colette Kress 暂代（距 Q3 财报仅剩 5 天，且传出公司接洽 ARM CEO Rene Haas）之后，@MrPingChecks 翻出了二季度 10-Q 财报里更致命的结构风险：英伟达表外义务总额已从上季度的 1,840 亿美元暴增至 5,300 亿美元。这笔账包括飙升到 2,790 亿美元的供应与产能承诺（锁下 2027 年 HBM4 约 $3.0–$3.3/Gb 的低价，比 AMD、谷歌等低约两成）、1,085 亿美元代 OpenAI 俄亥俄园区做的土地电力担保、360 亿美元「新云（neocloud）」收入包销保底以及 200 亿美元数据中心租约，账上还握着 990 亿美元股权投资。过去靠黄仁勋个人威望撑起的「英伟达央行」信用兜底与无 COO 扁平体制（~60 位 VP 单线汇报）一旦交给更保守的职业经理人，依赖兜底融资的新云厂商和 GPU 现货租价都可能面对重新定价。</div>
+    <div class="item-meta">
+      <a href="https://x.com/MrPingChecks/status/2121084895812571380" target="_blank">View @MrPingChecks</a>
+      <a href="https://x.com/mylifcc/status/2121030531823591860" target="_blank">View @mylifcc</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag coremem-prospective-anchor-memory">Coremem-Prospective-Anchor-Memory</span> @arnaudmercier：CoReMem——只存文件路径与测试命令锚点，现有跨任务记忆都在倒赔 token</div>
+    <div class="item-body">耶鲁与清华等团队 11 月 12 日发布的论文（arXiv:2611.17316）直击连续代码任务里的记忆开销问题。作者先拿同一 repo 上接力完成的 ChainSWE 任务做了基准对照：现有跨任务记忆方案（完整历史、Mem0、MemOp、ReasoningBank）花在记忆模块本身的 token 全都大于它们省下的探索消耗，没有一个能同时降低步数和总 token。CoReMem 通过前瞻式片段估值（在继承同一仓库状态下测算去掉某段历史后下一步多走多少步），发现真正省力的是「去哪看（文件路径与行号）」和「跑什么验证（可执行测试命令）」两类锚点，而大段推理叙事和 diff 正文只会白烧预算；再配合溯源门控信用分配微调模型学会按锚点跳过盲目探索，最终让 27B 模型解决率从 21.0% 升至 25.7%，步数减少 17%，缓存感知总 token 减少 11%，单位 token 解决率提升 41%。</div>
+    <div class="item-meta">
+      <a href="https://x.com/arnaudmercier/status/2121148024420172087" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag three-labs-same-three-bets">Three-Labs-Same-Three-Bets</span> @stretchcloud：7 周内连发的 Grok Bot、Muse 与 dots，做出了完全相同的 3 个架构押注</div>
+    <div class="item-body">这篇对比把 2026 年三大常驻个人 Agent（Grok Bot、Meta Muse、OpenAI dots）为什么长得这么像讲得很透：模型、云虚拟机、记忆与定时心跳这些部件 OpenClaw 早就有，三家大厂真正不约而同收敛到同一套工程设计的是三件事——① 状态留在服务端而非本地电脑，执行机随时可休眠、打补丁或从快照重建；② 把上下文当成按 prompt cache 计价的硬预算，决定一天唤醒几十次后的单任务成本；③ 面对 Simon Willison 总结的「致命三连（私有数据 + 不可信外部内容 + 对外通信）」，一律不让基座模型直接拍板外发，而是把「提议动作」和「策略放行」拆开（Muse 走 Sentinel、dots 走独立自动审查流程、Grok Bot 走独立审查模型）。作者的判断很清楚：个人 Agent 赛道的「提议 vs 审批」安全隔离层，会比模型能力更早形成行业标准。</div>
+    <div class="item-meta">
+      <a href="https://x.com/stretchcloud/status/2121259792970747971" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag deepseek-search-pricing-vs-5qps-cap">Deepseek-Search-Pricing-Vs-5Qps-Cap</span> @MartinSzerment：DeepSeek 搜索比 OpenAI/Anthropic 便宜 13 倍，但 5 QPS 上限会先卡住并发</div>
+    <div class="item-body">这条直接补齐了 DeepSeek 官方发布图背后的生产选型账本：DeepSeek API 的 Search 和 Fetch 按每千次 $0.75 计费，而 OpenAI 和 Anthropic 是 $10/千次——一个跑 50 次搜索的 Agent 任务，工具费在 DeepSeek 不到 4 美分，在另两家要 50 美分；1 美分在 Anthropic 只够 1 次搜索，在 deepseek-flash 上大约能买 33K 输入 token。但他在迁移前标出了两个硬门槛：每账号 Search 与 Fetch 限流只有 5 QPS，几十个并发 Agent 一起跑立刻撞墙；欧洲企业还会马上卡在数据驻留合规审查上。此外他还给出一个规模数字：DeepSeek 自家 Agent 应用 Harness 的日活用户从 9 月底的 27.1 万涨到了 11 月 4 日的 154 万。</div>
+    <div class="item-meta">
+      <a href="https://x.com/MartinSzerment/status/2121274255564239288" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag rex-terminal-28-pane-agent-restore">Rex-Terminal-28-Pane-Agent-Restore</span> @quatermain32：28 个窗格的终端 Agent 重启恢复脚本，以及首次重启清空列表的坑</div>
+    <div class="item-body">一条特别接地气的一线工程随笔：作者在 Rex 终端里跨 8 个工作区常驻 20 多个 Claude Code 和 Amp 会话，Mac 跑了 25 天重启后，终端恢复了窗格布局和工作目录，却丢掉了「哪个窗格连着哪个会话及启动参数」的映射关系。他让 Agent 写了个 618 行脚本，每 3 分钟保存各窗格运行命令，并支持用 JSON 模板把整个项目（含多个 Agent 窗格）一键「停泊」或重新拉起。第一次重启测试脚本直接踩坑——它开机看到空窗格，误以为是人手关掉了 Agent，把 26 个窗格的登记表删到只剩 2 个。加上防误删保护后，当天终端更新再重启，一条快捷键就把全部 28 个窗格和后台服务原样拉回各自对话，还顺手验证了把 6 窗格 5 Agent 的 PR Marmot 项目收起后再完整复原。</div>
+    <div class="item-meta">
+      <a href="https://x.com/quatermain32/status/2121293912430072261" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
