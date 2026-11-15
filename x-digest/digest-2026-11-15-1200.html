@@ -165,6 +165,39 @@
       left: 0;
       font-weight: bold;
     }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
   </style>
 </head>
 <body>
@@ -177,6 +210,9 @@
     </div>
   </header>
 
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
     <div class="summary-box">
     <h3>高信号摘要</h3>
     <ul>
@@ -320,6 +356,38 @@
     </div>
   </div>
   </div>
+  </div>
+
+  <div id="view-hn" hidden><h2 class="section-title">HN 热帖</h2><div class="date" style="opacity:.65;font-size:.78em;">2026-11-15T18:21:20Z</div><div class="hn-item"><div class="hn-meta">603 points &middot; 337 comments &middot; 4h ago</div><div class="hn-title"><a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/" target="_blank" rel="noopener">All AI-generated code should be Open Source</a></div><div class="hn-src">jakub.jankiewicz.org &middot; <a href="https://news.ycombinator.com/item?id=50507303" target="_blank" rel="noopener">讨论</a></div></div><div class="hn-item"><div class="hn-meta">415 points &middot; 178 comments &middot; 68h ago</div><div class="hn-title"><a href="https://unemploymentlabs.com/checkpoint-forensics" target="_blank" rel="noopener">Chinese frontier AI models carry the fingerprint of export-controlled GPUs</a></div><div class="hn-src">unemploymentlabs.com &middot; <a href="https://news.ycombinator.com/item?id=50474883" target="_blank" rel="noopener">讨论</a></div></div><div class="hn-item"><div class="hn-meta">263 points &middot; 25 comments &middot; 27h ago</div><div class="hn-title"><a href="https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax" target="_blank" rel="noopener">Show HN: DeepSeek V3 in ~200 lines of pure Jax</a></div><div class="hn-src">github.com &middot; <a href="https://news.ycombinator.com/item?id=50497589" target="_blank" rel="noopener">讨论</a></div></div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
 
 </body>
 </html>
