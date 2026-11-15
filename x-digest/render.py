@@ -194,6 +194,62 @@ def _render_sections(data: Dict[str, Any]) -> str:
     return "\n\n".join(sections_html)
 
 
+def _render_nav(data: Dict[str, Any]) -> str:
+    """Tab bar — only rendered when there is a second source to switch to."""
+    hn_items = ((data.get("hn") or {}).get("items")) or []
+    if not hn_items:
+        return ""
+    return (
+        '<nav class="tabs">'
+        '<button class="tab is-active" data-view="x">X \u7cbe\u9009</button>'
+        '<button class="tab" data-view="hn">HN \u70ed\u5e16</button>'
+        '</nav>'
+    )
+
+
+def _render_hn(data: Dict[str, Any]) -> str:
+    """Hacker News panel. Empty string when the run had no qualifying stories."""
+    hn = data.get("hn") or {}
+    items = hn.get("items") or []
+    if not items:
+        return ""
+
+    rows = []
+    for it in items:
+        title = _esc(it.get("title") or "")
+        url = _esc(it.get("url") or it.get("hn_url") or "#")
+        hn_url = _esc(it.get("hn_url") or "")
+        score = it.get("score") or 0
+        comments = it.get("comments") or 0
+        domain = _esc(it.get("domain") or "")
+        meta = f"{score} points &middot; {comments} comments"
+        age = it.get("age_hours")
+        if isinstance(age, (int, float)):
+            meta += f" &middot; {age:.0f}h ago"
+
+        disc = f' &middot; <a href="{hn_url}" target="_blank" rel="noopener">\u8ba8\u8bba</a>' if hn_url else ""
+        rows.append(
+            '<div class="hn-item">'
+            f'<div class="hn-meta">{meta}</div>'
+            f'<div class="hn-title"><a href="{url}" target="_blank" rel="noopener">{title}</a></div>'
+            f'<div class="hn-src">{domain}{disc}</div>'
+            "</div>"
+        )
+
+    fetched = hn.get("fetched_at") or ""
+    stamp = (
+        f'<div class="date" style="opacity:.65;font-size:.78em;">{_esc(fetched)}</div>'
+        if fetched else ""
+    )
+    return (
+        '<div id="view-hn" hidden>'
+        '<h2 class="section-title">HN \u70ed\u5e16</h2>'
+        f'{stamp}'
+        + "".join(rows)
+        + "</div>"
+    )
+
+
 def render(data: Dict[str, Any], template_path: Path) -> str:
     title = data.get("title", "X Feed Digest")
     date = data.get("date", "")
@@ -212,6 +268,8 @@ def render(data: Dict[str, Any], template_path: Path) -> str:
         date_html=date_html,
         summary_html=summary_html,
         sections_html=sections_html,
+        nav_html=_render_nav(data),
+        hn_html=_render_hn(data),
         lang=lang,
     )
 

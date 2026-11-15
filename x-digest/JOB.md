@@ -118,6 +118,29 @@ Important note:
 - `process_digest.py` exists, but the real published workflow has been using a curated `digest.json` payload, not just the simple automatic scoring script.
 - Include the `🎯 Worth Your Time` section from step 1c when it has qualifying posts (typically 2–4 items).
 
+### 2b) Hacker News source (separate tab)
+
+The page carries two sources behind a tab bar: the X digest and an HN panel.
+
+```bash
+python3 hn_fetch.py --max-items 4 > /tmp/hn.json
+```
+
+Then merge the result into `digest.json` as a top-level `hn` key before rendering:
+
+```python
+import json
+d = json.load(open('digest.json'))
+d['hn'] = json.load(open('/tmp/hn.json'))
+json.dump(d, open('digest.json','w'), ensure_ascii=False)
+```
+
+Rules:
+- **3-4 items maximum.** This is a sidebar to the X digest, not a second digest.
+- `hn_fetch.py` already gates on **score >= 200 AND an AI/agent/dev-tooling keyword**, and excludes space, retro-hardware and pure-policy stories. Do not loosen the filter in the runbook.
+- If `items` comes back empty, leave `hn` out entirely — `render.py` then omits the tab bar and renders the X digest alone.
+- Never hand-edit HN scores/comments; they come from the API.
+
 ### 3) Render the timestamped HTML digest
 ```bash
 python3 render.py --input digest.json --output digest-YYYY-MM-DD-HHMM.html
