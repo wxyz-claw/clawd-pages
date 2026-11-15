@@ -224,16 +224,18 @@
     "title": "前沿模型与底层实现",
     "items": [
      {
-      "tag": "HN · 415 分 · 178 评论",
+      "tag": "hn-415",
       "title": "权重取证显示 4 家中国 AI 厂商自 2026 年 4 月起已使用 Blackwell GPU",
       "body": "Unemployment Labs 于 2026 年 11 月 12 日发布的报告对公开模型权重进行取证分析，发现 DeepSeek、Moonshot AI、MiniMax 与 Ant Group 的 6 款新模型自 2026 年 4 月以来呈现出与受出口管制的 NVIDIA Blackwell 芯片一致的数值模式，而此前同厂模型则匹配上一代 NVIDIA Hopper 架构。研究团队完全基于公开权重而非内部泄密，通过还原模型初始值痕迹并反推硬件及初始化配置得出这一结论。对于 DeepSeek-V4-Flash 与 Kimi K3，研究人员还在物理 Blackwell 芯片上直接复现并验证了该硬件指纹。",
-      "url": "https://unemploymentlabs.com/checkpoint-forensics"
+      "url": "https://unemploymentlabs.com/checkpoint-forensics",
+      "tag_label": "HN · 415 分 · 178 评论"
      },
      {
-      "tag": "HN · 263 分 · 25 评论",
+      "tag": "hn-263",
       "title": "190 行纯 JAX 复现 DeepSeek-V3 架构，并在 MacBook Air 上从零预训练",
       "body": "开发者 Vaibhaav-Tiwari 开源了仅用 190 行纯 JAX 实现 DeepSeek-V3 架构的项目，完整包含 MLA、DeepSeekMoE、aux-loss-free balancing 与 MTP 等核心机制。项目不依赖 Flax、Equinox 或 PyTorch 等框架，参数全部以纯数组字典形式组织，核心模型代码均集中于单个文件 deepseek_v3.py 以便从头到尾直接阅读。作者使用公版侦探小说语料，在一台 MacBook Air 上完成了该模型的从零预训练。",
-      "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax"
+      "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+      "tag_label": "HN · 263 分 · 25 评论"
      }
     ]
    },
@@ -242,10 +244,11 @@
     "title": "AI 版权与开源协议",
     "items": [
      {
-      "tag": "HN · 611 分 · 337 评论",
+      "tag": "hn-611",
       "title": "博客呼吁所有 AI 生成代码均应强制采用 Open Source 开源协议",
       "body": "作者提出两项核心论据，认为 AI 生成代码不应闭源商用：其一，大模型训练抓取了自 GNU Project 创立以来的海量 Open Source 代码以及受 Creative Commons 协议约束且依法要求署名的 Stack Overflow、Stack Exchange 内容，将集体知识转化为闭源私有代码无异于“许可证洗白”。其二，纯粹由 AI 生成的代码并非人类创作，依据美国 U.S. Copyright Office 引用的 Monkey Selfie 判例应不享有版权（Wikimedia Commons 亦据此将纯 AI 图像标记为 Public Domain）。鉴于英国等部分司法辖区仍对计算机生成作品授予有限版权，作者主张开发者与企业应主动以 Open Source 协议发布 AI 生成代码以维护全球规则公平。",
-      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/"
+      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+      "tag_label": "HN · 611 分 · 337 评论"
      }
     ]
    }

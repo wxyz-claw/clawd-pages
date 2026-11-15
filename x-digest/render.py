@@ -196,8 +196,8 @@ def _render_sections(data: Dict[str, Any]) -> str:
 
 def _render_nav(data: Dict[str, Any]) -> str:
     """Tab bar — only rendered when there is a second source to switch to."""
-    hn_items = ((data.get("hn") or {}).get("items")) or []
-    if not hn_items:
+    hn = data.get("hn") or {}
+    if not (hn.get("sections") or hn.get("items")):
         return ""
     return (
         '<nav class="tabs">'
