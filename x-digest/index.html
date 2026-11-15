@@ -210,7 +210,7 @@
     </div>
   </header>
 
-  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+  
 
   <div id="view-x">
     <div class="summary-box">
@@ -358,7 +358,40 @@
   </div>
   </div>
 
-  <div id="view-hn" hidden><h2 class="section-title">HN 热帖</h2><div class="date" style="opacity:.65;font-size:.78em;">2026-11-15T18:21:20Z</div><div class="hn-item"><div class="hn-meta">603 points &middot; 337 comments &middot; 4h ago</div><div class="hn-title"><a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/" target="_blank" rel="noopener">All AI-generated code should be Open Source</a></div><div class="hn-src">jakub.jankiewicz.org &middot; <a href="https://news.ycombinator.com/item?id=50507303" target="_blank" rel="noopener">讨论</a></div></div><div class="hn-item"><div class="hn-meta">415 points &middot; 178 comments &middot; 68h ago</div><div class="hn-title"><a href="https://unemploymentlabs.com/checkpoint-forensics" target="_blank" rel="noopener">Chinese frontier AI models carry the fingerprint of export-controlled GPUs</a></div><div class="hn-src">unemploymentlabs.com &middot; <a href="https://news.ycombinator.com/item?id=50474883" target="_blank" rel="noopener">讨论</a></div></div><div class="hn-item"><div class="hn-meta">263 points &middot; 25 comments &middot; 27h ago</div><div class="hn-title"><a href="https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax" target="_blank" rel="noopener">Show HN: DeepSeek V3 in ~200 lines of pure Jax</a></div><div class="hn-src">github.com &middot; <a href="https://news.ycombinator.com/item?id=50497589" target="_blank" rel="noopener">讨论</a></div></div></div>
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔬</span>
+      <h2>前沿模型与底层实现</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn415178">Hn415178</span> 权重取证显示 4 家中国 AI 厂商自 2026 年 4 月起已使用 Blackwell GPU</div>
+    <div class="item-body">Unemployment Labs 于 2026 年 11 月 12 日发布的报告对公开模型权重进行取证分析，发现 DeepSeek、Moonshot AI、MiniMax 与 Ant Group 的 6 款新模型自 2026 年 4 月以来呈现出与受出口管制的 NVIDIA Blackwell 芯片一致的数值模式，而此前同厂模型则匹配上一代 NVIDIA Hopper 架构。研究团队完全基于公开权重而非内部泄密，通过还原模型初始值痕迹并反推硬件及初始化配置得出这一结论。对于 DeepSeek-V4-Flash 与 Kimi K3，研究人员还在物理 Blackwell 芯片上直接复现并验证了该硬件指纹。</div>
+    <div class="item-meta">
+      <a href="https://unemploymentlabs.com/checkpoint-forensics" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn26325">Hn26325</span> 190 行纯 JAX 复现 DeepSeek-V3 架构，并在 MacBook Air 上从零预训练</div>
+    <div class="item-body">开发者 Vaibhaav-Tiwari 开源了仅用 190 行纯 JAX 实现 DeepSeek-V3 架构的项目，完整包含 MLA、DeepSeekMoE、aux-loss-free balancing 与 MTP 等核心机制。项目不依赖 Flax、Equinox 或 PyTorch 等框架，参数全部以纯数组字典形式组织，核心模型代码均集中于单个文件 deepseek_v3.py 以便从头到尾直接阅读。作者使用公版侦探小说语料，在一台 MacBook Air 上完成了该模型的从零预训练。</div>
+    <div class="item-meta">
+      <a href="https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚖️</span>
+      <h2>AI 版权与开源协议</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn611337">Hn611337</span> 博客呼吁所有 AI 生成代码均应强制采用 Open Source 开源协议</div>
+    <div class="item-body">作者提出两项核心论据，认为 AI 生成代码不应闭源商用：其一，大模型训练抓取了自 GNU Project 创立以来的海量 Open Source 代码以及受 Creative Commons 协议约束且依法要求署名的 Stack Overflow、Stack Exchange 内容，将集体知识转化为闭源私有代码无异于“许可证洗白”。其二，纯粹由 AI 生成的代码并非人类创作，依据美国 U.S. Copyright Office 引用的 Monkey Selfie 判例应不享有版权（Wikimedia Commons 亦据此将纯 AI 图像标记为 Public Domain）。鉴于英国等部分司法辖区仍对计算机生成作品授予有限版权，作者主张开发者与企业应主动以 Open Source 协议发布 AI 生成代码以维护全球规则公平。</div>
+    <div class="item-meta">
+      <a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div></div>
 
   <script>
   (function () {

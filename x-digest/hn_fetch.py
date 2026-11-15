@@ -45,6 +45,23 @@ def get(url: str, timeout: int = 20):
         return json.load(resp)
 
 
+def article_text(url: str, limit: int = 1500) -> str:
+    """Best-effort readable text of the linked page, for the summariser."""
+    if not url or "news.ycombinator.com" in url:
+        return ""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (digest-fetch)"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            raw = resp.read(400_000).decode("utf-8", "ignore")
+    except Exception:
+        return ""
+    raw = re.sub(r"<(script|style|nav|footer|header)[^>]*>.*?</\1>", " ", raw, flags=re.S | re.I)
+    txt = re.sub(r"<[^>]+>", " ", raw)
+    txt = re.sub(r"&#?[a-z0-9]+;", " ", txt)
+    txt = re.sub(r"\s+", " ", txt).strip()
+    return txt[:limit]
+
+
 def domain_of(url: str) -> str:
     if not url:
         return "news.ycombinator.com"
@@ -52,7 +69,7 @@ def domain_of(url: str) -> str:
     return re.sub(r"^www\.", "", m.group(1)) if m else "news.ycombinator.com"
 
 
-def fetch(limit: int, min_score: int, max_items: int) -> dict:
+def fetch(limit: int, min_score: int, max_items: int, with_text: bool = False) -> dict:
     ids = get(f"{BASE}/topstories.json")[:limit]
     items = []
     for sid in ids:
@@ -70,18 +87,19 @@ def fetch(limit: int, min_score: int, max_items: int) -> dict:
             continue
         if EXCLUDE.search(title):
             continue
-        items.append(
-            {
-                "id": it.get("id"),
-                "title": title,
-                "url": it.get("url") or f"https://news.ycombinator.com/item?id={it.get('id')}",
-                "hn_url": f"https://news.ycombinator.com/item?id={it.get('id')}",
-                "score": score,
-                "comments": it.get("descendants") or 0,
-                "domain": domain_of(it.get("url") or ""),
-                "age_hours": round((time.time() - (it.get("time") or 0)) / 3600, 1),
-            }
-        )
+        entry = {
+            "id": it.get("id"),
+            "title": title,
+            "url": it.get("url") or f"https://news.ycombinator.com/item?id={it.get('id')}",
+            "hn_url": f"https://news.ycombinator.com/item?id={it.get('id')}",
+            "score": score,
+            "comments": it.get("descendants") or 0,
+            "domain": domain_of(it.get("url") or ""),
+            "age_hours": round((time.time() - (it.get("time") or 0)) / 3600, 1),
+        }
+        if with_text:
+            entry["text"] = article_text(entry["url"])
+        items.append(entry)
 
     items.sort(key=lambda x: -x["score"])
     return {
@@ -97,11 +115,12 @@ def main(argv: list[str]) -> int:
     p.add_argument("--limit", type=int, default=60, help="how many top stories to scan")
     p.add_argument("--min-score", type=int, default=200, help="minimum points")
     p.add_argument("--max-items", type=int, default=4, help="how many to keep")
+    p.add_argument("--with-text", action="store_true", help="also pull article text for summarising")
     p.add_argument("--pretty", action="store_true")
     a = p.parse_args(argv)
 
     try:
-        data = fetch(a.limit, a.min_score, a.max_items)
+        data = fetch(a.limit, a.min_score, a.max_items, a.with_text)
     except Exception as exc:  # network/API failure must not break a digest run
         print(json.dumps({"source": "hacker-news", "items": [], "error": str(exc)[:200]}))
         return 0

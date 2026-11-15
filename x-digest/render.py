@@ -208,47 +208,43 @@ def _render_nav(data: Dict[str, Any]) -> str:
 
 
 def _render_hn(data: Dict[str, Any]) -> str:
-    """Hacker News panel. Empty string when the run had no qualifying stories."""
+    """Hacker News panel, rendered with the same section markup as the X digest.
+
+    Preferred shape is `hn.sections` (same structure as top-level `sections`) so
+    the two tabs read identically. Falls back to the older link-list shape when a
+    run only has `hn.items`.
+    """
     hn = data.get("hn") or {}
+    sections = hn.get("sections") or []
     items = hn.get("items") or []
-    if not items:
+    if not sections and not items:
         return ""
 
-    rows = []
-    for it in items:
-        title = _esc(it.get("title") or "")
-        url = _esc(it.get("url") or it.get("hn_url") or "#")
-        hn_url = _esc(it.get("hn_url") or "")
-        score = it.get("score") or 0
-        comments = it.get("comments") or 0
-        domain = _esc(it.get("domain") or "")
-        meta = f"{score} points &middot; {comments} comments"
-        age = it.get("age_hours")
-        if isinstance(age, (int, float)):
-            meta += f" &middot; {age:.0f}h ago"
+    if sections:
+        body = _render_sections({"sections": sections})
+    else:
+        rows = []
+        for it in items:
+            title = _esc(it.get("title") or "")
+            url = _esc(it.get("url") or it.get("hn_url") or "#")
+            hn_url = _esc(it.get("hn_url") or "")
+            score = it.get("score") or 0
+            comments = it.get("comments") or 0
+            meta = f"{score} points &middot; {comments} comments"
+            age = it.get("age_hours")
+            if isinstance(age, (int, float)):
+                meta += f" &middot; {age:.0f}h ago"
+            disc = f' &middot; <a href="{hn_url}" target="_blank" rel="noopener">\u8ba8\u8bba</a>' if hn_url else ""
+            rows.append(
+                '<div class="hn-item">'
+                f'<div class="hn-meta">{meta}</div>'
+                f'<div class="hn-title"><a href="{url}" target="_blank" rel="noopener">{title}</a></div>'
+                f'<div class="hn-src">{_esc(it.get("domain") or "")}{disc}</div>'
+                "</div>"
+            )
+        body = '<h2 class="section-title">HN \u70ed\u5e16</h2>' + "".join(rows)
 
-        disc = f' &middot; <a href="{hn_url}" target="_blank" rel="noopener">\u8ba8\u8bba</a>' if hn_url else ""
-        rows.append(
-            '<div class="hn-item">'
-            f'<div class="hn-meta">{meta}</div>'
-            f'<div class="hn-title"><a href="{url}" target="_blank" rel="noopener">{title}</a></div>'
-            f'<div class="hn-src">{domain}{disc}</div>'
-            "</div>"
-        )
-
-    fetched = hn.get("fetched_at") or ""
-    stamp = (
-        f'<div class="date" style="opacity:.65;font-size:.78em;">{_esc(fetched)}</div>'
-        if fetched else ""
-    )
-    return (
-        '<div id="view-hn" hidden>'
-        '<h2 class="section-title">HN \u70ed\u5e16</h2>'
-        f'{stamp}'
-        + "".join(rows)
-        + "</div>"
-    )
-
+    return '<div id="view-hn" hidden>' + body + "</div>"
 
 def render(data: Dict[str, Any], template_path: Path) -> str:
     title = data.get("title", "X Feed Digest")
