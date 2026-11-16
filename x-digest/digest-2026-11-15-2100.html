@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月15日（周日）21:00 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月15日（周日）21:00 ET</div>
+    <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
+    </div>
+  </header>
+
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>极简 Harness 与批注收口：</strong>@RayaneRachid_ 发布仅含单一 Python REPL 工具的 <code>Unharnessed</code> 并刷新 Terminal-Bench 4.0 SOTA；@zg0820 介绍单日 +866★ 的 <code>plannotator</code>（11.8K★），用本地浏览器 Inbox 收拢 Claude Code、Codex、DeepSeek Harness 等多 Agent 计划与 diff 批注。</li>
+      <li><strong>Grok Bot 工程化四板斧 vs Vibe Coding 反噬：</strong>@JangXiin 与 @0xMaxs 拆解 @poteto 的演讲——禁用易错 API、砍掉 98% 注释、人工纠错全沉淀为静态检查，配合自调试与形式化校验撑起单月 1.1 万 PR；反观 @fanxing321 跳过 review 后代码迅速失控，宣布回归关键逻辑人工阅读。</li>
+      <li><strong>订阅杠杆与风控收紧：</strong>@aicodeking 按 API 单价实测 Claude Max（$200/月）跑出最高 $27,484（137×）用量，远高于 ChatGPT Pro（42×）与 Antigravity（$1,255）；Antigravity 则升级风控，开始顺着 Google 家庭组连坐封禁主号与小号。</li>
+      <li><strong>Claude + Coq 破译哥德尔手稿，OpenAI/Anthropic 锁定 2029 TPU 产能：</strong>Claude 配合 Coq 从 1,009 页失传速记草稿中扒出 663 条定理并补全选择公理独立性证明；郭明錤披露 OpenAI（1,200 万颗 8t）与 Anthropic（1,400 万颗 8i）大单已将 Google TPU 能见度排到 2029 年。</li>
+      <li><strong>《值得你花时间》聚焦消费卡跑 145B 与安全审计架构：</strong>单张 32GB RTX 5090 借助内存+SSD 调度跑通 Edge0-145B 达 134.3 tok/s；Cloudflare 开源 72K★ 六阶段 <code>security-audit</code> 技能，而微软 FORGE 扫出 33 个 Linux 内核 CVE 却面临中位 41 天的修复长尾。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 工程化、Harness 与工具链</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag unharnessed-plannotator-and-antigravity">Unharnessed-Plannotator-And-Antigravity</span> @RayaneRachid_ &amp; @zg0820 &amp; @ChuckBass8808：单工具 Unharnessed 刷新 Terminal-Bench 4.0，Plannotator 收口多 Agent 评审，开发者转战 Antigravity 2.0</div>
+    <div class="item-body">Agent 外壳（Harness）正同时向「极简执行端」与「集中批注端」演化。@RayaneRachid_ 发布仅向模型暴露一个 Python REPL 工具的新一代外壳 `Unharnessed`，在 Terminal-Bench 4.0 上取得最新 SOTA。生成速度上去之后，人眼审查成了瓶颈：@zg0820 指出 `backnotprop/plannotator` 单日暴涨 866 星（累计 11,822★、1,082 fork、Apache 2.0），它通过插件与 hook 把 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、DeepSeek Harness、Pi 及 Grok Bot 等产生的计划、HTML、代码 diff 与 PR 统一推进本地浏览器窗口，新增的 Inbox 更把多个 Agent 的待审产物收拢成单一队列，靠一个「会挡住你的批注界面」防止人工跳过 review。工具迁移方面，@ChuckBass8808 观察到 Google 推出独立桌面端 Antigravity 2.0 与 Go 编写的 `agy` CLI 彻底脱离 VS Code 界面后，尽管其外壳仍被调侃为「毛坯房」，但 Gemini 4 Carbon 的能力正吸引不少 Claude Code 与 Codex 用户迁入，CC Switch 也已更新支持 `agy` 账号切换、用量统计与 MCP/Skills 同步。</div>
+    <div class="item-meta">
+      <a href="https://x.com/RayaneRachid_/status/2122024268368380148" target="_blank">Unharnessed SOTA</a>
+      <a href="https://x.com/zg0820/status/2122128298654482892" target="_blank">Plannotator 收口工作流</a>
+      <a href="https://x.com/ChuckBass8808/status/2122118221625188385" target="_blank">Antigravity 2.0 迁移观察</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag grokbot-static-checks-vs-vibe-coding">Grokbot-Static-Checks-Vs-Vibe-Coding</span> @JangXiin &amp; @0xMaxs &amp; @fanxing321：Grok Bot 靠「静态门禁+自验」做到月产 1.1 万 PR，跳过 Review 的 Vibe Coding 正在反噬</div>
+    <div class="item-body">@JangXiin 总结了 SpaceXSI 工程师 Lauren Tan（@poteto）在 AIE Code Summit 上分享的 Grok Bot 四项工程化铁律：1）代码库即记忆——9 月遗留的一处 `setTimeout` 补丁，到 10 月 AI 会照抄出 183 处；2）规则大于提示词——禁用易错 API、砍掉 98% 注释、把每一次人工纠错都沉淀为静态检查与 CI 门禁；3）自产自验——配置 CLI 与 DevTools 让 Agent 自己操作应用调试，复杂逻辑上 TLA+ / Lean / Fuzzing；4）先内后外——内层质量闭环后才交给 Grok Bot 无人自动合并，最终实现单月 1.1 万 PR 与冷启动提速 38%。@0xMaxs 补充了她在 YC 访谈中的实操画面：在 Slack 里丢一段 X 视频给机器人 Potato 即可唤起 Cursor 云端 Agent 出原型、像真用户一样测性能并回改代码，她甚至给个人助手配了手机号发短信催自己吃午饭。与之形成对照的是 @fanxing321 的一线复盘：在开发 Bowl 项目期间盲目跟随「不再逐行看代码」的潮流后，仓库底层逐渐堆满糟糕实现且链路日益失控，他决定重新收缩开发流程，恢复对关键逻辑的人工阅读与把关。</div>
+    <div class="item-meta">
+      <a href="https://x.com/JangXiin/status/2121845115215831473" target="_blank">@JangXiin 拆解 AIE 演讲</a>
+      <a href="https://x.com/0xMaxs/status/2121900181570695461" target="_blank">@0xMaxs YC 访谈笔记</a>
+      <a href="https://x.com/fanxing321/status/2121996740379414872" target="_blank">@fanxing321 开发链路反思</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag subscription-arbitrage-and-antigravity-bans">Subscription-Arbitrage-And-Antigravity-Bans</span> @aicodeking &amp; @ishaansehgal &amp; @xulijian1994 &amp; @tongzhenbao：Claude Max 实测跑出 137× API 杠杆，Antigravity 封禁家庭组反代，Daybreak 实测扫出漏网 Bug</div>
+    <div class="item-body">@aicodeking 按官方 API 费率折算了过去一月各家 $200/月高阶订阅的实际产出：Claude Max 最高跑出约 $27,484 的 API 等效用量（137×，其中约 90% 来自 Opus），ChatGPT Pro 为 $8,455（42×），Devin Max 为 $2,363（12×），Antigravity 仅 $1,255。极端的订阅套利也在催生极端用法与强力反制：@ishaansehgal 提到一位创业者用亲友邮箱建了 37 个 Claude 账号自动轮询跑 Agent 集群，自估月均消耗折合约 $25 万 API 费用；而另一边，@xulijian1994 转述并追溯 Antigravity 的最新封号潮——继前几天系统提示词命中其他 harness 关键词触发风控后，Google 现已开始顺着家庭组连坐封禁主号与小号，根源正是年初 Opus 4.6 免费额度遭注册机与反代中转大规模薅取。此外，@tongzhenbao 实测了 OpenAI 在 Codex 内提供的网络安全审计系统 `Daybreak`（$200 订阅赠送 $500 credits），对自家仓库扫描后确实挖出不少之前未查出的隐患，并已转入连续 6 小时以上的自主修复流程。</div>
+    <div class="item-meta">
+      <a href="https://x.com/aicodeking/status/2122016101164806438" target="_blank">@aicodeking 订阅 API 账</a>
+      <a href="https://x.com/ishaansehgal/status/2122070973096608104" target="_blank">@ishaansehgal 37 账号轮询</a>
+      <a href="https://x.com/xulijian1994/status/2121961303925510626" target="_blank">@xulijian1994 家庭组风控</a>
+      <a href="https://x.com/tongzhenbao/status/2121950800054530073" target="_blank">@tongzhenbao Daybreak 实测</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>模型、推理与形式化验证突破</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-coq-godel-and-gpt6-astra-physics">Claude-Coq-Godel-And-Gpt6-Astra-Physics</span> @mylifcc &amp; @OpenAI：Claude 联手 Coq 从哥德尔 1,009 页速记手稿还原 663 条定理，GPT-6 Astra 协助推导标准模型格点定义</div>
+    <div class="item-body">AI 加形式化验证正在打开「历史科学手稿抢救」的新赛道。1966 年 Paul Cohen 因证明选择公理独立性获菲尔兹奖时，哥德尔曾坚称自己在 1940 年代已证出该结论，却未能从庞杂手稿中重新拼全证明。@mylifcc 梳理赫尔辛基大学 Jan von Plato 的最新突破：哥德尔留下的 1,009 页未发表笔记由全球仅 6 人识读的德国 Gabelsberger 速记写成（人类极限每年仅读 50 页），团队于今年 8 月将转写文本与 6 本专著喂给 Claude，几天内生成 650 页跨卷关联解析，精准从两年前的另一本笔记里找回缺失的关键定义，并一次通过 Coq 形式化验证；全稿共提取 663 条定理，经 Coq 检验约 400 条直接通过、200 条补齐微小前提后通过，其余约 50 条错误也恰好对应哥德尔当年亲笔批注的 `falsch!`。在前沿科研端，OpenAI 上线全新科学博客，首篇由物理学家 Nathaniel Craig 分享其如何与 GPT-6 Astra 协作，为粒子物理标准模型（Standard Model）构造出一个候选格点（lattice）定义。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mylifcc/status/2121966700740649387" target="_blank">Claude + Coq 破译哥德尔手稿</a>
+      <a href="https://x.com/OpenAI/status/2122123437141553630" target="_blank">OpenAI 科学博客首篇</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag google-tpu-2029-gemini4-and-openai-lockdown">Google-Tpu-2029-Gemini4-And-Openai-Lockdown</span> @mingchikuo &amp; @demishassabis &amp; @xiax0603：OpenAI 与 Anthropic 2,600 万颗级 TPU 订单排到 2029，Antigravity 上下文翻倍，OpenAI 深陷「安全锁仓」</div>
+    <div class="item-body">分析师郭明錤（@mingchikuo）发布最新供应链调查，透露 Google TPU 订单能见度已借 OpenAI 与 Anthropic 的大单延伸至 2029 年（领先多数 4Q27–2Q28 见顶的 Nvidia GPU 与其他 AI ASIC）：预计 2028–2029 年 OpenAI 将直接买断约 1,200 万颗联发科（MediaTek）设计的 8t TPU，Anthropic 将通过租赁加买断下单约 1,400 万颗博通（Broadcom）设计的 8i TPU，推动 TPU 总出货量从 2027 年的 8–9M 升至 2028 年 14–15M 与 2029 年 16–18M；路线图方面 v10 已调整为 Quillfish（2029 量产），联发科独拿 v9（Humufish/Triggerfish）与 v10 设计单、2027–2029 占总供给升至 45–60%，v9 起全面采用 Intel EMIB-T 封装。产品端，@demishassabis 转发 @_mohansolo 宣布 Antigravity 内 Argon、Carbon 与 Hydrogen 的上下文窗口直接翻倍，@TimJayas 亦整理出元素周期表迭代顺序（Pro 线 `argon → carbon → krypton`，Flash 线 `hydrogen → oxygen`）。反观 OpenAI，@xiax0603 与 @imjustnewatai 均引述内部传闻称 Hugging Face 安全事故已引发全公司「safety lockdown」，GPT-6.1/6.2/6.5 连环卡在红队与对齐门槛而延期，早期重投安全的 Anthropic 反而凭 Opus 5.5 与 Fable 5.2 跑通了高能力模型的公开上线。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mingchikuo/status/2122133109630194098" target="_blank">郭明錤 TPU 供应链长文</a>
+      <a href="https://x.com/demishassabis/status/2122138623206441223" target="_blank">Antigravity 上下文翻倍</a>
+      <a href="https://x.com/TimJayas/status/2122018997352964244" target="_blank">Gemini 4 模型代号路线</a>
+      <a href="https://x.com/xiax0603/status/2122014084359164289" target="_blank">OpenAI 对齐延期与安全锁仓</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag basalt-nvfp4-parallax-and-europa-1t">Basalt-Nvfp4-Parallax-And-Europa-1T</span> @AndrewSignalZ：RTX 5090 跑 Qwen 27B NVFP4 飙到 776 tok/s，单条 SQL 跨七语对齐历史维基，欧盟 EUROPA 据称瞄准 1T 开源模型</div>
+    <div class="item-body">@AndrewSignalZ 连续拆解了三项值得关注的模型与底层工程动态：1）面向 NVIDIA Blackwell 的本地推理引擎 Basalt 发布 0.4.0，加入多模型路由（首发 DeepSeek V4.1 Flash）与首个稠密模型 Qwen 3.8 27B NVFP4 量化版，作者实测在单张 RTX 5090 上结构化输出达 776 tok/s、对话 262 tok/s、散文 194 tok/s、4K 预填充 12,000 tok/s，与 BF16 原版 top-1 一致率为 92.8%（KLD 0.0262），最长支持 262K 上下文；2）Junction 黑客松项目 `Parallax` 存下 875,572 个维基百科修订版与 90,070 个 `bge-m3` 1024 维向量，靠一条结合 `FOR SYSTEM_TIME AS OF` 与 `VEC_DISTANCE_COSINE` 的 SQL 自连接再配合 Gemini 3.8 Flash 裁判，即可按任意历史日期跨七种语言做句子级事实对齐（单篇精确检索中位耗时 4 ms，28 对人工黄金集上检索前五召回 89%）；3）欧盟委员会选定意大利公司 Domyn 牵头的 EUROPA 联合体赢得「前沿 AI 大挑战赛」（官方要求参数 &gt;400B、可调用欧洲最多 2.5% 超算资源），r/LocalLLaMA 传言其实际目标接近 1 万亿参数并覆盖全部 24 种欧盟官方语言，定位真开源（注：1T 数字目前尚未获官方文件证实）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/AndrewSignalZ/status/2122142166587986392" target="_blank">Basalt 0.4.0 实测数据</a>
+      <a href="https://x.com/AndrewSignalZ/status/2122142026590572596" target="_blank">Parallax 时态跨语对齐</a>
+      <a href="https://x.com/AndrewSignalZ/status/2122142232241434979" target="_blank">欧盟 EUROPA 动向</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚙️</span>
+      <h2>硬核实操、算力经济与航天动态</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jeep-ecu-reverse-and-xray-bench">Jeep-Ecu-Reverse-And-Xray-Bench</span> @GPPY666 &amp; @williamlong：Claude Code + Codex 借 $3 Arduino 逆向 1994 年 Jeep ECU 过年检，AI 配服务器实测 Hysteria2 翻倍领先 VLESS REALITY</div>
+    <div class="item-body">两个把编码 Agent 接进真实物理与运维环境的硬核案例：@GPPY666 分享了一位老车主的折腾——1994 年款吉普切诺基没有 OBD-II，行车电脑走克莱斯勒 7800 波特率反相 SCI 协议，车主花 $3 买 Arduino Nano 搭起电平转换器后让 Claude Code 摸清协议并拷贝出全部 32KB 固件，定位到年检工况下电脑会少喷 22% 燃油，再由 Codex 向 EEPROM 写入持久补丁通过加州尾气年检（作者同时提醒：目前属车主单方演示、未见检测单与第三方复现，且调试期间 Claude 曾自行触发油泵继电器，让 AI 直连汽车总线风险极高）。@williamlong 则把运维交给 AI：先让 AI 登录 VPS 在 Xray 上同机装好 Hysteria2 与 VLESS REALITY，实测前者吞吐快出一倍；随后让 AI 评估是否更换运行两套环境、对外开放 7 个端口且两年多未打补丁的 CentOS 7.6，AI 冷静指出「瓶颈在跨境链路，换系统一格速度都不会涨，唯一收益是安全与可维护性」。</div>
+    <div class="item-meta">
+      <a href="https://x.com/GPPY666/status/2122126884792308221" target="_blank">1994 Jeep ECU 逆向</a>
+      <a href="https://x.com/williamlong/status/2121906326855098875" target="_blank">Hysteria2 实测对比</a>
+      <a href="https://x.com/williamlong/status/2121926320045346934" target="_blank">AI 运维安全评估</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag apple-ai-math-japan-deficit-and-vulcan">Apple-Ai-Math-Japan-Deficit-And-Vulcan</span> @Balder13946731 &amp; @LittleLee_x：苹果 AI 净赚 $190 亿「过路费」vs 日本 6 万亿日元数字赤字；ULA 火神火箭失败折损 40 颗亚马逊卫星</div>
+    <div class="item-body">@Balder13946731 从财务账本视角对比了 AI 基建的赢家与买单方：一方面，Google 每年向苹果支付约 $200 亿换取 iPhone 默认搜索，如今苹果反手每年付给 Google 约 $10 亿租 Gemini 驱动 Siri，无需自己跟着同行每年砸数百亿美元买 GPU、建数据中心，一进一出净落约 $190 亿（过去十几年苹果将七八千亿美元拿去回购自家股票）；另一方面，日本近两年游客爆满带来的约 6 万亿日元旅游顺差，转一圈几乎被付给 AWS、Azure、Google 与 Copilot 席位的约 6 万亿日元「数字赤字」对冲殆尽，连带散户通过新 NISA 买入的美股指数基金也流回同一批美国科技巨头。航天方面，@LittleLee_x 报道美东时间 11 月 15 日 12:40，波音与洛克希德·马丁合资的 ULA 火神（Vulcan）火箭升空约 10 分钟后发生严重异常，搭载的 40 颗亚马逊 Leo 低轨互联网卫星全部损失——这不仅是此前因固体助推器问题停飞约 9 个月后的复飞首秀，也是 ULA 自 2006 年成立以来的首次任务完全失败。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Balder13946731/status/2122069926227886289" target="_blank">苹果 AI 过路费账本</a>
+      <a href="https://x.com/Balder13946731/status/2121448350176457201" target="_blank">日本数字赤字观察</a>
+      <a href="https://x.com/LittleLee_x/status/2122115587480465626" target="_blank">ULA 火神火箭失利</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag edge0-145b-on-single-rtx5090">Edge0-145B-On-Single-Rtx5090</span> @niklaslenz_ai：单张 32GB RTX 5090 跑通 145B 稀疏模型 Edge0-145B——专家放内存与 SSD，实测 134.3 tok/s 解码</div>
+    <div class="item-body">一项针对本地大模型的极致内存/显存调度工程：`Edge0-145B` 基于 Qwen3.8 Flash Next（总参 145B、单 token 激活 10.12B、Q3_K 量化连同 SSD 路由表共占盘 98.1 GiB），把 MoE 专家留在系统内存并用 32GB 显存做缓存，同时从 SSD 读取 47.7 GiB 路由表。@niklaslenz_ai 从源码编译 Edge0 推理引擎（基于 Strata 与 llama.cpp，开启 131,072 上下文与 int8 KV cache）在单张 RTX 5090 上实测：解码中位速度 134.3 tok/s（代码 139.0 / 文本 129.5）、16K 预填充 4,036 tok/s、128K（130,048 tokens）预填充依然稳在 4,058 tok/s，32K 首字延迟 8.0 秒；作者同时坦诚给出关闭思考模式下的基准分（MMLU-Pro 49.5%、GPQA Diamond 41.4%、IFEval 82.0%、LiveCodeBench 57.5%），质量与 Qwen3.8-27B 接近、且服务端一次仅处理单请求——真正值得细读的是把 145B 模型压进消费级单卡并跑出百级吞吐的工程实现。</div>
+    <div class="item-meta">
+      <a href="https://x.com/niklaslenz_ai/status/2122073404203270588" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cloudflare-security-audit-and-ms-forge">Cloudflare-Security-Audit-And-Ms-Forge</span> @0xpipimd &amp; @entropyweights &amp; @0xpiyushvm：Cloudflare 开源 72K★ 六阶段漏洞审计技能，微软 FORGE 扫出 33 个内核 CVE 却卡在 41 天修复长尾</div>
+    <div class="item-body">针对直接让 LLM「扫漏洞」极易产生幻觉误报的痛点，Cloudflare 发现单次 AI 安全审计平均会漏掉约一半跨轮次才能挖出的漏洞，遂将其内部漏洞狩猎底座的起始技能 `security-audit` 开源（GitHub 已突破 72K★、MIT 协议）。该方案把审计拆为六阶段闭环：先做代码与信任边界侦察，再分攻击面派隔离 Agent 狩猎，随后派全新独立子 Agent 专门「反向证伪」可疑漏洞，只有具备可追溯代码路径与真实边界失效证据的问题才能确认，并维护确定性覆盖率账本供后续增量审计聚焦盲区。另一边，@0xpiyushvm 援引微软 FORGE Lab 用 AI 扫描 Linux 内核子系统的数据，提醒行业漏洞发现与修复之间正拉开剪刀差：AI 共产生 26,502 条原始告警，收窄为 59 份上游报告、33 个 CVE 与 8 个可用的 Root Exploit，但上游修复中位耗时达 41 天，5 个月后仍只有 38 个补丁合入主线。</div>
+    <div class="item-meta">
+      <a href="https://x.com/0xpipimd/status/2121611611785798141" target="_blank">Cloudflare security-audit 拆解</a>
+      <a href="https://x.com/entropyweights/status/2121390151243043161" target="_blank">六阶段流水线要点</a>
+      <a href="https://x.com/0xpiyushvm/status/2121505916092600350" target="_blank">微软 FORGE 内核漏洞数据</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hyperframes-dsh-vs-claude-code">Hyperframes-Dsh-Vs-Claude-Code</span> @stretchcloud &amp; @0xpipimd：HeyGen 基于 280K★ DeepSeek Harness 开源 84K★ HyperFrames，HTML 视频渲染盲测比 Claude Code 省 30% 成本</div>
+    <div class="item-body">HeyGen 开源了可编程视频渲染引擎 `HyperFrames`（GitHub 84K★、Apache 2.0），用 HTML/CSS/JS（支持 GSAP、Three.js、Lottie）定义场景与时间轴，再经无头 Chrome 逐帧 seek 与 FFmpeg 输出 MP4，让代码 Agent 能像改网页一样对视频做 Git 版本化编辑。更值得架构师关注的是它的执行底座：HeyGen 没有重复造轮子，而是直接基于 DeepSeek 8 月开源、如今已破 280K★ 的 `DeepSeek Harness (dsh)` 构建垂直视频 Agent。`dsh` 基于 Cordis 插件框架，连模型适配器、工具注册表、记忆系统与主执行循环本身都是可替换插件，并通过事件日志重建模型上下文、主动把失败与取消的尝试排除出历史。HeyGen 团队内部盲测显示，在 HTML 转视频任务上，这套基于 `dsh` 裁剪上下文的垂直外壳与 Claude Code 达到同等画质时，成本低 30%、模型轮次少 35%。</div>
+    <div class="item-meta">
+      <a href="https://x.com/stretchcloud/status/2121647346350174694" target="_blank">HyperFrames × DSH 盲测对比</a>
+      <a href="https://x.com/0xpipimd/status/2121679787416846596" target="_blank">DeepSeek Harness 架构拆解</a>
+      <a href="https://x.com/0xpipimd/status/2122072149322346550" target="_blank">HyperFrames 工程特性</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag antigravity-slash-commands-guide">Antigravity-Slash-Commands-Guide</span> @zg0820：Antigravity 四条编排命令实战指南——/boost、/swarm、/run-workflow 与 /teamwork 解决的是四类不同组织问题</div>
+    <div class="item-body">不少人把 Antigravity 的 `/boost`、`/swarm`、`/run-workflow` 与 `/teamwork` 误解为由弱到强的四级开关，@zg0820 对照官方文档厘清了「下拉选模型（如 Gemini 4 Argon / Carbon / Hydrogen，及日常默认 Orchestrator、Carbon 规划 + Hydrogen 执行路由）+ 斜杠选协作组织方式」的双轴逻辑：日常改文件无需斜杠；`/boost` 是高强度中间档，通过三轮「实现/查根因 → 隔离自测找茬 → 逐条核对」专攻单个难解的并发或对账 Bug；`/swarm` 适合能按物理文件无碰撞切分、且需要工蜂通过共享黑板交接的任务（每 2–4 个工蜂配 1 个只读 verifier）；`/run-workflow` 由 Agent 写一段基于 `agent`/`parallel`/`pipeline`/`phase` 与 JSON Schema 的短 Python 脚本在后台批量扇出（如 50 篇摘要或逐文件独立审查）；`/teamwork` 才动用 Sentinel、按里程碑换人的 Orchestrator 与对抗 Critic 跑跨数小时到数天的仓库迁移。文末给出清晰的四问决策树与 `run-workflow` 最小代码模板。</div>
+    <div class="item-meta">
+      <a href="https://x.com/zg0820/status/2121817663274201104" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧮</span>
+      <h2>LLM 基础架构与开源争议</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-205">HN · 205 分 · 27 评论</span> 现代 LLM 中的位置编码（Positional Embeddings）原理与演进全解</div>
+    <div class="item-body">Sebastian Raschka 于 2026 年 11 月 15 日发布长文教程，系统梳理大语言模型如何表征并处理 token 位置信息。文章先通过直观图示、基础数学推导与简洁的 PyTorch 实现，从头拆解经典方法及现代主流的 RoPE（旋转位置编码）等核心机制，随后结合其 2026 年开源权重模型架构图谱，对比近年架构如何改写甚至省略显式位置编码（如 NoPE、部分 RoPE 与混合方案）。作者表示，该文原本是其年度 LLM 架构趋势分析中的前置基础章节，因涉及相对位置编码等底层细节篇幅较大，遂独立成篇以供读者查阅。</div>
+    <div class="item-meta">
+      <a href="https://magazine.sebastianraschka.com/p/understanding-positional-embeddings" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-1093">HN · 1093 分 · 595 评论</span> 热议长文：呼吁所有 AI 生成代码均应强制采用 Open Source 开源协议</div>
+    <div class="item-body">该文在 HN 热度持续攀升至 1,093 分与 595 条评论，作者提出两项核心理由反对将 AI 生成代码闭源商用。其一，大模型训练抓取了自 GNU Project 与自由软件运动以来的海量 Open Source 代码，以及受 Creative Commons 协议约束且依法要求署名的 Stack Overflow、Stack Exchange 内容，将其转化为闭源私有代码等同于“许可证洗白”。其二，纯 AI 生成代码并非人类创作，依据美国 U.S. Copyright Office 引用的 Monkey Selfie 判例应不享有版权（Wikimedia Commons 亦据此将纯 AI 图像标为 Public Domain）；为弥合英国等仍对计算机生成作品授予有限版权的司法差异，作者主张开发者与企业应主动以 Open Source 协议发布 AI 生成代码。</div>
+    <div class="item-meta">
+      <a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
+
+</body>
+</html>
