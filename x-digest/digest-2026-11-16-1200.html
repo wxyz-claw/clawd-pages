@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月16日（周一）12:00 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月16日（周一）12:00 ET</div>
+    <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
+    </div>
+  </header>
+
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>Apple 原生微型 VM 沙盒 + Claude Code 省 Token 新模式：</strong>@mylifcc 拆解突破 51.5K★ 的官方 Swift 工具 <code>apple/container</code>，实现单容器一独立微型 VM 并附带把 <code>Claude Code</code> 锁进目录与网络白名单的沙盒示例；Claude Code <code>v2.1.323</code> 上线实验性 <code>Code Mode</code>，实测可省 37% Token。</li>
+      <li><strong>消费级 Agent 产品化与模型体感分化：</strong>@Dr_goosee 梳理 Meta Muse 负责人 87 分钟访谈（从树莓派跑 OpenClaw 孵化需求到耗时 7 个月补齐权限、浏览器安全边界与防串话隔离）；一线用户实测 Gemini 4 Hydrogen/Carbon 口碑逆袭，而 GPT-6.1 Astra 因安全与对齐退步暂缓发布，<code>Claude Mythos 5.2</code> 则开放个人身份核验申请。</li>
+      <li><strong>芯片「第三国租赁」收紧与 Kimi 15T 训练曲线：</strong>@Balder13946731 指出美国商务部拟堵死赴马来西亚、新加坡租用 NVIDIA 算力漏洞，拖累 NVDA 与光模块走低；杨植麟在 GTC 展示 Kimi K2.5 在 H800 上 15 万亿 Token 零 Loss 尖峰曲线。</li>
+      <li><strong>《值得你花时间》聚焦 Qwen4-Max 发布与 Agent 真实账本：</strong>阿里发布 2.4T MoE（71B 激活）的 <code>Qwen4-Max</code>，单任务成本直降 60%+，但独立评测提醒核验输出长度与缓存命中；Google 开源 19K★ <code>Elephant-Goldfish Model</code> 与 <code>Harness²</code>；浏览器 MCP 实测暴露 72K 累计 Token 膨胀，<code>Gemini Decision 1</code> 以 $0 输出费率切入决策场景。</li>
+      <li><strong>HN 热帖追踪 Blackwell 权重指纹取证：</strong>Unemployment Labs 通过公开权重恢复初始值指纹，发现 DeepSeek、Moonshot AI、MiniMax 与蚂蚁集团自 4 月起的 6 款模型带有 NVIDIA Blackwell 硬件数值特征。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 沙盒、工具链与消费级产品化</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag apple-container-microvm-sandbox">Apple-Container-Microvm-Sandbox</span> @mylifcc：Apple 开源 51.5K★ 纯 Swift 容器工具 apple/container，官方 Demo 把 Claude Code 关进独立微型 VM 沙盒</div>
+    <div class="item-body">@mylifcc 拆解了已在 GitHub 获得 51.5K★（Apache 2.0 协议）的苹果官方工具 `apple/container`。区别于传统 Docker Desktop 把所有容器塞进一个吃掉 8GB 内存的臃肿 Linux 虚拟机，它基于 macOS 26 原生虚拟化框架，实现了「一个容器、一个独立微型 VM」：由纯 Swift 编写的 `vminitd` 充当精简 Linux 内核的初始进程，通过 `vsock` 走 gRPC 通信并砍掉冗余系统服务，兼顾硬件级隔离与毫秒级冷启动，同时原生集成 Rosetta 2 加速运行 amd64 镜像。更值得 Agent 开发者关注的是官方示例库 `container-examples` 中的 `containerization-sandboxy`——仅用几十行代码就能把 Claude Code 关进独立微型 VM，只挂载指定目录并卡死网络白名单，从底层防住幻觉指令（如误删宿主机文件）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mylifcc/status/2122268690649682078" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-code-mode-and-tui-osc">Claude-Code-Mode-And-Tui-Osc</span> @niumoney &amp; @kalanyei：Claude Code v2.1.323 实验性 Code Mode 实测省 37% Token，TUI 状态协议 OSC 7501/9999 浮出水面</div>
+    <div class="item-body">@niumoney 实测升级到 Claude Code `v2.1.323` 后开启环境变量 `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`，可激活实验性 `Code Mode`，其交互提示称可节省 37% Token（核心思路是让模型编写脚本批量执行工具调用，减少多轮工具往返）。在终端与图形界面的工程化取舍上，@kalanyei 关注到 Rex 提出的 `OSC 7501` 与 Orca 提出的 `OSC 9999` 正试图统一终端 TUI 内难以捕捉 Agent 运行状态的痛点，使各家 CLI 更容易被外层编排工具接管；不过他现阶段仍更偏好 GUI 搭配 SDK，直接获取结构化事件流，省去加 hook 并解析终端文本的脆弱环节。</div>
+    <div class="item-meta">
+      <a href="https://x.com/niumoney/status/2122154185408033167" target="_blank">Claude Code Mode 实测</a>
+      <a href="https://x.com/kalanyei/status/2122370853845508171" target="_blank">TUI OSC 状态标准观察</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag meta-muse-productization-notes">Meta-Muse-Productization-Notes</span> @Dr_goosee：拆解 Meta Muse 负责人 87 分钟访谈——从树莓派跑 OpenClaw 孵化，到耗时 7 个月补齐权限、隐私与评测边界</div>
+    <div class="item-body">@Dr_goosee 总结了 Lenny 对 Meta Muse 产品负责人 Mona 访谈的 12 条实战洞见：1）需求孵化自 Mona 在树莓派上部署 OpenClaw 接入邮件、日历与家庭自动化，但从春季原型到正式上线耗时 7 个月，全用于打磨权限、异常恢复及新增浏览器后的网页攻击面；2）扎克伯格推动产品从单次任务完成转向长期目标（Goals）、后台整理（Dreaming）与主动建议（Proactive Suggestions）；3）虽然底层拥有统一长期记忆，内部争议后仍保留 Side Chat 满足人类对不同话题的心理边界，并保留非 Meta Logo 的独立角色 Jolly；4）曾发生两用户 Agent 进群聊后泄露就医隐私的事故，证明「记忆」与「跨人授权」必须严格隔离；5）不到百人团队仅约 4 名 PM，直接用 Agent Swarms 聚类真实对话失败日志，核心 System Prompt 与行为规范仍坚持由人类编写。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Dr_goosee/status/2122188784154341471" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🧠</span>
+      <h2>模型实测、安全分级与算力博弈</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gemini4-vs-gpt61-vs-claude-real-feel">Gemini4-Vs-Gpt61-Vs-Claude-Real-Feel</span> @Wu_Lenon &amp; @JeffreyCalm &amp; @ZhaoZhaovfbc &amp; @Super_Nius：四家主力模型体感分化——Gemini 4 逆袭，GPT-6.1 Astra 因对齐退步暂缓</div>
+    <div class="item-body">多位高频付费用户在真实工作流中给出一致反馈：@Wu_Lenon（四家会员全开）与 @ZhaoZhaovfbc 均认为 Gemini 4 带来明显逆袭——Hydrogen 兼具接近 Flash 的速度与高任务完成度，Carbon 推理逼近顶尖梯队（被评价略胜 Opus 5.5、距 Fable 5.2 半代），Argon 虽慢但几乎没有防御性拒答，写代码更顺手。@JeffreyCalm 亦将三款轻量档排为：Gemini 4 Hydrogen 速度与智商兼得但偏贵，DeepSeek V4.1 Flash 便宜极快但复杂活难交付，GPT-6.1 Sol 既慢又贵。另一边，@Super_Nius 整理 OpenAI 内部说明视频指出，GPT-6.1 Astra 虽能力达标但因安全与对齐表现较 6 Astra 退步而被主动暂缓发布；付费用户体验中也吐槽 GPT 常在任务做到 90% 后卡在最后 10% 的过度防御与回避上，而 Claude 编码能力仍居独一档但额度偏紧且封号风控严厉。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Wu_Lenon/status/2122331954876203468" target="_blank">@Wu_Lenon 四家实测对比</a>
+      <a href="https://x.com/JeffreyCalm/status/2122179214430585067" target="_blank">@JeffreyCalm Flash 档横评</a>
+      <a href="https://x.com/ZhaoZhaovfbc/status/2121873470430544287" target="_blank">@ZhaoZhaovfbc Gemini 4 体验</a>
+      <a href="https://x.com/Super_Nius/status/2122095074809131226" target="_blank">GPT-6.1 Astra 暂缓说明</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-mythos-52-individual-access">Claude-Mythos-52-Individual-Access</span> @DevAdventur3s：无需企业资质，个人可通过 Cyber Verification Program 申请无安全限制版 Claude Mythos 5.2</div>
+    <div class="item-body">@DevAdventur3s 与其引用的 @argofowl 披露了 Anthropic 安全专用模型 `Claude Mythos 5.2`（据称为移除 Fable 5.2 网络安全护栏的版本）的个人申请路径：拥有 Pro、Max 或 Ultra 付费订阅的个人用户无需挂靠企业，只需前往 `portal.anthropic.com/programs` 选择 Cyber Verification Program（Defense Access 层级），填写安全用例并提交政府证件与手机实时自拍核验即可（Pro 档通过 usage credits 计费）。社区反馈美国本土自动审核快至 10 分钟到 2 小时获批，也有海外用户等待超过 24 小时（官方目标时限为两天）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/DevAdventur3s/status/2122358808072638554" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag third-country-gpu-ban-and-kimi-h800">Third-Country-Gpu-Ban-And-Kimi-H800</span> @Balder13946731 &amp; @Fred834567 &amp; @Edison_aware：美方拟堵「第三国」算力租赁漏洞冲击芯片链，Kimi K2.5 展示 H800 15 万亿 Token 平滑训练</div>
+    <div class="item-body">@Balder13946731 跟踪供应链与美股异动称，美国商务部正准备封堵中国公司绕道马来西亚、新加坡机房租用 NVIDIA 算力的「第三国」漏洞，导致市场重估英伟达财报中东南亚客户的真实需求归属，NVDA 盘中逼近 2025 年 7 月以来低位，光模块与高速互联板块同步下挫（LITE -7.8%、CRDO -7.3%、MRVL -6.9%）。在国产算力约束的另一面，@Fred834567 关注到杨植麟在 GTC 展示的 Kimi K2.5 训练曲线——即便在阉割版 H800 上仍跑出 15 万亿 Token 零 Loss 尖峰的平滑度；但 @Edison_aware 也提出冷静观察：随着海外前沿模型蒸馏路径逐步收紧，近期国内多家头部大模型厂商的迭代节奏明显放缓。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Balder13946731/status/2122345072075354421" target="_blank">第三国算力租赁与市场异动</a>
+      <a href="https://x.com/Fred834567/status/2122164534219850175" target="_blank">Kimi K2.5 15T 训练曲线</a>
+      <a href="https://x.com/Edison_aware/status/2122362596104052801" target="_blank">蒸馏收紧后的迭代思考</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚙️</span>
+      <h2>工程踩坑、文献与航天进展</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag turkish-locale-bug-and-se-handbook">Turkish-Locale-Bug-And-Se-Handbook</span> @mylifcc &amp; @jexchan：土耳其语大小写转换仍能击穿 GitHub/Java/C#；AI 时代软件工程免费手册推荐</div>
+    <div class="item-body">@mylifcc 梳理了一个经久不衰的国际化安全陷阱：在土耳其语（`tr_TR`）Locale 下，小写 `i` 转大写变成带点的 `İ`，大写 `I` 转小写变成无点的 `ı`。若后台直接用 `.toLowerCase()`/`.toUpperCase()` 做大小写不敏感校验，GitHub 与 Django 曾因此出现注册 `mıke` 邮箱劫持 `mike` 重置链接的漏洞，Red Hat Linux 切到土耳其语后 cURL 因匹配不到 `CAMELLIA` 算法崩溃，Kotlin 编译器也曾因识别不了 `info` 关键字构建失败；2026 年在 Linux 土耳其语环境下的实测显示，Python、JS、Go 已输出 `TITLE`，但 Java、C#、Bash 仍输出 `TİTLE`，C 的 `strcasecmp` 直接报错。工程方法论方面，@jexchan 推荐了 James C. Davis 于 2026 年出版的免费电子书《The Software Engineering Handbook》，探讨当 AI 接管常规编码后，工程师核心工作如何转向需求定义、规约与架构边界划定及测试证据审计。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mylifcc/status/2122284042078831097" target="_blank">土耳其语 Locale 踩坑史</a>
+      <a href="https://x.com/jexchan/status/2122196058042495189" target="_blank">AI 时代软工免费手册</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag starship-ship42-pad-inspection">Starship-Ship42-Pad-Inspection</span> @elonmusk：星舰 Ship 42 发射台巡检评估——数周翻新即可复飞，距离「零翻新即时复用」仍需细修</div>
+    <div class="item-body">@elonmusk 转发发射台闭路转运画面表示，自己当天全面检查了星舰 Ship 42 的整套隔热盾与发动机，整体状态良好，预计只需几周翻新即可再次飞行；不过要真正达到类似民航客机的「即时复用（除定期例行保养外实现零预期翻新）」，目前仍有不少细节问题需要逐一修补。</div>
+    <div class="item-meta">
+      <a href="https://x.com/elonmusk/status/2122092374016806969" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag qwen4-max-launch-and-cost-audit">Qwen4-Max-Launch-And-Cost-Audit</span> @jojogh_007 &amp; @MarcosRGjr &amp; @Zefan_Cai：Qwen4-Max 正式发布（2.4T MoE / 71B 激活 / 1M 上下文），单任务成本降超 60%，实测提醒核验输出长度与缓存命中</div>
+    <div class="item-body">美东 11 月 15 日 21:01 阿里正式发布旗舰模型 `Qwen4-Max`：基于全新 Qwen4 稀疏 MoE 架构（2.4T 骨干参数 + 328B N-gram Embedding，单 token 仅激活 71B），支持原生视觉与 1M 上下文，已上线 QwenCloud、OpenRouter 等平台（更小尺寸的开源权重版预告后续发布）。定价方面，输入 `$1.50/M`、输出 `$4.50/M`，隐式缓存命中价大降 70% 至 `$0.075/M`；官方 Work360 评测得分由 Qwen3.8-Max 的 47.74 升至 52.69，单任务平均成本从 `$4.43` 降至 `$1.67`（降幅超 60%），Terminal-Bench 4.0 token 消耗下降约 48–49%，并公开了 48 小时闭环干湿实验合成新型冷却剂分子的案例。独立评测机构 Artificial Analysis 测得其 Intelligence Index 为 43 分（比 Qwen3.8-Max 高 9 分、落后 Kimi K3.1 Pro 3 分，单任务成本 `$3.27` 降约 67%）。不过 @MarcosRGjr 与 @Zefan_Cai 均提醒：早期独立测试显示该模型输出偏冗长，且 60%+ 降本高度依赖极低价的缓存命中与官方内部测试集，替换生产 Agent 队列前务必用 30 个真实任务回放统计总输出 token 与真实缓存命中率。</div>
+    <div class="item-meta">
+      <a href="https://x.com/jojogh_007/status/2122324046302117908" target="_blank">Qwen4-Max 参数与 AA 汇总</a>
+      <a href="https://x.com/MarcosRGjr/status/2122372645719347408" target="_blank">输出冗长与回放校验提醒</a>
+      <a href="https://x.com/Zefan_Cai/status/2122364976795164830" target="_blank">缓存费率差与成本拆解</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag google-egm-and-harness2-opensource">Google-Egm-And-Harness2-Opensource</span> @agenticgirl &amp; @ImoleayomideAI：Google 连发两项 Agent 工程开源——19K★「大象-金鱼」无记忆审查流与自进化外壳 Harness²</div>
+    <div class="item-body">Google 近日在开源社区连续放出来自内部工程实践的两套协作架构。其一是已被数千名 Google 工程师日常使用、GitHub 迅速突破 19K★ 的 `Elephant-Goldfish Model (EGM)`（支持 Claude Code、Codex 与 Antigravity）：它将工作流拆为上下文饱满、负责讨论需求与写设计文档的「大象（Elephant）」主会话，以及完全清空对话历史、只读成品文档与源码的「金鱼（Goldfish）」审查者——只有连毫无前序记忆的金鱼都能看懂并找不出缺失边界与依赖漏洞的规约，才允许进入编码实现，同时自带检测文档与代码漂移的技能。其二是开源框架 `Harness²`，不改动模型权重，而是让 Agent 针对任务生成多个候选 Harness（系统提示词、工具、记忆与执行逻辑），并行跑分对比差异并融合改进，再将有效经验跨任务留存；在 Gemini 3.5 Flash 与 GLM-5 上，仅一轮精细化就超越了人工预设的原始配置。</div>
+    <div class="item-meta">
+      <a href="https://x.com/agenticgirl/status/2122215592497492278" target="_blank">Elephant-Goldfish Model 拆解</a>
+      <a href="https://x.com/ImoleayomideAI/status/2122300803318780370" target="_blank">Harness² 自进化框架</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag browser-mcp-72k-and-fable52-cost-ledger">Browser-Mcp-72K-And-Fable52-Cost-Ledger</span> @SeanJHKwon &amp; @noelkimx：两份硬核 Token 账本——浏览器 MCP 填 10 字段表单烧掉 72K Token，Fable 5.2 月度日志重估实测贵 1.5 倍</div>
+    <div class="item-body">两位一线开发者用真实计量数据拆穿了 Agent 账单的隐形放大器。@SeanJHKwon 基于 `turbo-browser-mcp` 实测发现，用标准浏览器 MCP 填一张 10 字段表单，单页 ARIA 快照看似只有 3,582 tokens，但由于编码 Agent 每轮都会重放历史对话，11 步操作最终累计烧掉 72,614 input tokens；通过四项工程改造——只返回变化 DOM 增量（`-98.4%`，3,582→56 tokens）、用 `smart_fill_form` 单次批量填表（`-98.9%`，72,614→811 tokens）、以本地路径替代 48 KiB PDF 的 Base64 编码上传（`-99.8%`，44,728→85 tokens）以及默认拦截 Submit/Pay 等终局提交按钮——几乎把冗余消耗压零。另一边，@noelkimx 将自己过去一个月 $1,558 的 Opus 5.5 真实 API 日志按 Claude Fable 5.2 费率逐条重算：虽然 Fable 的输入/输出/缓存写入标价都是 Opus 的 2 倍，但因两者缓存读取同为 `$0.20/M`（占其账单 49%），长会话实际开销仅为 1.46×–1.5×（总计约 $2,357），短会话才接近 1.9×；不过中途切模型会触发按新模型费率全量重缓存（205K 上下文单次约 $3.28），因此应在会话开局就选定模型并尽量保持缓存温度。</div>
+    <div class="item-meta">
+      <a href="https://x.com/SeanJHKwon/status/2122349857381740661" target="_blank">浏览器 MCP 72K Token 拆解</a>
+      <a href="https://x.com/noelkimx/status/2122343096134639794" target="_blank">Fable 5.2 月度账单重算</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gemini-decision1-satbench-and-longcat25">Gemini-Decision1-Satbench-And-Longcat25</span> @lucifer_x007 &amp; @sabrielatmojo &amp; @BennyLam：Gemini Decision 1 以 $0 输出费率切入闭集判断，2025 年基准中位饱和缩短至 14 个月，美团 LongCat-2.5 先量化再分发</div>
+    <div class="item-body">三条指向「把算力花在刀刃上」的工程与评测信号：1）@lucifer_x007 梳理 Google 新发布的单次前向决策模型 `Gemini Decision 1`（对标 TypeSafe `Jev`），专攻工具路由、PII 检查、工单分流与 rubric 打分等闭集判断——不逐 token 生成文本，直接返回选项与校准置信度，延迟约 150–250 ms（Jev 均 92 ms），输入 `$0.10/M`、输出 $0；Cloudflare 实测用决策模型前置分流后，将诊断链路从 6 次 LLM 调用、~40K tokens 压至 1 次调用、1.8K tokens（但独立 Decision Index 上 Decision 1 与 Jev 1.14 同为 66 分，略低于 Drex Max v1.1 与 GLiDE v1.2）。2）@sabrielatmojo 引述 @emollick 的 SatBench 统计（基于 Epoch AI Benchmark Almanac）：2023 年以来实验室引用的 173 个基准已有 63%（109 个）饱和（≥85%），2025 年基准的中位饱和周期已从 20 个月缩短至 14 个月，唯有绑定自家代码库与边缘用例的私有测试集才不会过期。3）@BennyLam 拆解美团 MIT 开源的 `LongCat-2.5`（1.6T 参数 / 48B 激活）：亮点不在榜单，而在将专家权重与激活值在 token 复制与跨卡分发前就压成 INT4，直击显存 &lt;80GB 且支持原生 INT4 的国产卡互联带宽瓶颈，线上压测较 W8A8 基线实现预填充 +43.3%、解码 +42.77%。</div>
+    <div class="item-meta">
+      <a href="https://x.com/lucifer_x007/status/2122328031230587316" target="_blank">Gemini Decision 1 实务拆解</a>
+      <a href="https://x.com/sabrielatmojo/status/2121885229371601228" target="_blank">SatBench 基准饱和加速统计</a>
+      <a href="https://x.com/BennyLam/status/2121483522426692087" target="_blank">美团 LongCat-2.5 INT4 通信优化</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔬</span>
+      <h2>算力指纹取证与 AI 代码开源之争</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-448">HN · 448 分 · 192 评论</span> 中国前沿 AI 模型公开权重中检测出出口管制 NVIDIA Blackwell GPU 数值指纹</div>
+    <div class="item-body">Unemployment Labs（Will DePue，2026 年 11 月 12 日）发布取证报告称，对公开模型权重进行逆向数值分析后，在 DeepSeek、Moonshot AI、MiniMax 与蚂蚁集团自 2026 年 4 月起发布的 6 个模型权重中发现了与 NVIDIA Blackwell 硬件一致的数值特征，而上述机构更早期模型对应的则是 Hopper 架构指纹。研究团队声明全部证据均直接来自公开发布的模型权重，未依赖任何内部线报或泄密：他们先还原模型初始值痕迹，再搜索可复现该轨迹的硬件与初始化配置，并已在物理 Blackwell 芯片上确认了 DeepSeek-V4-Flash 与 Kimi K3 的指纹匹配，从而为此前多方传闻提供了首个可复现的技术验证路径。</div>
+    <div class="item-meta">
+      <a href="https://unemploymentlabs.com/checkpoint-forensics" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-1213">HN · 1213 分 · 646 评论</span> 热议长文：呼吁所有 AI 生成代码均应采用 Open Source 开源协议（热度升至 1,213 分）</div>
+    <div class="item-body">该文继续位居 HN 讨论前列并累积至 1,213 分与 646 条评论。作者从两方面论证纯 AI 生成代码不应闭源私有：首先，大模型训练语料抓取了自 GNU Project 与自由软件运动以来的海量开源代码，以及按 Creative Commons 协议依法要求署名的 Stack Overflow 与 Stack Exchange 问答，将其转化为闭源商业代码形同“许可证洗白”；其次，纯 AI 生成代码并非人类创作，依据美国 U.S. Copyright Office 引用的 Monkey Selfie 判例本不应享有版权（Wikimedia Commons 亦据此将纯 AI 图像标为 Public Domain），鉴于英国等司法管辖区仍对计算机生成作品授予有限版权，开发者与企业应主动以 Open Source 协议发布以维持全球规则公平。</div>
+    <div class="item-meta">
+      <a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
+
+</body>
+</html>

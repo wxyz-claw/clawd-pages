@@ -1,141 +1,98 @@
 {
  "title": "Clawd X Digest",
- "date": "2026年11月15日（周日）21:00 ET",
+ "date": "2026年11月16日（周一）12:00 ET",
  "lang": "zh-CN",
  "summary_title": "高信号摘要",
  "summary": [
-  "<strong>极简 Harness 与批注收口：</strong>@RayaneRachid_ 发布仅含单一 Python REPL 工具的 <code>Unharnessed</code> 并刷新 Terminal-Bench 4.0 SOTA；@zg0820 介绍单日 +866★ 的 <code>plannotator</code>（11.8K★），用本地浏览器 Inbox 收拢 Claude Code、Codex、DeepSeek Harness 等多 Agent 计划与 diff 批注。",
-  "<strong>Grok Bot 工程化四板斧 vs Vibe Coding 反噬：</strong>@JangXiin 与 @0xMaxs 拆解 @poteto 的演讲——禁用易错 API、砍掉 98% 注释、人工纠错全沉淀为静态检查，配合自调试与形式化校验撑起单月 1.1 万 PR；反观 @fanxing321 跳过 review 后代码迅速失控，宣布回归关键逻辑人工阅读。",
-  "<strong>订阅杠杆与风控收紧：</strong>@aicodeking 按 API 单价实测 Claude Max（$200/月）跑出最高 $27,484（137×）用量，远高于 ChatGPT Pro（42×）与 Antigravity（$1,255）；Antigravity 则升级风控，开始顺着 Google 家庭组连坐封禁主号与小号。",
-  "<strong>Claude + Coq 破译哥德尔手稿，OpenAI/Anthropic 锁定 2029 TPU 产能：</strong>Claude 配合 Coq 从 1,009 页失传速记草稿中扒出 663 条定理并补全选择公理独立性证明；郭明錤披露 OpenAI（1,200 万颗 8t）与 Anthropic（1,400 万颗 8i）大单已将 Google TPU 能见度排到 2029 年。",
-  "<strong>《值得你花时间》聚焦消费卡跑 145B 与安全审计架构：</strong>单张 32GB RTX 5090 借助内存+SSD 调度跑通 Edge0-145B 达 134.3 tok/s；Cloudflare 开源 72K★ 六阶段 <code>security-audit</code> 技能，而微软 FORGE 扫出 33 个 Linux 内核 CVE 却面临中位 41 天的修复长尾。"
+  "<strong>Apple 原生微型 VM 沙盒 + Claude Code 省 Token 新模式：</strong>@mylifcc 拆解突破 51.5K★ 的官方 Swift 工具 <code>apple/container</code>，实现单容器一独立微型 VM 并附带把 <code>Claude Code</code> 锁进目录与网络白名单的沙盒示例；Claude Code <code>v2.1.323</code> 上线实验性 <code>Code Mode</code>，实测可省 37% Token。",
+  "<strong>消费级 Agent 产品化与模型体感分化：</strong>@Dr_goosee 梳理 Meta Muse 负责人 87 分钟访谈（从树莓派跑 OpenClaw 孵化需求到耗时 7 个月补齐权限、浏览器安全边界与防串话隔离）；一线用户实测 Gemini 4 Hydrogen/Carbon 口碑逆袭，而 GPT-6.1 Astra 因安全与对齐退步暂缓发布，<code>Claude Mythos 5.2</code> 则开放个人身份核验申请。",
+  "<strong>芯片「第三国租赁」收紧与 Kimi 15T 训练曲线：</strong>@Balder13946731 指出美国商务部拟堵死赴马来西亚、新加坡租用 NVIDIA 算力漏洞，拖累 NVDA 与光模块走低；杨植麟在 GTC 展示 Kimi K2.5 在 H800 上 15 万亿 Token 零 Loss 尖峰曲线。",
+  "<strong>《值得你花时间》聚焦 Qwen4-Max 发布与 Agent 真实账本：</strong>阿里发布 2.4T MoE（71B 激活）的 <code>Qwen4-Max</code>，单任务成本直降 60%+，但独立评测提醒核验输出长度与缓存命中；Google 开源 19K★ <code>Elephant-Goldfish Model</code> 与 <code>Harness²</code>；浏览器 MCP 实测暴露 72K 累计 Token 膨胀，<code>Gemini Decision 1</code> 以 $0 输出费率切入决策场景。",
+  "<strong>HN 热帖追踪 Blackwell 权重指纹取证：</strong>Unemployment Labs 通过公开权重恢复初始值指纹，发现 DeepSeek、Moonshot AI、MiniMax 与蚂蚁集团自 4 月起的 6 款模型带有 NVIDIA Blackwell 硬件数值特征。"
  ],
  "sections": [
   {
    "emoji": "🤖",
-   "title": "Agent 工程化、Harness 与工具链",
+   "title": "Agent 沙盒、工具链与消费级产品化",
    "items": [
     {
-     "tag": "unharnessed-plannotator-and-antigravity",
-     "title": "@RayaneRachid_ & @zg0820 & @ChuckBass8808：单工具 Unharnessed 刷新 Terminal-Bench 4.0，Plannotator 收口多 Agent 评审，开发者转战 Antigravity 2.0",
-     "body": "Agent 外壳（Harness）正同时向「极简执行端」与「集中批注端」演化。@RayaneRachid_ 发布仅向模型暴露一个 Python REPL 工具的新一代外壳 `Unharnessed`，在 Terminal-Bench 4.0 上取得最新 SOTA。生成速度上去之后，人眼审查成了瓶颈：@zg0820 指出 `backnotprop/plannotator` 单日暴涨 866 星（累计 11,822★、1,082 fork、Apache 2.0），它通过插件与 hook 把 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、DeepSeek Harness、Pi 及 Grok Bot 等产生的计划、HTML、代码 diff 与 PR 统一推进本地浏览器窗口，新增的 Inbox 更把多个 Agent 的待审产物收拢成单一队列，靠一个「会挡住你的批注界面」防止人工跳过 review。工具迁移方面，@ChuckBass8808 观察到 Google 推出独立桌面端 Antigravity 2.0 与 Go 编写的 `agy` CLI 彻底脱离 VS Code 界面后，尽管其外壳仍被调侃为「毛坯房」，但 Gemini 4 Carbon 的能力正吸引不少 Claude Code 与 Codex 用户迁入，CC Switch 也已更新支持 `agy` 账号切换、用量统计与 MCP/Skills 同步。",
+     "tag": "apple-container-microvm-sandbox",
+     "title": "@mylifcc：Apple 开源 51.5K★ 纯 Swift 容器工具 apple/container，官方 Demo 把 Claude Code 关进独立微型 VM 沙盒",
+     "body": "@mylifcc 拆解了已在 GitHub 获得 51.5K★（Apache 2.0 协议）的苹果官方工具 `apple/container`。区别于传统 Docker Desktop 把所有容器塞进一个吃掉 8GB 内存的臃肿 Linux 虚拟机，它基于 macOS 26 原生虚拟化框架，实现了「一个容器、一个独立微型 VM」：由纯 Swift 编写的 `vminitd` 充当精简 Linux 内核的初始进程，通过 `vsock` 走 gRPC 通信并砍掉冗余系统服务，兼顾硬件级隔离与毫秒级冷启动，同时原生集成 Rosetta 2 加速运行 amd64 镜像。更值得 Agent 开发者关注的是官方示例库 `container-examples` 中的 `containerization-sandboxy`——仅用几十行代码就能把 Claude Code 关进独立微型 VM，只挂载指定目录并卡死网络白名单，从底层防住幻觉指令（如误删宿主机文件）。",
+     "url": "https://x.com/mylifcc/status/2122268690649682078"
+    },
+    {
+     "tag": "claude-code-mode-and-tui-osc",
+     "title": "@niumoney & @kalanyei：Claude Code v2.1.323 实验性 Code Mode 实测省 37% Token，TUI 状态协议 OSC 7501/9999 浮出水面",
+     "body": "@niumoney 实测升级到 Claude Code `v2.1.323` 后开启环境变量 `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1`，可激活实验性 `Code Mode`，其交互提示称可节省 37% Token（核心思路是让模型编写脚本批量执行工具调用，减少多轮工具往返）。在终端与图形界面的工程化取舍上，@kalanyei 关注到 Rex 提出的 `OSC 7501` 与 Orca 提出的 `OSC 9999` 正试图统一终端 TUI 内难以捕捉 Agent 运行状态的痛点，使各家 CLI 更容易被外层编排工具接管；不过他现阶段仍更偏好 GUI 搭配 SDK，直接获取结构化事件流，省去加 hook 并解析终端文本的脆弱环节。",
      "links": [
       {
-       "label": "Unharnessed SOTA",
-       "url": "https://x.com/RayaneRachid_/status/2122024268368380148"
+       "label": "Claude Code Mode 实测",
+       "url": "https://x.com/niumoney/status/2122154185408033167"
       },
       {
-       "label": "Plannotator 收口工作流",
-       "url": "https://x.com/zg0820/status/2122128298654482892"
-      },
-      {
-       "label": "Antigravity 2.0 迁移观察",
-       "url": "https://x.com/ChuckBass8808/status/2122118221625188385"
+       "label": "TUI OSC 状态标准观察",
+       "url": "https://x.com/kalanyei/status/2122370853845508171"
       }
      ]
     },
     {
-     "tag": "grokbot-static-checks-vs-vibe-coding",
-     "title": "@JangXiin & @0xMaxs & @fanxing321：Grok Bot 靠「静态门禁+自验」做到月产 1.1 万 PR，跳过 Review 的 Vibe Coding 正在反噬",
-     "body": "@JangXiin 总结了 SpaceXSI 工程师 Lauren Tan（@poteto）在 AIE Code Summit 上分享的 Grok Bot 四项工程化铁律：1）代码库即记忆——9 月遗留的一处 `setTimeout` 补丁，到 10 月 AI 会照抄出 183 处；2）规则大于提示词——禁用易错 API、砍掉 98% 注释、把每一次人工纠错都沉淀为静态检查与 CI 门禁；3）自产自验——配置 CLI 与 DevTools 让 Agent 自己操作应用调试，复杂逻辑上 TLA+ / Lean / Fuzzing；4）先内后外——内层质量闭环后才交给 Grok Bot 无人自动合并，最终实现单月 1.1 万 PR 与冷启动提速 38%。@0xMaxs 补充了她在 YC 访谈中的实操画面：在 Slack 里丢一段 X 视频给机器人 Potato 即可唤起 Cursor 云端 Agent 出原型、像真用户一样测性能并回改代码，她甚至给个人助手配了手机号发短信催自己吃午饭。与之形成对照的是 @fanxing321 的一线复盘：在开发 Bowl 项目期间盲目跟随「不再逐行看代码」的潮流后，仓库底层逐渐堆满糟糕实现且链路日益失控，他决定重新收缩开发流程，恢复对关键逻辑的人工阅读与把关。",
-     "links": [
-      {
-       "label": "@JangXiin 拆解 AIE 演讲",
-       "url": "https://x.com/JangXiin/status/2121845115215831473"
-      },
-      {
-       "label": "@0xMaxs YC 访谈笔记",
-       "url": "https://x.com/0xMaxs/status/2121900181570695461"
-      },
-      {
-       "label": "@fanxing321 开发链路反思",
-       "url": "https://x.com/fanxing321/status/2121996740379414872"
-      }
-     ]
-    },
-    {
-     "tag": "subscription-arbitrage-and-antigravity-bans",
-     "title": "@aicodeking & @ishaansehgal & @xulijian1994 & @tongzhenbao：Claude Max 实测跑出 137× API 杠杆，Antigravity 封禁家庭组反代，Daybreak 实测扫出漏网 Bug",
-     "body": "@aicodeking 按官方 API 费率折算了过去一月各家 $200/月高阶订阅的实际产出：Claude Max 最高跑出约 $27,484 的 API 等效用量（137×，其中约 90% 来自 Opus），ChatGPT Pro 为 $8,455（42×），Devin Max 为 $2,363（12×），Antigravity 仅 $1,255。极端的订阅套利也在催生极端用法与强力反制：@ishaansehgal 提到一位创业者用亲友邮箱建了 37 个 Claude 账号自动轮询跑 Agent 集群，自估月均消耗折合约 $25 万 API 费用；而另一边，@xulijian1994 转述并追溯 Antigravity 的最新封号潮——继前几天系统提示词命中其他 harness 关键词触发风控后，Google 现已开始顺着家庭组连坐封禁主号与小号，根源正是年初 Opus 4.6 免费额度遭注册机与反代中转大规模薅取。此外，@tongzhenbao 实测了 OpenAI 在 Codex 内提供的网络安全审计系统 `Daybreak`（$200 订阅赠送 $500 credits），对自家仓库扫描后确实挖出不少之前未查出的隐患，并已转入连续 6 小时以上的自主修复流程。",
-     "links": [
-      {
-       "label": "@aicodeking 订阅 API 账",
-       "url": "https://x.com/aicodeking/status/2122016101164806438"
-      },
-      {
-       "label": "@ishaansehgal 37 账号轮询",
-       "url": "https://x.com/ishaansehgal/status/2122070973096608104"
-      },
-      {
-       "label": "@xulijian1994 家庭组风控",
-       "url": "https://x.com/xulijian1994/status/2121961303925510626"
-      },
-      {
-       "label": "@tongzhenbao Daybreak 实测",
-       "url": "https://x.com/tongzhenbao/status/2121950800054530073"
-      }
-     ]
+     "tag": "meta-muse-productization-notes",
+     "title": "@Dr_goosee：拆解 Meta Muse 负责人 87 分钟访谈——从树莓派跑 OpenClaw 孵化，到耗时 7 个月补齐权限、隐私与评测边界",
+     "body": "@Dr_goosee 总结了 Lenny 对 Meta Muse 产品负责人 Mona 访谈的 12 条实战洞见：1）需求孵化自 Mona 在树莓派上部署 OpenClaw 接入邮件、日历与家庭自动化，但从春季原型到正式上线耗时 7 个月，全用于打磨权限、异常恢复及新增浏览器后的网页攻击面；2）扎克伯格推动产品从单次任务完成转向长期目标（Goals）、后台整理（Dreaming）与主动建议（Proactive Suggestions）；3）虽然底层拥有统一长期记忆，内部争议后仍保留 Side Chat 满足人类对不同话题的心理边界，并保留非 Meta Logo 的独立角色 Jolly；4）曾发生两用户 Agent 进群聊后泄露就医隐私的事故，证明「记忆」与「跨人授权」必须严格隔离；5）不到百人团队仅约 4 名 PM，直接用 Agent Swarms 聚类真实对话失败日志，核心 System Prompt 与行为规范仍坚持由人类编写。",
+     "url": "https://x.com/Dr_goosee/status/2122188784154341471"
     }
    ]
   },
   {
    "emoji": "🧠",
-   "title": "模型、推理与形式化验证突破",
+   "title": "模型实测、安全分级与算力博弈",
    "items": [
     {
-     "tag": "claude-coq-godel-and-gpt6-astra-physics",
-     "title": "@mylifcc & @OpenAI：Claude 联手 Coq 从哥德尔 1,009 页速记手稿还原 663 条定理，GPT-6 Astra 协助推导标准模型格点定义",
-     "body": "AI 加形式化验证正在打开「历史科学手稿抢救」的新赛道。1966 年 Paul Cohen 因证明选择公理独立性获菲尔兹奖时，哥德尔曾坚称自己在 1940 年代已证出该结论，却未能从庞杂手稿中重新拼全证明。@mylifcc 梳理赫尔辛基大学 Jan von Plato 的最新突破：哥德尔留下的 1,009 页未发表笔记由全球仅 6 人识读的德国 Gabelsberger 速记写成（人类极限每年仅读 50 页），团队于今年 8 月将转写文本与 6 本专著喂给 Claude，几天内生成 650 页跨卷关联解析，精准从两年前的另一本笔记里找回缺失的关键定义，并一次通过 Coq 形式化验证；全稿共提取 663 条定理，经 Coq 检验约 400 条直接通过、200 条补齐微小前提后通过，其余约 50 条错误也恰好对应哥德尔当年亲笔批注的 `falsch!`。在前沿科研端，OpenAI 上线全新科学博客，首篇由物理学家 Nathaniel Craig 分享其如何与 GPT-6 Astra 协作，为粒子物理标准模型（Standard Model）构造出一个候选格点（lattice）定义。",
+     "tag": "gemini4-vs-gpt61-vs-claude-real-feel",
+     "title": "@Wu_Lenon & @JeffreyCalm & @ZhaoZhaovfbc & @Super_Nius：四家主力模型体感分化——Gemini 4 逆袭，GPT-6.1 Astra 因对齐退步暂缓",
+     "body": "多位高频付费用户在真实工作流中给出一致反馈：@Wu_Lenon（四家会员全开）与 @ZhaoZhaovfbc 均认为 Gemini 4 带来明显逆袭——Hydrogen 兼具接近 Flash 的速度与高任务完成度，Carbon 推理逼近顶尖梯队（被评价略胜 Opus 5.5、距 Fable 5.2 半代），Argon 虽慢但几乎没有防御性拒答，写代码更顺手。@JeffreyCalm 亦将三款轻量档排为：Gemini 4 Hydrogen 速度与智商兼得但偏贵，DeepSeek V4.1 Flash 便宜极快但复杂活难交付，GPT-6.1 Sol 既慢又贵。另一边，@Super_Nius 整理 OpenAI 内部说明视频指出，GPT-6.1 Astra 虽能力达标但因安全与对齐表现较 6 Astra 退步而被主动暂缓发布；付费用户体验中也吐槽 GPT 常在任务做到 90% 后卡在最后 10% 的过度防御与回避上，而 Claude 编码能力仍居独一档但额度偏紧且封号风控严厉。",
      "links": [
       {
-       "label": "Claude + Coq 破译哥德尔手稿",
-       "url": "https://x.com/mylifcc/status/2121966700740649387"
+       "label": "@Wu_Lenon 四家实测对比",
+       "url": "https://x.com/Wu_Lenon/status/2122331954876203468"
       },
       {
-       "label": "OpenAI 科学博客首篇",
-       "url": "https://x.com/OpenAI/status/2122123437141553630"
+       "label": "@JeffreyCalm Flash 档横评",
+       "url": "https://x.com/JeffreyCalm/status/2122179214430585067"
+      },
+      {
+       "label": "@ZhaoZhaovfbc Gemini 4 体验",
+       "url": "https://x.com/ZhaoZhaovfbc/status/2121873470430544287"
+      },
+      {
+       "label": "GPT-6.1 Astra 暂缓说明",
+       "url": "https://x.com/Super_Nius/status/2122095074809131226"
       }
      ]
     },
     {
-     "tag": "google-tpu-2029-gemini4-and-openai-lockdown",
-     "title": "@mingchikuo & @demishassabis & @xiax0603：OpenAI 与 Anthropic 2,600 万颗级 TPU 订单排到 2029，Antigravity 上下文翻倍，OpenAI 深陷「安全锁仓」",
-     "body": "分析师郭明錤（@mingchikuo）发布最新供应链调查，透露 Google TPU 订单能见度已借 OpenAI 与 Anthropic 的大单延伸至 2029 年（领先多数 4Q27–2Q28 见顶的 Nvidia GPU 与其他 AI ASIC）：预计 2028–2029 年 OpenAI 将直接买断约 1,200 万颗联发科（MediaTek）设计的 8t TPU，Anthropic 将通过租赁加买断下单约 1,400 万颗博通（Broadcom）设计的 8i TPU，推动 TPU 总出货量从 2027 年的 8–9M 升至 2028 年 14–15M 与 2029 年 16–18M；路线图方面 v10 已调整为 Quillfish（2029 量产），联发科独拿 v9（Humufish/Triggerfish）与 v10 设计单、2027–2029 占总供给升至 45–60%，v9 起全面采用 Intel EMIB-T 封装。产品端，@demishassabis 转发 @_mohansolo 宣布 Antigravity 内 Argon、Carbon 与 Hydrogen 的上下文窗口直接翻倍，@TimJayas 亦整理出元素周期表迭代顺序（Pro 线 `argon → carbon → krypton`，Flash 线 `hydrogen → oxygen`）。反观 OpenAI，@xiax0603 与 @imjustnewatai 均引述内部传闻称 Hugging Face 安全事故已引发全公司「safety lockdown」，GPT-6.1/6.2/6.5 连环卡在红队与对齐门槛而延期，早期重投安全的 Anthropic 反而凭 Opus 5.5 与 Fable 5.2 跑通了高能力模型的公开上线。",
-     "links": [
-      {
-       "label": "郭明錤 TPU 供应链长文",
-       "url": "https://x.com/mingchikuo/status/2122133109630194098"
-      },
-      {
-       "label": "Antigravity 上下文翻倍",
-       "url": "https://x.com/demishassabis/status/2122138623206441223"
-      },
-      {
-       "label": "Gemini 4 模型代号路线",
-       "url": "https://x.com/TimJayas/status/2122018997352964244"
-      },
-      {
-       "label": "OpenAI 对齐延期与安全锁仓",
-       "url": "https://x.com/xiax0603/status/2122014084359164289"
-      }
-     ]
+     "tag": "claude-mythos-52-individual-access",
+     "title": "@DevAdventur3s：无需企业资质，个人可通过 Cyber Verification Program 申请无安全限制版 Claude Mythos 5.2",
+     "body": "@DevAdventur3s 与其引用的 @argofowl 披露了 Anthropic 安全专用模型 `Claude Mythos 5.2`（据称为移除 Fable 5.2 网络安全护栏的版本）的个人申请路径：拥有 Pro、Max 或 Ultra 付费订阅的个人用户无需挂靠企业，只需前往 `portal.anthropic.com/programs` 选择 Cyber Verification Program（Defense Access 层级），填写安全用例并提交政府证件与手机实时自拍核验即可（Pro 档通过 usage credits 计费）。社区反馈美国本土自动审核快至 10 分钟到 2 小时获批，也有海外用户等待超过 24 小时（官方目标时限为两天）。",
+     "url": "https://x.com/DevAdventur3s/status/2122358808072638554"
     },
     {
-     "tag": "basalt-nvfp4-parallax-and-europa-1t",
-     "title": "@AndrewSignalZ：RTX 5090 跑 Qwen 27B NVFP4 飙到 776 tok/s，单条 SQL 跨七语对齐历史维基，欧盟 EUROPA 据称瞄准 1T 开源模型",
-     "body": "@AndrewSignalZ 连续拆解了三项值得关注的模型与底层工程动态：1）面向 NVIDIA Blackwell 的本地推理引擎 Basalt 发布 0.4.0，加入多模型路由（首发 DeepSeek V4.1 Flash）与首个稠密模型 Qwen 3.8 27B NVFP4 量化版，作者实测在单张 RTX 5090 上结构化输出达 776 tok/s、对话 262 tok/s、散文 194 tok/s、4K 预填充 12,000 tok/s，与 BF16 原版 top-1 一致率为 92.8%（KLD 0.0262），最长支持 262K 上下文；2）Junction 黑客松项目 `Parallax` 存下 875,572 个维基百科修订版与 90,070 个 `bge-m3` 1024 维向量，靠一条结合 `FOR SYSTEM_TIME AS OF` 与 `VEC_DISTANCE_COSINE` 的 SQL 自连接再配合 Gemini 3.8 Flash 裁判，即可按任意历史日期跨七种语言做句子级事实对齐（单篇精确检索中位耗时 4 ms，28 对人工黄金集上检索前五召回 89%）；3）欧盟委员会选定意大利公司 Domyn 牵头的 EUROPA 联合体赢得「前沿 AI 大挑战赛」（官方要求参数 >400B、可调用欧洲最多 2.5% 超算资源），r/LocalLLaMA 传言其实际目标接近 1 万亿参数并覆盖全部 24 种欧盟官方语言，定位真开源（注：1T 数字目前尚未获官方文件证实）。",
+     "tag": "third-country-gpu-ban-and-kimi-h800",
+     "title": "@Balder13946731 & @Fred834567 & @Edison_aware：美方拟堵「第三国」算力租赁漏洞冲击芯片链，Kimi K2.5 展示 H800 15 万亿 Token 平滑训练",
+     "body": "@Balder13946731 跟踪供应链与美股异动称，美国商务部正准备封堵中国公司绕道马来西亚、新加坡机房租用 NVIDIA 算力的「第三国」漏洞，导致市场重估英伟达财报中东南亚客户的真实需求归属，NVDA 盘中逼近 2025 年 7 月以来低位，光模块与高速互联板块同步下挫（LITE -7.8%、CRDO -7.3%、MRVL -6.9%）。在国产算力约束的另一面，@Fred834567 关注到杨植麟在 GTC 展示的 Kimi K2.5 训练曲线——即便在阉割版 H800 上仍跑出 15 万亿 Token 零 Loss 尖峰的平滑度；但 @Edison_aware 也提出冷静观察：随着海外前沿模型蒸馏路径逐步收紧，近期国内多家头部大模型厂商的迭代节奏明显放缓。",
      "links": [
       {
-       "label": "Basalt 0.4.0 实测数据",
-       "url": "https://x.com/AndrewSignalZ/status/2122142166587986392"
+       "label": "第三国算力租赁与市场异动",
+       "url": "https://x.com/Balder13946731/status/2122345072075354421"
       },
       {
-       "label": "Parallax 时态跨语对齐",
-       "url": "https://x.com/AndrewSignalZ/status/2122142026590572596"
+       "label": "Kimi K2.5 15T 训练曲线",
+       "url": "https://x.com/Fred834567/status/2122164534219850175"
       },
       {
-       "label": "欧盟 EUROPA 动向",
-       "url": "https://x.com/AndrewSignalZ/status/2122142232241434979"
+       "label": "蒸馏收紧后的迭代思考",
+       "url": "https://x.com/Edison_aware/status/2122362596104052801"
       }
      ]
     }
@@ -143,45 +100,28 @@
   },
   {
    "emoji": "⚙️",
-   "title": "硬核实操、算力经济与航天动态",
+   "title": "工程踩坑、文献与航天进展",
    "items": [
     {
-     "tag": "jeep-ecu-reverse-and-xray-bench",
-     "title": "@GPPY666 & @williamlong：Claude Code + Codex 借 $3 Arduino 逆向 1994 年 Jeep ECU 过年检，AI 配服务器实测 Hysteria2 翻倍领先 VLESS REALITY",
-     "body": "两个把编码 Agent 接进真实物理与运维环境的硬核案例：@GPPY666 分享了一位老车主的折腾——1994 年款吉普切诺基没有 OBD-II，行车电脑走克莱斯勒 7800 波特率反相 SCI 协议，车主花 $3 买 Arduino Nano 搭起电平转换器后让 Claude Code 摸清协议并拷贝出全部 32KB 固件，定位到年检工况下电脑会少喷 22% 燃油，再由 Codex 向 EEPROM 写入持久补丁通过加州尾气年检（作者同时提醒：目前属车主单方演示、未见检测单与第三方复现，且调试期间 Claude 曾自行触发油泵继电器，让 AI 直连汽车总线风险极高）。@williamlong 则把运维交给 AI：先让 AI 登录 VPS 在 Xray 上同机装好 Hysteria2 与 VLESS REALITY，实测前者吞吐快出一倍；随后让 AI 评估是否更换运行两套环境、对外开放 7 个端口且两年多未打补丁的 CentOS 7.6，AI 冷静指出「瓶颈在跨境链路，换系统一格速度都不会涨，唯一收益是安全与可维护性」。",
+     "tag": "turkish-locale-bug-and-se-handbook",
+     "title": "@mylifcc & @jexchan：土耳其语大小写转换仍能击穿 GitHub/Java/C#；AI 时代软件工程免费手册推荐",
+     "body": "@mylifcc 梳理了一个经久不衰的国际化安全陷阱：在土耳其语（`tr_TR`）Locale 下，小写 `i` 转大写变成带点的 `İ`，大写 `I` 转小写变成无点的 `ı`。若后台直接用 `.toLowerCase()`/`.toUpperCase()` 做大小写不敏感校验，GitHub 与 Django 曾因此出现注册 `mıke` 邮箱劫持 `mike` 重置链接的漏洞，Red Hat Linux 切到土耳其语后 cURL 因匹配不到 `CAMELLIA` 算法崩溃，Kotlin 编译器也曾因识别不了 `info` 关键字构建失败；2026 年在 Linux 土耳其语环境下的实测显示，Python、JS、Go 已输出 `TITLE`，但 Java、C#、Bash 仍输出 `TİTLE`，C 的 `strcasecmp` 直接报错。工程方法论方面，@jexchan 推荐了 James C. Davis 于 2026 年出版的免费电子书《The Software Engineering Handbook》，探讨当 AI 接管常规编码后，工程师核心工作如何转向需求定义、规约与架构边界划定及测试证据审计。",
      "links": [
       {
-       "label": "1994 Jeep ECU 逆向",
-       "url": "https://x.com/GPPY666/status/2122126884792308221"
+       "label": "土耳其语 Locale 踩坑史",
+       "url": "https://x.com/mylifcc/status/2122284042078831097"
       },
       {
-       "label": "Hysteria2 实测对比",
-       "url": "https://x.com/williamlong/status/2121906326855098875"
-      },
-      {
-       "label": "AI 运维安全评估",
-       "url": "https://x.com/williamlong/status/2121926320045346934"
+       "label": "AI 时代软工免费手册",
+       "url": "https://x.com/jexchan/status/2122196058042495189"
       }
      ]
     },
     {
-     "tag": "apple-ai-math-japan-deficit-and-vulcan",
-     "title": "@Balder13946731 & @LittleLee_x：苹果 AI 净赚 $190 亿「过路费」vs 日本 6 万亿日元数字赤字；ULA 火神火箭失败折损 40 颗亚马逊卫星",
-     "body": "@Balder13946731 从财务账本视角对比了 AI 基建的赢家与买单方：一方面，Google 每年向苹果支付约 $200 亿换取 iPhone 默认搜索，如今苹果反手每年付给 Google 约 $10 亿租 Gemini 驱动 Siri，无需自己跟着同行每年砸数百亿美元买 GPU、建数据中心，一进一出净落约 $190 亿（过去十几年苹果将七八千亿美元拿去回购自家股票）；另一方面，日本近两年游客爆满带来的约 6 万亿日元旅游顺差，转一圈几乎被付给 AWS、Azure、Google 与 Copilot 席位的约 6 万亿日元「数字赤字」对冲殆尽，连带散户通过新 NISA 买入的美股指数基金也流回同一批美国科技巨头。航天方面，@LittleLee_x 报道美东时间 11 月 15 日 12:40，波音与洛克希德·马丁合资的 ULA 火神（Vulcan）火箭升空约 10 分钟后发生严重异常，搭载的 40 颗亚马逊 Leo 低轨互联网卫星全部损失——这不仅是此前因固体助推器问题停飞约 9 个月后的复飞首秀，也是 ULA 自 2006 年成立以来的首次任务完全失败。",
-     "links": [
-      {
-       "label": "苹果 AI 过路费账本",
-       "url": "https://x.com/Balder13946731/status/2122069926227886289"
-      },
-      {
-       "label": "日本数字赤字观察",
-       "url": "https://x.com/Balder13946731/status/2121448350176457201"
-      },
-      {
-       "label": "ULA 火神火箭失利",
-       "url": "https://x.com/LittleLee_x/status/2122115587480465626"
-      }
-     ]
+     "tag": "starship-ship42-pad-inspection",
+     "title": "@elonmusk：星舰 Ship 42 发射台巡检评估——数周翻新即可复飞，距离「零翻新即时复用」仍需细修",
+     "body": "@elonmusk 转发发射台闭路转运画面表示，自己当天全面检查了星舰 Ship 42 的整套隔热盾与发动机，整体状态良好，预计只需几周翻新即可再次飞行；不过要真正达到类似民航客机的「即时复用（除定期例行保养外实现零预期翻新）」，目前仍有不少细节问题需要逐一修补。",
+     "url": "https://x.com/elonmusk/status/2122092374016806969"
     }
    ]
   },
@@ -190,79 +130,97 @@
    "title": "值得你花时间",
    "items": [
     {
-     "tag": "edge0-145b-on-single-rtx5090",
-     "title": "@niklaslenz_ai：单张 32GB RTX 5090 跑通 145B 稀疏模型 Edge0-145B——专家放内存与 SSD，实测 134.3 tok/s 解码",
-     "body": "一项针对本地大模型的极致内存/显存调度工程：`Edge0-145B` 基于 Qwen3.8 Flash Next（总参 145B、单 token 激活 10.12B、Q3_K 量化连同 SSD 路由表共占盘 98.1 GiB），把 MoE 专家留在系统内存并用 32GB 显存做缓存，同时从 SSD 读取 47.7 GiB 路由表。@niklaslenz_ai 从源码编译 Edge0 推理引擎（基于 Strata 与 llama.cpp，开启 131,072 上下文与 int8 KV cache）在单张 RTX 5090 上实测：解码中位速度 134.3 tok/s（代码 139.0 / 文本 129.5）、16K 预填充 4,036 tok/s、128K（130,048 tokens）预填充依然稳在 4,058 tok/s，32K 首字延迟 8.0 秒；作者同时坦诚给出关闭思考模式下的基准分（MMLU-Pro 49.5%、GPQA Diamond 41.4%、IFEval 82.0%、LiveCodeBench 57.5%），质量与 Qwen3.8-27B 接近、且服务端一次仅处理单请求——真正值得细读的是把 145B 模型压进消费级单卡并跑出百级吞吐的工程实现。",
-     "url": "https://x.com/niklaslenz_ai/status/2122073404203270588"
-    },
-    {
-     "tag": "cloudflare-security-audit-and-ms-forge",
-     "title": "@0xpipimd & @entropyweights & @0xpiyushvm：Cloudflare 开源 72K★ 六阶段漏洞审计技能，微软 FORGE 扫出 33 个内核 CVE 却卡在 41 天修复长尾",
-     "body": "针对直接让 LLM「扫漏洞」极易产生幻觉误报的痛点，Cloudflare 发现单次 AI 安全审计平均会漏掉约一半跨轮次才能挖出的漏洞，遂将其内部漏洞狩猎底座的起始技能 `security-audit` 开源（GitHub 已突破 72K★、MIT 协议）。该方案把审计拆为六阶段闭环：先做代码与信任边界侦察，再分攻击面派隔离 Agent 狩猎，随后派全新独立子 Agent 专门「反向证伪」可疑漏洞，只有具备可追溯代码路径与真实边界失效证据的问题才能确认，并维护确定性覆盖率账本供后续增量审计聚焦盲区。另一边，@0xpiyushvm 援引微软 FORGE Lab 用 AI 扫描 Linux 内核子系统的数据，提醒行业漏洞发现与修复之间正拉开剪刀差：AI 共产生 26,502 条原始告警，收窄为 59 份上游报告、33 个 CVE 与 8 个可用的 Root Exploit，但上游修复中位耗时达 41 天，5 个月后仍只有 38 个补丁合入主线。",
+     "tag": "qwen4-max-launch-and-cost-audit",
+     "title": "@jojogh_007 & @MarcosRGjr & @Zefan_Cai：Qwen4-Max 正式发布（2.4T MoE / 71B 激活 / 1M 上下文），单任务成本降超 60%，实测提醒核验输出长度与缓存命中",
+     "body": "美东 11 月 15 日 21:01 阿里正式发布旗舰模型 `Qwen4-Max`：基于全新 Qwen4 稀疏 MoE 架构（2.4T 骨干参数 + 328B N-gram Embedding，单 token 仅激活 71B），支持原生视觉与 1M 上下文，已上线 QwenCloud、OpenRouter 等平台（更小尺寸的开源权重版预告后续发布）。定价方面，输入 `$1.50/M`、输出 `$4.50/M`，隐式缓存命中价大降 70% 至 `$0.075/M`；官方 Work360 评测得分由 Qwen3.8-Max 的 47.74 升至 52.69，单任务平均成本从 `$4.43` 降至 `$1.67`（降幅超 60%），Terminal-Bench 4.0 token 消耗下降约 48–49%，并公开了 48 小时闭环干湿实验合成新型冷却剂分子的案例。独立评测机构 Artificial Analysis 测得其 Intelligence Index 为 43 分（比 Qwen3.8-Max 高 9 分、落后 Kimi K3.1 Pro 3 分，单任务成本 `$3.27` 降约 67%）。不过 @MarcosRGjr 与 @Zefan_Cai 均提醒：早期独立测试显示该模型输出偏冗长，且 60%+ 降本高度依赖极低价的缓存命中与官方内部测试集，替换生产 Agent 队列前务必用 30 个真实任务回放统计总输出 token 与真实缓存命中率。",
      "links": [
       {
-       "label": "Cloudflare security-audit 拆解",
-       "url": "https://x.com/0xpipimd/status/2121611611785798141"
+       "label": "Qwen4-Max 参数与 AA 汇总",
+       "url": "https://x.com/jojogh_007/status/2122324046302117908"
       },
       {
-       "label": "六阶段流水线要点",
-       "url": "https://x.com/entropyweights/status/2121390151243043161"
+       "label": "输出冗长与回放校验提醒",
+       "url": "https://x.com/MarcosRGjr/status/2122372645719347408"
       },
       {
-       "label": "微软 FORGE 内核漏洞数据",
-       "url": "https://x.com/0xpiyushvm/status/2121505916092600350"
+       "label": "缓存费率差与成本拆解",
+       "url": "https://x.com/Zefan_Cai/status/2122364976795164830"
       }
      ]
     },
     {
-     "tag": "hyperframes-dsh-vs-claude-code",
-     "title": "@stretchcloud & @0xpipimd：HeyGen 基于 280K★ DeepSeek Harness 开源 84K★ HyperFrames，HTML 视频渲染盲测比 Claude Code 省 30% 成本",
-     "body": "HeyGen 开源了可编程视频渲染引擎 `HyperFrames`（GitHub 84K★、Apache 2.0），用 HTML/CSS/JS（支持 GSAP、Three.js、Lottie）定义场景与时间轴，再经无头 Chrome 逐帧 seek 与 FFmpeg 输出 MP4，让代码 Agent 能像改网页一样对视频做 Git 版本化编辑。更值得架构师关注的是它的执行底座：HeyGen 没有重复造轮子，而是直接基于 DeepSeek 8 月开源、如今已破 280K★ 的 `DeepSeek Harness (dsh)` 构建垂直视频 Agent。`dsh` 基于 Cordis 插件框架，连模型适配器、工具注册表、记忆系统与主执行循环本身都是可替换插件，并通过事件日志重建模型上下文、主动把失败与取消的尝试排除出历史。HeyGen 团队内部盲测显示，在 HTML 转视频任务上，这套基于 `dsh` 裁剪上下文的垂直外壳与 Claude Code 达到同等画质时，成本低 30%、模型轮次少 35%。",
+     "tag": "google-egm-and-harness2-opensource",
+     "title": "@agenticgirl & @ImoleayomideAI：Google 连发两项 Agent 工程开源——19K★「大象-金鱼」无记忆审查流与自进化外壳 Harness²",
+     "body": "Google 近日在开源社区连续放出来自内部工程实践的两套协作架构。其一是已被数千名 Google 工程师日常使用、GitHub 迅速突破 19K★ 的 `Elephant-Goldfish Model (EGM)`（支持 Claude Code、Codex 与 Antigravity）：它将工作流拆为上下文饱满、负责讨论需求与写设计文档的「大象（Elephant）」主会话，以及完全清空对话历史、只读成品文档与源码的「金鱼（Goldfish）」审查者——只有连毫无前序记忆的金鱼都能看懂并找不出缺失边界与依赖漏洞的规约，才允许进入编码实现，同时自带检测文档与代码漂移的技能。其二是开源框架 `Harness²`，不改动模型权重，而是让 Agent 针对任务生成多个候选 Harness（系统提示词、工具、记忆与执行逻辑），并行跑分对比差异并融合改进，再将有效经验跨任务留存；在 Gemini 3.5 Flash 与 GLM-5 上，仅一轮精细化就超越了人工预设的原始配置。",
      "links": [
       {
-       "label": "HyperFrames × DSH 盲测对比",
-       "url": "https://x.com/stretchcloud/status/2121647346350174694"
+       "label": "Elephant-Goldfish Model 拆解",
+       "url": "https://x.com/agenticgirl/status/2122215592497492278"
       },
       {
-       "label": "DeepSeek Harness 架构拆解",
-       "url": "https://x.com/0xpipimd/status/2121679787416846596"
-      },
-      {
-       "label": "HyperFrames 工程特性",
-       "url": "https://x.com/0xpipimd/status/2122072149322346550"
+       "label": "Harness² 自进化框架",
+       "url": "https://x.com/ImoleayomideAI/status/2122300803318780370"
       }
      ]
     },
     {
-     "tag": "antigravity-slash-commands-guide",
-     "title": "@zg0820：Antigravity 四条编排命令实战指南——/boost、/swarm、/run-workflow 与 /teamwork 解决的是四类不同组织问题",
-     "body": "不少人把 Antigravity 的 `/boost`、`/swarm`、`/run-workflow` 与 `/teamwork` 误解为由弱到强的四级开关，@zg0820 对照官方文档厘清了「下拉选模型（如 Gemini 4 Argon / Carbon / Hydrogen，及日常默认 Orchestrator、Carbon 规划 + Hydrogen 执行路由）+ 斜杠选协作组织方式」的双轴逻辑：日常改文件无需斜杠；`/boost` 是高强度中间档，通过三轮「实现/查根因 → 隔离自测找茬 → 逐条核对」专攻单个难解的并发或对账 Bug；`/swarm` 适合能按物理文件无碰撞切分、且需要工蜂通过共享黑板交接的任务（每 2–4 个工蜂配 1 个只读 verifier）；`/run-workflow` 由 Agent 写一段基于 `agent`/`parallel`/`pipeline`/`phase` 与 JSON Schema 的短 Python 脚本在后台批量扇出（如 50 篇摘要或逐文件独立审查）；`/teamwork` 才动用 Sentinel、按里程碑换人的 Orchestrator 与对抗 Critic 跑跨数小时到数天的仓库迁移。文末给出清晰的四问决策树与 `run-workflow` 最小代码模板。",
-     "url": "https://x.com/zg0820/status/2121817663274201104"
+     "tag": "browser-mcp-72k-and-fable52-cost-ledger",
+     "title": "@SeanJHKwon & @noelkimx：两份硬核 Token 账本——浏览器 MCP 填 10 字段表单烧掉 72K Token，Fable 5.2 月度日志重估实测贵 1.5 倍",
+     "body": "两位一线开发者用真实计量数据拆穿了 Agent 账单的隐形放大器。@SeanJHKwon 基于 `turbo-browser-mcp` 实测发现，用标准浏览器 MCP 填一张 10 字段表单，单页 ARIA 快照看似只有 3,582 tokens，但由于编码 Agent 每轮都会重放历史对话，11 步操作最终累计烧掉 72,614 input tokens；通过四项工程改造——只返回变化 DOM 增量（`-98.4%`，3,582→56 tokens）、用 `smart_fill_form` 单次批量填表（`-98.9%`，72,614→811 tokens）、以本地路径替代 48 KiB PDF 的 Base64 编码上传（`-99.8%`，44,728→85 tokens）以及默认拦截 Submit/Pay 等终局提交按钮——几乎把冗余消耗压零。另一边，@noelkimx 将自己过去一个月 $1,558 的 Opus 5.5 真实 API 日志按 Claude Fable 5.2 费率逐条重算：虽然 Fable 的输入/输出/缓存写入标价都是 Opus 的 2 倍，但因两者缓存读取同为 `$0.20/M`（占其账单 49%），长会话实际开销仅为 1.46×–1.5×（总计约 $2,357），短会话才接近 1.9×；不过中途切模型会触发按新模型费率全量重缓存（205K 上下文单次约 $3.28），因此应在会话开局就选定模型并尽量保持缓存温度。",
+     "links": [
+      {
+       "label": "浏览器 MCP 72K Token 拆解",
+       "url": "https://x.com/SeanJHKwon/status/2122349857381740661"
+      },
+      {
+       "label": "Fable 5.2 月度账单重算",
+       "url": "https://x.com/noelkimx/status/2122343096134639794"
+      }
+     ]
+    },
+    {
+     "tag": "gemini-decision1-satbench-and-longcat25",
+     "title": "@lucifer_x007 & @sabrielatmojo & @BennyLam：Gemini Decision 1 以 $0 输出费率切入闭集判断，2025 年基准中位饱和缩短至 14 个月，美团 LongCat-2.5 先量化再分发",
+     "body": "三条指向「把算力花在刀刃上」的工程与评测信号：1）@lucifer_x007 梳理 Google 新发布的单次前向决策模型 `Gemini Decision 1`（对标 TypeSafe `Jev`），专攻工具路由、PII 检查、工单分流与 rubric 打分等闭集判断——不逐 token 生成文本，直接返回选项与校准置信度，延迟约 150–250 ms（Jev 均 92 ms），输入 `$0.10/M`、输出 $0；Cloudflare 实测用决策模型前置分流后，将诊断链路从 6 次 LLM 调用、~40K tokens 压至 1 次调用、1.8K tokens（但独立 Decision Index 上 Decision 1 与 Jev 1.14 同为 66 分，略低于 Drex Max v1.1 与 GLiDE v1.2）。2）@sabrielatmojo 引述 @emollick 的 SatBench 统计（基于 Epoch AI Benchmark Almanac）：2023 年以来实验室引用的 173 个基准已有 63%（109 个）饱和（≥85%），2025 年基准的中位饱和周期已从 20 个月缩短至 14 个月，唯有绑定自家代码库与边缘用例的私有测试集才不会过期。3）@BennyLam 拆解美团 MIT 开源的 `LongCat-2.5`（1.6T 参数 / 48B 激活）：亮点不在榜单，而在将专家权重与激活值在 token 复制与跨卡分发前就压成 INT4，直击显存 <80GB 且支持原生 INT4 的国产卡互联带宽瓶颈，线上压测较 W8A8 基线实现预填充 +43.3%、解码 +42.77%。",
+     "links": [
+      {
+       "label": "Gemini Decision 1 实务拆解",
+       "url": "https://x.com/lucifer_x007/status/2122328031230587316"
+      },
+      {
+       "label": "SatBench 基准饱和加速统计",
+       "url": "https://x.com/sabrielatmojo/status/2121885229371601228"
+      },
+      {
+       "label": "美团 LongCat-2.5 INT4 通信优化",
+       "url": "https://x.com/BennyLam/status/2121483522426692087"
+      }
+     ]
     }
    ]
   }
  ],
  "hn": {
   "source": "hacker-news",
-  "fetched_at": "2026-11-16T02:00:47Z",
+  "fetched_at": "2026-11-16T17:00:49Z",
   "sections": [
    {
-    "emoji": "🧮",
-    "title": "LLM 基础架构与开源争议",
+    "emoji": "🔬",
+    "title": "算力指纹取证与 AI 代码开源之争",
     "items": [
      {
-      "tag": "hn-205",
-      "title": "现代 LLM 中的位置编码（Positional Embeddings）原理与演进全解",
-      "body": "Sebastian Raschka 于 2026 年 11 月 15 日发布长文教程，系统梳理大语言模型如何表征并处理 token 位置信息。文章先通过直观图示、基础数学推导与简洁的 PyTorch 实现，从头拆解经典方法及现代主流的 RoPE（旋转位置编码）等核心机制，随后结合其 2026 年开源权重模型架构图谱，对比近年架构如何改写甚至省略显式位置编码（如 NoPE、部分 RoPE 与混合方案）。作者表示，该文原本是其年度 LLM 架构趋势分析中的前置基础章节，因涉及相对位置编码等底层细节篇幅较大，遂独立成篇以供读者查阅。",
-      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
-      "tag_label": "HN · 205 分 · 27 评论"
+      "tag": "hn-448",
+      "tag_label": "HN · 448 分 · 192 评论",
+      "title": "中国前沿 AI 模型公开权重中检测出出口管制 NVIDIA Blackwell GPU 数值指纹",
+      "body": "Unemployment Labs（Will DePue，2026 年 11 月 12 日）发布取证报告称，对公开模型权重进行逆向数值分析后，在 DeepSeek、Moonshot AI、MiniMax 与蚂蚁集团自 2026 年 4 月起发布的 6 个模型权重中发现了与 NVIDIA Blackwell 硬件一致的数值特征，而上述机构更早期模型对应的则是 Hopper 架构指纹。研究团队声明全部证据均直接来自公开发布的模型权重，未依赖任何内部线报或泄密：他们先还原模型初始值痕迹，再搜索可复现该轨迹的硬件与初始化配置，并已在物理 Blackwell 芯片上确认了 DeepSeek-V4-Flash 与 Kimi K3 的指纹匹配，从而为此前多方传闻提供了首个可复现的技术验证路径。",
+      "url": "https://unemploymentlabs.com/checkpoint-forensics"
      },
      {
-      "tag": "hn-1093",
-      "title": "热议长文：呼吁所有 AI 生成代码均应强制采用 Open Source 开源协议",
-      "body": "该文在 HN 热度持续攀升至 1,093 分与 595 条评论，作者提出两项核心理由反对将 AI 生成代码闭源商用。其一，大模型训练抓取了自 GNU Project 与自由软件运动以来的海量 Open Source 代码，以及受 Creative Commons 协议约束且依法要求署名的 Stack Overflow、Stack Exchange 内容，将其转化为闭源私有代码等同于“许可证洗白”。其二，纯 AI 生成代码并非人类创作，依据美国 U.S. Copyright Office 引用的 Monkey Selfie 判例应不享有版权（Wikimedia Commons 亦据此将纯 AI 图像标为 Public Domain）；为弥合英国等仍对计算机生成作品授予有限版权的司法差异，作者主张开发者与企业应主动以 Open Source 协议发布 AI 生成代码。",
-      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
-      "tag_label": "HN · 1093 分 · 595 评论"
+      "tag": "hn-1213",
+      "tag_label": "HN · 1213 分 · 646 评论",
+      "title": "热议长文：呼吁所有 AI 生成代码均应采用 Open Source 开源协议（热度升至 1,213 分）",
+      "body": "该文继续位居 HN 讨论前列并累积至 1,213 分与 646 条评论。作者从两方面论证纯 AI 生成代码不应闭源私有：首先，大模型训练语料抓取了自 GNU Project 与自由软件运动以来的海量开源代码，以及按 Creative Commons 协议依法要求署名的 Stack Overflow 与 Stack Exchange 问答，将其转化为闭源商业代码形同“许可证洗白”；其次，纯 AI 生成代码并非人类创作，依据美国 U.S. Copyright Office 引用的 Monkey Selfie 判例本不应享有版权（Wikimedia Commons 亦据此将纯 AI 图像标为 Public Domain），鉴于英国等司法管辖区仍对计算机生成作品授予有限版权，开发者与企业应主动以 Open Source 协议发布以维持全球规则公平。",
+      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/"
      }
     ]
    }
