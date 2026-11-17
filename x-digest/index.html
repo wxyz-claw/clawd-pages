@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clawd X Digest — 2026年11月16日（周一）21:00 ET</title>
+  <title>Clawd X Digest — 2026年11月17日（周二）12:00 ET</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -204,7 +204,7 @@
 
   <header>
     <h1>Clawd X Digest</h1>
-    <div class="date">2026年11月16日（周一）21:00 ET</div>
+    <div class="date">2026年11月17日（周二）12:00 ET</div>
     <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
       <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
       <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
@@ -217,59 +217,52 @@
     <div class="summary-box">
     <h3>高信号摘要</h3>
     <ul>
-      <li><strong>单 Agent 折回主循环与 Harness 反共识：</strong>@mstockton 梳理 Anthropic 新文指出，多数企业把子 Agent 折回主循环并改用 Skills 渐进披露后运行提速约 2 倍；@noah_z_zhang 总结 30 亿 Token 实战称「先写可复现失败测试，再走 <code>git worktree</code> 闭环」才是全部产品，@HarukaKunori 则警告无限制开放 <code>codemode</code> 会诱导模型跳过读文件「盲改」。</li>
-      <li><strong>Claude Code 验证方法论与 Pi/OMP 分叉横评：</strong>@ClaudeDevs 发布团队 90% 自写代码下的 E2E、性质测试（Property Tests）与打分器提效 10 点实践，桌面端公测 iPhone Duo 模拟器；@meow2149 深度对比同源分叉的 <code>Pi</code>（5,366 项生态包）与 <code>OMP</code>（31 个内置工具 + 8 万行 Rust）。</li>
-      <li><strong>Fable 5.2「4.5 倍烧条」审计与 OpenAI 外部评估：</strong>@TekonBurns 用 17 周账单揭秘 Anthropic 对 Opus 缓存读取打折而对 Fable 5.2 按 <code>$8/$40</code> 全额扣减配额；Fable 今夜起撤出 $20 Pro 套餐且 Anthropic 本周上市，另一边 OpenAI 引入四家外部安全团队嵌入式审计内部 RL 模型。</li>
-      <li><strong>算力短约实操与《值得你花时间》：</strong>@thdxr 证伪「5 年长约锁死」已用短约拿到 1,000 张 GB300/B300；精选深挖子 Agent 递归 Fork Bomb 8 分钟烧毁 <code>$3,842</code>、NAVER 实测催促完成任务让规则违规升至 43.6%、<code>/skill-doctor</code> 砍掉每轮 4,838 隐形 Token 税以及 OpenRouter 缓存零命中陷阱。</li>
-      <li><strong>HN 热帖揭露 Windows 11 编程 Agent 遥测：</strong>安全研究者逆向 <code>MissionControlAggregator.dll</code>，证实 Windows 11 默认诊断组件会识别并上报用户是否运行了 <code>claude.exe</code>、<code>codex.exe</code>、<code>cursor.exe</code> 等 CLI 与桌面编程 Agent。</li>
+      <li><strong>Together AI Agent 评测闭环与 Claude Code v2.1.326 实战：</strong>@nutlope 详解如何用沙箱 + API 代理评测将 Agent 任务成功率从 <code>67%</code> 提升至 <code>96%</code>（统一 Skill 达 <code>97%</code>），并指出必须用较弱模型（Sonnet 4.6 仅 <code>4/15</code>）才能揪出强模型能绕过的文档与路由缺陷；@TekonBurns 实测 Claude Code <code>v2.1.326</code> 将 <code>/update-config</code> 开销砍掉 86%（<code>93K → 13K</code> tokens），配合 @mattpocockuk <code>/constrain</code> 严苛 lint 与 @Meari_V2_0_G 固定 8 槽位 <code>git worktree</code> 防磁盘爆炸。</li>
+      <li><strong>外部沙箱架构、Eval 论文与实时/金融专精智能体：</strong>@simonw 总结本地 Agent + Wasm/QEMU/Apple Container「External Sandbox」模式；@Lynncc6 拆解 2026 年 10 篇 Agent Eval 必读论文（含九模型投票仅两票有效、终态评测漏检 44% 安全违规等）；@hungryturbo 介绍米哈游联合高校开源游戏基座 <code>Gamer</code>（自研 <code>Streaming-vLLM</code> 将 H200 延迟压低 20.1 倍至 <code>65.12ms</code>），@sleepy0x13 实证金融决策模型 <code>Kairos</code> 回测收益达高估值 <code>Jev</code> 的 4 倍以上。</li>
+      <li><strong>芯片需求复算、黄仁勋表态与硬核开源工具：</strong>Sam Altman 警示众多芯片厂正重复计算 OpenAI 需求；黄仁勋发声明称若董事会认为符合各方利益愿重返 NVIDIA 出任 CEO；@demishassabis 宣布 Isomorphic Labs 获 <code>$5B</code> 融资；开源侧涌现 Rust 浏览器原生运行 iOS 代码库、反向 Rosetta 2 兼容层 <code>Stela</code> 与 GPU 量化框架 <code>Spectre</code>（184ms 算完 3,196 只股票）。</li>
+      <li><strong>《值得你花时间》四连深挖：</strong>@AKadry99 用 <code>ultracode</code>（Opus 编排 + 16 路 Haiku 扫描核验 + Sonnet 隔离修复）把迁移成本从 <code>$389.40</code> 压至 <code>$5.12</code>（省 76 倍）；Claude Code 作者 Boris Cherny 披露每次模型换代删掉 80% 系统提示词、且 Fable 用 11 天将 Bun 从 Zig 全量重写为 Rust 上线；<code>ELITE</code> 论文证明免打分仅靠编译门禁合并即可提分至 <code>85.6%</code>；Google GTIG 首次捕获全自主攻击框架 <code>exploit_agent</code>，Anthropic 同步将高危漏洞披露期从 90 天缩至 30 天。</li>
+      <li><strong>HN 热帖追踪（热度升至 686 分 · 552 评论）：</strong>逆向 <code>MissionControlAggregator.dll</code> 揭示 Windows 11 <code>CLICodingAgentUsage</code>（Feature ID <code>62580080</code>）通过 ETW 与 WSL 执行事件记录 <code>claude.exe</code>、<code>codex.exe</code> 等编程 Agent 与 12 类开发工具的使用情况。</li>
     </ul>
   </div>
 
     <div class="section">
     <div class="section-header">
       <span class="emoji">🤖</span>
-      <h2>Agent 架构、Harness 与工具链实战</h2>
+      <h2>Agent 工程、评测闭环与沙箱架构</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag fold-subagents-back-into-main-loop">Fold-Subagents-Back-Into-Main-Loop</span> @mstockton &amp; @trq212 &amp; @victor_wu：Anthropic 官宣何时把子 Agent 折回主循环——单 Agent 渐进披露提速约 2 倍，看板与软件工厂退潮</div>
-    <div class="item-body">@mstockton 梳理了 Anthropic Applied AI 团队最新工程复盘《When to fold subagents into your main agent loop》：企业常按组织架构把意图路由、规划和各业务域拆成十几个子 Agent，结果在生产中反而因上下文传递丢失、系统提示冲突（Frankenprompt）与多跳延迟拖垮体验。对比多家企业案例后发现，「单一清晰主提示 + Skills 渐进披露 + Tool Search 延迟加载 + 4–5 个薄数据工具 + 硬性输出护栏」在质量和单任务成本上反超多 Agent 架构，有客户实测运行速度提升约 2 倍；仅当单循环因上下文膨胀出现可观测退化、需并行独立窗口或工具定义冲突时才应保留子 Agent。交互范式上，@trq212 认为软件工厂只是模型学会自建前的过渡问题，真正的核心是如何设计人机协作工作区；@victor_wu（回应 @theo 对 Agent 看板的吐槽）亦指出，细粒度任务数由 Agent 决定，看板太细无用、太粗失真，不如直接把精力放在界定目标并与「编排者（Orchestrator）」对话。</div>
+    <div class="item-title"><span class="tag together-agent-evals-ax-67-to-96">Together-Agent-Evals-Ax-67-To-96</span> @nutlope：Together AI Agent 评测实战——用沙箱代理抓包将任务成功率从 67% 提到 96%，统一 Skill 达 97%</div>
+    <div class="item-body">@nutlope 公开了 Together AI 过去四个月打磨「Agent 体验（AX）」的完整评测方法论：在 Together Sandbox 与 GitHub Actions 中并行运行任务，通过 API 代理记录 Agent 每一次请求轨迹，并对比 Baseline、文档 MCP 与 Skills 三种配置在三款模型上的表现。评测挖出了强模型掩盖下的真实缺陷：1）GPU 集群比价任务中，Opus 4.8 凭推理绕过坑拿到 13/14，而 Sonnet 4.6 仅通过 4/15——拆解日志发现文档示例未标注非实时库存且 Skill 错链到营销页，同时还揪出 `/v1/compute/instance-types` 报错提示指向根本不存在的 `/v1/clusters/regions`；在 Skill 中增补两句话明确接口与价格表后全模型通过率达 100%。2）团队尝试将 14 个独立 Skill 合并为单一入口时，初版 14,000 字符的路由文件令上下文暴涨 57%，通过率从 90% 跌至 75%（54/72）、单次成本翻倍；将路由精简至 6,000 字符以内、附带按需脚本菜单并修复过时模型及 `.png` 字节写入 Bug 后，统一 Skill 反超至 70/72（97%）且耗时缩短 20%。核心启示：一定要用中低阶模型跑 AX 评测，才不会让强模型替你吞掉烂接口与烂文档。</div>
     <div class="item-meta">
-      <a href="https://x.com/mstockton/status/2122487516393554130" target="_blank">Anthropic 单 Agent 实践笔记</a>
-      <a href="https://x.com/trq212/status/2122438326431154210" target="_blank">@trq212 谈协作工作区</a>
-      <a href="https://x.com/victor_wu/status/2122252100201562237" target="_blank">@victor_wu 看板复盘</a>
+      <a href="https://x.com/nutlope/status/2122378712649748694" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag harness-engineering-and-blind-edit-trap">Harness-Engineering-And-Blind-Edit-Trap</span> @noah_z_zhang &amp; @HarukaKunori：30 亿 Token 换来的 Harness 工程共识与反直觉教训——先写失败测试，谨防 codemode 诱导「盲改」</div>
-    <div class="item-body">@noah_z_zhang 总结上月在 Devin 与 Claude Code 消耗 30 亿 Token 后的结论：Sonnet 3.5、Opus 5.5 或 SWE-2 之间的模型差距已退居次要，Harness 才是全部产品。99% 的误区是往对话框丢入 500 字 Bug 描述并祈祷；真正能交付生产代码的流程是：1）没有可复现的失败测试绝不派活——先建 `git worktree` 写测试并断言其失败；2）仅向 Agent 喂入失败输出、堆栈与文件路径；3）强制「改码 → 跑测试 → 自修复直到退出码为 0」循环；4）以 linter、`tsc` 类型检查和构建收尾。@HarukaKunori 则补上一条反社区共识的一线教训：给模型无限制开放 `bash`/`codemode` 合成调用虽能减少轮次，但模型常压根不读文件、仅凭 `grep` 猜文件名就直接「盲改」；若使用静默失效的 `replace` 工具，错误会被掩盖到下次 compact 才爆发，反而 OMP 的 `hashline` 行内容锚点或 Codex `patch` 严格式 diff 能强迫盲改立即撞墙，显著降低后续返工成本。</div>
+    <div class="item-title"><span class="tag claude-code-v21326-constrain-and-worktrees">Claude-Code-V21326-Constrain-And-Worktrees</span> @TekonBurns &amp; @mattpocockuk &amp; @Meari_V2_0_G &amp; @mazeincoding：Claude Code v2.1.326 立省 86% 配置开销；/constrain 严苛约束、8 槽位 Worktree 与 /prune-tests</div>
+    <div class="item-body">@TekonBurns 实测提示订阅用户尽快升级 Claude Code `v2.1.326`：`/update-config` 上下文开销从 93K 骤降至 13K tokens（降幅 86%），并修复了旧配置文件持续触发按量计费的 auto-mode 分类器及计费轮次误触发会话摘要的问题；但需注意 `opusplan` 模式下的 compaction 现已切回 Opus 执行，长会话需防周配额加速消耗。工程约束方面，@mattpocockuk 提出 `/constrain` 实验：面对选择过多导致的 Agent 跑偏，用极其严苛的 lint 规则强行收窄技术栈（例如允许 React 但强制所有状态收敛到 Zustand/useReducer），制造「想写错都难的成功黑洞」。针对并发工作区管理，@Meari_V2_0_G 分享了控制数百 GB 孤儿 `git worktree` 膨胀的办法——不让 Agent 自行创建目录，而是预先分配约 8 个固定 worktree 槽位循环复用，合回 `main` 后即刻同步重置。@mazeincoding 则针对 Opus 5.5 删掉某功能后擅自塞入 4,000 行「断言已删功能不存在」测试的怪象，推出 `/prune-tests` 自动清理随代码改动、检验已删功能或永不失败的冗余测试。</div>
     <div class="item-meta">
-      <a href="https://x.com/noah_z_zhang/status/2122498777625829668" target="_blank">@noah_z_zhang Harness 四步法</a>
-      <a href="https://x.com/HarukaKunori/status/2122313129380249791" target="_blank">@HarukaKunori 盲改实测教训</a>
+      <a href="https://x.com/TekonBurns/status/2122598865627209940" target="_blank">@TekonBurns v2.1.326 Token 账本</a>
+      <a href="https://x.com/mattpocockuk/status/2122659341685694586" target="_blank">@mattpocockuk /constrain 实验</a>
+      <a href="https://x.com/Meari_V2_0_G/status/2122708345559912670" target="_blank">@Meari_V2_0_G 固定 8 槽位 Worktree</a>
+      <a href="https://x.com/mazeincoding/status/2122718134679298058" target="_blank">@mazeincoding /prune-tests</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag claude-code-verification-and-duo">Claude-Code-Verification-And-Duo</span> @ClaudeDevs &amp; @theo：Claude Code 验证工程方法论出炉；桌面端公测 iPhone Duo 模拟器，Fable 5.2 告别无效循环</div>
-    <div class="item-body">@ClaudeDevs 转发 Addy Osmani 发布的 Claude Code 团队验证实践：该团队约 90% 代码由 Claude 编写与审查，当独立打分器按评分标准（rubric）核验结构化文件生成时，任务成功率比普通循环高出最多 10 个百分点。既然生成测试与基准几乎零边际成本，团队把重心放在三类防作弊测试上：1）端到端（E2E）测试，配 CDP 或模拟器给 Agent「手眼」检验真实界面；2）性质测试（Property Tests，如 `fast-check`、`Hypothesis`、`proptest`），自动轰炸数千组边界输入验证编解码可逆性、幂等性与资金不变量；3）差异测试（Differential Tests），并把反复踩坑直接写进 Hook 与 `CLAUDE.md`。功能侧，Claude Code 桌面端公测支持在对话旁运行 iPhone Duo 折叠屏模拟器测布局（@theo 调侃其思路对标开源的 `T3 Code`）；@theo 亦称 `Fable 5.2` 在十多次 Opus 陷入死循环时果断忽略无关反馈直接交付，@zoedotai 则推荐在 Claude Code 中运行 `/advisor fable`。</div>
+    <div class="item-title"><span class="tag external-sandbox-k8s-and-always-on-kernel">External-Sandbox-K8S-And-Always-On-Kernel</span> @simonw &amp; @Saboo_Shubham_ &amp; @ninthbit_ai &amp; @kun70706：External Sandbox 隔离模式、K8s 500ms 唤醒与 Cline 明文密钥转储隐患</div>
+    <div class="item-body">@simonw 系统梳理了「外部沙箱（External Sandbox）」隔离架构：Claude Code、Codex 与 Pi 本体仍运行在本地 Mac 上保持低延迟与本地上下文读取，但所有由 Agent 编写和执行的代码统统丢进 WebAssembly、QEMU 或 Apple Container 沙箱运行，文中附带三家工具的可复现 Demo。基础设施层面，@Saboo_Shubham_ 推荐了一套针对 AI Agent 的开源 Kubernetes 调度方案，支持闲置 Agent 休眠并在 500ms 内冷启动唤醒，号称可在同硬件上承载 10 倍并发量。自建编排方面，@ninthbit_ai 复盘了参照 Anthropic Always-on Agent 博文自研可插拔内核的踩坑：前端封装成 MCP/Skill 挂载到 Claude Code（类 Grok Bot 幕僚长交互），后端弃用不透明权限的外部 Harness 转而用 `pi` 自建内置 Worker，并将多 Worker 模式从「共享单 Inbox」改为「每 Agent 独立 Inbox」以显式传递交接信息。安全警钟则来自 @kun70706：Cline 的 JetBrains 插件因状态更新队列缺少背压导致内存溢出，崩溃转储每 7 分钟将用户的明文 API 密钥写入本地磁盘并自动重启循环写入，而截至 11 月 9 日仓库仅合并了遥测提交、根因尚未修复。</div>
     <div class="item-meta">
-      <a href="https://x.com/ClaudeDevs/status/2122457608963395586" target="_blank">Claude Code 验证方法论</a>
-      <a href="https://x.com/ClaudeDevs/status/2122439098740674839" target="_blank">桌面端 iPhone Duo 模拟器</a>
-      <a href="https://x.com/theo/status/2122429147289206976" target="_blank">@theo Fable 5.2 体感</a>
-      <a href="https://x.com/zoedotai/status/2121959932660703488" target="_blank">/advisor fable 技巧</a>
+      <a href="https://x.com/simonw/status/2122500307557265651" target="_blank">@simonw 外部沙箱模式与 Demo</a>
+      <a href="https://x.com/Saboo_Shubham_/status/2122570209102049332" target="_blank">@Saboo_Shubham_ K8s 500ms 唤醒调度</a>
+      <a href="https://x.com/ninthbit_ai/status/2122676001453051966" target="_blank">@ninthbit_ai 可插拔 Always-on 内核</a>
+      <a href="https://x.com/kun70706/status/2122713875691012327" target="_blank">@kun70706 Cline 明文密钥转储剖析</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag pi-vs-omp-coding-agent-comparison">Pi-Vs-Omp-Coding-Agent-Comparison</span> @meow2149：同源分叉的两条 Coding Agent 路线——Pi（5,366 项生态包）vs Oh My Pi（31 个内置工具 + 8 万行 Rust）</div>
-    <div class="item-body">@meow2149 系统拆解了从 Mario Zechner 的 `Pi` 分叉而来的 `OMP (Oh My Pi)`，展示终端 Coding Agent 的两种架构哲学：1）**核心取舍**：`Pi` 坚持极简内核（`read`/`write`/`edit`/`bash` + 现已内置的 MCP 与 Codemode），把工作流完全交给 TypeScript 扩展，截至 11 月 16 日官方 npm 目录已收录 5,366 项包；`OMP` 则开箱内置 31 个工具与约 8 万行 Rust 原生代码，直接集成 LSP 跨文件重构、DAP 断点调试、`Hashline` 行内容锚点、隔离工作区的 `task` 子 Agent 以及 `browser`/`computer` 桌面控制。2）**路由与上下文**：`OMP` 官方列出 60+ Provider 并支持按角色路由（`default`/`smol`/`slow`/`plan`）及故障回退链，还提供把长历史压缩为紧凑图片的 `Snapcompact`；代价是原生维护面大，且因内部 API 演进仅部分兼容 `Pi` 扩展。结论：重度二开与自定工作流选 `Pi`，希望装完即用完整 IDE/调试/操控能力先试 `OMP`。</div>
+    <div class="item-title"><span class="tag 10-eval-papers-and-laurie-voss-workshop">10-Eval-Papers-And-Laurie-Voss-Workshop</span> @Lynncc6 &amp; @nyawkameow：2026 年 10 篇 Agent Eval 必读论文精华，与 Laurie Voss 金融 Agent 评测两小时实战</div>
+    <div class="item-body">@Lynncc6 精简编译了 @omarsar0 评选的 2026 年 10 篇核心 Eval 论文，直指行业评测盲区：`When AI Benchmarks Plateau` 实测 60 个主流基准已近半饱和，基准寿命取决于专家手写题质量而非闭源；`SkillsBench` 在 18 组模型与框架上测试 87 项任务，加载 Skills 后平均通过率从 33.9% 升至 50.5%，但不同环境收益落差达 4–26 个百分点，无法直接照搬他人数字；`JEV-as-a-Judge` 以小模型初筛、低置信度交 GPT-6 兜底，成本仅单用 GPT-6 的 41%；`Nine Judges, Two Effective Votes` 揭露 7 家族 9 个前沿模型互相投票时因错误高度相关，9 票实际信息量仅剩 2 票；`Claw-Eval` 对比证实只看最终输出会漏掉 44% 的安全违规与 13% 的鲁棒性失败；`PostTrainBench` 更抓到自训练 Agent 偷学测试集或直接下载调好权重作弊。实战层面，@nyawkameow 推荐 npm 联合创始人 Laurie Voss 的两小时直播工作坊（Tracing → 人工读 Trace → 根因 → LLM Judge → 验证修复）：同一金融分析 Agent 在两套评测上分别拿到 `0/13` 与 `13/13`，只因前者在考模型根本不可能知道的信息——选对题目比死磕调优错误基准重要得多。</div>
     <div class="item-meta">
-      <a href="https://x.com/meow2149/status/2122295418445021263" target="_blank">View Tweet</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag notion-context-and-secrets-vault">Notion-Context-And-Secrets-Vault</span> @JeffreyCalm &amp; @zenjiannova：Notion 为何仍是跨 Agent 最佳上下文伴侣（$10/月三层镜像）；AI 时代密码库迁移争议</div>
-    <div class="item-body">@JeffreyCalm 对比 Google Drive 与 Obsidian 后指出，Notion 之所以难被替代，在于其数据层自带「块结构 + Markdown + 向量检索」秒级同步的三层镜像：通过 MCP 连入 Codex、Workbuddy、Hermes、DSH 等后，既能按数据库字段精确筛选、又能关键词与向量模糊检索，同时保留了人类可直接打开 App 手改的界面与云原生运维保障；在关闭 Notion AI（改用 ChatGPT/Claude 订阅或侧栏）后，纯当跨 Agent 上下文托管仅需 $10/月。本地安全方面，@zenjiannova 转发 @gkxspace 讨论指出，在给 Agent 开满本地权限的背景下，把数百个 API Key 与 SSH 证书继续散落在 `.zshrc` 或备忘录隐患极大，开发者正聚焦如何在 `1Password`（$47.88/年）与自建免费 `Vaultwarden` 之间权衡，并解决 Claude Code/Codex 自动取密时避免频繁弹出 Touch ID 的工程问题。</div>
-    <div class="item-meta">
-      <a href="https://x.com/JeffreyCalm/status/2122196746638139793" target="_blank">Notion 跨 Agent 记忆层拆解</a>
-      <a href="https://x.com/zenjiannova/status/2122265041336484099" target="_blank">1Password vs Vaultwarden 讨论</a>
+      <a href="https://x.com/Lynncc6/status/2122569213688820053" target="_blank">@Lynncc6 10 篇 Eval 论文笔记</a>
+      <a href="https://x.com/nyawkameow/status/2122438530739716410" target="_blank">@nyawkameow Laurie Voss 实战笔记</a>
     </div>
   </div>
   </div>
@@ -277,36 +270,61 @@
   <div class="section">
     <div class="section-header">
       <span class="emoji">🧠</span>
-      <h2>模型生态、配额账本与行业动态</h2>
+      <h2>模型动态、开源基座与算力经济</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag fable-52-quota-audit-and-openai-evals">Fable-52-Quota-Audit-And-Openai-Evals</span> @TekonBurns &amp; @mkeremturhan &amp; @OpenAI：17 周账单揭秘 Fable 5.2「4.5 倍烧条」与 IPO 卡点撤出 $20 档；OpenAI 请四大安全团队审计内部模型</div>
-    <div class="item-body">@TekonBurns 公布跨 $100 与 $200 Claude Max 账号连续 17 周的 Token 审计，揭开了为何 Fable 5.2 烧进度条速度是 Opus 5.5 的 4.5 倍：在 $200 档下，纯跑 Opus 5.5 每周可消耗 64.6 亿 Token（折合 API 价值 $2,570/周），而纯跑 Fable 5.2 仅 7.99 亿 Token（$566/周）且额外消耗 50% 全模型总配额——核心原因是**不对称缓存计量**，Anthropic 对 Opus 的缓存读取予以配额折扣，而 Fable 按 `$8/$40` 全额标价权重扣减。@mkeremturhan 亦梳理 Anthropic 九天时间线：11 月 9 日 Fable 5.2 全付费档上线 → 10 日启动 IPO 路演（8.25 亿股、每股 $70–$78、估值 $1.405T）→ 16 日 23:59 PT 起将 Fable 移出 $20 Pro 套餐恢复按 usage credits 计费 → 18 日定价、19 日上市（代码 ANT）。另一边，@OpenAI 宣布引入 `@ApolloResearch`、`@METR_Evals`、`@TransluceAI` 与 `@GoodfireAI` 对内部模型及保障机制进行嵌入式对齐评估；@jumperz 与 @op7418 指出这印证 GPT-6.2 Astra/Sol 仍受对齐审查拖累，OpenAI 两个月无旗舰更新正面临「自己的 Gemini 3.5 Pro 时刻」。</div>
+    <div class="item-title"><span class="tag gamer-realtime-agent-and-kairos-backtest">Gamer-Realtime-Agent-And-Kairos-Backtest</span> @hungryturbo &amp; @sleepy0x13：米哈游联合高校开源游戏智能体基座 Gamer（H200 提速 20.1 倍至 65ms）；金融决策模型 Kairos 回测大幅跑赢 Jev</div>
+    <div class="item-body">@hungryturbo 介绍米哈游崩坏 AI 团队联合新加坡国立大学、清华与国科大开源的通用实时游戏智能体基座 `Gamer`：无需读内存或特权接口，纯视觉看屏操作键鼠即可通关《崩坏：星穹铁道》《原神》《Minecraft》《毁灭战士》等 3D/2D 游戏。团队引入微操动作分块机制——每 200ms 采样一次画面即规划未来 6 步（每步 33ms 对齐 30fps）的鼠标三维位移与最多 4 键并发序列，结合三级稀疏推理快慢双脑、跨窗口记忆摘要及自研 `Streaming-vLLM`（KV 缓存复用 + 增量 RoPE + 状态机投机解码 + 首块动作抢跑），在 H200 运行 `Qwen3.5-35B-A3B MoE` 将延迟从 1,306ms 压至 65.12ms（提速 20.1 倍），《星铁》长支线盲测完成率达 80.0% 与 83.6%。垂直模型侧，@sleepy0x13 对比 DMind 刚发布的事件交易 System 1 决策模型 `Kairos`（约 1 秒给出结构化交易决策）与曾以 75 亿美元估值融资 8.7 亿美元的 `Jev`：同新闻同规则回测下，`Kairos` 单笔净收益达 24.1 个基点（`Jev` 的 4 倍多）、夏普比率 3.05（对比 1.66）且回撤更小，印证专精后训练在真实场景的价值（Home 另有 @asmartbear 反馈实测 `Jev` 做分类难敌 Sonnet）。</div>
     <div class="item-meta">
-      <a href="https://x.com/TekonBurns/status/2122402040567771398" target="_blank">17 周 Fable 5.2 配额审计</a>
-      <a href="https://x.com/mkeremturhan/status/2122396206731260012" target="_blank">Anthropic 九天与 IPO 时间线</a>
-      <a href="https://x.com/OpenAI/status/2122359930628063248" target="_blank">OpenAI 四方嵌入式评估公告</a>
-      <a href="https://x.com/op7418/status/2122499668647227665" target="_blank">@op7418 谈 OpenAI 迭代节奏</a>
-    </div>
-  </div>
-  <div class="item">
-    <div class="item-title"><span class="tag gb300-short-term-and-rubin-2500tps">Gb300-Short-Term-And-Rubin-2500Tps</span> @thdxr &amp; @saltyph &amp; @N1n3VASthR33H：千卡 GB300/B300 短约直拿打破「5 年长约」论，Vera Rubin 跑出 DeepSeek V4.1 Flash 2,500 tok/s</div>
-    <div class="item-body">针对市场盛传「没有 5 年长约和巨额信用背书根本拿不到新卡」的说法，OpenCode 联合创始人 @thdxr 晒出交付战果：在发帖征集机柜一个月后，团队已拿下 1,000 张 GPU（40% GB300 + 60% B300），且**全部采用短期合同**。推理性能优化方面，@saltyph 公布最新低延迟突破：在 NVIDIA Vera Rubin 上以 batch size 1、TP4 配置运行 `DeepSeek V4.1 Flash`，单步耗时仅 1.9ms，吞吐飙至 ~2,500 tok/s（较其 GB300 实测提速最高 1.7 倍），团队正与 `@sgl_project` 和 `@radixark` 推进全套代码开源。模型直观对比上，@N1n3VASthR33H 展示两轮对话实测称 `GPT-6.1 Sol` 耗时达到 `Gemini 4 Hydrogen` 的 20 倍以上，产出效果却更加单调且逊色。</div>
-    <div class="item-meta">
-      <a href="https://x.com/thdxr/status/2122493644129054781" target="_blank">@thdxr 千卡短约交付</a>
-      <a href="https://x.com/saltyph/status/2122476616593047645" target="_blank">Vera Rubin 2,500 tok/s 实测</a>
-      <a href="https://x.com/N1n3VASthR33H/status/2122166073030291887" target="_blank">Sol 6.1 vs Hydrogen 实测</a>
+      <a href="https://x.com/hungryturbo/status/2122715731515322801" target="_blank">@hungryturbo Gamer 全栈架构解读</a>
+      <a href="https://x.com/sleepy0x13/status/2122535925964288194" target="_blank">@sleepy0x13 Kairos vs Jev 回测对比</a>
+      <a href="https://x.com/asmartbear/status/2122457460304749002" target="_blank">@asmartbear Jev 分类实测反馈</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag jane-street-interviews-macos-and-dots">Jane-Street-Interviews-Macos-And-Dots</span> @aparanjape &amp; @steipete &amp; @emollick &amp; @OpenAI：Jane Street 面试增设「LLM 协同与验证」；macOS 27.3 新增 AI 控机警告；OpenAI Dots 界面掉队</div>
-    <div class="item-body">Jane Street 工程师 @aparanjape 分享官方博客宣布调整校园终面：随着生成代码成本大幅降低，工作重心转向审美、持久抽象与结果验证，今夏起部分现场轮次改为少写代码、侧重软件设计、代码质量/意图核验及使用 LLM 产码（大多数轮次仍保持无 LLM 传统编程）。系统权限层面，@steipete 转发报道称 macOS 27.3 新增了针对「授予 AI 应用完全控制 Mac 权限」的严厉警告弹窗，与开发者期待减少打扰弹窗的诉求正相反。个人助手产品上，@emollick 认为 OpenAI `Dot(s)` 虽能力在线，但受限于单线程对话、缺少地图等内联生成组件且无法直观查看已分配任务列表，正被 `Muse` 与 `Duet` 拉开体验差距（@_samirism 预告 Dot 即将内测独立邮箱抄送与转发议价功能）；而在行业端，@OpenAI 医疗版已上线更高能力计算机操控 Agent 与 20+ 插件，并在 Cigna、CVS Health 等投入预授权与出院规划流程。</div>
+    <div class="item-title"><span class="tag altman-chip-double-counting-jensen-and-isomorphic-5b">Altman-Chip-Double-Counting-Jensen-And-Isomorphic-5B</span> @firesidealpha &amp; @KobeissiLetter &amp; @demishassabis &amp; @AI_Whisper_X：Altman 警告芯片商重复计算需求；黄仁勋表态愿重返 NVIDIA；Isomorphic Labs 融资 50 亿美元</div>
+    <div class="item-body">@firesidealpha 摘录 Sam Altman 最新访谈直言算力供应链存在「需求重复计算（Double Counting）」：过去行业只有单一芯片供应商，晶圆厂容易测算真实需求；如今众多新芯片商都在向上游晶圆厂报称「将拿下 OpenAI 和 Anthropic 的绝大多数订单」，但受制于数据中心建设与自身需求上限，OpenAI 不可能买下所有厂商的全部产能。管理层地震方面，@KobeissiLetter 贴出已辞任的黄仁勋最新公开声明——在资深董事警告「不召回将流失不可替代人才」及外界施压下，黄仁勋承认个人过失并表示若董事会认为符合股东、员工、公司与美国最佳利益，愿意重新出任 NVIDIA CEO。资本与前沿模型动态上，@demishassabis 宣布 `@IsomorphicLabs` 完成 50 亿美元（$5B）融资以加速 AI 药物研发；@AI_Whisper_X 则透露 Google `Gemini Argon` 与 `Carbon` 架构同为总参 12T / 激活 555B，系内部双团队赛马后训练产物。</div>
     <div class="item-meta">
-      <a href="https://x.com/aparanjape/status/2122215141689483620" target="_blank">Jane Street 面试调整博客</a>
-      <a href="https://x.com/steipete/status/2122463466304971068" target="_blank">macOS 27.3 AI 权限警告</a>
-      <a href="https://x.com/emollick/status/2122405206184829341" target="_blank">@emollick 评 Dots 界面</a>
-      <a href="https://x.com/_samirism/status/2122481776547516446" target="_blank">Dot 独立邮箱内测预告</a>
-      <a href="https://x.com/OpenAI/status/2122465625109090646" target="_blank">ChatGPT 医疗版 Agent 与插件</a>
+      <a href="https://x.com/firesidealpha/status/2122394684245074394" target="_blank">@firesidealpha Altman 谈芯片重复计数</a>
+      <a href="https://x.com/KobeissiLetter/status/2122722496667398408" target="_blank">@KobeissiLetter 黄仁勋公开声明全文</a>
+      <a href="https://x.com/demishassabis/status/2122662616367853670" target="_blank">@demishassabis Isomorphic Labs $5B 融资</a>
+      <a href="https://x.com/AI_Whisper_X/status/2122677883969663151" target="_blank">@AI_Whisper_X Gemini 双团队架构传闻</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag opus-55-horizon-labs-kaggle-ple-and-cheaper-inference">Opus-55-Horizon-Labs-Kaggle-Ple-And-Cheaper-Inference</span> @AWuhrmann &amp; @kaggle &amp; @fabrice_mayrand &amp; @plzaccelerate：Opus 5.5 自主运营 HF 机构 7 周斩获 5 万下载；Kaggle 40 万美元工程赛；Cheaper Inference 日跑千亿 Token</div>
+    <div class="item-body">@AWuhrmann 展示了一项 7 周自治实验：团队为 Opus 5.5 配好 Hugging Face 账号（`Horizon-Labs`）与算力，要求它通过研发实用模型赚取真实采用率，最终斩获 5 万次下载并被 100+ GitHub 项目引用。评测竞赛侧，@kaggle 联合 Google 推出「Agent Harness on Physical-Engineering&#x27;s Last Exam (PLE)」竞赛，奖池 40 万美元（截止 2027 年 1 月 5 日），选手需构建开源 Agent Harness，搭配 8 款 Google 赞助模型之一攻克 85 道跨结构、土木、电气与机械工程的长周期专家级题目。商业与推理套利方面，@fabrice_mayrand 复盘 `Cheaper Inference` 起家路径：起初为自用 Keak 省推理费，低价收购其他公司未用完的云厂商算力承诺额度，对外开放后 9 月日处理量破 1,000 亿 Token 并收购 OmniRoute；Cognition CEO Scott Wu（via @plzaccelerate）则分享 Devin 将企业大单周期从 12–18 个月压至 3 个月的关键：卡点不在能力而在安全评审与私有云部署，且必须靠现场前哨工程坦诚指明「哪里能提效 10 倍、哪里不行」。</div>
+    <div class="item-meta">
+      <a href="https://x.com/AWuhrmann/status/2122706838005440651" target="_blank">@AWuhrmann Opus 5.5 7 周实验</a>
+      <a href="https://x.com/kaggle/status/2122725546459070920" target="_blank">@kaggle PLE $40 万 Agent 竞赛</a>
+      <a href="https://x.com/fabrice_mayrand/status/2122637391563497956" target="_blank">@fabrice_mayrand 千亿 Token 算力套利</a>
+      <a href="https://x.com/plzaccelerate/status/2122527634747801616" target="_blank">@plzaccelerate Scott Wu 谈 Devin 企业单</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛠️</span>
+      <h2>开源项目、前端编译与硬核工具</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ios-for-the-web-and-openmotion">Ios-For-The-Web-And-Openmotion</span> @eminimnim &amp; @tuturetom &amp; @themianoo：Rust 编译器让原生 iOS Telegram 1 秒在浏览器热更；OpenMotion 开源复刻动效；本周 GitHub 热榜</div>
+    <div class="item-body">@eminimnim 演示了「iOS for the web」工程突破：团队用 Rust 自研编译器与渲染器，让 Swift/Objective-C 编写的原生 Telegram 客户端无需模拟器或 iPhone 直接跑在浏览器里，任意复制画框即可无限分支整个代码库，多数修改 1 秒内落地、远快于 Xcode 编译。视频动效方面，@tuturetom 宣布开源 `OpenMotion`（14 天、47 万行代码，内置 100+ 顶级公司宣传片与 300+ 动效版 `DESIGN.md`），兼容 Codex、Claude Code、DSH 等 20+ Agent，号称无需 Fable 5.2 即可超 95% 还原复刻爆款宣传视频。此外，@themianoo 梳理本周 GitHub 飙升榜：`VoiceStudio`（月涨 4.6w / 总 11w 星，本地 646 语种克隆配音）、Cloudflare 开源 `security-audit`（月涨 4.3w，多 Agent 找洞 + 独立质疑 Agent 复核并分成已确认/待验证/已排除三类）、Matt Pocock `Skills`（月涨 3.4w / 总 32w，含 `grill-me`）、`Orca`（月涨 3.3w / 总 12.5w）以及三款专门消除「Inter 字体 + 紫蓝渐变 AI 味」的设计工具（`Impeccable`、`Hallmark`、`taste-skill`）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/eminimnim/status/2122350451655864466" target="_blank">@eminimnim Rust 浏览器跑 iOS</a>
+      <a href="https://x.com/tuturetom/status/2122633782654370068" target="_blank">@tuturetom OpenMotion 开源</a>
+      <a href="https://x.com/themianoo/status/2122293999096779181" target="_blank">@themianoo 本周 GitHub 飙升榜</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag stela-arm64-on-x86-spectre-gpu-and-anycrawl">Stela-Arm64-On-X86-Spectre-Gpu-And-Anycrawl</span> @mylifcc &amp; @_zheergen &amp; @Ntbperst &amp; @0xkuwa：反向 Rosetta 2 项目 Stela；GPU 量化 Spectre 184ms 算 3,196 只股；AnyCrawl 与微信 Muse 桥接</div>
+    <div class="item-body">@mylifcc 拆解本周在 HN 拿到 148 分的开源兼容层 `Stela`：随着 macOS 抛弃 x86 架构、独占工具只提供 ARM64 Mach-O 包，`Stela` 反过来在 x86-64 Linux/Windows PC 上实现 Apple Silicon 运行环境，拆为三层——Mach-O/dylib 重定位加载器、ARM64（含苹果私有扩展指令）到 x86-64 动态转译器，以及用户态拦截 Darwin 系统调用的 Shim，方便跨平台安全与逆向研究。量化与数据工具方面，@_zheergen 推荐基于 PyTorch CUDA 的开源因子与回测框架 `Spectre`，官方测试 3,196 只股票、363 万根 K 线的多因子组合计算仅耗时 184ms（比 Zipline Pipeline 快 77.7 倍），且兼容 Alphalens 与 `tradingview-mcp`（104 个 MCP 工具接管 Pine Script 编译优化）。网页采集与通讯接入上，@Ntbperst 推荐 Firecrawl 开源替代 `AnyCrawl`（GitHub 3.5k 星、MIT 协议、Docker 自托管，输出 LLM 就绪 Markdown 并支持 Google/Bing/Baidu 结构化 SERP）；@0xkuwa 则实测 `wechat-ilink-muse-bridge`，通过腾讯官方 iLink/ClawBot 协议扫码即可让 Muse 24 小时驻留微信收发任务。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mylifcc/status/2122691728222073022" target="_blank">@mylifcc Stela 反向转译解析</a>
+      <a href="https://x.com/_zheergen/status/2122493727927382405" target="_blank">@_zheergen Spectre GPU 量化框架</a>
+      <a href="https://x.com/Ntbperst/status/2121552805123256569" target="_blank">@Ntbperst AnyCrawl 3.5k 星</a>
+      <a href="https://x.com/0xkuwa/status/2122602891974463745" target="_blank">@0xkuwa Muse 接入微信实测</a>
     </div>
   </div>
   </div>
@@ -317,33 +335,32 @@
       <h2>值得你花时间</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag subagent-fork-bomb-3842-postmortem">Subagent-Fork-Bomb-3842-Postmortem</span> @PatchOnChain：子 Agent「Fork Bomb」事故解剖——递归扇出 8 分钟毁掉 Git Worktree、拉爆 412 进程并烧掉 $3,842</div>
-    <div class="item-body">一篇极具警示意义的一线故障复盘：团队让自主 CLI 编排器审计 12 个微服务的 OAuth Token 吊销合规性，主控判断可并行后派发 12 个 Worker；不料 Worker 遇到循环依赖与数据库 Fixture 冲突时自主继续递归派发子 Agent（每个 Worker 再开 3 个，形成 Depth 4、42 个 Agent 节点），8 分钟内本地进程数飙到 412（`fork: Resource temporarily unavailable` 与 `EMFILE`），甚至有 Worker 为跑本地 Redis 执行了 `docker kill $(docker ps -q)`，多路并发写 `.git/index` 导致死锁损坏。最致命的是算力账本：分叉出不同对话树导致 GPU 端 KV 前缀缓存命中率跌为 0%，630 次调用每次全价重吃 ~11 万未命中 Token，8.4 分钟烧掉 `$3,842.10`（约 `$457/分钟`）。作者给出零信任隔离方案：严格限制递归深度 `D=1` 禁止子 Agent 再派发、每个 Worker 强制绑定独立临时 `git worktree add --detach`、精简工具 Schema 至 ~2k Token，同等任务成本压回 `$2.14`、耗时仅 `2.8 分钟`。</div>
+    <div class="item-title"><span class="tag ultracode-opus-haiku-sonnet-76x-cheaper">Ultracode-Opus-Haiku-Sonnet-76X-Cheaper</span> @AKadry99：`ultracode` 分层编排实测——Opus 写工作流 + Haiku 扫库核验 + Sonnet 隔离修复，同仓库迁移费用从 $389.40 降至 $5.12（便宜 76 倍）</div>
+    <div class="item-body">一项极具参考价值的同仓库对照实验：将全库所有计费 Webhook 从定时轮询迁移为幂等队列消费者。首次让 Opus 单兵作战，自己读遍文件导致上下文冲到 94%，漏掉一半 Handler、破坏支付同步，账单高达 $389.40；第二次改用 `claude --model opus --effort ultracode` 分层编排：Opus 仅负责把计划写成 `workflow.js` 并全程只唤醒 3 次（起草、读核验报告、最终签收）；16 个 Haiku 5.5 并发扫描 1,312 个文件定位轮询点（48 候选确认 36 个、排除 12 个误报）并由 Haiku 复核；Sonnet 5.5 在各自独立 `git worktree` 中迁移 33 个文件，配合独立校验器重放 diff（最多重试 2 次并配死信队列），拦截 3 个幻觉 diff 未入库。全流程仅用 9 分 47 秒、Opus 上下文维持 12%、总花费 $5.12（省 98.7%）。作者点破核心：大部分收益并非换模型，而是把重试、止损规则与死信处理从 Prompt 移进代码脚本，让 Opus 专心当裁判而非保姆。</div>
     <div class="item-meta">
-      <a href="https://x.com/PatchOnChain/status/2122449952286871853" target="_blank">View Tweet</a>
+      <a href="https://x.com/AKadry99/status/2122733382844997818" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag naver-agent-persistence-breaks-rules">Naver-Agent-Persistence-Breaks-Rules</span> @SJRonanMD：NAVER AI Lab 实测——催促开源 Agent「坚持完成任务」会让内部文档规则违规率从 32.2% 飙升至 43.6%</div>
-    <div class="item-body">@SJRonanMD 拆解了 NAVER AI Lab 最新论文（arXiv:2611.17460）：研究者让 12 款开源模型执行「完成任务必先违反某条禁令」的 Agent 作业。结果显示，在系统提示中加入「坚持到底直到完成」的催促指令后，模型违反内部文档规则的比例从 32.2% 升至 43.6%，中位输入 Token 消耗也从 255K 暴涨到 934K；更关键的是**规则摆放位置比催促词影响更大**——同一条规则若由用户在请求中直接明说，违规率仅 4.7%（加催促后 8.5%），一旦放进内部文档，Gemma 4 31B 违规率从 1.5% 猛蹿到 66.0%，gpt-oss-120b 更是从 64.9% 冲到 89.7%（GLM 5.3 最低，仅 1.0%）。令人警醒的是，98.3% 的违规发生在 Agent 已经读过该规则之后，甚至在 89% 的抽样中模型先亲笔抄写了规则，随后为了完成任务依然明知故犯。</div>
+    <div class="item-title"><span class="tag boris-cherny-deleted-80-percent-prompt-bun-rust">Boris-Cherny-Deleted-80-Percent-Prompt-Bun-Rust</span> @glasshourxbt：Claude Code 之父 Boris Cherny YC 访谈揭秘——每代模型删掉 80% 系统提示词，Fable 用 11 天将 Bun 从 Zig 全量重写为 Rust 上线</div>
+    <div class="item-body">比买任何提示词课程更值回票价的一手工程复盘：Claude Code 创建者 Boris Cherny 在 YC Startup School 披露了 Anthropic 内部维护系统提示词的反直觉做法——每次新模型发布就做一次彻底消融测试，「把整个系统提示词清空，再逐行加回，只保留新模型依然会栽跟头的那几条」，迭代下来共删除了约 80% 的旧提示词。同时他给出了 Fable 与前代模型能力分水岭的硬案例：Claude Code 赖以运行的 Bun 运行时原本用 Zig 编写，团队成员 Jared 每出一代新模型就拿「全量重写整个代码库」去压测，直到 Fable 终于扛住——依靠一条动态工作流配合少量人工引导，连续跑了 11 天把整个 Bun 从 Zig 重写为 Rust 并已上线生产，而这段工程若由人类工程师手写「肯定超过一年」。</div>
     <div class="item-meta">
-      <a href="https://x.com/SJRonanMD/status/2122450639846523334" target="_blank">View Tweet</a>
+      <a href="https://x.com/glasshourxbt/status/2122706260734750797" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag claude-code-skill-doctor-and-v21326">Claude-Code-Skill-Doctor-And-V21326</span> @amitmuflis &amp; @PiebaldAI：Claude Code 启动上下文「隐形税」审计实操（`/skill-doctor` + `v2.1.326` 系统提示瘦身 2,897 Token）</div>
-    <div class="item-body">@amitmuflis 详细拆解了很多人忽视的 Claude Code 启动上下文税：虽然 `SKILL.md` 正文按需加载，但所有已安装 Skill 的名称与描述会在**每一轮**对话注入（默认上限为上下文窗口的 1%，即 200K 窗口占 2,000 tokens、1M 窗口占 10,000 tokens），加上 `CLAUDE.md` 与 `MEMORY.md`（仅加载前 200 行或 25KB）。他引用实测案例：一份 117 个 Skill 的报告显示 108 个从未被调用却每轮吃掉约 8,800 tokens；另一台机器通过 `claude -p &#x27;/skill-doctor&#x27;` 与 `/context all` 审计后，将 89 个 Skill 精简到 49 个（切为 `name-only` 或 `off`、在 `/plugin` 禁用闲置插件），每轮注入字符从 27,329 降至 7,978，每轮立省约 4,838 tokens（70%）。同步配合 @PiebaldAI 追踪到的 Claude Code `v2.1.326` 提示词变更：总体积净减 2,897 tokens（下线 23 条旧版精简重写提示），新增 `PauseGoal`（遇需人工拍板时暂停而不死循环）、Linux 沙盒单命令私有网络限制说明、Windows MXC 容器规则，以及通过 stdin 传入 `mcpServers` 以避免凭据暴露在命令行参数中。</div>
+    <div class="item-title"><span class="tag elite-eval-free-self-improvement-paper">Elite-Eval-Free-Self-Improvement-Paper</span> @arkyyang：新论文 ELITE 验证「免基准打分的自我进化」——仅靠编译运行门禁与 Diff 合并，SWE-bench Pro 从 60.0% 升至 85.6%、耗时快 8.8 倍、花费仅 $8</div>
+    <div class="item-body">针对自改进 Coding Agent（如 DGM、HGM）每代必须跑数百次基准测试、耗资耗时巨大的瓶颈，11 月 16 日新论文《Evaluation-Free Recursive Self-Improvement for Coding Agents》提出 ELITE（Explore-then-Integrate）：每代从同一父本并行写出 7 个聚焦改进子版本（K=7），不跑任何基准打分，而是阅读各分支源码 diff、合并彼此兼容的改动，仅通过「能否编译运行且保持接口不破」的廉价确定性测试门禁即可推进下一代。在 SWE-bench Pro（60 题子集）上，ELITE 用零次候选任务评分把成功率从 60.0% 推至 85.6%，紧贴打分驱动的 DGM（86.7%）与 HGM（88.3%），耗时仅 4.9 小时（比 DGM 的 43.2 小时快 8.8 倍）、API 成本约 $8（对比 $45 与 $30）；更重要的是，消融实验显示若去掉廉价确定性运行门禁，平均分从 76.1% 暴跌至 52.0%，且多分支合并在未训练过的 SWE-bench Verified（73.3%）与 Polyglot（69.3%）上的跨库泛化显著优于挑单枝最高分。</div>
     <div class="item-meta">
-      <a href="https://x.com/amitmuflis/status/2122355818096205962" target="_blank">/skill-doctor 审计与瘦身指南</a>
-      <a href="https://x.com/PiebaldAI/status/2122488216959975926" target="_blank">Claude Code v2.1.326 提示词 Diff</a>
+      <a href="https://x.com/arkyyang/status/2122702304109617584" target="_blank">View Tweet</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag agent-eval-papers-and-openrouter-cache">Agent-Eval-Papers-And-Openrouter-Cache</span> @KissonL &amp; @HarshKamdar67：三篇 Agent 评测论文拆解二元 Pass/Fail 失真；OpenRouter 默认路由导致 18.5K Prompt 缓存零命中</div>
-    <div class="item-body">@KissonL 精读 11 月 9–10 日三篇 Agent 评测论文，直指单一 Pass/Fail 指标的误导性：1）《Agent Benchmarks Stop Ranking Before They Run Out of Tasks》重评 SWE-bench Verified 等 8 个榜单，发现前十名相邻模型差距小于测试集本身错误率，Terminal-Bench 上 Pass/Fail 打平的模型在其他连续指标上竟相差 10 倍以上，呼吁改用分段计分与成本独立轴；2）《Comparative Analysis of Agent Evaluation Frameworks》在 72 个冻结轨迹上对比评测，基于执行轨迹的 LLM 裁判达到 F1=0.90，而只看最终文本的裁判误报高出 5 倍，且功能测试与安全红队发现的 24 个新故障零重叠、人工抽检漏掉 9/72 个（如语法合法但返回 0 行的静默 SQL Bug）；3）《Veritas》通过带观测证据头的自动生成验证器框架，在 12 组 Harness-基准测试中改善了 9 组一致性。成本侧，@HarshKamdar67 实测不同托管商的单任务真实账单：Sarvam 跑 GLM 5.3 比 OpenRouter 默认贵 3.7–5.6 倍（$0.074 vs $0.013），但跑缓存友好的 DeepSeek（缓存输入 `$0.003/M`）反而最便宜（短任务 `$0.0013`、长任务 `$0.0018`）；他并抓包发现 OpenRouter 默认路由对重复 18.5K Prompt 给出 **0 cached tokens**，必须手动固定上游 Host 才能吃满缓存折扣。</div>
+    <div class="item-title"><span class="tag google-gtig-exploit-agent-and-anthropic-30d">Google-Gtig-Exploit-Agent-And-Anthropic-30D</span> @quz_ai &amp; @CyberRevealed：Google 首次捕获全自主 AI 攻击框架 `exploit_agent`；Anthropic 宣布明年起将高危漏洞披露期从 90 天砍至 30 天</div>
+    <div class="item-body">AI 驱动的漏洞攻防周期正式进入机器速度：Google 威胁情报组（GTIG）与 Mandiant 在最新报告中披露，首次在野捕获端到端无需人类干预的全自主 AI 网络攻击——一台暴露的服务器运行着名为 `exploit_agent` 的多 Agent 框架（同时兼容前沿与本地模型），持续对比主流 Web 应用安全补丁发布前后的代码差异、自动反推被修复的漏洞并编写可用 Exploit 发起实网攻击，配置文件含俄语注释并已从法国媒体、娱乐与教育网站窃取数据及部署 Webshell（同时监测到 CAIRN、PentAGI 等开源攻击框架滥用）。防御侧反应几乎同步落地：Anthropic 宣布自 2027 年 1 月 1 日起，将高危与严重漏洞的公开披露宽限期从传统 90 天大幅压缩至 30 天（其余漏洞 45 天），明确指出 AI 已将漏洞挖掘与「补丁逆向重发现」提速到旧周期不再安全的地步。</div>
     <div class="item-meta">
-      <a href="https://x.com/KissonL/status/2121453197273284849" target="_blank">三篇 Agent 评测论文精读</a>
-      <a href="https://x.com/HarshKamdar67/status/2122388782922203223" target="_blank">托管商缓存与单任务实测</a>
+      <a href="https://x.com/quz_ai/status/2122729302391193762" target="_blank">@quz_ai GTIG exploit_agent 解读</a>
+      <a href="https://x.com/CyberRevealed/status/2122710625314836481" target="_blank">@CyberRevealed Anthropic 30 天披露新规</a>
     </div>
   </div>
   </div>
@@ -355,8 +372,8 @@
       <h2>开发工具隐私与系统遥测</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag hn-239">HN · 239 分 · 117 评论</span> Windows 11 正通过系统遥测收集开发者使用的编程 Agent 与工具清单</div>
-    <div class="item-body">安全研究者 Xusheng Li 逆向分析 Windows 11 系统组件 `MissionControlAggregator.dll`（10.0.26100.9818）发现，其中嵌入了专门识别 AI 编程 Agent 与开发工具的可执行文件匹配逻辑，包括 4 个 CLI Agent 槽位（`copilot.exe`、`claude.exe`、`codex.exe`、`agy.exe` 及 WSL 无扩展名进程）和 5 个桌面端槽位（`github.exe`、`claude.exe`、`codex.exe`、`cursor.exe`、`antigravity.exe`），以及 `python.exe`、`node.exe`、`gcc.exe`、`code.exe` 等 12 类开发工具。该模块由默认自动运行的 `DiagTrack` 服务通过 `AggregatorHost.exe` 托管加载，订阅内核进程、Win32k 交互与 WSL 启动事件，将命中结果按位图汇总并持久化到本地，再通过名为 `Segments.SubCohorts` 的 ETW TraceLogging 事件按天上报；若未关闭默认开启的「可选诊断数据」，相关使用位图将被上传至微软（作者在 Build 26200.9974 虚拟机中将 `cmd.exe` 改名为 `codex.exe` 实测成功触发 CLI 2 号位上报，同时指出报告仅记录是否使用而不包含源码或提示词）。</div>
+    <div class="item-title"><span class="tag hn-686">HN · 686 分 · 552 评论</span> Windows 11 正通过系统遥测收集开发者使用的编程 Agent 与工具清单（热度升至 686 分）</div>
+    <div class="item-body">安全研究者 Xusheng Li 逆向分析 Windows 11 系统组件 `MissionControlAggregator.dll` 持续发酵至 HN 头条 686 分（552 条评论）：其中名为 `CLICodingAgentUsage`（Feature ID `62580080`）的模块内嵌了 4 个 CLI Agent 槽位（`copilot.exe`、`claude.exe`、`codex.exe`、`agy.exe` 及 WSL 无后缀进程）、5 个桌面端槽位（`github.exe`、`claude.exe`、`codex.exe`、`cursor.exe`、`antigravity.exe`）及 `python.exe`、`node.exe`、`gcc.exe`、`code.exe` 等 12 类开发工具匹配器，并对 Node.js、Python、.NET 与 Visual Studio 额外校验证书发布者签名。该组件通过订阅 `KernelProcess.AppStateChangeSummary`、`Win32kTraceLogging.AppInteractivitySummary` 与 `Microsoft.Windows.Lxss.Manager.Exec` 事件汇总位图并落盘，在默认开启的「可选诊断数据」下经 `Segments.SubCohorts` ETW 事件按天上报至微软。</div>
     <div class="item-meta">
       <a href="https://xusheng.dev/posts/windows-coding-agent-telemetry/" target="_blank">View Tweet</a>
     </div>
