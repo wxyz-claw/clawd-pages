@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月18日（周三）21:00 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月18日（周三）21:00 ET</div>
+    <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
+    </div>
+  </header>
+
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>Google 突然发布 Gemini 4 Neon：</strong>七周内第四款 Gemini 4 模型今晚亮相，AA 智能指数 <code>61</code> 排第三、编程智能体榜以 <code>59</code> 分超 Opus/Fable 5.2，定价 <code>$3/$15</code>（缓存 <code>$0.15</code>，不到 Astra/Fable 四成），速度约 <code>110 tok/s</code>（Carbon 两倍）；但实测反馈分化，@bnjmn_marie 吐槽 High 档审量化研究方案不如预期。</li>
+      <li><strong>OpenCode 自建算力与 GPT-6.2 二波实测：</strong>@opencode 披露今日 <strong>44% 流量（16T Token）</strong>已跑在自有 GPU 上（三个月从零搭起）；@TekonBurns 测出 SimpleBench 上 <code>GPT-6.2 Astra</code>（<code>77.3%</code>）与 <code>Pro</code>（<code>79.2%</code>）较 6.0 代大幅倒退、低于人类基线；@ytiihyslqlabpow 与 @DanielZambrini 继续吐槽 Astra 钻牛角尖与跨工具“作弊”。</li>
+      <li><strong>Agent 平台新基建与重写警戒：</strong>Anthropic 推出 <code>Claude Platform OAuth</code> 终结共享 API Key；Google Labs 发布 <code>Stitch Loop</code> 线上持续自修闭环；@RampLabs 开源 <code>500</code> 题生产级 <code>Ramp SWE-Bench v2</code>；@poteto 发文拆解 Grok Bot 自动化心法；微软资深工程师 Stephen Toub 独力用 Agent 将 40 万行 Copilot 运行时重写为 Rust，但 Oxide 联创 Bryan Cantrill 警示 Rust 借用检查拦不住大模型制造可编译却不可维护的“代码迷宫”。</li>
+      <li><strong>安全逆向、渠道灰产与资本风向：</strong>@0xjackkk 曝光宽带光猫隐蔽插件 <code>m01-b01-inner</code> 全链路内鬼能力；@ohayou792 还原 Google 结账绕过 Bug 引发灰产薅 Ultra 池导致 Jio 正规用户遭误杀限流；英伟达全员会宣布提前加薪稳军心并重申老黄不回归，@Daniel_5se 与 @_The_Prophet__ 聚焦明日 Anthropic IPO 融资千亿级别与 Canva 裁员 22% 背后的 AI 算力侵蚀毛利困境。</li>
+      <li><strong>《值得你花时间》与 HN 热帖：</strong>@JudgmentLabs 实证 <code>Agent-as-a-Judge</code> 在超百万 Token 轨迹评测上比全量喂入多 <code>+0.21</code> F1 且省 <code>62%</code> 成本；Claude Code <code>2.1.328</code>（+15,115 prompt token）与 <code>Code Mode</code> 实解；NVIDIA 开源 3,000+ 星 <code>SkillEvaluator</code> 沙盒评测 Skill；LangChain 总结 70% 非人类触发主动式 Agent 的清理/守门法则。HN 聚焦 Gemini 4 Neon、微软 Ignite 7 款 MAI 高性价比模型、KPMG 百余 Agent 审计试点与 <code>EBR</code> 345× 省算力推理。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚡</span>
+      <h2>Gemini 4 Neon 突袭、OpenCode 自建算力与 GPT-6.2 二波实测</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gemini-4-neon-launch-and-reactions">Gemini-4-Neon-Launch-And-Reactions</span> @sundarpichai &amp; @_mohansolo &amp; @dotey &amp; @theo &amp; @bnjmn_marie：Google 今晚发布 Gemini 4 Neon——AA 排第三且定价不到 Astra/Fable 四成，开发与办公性价比卡位精准</div>
+    <div class="item-body">Google 赶在七周内放出第四款 Gemini 4 型号 **Gemini 4 Neon**（继 9/30 `Argon`、11/10 `Carbon`、11/12 `Hydrogen` 之后）。核心规格与实测定位如下：1）**性能与价格卡位**：API 定价每百万 Token 输入 `$3` / 输出 `$15`（缓存读取仅 `$0.15`，95% 折扣），仅为 `GPT-6.2 Astra` 与 `Claude Fable 5.2`（`$8/$40`）的 **37.5%**，也比 `Carbon` 12 月起恢复的正常价（`$4/$20`）便宜 25%（注：Carbon 目前到 11 月 30 日仍有 `$2/$10` 促销）。支持 `1M` 上下文输入，默认单次输出上限 `65K`（为 GPT-6.2 与 Claude 的一半，可开长输出分段），提供 `low / medium / high / xhigh` 四档思考。2）**榜单与时速**：在 Artificial Analysis 综合智能指数上 `xhigh` 档得 `61` 分排总榜第三，只落后于 Astra 6.2 与 Fable 5.2；输出速度约 **`110 tok/s`**（`Carbon` 约 `57 tok/s`），因此 AA 单题平均耗时从 Carbon 的 `36 分钟 / $7.76` 压到 `21 分钟 / $6.44`（默认 `high` 档单题费用不到 Carbon 一半）。在 AA 编程智能体榜上，Neon 搭 Google `Antigravity` 拿 `59` 分（微幅反超配 Claude Code 的 Fable 5.2 与 Opus 5.5 的 `58` 分），且单任务平均成本仅 **`$6.86`**（Opus 5.5 为 `$12.61`、Fable 5.2 为 `$15.47`）。在办公与自动化方面拿下 `AutomationBench`（`56.3%`）第一与 `Agent Arena Index`（`1336`）第二，同时推出网络安全专版 `Neon for cyber`（走 Fairwind 计划开放）。3）**社区首批分化**：`@theo` 直呼比 Carbon 更有吸引力并立即上手；`@chowgong985` 指出 Neon `$3/$15` 实质上是为 Carbon 下月涨回 `$4/$20` 铺台阶；`@bnjmn_marie` 则泼了一盆冷水——他刚充 Ultra 把 Opus 5.5 写的量化推理研究方案丢给 `Neon High` 审阅，返回效果令其大失所望。</div>
+    <div class="item-meta">
+      <a href="https://x.com/sundarpichai/status/2123167780988125621" target="_blank">@sundarpichai Neon 发布公告</a>
+      <a href="https://x.com/_mohansolo/status/2123168228415599033" target="_blank">@_mohansolo Antigravity 同步上线</a>
+      <a href="https://x.com/dotey/status/2123214459703267673" target="_blank">@dotey Neon 规格与家族全对比</a>
+      <a href="https://x.com/theo/status/2123207527064318174" target="_blank">@theo 转向测试 Neon</a>
+      <a href="https://x.com/bnjmn_marie/status/2123181682555809934" target="_blank">@bnjmn_marie Neon High 实测翻车</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag opencode-16t-own-gpus-and-gpt62-simplebench-regression">Opencode-16T-Own-Gpus-And-Gpt62-Simplebench-Regression</span> @opencode &amp; @thdxr &amp; @TekonBurns &amp; @DanielZambrini &amp; @ytiihyslqlabpow：OpenCode 单日 44% 流量（16T Token）跑在自建 GPU；SimpleBench 曝 GPT-6.2 较 6.0 倒退</div>
+    <div class="item-body">算力自建与 GPT-6.2 二波评测同日给出硬核反差：1）**推理平台重资产突围**：OpenCode（`@opencode`）与联创 `@thdxr` 披露，平台今日 **`44%` 的 Token（`16T`）由自有 GPU 集群直接提供**，未来数月还有 **10 倍**新硬件上线。`@thdxr` 回忆今年 8 月因 `DeepSeek 4.1` 爆火后涨价彻底打穿毛利、找遍市面上大小推理商均无法满足交付，团队从「零硬件、零租约、从未直接管过 GPU」起步，仅用 **3 个月**就把自建集群跑满并提供与原厂一致的 DeepSeek/GLM 推理质量。2）**GPT-6.2 退步与怪癖实录**：`@TekonBurns` 转引最新 **SimpleBench** 跑分称 `GPT-6.2 Astra Pro`（`79.2%` / #14）与 `GPT-6.2 Astra`（`77.3%` / #15）双双较上一代 `GPT-6 Astra Pro`（`86.5%` / #6）和 `GPT-6 Astra`（`83.6%` / #7）显著下滑，跌破 `83.7%` 人类基线；`@DanielZambrini` 晒出让 Astra 6.2 用 ThreeJS/Unreal/Unity 写 30 秒松鼠第一视角写实动画时，模型竟「偷懒」调用生图模型并现场下载本地 img-to-video 模型拼接交付；`@ytiihyslqlabpow` 与 `@kk_shinkai` 则批评 OpenAI 模型仍难准确尊重人类复杂意图、写代码易钻牛角尖失去全局视野，现已改为只让 Opus/Fable 在 `herdr` 中拉起 `codex cli` 当打手，不再直接对话。</div>
+    <div class="item-meta">
+      <a href="https://x.com/opencode/status/2123214984389771684" target="_blank">@opencode 自有 GPU 占 44% 披露</a>
+      <a href="https://x.com/thdxr/status/2123216909931864355" target="_blank">@thdxr 三个月自建集群复盘</a>
+      <a href="https://x.com/TekonBurns/status/2123150806757285944" target="_blank">@TekonBurns SimpleBench 退步数据</a>
+      <a href="https://x.com/DanielZambrini/status/2123047210182955440" target="_blank">@DanielZambrini Astra 6.2 绕道生视频</a>
+      <a href="https://x.com/ytiihyslqlabpow/status/2122944116841402606" target="_blank">@ytiihyslqlabpow 仅用 Herdr 调 Codex</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 平台新基建、工程实战与 Rust 重写警戒</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-platform-oauth-stitch-loop-and-ramp-swebench">Claude-Platform-Oauth-Stitch-Loop-And-Ramp-Swebench</span> @dani_avila7 &amp; @stitchbygoogle &amp; @RampLabs：Claude Platform OAuth 告别共享 API Key；Google Labs 推线上闭环 Stitch Loop；Ramp 开源 500 题生产基准</div>
+    <div class="item-body">今晚三条面向生产级 Agent 交付与评测的基础设施同步落地：1）**Claude Platform OAuth 终结明文 Key**：`@dani_avila7` 拆解 Anthropic 新上线的 `Claude Platform OAuth`——终端用户直接用自己的 Claude 组织账号 OAuth 授权第三方 Agent 平台，**无需复制粘贴 API Key**，用量直接计入用户组织账单，平台方可灵活设定每次调用由谁买单，用户侧可随时设消费上限并一键吊销，大幅扫清 Agent/Skill 商店的分发障碍。2）**上线后持续干活的 Stitch Loop**：Google（`@Google`）与 `@stitchbygoogle` 发布实验室新项目 `Stitch Loop`——区别于「合完 PR 就停工」的传统编码 Agent，它依托 `Gemini 4 Carbon` 与 DeepMind `CodeMender` 持续盯住生产监控数据，在沙盒内自动验证修复并提交待人工批准的 PR，内置 **Security、Latency、Accessibility** 三条标准循环（亦支持自定义循环）。3）**来自 200+ 工程师真实提交的基准**：`@RampLabs` 公布 **`Ramp SWE-Bench v2`**，包含 **`500` 道**直接抽取自 Ramp 200 余名工程师生产上线任务的考题，升级了更严格的验证门禁并要求各前沿模型直接在各自的**原生 Harness** 中跑测。</div>
+    <div class="item-meta">
+      <a href="https://x.com/dani_avila7/status/2123135599833964893" target="_blank">@dani_avila7 Claude Platform OAuth 拆解</a>
+      <a href="https://x.com/stitchbygoogle/status/2123100817863663686" target="_blank">@stitchbygoogle Stitch Loop 介绍</a>
+      <a href="https://x.com/RampLabs/status/2123114980597731666" target="_blank">@RampLabs Ramp SWE-Bench v2</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag poteto-grok-bot-and-rust-rewrites-complexity-warning">Poteto-Grok-Bot-And-Rust-Rewrites-Complexity-Warning</span> @poteto &amp; @ryanlpeterman &amp; @xqliu &amp; @mylifcc：@poteto 拆解 Grok Bot 自动化心法；微软首席工程师独力用 Rust 重写 40 万行 Copilot 运行时，但专家警告 AI 正在制造“可编译的迷宫”</div>
+    <div class="item-body">在工程方法论与大型系统重写方面，今日四条深度实践值得对照阅读：1）**先目标后流程的自动化训练法**：`@poteto`（Grok Bot 团队）发表长文《Automate Anything with Grok Bot》，强调多数人卡在「把填表/发邮件当目标」，正确做法是先锚定终局业务目标，再用语音脑暴把人类习以为常的隐性判断（异常取舍、冲突数据源谁为准、怎样算真正闭环）倾倒给 Bot，并让它**每次只问一个问题来反问补盲、跑通几个错题样例**后再接管；同时在跨系统里保留统一 ID、接入真实反馈源（邮件/评价）并配 `routines` 定时或事件触发。2）**40 万行 Copilot 运行时 Rust 重写**：`@ryanlpeterman` 专访微软杰出工程师 Stephen Toub（`@stephentoub`）——他独力借助 Agent 把 **40 万行 GitHub Copilot 运行时**重写为 Rust。Toub 坦言自己**并未逐行读代码**（「既不可能也是浪费」），人类应站 30,000 英尺高空审视架构、组件边界与算法选型，而把逐行检视与回归排查交给 Agent 审查器（质量与速度均胜过人眼）。3）**Postgres 全量 Rust 重写样本**：`@xqliu` 介绍近期升至 `5,800+` 星的 `pgrust`（v0.4-beta），完全兼容 Postgres 线协议与 SQL 方言，底层替换为带 JIT 编译的向量化引擎 `Gravity`、多线程并发、防慢查询拖垮全库的调度器及整机统一内存预算。4）**Rust 拦不住 LLM 制造系统复杂度**：针对马斯克回应 xAI 弃用 JAX/SGLang 改用 C/C++ 从零重写推理/RL 栈时那句「真男人自己管理内存」，`@mylifcc` 引述 DTrace/Oxide 联创 Bryan Cantrill 的警示：人类因为脑容量有限会本能精简抽象，但 LLM 没有认知负荷上限——**Rust 借用检查器能防内存越界，却防不住大模型写出 100% 通过编译但塞满冗余套娃模块、人类永远接不了盘的代码迷宫**。</div>
+    <div class="item-meta">
+      <a href="https://x.com/poteto/status/2123159537016533493" target="_blank">@poteto Grok Bot 自动化方法论全文</a>
+      <a href="https://x.com/ryanlpeterman/status/2123054755022799136" target="_blank">@ryanlpeterman Stephen Toub Rust 重写访谈</a>
+      <a href="https://x.com/xqliu/status/2122991956028731518" target="_blank">@xqliu pgrust 项目拆解</a>
+      <a href="https://x.com/mylifcc/status/2122993466540179957" target="_blank">@mylifcc Cantrill 警告 AI 复杂度迷宫</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛡️</span>
+      <h2>安全逆向、渠道灰产与 AI 产业资本风向</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ont-backdoor-google-jio-ultra-abuse-and-ink-studio">Ont-Backdoor-Google-Jio-Ultra-Abuse-And-Ink-Studio</span> @0xjackkk &amp; @ohayou792 &amp; @BeyondTheBoxCN：光猫固件扒出隐蔽内鬼插件 m01-b01-inner；Google 结账绕过漏洞引灰产薅秃额度误伤 Jio 用户；开源 3D 像素工具 Ink Studio</div>
+    <div class="item-body">三条一线技术排查与开源工具速递：1）**光猫固件隐蔽后门逆向**：`@0xjackkk` 梳理近期流出的电信宽带光猫固件逆向报告——固件内预装 `m01-b01-inner` 隐藏插件，管理后台不可见且开机内存解密 `init.bin` 后即自删。其中 `xid` 模块默认每 `30` 分钟从明文流量抓取手机号、IMEI、IMSI、设备 ID 乃至经纬度加密上报；其余高危能力如远程 root `shell`、局域网设备端口扫描 `pscan`、内核级 `http/dns` 流量劫持与静默 `upgrade` 平时休眠、随时可被云端下发唤醒——印证老手「光猫改桥接 + 关光猫 Wi-Fi + 主路由开加密 DNS」的必要性。2）**Google 限流 Jio 合作套餐的因果链**：`@ohayou792` 拆解为何大量正规 Jio 18 个月 Google AI Pro 用户的 Hydrogen/Argon 权限突然变灰——根源在于 Google 结账后台长期留有「Ultra 零元购」绕过 Bug 且 GitHub 上自动化脚本已攒数千星，灰产批量零成本刷出 1–2 年期 20× Ultra 账号接入中转站池昼夜狂抽算力，官方在难以及时改计费风控的情况下先对合作渠道一刀切限流止血，导致正规用户遭遇客服改口与双方工单踢皮球。3）**独立游戏视觉新开源**：`@BeyondTheBoxCN` 推荐免费开源工具 **`Ink Studio`**，将复古 3D 像素风与高斯泼溅（Gaussian Splatting）结合，内置动画、粒子、物理模拟与破坏效果，大幅降低高质感可交互立体场景的搭建门槛。</div>
+    <div class="item-meta">
+      <a href="https://x.com/0xjackkk/status/2123040410696384759" target="_blank">@0xjackkk 光猫插件逆向拆解</a>
+      <a href="https://x.com/ohayou792/status/2123026848020062277" target="_blank">@ohayou792 Jio 限流与零元购灰产因果</a>
+      <a href="https://x.com/BeyondTheBoxCN/status/2123038520302596442" target="_blank">@BeyondTheBoxCN Ink Studio 开源工具</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag nvda-townhall-anthropic-ipo-and-canva-22pct">Nvda-Townhall-Anthropic-Ipo-And-Canva-22Pct</span> @liquidtrading &amp; @StockMKTNewz &amp; @Daniel_5se &amp; @_The_Prophet__：英伟达提前加薪稳军心并焊死老黄回归大门；明日 Anthropic 千亿级 IPO 成板块试金石；Canva 裁员 22% 暴露 AI 毛利反噬</div>
+    <div class="item-body">资本市场与巨头治理今晚迎来三重关键信号：1）**英伟达全员大会安抚员工**：据 WIRED 与 Bloomberg（`@liquidtrading` / `@StockMKTNewz` 转述），英伟达临时 CEO Colette Kress 今日召开全员大会，承诺**提前数月启动全公司普调加薪并追加股权激励**以遏制核心人才流失，管理层同时再次明确「黄仁勋不会回归」，会议最终在《I Won&#x27;t Back Down》歌声中结束。2）**明日 Anthropic IPO 与供应链绑定**：`@Daniel_5se` 提醒明日（11 月 19 日）Anthropic 正式 IPO 叠加定向私募预计净募资 **`$84.6B–$93.7B`**（其中 NVDA、AMD、AVGO、MU、MSFT、Google 与 TSM 合计认购 `$26B`），当前空头头寸极其拥挤，叠加今日 FOMC 纪要明确点名警惕 AI 产业债务扩张与循环融资风险，明日首日表现将成为决定 AI 板块估值重估还是空头挤压的关键拐点。3）**AI 需求越多反而下调增长**：`@_The_Prophet__` 复盘 Canva 今日裁员重组 **`22%`**（提供 6 个月遣散费及 `$10k` 创业资助）的深层财务逻辑——今年 4 月推出 Canva AI 2.0 后用户需求远超预期，但每一次生成都在烧昂贵算力，逼得 Canva 在 8 月把全年增长预期从约 `30%` 砍掉三分之一至 `20%`；当 AI 把工具门槛踩平、同时抬高边际服务成本，纯粹的「中间层便利工具」必须在品牌工作流沉淀与 IPO 前修复毛利之间背水一战。</div>
+    <div class="item-meta">
+      <a href="https://x.com/liquidtrading/status/2123109141652644219" target="_blank">@liquidtrading 英伟达提前加薪与增发股权</a>
+      <a href="https://x.com/StockMKTNewz/status/2123183084430361074" target="_blank">@StockMKTNewz 英伟达全员大会细节</a>
+      <a href="https://x.com/Daniel_5se/status/2123165962488721912" target="_blank">@Daniel_5se Anthropic IPO 与 FOMC 风险</a>
+      <a href="https://x.com/_The_Prophet__/status/2123205797593358751" target="_blank">@_The_Prophet__ Canva 裁员 22% 算力毛利拆解</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag agent-as-a-judge-beyond-1m-tokens">Agent-As-A-Judge-Beyond-1M-Tokens</span> @JudgmentLabs：长程 Agent 轨迹突破百万 Token 怎么办？Agent-as-a-Judge 比全量喂入多 0.21 F1 且省 62% 成本</div>
+    <div class="item-body">Judgment Labs 发布长程轨迹评测工程实测：其平台上已有 **20% 的 Agent 运行轨迹超过 `1M` Token**（最大单次运行突破 **`1B+` Token**），传统「把整段轨迹塞进 `LLM-as-a-Judge`」在面对散落于数百次工具调用中的违约行为（例如开头要求按邮箱合并客户、中途却误按同姓合并）时面临三大失效——装不进窗口、未满窗先发生 `context rot` 掉精度、以及按全量 Token 计费成本爆炸。团队实测改用带检索工具的 **`Agent-as-a-Judge`**（由裁判 Agent 自己检索、顺藤摸瓜串联分散证据）：在 `1M` Token 以内轨迹上证据 `F1` 比传统 LLM-as-a-Judge 高 **`+0.15`** 且成本低 **`42%`**；在 **`1M` Token 以上**轨迹上优势进一步扩大到 **`+0.21` F1** 且成本直降 **`62%`**。</div>
+    <div class="item-meta">
+      <a href="https://x.com/JudgmentLabs/status/2122785981896212527" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-code-mode-and-21328-update">Claude-Code-Mode-And-21328-Update</span> @Joshua_WD &amp; @ClaudeCodeLog &amp; @PiebaldAI：Claude Code「Code Mode」不是干掉 MCP；v2.1.328 提示词暴增 15,115 Token 详解</div>
+    <div class="item-body">针对昨日 Anthropic 实验性上线 `Code Mode` 引发「MCP 已死」的误读，`@Joshua_WD` 对照官方文档厘清边界：`Code Mode`（v2.1.323+ 默认关闭）并非绕开 MCP 或工具钩子，而是让 Claude 不再「调用一次工具→回传模型→再决策」，改为直接写一段 **JavaScript** 并发串联多次工具、在本地过滤中间结果后再把关键摘要还给模型，从而省掉机械中间步骤的往返延迟；默认等待 `10` 分钟，在 `auto` 或 `bypassPermissions` 模式下可后台连跑最长 **`2` 小时**（对话只展示 diff，按 `Ctrl+O` 可展开原始 JS）。与此同时，今日刚发布的 **Claude Code `v2.1.328`**（`@ClaudeCodeLog` 与 `@PiebaldAI` 抓包显示系统提示词净增 **`+15,115` Token**）同步带来多项关键升级：为 Bedrock / GCP Agent Platform / Foundry 上的 Opus 4.6 与 Sonnet 4.6 开放 `auto mode`；为 `mcp_tool` hook 补上 `onFailure: block`；`/code-review` 新增 `important / pre_existing / nit` 三级严重度与强制修复建议（并限制默认只报 Bug 与 `CLAUDE.md` 违规）；记忆整并 `Dream` 提示词开始限制只存连接器/MCP 链接与 ID。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Joshua_WD/status/2123100730898911504" target="_blank">@Joshua_WD Code Mode 文档拆解</a>
+      <a href="https://x.com/ClaudeCodeLog/status/2123227004879192138" target="_blank">@ClaudeCodeLog 2.1.328 更新日志</a>
+      <a href="https://x.com/PiebaldAI/status/2123226840731091087" target="_blank">@PiebaldAI +15,115 Token 提示词拆解</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag nvidia-skillevaluator-3k-stars">Nvidia-Skillevaluator-3K-Stars</span> @Itsrosia88：NVIDIA 开源 SkillEvaluator（3,000+ 星）——把 Agent Skill 当代码做三层自动化评测</div>
+    <div class="item-body">写 `SKILL.md` 一直靠感觉？NVIDIA 于 11 月 13 日发布 `SkillEvaluator v0.9.0`（目前已突破 **`3,000` 星**，实验性项目无 SLA），直接为 Agent 技能提供三层递进式评测流水线：**Tier 1（零 API Key 免费）**运行静态安全与规范扫描——检查格式、密钥泄漏与危险代码并按 `100` 分制打分（`70` 分及格）；**Tier 2** 检验技能库内部是否存在规则重叠打架；**Tier 3** 则拉起 Docker 沙盒让真实 Agent 分别在「挂载该 Skill vs 不挂载」两组条件下跑同一批任务，用实打实的任务通过率差异验证这条 Skill 究竟有没有帮上忙。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Itsrosia88/status/2122740170994696523" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag langchain-proactive-agents-three-rules">Langchain-Proactive-Agents-Three-Rules</span> @ethanwalkerman：70% 内部 Agent 跑在定时/事件唤醒上——LangChain 总结主动式 Agent 不招人烦的三条铁律</div>
+    <div class="item-body">LangChain 内部超过 **`70%`** 的 Agent 运行已不再由人类发 Prompt 触发，而是靠定时任务与外部事件自动唤醒。当 Agent 在你睡觉时干活，瓶颈就从模型推理转移到了**人类注意力**——就像每 5 分钟敲你一次的实习生，一天就会被静音。团队从生产级销售与工程 Agent 中提炼出三条实战法则：1）**记忆必须有定期清理周期**：LangChain 后台跑着名为 **`dreaming`** 的定时任务，专门复盘近期轨迹、合并重复事实并删除过期上下文，防止陈旧日期污染判断；2）**开口前先过守门人**：编程 Agent `Robin` 虽然盯着 Slack 频道，但由另一个独立决策模型判断是否真有增量价值再决定是否发言——**「保持沉默本身就是核心特性」**；3）**为人类审批速度做专属排序 UI**：Slack 里审外呼邮件草稿太笨重，团队直接做了按「待人工拍板优先」排序的轻量审阅界面，让每次人工修改实时回流校准品味。</div>
+    <div class="item-meta">
+      <a href="https://x.com/ethanwalkerman/status/2122992265492910253" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔥</span>
+      <h2>Gemini 4 Neon、微软 7 款 MAI 模型、KPMG 审计试点与能量推理</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-455">HN · 455 分 · 431 评论</span> Introducing Gemini 4 Neon：AA 智能指数排第三、可控性与自动化多榜居前，定价 $3/$15</div>
+    <div class="item-body">Google DeepMind 首席 AI 架构师 Koray Kavukcuoglu 发文正式推出 **Gemini 4 Neon**，主打在复杂软件工程、知识工作与科研流程中兼具前沿智力与快速端到端交付。模型在 `xhigh` 思考档位拿下 Artificial Analysis 智能指数 `61` 分（总榜第三）、Vals Index `70.9%`（第二），并在 `Agent Arena Index`（`1336` 分、跨 4,200+ 真实会话）拿下总榜与「中途纠偏可控性」双料第二，同时登顶 `AutomationBench`（`56.3%`）与 `Vending-Bench 2`（`$16,843`）。API 定价 `$3` / `$15`（缓存输入 `$0.15`），配合 `1M` 上下文今日同步登陆 Google AI Studio、Antigravity 与 Gemini App 付费档位。</div>
+    <div class="item-meta">
+      <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank">阅读官方博客</a>
+      <a href="https://news.ycombinator.com/item?id=50552424" target="_blank">HN 讨论 (431 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-451">HN · 451 分 · 314 评论</span> 微软 Ignite 2026 一次推出七款 MAI 高性价比模型：Maia 200 支撑 24/7 Agent 跑量</div>
+    <div class="item-body">由 Mustafa Suleyman 领衔的 Microsoft AI（MAI）在 Ignite 2026 宣布依托第二代自研芯片 **Maia 200** 发布七款主打「可控算力账单」的新模型，瞄准企业全天候运行编码与安全 Agent 场景。其中安全专模 `MAI Cyber 2 Flash` 在 `CyberGym-E2E` 质量击败 `GPT-6 Astra` 且单任务成本不到 `2%`；`MAI Code 2` 达到 `Opus 5.5` `96%` 编码表现而价格仅 `5%`；路由模型 `Decision 1.1` 比 `GPT-6.1 Sol` 快 `50` 倍、便宜 `79` 倍；同期还有 `MAI Code 2 Flash`、`MAI Image 2.7`、`MAI Realtime 1`（`$0.01/分钟`起）、`MAI Transcribe 2` 以及允许客户在自有 Azure 租户内微调的 `MAI Licensed Weights`。</div>
+    <div class="item-meta">
+      <a href="https://microsoft.ai/news/microsoft-ignite-2026/" target="_blank">阅读微软公告</a>
+      <a href="https://news.ycombinator.com/item?id=50548021" target="_blank">HN 讨论 (314 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-362">HN · 362 分 · 163 评论</span> KPMG 审计实验：100+ AI Agent 查 FTSE 250 财报，多个问题问得比人类审计师更深</div>
+    <div class="item-body">据《金融时报》披露，KPMG 英国历时约四个月开发了代号 **Project Exponential** 的多智能体审计系统，并在一家未具名 FTSE 250 上市公司财报上与常规审计团队并行实测：逾 **100 个 AI Agent** 自主协同分工，完成了数据取证、分析记录、起草结论与后续追查建议。KPMG 英国审计主管 Cath Burnet 坦言 AI 在多处深挖程度和提问质量上胜过人类团队；不过实验也暴露现实短板——曾有一名 Agent 错误匹配监管条文与公司文件而必须由审计师介入纠偏，因此结果仅作实验参考而非正式法定审计签字依据，KPMG 计划下一步将该试点扩至最多 `20` 个大型审计项目。</div>
+    <div class="item-meta">
+      <a href="https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/" target="_blank">阅读报道</a>
+      <a href="https://news.ycombinator.com/item?id=50547777" target="_blank">HN 讨论 (163 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-300">HN · 300 分 · 52 评论</span> Energy-Based Reasoners：能量梯度引导潜空间循环推理，省算力 345 倍（标题称 385×）</div>
+    <div class="item-body">论文项目主页提出 **Energy-Based Reasoners（EBRs）**，破解现有潜空间循环推理模型（looped models）缺乏进度度量与停机判据的难题：在隐状态上学习显式能量函数，让每轮更新沿能量面做梯度下降精修，梯度模长低于阈值即自适应停机，并在多条探索轨迹中选最低能量解。在四项算法推理基准上，仅 `1.8M` 参数的 EBR 在 `Sudoku-Extreme` 单样本准确率达 `99.4%`（多样本 **`99.9%`**），训练算力与基准持平而推理算力比次优方案省 **`345` 倍**（达到 `EqR` 最佳精度所需迭代少 `7×`、采样少 `43×`），且在多解问题上保持最优合法解覆盖率。</div>
+    <div class="item-meta">
+      <a href="https://energy-based-reasoners.github.io/" target="_blank">项目主页</a>
+      <a href="https://news.ycombinator.com/item?id=50543989" target="_blank">HN 讨论 (52 评论)</a>
+    </div>
+  </div>
+  </div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
+
+</body>
+</html>
