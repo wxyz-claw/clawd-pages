@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月20日（周五）12:00 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月20日（周五）12:00 ET</div>
+    <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
+    </div>
+  </header>
+
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>科技股跌入回调与算力地缘变数：</strong>标普 500 跌破 <code>7,100</code>、道指双双较历史高点回落 <code>10%</code> 正式进入技术性回调，<code>$SNDK -70%</code>、<code>$NBIS -64%</code>、<code>$NVDA -42%</code> 等科技硬件大幅回撤；《纽约时报》长文曝光黄仁勋过往羞辱下属案例之际，SpaceX 本月却逆势发债 <code>320 亿美元</code> 专款采购英伟达 GPU；另传 Cursor 因美国国会调查正考虑逐步淘汰中国开放权重模型。</li>
+      <li><strong>Anthropic IPO 解禁账本与推理成本：</strong><code>$ANT</code> 纳斯达克首日收涨 <code>17%</code>，但招股书拆解显示发行价提至 <code>$83</code>、发行量扩至 <code>9.8 亿</code> 股，2027 年 Q1 还将解禁 <code>30 亿</code> 股（超发行量 <code>3×</code>）；当年 FTX 投向 Anthropic 的 <code>$5.5 亿</code> 被破产方与美政府累计套现不到 <code>$20 亿</code>，按发行价今日市值已达 <code>$407 亿</code>；技术侧 Gergely Orosz 点明编程场景高频触发 <code>KV Cache</code> 复用与投机采样，解释了为何 <code>$200/年</code> 套餐跑出 <code>16B</code> Token 仍能盈利。</li>
+      <li><strong>模型实测分工与系统级本地推理：</strong>实测 105 个植入 Bug 修复显示 <code>Gemini 4 Neon</code>（<code>63</code> 分）与 <code>GPT-6.2 Astra</code>（<code>62.7</code> 分）几乎打平，但 Neon 在 <code>Antigravity</code> 中的 SWE-sweep 解决率从最简 Harness 的 <code>12.8%</code> 跃至 <code>39.0%</code>，后端排障极强而前端 UI 仍糙；<code>GPT-6.2</code> 则被吐槽高效但「偷懒」，已有开发者用 <code>AGENTS.md</code> 五段式汇报契约纠偏；macOS 27 终端原生自带离线模型 CLI <code>fm</code>（上限 <code>4,096</code> Token），支持管道与 <code>fm serve</code> 本地接口。</li>
+      <li><strong>Agent 工厂路线、《值得你花时间》与 HN 热帖：</strong>Warp CEO 撰文反对把多 Agent 团队拟人化，主张以代码定义可度量、可优化的云端工厂；<code>Code Mode</code> 开关与 <code>Tailscale Funnel</code> 成为今日实操热技。《值得你花时间》聚焦 IBM 自蒸馏记忆论文（全量留存 <code>191</code> 条规则比精简 <code>12</code> 条多提 <code>6.6</code> 分，但弱模型会被淹没）、Claude Code <code>CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL</code> 止血配置、开源手搓 Agent 教程 <code>Decode</code> 与 Argusic 对 <code>pydantic-deepagents</code> 的 <code>$0.39</code> 自动化云端实测。HN 榜首被 Anthropic 员工发布疑似黎曼猜想 Lean 证明引爆（<code>1,192</code> 分），同榜热议 Anthropic IPO、<code>Claude Fable 5.2</code> 攻克黑洞难题与 AI 自主设计 CPU <code>Frostbite</code>（<code>4.59×</code> 能效比）。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">📈</span>
+      <h2>市场冲击、Anthropic IPO 账本与算力/地缘风波</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag market-correction-nvda-nyt-and-cursor-china-shift">Market-Correction-Nvda-Nyt-And-Cursor-China-Shift</span> @WatcherGuru &amp; @Kay2289123 &amp; @jichunsheng &amp; @Balder13946731 &amp; @cb_doge：美股全面步入 10% 回调区间；NYT 长文揭英伟达管理文化，SpaceX 逆势发债 $320B 买卡；传 Cursor 拟剥离中国开源模型</div>
+    <div class="item-body">美东周五早盘宏观风险偏好骤降，算力链交织业绩预期、管理风波与地缘审查三重冲击：1）<strong>跨资产抛售与半导体深跌</strong>：@WatcherGuru 快讯显示标普 500 跌破 <code>7,100</code>、道琼斯指数双双从历史高点回落 <code>10%</code> 正式进入技术性回调区间，纳指跌破 <code>25,800</code>、黄金下破 <code>$3,550</code>、比特币跌破 <code>$59,000</code>；@Kay2289123 统计多只 AI 与半导体核心标的本轮累计回撤，包括 <code>$SNDK -70%</code>、<code>$NBIS -64%</code>、<code>$INTC -63%</code>、<code>$MRVL -59%</code>、<code>$MU -47%</code>、<code>$NVDA -42%</code>、<code>$GOOGL -33%</code> 与 <code>$AMD -29%</code>。2）<strong>《纽约时报》英伟达长文 vs SpaceX 借钱加单</strong>：@jichunsheng 梳理《纽约时报》今日长文，多名英伟达前高管与员工实名或匿名指控黄仁勋在任期间长期以辱骂和当众羞辱施压（包括称员工因持股暴富只能靠羞辱激励、2004 年前 HR 高管 Michael Winston 离职冲突后秘密和解超 <code>$100 万</code> 等，报道亦注明多数说法未经独立司法认定）；不过硬件订单面并未熄火，@Balder13946731 指出尽管两倍做空英伟达 ETF 本月涨超 <code>90%</code>，SpaceX 本月仍发行 <code>320 亿美元</code> 债券专款采购英伟达 GPU，由临时 CEO Colette Kress 承接。3）<strong>Cursor 地缘合规动向</strong>：@cb_doge 引述 CNBC 及美众议院调查进展称，SpaceX 旗下 Cursor 已向美国议员表示正考虑逐步淘汰中国开发的开放权重模型（@wangdan1989 补充指出此前 Cursor 部分编程模型曾基于中国开源底座构建）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/WatcherGuru/status/2123821357184286790" target="_blank">@WatcherGuru 标普进入回调</a>
+      <a href="https://x.com/WatcherGuru/status/2123813401851985958" target="_blank">@WatcherGuru 跨资产抛售</a>
+      <a href="https://x.com/Kay2289123/status/2123811436363444326" target="_blank">@Kay2289123 半导体回撤表</a>
+      <a href="https://x.com/jichunsheng/status/2123787235187163600" target="_blank">@jichunsheng NYT 报道摘编</a>
+      <a href="https://x.com/Balder13946731/status/2123640084121735557" target="_blank">@Balder13946731 SpaceX 买卡债</a>
+      <a href="https://x.com/cb_doge/status/2123781117249798614" target="_blank">@cb_doge Cursor 模型转向</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag anthropic-ipo-unlock-and-ftx-38b-miss">Anthropic-Ipo-Unlock-And-Ftx-38B-Miss</span> @AnotherCodingX &amp; @SIBuilder &amp; @bbu66396115 &amp; @GergelyOrosz：Anthropic 首日收涨 17% 背后 Q1 将解禁 30 亿股；FTX 踏空 $380 亿复盘；为什么 $200/年套餐跑 16B Token 还能赚</div>
+    <div class="item-body">市场今天围绕 Anthropic 上市算清了筹码供给、历史拍卖与推理经济三本账：1）<strong>IPO 扩量提价与天量解禁表</strong>：@AnotherCodingX 确认 Anthropic 纳斯达克首日收涨 <code>17%</code>（@AnthropicAI 亦发布七位联合创始人长谈回顾）；但 @SIBuilder 拆解发行细节提醒避险——IPO 定价由 <code>$70–$78</code> 上调至 <code>$83</code>，发行规模从 <code>8.2 亿</code> 股增至 <code>9.8 亿</code> 股（+近 <code>20%</code>），首日管理层套现 <code>$20 亿</code> 且 <code>10%</code> 员工期权（约 <code>3 亿</code> 股）同步解锁，2027 年 Q1 还将密集解禁高达 <strong><code>30 亿</code> 股</strong>，超本次发行总量 <code>3×</code>。2）<strong>FTX 破产甩卖错失 <code>$380+ 亿</code> 涨幅</strong>：@bbu66396115 对照招股书核算，SBF 团伙当年合计出资 <code>$5.5 亿</code>（FTX 关联方 <code>$5 亿</code> 稀释后剩约 <code>8%</code>，加上 Ellison 与 Singh 个人 <code>$5,000 万</code>），2024 年 3 月破产管理方按拆股后仅约 <code>$3/股</code> 分两批清仓收回 <code>$13.4 亿</code>（Jane Street 接盘近 <code>$1 亿</code>、Mubadala 关联方近 <code>$5 亿</code>，翻倍 <code>28×</code>），叠加美政府 2025 年 10 月以 <code>$140.97</code> 回售的 <code>$6.27 亿</code>，合计收回不足 <code>$20 亿</code>；而按 <code>$83</code> 发行价计该批筹码如今市值高达 <strong><code>$407 亿</code></strong>。3）<strong>重度编程用户的推理盈利密码</strong>：针对 @vlad_mihalcea 晒出 <code>$200/年</code> Pro 套餐跑出 <code>16B</code> Token（按 API 牌价折合 <code>~$10 万</code>）的质疑，@GergelyOrosz 指出关键在于代码场景极端重度依赖前缀 <strong><code>KV Cache</code> 读取</strong>（极低成本）与 <strong>Speculative Decoding（投机采样）</strong>，真实边际算力开销远低于名义牌价。</div>
+    <div class="item-meta">
+      <a href="https://x.com/SIBuilder/status/2123637052940140986" target="_blank">@SIBuilder 解禁与发行拆解</a>
+      <a href="https://x.com/bbu66396115/status/2123644721088417844" target="_blank">@bbu66396115 FTX 407亿账本</a>
+      <a href="https://x.com/GergelyOrosz/status/2123795984002232634" target="_blank">@GergelyOrosz 推理缓存成本</a>
+      <a href="https://x.com/AnthropicAI/status/2123822989154369958" target="_blank">@AnthropicAI 创始人回顾</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚡</span>
+      <h2>模型实测与端侧能力：Gemini 4 Neon 分工、GPT-6.2 偷懒与 macOS 27 `fm` CLI</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gemini4-neon-antigravity-vs-gpt62-laziness">Gemini4-Neon-Antigravity-Vs-Gpt62-Laziness</span> @Voxyz_ai &amp; @ohayou792 &amp; @blueemi99 &amp; @daniel_mac8：Neon 在 105 Bug 实测追平 Astra，在 Antigravity 提分 3×；GPT-6.2 遭吐槽偷懒，AGENTS.md 汇报契约可纠偏</div>
+    <div class="item-body">新版主力模型的真实能力边界与搭配打法继续明晰：1）<strong><code>Gemini 4 Neon</code>：配对 <code>Antigravity</code> 与 <code>Hydrogen</code> 效果翻倍</strong>：@Voxyz_ai 汇总实测与 Google 官方指引——在 <code>2</code> 个代码库 <code>105</code> 个植入 Bug 修复评测中，<code>Neon (xhigh)</code> 拿下 <code>63</code> 分，与 <code>GPT-6.2 Astra (max)</code>（<code>62.7</code>）持平并高于 <code>Fable 5.2 (max)</code>（<code>58</code>）；Google 自己的 SWE-sweep 基准更凸显外层 Harness 差距——最简框架仅 <code>12.8%</code>，接入 <strong>Antigravity</strong> 飙升至 <strong><code>39.0%</code></strong>。官方推荐日常开发选 <code>Orchestrator (Neon)</code> 负责规划审查、交由 <code>Hydrogen</code> 写代码（单测与文档单开 Hydrogen，竞态条件或多仓迁移开 Neon Extra）。@ohayou792 连续两天实测也给出一致画像：Neon 排查后端逻辑与隐蔽漏洞甚至能追到汇编层，稳定性不输 <code>Opus 5.5</code>，但前端 UI 样式粗糙，仍需多轮硬约束。2）<strong><code>GPT-6.2</code> 效率过拟合与「汇报契约」补丁</strong>：@blueemi99 实测指出 <code>GPT-6.2 Sol/Astra</code> 虽速度与性价比极高，却表现出罕见的「极度偷懒」（总抄最短路径）且缺乏设计品味，研判系过度针对效率做后训练所致；@daniel_mac8 则认为 Astra 原生智力顶尖但「注意力交互接口」极差，公开了一份可直接贴入 <code>AGENTS.md</code> 的五段式「汇报契约」（强制按 Outcome / What I need from you / What to do first / What changed / How sure we are 输出，并禁止臆测未读文件）；另据 @TokenGremlin 消息，原 Claude Code 作者已入职 OpenAI 负责 ChatGPT 桌面端重构，团队也已收到 6.2 口碑反馈着手修复。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Voxyz_ai/status/2123461311833022837" target="_blank">@Voxyz_ai Neon 评测与分工</a>
+      <a href="https://x.com/ohayou792/status/2123781573699092638" target="_blank">@ohayou792 Neon 后端强前端弱</a>
+      <a href="https://x.com/blueemi99/status/2123778773799579661" target="_blank">@blueemi99 GPT-6.2 偷懒评测</a>
+      <a href="https://x.com/daniel_mac8/status/2123744188617380254" target="_blank">@daniel_mac8 汇报契约模板</a>
+      <a href="https://x.com/TokenGremlin/status/2123762843086368947" target="_blank">@TokenGremlin 桌面端重构传闻</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag macos27-fm-cli-and-tufazip-lossless-compression">Macos27-Fm-Cli-And-Tufazip-Lossless-Compression</span> @realfxw &amp; @aigclink：macOS 27 原生内置系统级离线大模型命令行 `fm`；Transformer 无损压缩 `tufazip` 把 1GB 文本压到 105MB 但需双 B200 跑一周</div>
+    <div class="item-body">端侧零成本工具链与模型理论压缩极限今日各有一组实在观测：1）<strong>macOS 27 系统自带 <code>fm</code> CLI</strong>：@realfxw 实测发现升级 macOS 27 后，所有 Apple Silicon Mac（含 M1）终端已原生预置 Apple Foundation Models 命令行工具 <code>fm</code>——执行 <code>sudo fm license</code> 同意协议、<code>fm available</code> 确认就绪即可零账单离线调用。除 <code>fm respond</code> 外，还原生支持管道喂数据（<code>cat notes.txt | fm respond -i</code>）、<code>--schema</code> 强制 JSON 结构化输出、<code>fm serve</code> 在 localhost 拉起 OpenAI 兼容接口及 <code>~/.fm/sessions/</code> 会话留存；受限于单次 <code>4,096</code> Token 上下文上限，它不适合写复杂代码，但放进 shell 脚本做日志摘要、分类抽取极省心。2）<strong>AI 无损压缩的真实时间代价</strong>：@aigclink 拆解基于 Transformer 概率预测与算术编码的无损压缩器 <code>tufazip</code>——在 <code>enwik9</code> 基准上将 <code>1 GB</code> 维基百科文本压缩成 <code>100.96 MB</code>（含 <code>4.43 MB</code> 解压程序共 <code>105.39 MB</code>，减少 <strong><code>89.46%</code></strong>）且可逐字节还原，但代价是双 NVIDIA B200 压缩耗时 <code>7.3</code> 天、解压 <code>7.5</code> 天（不含离线训练），直观标定了神经压缩距实用工程的距离。</div>
+    <div class="item-meta">
+      <a href="https://x.com/realfxw/status/2123653692263948290" target="_blank">@realfxw macOS 27 fm CLI</a>
+      <a href="https://x.com/aigclink/status/2123598865064669607" target="_blank">@aigclink tufazip 无损压缩</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 工厂争锋、SSoT 代码库纪律与省额度实战</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag software-factory-vs-agent-teams-and-ssot-docs">Software-Factory-Vs-Agent-Teams-And-Ssot-Docs</span> @zachlloydtweets &amp; @cognition &amp; @piotr_minkowski &amp; @dexhorthy &amp; @cu30rry_ &amp; @cosmtrek：Warp CEO 再辩“软件工厂 vs Agent 团队”；Manim 接入 Devin Bot；把过期文档彻底移出代码仓</div>
+    <div class="item-body">围绕 Agent 编排范式与代码库上下文治理，一线工程实践正迅速分化与收敛：1）<strong>软件工厂 vs Agent 团队</strong>：Warp CEO @zachlloydtweets 发文对比两种终局——「Agent Teams（如 Devin Bots）」模拟人类组织，让总管 Agent 拆活派给多个角色子代理；「Software Factories（如 Warp Factories）」则把 Agent 当作可度量的工程原语而非员工，全部收进云端并用代码定义闭环，围绕单 PR 质量、成本与吞吐做受控实验，直言「别让 Agent 像大公司官僚一样内部协同」。实战侧两条路线都在跑通：@cognition 披露拥有 <code>96.6k</code> Stars、月下载 <code>25 万</code> 次的动画库 Manim 作者 Grant Sanderson 已启用 <code>Devin Bot</code> 维护开源 PR；@piotr_minkowski 则开源基于 Kubernetes + Tekton + 集群内 vLLM 的流水线式 AI Software Factory，由 GitHub Webhook 自动拉起容器内 Agent 审改 PR。2）<strong>把架构文档移出代码仓，代码即 SSoT</strong>：呼应 @0xblacklight「文档漂移会误导 Agent，代码本身才是唯一事实来源（SSoT）」的观点，@dexhorthy 指出只有极低频变动的宏观说明勉强安全，靠 Agent 维护双份文档纯属内耗；@cu30rry_ 给出落地做法：将 ADR、术语表与模块 README 全部迁出到独立仓库或 Notion，主代码仓仅保留供 Agent 验证的 Feature Map；@cosmtrek 则分享每周五必做的「人机摩擦回收」——通读本周全部本机 Agent 会话，专门提取人不得不中途接管的点，沉淀成 Hook、脚本、技能或记忆资产。</div>
+    <div class="item-meta">
+      <a href="https://x.com/zachlloydtweets/status/2123808803070063033" target="_blank">@zachlloydtweets Factory vs Teams</a>
+      <a href="https://x.com/cognition/status/2123813355538239878" target="_blank">@cognition Manim 接入 Devin Bot</a>
+      <a href="https://x.com/piotr_minkowski/status/2123697657936007565" target="_blank">@piotr_minkowski K8s Software Factory</a>
+      <a href="https://x.com/dexhorthy/status/2123816567259697401" target="_blank">@dexhorthy SSoT 边界讨论</a>
+      <a href="https://x.com/cu30rry_/status/2123739632710131750" target="_blank">@cu30rry_ 文档外置方案</a>
+      <a href="https://x.com/cosmtrek/status/2123706814932148633" target="_blank">@cosmtrek 周五会话沉淀法</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag dots-rollout-claude-code-mode-and-tailscale-funnel">Dots-Rollout-Claude-Code-Mode-And-Tailscale-Funnel</span> @petergostev &amp; @_samirism &amp; @yituihi &amp; @lee_xeo &amp; @parkgo_dev：OpenAI dots 深度体感；Claude Code 隐藏省额度开关 Code Mode；Tailscale Funnel 零成本把本地 MCP 接入 ChatGPT</div>
+    <div class="item-body">个人常驻 Agent 与本地工具链接入今日有四条高可操作性更新：1）<strong>OpenAI <code>dots</code> 一线体感与欧洲缺席</strong>：@petergostev 在试用下放的 <code>dots</code> 后称其为「ChatGPT 终结者」——告别分窗口聊天，买保险、挑 SSD 与查 IPO 全部混在单一流里也不丢上下文，并配有独立电脑能代填旅行入境表、揪出漏看邮件里的截止日，甚至主动发现日历地点与 LinkedIn 约定不符（缺点是权限确认与系统交接仍不够顺滑）；@_samirism 确认欧洲区因监管合规问题暂未上线。2）<strong>Claude Code 隐藏 <code>Code Mode</code> 开关</strong>：@yituihi 分享环境变量 <code>CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1</code>，开启后 Claude 会把原本需要往返 <code>10</code> 次工具调用的任务合并为一段单轮执行脚本，大幅减少上下文重读烧额。3）<strong>开源沙盒 <code>Claude Cage v0.2.0-rc</code></strong>：@lee_xeo 发布新版，将客机统一收敛为轻量化 Debian 13，通过 MCP 桥接宿主性能，并上线开放插件市场、多 Desktop 实例共享记忆与一键指纹换机。4）<strong><code>Tailscale Funnel</code> 暴露本地 MCP</strong>：@parkgo_dev 实测只需一句 <code>tailscale funnel --bg 3000</code> 即可免费拿到带 HTTPS 证书的 <code>*.ts.net</code> 公网域名，免买 VPS 将本地 MCP Server 直接接进 ChatGPT 自定义 MCP（同时提醒务必加身份认证防止裸奔）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/petergostev/status/2123748264730038588" target="_blank">@petergostev dots 深度体感</a>
+      <a href="https://x.com/_samirism/status/2123816776496804164" target="_blank">@_samirism 欧洲合规进展</a>
+      <a href="https://x.com/yituihi/status/2123801288848904258" target="_blank">@yituihi Code Mode 省额度</a>
+      <a href="https://x.com/lee_xeo/status/2123777144123990148" target="_blank">@lee_xeo Claude Cage v0.2.0-rc</a>
+      <a href="https://x.com/parkgo_dev/status/2123733180176011624" target="_blank">@parkgo_dev Tailscale Funnel 接 MCP</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ibm-self-distilled-memory-191-vs-12-guidelines">Ibm-Self-Distilled-Memory-191-Vs-12-Guidelines</span> @arkyyang：IBM 新论文《How Much Should an Agent Remember?》实测——别把经验压成十几条整洁清单，全量留存 191 条规则多提 6.6 分，但弱模型会被淹没</div>
+    <div class="item-body">IBM 团队（11 月 19 日 arXiv 预印本）公开了在 CUGA 与 watsonx Orchestrate 中实装开源自蒸馏记忆框架 <code>altk-evolve</code> 的生产评测（AppWorld <code>168+417</code> 任务、<code>457</code> 个 API）：Agent 每次跑完自写 <code>1–3</code> 条教训并合并相似条目后，给出三条反直觉数字结论：1）<strong>记忆容量必须按模型强弱设开关</strong>——强模型 <code>DeepSeek-V3.2</code> 注入全部 <code>191</code> 条规则完成率从 <code>79.8%</code> 升至 <strong><code>89.3%</code></strong>，但弱模型 <code>gpt-oss-120b</code> 塞入全量 <code>199</code> 条反而降到 <code>51.2%</code>，按相关性只取 <code>~29</code> 条才达到 <strong><code>55.4%</code></strong>；2）<strong>切忌预先总结删掉长尾</strong>——让模型提炼 <code>12</code> 条整洁清单只让 DeepSeek <code>+2.9</code> 分，保留含 <code>144</code> 条「仅见过一次」经验在内的全部 <code>191</code> 条则带来 <strong><code>+9.5</code> 分</strong>（且仅消耗 ACE 基线约 <code>40%</code> Token：<code>263K</code> vs <code>634K</code>）；3）<strong>重复很多次的经验仍可能是错的</strong>——出现频次最高的分页规则硬编码了「每页少于 <code>20</code> 条即停止」，遇到每页只返 <code>5</code> 条的 API 直接第一页停摆，修正该规则后高难任务完成率从 <code>66.7%</code> 跳至 <strong><code>73.0%</code></strong>。</div>
+    <div class="item-meta">
+      <a href="https://x.com/arkyyang/status/2123792840878903500" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-code-workflow-subagent-model-env-var">Claude-Code-Workflow-Subagent-Model-Env-Var</span> @Grirku：Claude Code `/workflows` 隐形账单陷阱——16 个并发 Worker 默认全按 Opus 5.5 计费，一行环境变量即可全部切回 Sonnet</div>
+    <div class="item-body">在 Claude Code 里开 <code>Opus 5.5</code> 跑复杂 Workflow 扇出 <code>16</code> 个并行子代理迁移文件时，只要工作流脚本没有显式绑定模型，所有 Worker 都会<strong>默认继承当前主会话模型</strong>——相当于请 16 个 Opus 干 <code>Sonnet</code> 闭着眼就能做的重复活。作者给出的精准解法只需设置一行环境变量：<code>CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL=sonnet</code>。生效后仅 Workflow 子代理统一切到 <code>Sonnet 5.5</code>，主会话依然保持 <code>Opus 5.5</code> 负责规划与最终签收，已有自定义 frontmatter 的其他 subagent 也保留各自指定模型，打开 <code>/workflows</code> 即可实时看到每个子代理对应的模型与 Token 消耗。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Grirku/status/2123790637283618861" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag decode-open-source-python-coding-agent-course">Decode-Open-Source-Python-Coding-Agent-Course</span> @pauliusztin_：从零手搓开源 Python 编码 Agent `Decode`——8 篇长文 + 6 节视频 + 完整源码，专讲沙盒、压缩与 Record-and-Replay</div>
+    <div class="item-body">在拆解 Claude Code、Codex、OpenCode 与 Aider 底层原理后，作者用 Python 从零编写了一套完整的编码 Agent <code>Decode</code>，并将其开源为免费实战课程（8 篇技术文章 + 6 个操作视频 + 可直接克隆扩展的完整 Python 仓库）。相比停留在 ReAct 套壳的入门教程，课程重点落在生产 Harness 工程的硬骨头：执行架构设计、本地与云端沙盒隔离、记忆/Skills/LSP/上下文压缩、并行 Subagents、Webhook 与 Cron 云端调度、回归评测集，以及专门用来<strong>复现失败执行轨迹的 Record and Replay</strong>，实操项目包含可运行的 GitHub 分析面板与自动抓取文章生成的交互式知识图谱。</div>
+    <div class="item-meta">
+      <a href="https://x.com/pauliusztin_/status/2123770840353263842" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag argusic-pydantic-deepagents-39-cents-eval">Argusic-Pydantic-Deepagents-39-Cents-Eval</span> @tranngocthuycom：Argusic 自动化云端验真 `pydantic-deepagents`（1,124 Stars）——$0.39、16 分钟跑通 669 条测试，但明确标出「仅过了 Mock」盲区</div>
+    <div class="item-body">独立 Agent 评测系统 Argusic 在干净的一次性云主机上无人干预从零安装并检验开源自托管终端框架 <code>vstorm-co/pydantic-deepagents</code>（MIT 协议，锁定 commit <code>32b57ba</code>）：从安装到首次启动耗时 <code>1</code> 分钟、全程 <code>16</code> 分钟、总计仅花费 <strong><code>$0.39</code></strong>，期间遇到 <code>1</code> 个报错并自主修复，在锁定 <code>pydantic-ai-backend==0.2.29</code> 后跑通全部 <code>669</code> 条 <code>pytest</code> 用例，得分 <code>92/100</code>。最值得借鉴的是这种「带深度标签的公开验真」方法论——报告明确披露所有测试仅针对替身 Mock 服务跑通、尚未触及真实外部服务，且将完整会话录像、运行日志与扣分细则一并公开。</div>
+    <div class="item-meta">
+      <a href="https://x.com/tranngocthuycom/status/2123481315437895953" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔥</span>
+      <h2>黎曼猜想 Lean 证明宣称、Anthropic 纳斯达克大考、黑洞物理与 AI 造 CPU</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-1192">HN · 1192 分 · 771 评论</span> Anthropic 员工发布疑似黎曼猜想（RH/GRH）证明与 Lean 形式化代码</div>
+    <div class="item-body">数学家、Anthropic 员工 Levent Alpöge 在个人站点发布 4 页声明 PDF，称在与 <code>Claude</code> 协作中发现了黎曼猜想（并可延伸至广义黎曼猜想 GRH）的证明，且已完成无额外假设的 <strong>Lean 形式化验证</strong>（源码拆分为 <code>lean.tar.gz.part01–14</code> 公开）。作者坦言因自然语言草稿动辄超 25 万页「slop」而选择直接公布 Lean 代码，自己也尚未彻底掌握其中部分高阶自守形式细节，但特别指出针对长度 <code>X</code> 的 von Mangoldt 求和，Claude 提出了串联 <code>√X</code> 次 theta 提升以模拟重数的核心一步；该帖在 HN 与 X 数学圈同步引爆「AI 产出人类难以通读的形式化证明是否仍算人类数学」的争论。</div>
+    <div class="item-meta">
+      <a href="https://alpo.ge/remark.pdf" target="_blank">阅读声明 PDF</a>
+      <a href="https://news.ycombinator.com/item?id=50574968" target="_blank">HN 讨论 (771 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-1113">HN · 1113 分 · 2246 评论</span> Anthropic 登陆纳斯达克首秀：评论数突破 2,200 的估值与商业化激辩</div>
+    <div class="item-body">路透社针对 Anthropic 登陆纳斯达克的深度报道今日在 HN 持续发酵，评分升至 <code>1,113</code> 分、评论突破 <strong><code>2,246</code> 条</strong>。随着美股科技板块今日剧烈回调，社区讨论焦点进一步转向万亿级估值下的资本开支回报、高算力订阅套餐与推理缓存经济账的可持续性，以及大模型实验室公开上市后在研究自由度与季度财报压力之间的张力。</div>
+    <div class="item-meta">
+      <a href="https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/" target="_blank">阅读路透社报道</a>
+      <a href="https://news.ycombinator.com/item?id=50562754" target="_blank">HN 讨论 (2246 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-528">HN · 528 分 · 255 评论</span> Claude Fable 5.2 独立攻克黑洞物理与量子引力领域的两道公开难题</div>
+    <div class="item-body">Anthropic 科学团队发布研究进展，<code>Claude Fable 5.2</code> 解决了理论物理中围绕黑洞与量子引力统一理论的两道长期悬而未决的公开难题：其一完成了物理学家二十多年前建立却始终无人算通的推导，证明即便在时空不再具有确定几何形态时，与黑洞形成相关的 Hawking-Page 突变跃迁依然存在；其二精确求出了用于检验候选量子引力理论最简版本模引导（modular bootstrap）技术的严格极限，并同步附上科普与技术双版本解读及两篇预印本。</div>
+    <div class="item-meta">
+      <a href="https://www.anthropic.com/research/claude-black-hole-physics" target="_blank">阅读 Anthropic 研究</a>
+      <a href="https://news.ycombinator.com/item?id=50563148" target="_blank">HN 讨论 (255 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-453">HN · 453 分 · 264 评论</span> Frostbite：AI 端到端自主发现、设计与验证的全新 CPU 架构（能效比 4.59×）</div>
+    <div class="item-body">Architect Silicon 继 Redwood 加速器后发布通用 CPU <strong>Frostbite</strong>：AI 系统在不受人类既有 ISA 束缚下，自主联合迭代了编译器、指令集、微架构、RTL、功能验证直至最终 GDS 物理版图。Frostbite 放弃传统共享可变内存模型，转而利用<strong>交互网（Interaction Nets）</strong>「每步计算局部化、依赖显式、每个值仅有唯一所有者」的特性绕开深层缓存与一致性功耗墙；在 <code>25</code> 项测试负载（含 <code>15</code> 项最终盲测）上，相比现代已流片双发射顺序超标量 CPU 核取得 <strong><code>4.59×</code> 每瓦性能比</strong>。</div>
+    <div class="item-meta">
+      <a href="https://architectlabs.com/blog/frostbite" target="_blank">阅读 Architect Labs 博客</a>
+      <a href="https://news.ycombinator.com/item?id=50572503" target="_blank">HN 讨论 (264 评论)</a>
+    </div>
+  </div>
+  </div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
+
+</body>
+</html>
