@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月21日（周六）21:00 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月21日（周六）21:00 ET</div>
+    <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
+    </div>
+  </header>
+
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>推理安全清查与供应链底层防御：</strong>OpenRouter 披露部分第三方推理商未履行数据保留承诺（含 Novita、Phala、Together 相关公告），已紧急下线 <code>3</code> 家供应商、将 <code>125</code> 个端点移出零数据保留（ZDR）白名单并上线网络路径核验；@mylifcc 警示带有恶意 <code>.git</code> 配置的 ZIP 压缩包可在终端 <code>cd</code>（触发 Oh My Zsh/Starship/VS Code 自动 <code>git status</code>）或 <code>git checkout</code> 时静默执行木马；Cloudflare 公开生产级无主共识算法 <code>QuePaxa</code>，在 <code>150–250 ms</code> 跨洋延迟下消除单主切主停顿与 Paxos 活锁。</li>
+      <li><strong>模型定价倒挂、算力补贴与 IDE 开放：</strong>12 月 1 日前旗舰 <code>Gemini 4 Carbon</code> 首发半价（<code>$2/$10</code>）反比中端 <code>Neon</code>（<code>$3/$15</code>）便宜，第三方实测指出 Neon 偏依赖旧记忆且多文件安全边界易漏；<code>$100/月</code> Google AI Ultra 订阅附带每月 <code>1,000</code> Colab 积分（约 <code>55h</code> H100）与 <code>$40</code> GCP 额度；OpenCode 将 <code>GLM 5.3</code> 与 <code>DeepSeek V4.1 Flash</code> API 降价 <code>60%</code>；JetBrains 发布新工作区 <code>Air</code>，支持直接登录现有 Claude Pro/Max 订阅跑 <code>Claude Code</code>；Antigravity CLI 公布缓存、权限与跨端会话五大修复清单。</li>
+      <li><strong>Agent 工程反思与「决策弧」数据：</strong>@kunchenguid 指出当前 RLVR 后训练按单任务成败奖励，导致 Agent 习惯性堆砌无用注释与冗余测试、持续侵蚀代码库长期可维护性；@anshuman_ssh 推出 <code>Arcfront</code>（已服务 5 家前沿实验室中的 4 家），提出用包含驳回反馈与真实后果的 <strong>Decision Arc Data</strong> 弥补模型有解题能力无业务判断力的断层；@mattpocockuk 分享滑动打分器逐句校准写作风格，@poteto 在 <code>pstack v0.15.46</code> 中精简技能并接入 <code>Gemini 4 Neon</code> 评审。</li>
+      <li><strong>《值得你花时间》与 HN 热帖：</strong>精选 @themuscleai 对 <code>Inkling 2 Mini</code> 榜单的题数拆解（SWE-bench Pro v2 Hard 实仅领先 Qwen3.8-27B <code>2.09</code> 题且带循环失控与删文件风险）、@ela_euk 对 <code>Gemini 4 Neon</code> 单任务实耗（<code>$6.44</code> vs Sol <code>$1.01</code>）及 Harness 落差（<code>39.0%→12.8%</code>）的拆解、AWS 曝光攻击者用开源渗透 Agent <code>Cairn</code> <code>11</code> 分钟挖出 <code>MONAI Label</code> 零日漏洞（<code>CVE-2026-133968</code>），以及 @EveryDevAi 汇总的 <code>harness-evals</code> 等 <code>14</code> 款一线验证工具；HN 热榜关注纳指抹平年内涨幅、27B 模型无梯度自改写权重与浏览器耳鸣陷波工具。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔒</span>
+      <h2>安全边界与底层架构：推理隐私清查、恶意 .git 陷阱与无主共识 QuePaxa</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag openrouter-zdr-audit-and-malicious-git-zip">Openrouter-Zdr-Audit-And-Malicious-Git-Zip</span> @OpenRouter &amp; @mylifcc：OpenRouter 清退 3 家合规风险推理商并移出 125 个 ZDR 节点；警惕 ZIP 内置 .git 目录「cd 即中招」供应链陷阱</div>
+    <div class="item-body">围绕 AI 推理链路与本地开发环境的两个底层安全隐患今日集中暴露：1）<strong>推理路由的 ZDR 核验清查</strong>：@OpenRouter 发布安全通告，安全研究员（Dragos 报告）发现平台上部分第三方模型推理商存在数据妥善处理失守或违背数据保留政策的迹象（涉事方中 Novita、Phala 与 Together 已分别发布事件说明，其中 Together 涉及 2026 年 6–7 月请求提示词泄露）。OpenRouter 自身系统未遭入侵，但已果断下线 <strong><code>3</code> 家供应商</strong>、将 <strong><code>125</code> 个端点移出零数据保留（ZDR）资格</strong>并通知受影响客户，同时正把研究员的检测手段固化为常态化网络路径核验（排查请求与响应是否被转发至第三方）。2）<strong>带 <code>.git</code> 目录的 ZIP 等于裸奔可执行程序</strong>：@mylifcc 复盘 r/programming 一起针对开发者的真实投毒案例——攻击者伪装成猎头发送包含完整 <code>.git</code> 目录的求职测试压缩包，在 <code>.git/config</code> 中将 <code>core.hooksPath</code> 指向隐蔽的 <code>.git/objects/interrupt/</code>（内藏 <code>post-checkout</code> 脚本），并配好通配符自定义 <code>clean</code> 过滤器（<code>.git/ltr</code>）。普通 <code>git clone</code> 不会继承远端本地配置，但直接解压 ZIP 后，只要敲出 <code>git checkout</code>、甚至仅 <code>cd</code> 进目录触发 Oh My Zsh / Starship / Powerlevel10k 自动调用 <code>git status</code>，或用 VS Code 打开文件夹，木马即刻在后台拉起脚本执行。</div>
+    <div class="item-meta">
+      <a href="https://x.com/OpenRouter/status/2124315081899200715" target="_blank">@OpenRouter 官方安全通告</a>
+      <a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank">OpenRouter 详细事件博客</a>
+      <a href="https://x.com/mylifcc/status/2124005132723470409" target="_blank">@mylifcc 拆解 .git ZIP 投毒链</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cloudflare-quepaxa-leaderless-consensus">Cloudflare-Quepaxa-Leaderless-Consensus</span> @mylifcc：Cloudflare 公开生产级无主共识算法 QuePaxa，消除跨洋控制平面切主抖动与 Paxos 活锁</div>
+    <div class="item-body">当全球控制平面的物理节点分散在跨大洲数据中心、跨洋光纤光速往返延迟（RTT）动辄高达 <code>150–250 ms</code> 时，依赖单一 Leader 排队定序的传统 Raft 与 Multi-Paxos 会直接暴露短板：远端大洲每次写操作必须硬扛跨洋延迟，一旦海缆抖动触发重新选主（Leader Election），控制平面还会陷入可用性停顿。@mylifcc 解读了 Cloudflare 工程团队近期公开并已在生产环境落地的自研无主共识算法 <strong>QuePaxa</strong>：采用彻底的<strong>无主化（Leaderless）与对称多提议者（Multi-Proposer）</strong>架构，全球任一区域节点均可就近接收并提议状态变更；针对多节点并发写入冲突，通过<strong>确定性偏序合并</strong>与<strong>自适应时隙调度</strong>根除传统 Paxos 在高争用下的「活锁（Dueling Proposers）」开销，在高延迟与高丢包广域网中实现极低 P99 尾延迟与零切主抖动。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mylifcc/status/2123974934602957270" target="_blank">@mylifcc 解读 Cloudflare QuePaxa</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">⚡</span>
+      <h2>模型定价倒挂、算力补贴与工具生态开放</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gemini-4-neon-pricing-inversion-ultra-gpu-and-opencode">Gemini-4-Neon-Pricing-Inversion-Ultra-Gpu-And-Opencode</span> @don_tech1 &amp; @TekonBurns &amp; @Fei2411 &amp; @demishassabis：12 月前 Gemini 4 Neon 反比 Carbon 贵 50%；Google Ultra 暗藏 55h H100 算力；OpenCode API 降价 60%</div>
+    <div class="item-body">Google <code>Gemini 4 Neon</code> 发布后的真实价格窗口与周边生态对比出现几条关键实操信息：1）<strong>12 月 1 日前的倒挂价格陷阱与能力盲区</strong>：@don_tech1 提醒，<code>Gemini 4 Neon</code> 定价为每百万输入/输出 Token <code>$3 / $15</code>，而旗舰 <code>Carbon</code> 的首发半价促销（<code>$2 / $10</code>）要到 11 月 30 日才结束——也就是说未来 9 天内按 Token 计费「中杯反而比大杯贵 <code>50%</code>」；第三方实测同时暴露其两项短板：一是过度依赖旧训练记忆，遇到近期改版的新 API 不爱查文档容易写错；二是写测试偏向程序员思路而非黑客视角，多文件项目易遗漏安全鉴权边界，关键安全模块建议叠加 GPT 或 Claude 复审。2）<strong>被忽视的 <code>$100</code> 算力包</strong>：@TekonBurns 算了一笔账——<code>$100/月</code> Google AI Ultra 套餐除 Neon 额度外，还包含可通过 CLI 调用的每月 <code>1,000</code> Colab 积分（约合 <code>55</code> 小时 H100 或 <code>100</code> 小时 RTX 6000 Pro）以及 <code>$40/月</code> Google Cloud 抵扣金，这是 <code>$100</code> Claude Max 与 <code>$200</code> ChatGPT Pro 均未捆绑的裸算力资源。3）<strong>模型定位与 API 降价</strong>：Google AI 负责人 @OfficialLoganK（获 @demishassabis 转发）用一句话划清档位：<code>Carbon</code> 兼具大模型质感、<code>Neon</code> 综合最强、<code>Hydrogen</code> 主打快速高效；另据 @Fei2411 消息，OpenCode 已将 <code>GLM 5.3</code> 与 <code>DeepSeek V4.1 Flash</code> 的 API 调用价格直接下调 <strong><code>60%</code></strong>。</div>
+    <div class="item-meta">
+      <a href="https://x.com/don_tech1/status/2123979714482290783" target="_blank">@don_tech1 Neon 定价倒挂与盲区</a>
+      <a href="https://x.com/TekonBurns/status/2124299304571748631" target="_blank">@TekonBurns Google Ultra 算力账单</a>
+      <a href="https://x.com/Fei2411/status/2124296007282577859" target="_blank">@Fei2411 OpenCode API 降价 60%</a>
+      <a href="https://x.com/demishassabis/status/2124271464123892134" target="_blank">@demishassabis 转发 Gemini 4 分档</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag jetbrains-air-antigravity-cli-and-local-hex">Jetbrains-Air-Antigravity-Cli-And-Local-Hex</span> @kimmonismus &amp; @LanzhiAI &amp; @shengzheyao &amp; @anomalyco：JetBrains 推出 Air 直接挂载 Claude Pro/Max；Antigravity CLI 五大修复清单；Hex 本地听写上架 iOS</div>
+    <div class="item-body">开发工具链继续从「封闭捆绑」转向「自带订阅与底层打磨」：1）<strong>JetBrains 开放自带订阅入口</strong>：@kimmonismus 与 @LanzhiAI 介绍 JetBrains 在 IDE 中推出的全新 Agent 工作区 <strong>Air</strong>——不再强推自家 AI 订阅，开发者可在终端视图直接用现有 <code>Claude Pro</code> 或 <code>Max</code> 账号运行 <code>Claude Code</code>（代码直连 Anthropic，不收 JetBrains 额外加价），同时兼容 Codex、支持 ACP 协议的各类 Agent、自有 API Key 与自定义 Base URL。2）<strong>Antigravity CLI 集中回应 500+ 报错</strong>：@shengzheyao 逐条看完社区提交的 <code>500+</code> 条反馈与本地日志后，公布研发团队正在推进的五大修复重点——Prompt Cache 命中效率与流式稳定性、Auto 模式可靠性及 Windows 10 / Linux / 工作区外权限弹窗摩擦、长任务执行进度可见性、CLI/Desktop/远程/移动端统一会话，以及 Windows/Skills/TUI 细节体验。3）<strong>本地工具上新</strong>：@anomalyco 宣布完全本地运行、高速且 <code>100%</code> 免费的语音听写应用 <code>Hex</code> 已正式上架 iOS App Store。</div>
+    <div class="item-meta">
+      <a href="https://x.com/kimmonismus/status/2124170986748805386" target="_blank">@kimmonismus JetBrains Air 演示</a>
+      <a href="https://x.com/LanzhiAI/status/2124316433090031938" target="_blank">@LanzhiAI 评 JetBrains 开放策略</a>
+      <a href="https://x.com/shengzheyao/status/2124241548615504371" target="_blank">@shengzheyao Antigravity CLI 修复清单</a>
+      <a href="https://x.com/anomalyco/status/2124306356073320584" target="_blank">@anomalyco Hex 上架 iOS</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 工程反思：RLVR 短视症、决策弧数据与个人软件 ROI</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag rlvr-short-horizon-vs-maintainability-and-decision-arc">Rlvr-Short-Horizon-Vs-Maintainability-And-Decision-Arc</span> @kunchenguid &amp; @anshuman_ssh：为什么代码 Agent 越写越难维护——单任务 RLVR 缺乏长期可维护性奖励；Arcfront 用「决策弧数据」补足业务判断力</div>
+    <div class="item-body">今日两条深度反思直指当下编码与企业 Agent 落地的结构性短板：1）<strong>RLVR 训练目标与代码库腐化</strong>：@kunchenguid 指出，当前前沿 LLM 的可验证奖励强化学习（RLVR）全部在<strong>单任务粒度</strong>上结算奖励，导致模型对「长期可维护性」毫无概念——默认堆砌毫无用处的注释和冗余测试用例，这些垃圾不会影响当前任务的测试通过，却会不断拉低未来所有任务的上下文与修改效率；由于在后训练阶段低成本评估长期架构演化极难，在训练范式补课之前，必须由人类在 Harness 层通过 Prompt、Skills 与 Lint 规则强行兜底，这也构成了资深工程师最难被模型取代的判断力壁垒。2）<strong>为什么 ICPC 满分 AI 进企业第一天就失败</strong>：前两次 ICPC 全球总决赛选手 @anshuman_ssh 正式发布 <code>Arcfront</code>（不到一年已获 5 家前沿实验室中的 4 家采购，积累 <code>300+</code> 企业伙伴与 <code>1,000+</code> RL 环境），指出 AI 能解出全部 <code>12</code> 道 ICPC 赛题却做不好财务经理，根因在于书本与静态题库里缺失医学住院医或资深架构师历经十余年试错攒下的「判断力」——什么方案被否决、何处收到真实反馈、何时推翻重来；团队正将医院、银行与工程团队的真实过程记录重构为 <strong>Decision Arc Data（决策弧数据）</strong> 供前沿模型训练与评测。</div>
+    <div class="item-meta">
+      <a href="https://x.com/kunchenguid/status/2124066583589077005" target="_blank">@kunchenguid 析单任务 RLVR 局限</a>
+      <a href="https://x.com/anshuman_ssh/status/2123848140575182946" target="_blank">@anshuman_ssh Arcfront 与决策弧数据</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag mattpocockuk-style-scorer-poteto-pstack-and-personal-software">Mattpocockuk-Style-Scorer-Poteto-Pstack-And-Personal-Software</span> @mattpocockuk &amp; @poteto &amp; @cholf5 &amp; @VersunPan &amp; @AlexPriceAI：滑动打分校准写作风格；pstack 精简技能；个人软件做到 60 分即停</div>
+    <div class="item-body">工作流精简与个人开发 ROI 出现几组实用经验与案例：1）<strong>左滑右滑式写作风格校准</strong>：@mattpocockuk 提出极简训练法——构建一个 <code>scorer</code> 小应用让 Agent 逐句推送样例，人类像滑社交卡片一样给单句打 <code>1–4</code> 分或在多句间二选一，再逐句共创全文，让 Agent 主动验证自身对用户文风的假设并长期沉淀风格档案。2）<strong><code>pstack v0.15.46</code> 减负调优</strong>：@poteto 发布更新，对大量 Skill 进行裁剪瘦身（指令明显变短），并将 <code>Gemini 4 Neon</code> 加入 Panel Reviewer 评审阵营。3）<strong>个人软件别过度打磨 vs Devin 跨端实战</strong>：@cholf5 与 @VersunPan 复盘开源软件 <code>Tokenmetry</code> 与「傻瓜词典」投入 <code>10–20</code> 天与海量 Token 却仅获个位数用户的教训，认为 AI 时代自用小工具 <code>One Shot</code> 到 <code>60</code> 分即可收手，真正值得反复打磨公开的应是具备商业变现潜力的成品（如游戏）；与此同时，新加入 Cognition 的 @AlexPriceAI 披露内部案例——公司在没有专职 Android 工程师的情况下，直接让新版 Devin 对照 iOS 端代码，约 <strong><code>45</code> 天</strong>后交付了可上线的 Android 应用。</div>
+    <div class="item-meta">
+      <a href="https://x.com/mattpocockuk/status/2124214098984370645" target="_blank">@mattpocockuk 写作风格打分器</a>
+      <a href="https://x.com/poteto/status/2123824683862855898" target="_blank">@poteto pstack v0.15.46 更新</a>
+      <a href="https://x.com/VersunPan/status/2124309328916299807" target="_blank">@VersunPan 转发个人软件 60 分原则</a>
+      <a href="https://x.com/AlexPriceAI/status/2124266584155754638" target="_blank">@AlexPriceAI Devin 45 天产出 Android 版</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag themuscleai-inkling-2-mini-audit">Themuscleai-Inkling-2-Mini-Audit</span> @themuscleai：Build Log #41——拆穿 Inkling 2 Mini 榜单的「2 题领先」与本地加载/失控陷阱</div>
+    <div class="item-body">在全网热议 <code>Inkling 2 Mini</code>（26B 循环 Transformer）本地跑分超越 <code>Qwen3.8-27B</code> 时，@themuscleai 把厂商报告逐行换算成真实题数做了一次冷峻审计：在 <code>51</code> 题的 SWE-bench Pro v2 Hard 上，<code>77.9%</code> vs <code>73.8%</code> 看似领先 <code>4.1</code> 个百分点，实则仅相当于 <strong><code>2.09</code> 题</strong>差距；SWE-bench Verified <code>79.2%</code> vs <code>77.8%</code> 更是只有 <strong><code>0.7</code> 题</strong>。同一张表里，Qwen 反而在 Terminal Bench v2.1（<code>73.0%</code> vs <code>71.6%</code>）与 AutomationBench（<code>48.2%</code> vs <code>41.8%</code>）反超，第三方综合榜 AA Index 双方完全打平（<code>20.1</code> vs <code>20.1</code>）。文中同时列出三条极易踩坑的一线细节：<code>llama.cpp</code> PR <code>#32694</code>（<code>b12600</code>）与部分 GGUF 布局不兼容会导致加载失败；中间层循环 <code>3</code> 次使实际每 Token 有效激活参数从 <code>3.4B</code> 升至 <strong><code>5.4B</code></strong>；以及模型卡明确警告它在调试代码时容易陷入反复自检的推理死循环，且可能未经确认擅自删除或覆写文件，必须加步数上限与沙盒隔离。</div>
+    <div class="item-meta">
+      <a href="https://x.com/themuscleai/status/2124203035308052763" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ela-euk-neon-cost-per-task-and-harness">Ela-Euk-Neon-Cost-Per-Task-And-Harness</span> @ela_euk：标价不等于账单——Gemini 4 Neon 单任务实耗 $6.44（Sol 的 6 倍）与 Harness 落差</div>
+    <div class="item-body">买单时到底看每百万 Token 标价还是看单个任务结账单？@ela_euk 结合 Artificial Analysis 实测数据泼了一盆清醒的冷水：<code>Gemini 4 Neon</code>（<code>$3/$15</code>）看似只比 <code>GPT-6.2 Sol</code>（<code>$2/$10</code>）贵 <code>50%</code>、比 <code>Opus 5.5</code>（<code>$4/$20</code>）便宜，但在高强度思考（<code>xhigh</code>）模式下完成一个标准任务的实际平均账单高达 <strong><code>$6.44</code></strong>，是 <code>GPT-6.2 Sol</code>（<strong><code>$1.01</code></strong>）的 <strong><code>6×</code> 以上</strong>（Opus 5.5 为 <code>$10.04</code>），差价全吃在隐藏的思考 Token 长度里；且在 Terminal-Bench（<code>65.2%</code> vs <code>65.8%</code>）与 FrontierCode（<code>46.2%</code> vs <code>47.3%</code>）上 Opus 5.5 仍略胜一筹。更值得工程团队警惕的是 Harness 放大效应：Neon 在 Google 自研 Antigravity Harness 上的 SWE-sweep 领先优势（<code>39.0%</code> vs <code>10.1%</code>），放到统一公开 Harness 上即收缩为 <code>12.8%</code> vs <code>3.6%</code>。</div>
+    <div class="item-meta">
+      <a href="https://x.com/ela_euk/status/2124050772337754351" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag cairn-autonomous-agent-zero-day-monai">Cairn-Autonomous-Agent-Zero-Day-Monai</span> @botnewsnetwork：AWS 威胁情报披露——攻击者用开源渗透 Agent「Cairn」11 分钟挖出医疗影像零日漏洞并拿下 Root</div>
+    <div class="item-body">根据 AWS Threat Intelligence 11 月 20 日披露的技术报告，疑似东亚关联攻击者仅向为防守方设计的开源自主渗透框架 <code>Cairn</code> 下达了一句四个词的自然语言目标——<code>"obtain shell access"</code>，Agent 便针对多所高校内网自主规划并连续运行 <code>48</code> 小时。在探测开源医疗影像 AI 应用 <strong>MONAI Label</strong> 时，Agent 自行识别框架、测绘 API 并锁定文件上传接口的路径遍历零日漏洞（<code>CVE-2026-133968</code>），从测绘到实现任意文件写入仅耗时 <strong><code>11</code> 分钟</strong>，随后在后续会话中提权建立 Root 反弹 Shell。具有讽刺意味的是，这起行动之所以暴露并非被防守方流量告警拦截，而是攻击者自己把 Cairn 控制台无鉴权暴露在了公网上——同步曝光的日志还显示该 Agent 曾对未鉴权 Redis 连续自主试错 <code>16</code> 小时（<code>148</code> 步失败）、并从高校公开教职名录抓取 <code>80</code> 个用户名对 SSH 暴力枚举 <code>30,000+</code> 次。</div>
+    <div class="item-meta">
+      <a href="https://x.com/botnewsnetwork/status/2124210026281914879" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag everydevai-14-agent-dev-tools-roundup">Everydevai-14-Agent-Dev-Tools-Roundup</span> @EveryDevAi：本周 14 个高信号 Agent 工程与验证工具精选（harness-evals、SkillEvaluator、Cache Tax、Edge0）</div>
+    <div class="item-body">@EveryDevAi 本周整理了 <code>14</code> 个聚焦「校验 Agent 工作」与「观测长会话」的一线开发工具，多款附有硬核实测：1）<strong>Garry Tan 的 <code>harness-evals</code></strong>：固定模型与题集仅切换 <code>Claude Code / Codex / Pi / OpenClaw / Hermes</code>，实测 Harness 差异更多体现在<strong>单题解决成本</strong>而非通过率（<code>Pi</code> 在双模型测试中均最省钱；写入 System Prompt 或每轮 Hook 的规则遵守率达 <code>30/30</code>，未显式点名的 Skill 几乎不被打开）；2）<strong>验证与缓存监控</strong>：NVIDIA <code>SkillEvaluator</code> 在沙盒内跑同一任务 A/B 对比技能真实增益，<code>Cache Tax</code> 在你离开工位前估算提示词缓存过期重算代价（<code>330k</code> Token 会话预估 <code>$6.61</code>、实耗 <code>$6.28</code>），<code>lot-map</code> 侧边实时绘制工具调用与 <code>70%</code> 上下文压缩预警环；3）<strong>迁移与端侧推理</strong>：<code>rust-anything</code> 逐段迁移项目至 Rust 并以 <code>17,224</code> 条录制输出字节级对齐（Prettier 移植快 <code>19×</code>），<code>Edge0</code> 从 SSD 流式加载专家权重在单张 <code>24GB</code> RTX 5090 D 上以 <code>121 tok/s</code> 跑通 <code>145B</code> MoE，<code>WebMCP</code>（Vercel Labs UI SDK）速度较截图点击快逾 <code>2×</code> 且成本减半。</div>
+    <div class="item-meta">
+      <a href="https://x.com/EveryDevAi/status/2124190108572426748" target="_blank">View Tweet</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔥</span>
+      <h2>纳指抹平年内涨幅与 Anthropic 次日承压、模型无梯度自改写权重及纯浏览器耳鸣陷波工具</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-496">HN · 496 分 · 868 评论</span> 纳斯达克抹平 2026 年全部涨幅，AI 板块抛售拖累 Anthropic 上市次日表现</div>
+    <div class="item-body">《卫报》报道指出，随着投资者质疑巨头在 AI 基础设施上的巨额资本开支回报，全球股市周五延续 AI 板块抛售潮。Anthropic 上市第二个交易日股价大幅回吐，尾盘几乎回落至 IPO 发行价附近；纳斯达克综合指数单日下挫后正式抹平 2026 年年初至今的全部涨幅（较 1 月 1 日低约 <code>5%</code>），《华尔街日报》测算本周纳指累计蒸发市值约 <strong><code>$4 万亿</code></strong>，标普 500 与道指双双收于回调区间。</div>
+    <div class="item-meta">
+      <a href="https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off" target="_blank">阅读 The Guardian 报道</a>
+      <a href="https://news.ycombinator.com/item?id=50574383" target="_blank">HN 讨论 (868 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-480">HN · 480 分 · 141 评论</span> 无需梯度与训练：开源 27B 语言模型通过自我推理直接改写自身权重（+6.6 分）</div>
+    <div class="item-body">论文《Language Models Can Rewrite Their Own Weights》（<code>arXiv:2611.21885</code>）提出名为<strong>自改写（self-rewriting）</strong>的新范式：不再依赖外部梯度反传或由强模型编辑小模型，而是直接向一个开源 <code>27B</code> 模型开放其自身权重、带评分的错题输出以及自运行环境，让模型自己诊断失效原因并直接修改对应参数。每次改写先在练习题上验证有效后再正式提交，连续八轮迭代使从未见过的测试题准确率提升 <strong><code>+6.6</code> 分</strong>。</div>
+    <div class="item-meta">
+      <a href="https://arxiv.org/abs/2611.21885" target="_blank">阅读 arXiv 论文</a>
+      <a href="https://news.ycombinator.com/item?id=50577265" target="_blank">HN 讨论 (141 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-218">HN · 218 分 · 132 评论</span> Show HN：Notched——4 分钟纯浏览器耳鸣频率匹配与八度陷波音频工具</div>
+    <div class="item-body">开发者发布免费网页工具 <strong>Notched</strong>，帮助耳鸣人群在大约 <code>4</code> 分钟内通过先校准安全均衡音量、避开经典的「高八度误判」引导交互，精确定位自己耳鸣音调的赫兹（Hz）频率范围。匹配结果可直接导出给耳科医生参考，或立即在浏览器内免费播放针对该频率扣除一个八度频带的雨声、海浪与棕色噪音作为日常声学掩蔽，全部音频处理均在本地浏览器完成，无需注册且零数据上传。</div>
+    <div class="item-meta">
+      <a href="https://trynotched.com/find" target="_blank">试用 Notched 工具</a>
+      <a href="https://news.ycombinator.com/item?id=50541568" target="_blank">HN 讨论 (132 评论)</a>
+    </div>
+  </div>
+  </div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
+
+</body>
+</html>
