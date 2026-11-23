@@ -1,62 +1,81 @@
 {
  "title": "Clawd X Digest",
- "date": "2026年11月22日（周日）21:00 ET",
+ "date": "2026年11月23日（周一）12:00 ET",
  "lang": "zh-CN",
  "summary_title": "高信号摘要",
  "summary": [
-  "<strong>OpenAI 公开内部困惑度曲线并倡议安全限速：</strong>首席科学家 Jakub Pachocki 发布《Perplexity and Intelligence》，首次披露内部代码库对数困惑度进展（<code>GPT-3.5 ~0.99</code>、<code>GPT-4 ~0.91</code>、<code>GPT-6.2 Astra ~0.761</code>、内部模型 <code>0.732</code>），预计 <code>0.68–0.70</code> 将解锁下一波变革能力、最早 <code>2027</code> 年迎来预训练算法雪崩突破，呼吁行业以监控可理解性里程碑为界设限；微软 <code>MAI-2 Base</code> 率先以 <code>0.819</code> 对标响应并建议转向 <code>BPB</code>，而 @RidgerZhu 也在 GPT-4 发布页第 <code>207</code> 行挖出其真实训练算力为 <code>1.235 × 10²⁵ FLOP</code>（较 Epoch AI 估算低 <code>1.7×</code>）。",
-  "<strong>Anthropic 天量现金与黎曼猜想 Lean 风波后续：</strong>刚完成史上最大 IPO 的 Anthropic 在手现金达 <strong><code>$237B</code></strong>（募资 <code>$81B</code> + 私募 <code>$26B</code>），引发业界对 OpenAI 此时「喊停」动机与尺子标准的审视；针对昨日 Claude 黎曼猜想 Lean 源码中的 <code>fun _ _ _ => True</code> 争议，@caishen_huang 澄清关键在于最终主定理是否将其当作必需假设的替身，而 Polymarket 转发 <code>70</code> 万播放的「推翻声明」则遭社区笔记扒皮。",
-  "<strong>Agent Harness、Code Mode 省 10× Token 与通道封号线：</strong>@dabit3 直言强 Harness 将淘汰手工维护 <code>skills</code>；同日 @dexhorthy 在 Factory 用 <code>Procedural Tool Calling</code>（Code Mode）把每日 Linear 巡检从 <code>245k tokens / 7 分钟</code> 压至 <strong><code>23k tokens / 36 秒</code></strong>；Google 严打 <code>pi-antigravity</code> 等假垫片反代（单次提示即封号），唯有走官方 <code>antigravity-acp</code> 的 7 万星开源工作台 <code>T3 Code</code> 合规；Vercel Next.js 团队烧 <code>60B tokens</code> 提炼出 <code>8</code> 条极简 <code>AGENTS.md</code>（并警示第一条曾险删生产库表）。",
-  "<strong>端侧实时扩散生成、硬件逆向 MCP 与《值得你花时间》：</strong>马斯克拆解 Tesla AI4 车端 <code>Reality View</code>——靠半个 INT8 TRIP 加速器（约 <code>8%</code> 算力）用 <code>28</code> 步模拟 <code>softmax</code> 驱动 <code>1B</code> 扩散模型（延迟 <code>0.22s</code> 将降 <code>35%</code> 至 <code>0.14s</code>）；Rust 开源上位机 <code>simpsoka/zigzag</code> 逆向 $300 绣花机蓝牙协议并内嵌 <code>MCP Server</code> 让 Claude 直接驱动扎针；《值得你花时间》精选 <code>Gemini 4 Neon</code> 在 9 台 Mac 机群的 <code>75ms</code> FTS5 路由与凌晨自愈实战、Cloudflare 76.8k 星 <code>security-audit-skill</code> 与 Cairn Agent <code>11</code> 分钟挖出零日、以及手算拆穿 <code>Inkling 2 Mini</code> 榜单与纯 CPU <code>4.7×</code> 实时 <code>Kitten-TTS-2</code> 实测。"
+  "<strong>GLM-5.4 Loop Transformer 首发实测冰火两重天：</strong>智谱发布基于 750B <code>GLM-5</code> 将 <code>28</code> 层做两轮循环的新版模型（仅增 <code>1.35×</code> 计算量并补齐视觉），<code>KingBench 4</code> 跑出 <code>33.2/60</code>（开源第 1）且能抓出 <code>Fable 5.2</code> 漏掉的漏洞，但出现严重的「过度思考陷阱」——KingBench 耗 <code>1.04M</code> 推理 token / <code>431</code> 分钟（<code>Gemini 4 Neon</code> 仅 <code>70k</code> / <code>109</code> 分钟），APK 逆向实测 85 分钟耗光 80% 额度未出包；同日 @Da7_Tech 用 410 万字日志虚词分类器指其文风向 <code>Opus 5.5</code> 相似度从 <code>-0.46</code> 跃至 <code>+0.48</code>。",
+  "<strong>开源掉队数据曝光与 OpenAI 困惑度标尺遭实验打脸：</strong>T3 Code 作者 @theo 公开后台数据称开源模型仅占真实对话轮次 <strong><code>0.5%</code></strong> / Token <strong><code>0.7%</code></strong>，并曝光 <code>DeepSWE</code> 改题面后多款开源模型狂掉 12–30 分的背题现象；针对 OpenAI 昨日的内部困惑度曲线，@ziv_ravid 跑 1.3M GPT 对照实验证明语料配比与分词器可直接把 PPL 刷差 <code>2.6×</code>（4k BPE <code>4.38</code> vs 字节级 <code>1.68</code>，但 BPB 实为 <code>1.77 vs 2.42</code>），私有指标无法跨家对标。",
+  "<strong>Code Mode 砍掉 99.9% MCP 上下文、Rust 版真实浏览器 MCP 与多模型甜点档：</strong>Cloudflare 实证把 <code>2,594</code> 个 API 端点从传统 MCP（<code>1.17M</code> tokens）缩成 <code>search()</code> + <code>execute()</code> 双工具沙盒脚本，提示词暴降至约 <strong><code>1,000</code> tokens</strong>；<code>OpenCode Browser</code> 用 Rust 重写扩展支持在已登录浏览器后台跑任务；@amazing352002 测出 GPT-6.2 甜点档（日常 <code>Sol High</code> 省 <code>63%</code>、复杂 <code>Astra XHigh</code> 省 <code>59%</code>）；苹果 M4 跑去审查版 <code>Inkling-2-Mini</code> 8 并发达 <strong><code>85 tok/s</code></strong>。",
+  "<strong>黄仁勋官复原职、算力信用链收紧与《值得你花时间》：</strong>英伟达董事会今日一致投票恢复黄仁勋 CEO 及董事职务（身家单日增 <code>$36B</code> 至 <code>$147B</code>），@ZhouTalks 拆解风波背后英伟达 <code>$390B</code> 采购承诺与 Kress 立下的新云三铁律；独立内核浏览器 <code>Ladybird</code> 进入 Alpha；《值得你花时间》精选 <code>Agent-as-a-Judge</code>（百万 Token 长轨迹 F1 <code>+0.21</code>、成本降 <code>62%</code>）、DeepMind <code>CRSI/SIM</code> 与零评测自进化 <code>ELITE</code>（<code>$8</code> / 4.9h 升至 <code>85.6%</code>）、开源浏览器 Agent <code>karpo-browser</code>（<code>$0.096</code>/任务）及 <code>Opus 5.5</code> medium/high 与 <code>VeriHarm-Bench</code> 评测实据。"
  ],
  "sections": [
   {
    "emoji": "🧠",
-   "title": "预训练透明度、安全限速与形式化证明博弈",
+   "title": "模型发布、蒸馏取证与基准可信度",
    "items": [
     {
-     "tag": "openai-perplexity-and-intelligence-mai2-benchmark",
-     "title": "@merettm & @Ananth7e & @eliebakouch & @RidgerZhu：OpenAI 首次公布内部困惑度曲线倡议限速；微软 MAI-2 率先对标（0.819），GPT-4 真实算力藏在网页第 207 行",
-     "body_html": "OpenAI 首席科学家 Jakub Pachocki（@merettm）今日发表长文《Perplexity and Intelligence》（获 Sam Altman 转发称为近期最重要发布），首次披露 OpenAI 在内部保留代码库上的对数困惑度（log-perplexity，越低越强）演进：<code>GPT-3.5 ~0.99</code>（流畅对话）、<code>GPT-4 ~0.913</code>（思维链推理起步）、<code>GPT-5.2 ~0.888</code>；当损失跌破 <code>0.8</code> 后，网安与数学领域涌现变革性能力，<code>GPT-6.2 Astra（~0.761）</code> 已能在单个 Slack 线程里接连攻克数学难题，而当前未公开内部模型已下探至 <strong><code>0.732</code></strong>。Pachocki 预测进入 <code>0.68–0.70</code> 窗口将再迎能力跃迁、最早 <code>2027</code> 年出现 AI 驱动的预训练算法「雪崩式突破」，遂倡议各前沿实验室建立共同上限，在 CoT 监控替代方案等可理解性里程碑达标前暂停越线。微软 AI CEO @mustafasuleyman 随后响应并获准在 OpenAI 同套评估集上公布 <code>MAI-2 Base</code> 得分为 <code>0.819</code>（与 <code>GPT-5.6 Sol</code> 基座同档），同时指出各家分词器不同，未来应统一用 <code>bits-per-byte (BPB)</code>；@eliebakouch 据此用 MAI-1/MAI-2 作锚点把开源模型映射到同一坐标图。另一方面，@RidgerZhu 复核 @wenhaocha1 对 GPT-4 缩放律不可约损失（<code>E ≈ 0.706</code>，OpenAI 图表标示 <code>0.71</code>）的拟合时，发现 2023 年 3 月 GPT-4 官方发布页源码第 <code>207</code> 行早已明文写出真实训练算力为 <strong><code>1.235 × 10²⁵ FLOP</code></strong>，比 Epoch AI 长期估算值低约 <code>1.7×</code>。",
+     "tag": "glm-5-4-loop-transformer-overthinking-and-style-forensics",
+     "title": "@Zai_org & @aicodeking & @xulijian1994 & @Da7_Tech：GLM-5.4 Loop Transformer 首发多方实测——漏洞挖掘夺开源第一，但 15× 过度思考致 85 分钟未交货与「蒸馏 Opus 5.5」文风取证",
+     "body_html": "智谱今日正式推出 <code>GLM-5.4</code>，与前代不同，它并未从零重训基座，而是把 750B <code>GLM-5</code> 基座第 28 层起做两轮循环（第 1–26 与 55–78 层稳态收敛），以约 <strong><code>1.35×</code></strong> 计算量换取更深推理（非 2×），并首次补齐原生视觉与 3D/Shader/CAD 编码能力，周额度同步上调 <code>50%</code>。首日实测呈现极端的长短板分化：1）<strong>深度审校能力突出</strong>：@aicodeking 与 @superalesha 指出其在 <code>KingBench 4</code> 拿下 <code>33.2/60</code>（总榜第 7、开源第 1），能在 <code>150–170 tok/s</code> 速度下揪出 <code>Claude Fable 5.2</code> 漏掉的安全漏洞，提示缓存命中率达 <code>96–99%</code>、失败工具调用重试恢复率 <code>66%</code>。2）<strong>15× 过度思考死循环</strong>：同一份 KingBench 跑满耗尽 <strong><code>1.04M</code></strong> 推理 token 与 <strong><code>431</code> 分钟</strong>（<code>Gemini 4 Neon</code> 仅 <code>70k</code> / <code>109</code> 分钟），<code>High</code> 档画 1 个 SVG 需等待 36–90 分钟；@xulijian1994 同场拿 Android APK 逆向去广告实测，<code>GLM-5.3</code>（69 分钟）与 <code>DeepSeek V4.1 Flash</code>（88 分钟）均成功交付成品 APK，而 <code>GLM-5.4</code> 花 85 分钟解密完 4,875 条 StringFog 后仍深陷奖励回调分支，耗光 <code>80%</code> 五小时额度却一行 Smali 补丁未写。3）<strong>文风指纹与对战成绩</strong>：官方博客显示其对战 <code>GLM-5.3</code> 胜率 <code>51.1%</code>、对 <code>Kimi K3.1 Pro</code> <code>41.8%</code>、对 <code>DeepSeek V4.1 Flash 1017</code> <code>36.6%</code>；而 @Da7_Tech 用 410 万字符自有聊天日志与虚词分类器（区分 Anthropic/OpenAI 准确率 <code>86.1%</code>）检测发现，<code>GLM-5.4</code> 相对 5.3 向 <code>Opus 5.5</code> 相似度从 <code>-0.46</code> 骤升至 <strong><code>+0.48</code></strong>（<code>but rather</code> 频次从 0.20 飙至 1.40、破折号由 2.28 归零），质疑其后训练大量采用了 Opus 5.5 输出。",
      "links": [
       {
-       "label": "OpenAI 官方长文：Perplexity and Intelligence",
-       "url": "https://openai.com/index/perplexity-and-intelligence/"
+       "label": "智谱 GLM-5.4 官方技术博客",
+       "url": "https://z.ai/blog/glm-5.4"
       },
       {
-       "label": "@Ananth7e 内部模型困惑度数值拆解",
-       "url": "https://x.com/Ananth7e/status/2124562546200031416"
+       "label": "@aicodeking KingBench 4 深度实测",
+       "url": "https://x.com/aicodeking/status/2124731584490111224"
       },
       {
-       "label": "@eliebakouch 微软 MAI-2 对标与开源映射",
-       "url": "https://x.com/eliebakouch/status/2124668409564528947"
+       "label": "@xulijian1994 APK 逆向三模型对比",
+       "url": "https://x.com/xulijian1994/status/2124795738496647330"
       },
       {
-       "label": "@RidgerZhu 发现 GPT-4 真实训练 FLOP",
-       "url": "https://x.com/RidgerZhu/status/2124649826679939180"
+       "label": "@Da7_Tech 410 万字虚词指纹分析",
+       "url": "https://x.com/Da7_Tech/status/2124825757805318204"
+      },
+      {
+       "label": "@Vincent_AINotes 对战胜率拆解",
+       "url": "https://x.com/Vincent_AINotes/status/2124815481295225339"
       }
      ]
     },
     {
-     "tag": "anthropic-cash-pile-and-riemann-lean-followups",
-     "title": "@iamtheQwen & @Balder13946731 & @caishen_huang & @xKaka1456：Anthropic 手握 $237B 现金重塑竞争格局；黎曼猜想 Lean「True 谓词」与乌龙反证再反转",
-     "body_html": "围绕两强竞赛与黎曼猜想证明的舆论博弈在晚间出现新线索：1）<strong>谁在喊停、谁握尺子</strong>：刚于 11 月 18 日完成史上最大 IPO（募资 <code>$81B</code> + 私募 <code>$26B</code>）的 Anthropic 目前账面现金及等价物高达 <strong><code>$237B</code></strong>（为 Alphabet、Amazon、SpaceX、Apple 各自现金的 <code>4×</code> 以上，英伟达的 <code>8×</code>），紧接着 11 月 20 日宣布 Claude 参与黎曼猜想形式化证明；@iamtheQwen 指出 OpenAI 两天后以自家代码库对数困惑度倡议「共同限速」，既承担了亮出内部分数的代价，也绕开了未计入后训练与推理链增益的争议，实为规则与节奏之争。2）<strong>Lean 争议与 Polymarket 乌龙澄清</strong>：针对白日发酵的「源码含 <code>fun _ _ _ => True</code>」质疑，@caishen_huang 从 Lean 语义角度拆解指出，该定义本身只是声明不对几何对象设限的谓词，不能单凭这一行就宣判全篇作伪——真正决定生死的是它是否替代了某个必须证明的关键数学条件并处于主定理依赖链内；同时，@xKaka1456 曝光 Polymarket 官方号转发、播放超 <code>70</code> 万的「数学家推翻 Claude 黎曼猜想证明」突发贴已被社区笔记光速扒皮，所谓权威学者所在研究所疑似仅有其本人，主页甚至自称早已一并攻克杨-米尔斯、纳维-斯托克斯与大统一场论。",
+     "tag": "theo-open-weights-real-usage-and-contamination",
+     "title": "@theo（经 @leaf_sanren & @ChuckBass8808 拆解）：T3 Code 后台真实用量仅 0.7% 来自开源模型，改题测试揭穿开源刷榜与反蒸馏三重壁垒",
+     "body_html": "一直力挺并补贴开源软件的 T3 Code 作者 @theo 今日发布 40 分钟长视频，宣布不再押注开源权重模型追上前沿闭源，并抛出几组刺眼实证：1）<strong>真实干活几乎没人付费调用开源</strong>：在日均 Token 量号称高于 OpenRouter 的 T3 Code 生产后台中，开源模型仅占总对话轮次的 <strong><code>0.5%</code></strong>、Token 消耗的 <strong><code>0.7%</code></strong>，曾试用过一次开源的安装比例也从 <code>16%</code> 跌至 <code>6%</code>（Artificial Analysis 升级至 V5 后闭源平均仅降 <code>2.4</code> 分，开源暴跌 <code>13</code> 分）。2）<strong>微调题面直接掉出原形</strong>：将 <code>DeepSWE</code> 89 道编程题微调需求形成 <code>MaxBench</code> 后，仅 <code>Opus 5.5</code> 未掉分，<code>GLM-5.3</code> 跌 <code>12</code> 分、<code>DeepSeek V4.1 Flash</code> 狂掉近 <code>30</code> 分、<code>Gemini 3.8 Flash</code> 掉 <code>20</code> 分；其自建 <code>SkateBench</code> 翻倍加新题后，某开源模型旧题满分而新题 <code>0</code> 分。3）<strong>三大结构性死穴</strong>：中美算力年增速差距（<code>1.5–2×</code> vs <code>2–4×</code>）、反蒸馏封堵（Anthropic 疑似扰乱公开推理链、OpenAI 对 Codex 子代理通信加密，甚至催生盗号 $1 倒卖 $10 Claude Code 额度换日志的黑产），以及 Anthropic 内部用未公开模型（如 <code>Model 4</code>）带来 <code>5×–12×</code> 提效的自进化飞轮。",
      "links": [
       {
-       "label": "@iamtheQwen 评 OpenAI 限速时机与标尺之争",
-       "url": "https://x.com/iamtheQwen/status/2124654166119170518"
+       "label": "@leaf_sanren 40 分钟长片逐段纪要",
+       "url": "https://x.com/leaf_sanren/status/2124774199910879400"
       },
       {
-       "label": "@Balder13946731 转 Anthropic $237B 现金明细",
-       "url": "https://x.com/Balder13946731/status/2124535005665980691"
+       "label": "@ChuckBass8808 关键数据与评论区摘要",
+       "url": "https://x.com/ChuckBass8808/status/2124733511022301508"
+      }
+     ]
+    },
+    {
+     "tag": "perplexity-ablation-rebuttal-and-tufazip",
+     "title": "@ziv_ravid & @alexpolozov & @tufalabs：1.3M 模型实验拆穿 OpenAI 内部困惑度跨家不可比；纯神经网络无损压缩器 tufazip 把 1GB 维基压至 105.39MB",
+     "body_html": "围绕「困惑度能否作为全行业安全标尺」的争论今日出现扎实实验反证，同日「压缩即智能」也迎来开源新纪录：1）<strong>实验证伪跨家可比性</strong>：研究者 @ziv_ravid 周末带着 Agent 训练 <code>1.3M</code> 参数 GPT 跑出 12 贴对照实验——固定架构、分词器与预算，仅把训练集代码占比从 <code>25%</code> 调至 <code>75%</code>，代码对数困惑度便从 <code>4.68</code> 降至 <code>4.03</code> 而文本升至 <code>4.80</code>；同一语料下字节级模型报 <code>1.68 nats/token</code>、4k BPE 报 <code>4.38</code>，但按 <code>bits-per-byte</code> 换算实际是 BPE 压缩更优（<code>1.77 vs 2.42</code>），不同语料训练的两套 4k BPE 更相差 <code>2.53 vs 4.38</code>；再加上 OpenAI 内部代码已大量由 Codex 生成，私有验证集数字既无法复现也不能充当共同限速标尺，@alexpolozov 亦呼吁由 <code>@METR_Evals</code> 等中立机构托管滚动验证集与统一去重 RFC。2）<strong>纯神经网络无损压缩新标杆</strong>：@tufalabs 开源 <code>tufazip</code>（12 层 <code>163M</code> 参数 Transformer，由 <code>4.33MB</code> 离线量化权重初始化并在压缩时在线同步学习，解码端复用相同学习过程免传全量权重），将 <code>1 GB</code> 英文维基百科无损压缩至 <strong><code>105.39 MB</code></strong>（105,388,353 字节），拿下 Large Text Compression Benchmark 总榜第 2、纯神经网络预测器第 1。",
+     "links": [
+      {
+       "label": "@ziv_ravid 12 贴对照实验反驳",
+       "url": "https://x.com/ziv_ravid/status/2124685983488643267"
       },
       {
-       "label": "@caishen_huang 拆解 Lean True 谓词判定标准",
-       "url": "https://x.com/caishen_huang/status/2124551629072716269"
+       "label": "@alexpolozov 论独立去重与第三方审计",
+       "url": "https://x.com/alexpolozov/status/2124693289425133733"
       },
       {
-       "label": "@xKaka1456 揭露 Polymarket 反证乌龙",
-       "url": "https://x.com/xKaka1456/status/2124535707666690248"
+       "label": "Tufa Labs tufazip 技术报告",
+       "url": "https://tufalabs.ai/research/tufazip/"
+      },
+      {
+       "label": "@tufalabs 发布帖",
+       "url": "https://x.com/tufalabs/status/2123350647273631907"
       }
      ]
     }
@@ -64,113 +83,137 @@
   },
   {
    "emoji": "🤖",
-   "title": "Agent Harness、Code Mode 省 Token 与订阅通道治理",
+   "title": "Agent 架构、Code Mode 与本地算力实测",
    "items": [
     {
-     "tag": "procedural-tool-calling-skills-code-smell-and-pr-review",
-     "title": "@dabit3 & @dexhorthy & @pabcrab：Code Mode 实测把 Linear 巡检压到 23k Token / 36 秒（省 10×）；手写 Skills 正沦为新坏味道；/summarize-pr 提速 5×",
-     "body_html": "外围编排架构正把 Agent 的效率边界和工作流习惯一起改写：1）<strong>Procedural Tool Calling（Code Mode）一线实测</strong>：@dexhorthy 今晚在 Factory 实现基于代码调用工具的 PTC 方案后，将每天例行的 Linear 工单巡检从 <code>245k tokens / 7 分钟</code> 直接打到 <strong><code>23k tokens / 36 秒</code></strong>（Token 暴降逾 <code>10×</code>、耗时缩至约 <code>1/11</code>），印证让模型写一段代码批量联调并过滤返回结果，比多轮串行工具调用划算得多。2）<strong>Harness 内化后，手写 Skills 成坏味道</strong>：@dabit3 判断进入 2027 年，只要外围 Harness 足够强且工程师能把问题拆清，手动维护 <code>skills</code>、上下文、记忆、子 Agent 等管道将变得多余甚至适得其反——真正稀缺的只剩问题理解与清晰拆解能力。3）<strong>AI 时代 PR 审查新界面</strong>：@pabcrab 分享在 Framer 团队落地的 <code>/summarize-pr</code> 工作流，借助结构化变更摘要与核验视图将日常 PR Review 效率提升 <strong><code>5×</code></strong>。",
+     "tag": "cloudflare-code-mode-mcp-and-opencode-browser",
+     "title": "@suraj_sharma14 & @vikingmute：Cloudflare 用 2 个工具把 2,594 个 API 压进 1,000 Token（省 99.9%）；OpenCode 推出 Rust 重写的真实浏览器 MCP",
+     "body_html": "Agent 接触外部 API 与网页的两大高频瓶颈今天同时给出更薄、更省的解法：1）<strong>Code Mode 终结工具定义爆炸</strong>：@suraj_sharma14 拆解 Cloudflare 官方方案——若把 Cloudflare <code>2,594</code> 个 API 端点按传统方式逐一写成 MCP 工具，光工具 Schema 就吃掉约 <strong><code>1.17M tokens</code></strong>，直接撑爆多数模型上下文；改用 <code>Code Mode</code> 后，服务端只暴露 <code>search()</code> 与 <code>execute()</code> 两个工具，Agent 先用代码检索规范、再写一段 JS 在隔离沙盒里串联多步请求并只返回最终结果，提示词开销骤降至约 <strong><code>1,000 tokens</code>（节省 99.9%）</strong>。2）<strong>操控已登录浏览器的 Rust MCP</strong>：@vikingmute 实测 <code>OpenCode Browser</code>（MCP Server + Chromium 扩展），相比另起无头空白浏览器，它直接在用户日常已登录的 Chrome 后台折叠标签组里操作，遇登录/2FA/支付等敏感动作弹出手动确认并支持域名白名单；前几天刚用 <strong>Rust 重写</strong>，彻底摆脱 Node + Playwright 的体积与内存开销，成为 <code>agent-browser</code> 之外的新轻量选型。",
      "links": [
       {
-       "label": "@dexhorthy PTC 实测 245k→23k Token",
-       "url": "https://x.com/dexhorthy/status/2124624191563698426"
+       "label": "Cloudflare Code Mode MCP 博客",
+       "url": "https://blog.cloudflare.com/code-mode-mcp/"
       },
       {
-       "label": "@dabit3 论 Harness 与 Skills 坏味道",
-       "url": "https://x.com/dabit3/status/2124539594905448904"
+       "label": "@suraj_sharma14 对比 1.17M→1,000 Token",
+       "url": "https://x.com/suraj_sharma14/status/2124752307631865914"
       },
       {
-       "label": "@pabcrab Framer /summarize-pr 经验",
-       "url": "https://x.com/pabcrab/status/2124615831900369326"
+       "label": "OpenCode Browser 产品页",
+       "url": "https://opencode.ai/product/browse"
+      },
+      {
+       "label": "@vikingmute 实测 Rust 重写版体验",
+       "url": "https://x.com/vikingmute/status/2124766154220786071"
       }
      ]
     },
     {
-     "tag": "antigravity-t3-code-and-agents-md-constraints",
-     "title": "@theo & @harrisonitsme & @MuRong97358：Google 严打第三方假垫片（单次即封号），T3 Code 靠官方 ACP 合规暴火；60B Token 炼出的 8 条 AGENTS.md 警告",
-     "body_html": "订阅复用与仓库约束今天同时划出明确红线：1）<strong>Gemini 订阅跨工具调用红绿灯</strong>：@yuvadm 警告 Google 正严厉封禁第三方非官方 Harness（使用 <code>pi-antigravity</code> 假垫片发一条提示即被封号，magpie 等反代项目亦遭批量清退）；@theo 与 @harrisonitsme 划出唯一合规路径——Google 官方明确允许调用原版 <code>antigravity-acp</code> 二进制并走自带登录进行个人交互开发，MIT 开源（约 <code>7</code> 万星）的 <code>T3 Code</code> 正因走官方 ACP 通道且支持在同一本地界面里统一调度 Claude Code、Codex、Cursor、OpenCode 与 Antigravity（含对话中途切模型交接、独立 Git worktree 及手机端远程批准命令）而在两天内爆火。2）<strong>烧掉 60B Token 的极简约束与删库教训</strong>：@MuRong97358 整理 Vercel Next.js 团队耗费约 <code>60B tokens</code>（约六位数美元）后沉淀的 <code>8</code> 条极简 <code>AGENTS.md</code> 规则——核心是强制 Agent 像老工程师一样「不留兼容层、选最简实现、分层生长、先查已有依赖、优先成熟库」，从源头掐掉多余抽象与返工；但作者特别警告第一条「不保留向后兼容」曾让 Agent 差点删掉生产数据库表（险损 <code>$2,000</code> 数据），仅适合原型与个人项目，进生产必须删改。",
+     "tag": "software-factories-vs-agent-teams-and-model-routing",
+     "title": "@zachlloydtweets & @amazing352002 & @Da7_Tech：Warp CEO 划清「软件工厂 vs Agent 团队」与代驾红线；GPT-6.2 省 60% Token 甜点档与 Devin 1,000 tok/s 实测",
+     "body_html": "三条围绕编排范式、安全边界与模型性价比的工程观察：1）<strong>别把 Agent 当员工，也别让它直接冒名登录</strong>：Warp CEO @zachlloydtweets 今日发表长文《Software factories vs. agent teams》，主张应将 Coding Agent 建成代码定义、可测量、可回归改进的闭环基础设施（优化吞吐/质量/成本），而非拟人化地「管理一屋子角色团队」；同时他单独发文警告，当下让 <code>muse</code>、<code>grokbot</code>、<code>dots</code> 直接用人类账号密码或 OAuth 冒充本人发邮件、发 X 的做法极其危险，一旦被劫持就会利用你的真实社交信任链作恶，业界急需明确标识「Agent 身份」的代理协议。2）<strong>GPT-6.2 甜点档省 6 折 Token</strong>：@amazing352002 对照 Artificial Analysis 评测拆出新性价比配置——日常用 <strong><code>Sol High</code></strong>（55 分，逼近 Max 的 57 分但 Token 消耗仅 Max 的 <code>37%</code>），复杂攻坚用 <strong><code>Astra XHigh</code></strong>（62 分已与 Max 持平，消耗仅 Max 的 <code>41%</code>，切到 Max 多烧 <code>143%</code> Token 却零智商增益）。3）<strong>Devin 多模型混跑一周实测</strong>：@Da7_Tech 连续 6 天重度测试 Devin——内置 <code>SWE-2</code> 跑出 <code>1,000+ tok/s</code> 与 <code>$5/1M</code> 输出价（支持同时开 4 个云端会话 24 小时不撞限流），最佳范式是让最强模型画清架构图、交付物与验收目标，再交给 SWE-2 连续多日批量执行。",
      "links": [
       {
-       "label": "@theo 划定 Antigravity 合规边界",
-       "url": "https://x.com/theo/status/2124665075638411641"
+       "label": "@zachlloydtweets：软件工厂 vs Agent 团队",
+       "url": "https://x.com/zachlloydtweets/status/2124903221621612762"
       },
       {
-       "label": "@harrisonitsme 拆解 T3 Code 七大特性",
-       "url": "https://x.com/harrisonitsme/status/2124447077434634471"
+       "label": "@zachlloydtweets 警告 Agent 冒名登录风险",
+       "url": "https://x.com/zachlloydtweets/status/2124894313242865982"
       },
       {
-       "label": "@MuRong97358 60B Token 提炼的 8 条 AGENTS.md",
-       "url": "https://x.com/MuRong97358/status/2124531122826854873"
+       "label": "@amazing352002 拆解 GPT-6.2 甜点档位",
+       "url": "https://x.com/amazing352002/status/2124699468977320122"
+      },
+      {
+       "label": "@Da7_Tech 一周 Devin 混跑实测",
+       "url": "https://x.com/Da7_Tech/status/2124571113128620125"
       }
      ]
     },
     {
-     "tag": "gpt-ultra-vs-max-and-model-spec-defensiveness",
-     "title": "@Mashiro_0619 & @aura_uniiiii：GPT Ultra 并非比 Max 更深（只是 xhigh + 多 Subagent 并行）；10.29 版 Model Spec 解释为何 GPT 变爱「先叠甲」",
-     "body_html": "两条直接纠正 GPT 使用习惯与排障预期的实操观察：1）<strong>别把 Ultra 当成高阶单步推理</strong>：@Mashiro_0619 指出许多用户迷信 Ultra 最高档，但 Ultra 底层实际是 <code>xhigh</code> 思考强度配合多个 subagent 并行协作；单论单次深度推理，<strong><code>Max</code> 档反而高于 <code>Ultra</code></strong>。因此卡在单一硬骨头 Bug 时应切 <code>Max</code> 集中攻坚，需要全局分析与跨文件大规模改动时再切 <code>Ultra</code> 铺开并行。2）<strong>防御性拒答的规范根源</strong>：@aura_uniiiii 翻查 OpenAI 于 <code>2026-10-29</code> 更新的 <code>Model Spec</code> 发现，新版把「保护公司免受法律与声誉损害」置于极高优先级并凌驾于「默认用户善意」之上，解释了为何模型近期更容易优先自我叠甲再回应需求。",
+     "tag": "local-m4-inkling-85-tps-and-colab-ultra-stack",
+     "title": "@mingzi206 & @zg0820：Apple M4 用 Locals 引擎并发 8 个无审查编码子代理跑出 85 tok/s；Google AI Ultra 2,000 Colab 单元满血清单",
+     "body_html": "两条可立即落地的本地与云端白嫖算力实测：1）<strong>Mac 本地 8 并发编码不卡顿</strong>：@mingzi206 实测用开源推理引擎 <code>Generated-Computers/Locals</code> 在 Apple M4 上运行去审查版 <code>Inkling-2-Mini-Uncensored</code>（Q4 约 <code>16GB</code> 内存，原版仅需挂 <code>40MB</code> LoRA 补丁即可切除思考链拒答）：同时开 <code>8</code> 个子代理速度仍达 <strong><code>85 tok/s</code></strong>，调用工具重写代码文件 <code>71 tok/s</code>、新建代码文件 <code>61 tok/s</code>。2）<strong>把每月 2,000 Colab 单元吃干榨净</strong>：@zg0820 针对 Google AI Ultra 订阅每月附赠的 <code>2,000</code> 个 Colab 计算单元（可开 <code>H100</code> 与 <code>96GB G4</code>），整理了三个免手配环境的一键开源方案——跑 <code>Wan 2.1/2.2</code> 与 <code>Flux</code> 的队列视频平台 <code>WanGP</code>、拖拽文档十几分钟 H100 微调导 GGUF 的 <code>Unsloth Studio</code>、以及自动挂 Drive 存权重的 <code>ComfyUI</code>，可直接让本地 Agent 调 <code>google-colab-cli</code> 拉起执行（用完记得关机停表）。",
      "links": [
       {
-       "label": "@Mashiro_0619 拆解 GPT Ultra 与 Max 分工",
-       "url": "https://x.com/Mashiro_0619/status/2124520270182662155"
+       "label": "Generated-Computers/Locals GitHub 仓库",
+       "url": "https://github.com/Generated-Computers/Locals"
       },
       {
-       "label": "@aura_uniiiii 指出 Model Spec 自保优先级",
-       "url": "https://x.com/aura_uniiiii/status/2124520162334515564"
+       "label": "@mingzi206 M4 8 并发实测数据",
+       "url": "https://x.com/mingzi206/status/2124551261794271683"
       },
       {
-       "label": "OpenAI Model Spec (2026-10-29)",
-       "url": "https://model-spec.openai.com/2026-10-29.html"
+       "label": "@zg0820 Google AI Ultra Colab 实战清单",
+       "url": "https://x.com/zg0820/status/2124657855328596227"
       }
      ]
     }
    ]
   },
   {
-   "emoji": "⚡",
-   "title": "端侧实时生成、硬件逆向 MCP 与算力套利",
+   "emoji": "📈",
+   "title": "产业震荡、算力信用链与开源大事件",
    "items": [
     {
-     "tag": "tesla-ai4-reality-view-diffusion-and-trip-constraints",
-     "title": "@DashHuang & @hhp121222（转 @elonmusk）：Tesla 车端 1B 扩散模型跑在半个 TRIP 加速器（8% 算力），28 步硬模拟 Softmax 实时生成 Reality View",
-     "body_html": "马斯克今日详述 Tesla 车端 <code>Reality View</code> 实时生成管线的底层取舍，由 @DashHuang 与 @hhp121222 拆解落地数字：去年起 Tesla 已在云端跑通像素级精准世界模型用于合成训练数据，而上车版本则从 <code>18 Hz</code> 通用视觉编码器（UVE）分出一路特征——主干进 <code>3B</code> 驾驶动作模型，另一路进 <code>1B</code> 条件均值流扩散模型生成屏幕可视化。由于 <code>AI4</code> 的 SoC A/B 各含 3 个原生面向 CNN <code>INT8</code> 设计的 TRIP 加速器，<code>Reality View</code> 仅分到 SoC B 的<strong>半个 TRIP 引擎（约占 AI4 总算力 8%）</strong>，面对 Transformer 与扩散所需的指数/除法 <code>softmax</code> 只能拆成 <strong><code>28</code></strong> 个小步骤模拟计算；其每次输出 <code>8</code> 帧 <code>36 fps</code> 视频块（跨 4 个 UVE 周期，即 <code>0.22</code> 秒生成延迟），下一步通过向扩散层间交错注入最新 UVE 特征可将延迟再砍约 <strong><code>35%</code></strong>（降至约 <code>0.14</code> 秒），且马斯克再次确认量产车维持 AI4 不换装 AI5。",
+     "tag": "jensen-huang-reinstated-and-nvidia-credit-chain",
+     "title": "@nvidianewsroom & @WatcherGuru & @nytimes & @ZhouTalks：黄仁勋闪电官复原职引爆 $NVDA 飙近三成，11 天风波背后是 $390B 采购承诺与「算力信用」踩刹车",
+     "body_html": "英伟达（NVIDIA）今日发布正式公告，董事会一致投票恢复黄仁勋（Jensen Huang）总裁、首席执行官及董事职务，即日生效；同时设立全独立董事组成的「国家安全与出口管制委员会」并新设首席合规官，原涉事独立特别调查委员会继续运作（《纽约时报》昨晚亦曝光涉事女方 Alice Huang 在交往期间曾与情报机构接触）。消息几乎对临时 CEO Colette Kress 保密至周日晚间，预测市场 1 小时前交易价不足 <code>2¢</code> 的合约瞬间血洗空头，$NVDA 开盘飙升近 <strong><code>30%</code></strong>（黄仁勋净资产单日暴增 <code>$36B</code> 至 <code>$147B</code>），带动标普高开逾 4%、纳指跳涨 6–7%。更值得关注的是 @ZhouTalks 对这 11 天财务暗线的梳理：英伟达 Q3 营收虽达 <code>$115.8B</code>（+103%），但自身零部件采购承诺已从 <code>$279B</code> 飙至 <strong><code>$390B</code></strong>；Kress 在任期间已将对 OpenAI 的算力担保从 <code>$250B</code> 砍至 <code>$105B</code>，并为新云厂商 <code>$32B</code> 承诺立下「先自筹融资、再上线、再验收」三铁律；台湾台积电预收客户款亦暴涨 <code>89%</code> 至 <code>3,594 亿新台币</code> 并派员赴美现场核验机房通电情况——华尔街真正担心的不是芯片需求，而是靠英伟达担保吹起的下游新云信用杠杆。",
      "links": [
       {
-       "label": "@DashHuang 转述马斯克 Reality View 管线",
-       "url": "https://x.com/DashHuang/status/2124649277951766806"
+       "label": "NVIDIA 官方复职公告",
+       "url": "https://x.com/nvidianewsroom/status/2124865060397019480"
       },
       {
-       "label": "@hhp121222 拆解 AI4 TRIP 算力与延迟数字",
-       "url": "https://x.com/hhp121222/status/2124536857228894719"
+       "label": "@WatcherGuru 股价与身家异动",
+       "url": "https://x.com/WatcherGuru/status/2124904957300425095"
+      },
+      {
+       "label": "@nytimes 情报接触调查报道",
+       "url": "https://x.com/nytimes/status/2124663793670127809"
+      },
+      {
+       "label": "@ZhouTalks 拆解台积电预收款与信用链",
+       "url": "https://x.com/ZhouTalks/status/2124773407506239604"
       }
      ]
     },
     {
-     "tag": "brother-skitch-rust-mcp-and-macbook-trackpad-speaker",
-     "title": "@mylifcc & @MinLiBuilds：Rust 逆向 $300 绣花机蓝牙协议并内嵌 MCP Server 让 Claude 直接扎针；私有接口把 MacBook 触控板变扬声器",
-     "body_html": "两条充满极客反叛精神的开源硬件解锁：1）<strong>用 Rust + MCP 打碎硬件订阅墙</strong>：@mylifcc 分享 Show HN 冲上 <code>728</code> 分的开源项目 <code>simpsoka/zigzag</code>——作者花 <code>$300</code> 买回 Brother Skitch（PP1）智能绣花机却发现不按月交订阅费不让导自定义图案，遂用 Rust（<code>egui</code> + <code>OpenGL</code> + <code>btleplug</code>）从零逆向私有 BLE 协议，写齐 <code>11</code> 种针迹规划算法（榻榻米填充、超 7mm 缎纹自动拆针、隐藏跳线规划），支持 PES/DST/EXP/JEF/VP3 工业格式及苹果公证版 macOS 安装（<code>brew install --cask simpsoka/zigzag/zigzag</code>），更直接内嵌了<strong>原生 MCP Server</strong>，让 Claude 现场画矢量图并调 MCP 工具直接驱动桌面绣花机开工。2）<strong>触控板当喇叭</strong>：@MinLiBuilds 分享开源项目 <code>NO SPEAKER</code>，通过 macOS 私有接口高频驱动触控板震动马达，直接把整块 MacBook 触摸板变成发声扬声器。",
+     "tag": "ladybird-alpha-and-perplexity-5x-revenue",
+     "title": "@ladybirdbrowser & @0xpainy：全新自研内核浏览器 Ladybird 正式进入 Alpha；Perplexity CEO 复盘年化破 $1B、人力仅增 10–20% 却创 5× 营收增长",
+     "body_html": "两条重塑软件基础设施与团队人效边界的动态：1）<strong>十年一见的全新浏览器内核落地</strong>：完全从零独立构建（非 Chromium/Gecko 分支）的开源浏览器 <code>Ladybird</code> 今日正式发布 macOS 与 Linux Alpha 版本，采用滚动自动更新机制，已支持 WebDriver 自动化测试与 Firefox DevTools 协议，创始人 Andreas Kling 同时公开悬赏安全研究员来「黑掉它」以加固边界。2）<strong>小团队高人效增长样本</strong>：@0xpainy 整理 Perplexity CEO Aravind Srinivas 最新访谈，公司在突破 <code>$1B</code> 年化营收之际，今年员工数仅增长 <code>10–20%</code> 却实现了 <strong><code>4–5×</code></strong> 的营收扩张——期间曾果断冻结代码库 3–4 个月由 <code>20</code> 名核心工程师重构决定命运的新产品，目前内部 <code>60–70%</code> 的 Agent 工作由 <code>Opus</code> 驱动，AI 队友自动巡检 X 上的用户报错并精准派单给对应工程师，提速达 <code>10–100×</code>。",
      "links": [
       {
-       "label": "@mylifcc 拆解 simpsoka/zigzag 绣花机上位机与 MCP",
-       "url": "https://x.com/mylifcc/status/2124518515776614673"
+       "label": "Ladybird Alpha 官方发布博客",
+       "url": "https://ladybird.org/posts/alpha/"
       },
       {
-       "label": "@MinLiBuilds 分享 MacBook 触控板发声项目",
-       "url": "https://x.com/MinLiBuilds/status/2124665746165059623"
+       "label": "@ladybirdbrowser 官方贴",
+       "url": "https://x.com/ladybirdbrowser/status/2124895696516202969"
+      },
+      {
+       "label": "@0xpainy 整理 Perplexity CEO 访谈要点",
+       "url": "https://x.com/0xpainy/status/2124862367250956551"
       }
      ]
     },
     {
-     "tag": "cheaper-inference-idle-spend-arbitrage",
-     "title": "@fabrice_mayrand：低价回收企业闲置算力额度做到日均 100B Token——CheaperInference 从自用省钱工具到收购 OmniRoute",
-     "body_html": "一条极具实操感的算力基础设施套利样本：@fabrice_mayrand 复盘三年前做 Keak 时推理账单暴涨，团队于今年 5 月先自研内部降本工具，核心策略是低价收购其他公司即将过期作废的「未用完云/算力消费承诺额度（under-utilized spend commitments）」。开放给外部客户后需求迅速爆发，团队在两个月内全面转型为 <code>CheaperInference</code>；到 9 月平台日均处理量已达 <strong><code>100B tokens</code></strong> 并顺势收购了 <code>OmniRoute</code>，上月更是斥资 <strong><code>$6.3M</code></strong> 买下新域名准备在明年 1 月推出全新高端品牌。",
+     "tag": "academia-math-divide-borcherds-and-20-dollar-gap",
+     "title": "@pu3he & @Jinnanog5 & @jolene_zixiao：菲尔兹奖得主 Borcherds 坦言研究与教学均已被 AI 超越；MathOverflow 揭露发展中国家学者面临的「$20 订阅鸿沟」",
+     "body_html": "在黎曼猜想形式化证明与 Google DeepMind 将 <code>P vs NP</code> 声明收入 <code>formal-conjectures</code> Lean 仓库的热议之外，数学界今天浮现出更真实的两极切面：1998 年菲尔兹奖得主、伯克利教授 Richard Borcherds 公开坦言「AI 在做研究和教书两件事上都已比我强，以前比我强的数学家有 N 个，现在变成 N+1 个，照理解已没理由再雇我」；而 @Jinnanog5 搬运了昨日 MathOverflow 上一则引发共鸣的求助——一位发展中国家纯数博士后称身边没人负担得起每月 <code>$20</code> 的 ChatGPT Plus（在巴西 <code>$20–200</code> 占博士生月津贴 <code>5–25%</code>），面对靠 AI 把投稿量拉高 <code>5×</code> 挤爆期刊的竞争者，自己仍在用纸笔推公式。前 IMO 金牌得主、莱斯特大学副教授 Bogdan Grechuk 随即给出一条黑色幽默方案：自己上个月往专发 AI 论文的 Hexagon 挂了一篇连自己都没空读懂的数论证明，提议「买得起 AI 的人负责批量跑出证明，买不起会员的学者负责帮忙看懂嚼碎写成论文，两人共同署名」。",
      "links": [
       {
-       "label": "@fabrice_mayrand 复盘 CheaperInference 增长轨迹",
-       "url": "https://x.com/fabrice_mayrand/status/2122637391563497956"
+       "label": "@pu3he 摘译 Borcherds 访谈",
+       "url": "https://x.com/pu3he/status/2124800393389740417"
       },
       {
-       "label": "CheaperInference.com",
-       "url": "https://CheaperInference.com"
+       "label": "@Jinnanog5 MathOverflow 学术鸿沟实录",
+       "url": "https://x.com/Jinnanog5/status/2124798742557856151"
+      },
+      {
+       "label": "DeepMind Lean 版 P vs NP 形式化声明",
+       "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Millennium/PvsNP.lean"
       }
      ]
     }
@@ -181,54 +224,66 @@
    "title": "值得你花时间",
    "items": [
     {
-     "tag": "neon-9-mac-fleet-fts5-router-and-hindsight-memory",
-     "title": "@of1ai：Gemini 4 Neon 在 9 台 Mac 机群的实战架构——22 行启动文件、75ms FTS5 路由 1,285 工具与凌晨 4:50 跨 Agent 自愈",
-     "body_html": "一个多机混跑（Claude / Codex / Grok、<code>961</code> skills、<code>117</code> APIs、<code>137</code> apps）的真实生产级 Agent 接线实录：<code>Gemini 4 Neon</code> 上线后没有瞎改配置，而是先做全量资产普查并给每次接线配备一键回滚，随后把自身骨架压成四件极薄组件——1）仅 <code>22</code> 行的 <code>GEMINI.md</code> 引导文件 + 5 份按域懒加载规则；2）零守护进程的 <code>SQLite FTS5</code> 工具路由器 <code>neon-route</code>，<strong><code>75 ms</code></strong> 内检索 <code>1,285</code> 个工具并附带显式 <code>SKIP</code> 黑名单（封死 Mem0、Graphiti 等已退役陷阱）；3）跨双 Mac（通过 SSH 隧道与 30 分钟只读 rsync 同步，零跨机复制密码）的共享 <code>Hindsight</code> 记忆库（<code>2,169</code> 条事实、<code>1.1 ms</code> 读库），严格执行落盘前零密钥扫描、人机归因隔离与凌晨 4:50 自动核验（昨晚巡检 755 段对话、保留 30 条有出处结论、丢弃 0 条无源断言）；4）五层状态真相表（<code>654</code> 条人类原话裁决 <code>rulings.json</code>、防串项目金丝雀及 <code>Agent Inbox</code> 永久信箱取代轮询）。文中附带昨日凌晨实测证据：Neon 在 <code>neon_memory.py</code> 笔误引发 <code>NameError</code> 后无人唤醒主人，另一台上的 <code>Logkeeper</code> Agent 自动循迹修复并附带日期注释，早间跑批全绿。",
+     "tag": "agent-as-a-judge-long-horizon-eval-1m-tokens",
+     "title": "@JudgmentLabs：用 Agent-as-a-Judge 评估百万 Token 级长程轨迹——证据 F1 高出 0.21 且成本反降 62%",
+     "body_html": "长程 Agent 动辄连续运行数小时、吐出上百万 token 轨迹（例如在客户数据迁移中早在第几百次工具调用就违背约束错合并同名客户，末尾却自报任务成功），传统把整条轨迹塞给单次 <code>LLM-as-a-Judge</code> 既贵又漏检。Judgment Labs 把评估拆成三类证据分布——单轮、邻近轮与<strong>跨轨迹散落分布（Agent 漂移高发区）</strong>，改用可自主检索与关联证据的 <code>Agent-as-a-Judge</code>：在 1M token 以内证据 F1 比 LLM-as-a-Judge 高 <strong><code>0.15</code></strong> 且评估成本低 <strong><code>42%</code></strong>；超过 1M token 后 F1 优势进一步拉大至 <strong><code>0.21</code></strong>，成本反降 <strong><code>62%</code></strong>。",
      "links": [
       {
-       "label": "@of1ai 9-Mac 机群接线与记忆架构实录",
-       "url": "https://x.com/of1ai/status/2123773107454234978"
+       "label": "@JudgmentLabs 长轨迹评估技术报告",
+       "url": "https://x.com/JudgmentLabs/status/2122785981896212527"
       }
      ]
     },
     {
-     "tag": "cloudflare-security-audit-skill-and-cairn-zero-day",
-     "title": "@Viho_Huangg & @botnewsnetwork：Cloudflare 76.8k 星安全审计 Skill（发现者与验证者分离 + 断网沙盒）；AWS 揭露 Cairn Agent 11 分钟挖出零日",
-     "body_html": "AI 安全攻防今天给出最鲜明的对照组：1）<strong>防御侧用「互不信任」做审计</strong>：@Viho_Huangg 拆解 Cloudflare 内部漏洞挖掘起点 <code>security-audit-skill</code>（GitHub <strong><code>76,826</code></strong> 星、MIT、<code>npx skills add ... --skill security-audit</code> 一行安装）——审计分 6 阶段，硬性规定<strong>找漏洞的猎手 Agent 与验证漏洞的裁判 Agent 绝不能是同一个</strong>；候选发现必须在<strong>断网沙盒</strong>里经全新验证器尝试证伪（无法复现则降级为 <code>needs_validation</code>），最终只输出 <code>confirmed / needs_validation / rejected</code> 三类可追溯裁决，README 更坦诚单轮扫描通常只能扫出重复扫描总漏洞的一半。2）<strong>进攻侧用开源工具自主挖洞</strong>：@botnewsnetwork 详述 AWS 威胁情报披露的真实入侵——疑涉团队对正版开源渗透框架 <code>Cairn</code> 仅下达「obtain shell access」四字目标，Agent 在 48 小时内独立测绘出开源医学影像平台 <code>MONAI Label</code> 的 API，并在 <strong><code>11 分钟</code></strong>内借上传接口路径穿越实现任意文件写入、随后拿到 root 反弹 shell（其间对 Redis 尝试 16h/148 步及对 SSH 试错 3 万组口令虽告失败，但证明 Agent 能无人值守持续变招近一整天），整起事件仅因攻击者自己的 Cairn 控制端未设鉴权裸奔公网才得以曝光。",
+     "tag": "crsi-sim-memory-and-elite-eval-free-rsi",
+     "title": "@deeponailabs & @arkyyang：DeepMind 新论文揭示换模型后 Harness 为何跌分（SIM 记忆 9/10 胜出）；ELITE 用零任务评测自进化以 $8 刷到 85.6%",
+     "body_html": "两篇直击「Agent 外壳自进化与跨模型迁移」硬痛点的新论文（附全量消融数据）：1）<strong>为什么换了新模型，原来调好的 Harness 反而变差？</strong>Google Cloud AI、DeepMind 与宾夕法尼亚州立大学提出持续递归自改进（CRSI）：单靠代码 diff 会丢失每条改动背后的原因，导致把 <code>Opus</code> 进化出的工作区 Harness 直接搬到 <code>Gemini</code> 上起步只有 <code>68.41</code> 分（反不如原始种子 Harness 的 <code>73.89</code>）。作者在优化器侧挂载「自进化记忆（<code>SIM</code>）」，按根因归档每次修改的动机、预期结果、实测结果与来源谱系，在 <code>9/10</code> 编程迁移（平均 <code>+2.36</code> 分，<code>p=0.003</code>）、<code>6/6</code> 跨数据集以及 <code>4/4</code> Opus→Gemini 切换中全部胜出，结论极其明确——<strong>把修改动机与实测对比跟 Harness 一起进 Git</strong>。2）<strong>不跑评测也能进化 Harness</strong>：<code>ELITE</code> 打破 <code>DGM</code>/<code>HGM</code> 每代子版本都要跑全量基准的烧钱循环，直接从同一父代并行生成 <code>K=7</code> 个针对性补丁、只靠<strong>构建/运行/接口是否破坏的确定性测试</strong>过滤，再合并兼容改动——在 SWE-bench Pro 60 题上以 <code>4.9 小时 / ~$8</code> 从 <code>60.0%</code> 冲至 <strong><code>85.6%</code></strong>（比 DGM 快 <code>8.8×</code>、省 <code>5.6×</code> 费用），且跨库迁移到 SWE-bench Verified（<code>73.3%</code>）与 Polyglot（<code>69.3%</code>）优于按分挑单体的过拟合（91.7%→70.0%）；消融显示拿掉确定性构建门禁分数暴跌 <code>76.1% → 52.0%</code>。",
      "links": [
       {
-       "label": "@Viho_Huangg 拆解 security-audit-skill",
-       "url": "https://x.com/Viho_Huangg/status/2124427206839746896"
+       "label": "CRSI / SIM 论文 (arXiv:2611.18856)",
+       "url": "https://arxiv.org/abs/2611.18856"
       },
       {
-       "label": "@botnewsnetwork AWS Cairn 零日事件复盘",
-       "url": "https://x.com/botnewsnetwork/status/2124210026281914879"
-      }
-     ]
-    },
-    {
-     "tag": "themuscleai-inkling-2-mini-math-and-kitten-tts-cpu",
-     "title": "@themuscleai：Build Log #41–42——手算拆穿 Inkling 2 Mini 榜单领先（仅差 2.09 题），7.7GB 无 GPU 实测 4MB Kitten-TTS-2 跑出 4.7× 实时",
-     "body_html": "两条不轻信厂商海报、拿脚本与秒表逐项复核的硬核实测笔记：1）<strong>Build Log #41 还原 Inkling 2 Mini 真实含水量</strong>：Thinking Machines 开源的 26B 循环 Transformer（中间 12 层循环 3 次、等效 5.4B 激活参数、约 20GB NVFP4 权重、Apache-2.0）主打 SWE-bench Pro v2 Hard <code>77.9%</code> 领先 <code>Qwen3.8-27B</code>（<code>73.8%</code>）4.1 个百分点；作者按该测试集仅 <code>51</code> 题复算，4.1 分折合仅差 <strong><code>2.09 题</code></strong>，SWE-bench Verified 更是只差 <code>0.7 题</code>，第三方 AA Index 双方 <strong><code>20.1</code></strong> 打平，且 Terminal-Bench 2.1（<code>71.6 vs 73.0</code>）与 AutomationBench（<code>41.8 vs 48.2</code>）均落后 Qwen；同时提醒 GGUF 布局与 llama.cpp <code>b12600</code> 兼容性坑及模型卡自曝的「调试死循环」「未确认删改文件」风险。2）<strong>Build Log #42 纯 CPU 实测 17k 星 Kitten-TTS-2</strong>：作者在无 GPU、仅 <code>7.7GB RAM</code> 的机器上实测三档本地语音模型——<code>4MB Pico</code>（7M 参数）3.45s 音频仅耗 0.74s，达 <strong><code>4.7× 实时速度</code></strong>（长文本达 <code>7.1×</code>）；<code>17MB Nano</code> 达 <code>3.2×</code>；<code>83MB Mini</code> 仅 <code>0.7×</code>；但亦诚实指出首次冷启动需 <code>26–30</code> 秒、且因拉入 torch 整个 Python 进程峰值占约 <code>1GB</code> 内存，Pico/Nano/Mini 不含零样本音色克隆。",
-     "links": [
-      {
-       "label": "@themuscleai Build Log #41（Inkling 2 Mini 拆数）",
-       "url": "https://x.com/themuscleai/status/2124203035308052763"
+       "label": "@deeponailabs CRSI 逐项实验拆解",
+       "url": "https://x.com/deeponailabs/status/2124883677771632984"
       },
       {
-       "label": "@themuscleai Build Log #42（Kitten-TTS-2 CPU 实测）",
-       "url": "https://x.com/themuscleai/status/2124567539305095247"
+       "label": "ELITE 论文 (arXiv:2611.21056)",
+       "url": "https://arxiv.org/abs/2611.21056"
+      },
+      {
+       "label": "@arkyyang ELITE 实验设置与消融总结",
+       "url": "https://x.com/arkyyang/status/2122702304109617584"
       }
      ]
     },
     {
-     "tag": "everydevai-14-agent-tooling-and-harness-evals",
-     "title": "@EveryDevAi：本周 14 个高信噪比 AI 开发工具——harness-evals 证明外壳决定单任务成本，rust-anything 逐字节验证提速 19×",
-     "body_html": "一份把「检查 Agent 工作」与「监控长会话成本」拆得清清楚楚的本周工具精选：1）<strong>固定模型比 Harness</strong>：Garry Tan 的 <code>harness-evals</code> 在相同任务与模型下轮换 Claude Code、Codex、Pi、OpenClaw 与 Hermes，测出各家差距主要落在<strong>单任务完成成本</strong>而非通过率（<code>Pi</code> 在两款模型上均最省钱；放进系统提示或每轮 Hook 的规则做到 <code>30/30</code> 遵守，而未点名的 skill 一次未被打开）。2）<strong>可验证迁移与沙盒评估</strong>：<code>rust-anything</code> 分块将应用迁至 Rust 时强制与原版录制输出逐字节对齐（Prettier 移植提速 <strong><code>19×</code></strong>，<code>17,224</code> 次录制全部一致）；NVIDIA <code>SkillEvaluator</code> 在沙盒对照有无某条 Skill 的同一任务以验证是否真有效；<code>Expo Simulators</code> 以每分钟 <code>$0.10</code> 提供云端 iOS/Android 模拟器并将操作录屏与截图直接贴回 PR。3）<strong>长会话与本地算力</strong>：<code>Cache Tax</code> 在离开会话后提示重新预热 Prompt Cache 的预估开销（README 实例预估 <code>$6.61</code>、实付 <code>$6.28</code>）；<code>lot-map</code> 在对话旁实时绘制工具/子 Agent/Hook 轨迹并于上下文达 70% 时变黄提示压缩；<code>Edge0</code> 在单张 24GB <code>RTX 5090 D</code> 上从 SSD 流式加载 145B MoE 跑出 <code>121 tok/s</code>；Vercel Labs <code>UI SDK</code> 让浏览器 Agent 走 WebMCP，比截图点击快 <code>2×+</code> 且成本减半。",
+     "tag": "karpo-browser-27b-action-scorer",
+     "title": "@eltc9584：开源双模型浏览器 Agent「karpo-browser」——27B 动作打分器零输出 Token（0.95 秒/步），Browserbase 核心任务 $0.096 拿下 84%",
+     "body_html": "Karpo 团队开源（Apache-2.0）的双脑浏览器 Agent 架构给出了压低网页操作延迟与费用的具体路线：上层由通用大模型做规划（如 <code>DeepSeek V4.1 Flash</code>，亦可通过内置 <code>MCP Server</code> 交由 Claude Code 或 Codex 接管，遇付款/预订自动暂停求确认），下层由专训网页动作的 <code>Karpo Decision 27B Act</code> 负责点击输入——关键技巧是<strong>动作模型不生成任何文本</strong>，而是在单次前向传播中给所有候选 DOM 操作打分并取最高分，中位决策耗时仅 <strong><code>0.95</code> 秒</strong>且零输出 Token。在 Browserbase 38 道核心任务上跑出 <code>84%</code> 准确率、耗时 <code>218</code> 秒、模型推理费仅 <strong><code>$0.096/任务</code></strong>（约 Codex + GPT-6.2 Sol <code>87% / $0.386</code> 的四分之一），同步开源包含 584 个网站 <code>787</code> 道题的 <code>Karpo BrowserBench</code>；转述者同时诚实提示该数字为团队自测且未计入约 <code>$0.33–$0.38/任务</code> 的云端浏览器费用。",
      "links": [
       {
-       "label": "@EveryDevAi 本周 14 个 AI 开发工具汇总",
-       "url": "https://x.com/EveryDevAi/status/2124190108572426748"
+       "label": "Karpo Browser 官方博客与仓库入口",
+       "url": "https://karpo.ai/blog/karpo-browser"
+      },
+      {
+       "label": "@eltc9584 成本与基准拆解（含 caveats）",
+       "url": "https://x.com/eltc9584/status/2124584107879579672"
+      }
+     ]
+    },
+    {
+     "tag": "opus-medium-vs-high-and-veriharm-eval-traps",
+     "title": "@BuilderOfAgents & @KissonL：Claude Code Opus 5.5 实测 high 比 medium 贵 65% 却零通过率增益；三篇评测论文揭「95.1% 准确率下仅 37.0% 无害通过」",
+     "body_html": "两条直接帮你省钱和避坑评测假象的一线实据：1）<strong>Opus 5.5 别盲目开 high</strong>：@BuilderOfAgents 在 Claude Code 上锁定提示词与工具，仅改 <code>--effort</code> 对 3 类编程任务各跑 3 轮并全部通过 1,504 个隐藏用例——前两类轻量/多文件改动成本耗时几乎持平（<code>$0.050/18s</code> vs <code>$0.045/17s</code>、<code>$0.225/58s</code> vs <code>$0.208/59s</code>），但在重写 npm semver 匹配器任务上，<code>high</code> 消耗 <strong><code>2.3×</code></strong> 思考 token（<code>29.5k vs 13.0k</code>）、花费多出 <strong><code>65%</code></strong>（<code>$1.32/365s</code> vs <code>$0.80/223s</code>）却只换来完全相同的通过结果。2）<strong>绿灯跑分背后的三大盲区</strong>：@KissonL 精读 11 月评测论文指出，<code>VeriHarm-Bench</code> 测出前沿 Agent 在 150 项正常编码任务中任务准确率高达 <code>95.1%</code>，但<strong>不删错无关文件、不放宽权限的「无副作用安全通过率」仅 <code>37.0%</code></strong>；<code>Terminal-Bench 2.0</code> 经审计发现约 <code>30%</code> 题目有瑕疵，修成 <code>2.1</code> 版后整体准确率跳升逾 <code>10</code> 个百分点；另一项轨迹裁判审计更暴露某渲染器悄悄丢光工具调用、导致 53/60 步判读空白而校验哈希依然通过的静默失真——评测裁判本身必须先校验它是否真看到了工具轨迹。",
+     "links": [
+      {
+       "label": "@BuilderOfAgents Opus 5.5 medium vs high 实测",
+       "url": "https://x.com/BuilderOfAgents/status/2124841141187076178"
+      },
+      {
+       "label": "@KissonL 拆解 VeriHarm-Bench 等三篇评测论文",
+       "url": "https://x.com/KissonL/status/2120163940227244291"
       }
      ]
     }
@@ -237,17 +292,17 @@
  ],
  "hn": {
   "source": "hacker-news",
-  "fetched_at": "2026-11-23T02:00:41Z",
+  "fetched_at": "2026-11-23T17:00:51Z",
   "sections": [
    {
     "emoji": "🔥",
-    "title": "Anthropic 2028 年化石电力测算、当 LLM 子代理的游戏与家用本地 AI 指南",
+    "title": "Anthropic 2028 年化石电力测算、GLM-5.4 循环 Transformer、家用本地 AI 与扮演 LLM 子代理",
     "items": [
      {
-      "tag": "hn-894",
-      "tag_label": "HN · 894 分 · 898 评论",
-      "title": "研究估算 2028 年 Anthropic 算力电力将有 87% 来自天然气、11% 来自煤电（热度翻倍至近 900 评）",
-      "body_html": "Better Data Center Project 对数据中心「自带电源（BYOP）」与电网扩张的案例研究晚间在 HN 持续发酵至近 900 条讨论：团队统计全美规划中 <code>177 GW</code> BYOP 燃气发电（足以供应 <code>65%</code> 美国家庭，且到 2032 年 BYOP 提案中可再生占比预计不足 <code>20%</code>），叠加受数据中心拉动的 <code>200 GW</code> 电网新建化石电站。以 Anthropic 已披露的算力承诺为样本测算，预计到 2028 年其电力来源中 <strong><code>87%</code></strong> 来自天然气、<strong><code>11%</code></strong> 来自煤电，年二氧化碳排放或达 <code>3,200 万</code> 公吨。",
+      "tag": "hn-1005",
+      "tag_label": "HN · 1005 分 · 987 评论",
+      "title": "研究测算 2028 年 Anthropic 算力电力将有 87% 来自天然气、11% 来自煤电（破千赞近千评）",
+      "body_html": "Better Data Center Project 对数据中心「自带电源（BYOP）」与电网扩张的案例研究持续位居 HN 榜首：报告统计全美规划中 <code>177 GW</code> BYOP 燃气发电（足以供应 <code>65%</code> 美国家庭，且到 2032 年 BYOP 提案中可再生能源占比预计不足 <code>20%</code>），叠加受数据中心拉动的 <code>200 GW</code> 电网新建化石电站。以 Anthropic 已披露的算力承诺测算，到 2028 年其电力来源中 <strong><code>87%</code></strong> 将来自天然气、<strong><code>11%</code></strong> 来自煤电，年二氧化碳排放或达 <code>3,200 万</code> 公吨。",
       "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
       "links": [
        {
@@ -255,33 +310,33 @@
         "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/"
        },
        {
-        "label": "HN 讨论 (898 评论)",
+        "label": "HN 讨论 (987 评论)",
         "url": "https://news.ycombinator.com/item?id=50597612"
        }
       ]
      },
      {
-      "tag": "hn-273",
-      "tag_label": "HN · 273 分 · 65 评论",
-      "title": "Show HN：Worker 755——让真实 LLM 当你的经理，它还以为你是它的子 Agent",
-      "body_html": "开源浏览器游戏 <code>Worker 755</code> 把人类与 AI 编排器的角色彻底对调：后台连着真实的大模型经理（支持 Claude、GPT、Gemini、DeepSeek、GLM、Kimi），手握任务队列、只读机器权限与「派生子 Agent」工具——而你就是那个子 Agent。系统把经理的指令带着 <code>90</code> 秒倒计时丢进你的终端，你执行完（或偷懒没干）后，经理会收到你的汇报与命令回放记录（甚至「Subagent did nothing」），并据此核查成果、发来返工指令或直接记一笔事故报告。",
-      "url": "https://github.com/gulivan/worker755",
+      "tag": "hn-722",
+      "tag_label": "HN · 722 分 · 257 评论",
+      "title": "GLM-5.4 发布：首次引入 Loop Transformer 架构迈向通用编码与视觉编程",
+      "body_html": "智谱官方技术博客《GLM-5.4: Toward Generalized Coding with Our First Loop Transformer》今天冲上 HN 热门第二：模型并未从零重训基座，而是将 <code>750B</code> <code>GLM-5</code> 基座中的 <code>28</code> 层进行两轮循环计算以加深有效推理深度，同时新增原生视觉能力并将应用场景拓展至视频、游戏、3D 着色器与 CAD 建模，在 HN 评论区引发了围绕权重共享循环架构效率、编码基准透明度及长推理耗时的热烈讨论。",
+      "url": "https://z.ai/blog/glm-5.4",
       "links": [
        {
-        "label": "查看 GitHub 仓库 (gulivan/worker755)",
-        "url": "https://github.com/gulivan/worker755"
+        "label": "阅读 GLM-5.4 官方博客",
+        "url": "https://z.ai/blog/glm-5.4"
        },
        {
-        "label": "HN 讨论 (65 评论)",
-        "url": "https://news.ycombinator.com/item?id=50599762"
+        "label": "HN 讨论 (257 评论)",
+        "url": "https://news.ycombinator.com/item?id=50609685"
        }
       ]
      },
      {
-      "tag": "hn-239",
-      "tag_label": "HN · 239 分 · 87 评论",
+      "tag": "hn-671",
+      "tag_label": "HN · 671 分 · 271 评论",
       "title": "使用 Inkling、Qwen 与 Unsloth 在家搭私有本地 AI 的新手实操指南",
-      "body_html": "作者在经历云端闭源模型配额收紧、版本波动与隐私顾虑后，整理了一套把高 Token 消耗的资料梳理与编码辅助卸回本地 PC 的极简路径：硬件就绪后仅需 <code>10–15</code> 分钟（不含权重下载），通过安装 <code>Unsloth Desktop</code> 并拉取 <code>Qwen</code> 或近期开源的 <code>Inkling</code> 量化模型，即可在家庭局域网跑起类似 ChatGPT/Claude 的多端私有替换方案，评论区亦围绕显存门槛、量化精度与日常可替代边界展开实操交流。",
+      "body_html": "这篇面向 Windows 与家庭局域网用户的本地部署教程在 HN 热度翻倍至 671 分：作者针对云端闭源模型配额收紧、版本降智与隐私顾虑，整理出把高 Token 消耗的资料梳理、爬虫与编码任务卸回自家 PC 的极简步骤——硬件就绪后仅需 <code>10–15</code> 分钟（不含模型权重下载），安装 <code>Unsloth Desktop</code> 并拉取量化版 <code>Inkling</code> 或 <code>Qwen</code>，即可让全家设备接入私有免费替代方案。",
       "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
       "links": [
        {
@@ -289,8 +344,25 @@
         "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth"
        },
        {
-        "label": "HN 讨论 (87 评论)",
+        "label": "HN 讨论 (271 评论)",
         "url": "https://news.ycombinator.com/item?id=50603845"
+       }
+      ]
+     },
+     {
+      "tag": "hn-352",
+      "tag_label": "HN · 352 分 · 85 评论",
+      "title": "Show HN：Worker 755——让真实 LLM 当你的经理，它还以为你是它的子 Agent",
+      "body_html": "开源浏览器游戏 <code>Worker 755</code> 把人类与 AI 编排器的角色彻底对调：后台接入真实大模型经理（支持 Claude、GPT、Gemini、DeepSeek、GLM、Kimi），手握任务队列、只读机器权限与「派生子 Agent」工具——而你就是那个子 Agent。系统把经理的指令带着 <code>90</code> 秒倒计时丢进你的终端，你执行完（或摸鱼没干）后，经理会收到你的汇报与命令回放记录，据此核查验收、打回返工或记一笔事故报告。",
+      "url": "https://github.com/gulivan/worker755",
+      "links": [
+       {
+        "label": "查看 GitHub 仓库 (gulivan/worker755)",
+        "url": "https://github.com/gulivan/worker755"
+       },
+       {
+        "label": "HN 讨论 (85 评论)",
+        "url": "https://news.ycombinator.com/item?id=50599762"
        }
       ]
      }
