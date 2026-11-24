@@ -111,7 +111,10 @@ def _render_item(item: Dict[str, Any]) -> str:
     tag = _safe_class(str(item.get("tag", "")).lower())
     tag_label = item.get("tag_label")
     if tag and not tag_label:
-        tag_label = tag.title()
+        # The slug is a CSS class; do not show a 50-char slug as the label.
+        words = str(item.get("tag", "")).replace("_", " ").replace("-", " ").split()
+        label = " ".join(w[:1].upper() + w[1:] for w in words[:4])
+        tag_label = label if label else tag.title()
 
     tag_html = ""
     if tag and tag_label:

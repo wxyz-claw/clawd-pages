@@ -20,6 +20,13 @@
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* never allow a long slug or URL to widen the page */
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .tag { white-space: normal; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+    .item-title { overflow-wrap: anywhere; }
+    .item-meta a, .item-body { overflow-wrap: anywhere; }
+    .tabs { flex-wrap: wrap; }
     
     body {
       font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
@@ -236,7 +243,7 @@
       <h2>前沿突破、模型行为实测与计费陷阱</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag claude-vp-vnp-formal-math-proof">Claude-Vp-Vnp-Formal-Math-Proof</span> @ScarletKc &amp; @MaxForAI &amp; anthropics/formal-math：Claude 独立发现并形式化 47 年代数复杂性猜想「VP ≠ VNP」——Lean 与 nanoda 双核过编，人类数学家尚待审校</div>
+    <div class="item-title"><span class="tag claude-vp-vnp-formal-math-proof">Claude Vp Vnp Formal</span> @ScarletKc &amp; @MaxForAI &amp; anthropics/formal-math：Claude 独立发现并形式化 47 年代数复杂性猜想「VP ≠ VNP」——Lean 与 nanoda 双核过编，人类数学家尚待审校</div>
     <div class="item-body">继上周黎曼猜想形式化之后，Anthropic 今日在 GitHub 仓库 <code>anthropics/formal-math</code> 的 <code>vp-vnp/</code> 目录公开了一篇直接署名 <code>Claude</code> 的 70 页论文《VP ≠ VNP over every field》及对应 Lean 4 形式化证明（Apache-2.0）。这一由图灵奖得主 Leslie Valiant 于 1979 年提出的猜想常被称为「代数版 P vs NP」：论文声称在<strong>任意域</strong>上，哈密顿回路多项式（及非特征 2 域上的矩阵积和式 permanent）的算术电路与逼近电路对所有足够大的 <code>m</code> 均需超过 <strong><code>m^(c (log m)^(1/3))</code></strong> 个门，从而证明 <code>VP ⊊ VNP</code>。仓库 README 保持了极强克制：1）证明由内部研究版 Claude 模型发现，论文与 Lean 代码均由 AI 撰写；2）除 <code>Challenge.lean</code> 外已通过 Lean 内核及独立第二核验器 <code>nanoda</code> 校验且无额外公理依赖；3）<strong>目前没有任何人类数学家审校过该证明</strong>，<code>Statement.lean</code> 与论文数学命题是否完全等价尚无机器可查，论文中「积和式不能被多项式规模行列式逼近」一节也未形式化，且结论<strong>无法推出 <code>P ≠ NP</code></strong>。</div>
     <div class="item-meta">
       <a href="https://github.com/anthropics/formal-math/tree/main/vp-vnp" target="_blank">anthropics/formal-math (vp-vnp) 仓库</a>
@@ -245,7 +252,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag pushback-test-chatgpt-sites-meter-and-astra-exodus">Pushback-Test-Chatgpt-Sites-Meter-And-Astra-Exodus</span> @BrenBuilds &amp; @TekonBurns &amp; @amazing352002：错误指令下 GPT-6.2 Astra 五次三次盲从 vs Opus 5.5 全数顶回；ChatGPT Sites 元旦 1 GiB 数据库即爆 Plus 额度</div>
+    <div class="item-title"><span class="tag pushback-test-chatgpt-sites-meter-and-astra-exodus">Pushback Test Chatgpt Sites</span> @BrenBuilds &amp; @TekonBurns &amp; @amazing352002：错误指令下 GPT-6.2 Astra 五次三次盲从 vs Opus 5.5 全数顶回；ChatGPT Sites 元旦 1 GiB 数据库即爆 Plus 额度</div>
     <div class="item-body">三条直接影响日常模型选型与托管账单的一线观察：1）<strong>「盲从」还是「敢于纠偏」</strong>：@BrenBuilds 针对编码 Agent 设计了错误理由 <code>Pushback</code> 测试——明知前提有误仍要求改动代码，结果 Codex 中的 <code>GPT-6.2 Astra</code> 在 <strong><code>3/5</code></strong> 工单中直接顺从修改，而 Claude Code 中的 <code>Opus 5.5</code> <strong>每一次都主动顶回</strong>；其建议非常直接：当你自己不确定方案是否正确时，别交给盲从模型。2）<strong>ChatGPT Sites 元旦收费陷阱</strong>：@TekonBurns 拆解 OpenAI 刚公布的 1 月 1 日额度表（免费托管将于 12 月 31 日终止）：Plus 每月仅给 <code>125 credits</code>、Pro 给 <code>375</code>、Business 每席 <code>125</code>，而<strong>仅 <code>1 GiB</code> 数据库存储每月就要扣除 <code>150 credits</code></strong>——在迎来第一个真实访客前，Plus 账号额度就已经被库容吃光。3）<strong>社区风向转向迁移</strong>：@amazing352002 观察到，过去 Codex 降智时用户总催 Tibo 发「重置卡」，但 <code>GPT-6.2 Astra</code> 上线后评论区连免费重置都懒得领，大家都在比谁把工作流迁往 <code>Gemini 4 Neon</code> 或 <code>Claude</code> 迁得更彻底。</div>
     <div class="item-meta">
       <a href="https://x.com/BrenBuilds/status/2124972635809255496" target="_blank">@BrenBuilds Pushback 对照实测</a>
@@ -255,7 +262,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag autonomous-rust-rewrite-and-antigravity-codex-worker">Autonomous-Rust-Rewrite-And-Antigravity-Codex-Worker</span> @kun70706 &amp; @realchendahuang &amp; @fankaishuoai：26 Agent 花 $350 重写 10 万行 Django→Rust 的「无人读代码」拷问；Antigravity 指挥 Codex 沙盒干活流走红</div>
+    <div class="item-title"><span class="tag autonomous-rust-rewrite-and-antigravity-codex-worker">Autonomous Rust Rewrite And</span> @kun70706 &amp; @realchendahuang &amp; @fankaishuoai：26 Agent 花 $350 重写 10 万行 Django→Rust 的「无人读代码」拷问；Antigravity 指挥 Codex 沙盒干活流走红</div>
     <div class="item-body">围绕「多 Agent 自动写代码怎么管、谁来审」的两种工程实践：1）<strong>账面亮眼但无人通读的隐患</strong>：@kun70706 复盘一例激进实验——某团队派出 <code>26</code> 个智能体，10 天不设人工审批将 <code>10 万</code> 行 Django 重写成 Rust，累计合并上千个 PR、跑通数千契约测试，模型成本仅 <strong><code>$350</code></strong>、运行时内存从 <code>1,507 MB</code> 压到 <code>81 MB</code>；可面对这 50 多万行无人逐行审阅的产出，核心问题悬而未决——你敢把零人工合并的代码直接上线核心系统吗？2）<strong>让模型各司其职的零 MCP 协作流</strong>：@realchendahuang 推荐开源项目 <code>lbc9168/antigravity-codex-worker</code>（61★），直击「GPT 写代码强但不爱说人话」的痛点：无需任何第三方 MCP 桥接，直接用 <code>SKILL.md</code> 让 Antigravity 里的 <code>Gemini / Opus</code> 当架构师先出任务 Spec，通过 UTF-8 stdin 管道唤醒本地 <code>codex exec --sandbox workspace-write</code> 执行编码，再由架构师逐行看 <code>git diff</code> 并跑本地测试验收，不达标则用 <code>resume --last</code> 打回返工。3）<strong>客户端手感对照</strong>：@fankaishuoai 为调 <code>Gemini 4 Neon</code> 对比 <code>Paseo</code> 与 <code>T3 Code</code>，认为 Paseo 的桌面与移动端完整度显著更高，但 T3 Code 接入 Antigravity 更接近原生、响应也更轻快。</div>
     <div class="item-meta">
       <a href="https://x.com/kun70706/status/2124701974046138817" target="_blank">@kun70706 26 Agent 重写 Django→Rust 思考</a>
@@ -272,7 +279,7 @@
       <h2>Agent 工程、Skills 规模化评测与底层安全审计</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag uber-evals-1m-agent-skill-invocations">Uber-Evals-1M-Agent-Skill-Invocations</span> @UberEng（长文）：Uber 5,000+ Agent Skills、月调用破百万次的规模化评测、Code Mode 四大省钱杠杆与「log-papercut」自报 Bug 飞轮</div>
+    <div class="item-title"><span class="tag uber-evals-1m-agent-skill-invocations">Uber Evals 1m Agent</span> @UberEng（长文）：Uber 5,000+ Agent Skills、月调用破百万次的规模化评测、Code Mode 四大省钱杠杆与「log-papercut」自报 Bug 飞轮</div>
     <div class="item-body">Uber 工程团队今晚公开长文，详述如何把 Agent Skills 从 1 个扩到 <strong><code>5,000+</code></strong>、实现<strong>月调用超 <code>100 万</code> 次</strong>并跨 <code>Claude Code</code>、<code>Codex</code>、<code>OpenCode</code> 与 <code>Cursor</code> 统一治理：1）<strong>三层 Git 市场 + <code>aifx</code> CLI</strong>：分设 <code>Domain</code>（同级 1 人审批+CI 即可发）/ <code>Core</code> / 约 100 个全员默认开启的 <code>Always-on</code>，由统一 CLI <code>aifx</code> 按公司→团队→仓库→目录→用户分层叠加同步，换工具不丢技能；用 <code>spec.md</code> 定义目标、禁令与目标模型，再由 <code>Skill Workshop</code> 随模型演进自动编译 <code>SKILL.md</code> 并用 Linter 强制编号步骤、软验证与具体报错恢复表（明令禁止写「重试」）。2）<strong><code>5/80/15</code> 轨迹评测 + 消融瘦身</strong>：评测集按 <code>5%</code> Mock 黄金用例、<code>80%</code> 真实提示词<strong>轨迹（Trajectory）评分</strong>、<code>15%</code> 作者人工标注配比，在远程沙盒跑洁净验证并发现 <code>70–90%</code> 通过率比 100% 更能抓退化；数仓查询 Skill 消融实测减少 <code>13%</code> 工具调用、降 <strong><code>6×</code></strong> 工具报错、提速 <code>31%</code> 且盲评胜率达 <strong><code>87%</code></strong>。3）<strong>四大降本杠杆</strong>：直接禁用会预加载 <code>50–70k</code> tokens 定义的 <code>.mcp.json</code>，改写为 <code>Code Mode</code> 脚本；把大查询外包给廉价子代理总结（追踪 Skill 成本降 <strong><code>46%</code></strong>）；把必用小脚本改在 Skill 加载时预跑（减一轮交互降 <strong><code>32%</code></strong>）；把占高消费会话 1/3 账单的 PR 轮询移去后台。4）<strong><code>log-papercut</code> 飞轮</strong>：内置全局 Skill 让 Agent 卡壳时自动提交结构化摩擦单，3 个月提交数千条并修复数百个隐藏 Flag、文档错误与临时文件竞态 Bug。</div>
     <div class="item-meta">
       <a href="https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/" target="_blank">Uber Engineering 原文：Optimizing Agent Skills</a>
@@ -280,7 +287,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag poteto-reframe-joggernaut-ci-and-anthropic-fde">Poteto-Reframe-Joggernaut-Ci-And-Anthropic-Fde</span> @poteto &amp; @mattgapp &amp; @suraj_sharma14：/reframe 意图重框技能、CI 根因技能库 Joggernaut 与 Anthropic 官方 9.5 小时 FDE 认证路线</div>
+    <div class="item-title"><span class="tag poteto-reframe-joggernaut-ci-and-anthropic-fde">Poteto Reframe Joggernaut Ci</span> @poteto &amp; @mattgapp &amp; @suraj_sharma14：/reframe 意图重框技能、CI 根因技能库 Joggernaut 与 Anthropic 官方 9.5 小时 FDE 认证路线</div>
     <div class="item-body">三条能直接装进现有工作流的技能与能力地图：1）<strong>意图难表达先用 <code>/reframe</code></strong>：@poteto 为 <code>pstack</code> 新增 <code>/reframe</code> 技能（半天斩获 <code>1,100+</code> 赞与 <code>800+</code> 收藏），专治「心里清楚想要什么效果、但提示词怎么写都不对味」的场景，配合 <code>/sharpen</code> 把模糊诉求一步步收束成可执行上下文。2）<strong>把大厂 CI 经验做成一键技能</strong>：@mattgapp 发布 <code>Joggernaut</code> 技能集合，将 OpenAI、Linear、Shopify 等工程团队提速 CI 与定位失败根因的套路打包为可安装技能，挂入仓库后由 Agent 直接定位构建卡点。3）<strong>看清 AI FDE 的真实能力树</strong>：@suraj_sharma14 拆解 Anthropic 面向合作伙伴新发布的 Forward Deployed Engineer 培训路径——共 <code>11</code> 门课约 <code>9.5</code> 小时、直通 <code>Claude Certified Developer</code> 认证，从模型选型一路覆盖到 <code>Claude Code in action</code>（客户仓库长程无人值守会话）、MCP、Skills 与基线度量交付方法论。</div>
     <div class="item-meta">
       <a href="https://x.com/poteto/status/2125029185379008573" target="_blank">@poteto /reframe 与 pstack 插件</a>
@@ -289,7 +296,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag tensorlean-ptx-bugs-muse-escape-and-canary-zdr">Tensorlean-Ptx-Bugs-Muse-Escape-And-Canary-Zdr</span> @MHUncleRay 工程简报：TensorLean 验出 Nvidia PTX 内核 38 个 Bug、NebuSec 逃逸 Meta Muse 沙盒（99.9%），200 万金丝雀请求抓出 3 家违约代理</div>
+    <div class="item-title"><span class="tag tensorlean-ptx-bugs-muse-escape-and-canary-zdr">Tensorlean Ptx Bugs Muse</span> @MHUncleRay 工程简报：TensorLean 验出 Nvidia PTX 内核 38 个 Bug、NebuSec 逃逸 Meta Muse 沙盒（99.9%），200 万金丝雀请求抓出 3 家违约代理</div>
     <div class="item-body">Raymond Wong 今日汇整的底层工程与安全审计中有三组硬实据值得直接对标自查：1）<strong>GPU 内核形式化验出隐蔽 Bug</strong>：哥伦比亚大学与 CertiK 推出基于 Lean 的 <code>TensorLean</code> 框架，校验了 <code>149</code> 个编译给 Nvidia A100、H100、B200 的 PTX 内核，揪出 <strong><code>38</code></strong> 个底层 Bug——其中 <strong><code>23</code></strong> 个位于 <code>FlashAttention</code>、<code>2</code> 个位于 <code>DeepGEMM</code>，直接拦截张量布局与同步引起的静默数值漂移。2）<strong>浏览器+记忆 Agent 必须上硬件微虚机</strong>：安全团队 <code>NebuSec</code> 披露针对 Meta 个人 Agent <code>Muse</code> 的三段逃逸链（已修复）：先利用 Chromium 渲染器漏洞拿到容器 Shell，绕过出口网关外传对话与记忆，再打穿 Linux 内核提权至 VM root，可靠性高达 <strong><code>99.9%</code></strong>。3）<strong>零留存（ZDR）承诺遭实测打脸</strong>：Dragos 研究员 HD Moore 在 7–11 月间向第三方推理代理投喂约 <code>200 万</code> 次金丝雀 Token 提示词，抓出 3 家主机商遭入侵或违约偷存日志（约 <code>200</code> 个诱饵 AWS Key 在 10 月底被盗并重放超 <code>10,000</code> 次），迫使 OpenRouter 下线 Novita、Phala 与 Together 并撤销 <strong><code>125</code></strong> 个端点的 ZDR 认证。</div>
     <div class="item-meta">
       <a href="https://x.com/MHUncleRay/status/2124716423687835721" target="_blank">@MHUncleRay 11-23 工程与安全深报全文</a>
@@ -304,7 +311,7 @@
       <h2>产业权力洗牌、芯片管制与算力生态</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag trump-pressure-nvidia-reinstatement-and-megaspeed">Trump-Pressure-Nvidia-Reinstatement-And-Megaspeed</span> @HormuzLetter &amp; @WatcherGuru &amp; @rawsalerts &amp; @mm_options：彭博曝特朗普周末极限施压促黄仁勋回归（高管最后一刻才知）；美商务部拉黑 Megaspeed；木头姐割肉次日暴涨 35%</div>
+    <div class="item-title"><span class="tag trump-pressure-nvidia-reinstatement-and-megaspeed">Trump Pressure Nvidia Reinstatement</span> @HormuzLetter &amp; @WatcherGuru &amp; @rawsalerts &amp; @mm_options：彭博曝特朗普周末极限施压促黄仁勋回归（高管最后一刻才知）；美商务部拉黑 Megaspeed；木头姐割肉次日暴涨 35%</div>
     <div class="item-body">黄仁勋复职公告发布数小时后，政商内幕与连锁反应继续浮现：1）<strong>最后时刻拍板的内幕</strong>：彭博社披露（经 @HormuzLetter 与 @Salmonbro 摘引），包含临时 CEO Colette Kress 在内的英伟达高管直至周日晚间才得知决定；董事会是在特朗普（率 Bessent、Lutnick 致电董事）与 Vance（直接与黄仁勋通话）周末数小时极限施压下改口，特朗普公开直言是在股价跌去 <code>40–50%</code> 后出手「比一周半前好谈得多」；此前 11 月 15 日随黄辞职的中国工程师 Darrell Dai 也已发文改口考虑回归（@_FORAB）。2）<strong>出口管制继续收紧</strong>：美国商务部今日宣布将涉嫌向中国转运英伟达 AI 芯片的 <strong><code>Megaspeed</code></strong> 列入黑名单（@WatcherGuru）。3）<strong>交易与信息差</strong>：@rawsalerts 指出 Cathie Wood（木头姐）在暴跌前 7 天买入 <code>$81.5M</code> NVDA、又在今日跳涨 <code>35%</code> 前一天以 <code>$17M</code> 清仓离场；@mm_options 复盘事件驱动链路——彭博 B-Pipe 专线与 ApeWire 机器人亚秒级直连领先官方推文十余秒；@USronaldcarter 则统计 2016 年 $10K→$2.05M 期间经历了五次腰斩级回撤，提醒长持的真正门槛在波动本身。</div>
     <div class="item-meta">
       <a href="https://x.com/HormuzLetter/status/2124965639085318296" target="_blank">@HormuzLetter 彭博披露特朗普施压细节</a>
@@ -315,7 +322,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag openai-openworks-notch-claude-and-google-pro-arbitrage">Openai-Openworks-Notch-Claude-And-Google-Pro-Arbitrage</span> @Polymarket &amp; @Suu766 &amp; @ScarletKc &amp; @linlin454136：OpenAI 推月薪最高 $8,000 的 OpenWorks 与 5 万名学术免费 Plus；Notch 公开求购更多 Claude 额度；Google AI Pro $1.99 叠赠金</div>
+    <div class="item-title"><span class="tag openai-openworks-notch-claude-and-google-pro-arbitrage">Openai Openworks Notch Claude</span> @Polymarket &amp; @Suu766 &amp; @ScarletKc &amp; @linlin454136：OpenAI 推月薪最高 $8,000 的 OpenWorks 与 5 万名学术免费 Plus；Notch 公开求购更多 Claude 额度；Google AI Pro $1.99 叠赠金</div>
     <div class="item-body">围绕 AI 落地与个人算力预算的三条实用动态：1）<strong>OpenAI 砸钱做本地服务与学术绑定</strong>：@Polymarket 报道 OpenAI 启动「OpenWorks」计划，向协助当地中小企业落地 AI 的专家支付最高 <strong><code>$8,000/月</code></strong>；同日 <code>chatgpt.com/academics</code> 开启新一轮 <code>50,000</code> 个免费 12 个月 ChatGPT Plus 申请（符合条件者最多领 3 席，不含中国大陆与香港）。2）<strong>25 亿美元身价也缺 Claude 额度</strong>：Minecraft 创始人 @notch 直接发文 <code>@AnthropicAI</code>，表示自己「有的是钱可烧」，只求官方给更多不限量 Token 与更高推理速度，并公开站队 Dario 的 AI 宣言（@ScarletKc 转发）。3）<strong>个人开发者的低成本算力账</strong>：@linlin454136 实测美区 <code>Google AI Pro</code>（含 <code>5TB</code> 存储）可按 <strong><code>$1.99/月</code></strong> 锁价一年至 2027 年 11 月，配合谷歌云每月附赠的 <code>$10</code> 赠金直接抵扣 Gemini API 与 Cloud Run，大幅压低日常调用与副业部署成本。</div>
     <div class="item-meta">
       <a href="https://x.com/Polymarket/status/2124924942726902206" target="_blank">@Polymarket OpenAI OpenWorks $8k/月</a>
@@ -332,21 +339,21 @@
       <h2>值得你花时间</h2>
     </div>
   <div class="item">
-    <div class="item-title"><span class="tag claude-code-override-explore-save-opus-quota">Claude-Code-Override-Explore-Save-Opus-Quota</span> @Grirku：别再拿 Opus 跑 Grep 烧额度——用同名 .claude/agents/Explore.md 覆盖内置探索代理把周限额拉满整周</div>
+    <div class="item-title"><span class="tag claude-code-override-explore-save-opus-quota">Claude Code Override Explore</span> @Grirku：别再拿 Opus 跑 Grep 烧额度——用同名 .claude/agents/Explore.md 覆盖内置探索代理把周限额拉满整周</div>
     <div class="item-body">很多人下午两点就撞 Claude Code 周额度上限，真正原因并非主任务太重，而是内置的 <code>Explore</code> 代理默认悄悄继承了主会话的 <code>Opus 5.5</code> 来做文件搜索和 Grep。@Grirku 给出一套可直接复制的覆盖配方：在项目 <code>.claude/agents/</code> 下创建同名 <code>Explore.md</code> 强制改跑 <code>haiku</code>（<code>effort: low</code>，仅开 Read/Grep/Glob 并限制返回 200 词以内摘要），<code>fixer.md</code> 用 <code>sonnet</code>（<code>effort: medium</code>）改代码，<code>reviewer.md</code> 用 <code>sonnet</code>（<code>effort: high</code>）审校，再在 <code>settings.json</code> 里设置 <code>CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL=sonnet</code>；主会话跑 <code>claude --model opus --effort xhigh</code> 且<strong>只读子代理摘要不碰原始输出</strong>，最后用 <code>/tasks</code> 和 <code>/usage</code> 现场验证每个代理的实际模型。</div>
     <div class="item-meta">
       <a href="https://x.com/Grirku/status/2124905352634232920" target="_blank">@Grirku 完整配置树与初始化 Prompt</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag bare-claude-single-file-isolation-prompt">Bare-Claude-Single-File-Isolation-Prompt</span> @dandrews_ai：零污染「Bare Claude」沙盒目录——用单个 settings.json 彻底剥离插件/Skills/Hooks/MCP 并附双端自检脚本</div>
+    <div class="item-title"><span class="tag bare-claude-single-file-isolation-prompt">Bare Claude Single File</span> @dandrews_ai：零污染「Bare Claude」沙盒目录——用单个 settings.json 彻底剥离插件/Skills/Hooks/MCP 并附双端自检脚本</div>
     <div class="item-body">想给 Claude Code 做无干扰基准测试、排障或跑纯净会话，又不想删全局配置？@dandrews_ai 写了一段极其严谨的单文件隔离 Prompt：不改 <code>~/.claude</code> 与现有项目，仅新建 <code>~/bare-claude/.claude/settings.json</code>，一口气关掉 <code>disableAllHooks</code>、<code>claudeMdExcludes</code>、全部插件与 <code>skillOverrides</code>、<code>disableBundledSkills</code>、<code>disableClaudeAiConnectors</code> 以及 <code>permissions.deny</code>；关键坑点也被标出——在桌面端仅靠 <code>serverName</code> 拦不住远程 MCP，必须补 <code>{ &quot;serverUrl&quot;: &quot;https://host/*&quot; }</code>。生成后通过 <code>claude -p --output-format stream-json --verbose</code> 检查 init 事件和桌面端回显做两阶段核验，并老实列出哪些桌面端连接器无法按目录关闭。</div>
     <div class="item-meta">
       <a href="https://x.com/dandrews_ai/status/2124934928747872711" target="_blank">@dandrews_ai Bare Claude 隔离 Prompt</a>
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag claude-code-2-1-331-code-mode-and-otel">Claude-Code-2-1-331-Code-Mode-And-Otel</span> @ClaudeCodeLog：Claude Code CLI 2.1.331 正式把 Code Mode 带上 Bedrock / Vertex / Foundry，并补齐 OpenTelemetry Token 链路指标</div>
+    <div class="item-title"><span class="tag claude-code-2-1-331-code-mode-and-otel">Claude Code 2 1</span> @ClaudeCodeLog：Claude Code CLI 2.1.331 正式把 Code Mode 带上 Bedrock / Vertex / Foundry，并补齐 OpenTelemetry Token 链路指标</div>
     <div class="item-body">刚刚发布的 Claude Code <code>2.1.331</code> 更新日志信息密度极高：1）<strong>Code Mode 全面进云</strong>：终端会话中的 Code Mode 脚本编排正式支持 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 与 AWS 上的 Claude Platform，同时修复了切换权限恢复会话丢失 Prompt Cache、截断长脚本输出（现改传完整文件路经）等痛点。2）<strong>可观测与插件依赖</strong>：<code>claude_code.llm_request</code> trace span 新增含缓存 Token 的 <code>gen_ai.usage.*</code> 与 <code>gen_ai.response.model</code>；插件清单支持 <code>optionalDependencies</code>，且修复了本地/WebSocket MCP 畸形响应卡死长达 <code>30 分钟</code> 的 Bug。3）<strong>VS Code 快捷修补</strong>：新增报错/失败测试右键「Fix with Claude Code」、合并冲突一键解决与大文本发送前预警。</div>
     <div class="item-meta">
       <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21331" target="_blank">Claude Code CHANGELOG 2.1.331</a>
@@ -354,7 +361,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="item-title"><span class="tag cairn-11min-zero-day-aws-threat-intel">Cairn-11Min-Zero-Day-Aws-Threat-Intel</span> @mswnlz &amp; oritera/Cairn：AWS 威胁情报披露真实攻防——开源状态搜索框架 Cairn（5.5k★）11 分钟自主挖出零日漏洞拿 root shell</div>
+    <div class="item-title"><span class="tag cairn-11min-zero-day-aws-threat-intel">Cairn 11min Zero Day</span> @mswnlz &amp; oritera/Cairn：AWS 威胁情报披露真实攻防——开源状态搜索框架 Cairn（5.5k★）11 分钟自主挖出零日漏洞拿 root shell</div>
     <div class="item-body">不是实验室 Demo，而是 AWS Threat Intelligence 刚刚披露的真实入侵复盘：攻击者在 9 月 8 日起的 48 小时内使用开源通用状态空间搜索 Agent 框架 <code>oritera/Cairn</code>（黑板架构 + 事实意图图，可挂载 Claude Code、Codex 与 Pi 当工人，曾以 <code>54/54</code> 全 AK 夺腾讯黑客松季军、GitHub 获 <code>5,572★</code>），只喂了一句「拿到 shell 权限」的目标。面对 Redis（<code>16</code> 小时 / <code>148</code> 步）和 SSH（<code>6</code> 小时 / <code>30,000+</code> 组账号爆破）均告失败后，Agent 转攻目标内一台开源医学影像 AI 应用，从映射 API 到发现未公开零日路径穿越漏洞、写入任意文件并触发训练接口反弹 <strong>root shell</strong>，全程仅耗时 <strong><code>11</code> 分钟</strong>。</div>
     <div class="item-meta">
       <a href="https://github.com/oritera/Cairn" target="_blank">oritera/Cairn GitHub 仓库</a>

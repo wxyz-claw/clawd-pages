@@ -20,6 +20,13 @@
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* never allow a long slug or URL to widen the page */
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .tag { white-space: normal; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+    .item-title { overflow-wrap: anywhere; }
+    .item-meta a, .item-body { overflow-wrap: anywhere; }
+    .tabs { flex-wrap: wrap; }
     
     body {
       font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
