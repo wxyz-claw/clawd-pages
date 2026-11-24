@@ -1,9 +1,9 @@
 {
   "name": "Clawd Pages",
   "short_name": "Clawd",
-  "description": "Auto-generated pages and reports by Clawd — X feed digest, daily briefings, and more.",
+  "description": "Clawd X digest — curated X + Hacker News, twice daily",
   "id": "./",
-  "start_url": "./",
+  "start_url": "./x-digest/",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
@@ -36,21 +36,36 @@
       "short_name": "X Digest",
       "description": "Daily curated highlights from X / Twitter",
       "url": "./x-digest/",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Daily Briefing",
       "short_name": "Daily Brief",
       "description": "Mixed English + 中文 daily briefing",
       "url": "./dailybrief/",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Reading Stack",
       "short_name": "Reading",
       "description": "Articles and posts saved to come back to",
       "url": "./reading/",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
