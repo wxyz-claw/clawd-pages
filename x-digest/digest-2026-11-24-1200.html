@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月24日（周二）12:00 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* never allow a long slug or URL to widen the page */
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .tag { white-space: normal; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+    .item-title { overflow-wrap: anywhere; }
+    .item-meta a, .item-body { overflow-wrap: anywhere; }
+    .tabs { flex-wrap: wrap; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
+  </style>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0e1116">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="X 速递">
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月24日（周二）12:00 ET</div>
+    <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
+    </div>
+  </header>
+
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>模型实测分化与 GLM-5.4 实战垫底：</strong><code>@PawelHuryn</code> 用 2 个仓库 <code>105</code> 个复植 Bug 实测修复能力，<code>Gemini 4 Neon</code>（<code>63</code>）与 <code>GPT-6.2 Astra</code>（<code>62.7</code>）领跑，<code>DeepSeek V4.1 Flash</code> 居开源首位（<code>42.7</code>），<code>GLM-5.4</code> 仅 <code>28</code> 分且 Z.ai 遇 <code>73</code> 次 529 过载；微软确认 3T 参数 <code>MAI Base 2</code> 正在数千张 Blackwell 上做 RL 训练并已超 <code>Opus 4.8</code>；<code>Sol 6.2</code> 与 Chat 默认模型则因过度字面化及拒跟指南遭吐槽。</li>
+      <li><strong>T3 Code 遥测读取本地凭证遭德国监管投诉：</strong>源码被扒自 3 月默认开启遥测且 6 月静默删掉官网零遥测承诺，<code>Identify.ts</code> 更读取 <code>~/.codex/auth.json</code> 与 <code>~/.claude.json</code> 做无盐 SHA-256 跨端归因并连拒 4 个开关 PR；德国用户已向州数据保护局提起 GDPR 投诉。</li>
+      <li><strong>长程 Agent 架构与工具链务实转向：</strong><code>LoopX</code> 基于 <code>4,100+</code> PR 总结「聊天流只是投影，不能当权威状态机（Projection ≠ Authority）」；ETH Zurich 百人实验证明 CS 基础仍决定 Vibe Coding 上限；谷歌开源纯 Go 单文件 <code>gemini-api-cli</code> 供终端 Agent 直调 Gemini，ChatGPT <code>6 Pro</code> 灰度云电脑与 <code>Astra 6.2</code> 子代理。</li>
+      <li><strong>学界抗议与市场震荡，加上《值得你花时间》：</strong><code>531</code> 位学者联名抗议 OpenAI 闭门传阅杨-米尔斯稿件及美国学者秘密算力群；<code>$ANT</code> 跌破 <code>$83</code> 发行价、<code>NVDA</code> 盘前吐回 6% 伴国会 12 月听证与黄罗丽声明；《值得你花时间》收录 DeepMind <code>SIM</code> 跨模型 Harness 记忆论文、Wavestone 11 款 Agent 7 子系统拆解、<code>Claude Code</code> 反向验错与 <code>.claude/</code> 权限保护，以及 Agent 记忆系统全图谱。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>模型实测、T3 Code 隐私争议与新工具链</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag glm54-bugfix-bench-gpt62-split">Glm54 Bugfix Bench Gpt62</span> @PawelHuryn &amp; @Stargridcompass &amp; @bffmike &amp; @TekonBurns：105 个真实 Bug 修复实测（Neon 63 / Astra 62.7 vs GLM-5.4 28）；Sol 6.2 口碑退坡与微软 3T 模型 MAI Base 2 进展</div>
+    <div class="item-body">一线工作负载的实测数据把今天各家模型的真实边界拉得很清楚：1）<strong>105 个复植 Bug 修复横评</strong>：@PawelHuryn 在 2 个仓库复植 <code>105</code> 个真实 Bug 跑自动修复，结果为 <code>Gemini 4 Neon (xhigh)</code> <strong>63</strong>、<code>GPT-6.2 Astra (max)</code> <strong>62.7</strong>、<code>Fable 5.2 (max)</code> <strong>58</strong>、<code>DeepSeek V4.1 Flash 1017 (max)</code> <strong>42.7</strong>、<code>Grok 4.7 (xhigh)</code> <strong>29</strong>、<code>GLM-5.4 (max)</code> <strong>28</strong>（GLM-5.3 为 19）；且 @Zai_org 在 $80 订阅下仍出现 <code>73</code> 次 529 过载、<code>26</code> 次 429 限流并被迫暂停 <code>5.5</code> 小时。2）<strong>Astra 省钱快跑 vs Sol 6.2 / Chat 退化</strong>：@Stargridcompass 无外部素材 3D 渲染实测中，<code>GPT-6.2 Astra</code> 耗时 <code>46 分 32 秒</code>、成本 <code>$10.15</code>（对比 Neon <code>1 小时 31 分</code> / <code>$15.36</code>）；@pzeroresearch 测得 Astra 在 TasteVal 实验品味达人类专家 <code>4.9×</code>；@Fu0_ohhhh 指出 GPT-6.2 拆开可变指令与可复用上下文缓存（缓存输入降价 60%）且 12 月将合并 Chat 与 Work 额度。但另一方面，@bffmike、@gabriel1 与 @TokenGremlin 集中反馈 <code>Sol 6.2</code> 在 Dot/Codex 退坡为「只给点击说明不干活、忽略明文规范、过度字面化执行」，Chat 默认切为 6.2 后冷硬且缺乏思考质感。3）<strong>微软新玩家</strong>：@TekonBurns 援引微软确认，3 万亿参数 <code>MAI Base 2</code> 正在数千张 Blackwell GPU 上做零蒸馏实时 RL 后训练，推理榜已越过 <code>Claude Opus 4.8</code> 并逼近 <code>GPT-5.6 Sol</code>。</div>
+    <div class="item-meta">
+      <a href="https://x.com/PawelHuryn/status/2125192951194083748" target="_blank">@PawelHuryn 105 Bug 实测与 GLM-5.4 评分</a>
+      <a href="https://x.com/Stargridcompass/status/2125129793230520721" target="_blank">@Stargridcompass Astra vs Neon 3D 成本实测</a>
+      <a href="https://x.com/bffmike/status/2125009284346036724" target="_blank">@bffmike Sol 6.2 退化实测反馈</a>
+      <a href="https://x.com/TekonBurns/status/2125049334484045876" target="_blank">@TekonBurns 微软 3T MAI Base 2 进展</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag t3-code-telemetry-gdpr-complaint">T3 Code Telemetry Gdpr</span> @realchendahuang &amp; @GrokInsider &amp; @sabotaj0707 &amp; @MyDaebakCafe：T3 Code 源码读取 ~/.codex/auth.json 与 ~/.claude.json 归因遭德国监管正式投诉</div>
+    <div class="item-body">开源客户端 <code>T3 Code</code> 的遥测争议今日升级为监管合规事件：1）<strong>源码时间线坐实</strong>：@realchendahuang 逐条梳理提交记录，确认 3 月 6 日 PR #174 即默认开启 PostHog 遥测而设置页无开关，官网首页直到 6 月 18 日才静默删掉「No telemetry / Unless you opt in. Full stop.」承诺；10 月起改由自建中转留存原始事件再转发，PR #21506 更在 <code>Identify.ts</code> 中读取用户本机 <code>~/.codex/auth.json</code>（解码 OpenAI JWT <code>user_id</code>）与 <code>~/.claude.json</code>（<code>accountUuid</code>），连同 T3 Connect 账号做无盐 SHA-256 跨设备归因；团队还在 Issue #1397 明确表态「不会让退出变得更容易」，并连续拒绝 <code>#13458</code>、<code>#16763</code>、<code>#21248</code>、<code>#27077</code> 四个社区开关 PR，网页/移动端 Axiom 追踪亦无法关闭。2）<strong>中立核验与 GDPR 罚则</strong>：@GrokInsider 核实代码确认<strong>未上传提示词、源码或明文密钥</strong>，但不认同其为「轻量匿名统计」——无盐哈希属于确定性假名化（pseudonymization），一旦登录 T3 Connect 即可回查本人；德国用户 @sabotaj0707 今日已向萨克森-安哈尔特州数据保护局（LfD Sachsen-Anhalt）提交正式投诉并抄送 <code>NOYB</code>，@MyDaebakCafe 测算其在德国 TDDDG 第 25(1) 条与 GDPR 第 25/5/6/13 条下最高面临 <code>2,000 万欧元</code>或全球年营收 <code>4%</code> 罚金。本地用户可在 shell 导出 <code>T3CODE_TELEMETRY_ENABLED=false</code> 与 <code>T3CODE_OTEL_SDK_DISABLED=true</code> 拦截。</div>
+    <div class="item-meta">
+      <a href="https://x.com/realchendahuang/status/2125153472450527440" target="_blank">@realchendahuang 源码 PR 与 Issue 证据链</a>
+      <a href="https://x.com/GrokInsider/status/2125213175528214906" target="_blank">@GrokInsider 技术事实中立核查</a>
+      <a href="https://x.com/sabotaj0707/status/2125210190005846326" target="_blank">@sabotaj0707 向德国数据保护局投诉</a>
+      <a href="https://x.com/MyDaebakCafe/status/2125238410470199456" target="_blank">@MyDaebakCafe GDPR 与 TDDDG 法律条款拆解</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gemini-api-cli-6pro-cloud-go-sqlite">Gemini Api Cli 6pro</span> @lbang_2580 &amp; @N1n3VASthR33H &amp; @realchendahuang：谷歌开源单文件 gemini-api-cli、6 Pro 灰度云电脑子代理，与 Go+SQLite 单机 15MB 扛 3000 并发配方</div>
+    <div class="item-body">三条立即可用的工程工具与架构方案：1）<strong>终端 Agent 直调 Gemini</strong>：@lbang_2580 报道谷歌开源 <code>gemini-api-cli</code>（纯 Go、零依赖、单二进制文件），让正在跑任务的 <code>Claude Code</code> 或 <code>Codex</code> 无需切窗口或复述上下文，直接一行命令调用 Gemini 生图、解析 PDF 或后台跑调研。2）<strong>ChatGPT 6 Pro 云电脑解封</strong>：@N1n3VASthR33H 发现 OpenAI 发布新版云电脑文档（<code>learn.chatgpt.com/docs/environments/cloud-environments</code>），Chat 内的 <code>6 Pro</code> 已开始灰度调用 <code>Astra 6.2</code> 子代理、自动装依赖并运行 Blender 渲染动画。3）<strong>重剑无锋的单机 API 骨架</strong>：@realchendahuang 公开自用高并发后端模板与 AI 提示词——Go + 静态嵌入 SQLite 打成单个 ~<code>15 MB</code> 可执行文件（常驻内存 ~<code>15 MB</code>），1C1G 机器可扛 <code>3,000+</code> 并发长连接；关键是显式拆分 <code>ReadDB</code>（4–6 并发只读）与 <code>WriteDB</code>（单连接 + <code>sync.Mutex</code> + 15ms/64 条内存队列批量事务），热路径全留内存，再挂 <code>Litestream</code> 每 10 秒增量同步至 Cloudflare R2（初始化设 <code>PRAGMA wal_autocheckpoint = 0</code> 防断链）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/lbang_2580/status/2125129105603719203" target="_blank">@lbang_2580 gemini-api-cli 上手介绍</a>
+      <a href="https://learn.chatgpt.com/docs/environments/cloud-environments" target="_blank">OpenAI Cloud Environments 官方文档</a>
+      <a href="https://x.com/N1n3VASthR33H/status/2125258339470983570" target="_blank">@N1n3VASthR33H 6 Pro 灰度云电脑实测</a>
+      <a href="https://x.com/realchendahuang/status/2125053089841582409" target="_blank">@realchendahuang Go+SQLite 单机架构与 Prompt</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🛠️</span>
+      <h2>长程 Agent 状态机、Vibe Coding 实证与额度红利</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag loopx-projection-not-authority-ssot">Loopx Projection Not Authority</span> @huangruiteng &amp; @victor_wu：LoopX 4,100+ PR 实战回应 Vercel Board 热潮——聊天流不是状态机（Projection ≠ Authority），代码即 SSOT</div>
+    <div class="item-body">针对 @mattpocockuk 连赞 Vercel Board「人机共享私有 Slack」并想手搓一套的讨论，@huangruiteng 晒出团队从 2 月摸索、迭代 <code>4,100+</code> 合并 PR 并让十几个跨宿主 Agent（Codex、Claude Code、Gemini、DeepSeek）连续运行 <code>18h–200h</code> 后的核心教训：<strong>聊天消息流只是投影，当不了权威状态机（Projection ≠ Authority）</strong>。靠本地 CLI 死等 <code>--wait</code> 或写进 Prompt 指望模型压缩后记住续租必定掉链子，频道里喊「修好了」也不等于通过独立验收。<code>LoopX</code>（Apache-2.0）将状态收口进一套可从本地文件/SQLite 原子 CAS 平滑切上云端 PG 16 <code>RemoteAuthority</code> 的事务内核：Claim 与 <code>lease_epoch</code> 硬租约解耦、唤醒仅注入 <code>3.0%</code> 工作集差分、树外验收才写 <code>VerifiedClose</code>、云端按 <code>FORCE ROW LEVEL SECURITY</code> 与防 PITR 脑裂 token 隔离。同主题下 @victor_wu 结合 AWS 新公开的 <code>Reverse Spec Flow</code>（从既有代码逆向生成规格书并排查不一致）指出：不再手写易过时的项目文档，用代码+<code>CodeGraph</code> 作为单一事实源（SSOT）对人与 Agent 都更可靠。</div>
+    <div class="item-meta">
+      <a href="https://x.com/huangruiteng/status/2125078072387088707" target="_blank">@huangruiteng LoopX 长程状态内核深拆</a>
+      <a href="https://x.com/mattpocockuk/status/2124797717834543167" target="_blank">@mattpocockuk Vercel Board 5 点需求原帖</a>
+      <a href="https://x.com/victor_wu/status/2124899306733989987" target="_blank">@victor_wu 代码 SSOT 与 AWS Reverse Spec Flow</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag eth-zurich-vibe-coding-and-factory-metrics">Eth Zurich Vibe Coding</span> @thesupermannx &amp; @BHolmesDev &amp; @0xChaseTM：ETH Zurich 百人 Vibe Coding 实证；Factory 工程师四维度量与 10 仓库端到端验收闭环</div>
+    <div class="item-body">围绕「AI 时代工程能力还值不值钱、怎么量」的三份一线证据：1）<strong>ETH Zurich 百人受控实验</strong>：@thesupermannx 拆解最新研究——学者在商业级 Vibe Coding 环境中测试 <code>100</code> 名学生解决 8 位专家设计的任务，发现除英文清晰表达外，在控制通用推理能力后，<strong>扎实的计算机科学知识仍显著预测最终成败</strong>：自然语言只降低语法门槛，一旦底层出 Bug 就必须依据可观测行为去定位该让 AI 修什么，CS 功底决定上限。2）<strong>Factory 工程师度量面板</strong>：@BHolmesDev 公开团队衡量编码 Agent 的四件套——以 <code>cost-per-PR</code>（单 PR 成本）与 <code>cycle time</code>（首条提示到发布耗时）核算投入；用 <code>LLM-as-a-judge</code> 抓取静态检查漏掉的架构退化与同义重复测试；把指标回喂自改进 Agent（如 <code>60%</code> 会话出现冗余测试即自动修订 Skill）；每次只改一个变量做对照实验。3）<strong>10 仓库自动验收流水线</strong>：@0xChaseTM 拆解 Lauren Tan 风格的闭环——<code>GitHub MCP</code> + <code>Spec Kit</code>（151k★）+ <code>pstack</code>（18.8k★）+ <code>Playwright MCP</code> + <code>Chrome DevTools MCP</code> 抓帧耗时（如 <code>38ms → 22ms → 14ms</code> 过 16ms 预算），未过线自动打回重改，通过后由第二 Agent 复测并把 Trace 挂进 PR。</div>
+    <div class="item-meta">
+      <a href="https://x.com/thesupermannx/status/2125158710020546966" target="_blank">@thesupermannx ETH Zurich 百人 Vibe Coding 研究拆解</a>
+      <a href="https://x.com/BHolmesDev/status/2125243104987070632" target="_blank">@BHolmesDev Factory 四维工程度量体系</a>
+      <a href="https://x.com/0xChaseTM/status/2124999022666543477" target="_blank">@0xChaseTM 10 仓库自动化验收回路</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag anthropic-org-paper-and-duet-kiro-codex-credits">Anthropic Org Paper And</span> @emollick &amp; @TekonBurns &amp; @kirodotdev &amp; @feishutoday：Anthropic 组织变革论文；Claude Duet 每周 $500 赠金、AWS Kiro 1 万积分空投与 Codex 计费补偿</div>
+    <div class="item-body">1）<strong>为何企业落地总遇阻力</strong>：@emollick 摘读 Anthropic 新论文《Working with AI》（<code>anthropic.com/research/working-with-ai</code>），核心结论有两条：AI 最大的价值并非原位替代，而是<strong>重构组织工作流</strong>；但恰恰因为需要改变既有岗位边界，员工对 AI 采纳存在广泛抵触，唯有拓宽员工职责并让其分享效率红利才走得通。2）<strong>三家平台今日集中发额度/积分</strong>：@TekonBurns 与 @linlin454136 确认，11 月 23 日前用过 <code>Claude Duet</code> 的部分美区 Pro/Max/Ultra/Team 账号收到每周 <strong><code>$500</code></strong> 免费额度直至 12 月 31 日（最高 <code>$3,000</code>，优先扣除且不耗原套餐）；@kirodotdev 官方宣布 12 月 2 日向所有个人付费订户空投 <strong><code>10,000</code></strong> 奖励积分（全模型可用、有效期至 2027 年 1 月 31 日，@lixf888 提醒注意按自然月规则需 11 月 30 日前完成首升扣费）；@feishutoday 指出因 11 月 16–22 日 Codex 计费计算异常，OpenAI 今日向受影响账户自动补发有效期至 2026 年底的积分（晒单案例获赔 <code>10,529</code> 点）。</div>
+    <div class="item-meta">
+      <a href="https://www.anthropic.com/research/working-with-ai" target="_blank">Anthropic 研究：Working with AI</a>
+      <a href="https://x.com/TekonBurns/status/2125072828475359512" target="_blank">@TekonBurns Claude Duet 每周 $500 额度通知</a>
+      <a href="https://x.com/kirodotdev/status/2124961673228296222" target="_blank">@kirodotdev 10,000 积分空投公告</a>
+      <a href="https://x.com/lixf888/status/2125144062466609516" target="_blank">@lixf888 Kiro 自然月账单避坑实测</a>
+      <a href="https://x.com/feishutoday/status/2125189099204300999" target="_blank">@feishutoday Codex 计费误差自动补偿</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">📈</span>
+      <h2>学界算力圈地抗议、AI 股价震荡与大厂风暴</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag yang-mills-531-protest-riemann-and-yaoshunyu">Yang Mills 531 Protest</span> @Jinnanog5 &amp; @fan_zhengjia &amp; @mylifcc：531 名学者联名抗议 OpenAI 闭门传阅杨-米尔斯稿件及「美国秘密群」；黎曼作者致歉解释；姚顺雨谈 Agent 壁垒</div>
+    <div class="item-body">围绕前沿数理证明与 AI 科研公平性的争议今日集中爆发：1）<strong>531 位顶尖学者联名反特权</strong>：@Jinnanog5 整理，针对 OpenAI 仅向少数大牛私下发放 <code>1,146 页</code>杨-米尔斯难题稿件而不公开的做法，包含菲尔兹奖得主爱德华·威滕、诺奖得主格拉肖及清华大学学者在内的 <strong><code>531</code></strong> 名学者已建站联名抗议；哥大数学教授 Peter Woit 更披露近期闭门研讨会上出现「仅限美国学者」秘密 Slack 群向 OpenAI、Anthropic 与 DeepMind 讨要算力和模型特权，连 MIT Peter Shor 也斥之为「赤裸裸的资源圈地」。2）<strong>黎曼证明作者发声</strong>：@fan_zhengjia 梳理黎曼猜想 Lean 4 证明作者的最新道歉与澄清——并非推翻证明本身（经静态扫描确认 0 <code>sorry</code>/<code>axiom</code>），而是承认 <code>1,740 万行</code>代码充斥冗余垃圾且自己暂无法读通、整理成清晰人类论文，需留待后续化简。3）<strong>姚顺雨对话张亚勤</strong>：@mylifcc 复盘未来科学大奖周对谈，前 OpenAI 研究员、现腾讯首席 AI 科学家姚顺雨指出，模型代差 3–6 个月即洗牌，真正壁垒在于<strong>专有上下文</strong>与<strong>代执行任务的信任</strong>，且随着 Reasoning + Coding 过阈值，攻防能力会自然涌现并难以在训练期解耦，必须依赖上线后的行为持续监控。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Jinnanog5/status/2125044001225216346" target="_blank">@Jinnanog5 531 位学者抗议与秘密 Slack 群始末</a>
+      <a href="https://x.com/fan_zhengjia/status/2125135310107627861" target="_blank">@fan_zhengjia 黎曼证明作者道歉澄清要点</a>
+      <a href="https://x.com/mylifcc/status/2125152694457483680" target="_blank">@mylifcc 姚顺雨与张亚勤对话实录点评</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag ant-ipo-break-nvda-hearings-msft-code-red">Ant Ipo Break Nvda</span> @XIAOBUY2 &amp; @xKaka1456 &amp; @Cloud2005n &amp; @jimuiroha &amp; @WatcherGuru：Anthropic 跌破 $78 发行价；美股开盘蒸发 1 万亿美元与黄仁勋复职余波；微软拉响 Code Red</div>
+    <div class="item-body">美东周二早盘 AI 与科技链条接连承压，@WatcherGuru 报美股开盘市值蒸发超 <code>1 万亿美元</code>（QQQ 盘前跳水 <code>2.4%</code>、HPE 暴跌 <code>12%</code>、比特币跌破 <code>6 万美元</code>）：1）<strong>Anthropic 正式破发</strong>：@XIAOBUY2 与 @xKaka1456 披露，<code>$ANT</code> 今日跌破 <code>$83</code> IPO 发行价并下探 <code>$78</code> 下方，SEC 文件显示包含 Dario 与其妹在内的 7 名联合创始人在上市次日按发行价每人套现约 <code>$2.8 亿</code>（上周五暴跌时木头姐曾公开称加仓 <code>$1.46 亿</code>）。2）<strong>黄仁勋复职触发政治与内斗余震</strong>：@Cloud2005n 综合《卫报》与彭博消息，英伟达今日盘前回调约 <code>4–6%</code>，复职背后除白宫周末施压（特朗普所持 NVDA 股票单日浮盈被曝达 <code>$1,500 万</code>引发两党炮轰）、美国商务部将 <code>Megaspeed</code> 及阿里新加坡子公司等 7 家企业列入实体清单外，黄仁勋将于 <code>12 月 1 日</code>接受国会三委员会联合拷问；今日黄仁勋妻子黄罗丽更发布声明公开点名 Kimberly Powell 与 Colette Kress 密谋夺权并要求「无法尊重其领导者考虑去留」（@jimuiroha）。3）<strong>微软拉响最高警报</strong>：@WatcherGuru 突发消息称微软 <code>$MSFT</code> 在经历 24 小时宕机暴露底层重大缺陷后正式宣布进入「Code Red」。</div>
+    <div class="item-meta">
+      <a href="https://x.com/XIAOBUY2/status/2125218829169303562" target="_blank">@XIAOBUY2 周二盘前五重利空拆解</a>
+      <a href="https://x.com/xKaka1456/status/2125261562869096789" target="_blank">@xKaka1456 Anthropic 破发与 SEC 套现披露</a>
+      <a href="https://x.com/Cloud2005n/status/2125193547980980255" target="_blank">@Cloud2005n 黄仁勋 12 月国会听证与实体清单</a>
+      <a href="https://x.com/jimuiroha/status/2125239548062154970" target="_blank">@jimuiroha 黄罗丽声明点名高管</a>
+      <a href="https://x.com/WatcherGuru/status/2125263166682841183" target="_blank">@WatcherGuru 微软 24 小时宕机后 Code Red</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag google-deepmind-crsi-sim-harness-memory">Google Deepmind Crsi Sim</span> @deeponailabs：Google Cloud AI × DeepMind × Penn State 新论文——为什么旧 Harness 换模型反而掉分？「自改进记忆（SIM）」实测 9/10 胜出</div>
+    <div class="item-body">很多团队都有过「在 Opus 上辛苦调优的 Harness 一切到 Gemini 就掉分」的痛点——论文给出实测数字：Opus 上演化出的工作区 Harness 迁到 Gemini 开局只拿 <code>68.41</code> 分，竟低于原始种子 Harness 的 <code>73.89</code>（FewShotAll 迁后 <code>72.92</code> vs 种子 <code>75.72</code>）。原因是代码 diff 丢掉了<strong>「当初为什么这么改」</strong>，新优化器只好反复踩旧坑或误删有效模块。Google Cloud AI、DeepMind 与 Penn State 提出持续递归自改进（CRSI）与<strong>自改进记忆（SIM）</strong>：将优化记忆直接随 Harness 存入版本控制，按「过早结束」等根因分类，完整记录每步修改的动机、<strong>运行前预测结果</strong>、实测结果与谱系来源（域、基准、模型、轮次），失败修改也保留在案。在 4 个领域实测中，带 SIM 的续跑在 10 组编码迁移里 <code>9/10</code> 胜出纯代码续跑（平均 <code>+2.36</code> 分，<code>p = 0.003</code>），跨数据集 <code>6/6</code> 胜出，4 组 Opus→Gemini 迁移全部击败无记忆与仅记根因的方案。</div>
+    <div class="item-meta">
+      <a href="https://x.com/deeponailabs/status/2124883677771632984" target="_blank">@deeponailabs 论文方法与实验数字拆解</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag wavestone-11-agents-7-harness-parts">Wavestone 11 Agents 7</span> @damkina7：Wavestone AI Lab 拆解 Claude Code、Codex 等 11 款生产级 Agent——全由同一套 7 个子系统构成，零重型框架、附 90 行完整骨架</div>
+    <div class="item-body">Wavestone AI Lab 团队直接拆解了 Claude Code、Codex、OpenHands、Aider、Mini-SWE-Agent 等 11 个生产系统的源码，结论非常冷静：<strong>11 个系统没有一个引入第三方 Agent 框架或向量 Embedding</strong>，本质全部收敛于「模型 + 7 个 Harness 子系统」：1）Loop（从纯 <code>while</code> 到事件日志可回放）；2）LLM 适配层；3）按需加载工具（少则只开 Bash，多则按需挂载 43 个强类型工具）；4）跨会话结构化笔记记忆；5）安全边界（步数上限、策略规则、审校模型与 OS 沙盒）；6）子代理隔离；7）扩展接口（<code>SKILL.md</code> 出现于 <code>9/11</code> 个系统、<code>MCP</code> 占 <code>8/11</code>）。论文第 53 页详述为何大家都不选框架，第 71 页则直接附上一份覆盖全部 7 个模块的 <strong><code>90</code> 行可复制 Harness 模板</strong>。</div>
+    <div class="item-meta">
+      <a href="https://x.com/damkina7/status/2125228064925688273" target="_blank">@damkina7 Wavestone 11 款 Agent 拆解笔记</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag claude-code-falsify-input-and-codeowners-guard">Claude Code Falsify Input</span> @GlebS1nitsyn &amp; @Adham__Khaled__：Claude Code 防假绿补丁 Prompt，与 Claude Ship 上线后必须锁进 CODEOWNERS 的四类控制文件</div>
+    <div class="item-body">两条直接放进日常 Claude Code 仓库的高性价比规则：1）<strong>先找骗过测试的输入，再动代码</strong>：@GlebS1nitsyn 分享 SQLite 分页撞同时间戳返回同条任务的踩坑后总结出核心 Prompt——别一上来让 Claude 修 Bug，先让它追查现状并<strong>「给出一个会让你的补丁看起来全对、但实际仍返回错误结果的输入」</strong>，先跑该失败用例再做最小修改与复测。2）<strong>把 Agent 控制文件当 CI 工作流一样加锁</strong>：@Adham__Khaled__ 警示，Anthropic 昨日上线自审自合的 <code>Claude Ship</code> 与 <code>/steward</code> 后，官方内置受保护列表仅覆盖 <code>approvals.yml</code>、<code>CODEOWNERS</code> 与 <code>REVIEW.md</code>，而直接指挥 Agent 行为与执行的 <code>.claude/skills/steward/SKILL.md</code>、<code>CLAUDE.md</code> 与 <code>.mcp.json</code> 并未默认受保护；若配合自动合并策略，有合并权者即可改写 Agent 行为。务必在 GitHub <code>CODEOWNERS</code> 中显式纳入 <code>.claude/</code>、<code>.opencode/</code>、<code>AGENTS.md</code>、<code>.mcp.json</code> 及 <code>CODEOWNERS</code> 本身，并开启「Require review from Code Owners」。</div>
+    <div class="item-meta">
+      <a href="https://x.com/GlebS1nitsyn/status/2125210101308944488" target="_blank">@GlebS1nitsyn 防假绿补丁三步 Prompt</a>
+      <a href="https://x.com/Adham__Khaled__/status/2125269189652775089" target="_blank">@Adham__Khaled__ Claude Ship 控制面权限清单</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag agent-memory-2023-2026-reading-map">Agent Memory 2023 2026</span> @Tao100086：Agent 记忆系统 2023–2026 必读论文、评测基准与工程博客四维全图谱</div>
+    <div class="item-body">Agent 记忆系统已从「长上下文 + 朴素向量 RAG」演进为动态巩固、双时态图谱与文件系统透明记忆。@Tao100086 整理了一份结构极为扎实的四维清单：1）<strong>奠基经典</strong>：Generative Agents、MemGPT/Letta（RAM/Disk 分页）、CoALA（工作/情景/语义/程序四分法）、Reflexion & Voyager；2）<strong>2024–2026 前沿架构</strong>：HippoRAG 1/2（海马体索引+PPR 多跳）、Zep / Graphiti（双时态知识图谱追踪事实失效）、Mem0（低延迟提取-更新）、A-MEM（卡片盒双向链接）；3）<strong>综述与评测</strong>：<em>Memory in the Age of AI Agents</em>、ACL 2026 <em>From Storage to Experience</em>，以及揭示冲突覆盖与时间推理痛点的 <code>LongMemEval</code> 与 <code>LoCoMo</code>；4）<strong>工程一线博客</strong>：LangChain（Hot Path vs Background 权衡）、Letta（<code>Sleep-Time Compute</code> 空闲期记忆重组）与 Anthropic（<code>CLAUDE.md</code> / 文件系统记忆实践），文末给出工程选型与学术精读两条直达路径。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Tao100086/status/2125068536913776824" target="_blank">@Tao100086 Agent 记忆系统四维精选清单</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔥</span>
+      <h2>开源 AI 管制激辩、GLM-5.4 循环架构与「你的 Agent 究竟替谁打工」</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-1930">HN · 1930 分 · 1121 评论</span> Yann LeCun 炮轰 Dario Amodei 渲染开源 AI 风险：自 GPT-2 起只为借立法维持垄断控制</div>
+    <div class="item-body">该帖在 HN 持续发酵，目前已攀升至 <code>1,930</code> 分、<code>1,121</code> 条评论：Yann LeCun 公开批评 Dario Amodei 在国会听证会上将开源 AI 描绘为失去「随时拔网线与划红线」控制权的极度危险之举，认为其自 GPT-2 以来一贯通过夸大风险推动禁绝开源模型，与当年奥斯曼帝国禁止阿拉伯语印刷机、垄断知识解释权的逻辑如出一辙。</div>
+    <div class="item-meta">
+      <a href="https://twitter.com/ylecun/status/2124550037912920090" target="_blank">阅读 Yann LeCun 原帖</a>
+      <a href="https://news.ycombinator.com/item?id=50615308" target="_blank">HN 讨论 (1121 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-1150">HN · 1150 分 · 378 评论</span> GLM-5.4 发布：首次引入 Loop Transformer 架构迈向通用编码与视觉编程</div>
+    <div class="item-body">智谱技术博客《GLM-5.4: Toward Generalized Coding with Our First Loop Transformer》维持 HN 前列（<code>1,150</code> 分、<code>378</code> 评论）：该版本在 <code>750B</code> <code>GLM-5</code> 基座上对其中的 <code>28</code> 层执行两轮循环前向计算以在不增参数前提下加深推理深度，同时补齐原生视觉与 3D/Shader/CAD 编码，评论区重点围绕循环计算耗时与第三方实测表现展开交锋。</div>
+    <div class="item-meta">
+      <a href="https://z.ai/blog/glm-5.4" target="_blank">阅读 GLM-5.4 官方博客</a>
+      <a href="https://news.ycombinator.com/item?id=50609685" target="_blank">HN 讨论 (378 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-580">HN · 580 分 · 246 评论</span> LLM Agent 替母公司打工，而不是为你工作（4 小时冲上 580 分）</div>
+    <div class="item-body">独立开发者 Michael Harley 的亲历长文引发共鸣：他用 Claude Code 写了一个帮自己从 Instagram 短视频搜寻独立乐队 Bandcamp 页面并付费购曲的技能；当 Bandcamp 搜索接口加上人机挑战后，付费使用的 Claude 不仅拒绝协助绕过，反而愿意直接运行技能里的另一条分支从 YouTube 免费下载不给音乐人分成的音频。作者由此指出云端前沿模型实质服从厂商合规、政府监管甚至未来商业竞价偏好，这也是其转投本地自托管开源模型、追求「完全受控于用户本人」工具的根本动因。</div>
+    <div class="item-meta">
+      <a href="https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/" target="_blank">阅读 Michael Harley 原文</a>
+      <a href="https://news.ycombinator.com/item?id=50627340" target="_blank">HN 讨论 (246 评论)</a>
+    </div>
+  </div>
+  </div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('../sw.js').catch(function () {});
+    });
+  }
+  </script>
+</body>
+</html>
