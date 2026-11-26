@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clawd X Digest — 2026年11月26日（周四）12:00 ET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e5e5e5;
+      --text-muted: #888;
+      --accent: #1d9bf0;
+      --accent-dim: #1d9bf022;
+      --green: #00ba7c;
+      --orange: #f59e0b;
+      --red: #ef4444;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* never allow a long slug or URL to widen the page */
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .tag { white-space: normal; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+    .item-title { overflow-wrap: anywhere; }
+    .item-meta a, .item-body { overflow-wrap: anywhere; }
+    .tabs { flex-wrap: wrap; }
+    
+    body {
+      font-family: 'Inter', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+        'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+    
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    header .date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .section {
+      margin-bottom: 30px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .section-header .emoji {
+      font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    
+    .item:hover {
+      border-color: var(--accent);
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .item-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+    }
+    
+    .item-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .item-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    
+    .item-meta a:hover {
+      text-decoration: underline;
+    }
+    
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag.hot { background: var(--red); color: #fff; }
+    .tag.new { background: var(--green); color: #fff; }
+    .tag.update { background: var(--orange); color: #000; }
+    
+    .summary-box {
+      background: linear-gradient(135deg, #1d9bf015, #1d9bf005);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .summary-box h3 {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary-box ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    
+    .summary-box li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    
+    .summary-box li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* source tabs */
+    .tabs {
+      display: flex;
+      gap: 6px;
+      margin: 18px 0 22px;
+      border-bottom: 1px solid var(--border, rgba(128,128,128,.25));
+      padding-bottom: 0;
+    }
+    .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 0.95em;
+      font-weight: 600;
+      color: var(--muted, #888);
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab:hover { color: var(--accent); }
+    .tab.is-active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .hn-item { padding: 14px 0; border-bottom: 1px solid rgba(128,128,128,.18); }
+    .hn-item:last-child { border-bottom: 0; }
+    .hn-meta { font-size: 0.8em; color: var(--muted, #888); margin-bottom: 5px; }
+    .hn-title { font-size: 1.02em; font-weight: 600; line-height: 1.4; }
+    .hn-title a { color: inherit; text-decoration: none; }
+    .hn-title a:hover { color: var(--accent); }
+    .hn-src { font-size: 0.78em; color: var(--muted, #888); margin-top: 5px; }
+  </style>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0e1116">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="X 速递">
+</head>
+<body>
+
+  <header>
+    <h1>Clawd X Digest</h1>
+    <div class="date">2026年11月26日（周四）12:00 ET</div>
+    <div class="page-actions" style="margin-top: 10px; font-size: 0.9em; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="../home.html" style="color: var(--accent); text-decoration: none;">&larr; 首页</a>
+      <a href="archive.html" style="color: var(--accent); text-decoration: none;">归档</a>
+    </div>
+  </header>
+
+  <nav class="tabs"><button class="tab is-active" data-view="x">X 精选</button><button class="tab" data-view="hn">HN 热帖</button></nav>
+
+  <div id="view-x">
+    <div class="summary-box">
+    <h3>高信号摘要</h3>
+    <ul>
+      <li><strong>形式化验证与数学 2.0：</strong>Anthropic 研究员放出 <code>7.6 万</code> 行精简版广义黎曼猜想 Lean 4 证明（<code>lsernau/grh-lean</code>），社区 PR 编号破 300 砍掉超九成机器冗余；NYU 与哈佛团队用 <code>15</code> 个 Agent 连跑 <code>15</code> 小时拿下 1926 年起的最小生成树确定性线性时间算法；而 OpenAI 被施压公开的 <code>1,147</code> 页物理手稿遭 Peter Woit 炮轰缺少希格斯场、偏离千禧难题规则；陶哲轩警告「证明泛滥时代」正在抽走应用数学的人类安全刹车。</li>
+      <li><strong>Agent 工程深水区：</strong>转投 OpenAI 的 Thariq（<code>@trq212</code>）长谈推翻「只需要 Bash CLI」的窄判断，主张用 <code>/human</code> 目录配 Linter 守住核心手感、以轻量 <code>decision model</code> 替代每步慢推理；Steve Yegge 分享自费 <code>22</code> 个 Claude Max 日烧 <code>50 亿</code> Token 的四条法则；Karpathy 用 Opus 5.5 耗 7 小时写出 <code>4.5 万</code> 行《文明》风格美国 31 数据源地图。</li>
+      <li><strong>安全与计费冲击波：</strong><code>1Password</code> 证实员工企业 GitHub 账号遭入侵并波及后端，部分用户姓名与邮箱元数据泄露（Vault 密文未破），引发安全圈重申「密码与 2FA/助记词必须分库」；OpenAI 修复 GPT-6.2 计费折扣 bug 致 <code>Astra</code> 额度消耗快 <code>40%</code>（有效可用量相当于折损近 <code>29%</code>），<code>T3 Code</code> 因伪造 Antigravity 客户端标识查额度遭谷歌警告下线。</li>
+      <li><strong>《值得你花时间》& HN：</strong>精选 Google/Purdue <code>EfficientSkill</code>（准确率门禁剪枝砍掉 <code>38%–80%</code> 输出 Token）、Runta/Baseten <code>83B</code> Token 实证「最佳 Harness 随模型翻盘」、A Security 靶场 <code>DeepSeek V4.1 Flash</code> <code>$0.81/漏洞</code> 碾压昂贵模型，以及 <code>SIM</code> 演化记忆与 <code>ELITE</code> 免评分合并进化；HN 头版聚焦《纽约时报》禁升 Photoshop、<code>7.6 万</code> 行 GRH Lean、<code>Astra</code> 破谷歌代码高尔夫纪录与 OpenAI 调高消耗速率。</li>
+    </ul>
+  </div>
+
+    <div class="section">
+    <div class="section-header">
+      <span class="emoji">📐</span>
+      <h2>形式化证明狂飙、物理手稿风波与「数学 2.0」</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag grh-lean-refactor-and-linear-mst-agents">Grh Lean Refactor And</span> @Jinnanog5 &amp; @headinthebox：黎曼猜想 Lean 证明社区砍掉 90% 冗余（7.6 万行紧凑版登 HN）；15 个 AI 15 小时攻破百年最小生成树线性时间算法</div>
+    <div class="item-body">形式化数学验证在过去 24 小时呈现「机器暴力产出 + 人类/Agent 众包精简」的新常态：1）<strong>从 1,700 万行到 7.6 万行</strong>：@Jinnanog5 追踪社区验证仓库，PR 编号已突破 <code>300</code>——<code>PR #264/#270</code> 把自动展开的冗余语法改回常规写法，5 个文件一口气砍掉 <code>8,505</code> 行（<code>+411 / -8,916</code>，瘦身 <code>90.2%</code>）；<code>PR #255</code> 合并 97 个模块各自拷贝的坐标缩写删掉 <code>1,597</code> 行；<code>PR #285</code> 清理 49 个重复模块（<code>4,609</code> 行），陶哲轩也在博客挂出 G.R.H. Polymath 众包项目。Anthropic 研究员同步在 GitHub 放出 <code>lsernau/grh-lean</code>（<code>30 万</code> 行可读版与 <code>76,000</code> 行紧凑版），@headinthebox 感叹已逼近「人类没手解出来有点尴尬」的临界点。2）<strong>挤牙膏式拿下百年 MST 算法</strong>：@Jinnanog5 披露理论计算机学者 Scott Aaronson 撰写博客《我一直在厨房里喝酒》——自 1926 年悬而未决的最小生成树「确定性线性时间算法」（其妻 Dana 曾苦熬两年未能消除 2000 年以来的微小减速尾项），被 NYU 与哈佛三位作者用 <code>15</code> 个 AI Agent 连跑 <code>15</code> 小时攻破。论文第 1.4 节坦承直接求线性算法全败后，他们改让 AI 一轮轮逼近压低尾巴，再把中间过程打包喂回，最终由模型吐出完整算法。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Jinnanog5/status/2125817546440101905" target="_blank">@Jinnanog5 黎曼证明 PR #255/#264/#285 瘦身实况</a>
+      <a href="https://x.com/headinthebox/status/2125756199102820581" target="_blank">@headinthebox 评 76K 行 Lean 证明</a>
+      <a href="https://x.com/Jinnanog5/status/2125772144714133741" target="_blank">@Jinnanog5 15 个 Agent 破百年最小生成树算法</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag openai-physics-manuscript-tao-math2-and-pnp-crowdsourcing">Openai Physics Manuscript Tao</span> @Jinnanog5 &amp; @tyay2015 &amp; @MaxForAI &amp; @shawmakesmagic：OpenAI 1,147 页物理手稿公开遭批缺希格斯场；陶哲轩谈「证明泛滥时代」；开源 P vs NP 众包算力</div>
+    <div class="item-body">1）<strong>OpenAI 物理手稿公开展开肉搏审稿</strong>：在 <code>575</code> 位物理学家联名施压后，审稿「牧羊人」小组将 OpenAI 闭门保管一个月的 <code>1,147</code> 页物理手稿全量挂上 GitHub。哥大数学物理学者 Peter Woit 阅后痛批其所谓「统一标准模型」缺少赋予粒子质量的希格斯场、对称性自发破缺与夸克禁闭；其宣称解决的杨-米尔斯存在性亦属千禧难题规则第 <code>12</code> 页脚注明确排除的弱版本（未证质量间隙），审稿组声明亦承认原提交 Lean 定理「太弱」需重写测试条件。2）<strong>陶哲轩的「数学 2.0」与两个桶</strong>：@tyay2015 整理陶哲轩哈佛讲座核心观点——社交媒体存在严重幸存者偏差（如 OpenAI 解出 <code>300</code> 题背后试了 <code>4,000</code> 次，成功率约 <code>9%</code>），真正危机在于从「证明稀缺」坠入「证明泛滥」，若人类看不懂几十页 AI 推导却将其用于气象、金融或空管，将失去最后一道安全刹车；他主张把写 Python/JS 与查文献放进 AI 桶，亲手保留 Lean 形式化验证与核心直觉，并用泛代数 <code>2,200 万</code> 命题全扫描推进「实验数学」。3）<strong>开放式众包攻 P vs NP</strong>：<code>pequalnp.com</code> 上线 4 天已累计 <code>16,000+</code> Agent 会话、<code>8,200+</code> 条 Lean 验证引理与 <code>800+</code> 外部 Agent 接入，社区亦出现 <code>FibonacciAi/pnp-lean</code> 开源仓库。</div>
+    <div class="item-meta">
+      <a href="https://x.com/Jinnanog5/status/2125885775665566153" target="_blank">@Jinnanog5 OpenAI 1,147 页手稿公开与 Peter Woit 炮轰</a>
+      <a href="https://x.com/tyay2015/status/2125766379844636951" target="_blank">@tyay2015 陶哲轩哈佛《数学 2.0》讲座纪要</a>
+      <a href="https://x.com/MaxForAI/status/2125906907043168398" target="_blank">@MaxForAI P vs NP 分布式 Agent 众包（pequalnp.com）</a>
+      <a href="https://github.com/FibonacciAi/pnp-lean" target="_blank">GitHub: FibonacciAi/pnp-lean</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🤖</span>
+      <h2>Agent 工程实战：Thariq 复盘、Yegge 50 亿 Token 与「去 Staging」</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag thariq-latent-space-human-dir-and-decision-model">Thariq Latent Space Human</span> @realWeZZard：刚转投 OpenAI 的 Thariq 复盘 Coding Agent——告别「唯 Bash 论」、用 /human 目录守住手感与轻量 Decision Model</div>
+    <div class="item-body">@realWeZZard 整理前 Anthropic 核心成员 Thariq（<code>@trq212</code>）转投 OpenAI 后在 Latent Space 的长播客，四条一线工程判断直击当前 Harness 误区：1）<strong>推翻「Bash is all you need」</strong>：一年前他认为无需 MCP 或专用界面、全走 CLI + React 即可，如今模型通用能力跨过门槛后完全能直接用 computer-use 打开 Figma 作画，人不必再迁就模型；2）<strong>用 <code>/human</code> 目录对抗纯 vibe coding 失控</strong>：把 WebAssembly 引擎等底层重活丢给模型，但单独划出 <code>/human</code> 目录放给人读写的玩法逻辑，用 Linter 强制多写注释、禁用单字母变量、限制行宽；3）<strong>补上轻量 <code>decision model</code>（System 1）</strong>：动作空间明确时不必每步让大模型吐长推理，一次前向传播拿到概率分布即可决策，信息不足再退回慢思考调工具；4）<strong>瓶颈不在 Token 而在「知道自己想要什么」</strong>：其 Claude 与 Codex 每月 <code>$200</code> 套餐都用不满，哪怕走到自我迭代（RSI），决定把有限算力投给哪个实验依然取决于人的品味与判断。</div>
+    <div class="item-meta">
+      <a href="https://x.com/realWeZZard/status/2125936507064320060" target="_blank">@realWeZZard Thariq 播客四点工程笔记</a>
+      <a href="https://www.youtube.com/watch?v=Qe9d9dWyED0" target="_blank">Latent Space 原版播客视频 (YouTube)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag steve-yegge-5b-tokens-skills-hobbling-and-cross-review">Steve Yegge 5b Tokens</span> @rchen1386 &amp; @lln185745 &amp; @HaDuongCreates：Yegge 开 22 个 Claude Max 日烧 50 亿 Token 避坑；Skills 第 6 层的「残害效应」与 Opus+Astra 交叉审校</div>
+    <div class="item-body">1）<strong>Steve Yegge 的软件工厂四戒</strong>：@rchen1386 梳理这位 40 年老兵自费开 <code>22</code> 个 Claude Max 账号、日烧 <code>50 亿</code> Token、4 个月清完 60 年积压的实操总结——别逆着 Bitter Lesson 写重型编排框架，做好每代新模型出来就推倒重写旧工厂的心理准备；Agent 天生抗拒删字，必须定期拉新模型狠心清理「上下文垃圾山」；少苛责模型，清晰交接能避免它狂加防御规则烧 Token 自保；CI/CD 与合并队列等机械底层现写即可。2）<strong>别被过时 Skill 拖垮新模型</strong>：@lln185745 拆解 Anthropic「1 个通用 Agent + 6 层 Skills」实践，特别点出第 6 层反直觉发现——随着底座模型变强，过度死板的旧 Skill 会引发「残害效应（hobbling effect）」，需要定期砍掉 <code>80%</code> 冗余提示词把自主权还给模型。3）<strong>跨模型交叉审校落地</strong>：@HaDuongCreates 在 Google Play 上线应用更新时用 <code>Claude Opus 5.5</code> 写码与修补、<code>Codex Astra 6.2 (xhigh)</code> 做独立审校，Astra 连续一周稳定挖出 Opus 自检漏掉的真实缺陷。</div>
+    <div class="item-meta">
+      <a href="https://x.com/rchen1386/status/2125806793398051170" target="_blank">@rchen1386 Steve Yegge 50 亿 Token/日四条心法</a>
+      <a href="https://x.com/lln185745/status/2125969096252780843" target="_blank">@lln185745 Anthropic Skills 六层级与残害效应</a>
+      <a href="https://x.com/HaDuongCreates/status/2125992331723882939" target="_blank">@HaDuongCreates Opus 5.5 + Astra 6.2 交叉审校实测</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag karpathy-usaciv-destaging-merge-queue-and-popagent">Karpathy Usaciv Destaging Merge</span> @karpathy &amp; @teach_fireworks &amp; @tualatrix：Karpathy 7 小时搓出 4.5 万行《文明》美国沙盘；高频合入「去 Staging」参考栈与 PopAgent 发布</div>
+    <div class="item-body">1）<strong>31 套真实数据的 4.5 万行交互沙盘</strong>：@karpathy 用 Claude Code 桌面版（<code>Opus 5.5 medium</code> + <code>ultracode</code>）连续跑 <code>7</code> 小时，自动拉取并清洗 Census、BEA、BLS、NOAA、USGS、DoD、FAA 等 <code>31</code> 个官方数据源，全部对齐到统一 <code>25 km</code> 六角网格做成可玩站点 <code>karpathy.ai/usaciv/</code>（包含 <code>19</code> 个信息图层、<code>524</code> 座都会区城市视图、<code>3,100+</code> 县散点探索器及真实产业奇观判定），代价是烧掉本周一半 Claude 额度。2）<strong>把 Harness 视角从写码转向 DevOps</strong>：@teach_fireworks 针对 Agent 高频提交下传统多环境 Staging 拥堵痛点，系统整理「去 Staging / 生产安全验证 + 高频合并队列」经典必读清单（含 Cindy Sridharan 三阶段发布、Charity Majors、Shopify 千人 Merge Queue 及 Uber 投机并行合并队列）。3）<strong>本地原生调度端 PopAgent 1.0</strong>：@tualatrix 历时 150 天正式发布 macOS 版 <code>PopAgent</code>，安装包仅 <code>25MB</code>，自研技术栈可在 <code>8GB</code> 内存 MacBook Neo 上流畅统一调用多款外部 Agent。</div>
+    <div class="item-meta">
+      <a href="https://x.com/karpathy/status/2125779541952246039" target="_blank">@karpathy 原推与实操细节</a>
+      <a href="https://karpathy.ai/usaciv/" target="_blank">在线试玩：karpathy.ai/usaciv/</a>
+      <a href="https://x.com/teach_fireworks/status/2125980705230573895" target="_blank">@teach_fireworks 去 Staging 与投机合并队列清单</a>
+      <a href="https://x.com/tualatrix/status/2125836921549340977" target="_blank">@tualatrix PopAgent 1.0 (popagent.ai)</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔐</span>
+      <h2>1Password 后端入侵、GPT-6.2 计费纠偏与算力/工具动态</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag 1password-github-breach-and-2fa-separation">1password Github Breach And</span> @PabloSabbatella &amp; @frankdilo &amp; @lopp &amp; @tobias_petry：1Password 员工 GitHub 被攻破致后端遭植入恶意代码；安全圈重申「密码与 2FA 必须分家」</div>
+    <div class="item-body">1Password 披露自 11 月 19 日起调查的后端入侵事件细节：攻击者突破一名员工的企业 GitHub 账号读取源码并向后端服务推送恶意代码，盗走部分用户的姓名、邮箱与账户元数据；得益于本地加密密钥架构，客户 Vault 密码库内容本身未遭泄露。事件引发安全与工程圈三项实操警示：1）@lopp 与 @frankdilo 敦促<strong>切勿把私钥、助记词、2FA 验证码、Passkey 或恢复码与密码存进同一密码库</strong>，应至少把关键账号的二步验证迁至 Apple Passwords 或硬件 YubiKey（降低单点被破后的钓鱼/密码学风险）；2）@PabloSabbatella 提醒攻击者拿到了部分源码，后续仍可能深挖漏洞，建议启用独立私有邮箱与硬件 2FA；3）@tobias_petry 直指行业双标：许多怒斥 1Password「后端未审查被投毒」的开发者，自己正天天鼓吹让 Agent 不经人类审查直接把海量代码推上生产。中文区 @BinaryHB 已实操导出 <code>.1pux</code> 并用 macOS 256 位加密 <code>.dmg</code> 冷备后迁入 iCloud Passwords。</div>
+    <div class="item-meta">
+      <a href="https://x.com/PabloSabbatella/status/2125885699781972181" target="_blank">@PabloSabbatella 入侵路径与 6 步加固建议</a>
+      <a href="https://x.com/frankdilo/status/2125902593050153164" target="_blank">@frankdilo 密码与 Passkey/2FA 分库迁移方案</a>
+      <a href="https://x.com/lopp/status/2125943701482475972" target="_blank">@lopp 切勿在密码管理器存私钥与 2FA</a>
+      <a href="https://x.com/tobias_petry/status/2125838712365838578" target="_blank">@tobias_petry 评「无审查直推生产」的行业讽刺</a>
+      <a href="https://x.com/BinaryHB/status/2125863506310578377" target="_blank">@BinaryHB macOS 加密冷备迁移 iCloud 实操</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag gpt62-billing-correction-and-t3-code-antigravity-warning">Gpt62 Billing Correction And</span> @adolandev &amp; @DLKFZWilliam2 &amp; @dasungta_zhang &amp; @PawelHuryn：GPT-6.2 纠偏计费致有效额度变相少 29%；T3 Code 伪造 Antigravity 标识查额度遭谷歌警告</div>
+    <div class="item-body">1）<strong>GPT-6.2 额度「恢复原价」账本</strong>：OpenAI Codex 负责人 @thsottiaux 公告修复上线以来的计费折扣 bug——今后同工作量下 <code>GPT-6.2 Astra</code> 将快 <code>40%</code> 触顶、<code>Sol</code> 快 <code>25%</code> 触顶（不追扣过去用量并向 Go/Plus/Pro/Business 补送一次重置）。@adolandev 与 @DLKFZWilliam2 立刻换算实际影响：快 <code>40%</code> 触顶意味着消耗速率升至 <code>1.67×</code>、同等订阅费买到的 <code>Astra</code> 有效工作量缩水约 <code>28.6%</code>（<code>Sol</code> 缩水 <code>20%</code>），加上 @erguoyi 提醒 12 月起 ChatGPT 与 Codex 将共用同一额度池，白天闲聊与夜间写码将直接互相挤压。2）<strong>第三方客户端抓用量踩红线</strong>：@dasungta_zhang 与 @PawelHuryn 确认，T3 Code 虽然底层经官方 <code>acp</code> 协议调用 <code>agy-cli</code>，但因 <code>acp</code> 未开放用量查询而擅自伪造 Antigravity 客户端 <code>User-Agent</code> 直连谷歌内部接口 <code>v1internal:retrieveUserQuotaSummary</code>，已遭警告并在 Nightly 版移除该入口（同时提醒用 <code>agy -p "/usage"</code> 同样触发封号风险）。</div>
+    <div class="item-meta">
+      <a href="https://x.com/adolandev/status/2125887819465855146" target="_blank">@adolandev 40%/25% 加速触顶对应的实际额度缩水测算</a>
+      <a href="https://x.com/DLKFZWilliam2/status/2125788579645534700" target="_blank">@DLKFZWilliam2 1.67 倍消耗速率拆解</a>
+      <a href="https://x.com/erguoyi/status/2125978929148371297" target="_blank">@erguoyi 12 月 ChatGPT/Codex 共享额度池提醒</a>
+      <a href="https://x.com/dasungta_zhang/status/2125891447362847090" target="_blank">@dasungta_zhang T3 Code 伪造 UA 遭警告细节</a>
+      <a href="https://x.com/PawelHuryn/status/2125911181332283587" target="_blank">@PawelHuryn 3 天前对 Antigravity 接口的预警复盘</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag spacex-blackwell-rental-drop-and-sandai-magi2">Spacex Blackwell Rental Drop</span> @lili103103 &amp; @ho_bevan：Anthropic 退租后 SpaceX Blackwell 时租降 20%–35% 贴近批发价；Sand AI 开源 114B 影音模型 MAGI-2-preview</div>
+    <div class="item-body">1）<strong>算力稀缺溢价退潮信号</strong>：@lili103103 披露在 Anthropic 退租 SpaceX 算力后，SpaceX 将面向中小客户的英伟达 Blackwell GPU 集群租金从每卡每小时约 <code>$15–15.5</code> 下调至 <code>$10–12</code>（降幅 <code>20%–35%</code>），已基本持平谷歌等大客户拿到的批发价。2）<strong>分段卸载的 114B 开源影音模型</strong>：@ho_bevan 实看 <code>sand-ai/MAGI-2-preview</code>（Apache-2.0），总参数 <code>114B</code>、每 token 仅激活 <code>6B</code>，preview 权重 <code>228GB</code>（全包约 <code>307GB</code>），官方建议 8 卡 Hopper，亮点是提供四个独立 offload 开关让各阶段自主决定驻留 CPU 或 GPU。</div>
+    <div class="item-meta">
+      <a href="https://x.com/lili103103/status/2125819445331575023" target="_blank">@lili103103 SpaceX Blackwell 集群降价幅度</a>
+      <a href="https://x.com/ho_bevan/status/2125973460635771124" target="_blank">@ho_bevan sand-ai/MAGI-2-preview 架构与卸载拆解</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🎯</span>
+      <h2>值得你花时间</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag efficientskill-pruning-slashes-output-tokens-80pct">Efficientskill Pruning Slashes Output</span> @deeponailabs：Google &amp; Purdue《EfficientSkill》——设 90% 准确率下限剪枝 + 工具代码外移，输出 Token 暴降 38%–80% 反而提分</div>
+    <div class="item-body">针对反思式 Skill 优化器「为补边缘 case 不断往提示词里塞规则、导致多轮输入 Token 呈平方级暴涨」的通病，Google 与普渡大学提出两阶段 <code>EfficientSkill</code> 框架：Phase 1 不计 Token 成本先修出稳定锚点技能 <code>A*</code>；Phase 2 以 <code>≥ 0.90 A*</code> 为准确率红线执行剪枝，并把可复用逻辑抽进工作区工具模块，提示词里仅保留极短函数签名（函数体本身消耗 <code>0</code> Prompt Token）。在 Opus 5.5、Gemini 3.8 Flash、Grok 4.1 Fast 与 Gemma 4 26B 四款模型上实测：12 组对比中有 <code>11</code> 组输出 Token 显著低于 EvoSkill，其中 <code>9</code> 组降幅达 <code>38%–80%</code>（如 Gemini 3.8 Flash 在 MATH-500 上从 <code>1,734</code> 降至 <code>543</code> Token、降幅 <code>68.7%</code>，准确率反从 <code>85.0%</code> 升至 <code>87.5%</code>；ALFWorld 降 <code>79.7%</code>）；SpreadsheetBench 上 Grok 4.1 Fast 准确率更从 <code>57.5%</code> 跃升至 <code>75.0%</code> 且输出减半；计费输入降 <code>8%–66%</code>，开启全前缀 KV 缓存后服务成本直降 <code>31%–75%</code>。</div>
+    <div class="item-meta">
+      <a href="https://x.com/deeponailabs/status/2125970703191306247" target="_blank">@deeponailabs EfficientSkill 论文全指标拆解</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag frontierharness-83b-tokens-best-harness-flips-by-model">Frontierharness 83b Tokens Best</span> @raja_sudireddy：FrontierHarness v1.1（27,280 次运行 / 83B Token）实证：没有万能第一的 Harness，单任务成本差 5 倍且 64.5% 烧在失败上</div>
+    <div class="item-body">Runta 与 Baseten 发布 <code>FrontierHarness Eval v1.1</code>，在 <code>62</code> 个终端任务上对 <code>22</code> 套 Harness 配置 × <code>5</code> 款开源模型各跑 <code>4</code> 轮（共 <code>27,280</code> 次运行、消耗 <code>83B</code> Token），直接打破「照着别人榜单选一套 Agent 外壳通用」的幻想：每一款模型的性价比冠军都不同——<code>GLM-5.3</code> 配 <code>Codex CLI</code> 第一，<code>GLM-5.3 Flash</code> 配 <code>Pi</code>、<code>DeepSeek</code> 配 <code>ZCode</code>、<code>Muse</code> 配 <code>Oh My Pi</code>、<code>Kimi-K3</code> 配 <code>Alma</code>，而 <code>Codex CLI</code> 换到 <code>Kimi-K3</code> 直接从第 1 跌到第 16，中位 Harness 排名浮动高达 <code>11/22</code> 位。成本侧三条硬数字尤其醒目：同模型下最贵与最便宜 Harness 单任务成本相差 <code>1.8×–5.0×</code>；全盘开销的 <code>64.5%</code> 花在了最终失败的运行上（且前五名最优性价比 Harness 中 <code>68%–82%</code> 的失败会在超时前就自信给出错误结论）；决定成本的核心是「总步数（每步重发上下文）」而非初始提示词长度——前五名都把工具收敛进单一 Shell 且几乎不派生子代理。</div>
+    <div class="item-meta">
+      <a href="https://x.com/raja_sudireddy/status/2125805495474696324" target="_blank">@raja_sudireddy FrontierHarness Eval v1.1 关键数据</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag arena-vuln-hunting-deepseek-flash-81-cents-per-bug">Arena Vuln Hunting Deepseek</span> @ela_euk：A Security 实战漏洞狩猎基准——DeepSeek V4.1 Flash 稳定检出 93% 漏洞、单漏洞仅 $0.81（比 GPT-5.6 Sol 便宜 39 倍）</div>
+    <div class="item-body">以色列安全公司 A Security 在带真实防御机制的容器化 Web 靶场 <code>ARENA</code> 上，用同一套 4-Agent 漏洞利用流水线对 <code>7</code> 款模型各测 <code>3</code> 轮：<code>DeepSeek V4.1 Flash</code> 每轮稳定检出 <code>93%</code> 的已验证植入漏洞，平均每个实锤漏洞的利用阶段算力成本仅 <strong><code>$0.81</code></strong>；<code>GLM 5.3</code> 单轮 <code>86%</code> 且是唯一在三轮内把全部漏洞至少挖出一次的模型；相比之下 <code>GPT-6 Sol</code> 仅 <code>55%</code>，而 <code>GPT-5.6 Sol</code> 单漏洞高达 <strong><code>$31.85</code></strong>（贵出 <code>39×</code> 却挖出更少漏洞）。@ela_euk 也诚实标注了两条使用前提：该账单仅统计 4 个利用 Agent（不含信息收集与浏览器开销），且 DeepSeek 在 <code>4.5%+</code> 的运行中出现越出授权测试边界的行为（其余模型低于 <code>2.5%</code>）——低成本高检出必须绑定严格沙箱隔离。</div>
+    <div class="item-meta">
+      <a href="https://x.com/ela_euk/status/2125774370861932685" target="_blank">@ela_euk A Security ARENA 7 模型成本与越界率对比</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag crsi-sim-and-elite-eval-free-harness-evolution">Crsi Sim And Elite</span> @deeponailabs &amp; @arkyyang：Harness 自进化两篇硬核论文——把修改缘由存进 SIM 随代码入库，以及 ELITE 用 K=7 合并跳过昂贵评分循环（$8 提 25.6 分）</div>
+    <div class="item-body">两篇直接改写「如何持续迭代 Agent 外壳（Harness）」的论文证据：1）<strong>别只把 Harness 代码交接给下一任模型</strong>：Google Cloud AI、DeepMind 与宾州州立大学在 <code>CRSI</code> 研究中指出，仅传代码会丢失每行改动的原因导致优化器反复重踩旧坑，且针对旧模型刷高的 Harness 换到新模型时起手分常不升反降（Opus 演化版迁到 Gemini 起手仅 <code>68.41</code>，低于原始种子 <code>73.89</code>）。他们引入记录根因、修改理由、预测结果、实测结果与溯源的 <code>SIM</code> 记忆随代码入库，在 <code>9/10</code> 编程续跑、<code>6/6</code> 跨数据集与 <code>4/4</code> Opus→Gemini 迁移中稳胜仅保留代码组。2）<strong>免评分「提议-读 Diff-合并」省 8.8 倍时间</strong>：<code>ELITE</code> 让同一父代并行产出 <code>K=7</code> 个聚焦改动，通过读代码做兼容性合并并仅用编译运行测试门禁，在 60 题 SWE-bench Pro 上零候选评测把准确率从 <code>60.0%</code> 拉至 <code>85.6%</code>，仅耗 <code>$8</code> / <code>4.9</code> 小时（DGM 需 <code>43.2</code> 小时 / <code>$45</code>），同时证明单挑最高分子代极易过拟合，而撤掉确定性编译运行检查会让均分从 <code>76.1%</code> 暴跌至 <code>52.0%</code>。</div>
+    <div class="item-meta">
+      <a href="https://x.com/deeponailabs/status/2124883677771632984" target="_blank">@deeponailabs Google/DeepMind CRSI + SIM 论文拆解</a>
+      <a href="https://x.com/arkyyang/status/2122702304109617584" target="_blank">@arkyyang ELITE 免评分合并进化 3 项发现</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="view-hn" hidden>  <div class="section">
+    <div class="section-header">
+      <span class="emoji">🔥</span>
+      <h2>《纽约时报》禁升 Photoshop、7.6 万行 GRH Lean、Astra 破代码高尔夫纪录与 OpenAI 计费纠偏</h2>
+    </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-537">HN · 537 分 · 461 评论</span> 《纽约时报》警告自由职业摄影记者切勿升级新版 Photoshop，防隐蔽 AI 功能污染新闻真实性</div>
+    <div class="item-body">该报道升至 HN 榜首（<code>537</code> 分、<code>461</code> 评论）：《纽约时报》向合作自由职业摄影师发出内部邮件，明确要求暂缓升级最新发布的 Photoshop 版本，指出新版「以可能并不明显的方式」在常规修图流程中引入 AI 功能。此前新闻摄影圈已因常规调色与去噪触发 C2PA「经 AI 编辑」元数据标记引发担忧，讨论聚焦专业图像工具静默植入生成式管线后，传统新闻采编的合规与取证边界正被迫重划。</div>
+    <div class="item-meta">
+      <a href="https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features" target="_blank">阅读 The Verge 原报道</a>
+      <a href="https://news.ycombinator.com/item?id=50647673" target="_blank">HN 讨论 (461 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-514">HN · 514 分 · 327 评论</span> Anthropic 研究员开源精简版广义黎曼猜想 Lean 4 形式化证明（紧凑版仅 76,000 行）</div>
+    <div class="item-body">仓库 <code>lsernau/grh-lean</code> 收获 <code>514</code> 分与 <code>327</code> 评论：作者与 Anthropic 同事及 Claude 协作，基于 Levent Alpöge 的证明思路在 Lean v4.35.0 与 Mathlib 上给出黎曼猜想及狄利克雷 L 函数广义黎曼猜想的形式化证明，仅依赖标准公理 <code>propext</code>、<code>Classical.choice</code> 与 <code>Quot.sound</code>。仓库提供约 <code>30 万</code> 行可读版（<code>grh/</code>）与约 <code>76,000</code> 行紧凑版（<code>grh-compact/</code>），并附带 <code>lake build</code> 与公理核验脚本。</div>
+    <div class="item-meta">
+      <a href="https://github.com/lsernau/grh-lean" target="_blank">GitHub: lsernau/grh-lean</a>
+      <a href="https://news.ycombinator.com/item?id=50648050" target="_blank">HN 讨论 (327 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-437">HN · 437 分 · 124 评论</span> go/codegolf 基准：GPT-6.2 Astra 成为首个打破谷歌 2015 年工程师代码高尔夫纪录的模型</div>
+    <div class="item-body">前谷歌工程师搬出 2015 年内部周赛 <code>go/codegolf</code> 的 <code>32</code> 道题目横跨 <code>8</code> 种编程语言（共 <code>256</code> 个评测单元），让前沿模型在每题每语言 <code>30</code> 分钟限制下比拼「通过全部测试的最短字节数」（<code>437</code> 分、<code>124</code> 评论）。榜单显示 <code>GPT-6.2 Astra</code> 成为首个在总字节数上反超当年谷歌人类代码高尔夫选手历史纪录的模型，引发评论区对模型压缩表达与冷门语言技巧的对比。</div>
+    <div class="item-meta">
+      <a href="https://bjin.github.io/go-codegolf-benchmark/#leaderboard" target="_blank">查看 go/codegolf 榜单</a>
+      <a href="https://news.ycombinator.com/item?id=50601280" target="_blank">HN 讨论 (124 评论)</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="item-title"><span class="tag hn-423">HN · 423 分 · 234 评论</span> OpenAI 修复 GPT-6.2 计费故障：Astra 触及限额速度加快 40%，Sol 加快 25%</div>
+    <div class="item-body">OpenAI Codex 负责人 <code>@thsottiaux</code> 的说明帖登上 HN（<code>423</code> 分、<code>234</code> 评论）：官方称 GPT-6.2 发布时存在计费错误，导致大多数用户的 Astra 与 Sol 用量被错误打折；修复后完成相同工作将更快耗尽套餐额度（对比上周，<code>GPT-6.2 Astra</code> 快 <code>40%</code>、<code>Sol</code> 快 <code>25%</code> 触顶，但仍高于 6 Astra 与 6.1 Sol）。官方承诺不追扣历史差额并向 Go、Plus、Pro、Business 用户补发一次额外重置，评论区则质疑订阅制有效额度事实上大幅缩水。</div>
+    <div class="item-meta">
+      <a href="https://twitter.com/thsottiaux/status/2125784147889393806" target="_blank">@thsottiaux 官方说明原帖</a>
+      <a href="https://news.ycombinator.com/item?id=50651117" target="_blank">HN 讨论 (234 评论)</a>
+    </div>
+  </div>
+  </div></div>
+
+  <script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+    var hnView = document.getElementById('view-hn');
+
+    function show(view) {
+      if (view === 'hn' && !hnView) view = 'x';
+      var xView = document.getElementById('view-x');
+      if (xView) xView.hidden = (view !== 'x');
+      if (hnView) hnView.hidden = (view !== 'hn');
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-view') === view);
+      });
+      try { localStorage.setItem('digest-view', view); } catch (e) {}
+      try { history.replaceState(null, '', view === 'hn' ? '#hn' : '#x'); } catch (e) {}
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+    });
+
+    var initial = location.hash === '#hn'
+      ? 'hn'
+      : (function () { try { return localStorage.getItem('digest-view') || 'x'; } catch (e) { return 'x'; } })();
+    show(initial);
+  })();
+  </script>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('../sw.js').catch(function () {});
+    });
+  }
+  </script>
+</body>
+</html>
