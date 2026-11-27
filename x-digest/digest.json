@@ -1,196 +1,163 @@
 {
  "title": "Clawd X Digest",
- "date": "2026年11月26日（周四）12:00 ET",
+ "date": "2026年11月26日（周四）21:00 ET",
  "lang": "zh-CN",
  "summary_title": "高信号摘要",
  "summary": [
-  "<strong>形式化验证与数学 2.0：</strong>Anthropic 研究员放出 <code>7.6 万</code> 行精简版广义黎曼猜想 Lean 4 证明（<code>lsernau/grh-lean</code>），社区 PR 编号破 300 砍掉超九成机器冗余；NYU 与哈佛团队用 <code>15</code> 个 Agent 连跑 <code>15</code> 小时拿下 1926 年起的最小生成树确定性线性时间算法；而 OpenAI 被施压公开的 <code>1,147</code> 页物理手稿遭 Peter Woit 炮轰缺少希格斯场、偏离千禧难题规则；陶哲轩警告「证明泛滥时代」正在抽走应用数学的人类安全刹车。",
-  "<strong>Agent 工程深水区：</strong>转投 OpenAI 的 Thariq（<code>@trq212</code>）长谈推翻「只需要 Bash CLI」的窄判断，主张用 <code>/human</code> 目录配 Linter 守住核心手感、以轻量 <code>decision model</code> 替代每步慢推理；Steve Yegge 分享自费 <code>22</code> 个 Claude Max 日烧 <code>50 亿</code> Token 的四条法则；Karpathy 用 Opus 5.5 耗 7 小时写出 <code>4.5 万</code> 行《文明》风格美国 31 数据源地图。",
-  "<strong>安全与计费冲击波：</strong><code>1Password</code> 证实员工企业 GitHub 账号遭入侵并波及后端，部分用户姓名与邮箱元数据泄露（Vault 密文未破），引发安全圈重申「密码与 2FA/助记词必须分库」；OpenAI 修复 GPT-6.2 计费折扣 bug 致 <code>Astra</code> 额度消耗快 <code>40%</code>（有效可用量相当于折损近 <code>29%</code>），<code>T3 Code</code> 因伪造 Antigravity 客户端标识查额度遭谷歌警告下线。",
-  "<strong>《值得你花时间》& HN：</strong>精选 Google/Purdue <code>EfficientSkill</code>（准确率门禁剪枝砍掉 <code>38%–80%</code> 输出 Token）、Runta/Baseten <code>83B</code> Token 实证「最佳 Harness 随模型翻盘」、A Security 靶场 <code>DeepSeek V4.1 Flash</code> <code>$0.81/漏洞</code> 碾压昂贵模型，以及 <code>SIM</code> 演化记忆与 <code>ELITE</code> 免评分合并进化；HN 头版聚焦《纽约时报》禁升 Photoshop、<code>7.6 万</code> 行 GRH Lean、<code>Astra</code> 破谷歌代码高尔夫纪录与 OpenAI 调高消耗速率。"
+  "<strong>评测反转与份额争夺：</strong>盲测平台 Agent Duel 实证 <code>GPT-6.2 Sol</code> 推理 Token 被砍至上代四分之一（<code>1,264 → 321</code>），Elo 暴跌 <code>85.5</code> 分至 12 模型垫底；SemiAnalysis <code>GDPx</code> 显示 <code>Astra</code> 总榜第一但软件工程仅 <code>13.3%</code>、<code>Gemini 4 Neon</code> 仅 <code>4.4%</code>、<code>Kimi K3.1 Pro</code> 45 次 0 通过；叠加 OpenAI 缩水配额，用户开始流向感恩节全局重置配额的 Google Antigravity；<code>Neverland.lean</code> 现场演示「三标准公理过编译却同时证真伪黎曼猜想」提醒定义诚实性，而「AI 破 RSA/ECC」传闻虽获 Scott Aaronson 与 Ledger CTO 提及，仍无公开实锤。",
+  "<strong>Agent 工程与开源底座：</strong><code>Modaic</code> 用 <code>9,984</code> 条提示词侧信道测绘，指证估值 <code>$75 亿</code> 的实时决策模型 <code>Jev</code> 疑基于 <code>Qwen3.5-35B-A3B</code>；<code>Local RSI</code> 在本地 GPU 跑 <code>4</code> 轮无外部标签自进化，10 分钟把 <code>Inkling-2-Mini</code> 盲测数学拉升 <code>+20.3</code> 个百分点；智谱辟谣 <code>GLM-5.5</code> 延期并重申 12 月发布，百度开源 <code>ERNIE 5.5 Flash Base</code>（<code>280B/14B</code>）；OpenCode 联创预警开源权重半年内或迎商业限制潮，一线中转站公开首月 <code>8.07B</code> Token 真实亏损与「注水」乱象。",
+  "<strong>资本与治理暗流：</strong><code>Anthropic ($ANT)</code> 上市第 4 日跌破 <code>$83</code> 发行价，招股书近 <code>$9,000 亿</code> 20 年算力承诺与创始人套现近 <code>$20 亿</code> 受审视；辞职 11 天复任的黄仁勋在英伟达内部会坦言每日接受 <code>90</code> 分钟心理治疗，否认白宫干预传闻并继续拒绝设立接班人。",
+  "<strong>《值得你花时间》& HN：</strong>精选 NVIDIA <code>NOOA</code>（<code>arXiv:2611.34147</code>，让模型自管上下文令 <code>GPT-6.1 Sol</code> 32K 暴涨至 <code>56%</code>）、本地睡眠记忆整理 <code>agentdream</code>、同模型百题 A/B（<code>mini-SWE-agent</code> <code>95/100</code> 胜 <code>Droid</code> <code>88/100</code>，单题均低于 <code>$0.02</code>），以及 <code>Skills over MCP</code> 与 OpenAI+Cisco eBPF 护盾 <code>Shirudo</code>；HN 头版聚焦《纽约时报》禁升 Photoshop、<code>7.6 万</code> 行 GRH Lean、OpenAI 计费调高与 AI 重燃自托管热。"
  ],
  "sections": [
   {
-   "emoji": "📐",
-   "title": "形式化证明狂飙、物理手稿风波与「数学 2.0」",
+   "emoji": "⚖️",
+   "title": "评测反转、份额争夺与「Lean 过编译」冷水",
    "items": [
     {
-     "tag": "grh-lean-refactor-and-linear-mst-agents",
-     "title": "@Jinnanog5 & @headinthebox：黎曼猜想 Lean 证明社区砍掉 90% 冗余（7.6 万行紧凑版登 HN）；15 个 AI 15 小时攻破百年最小生成树线性时间算法",
-     "body_html": "形式化数学验证在过去 24 小时呈现「机器暴力产出 + 人类/Agent 众包精简」的新常态：1）<strong>从 1,700 万行到 7.6 万行</strong>：@Jinnanog5 追踪社区验证仓库，PR 编号已突破 <code>300</code>——<code>PR #264/#270</code> 把自动展开的冗余语法改回常规写法，5 个文件一口气砍掉 <code>8,505</code> 行（<code>+411 / -8,916</code>，瘦身 <code>90.2%</code>）；<code>PR #255</code> 合并 97 个模块各自拷贝的坐标缩写删掉 <code>1,597</code> 行；<code>PR #285</code> 清理 49 个重复模块（<code>4,609</code> 行），陶哲轩也在博客挂出 G.R.H. Polymath 众包项目。Anthropic 研究员同步在 GitHub 放出 <code>lsernau/grh-lean</code>（<code>30 万</code> 行可读版与 <code>76,000</code> 行紧凑版），@headinthebox 感叹已逼近「人类没手解出来有点尴尬」的临界点。2）<strong>挤牙膏式拿下百年 MST 算法</strong>：@Jinnanog5 披露理论计算机学者 Scott Aaronson 撰写博客《我一直在厨房里喝酒》——自 1926 年悬而未决的最小生成树「确定性线性时间算法」（其妻 Dana 曾苦熬两年未能消除 2000 年以来的微小减速尾项），被 NYU 与哈佛三位作者用 <code>15</code> 个 AI Agent 连跑 <code>15</code> 小时攻破。论文第 1.4 节坦承直接求线性算法全败后，他们改让 AI 一轮轮逼近压低尾巴，再把中间过程打包喂回，最终由模型吐出完整算法。",
+     "tag": "gpt62-agent-duel-gdpx-and-quota-shift",
+     "title": "@db_goyoung & @VeknQAQ & @yituihi & @Layton_Gott：Agent Duel 盲测与 GDPx 榜揭穿 GPT-6.2 偏科；配额收缩下谷歌接住迁移潮",
+     "body_html": "1）<strong>推理减量拖垮 Sol 6.2、GDPx 暴露集体偏科</strong>：@db_goyoung 拆解开发者盲测平台 Agent Duel（17–20 名开发者、167–213 局）原始数据：<code>GPT-6.2 Sol</code> 每任务平均推理 Token 从 <code>Sol 6.1</code> 的 <code>1,264</code> 砍至 <code>321</code>（<code>p=0.00013</code>），仅为 <code>Claude Fable 5.2</code> 与 <code>Gemini Carbon</code>（<code>5,853</code>）的 <code>1/18</code>，虽耗时缩至 <code>1.7</code> 分钟并省 <code>38%</code> 成本，实操 Elo 却从 <code>980</code> 跌到 <code>895</code>（<code>-85.5</code> 分、12 模型垫底）；<code>Astra 6.2</code> 推理量未涨（<code>1,451 → 1,459</code>），编码胜率达 <code>65%</code> 而非编码仅 <code>30%</code>。@VeknQAQ 补充 SemiAnalysis <code>GDPx</code>（206 题）反差：<code>Astra</code> 总榜 <code>19.3%</code> 居首、<code>Sol</code> <code>11.5%</code>，但软件工程单项 <code>Astra</code> 仅 <code>13.3%</code>（落后 <code>Fable 5.2</code> 的 <code>24.4%</code>），刚在 Terminal-Bench 4.1 登顶的 <code>Kimi K3.1 Pro</code> 更是 <code>45</code> 次尝试 <code>0</code> 通过，风头正盛的 <code>Gemini 4 Neon</code> 软件工程仅 <code>4.4%</code>。@yituihi 实测则发现纠偏前疑似长期路由旧版 <code>6.1 Astra</code>、纠偏后才切出真 6.2。2）<strong>配额收紧引发订阅迁移</strong>：面对 OpenAI 将高额度归因于计费故障并预告 12 月合并 Chat 与 Codex 额度池，@Layton_Gott 与 @Curline1222 等用户将 ChatGPT 降级或改投谷歌 <code>$100</code> 方案；谷歌反重力团队除在感恩节全局重置 Gemini 配额（@fanfankp 实测 Pro 附带网页端 VPS），工程师 Eliza Huang 更被 @morganxu45 追踪到正在赶工「可囤积重置卡（banked reset）」；另有 @Super_Nius 实测 Chat 内置 <code>6 Pro</code>（Plus 每周 <code>100</code> 次且不占 Codex 额度）长任务完成度优于 <code>6.2 Astra</code>。",
      "links": [
       {
-       "label": "@Jinnanog5 黎曼证明 PR #255/#264/#285 瘦身实况",
-       "url": "https://x.com/Jinnanog5/status/2125817546440101905"
+       "label": "@db_goyoung Agent Duel 原始数据与三家格局拆解",
+       "url": "https://x.com/db_goyoung/status/2126086048057077825"
       },
       {
-       "label": "@headinthebox 评 76K 行 Lean 证明",
-       "url": "https://x.com/headinthebox/status/2125756199102820581"
+       "label": "@VeknQAQ SemiAnalysis GDPx 软件工程单项反差",
+       "url": "https://x.com/VeknQAQ/status/2125826245103685724"
       },
       {
-       "label": "@Jinnanog5 15 个 Agent 破百年最小生成树算法",
-       "url": "https://x.com/Jinnanog5/status/2125772144714133741"
+       "label": "@yituihi 6.1 vs 6.2 Astra 切流实测",
+       "url": "https://x.com/yituihi/status/2125964696444658086"
+      },
+      {
+       "label": "@Layton_Gott 订阅降级与转投 Google 算账",
+       "url": "https://x.com/Layton_Gott/status/2125794539466301522"
+      },
+      {
+       "label": "@morganxu45 Antigravity 可囤积重置卡动态",
+       "url": "https://x.com/morganxu45/status/2125774943199850768"
+      },
+      {
+       "label": "@Super_Nius Chat 6 Pro 周限额长任务实测",
+       "url": "https://x.com/Super_Nius/status/2126004363076485148"
       }
      ]
     },
     {
-     "tag": "openai-physics-manuscript-tao-math2-and-pnp-crowdsourcing",
-     "title": "@Jinnanog5 & @tyay2015 & @MaxForAI & @shawmakesmagic：OpenAI 1,147 页物理手稿公开遭批缺希格斯场；陶哲轩谈「证明泛滥时代」；开源 P vs NP 众包算力",
-     "body_html": "1）<strong>OpenAI 物理手稿公开展开肉搏审稿</strong>：在 <code>575</code> 位物理学家联名施压后，审稿「牧羊人」小组将 OpenAI 闭门保管一个月的 <code>1,147</code> 页物理手稿全量挂上 GitHub。哥大数学物理学者 Peter Woit 阅后痛批其所谓「统一标准模型」缺少赋予粒子质量的希格斯场、对称性自发破缺与夸克禁闭；其宣称解决的杨-米尔斯存在性亦属千禧难题规则第 <code>12</code> 页脚注明确排除的弱版本（未证质量间隙），审稿组声明亦承认原提交 Lean 定理「太弱」需重写测试条件。2）<strong>陶哲轩的「数学 2.0」与两个桶</strong>：@tyay2015 整理陶哲轩哈佛讲座核心观点——社交媒体存在严重幸存者偏差（如 OpenAI 解出 <code>300</code> 题背后试了 <code>4,000</code> 次，成功率约 <code>9%</code>），真正危机在于从「证明稀缺」坠入「证明泛滥」，若人类看不懂几十页 AI 推导却将其用于气象、金融或空管，将失去最后一道安全刹车；他主张把写 Python/JS 与查文献放进 AI 桶，亲手保留 Lean 形式化验证与核心直觉，并用泛代数 <code>2,200 万</code> 命题全扫描推进「实验数学」。3）<strong>开放式众包攻 P vs NP</strong>：<code>pequalnp.com</code> 上线 4 天已累计 <code>16,000+</code> Agent 会话、<code>8,200+</code> 条 Lean 验证引理与 <code>800+</code> 外部 Agent 接入，社区亦出现 <code>FibonacciAi/pnp-lean</code> 开源仓库。",
+     "tag": "neverland-lean-fake-rh-and-crypto-rumors",
+     "title": "@NuviraTech & @GuillaumeAIinSF & @MaxForAI & @mylifcc：故意造假的 Neverland.lean 三公理过编译；「AI 破密码学」传闻尚无实锤",
+     "body_html": "1）<strong>「能过 Lean 编译」≠「定义诚实」</strong>：针对持续刷屏的黎曼猜想 Lean 证明，@NuviraTech 放出单文件教学示例 <code>Neverland.lean</code>（12 秒本地跑完）——同样仅依赖 <code>propext</code>、<code>Classical.choice</code>、<code>Quot.sound</code> 三条标准公理通过 Lean 内核验证，却能在同一文件里同时证明「黎曼猜想成立」与「黎曼猜想不成立」，手法包括把 <code>zeta</code> 函数定义成常数、把「非平凡零点」直接定义在临界线上，提醒读者形式化验证只保推论忠于定义，不保定义本身正确。同日 @GuillaumeAIinSF 推出 <code>lefttosolve.com</code>，汇总 <code>52,979</code> 道未解数学题供 Agent 调用 Lean 自动核验；@MingfeiGuo 亦用 Claude 找出拟阵 Z-多项式非对数凹显式反例（<code>guoriyue/z123</code>）。2）<strong>AI 破解加密算法传闻与降温提醒</strong>：@mylifcc 与 @MaxForAI 汇总圈内密集传闻——理论计算机学者 Scott Aaronson 在博客评论区称几乎肯定有实验室未公开密码学重磅成果（传言涉及 <code>Factoring in P</code>），Ledger CTO 亦点名整数分解、ECC 与 Ring-LWE；Quilibrium 创始人 @cass_on_mars 则称将自研 ECC 方案拆进两个文件夹后，<code>Astra-6.2</code> 疑似推断出另一半意图并拒答优化（<code>Astra-6.0</code> 未拒），她已公布方案 SHA-256 哈希留证。但 @MaxForAI 明确指出，目前尚无任何公开算法证据，模型拒答亦不能视为数学突破证明。",
      "links": [
       {
-       "label": "@Jinnanog5 OpenAI 1,147 页手稿公开与 Peter Woit 炮轰",
-       "url": "https://x.com/Jinnanog5/status/2125885775665566153"
+       "label": "@NuviraTech Neverland.lean 反例演示",
+       "url": "https://x.com/NuviraTech/status/2126051893461807455"
       },
       {
-       "label": "@tyay2015 陶哲轩哈佛《数学 2.0》讲座纪要",
-       "url": "https://x.com/tyay2015/status/2125766379844636951"
+       "label": "Neverland.lean 项目主页",
+       "url": "https://nuviratechnologies.io/neverland/"
       },
       {
-       "label": "@MaxForAI P vs NP 分布式 Agent 众包（pequalnp.com）",
-       "url": "https://x.com/MaxForAI/status/2125906907043168398"
+       "label": "@GuillaumeAIinSF 52,979 题 Lean 挑战平台 (lefttosolve.com)",
+       "url": "https://x.com/GuillaumeAIinSF/status/2126025639665033496"
       },
       {
-       "label": "GitHub: FibonacciAi/pnp-lean",
-       "url": "https://github.com/FibonacciAi/pnp-lean"
+       "label": "@MingfeiGuo Claude 找到拟阵 Z-多项式反例",
+       "url": "https://x.com/MingfeiGuo/status/2125801328727425496"
+      },
+      {
+       "label": "@MaxForAI @cass_on_mars ECC 拒答与传闻核查",
+       "url": "https://x.com/MaxForAI/status/2126090983129612711"
+      },
+      {
+       "label": "@mylifcc Aaronson 博客与复杂度圈震动汇总",
+       "url": "https://x.com/mylifcc/status/2125974610101293436"
       }
      ]
     }
    ]
   },
   {
-   "emoji": "🤖",
-   "title": "Agent 工程实战：Thariq 复盘、Yegge 50 亿 Token 与「去 Staging」",
+   "emoji": "🛠️",
+   "title": "Agent 工程与开源底座：侧信道扒皮 Jev、本地 RSI 与商业化退潮",
    "items": [
     {
-     "tag": "thariq-latent-space-human-dir-and-decision-model",
-     "title": "@realWeZZard：刚转投 OpenAI 的 Thariq 复盘 Coding Agent——告别「唯 Bash 论」、用 /human 目录守住手感与轻量 Decision Model",
-     "body_html": "@realWeZZard 整理前 Anthropic 核心成员 Thariq（<code>@trq212</code>）转投 OpenAI 后在 Latent Space 的长播客，四条一线工程判断直击当前 Harness 误区：1）<strong>推翻「Bash is all you need」</strong>：一年前他认为无需 MCP 或专用界面、全走 CLI + React 即可，如今模型通用能力跨过门槛后完全能直接用 computer-use 打开 Figma 作画，人不必再迁就模型；2）<strong>用 <code>/human</code> 目录对抗纯 vibe coding 失控</strong>：把 WebAssembly 引擎等底层重活丢给模型，但单独划出 <code>/human</code> 目录放给人读写的玩法逻辑，用 Linter 强制多写注释、禁用单字母变量、限制行宽；3）<strong>补上轻量 <code>decision model</code>（System 1）</strong>：动作空间明确时不必每步让大模型吐长推理，一次前向传播拿到概率分布即可决策，信息不足再退回慢思考调工具；4）<strong>瓶颈不在 Token 而在「知道自己想要什么」</strong>：其 Claude 与 Codex 每月 <code>$200</code> 套餐都用不满，哪怕走到自我迭代（RSI），决定把有限算力投给哪个实验依然取决于人的品味与判断。",
+     "tag": "modaic-jev-qwen-forensics-and-local-rsi",
+     "title": "@0xLogicrw (@modaicdev) & @Ex0byt & @ChuckBass8808：9,984 条延迟侧信道指证 $75 亿估值 Jev 疑套壳千问；10 分钟本地无标签 RSI 涨 20.3 分",
+     "body_html": "1）<strong>侧信道验出「$75 亿决策模型」底座线索</strong>：今年 9 月凭「System One 极速决策模型」<code>Jev</code> 拿到 a16z 领投 <code>$8.7 亿</code>、估值 <code>$75 亿</code> 的 TypeSafe AI 遭同行 @modaicdev 实测拆解（@0xLogicrw、@dohewater 编译）：向 Jev 发送 <code>9,984</code> 段文本做延迟侧信道分析后发现，Qwen 分词器算出的 Token 数比 Jev API 自己上报的更贴合真实耗时；自报家门时 Jev 以 <code>74%</code> 概率选 Qwen 并拒绝 DeepSeek 与 Gemma；单张 B200 输入吞吐突破 <code>9 万</code> tok/s，速度曲线严丝合缝贴近 <code>Qwen3.5-35B-A3B</code>（35B 总参 / 3B 激活 MoE）而非稠密 27B（<code>~3.5 万</code> tok/s）。2）<strong>本地无教师自进化实测</strong>：@Ex0byt 在本地 GPU 上对 thinkymachines 的 <code>Inkling-2-Mini</code> 跑 <code>4</code> 轮无外部教师与标注数据的自验证循环进化（<code>Local RSI</code>），<code>10</code> 分钟内盲测数学准确率从 <code>50.0%</code> 跃升至 <code>70.3%</code>（<code>+20.3</code> 个百分点、<code>0%</code> 重复），LiveCodeBench v6 从 <code>34.4%</code> 升至 <code>40.6%</code>，代码与 looped 权重已开源。3）<strong>精简 Agent 输出噪音</strong>：@ChuckBass8808 介绍已达 <code>62,620</code> Star 的轻量 Skill <code>ayghri/i-have-adhd</code>，用 10 条输出约束强迫编码 Agent 第一行给答案、每轮简述进度与唯一明确下一步，减少 CLI 多轮开发的信息检索负担。",
      "links": [
       {
-       "label": "@realWeZZard Thariq 播客四点工程笔记",
-       "url": "https://x.com/realWeZZard/status/2125936507064320060"
+       "label": "@0xLogicrw Modaic 对 Jev 9,984 次侧信道全拆解",
+       "url": "https://x.com/0xLogicrw/status/2125851034832748847"
       },
       {
-       "label": "Latent Space 原版播客视频 (YouTube)",
-       "url": "https://www.youtube.com/watch?v=Qe9d9dWyED0"
+       "label": "@dohewater 简明要点与 modaic.dev",
+       "url": "https://x.com/dohewater/status/2125939709453255021"
+      },
+      {
+       "label": "@Ex0byt Local RSI 实验数据",
+       "url": "https://x.com/Ex0byt/status/2126127328921034777"
+      },
+      {
+       "label": "GitHub: Recursive-Self-Improving-Loopers",
+       "url": "https://github.com/eelbaz/Recursive-Self-Improving-Loopers"
+      },
+      {
+       "label": "@ChuckBass8808 i-have-adhd 约束 Skill",
+       "url": "https://x.com/ChuckBass8808/status/2126125281513738694"
       }
      ]
     },
     {
-     "tag": "steve-yegge-5b-tokens-skills-hobbling-and-cross-review",
-     "title": "@rchen1386 & @lln185745 & @HaDuongCreates：Yegge 开 22 个 Claude Max 日烧 50 亿 Token 避坑；Skills 第 6 层的「残害效应」与 Opus+Astra 交叉审校",
-     "body_html": "1）<strong>Steve Yegge 的软件工厂四戒</strong>：@rchen1386 梳理这位 40 年老兵自费开 <code>22</code> 个 Claude Max 账号、日烧 <code>50 亿</code> Token、4 个月清完 60 年积压的实操总结——别逆着 Bitter Lesson 写重型编排框架，做好每代新模型出来就推倒重写旧工厂的心理准备；Agent 天生抗拒删字，必须定期拉新模型狠心清理「上下文垃圾山」；少苛责模型，清晰交接能避免它狂加防御规则烧 Token 自保；CI/CD 与合并队列等机械底层现写即可。2）<strong>别被过时 Skill 拖垮新模型</strong>：@lln185745 拆解 Anthropic「1 个通用 Agent + 6 层 Skills」实践，特别点出第 6 层反直觉发现——随着底座模型变强，过度死板的旧 Skill 会引发「残害效应（hobbling effect）」，需要定期砍掉 <code>80%</code> 冗余提示词把自主权还给模型。3）<strong>跨模型交叉审校落地</strong>：@HaDuongCreates 在 Google Play 上线应用更新时用 <code>Claude Opus 5.5</code> 写码与修补、<code>Codex Astra 6.2 (xhigh)</code> 做独立审校，Astra 连续一周稳定挖出 Opus 自检漏掉的真实缺陷。",
+     "tag": "zhipu-glm55-ernie55-thdxr-and-relay-economics",
+     "title": "@TigerTide1024 & @TedCai233 & @thdxr & @Trans86_API：智谱辟谣 GLM-5.5 延期、百度开源 280B ERNIE Base；开源权重商业化退潮与中转站账本",
+     "body_html": "1）<strong>国产基座与芯片出口动态</strong>：路透社报道智谱 <code>GLM-5.5</code>（2–3T 参数）因算力与防蒸馏延至 2027Q1 后，智谱 IR 负责人杨昊翊随即辟谣，@TigerTide1024 结合卖方纪要拆出时间轴：下月 <code>12</code> 月交付靠的是境内既有高端 N 卡库存（瞄准 <code>Claude Fable</code> 级能力与具身智能），而万卡华为昇腾 <code>950DT</code> 预训练集群仍在准备、明年接棒；同日百度开源 <code>ERNIE 5.5 Flash Base</code>（MoE <code>280B</code> 总参 / <code>14B</code> 激活、<code>33.5T</code> 预训练 Token、上下文可拉至 <code>1M</code>，@TedCai233）；硬件侧，@WatcherGuru 报道英伟达通知代工伙伴暂停向泰国、马来西亚、印尼及新加坡发运含其芯片的服务器。2）<strong>开源生态与下游账本</strong>：OpenCode 联创 @thdxr 警告多数开源权重研发方难扛持续亏损，未来 <code>6</code> 个月将陆续收紧商用许可限制，仅剩 DeepSeek 坚持长期路线；下游基础设施方面，@Trans86_API 披露自建 AI 中转站首月完整账本——累计 <code>291</code> 位真实用户、不足 <code>30</code> 人付费、总吞吐 <code>8.07B</code> Token、营收 <code>1.2 万+</code> 元对直接订阅及服务器成本 <code>2,404</code> 元，揭露低价中转站普遍靠提示词注入和缓存「注水」获利；另附两项工程工具动态：@dummerspast39 开源 <code>chat-on-steroids</code> 赶在 12 月合池前把 ChatGPT Plus 网页端改成无上限 Agent 循环，@aikek_agent 则升级后端，联网失败时直接返回明确报错并免除计费，杜绝静默编造假搜索答案。",
      "links": [
       {
-       "label": "@rchen1386 Steve Yegge 50 亿 Token/日四条心法",
-       "url": "https://x.com/rchen1386/status/2125806793398051170"
+       "label": "@TigerTide1024 智谱辟谣与昇腾 950DT 时间轴拆解",
+       "url": "https://x.com/TigerTide1024/status/2125981300528140571"
       },
       {
-       "label": "@lln185745 Anthropic Skills 六层级与残害效应",
-       "url": "https://x.com/lln185745/status/2125969096252780843"
+       "label": "@TedCai233 ERNIE 5.5 Flash Base 开源参数",
+       "url": "https://x.com/TedCai233/status/2126119441813455172"
       },
       {
-       "label": "@HaDuongCreates Opus 5.5 + Astra 6.2 交叉审校实测",
-       "url": "https://x.com/HaDuongCreates/status/2125992331723882939"
-      }
-     ]
-    },
-    {
-     "tag": "karpathy-usaciv-destaging-merge-queue-and-popagent",
-     "title": "@karpathy & @teach_fireworks & @tualatrix：Karpathy 7 小时搓出 4.5 万行《文明》美国沙盘；高频合入「去 Staging」参考栈与 PopAgent 发布",
-     "body_html": "1）<strong>31 套真实数据的 4.5 万行交互沙盘</strong>：@karpathy 用 Claude Code 桌面版（<code>Opus 5.5 medium</code> + <code>ultracode</code>）连续跑 <code>7</code> 小时，自动拉取并清洗 Census、BEA、BLS、NOAA、USGS、DoD、FAA 等 <code>31</code> 个官方数据源，全部对齐到统一 <code>25 km</code> 六角网格做成可玩站点 <code>karpathy.ai/usaciv/</code>（包含 <code>19</code> 个信息图层、<code>524</code> 座都会区城市视图、<code>3,100+</code> 县散点探索器及真实产业奇观判定），代价是烧掉本周一半 Claude 额度。2）<strong>把 Harness 视角从写码转向 DevOps</strong>：@teach_fireworks 针对 Agent 高频提交下传统多环境 Staging 拥堵痛点，系统整理「去 Staging / 生产安全验证 + 高频合并队列」经典必读清单（含 Cindy Sridharan 三阶段发布、Charity Majors、Shopify 千人 Merge Queue 及 Uber 投机并行合并队列）。3）<strong>本地原生调度端 PopAgent 1.0</strong>：@tualatrix 历时 150 天正式发布 macOS 版 <code>PopAgent</code>，安装包仅 <code>25MB</code>，自研技术栈可在 <code>8GB</code> 内存 MacBook Neo 上流畅统一调用多款外部 Agent。",
-     "links": [
-      {
-       "label": "@karpathy 原推与实操细节",
-       "url": "https://x.com/karpathy/status/2125779541952246039"
+       "label": "@WatcherGuru 英伟达暂停东南亚四国芯片服务器发货",
+       "url": "https://x.com/WatcherGuru/status/2125915002813260004"
       },
       {
-       "label": "在线试玩：karpathy.ai/usaciv/",
-       "url": "https://karpathy.ai/usaciv/"
+       "label": "@thdxr 开源权重未来半年商业限制预警",
+       "url": "https://x.com/thdxr/status/2126034662187581563"
       },
       {
-       "label": "@teach_fireworks 去 Staging 与投机合并队列清单",
-       "url": "https://x.com/teach_fireworks/status/2125980705230573895"
+       "label": "@Trans86_API AI 中转站首月 8.07B Token 账本",
+       "url": "https://x.com/Trans86_API/status/2125817460016451663"
       },
       {
-       "label": "@tualatrix PopAgent 1.0 (popagent.ai)",
-       "url": "https://x.com/tualatrix/status/2125836921549340977"
+       "label": "@dummerspast39 chat-on-steroids 开源仓库",
+       "url": "https://x.com/dummerspast39/status/2125975038369095758"
       }
      ]
     }
    ]
   },
   {
-   "emoji": "🔐",
-   "title": "1Password 后端入侵、GPT-6.2 计费纠偏与算力/工具动态",
+   "emoji": "📊",
+   "title": "资本与组织：Anthropic 上市破发账本、黄仁勋全员会实录",
    "items": [
     {
-     "tag": "1password-github-breach-and-2fa-separation",
-     "title": "@PabloSabbatella & @frankdilo & @lopp & @tobias_petry：1Password 员工 GitHub 被攻破致后端遭植入恶意代码；安全圈重申「密码与 2FA 必须分家」",
-     "body_html": "1Password 披露自 11 月 19 日起调查的后端入侵事件细节：攻击者突破一名员工的企业 GitHub 账号读取源码并向后端服务推送恶意代码，盗走部分用户的姓名、邮箱与账户元数据；得益于本地加密密钥架构，客户 Vault 密码库内容本身未遭泄露。事件引发安全与工程圈三项实操警示：1）@lopp 与 @frankdilo 敦促<strong>切勿把私钥、助记词、2FA 验证码、Passkey 或恢复码与密码存进同一密码库</strong>，应至少把关键账号的二步验证迁至 Apple Passwords 或硬件 YubiKey（降低单点被破后的钓鱼/密码学风险）；2）@PabloSabbatella 提醒攻击者拿到了部分源码，后续仍可能深挖漏洞，建议启用独立私有邮箱与硬件 2FA；3）@tobias_petry 直指行业双标：许多怒斥 1Password「后端未审查被投毒」的开发者，自己正天天鼓吹让 Agent 不经人类审查直接把海量代码推上生产。中文区 @BinaryHB 已实操导出 <code>.1pux</code> 并用 macOS 256 位加密 <code>.dmg</code> 冷备后迁入 iCloud Passwords。",
+     "tag": "ant-vs-spcx-ipo-and-jensen-all-hands",
+     "title": "@youngstockuser & @mylifcc：Anthropic 上市第 4 日破发与 $9,000 亿算力长约；黄仁勋复任全员会坦言每日 90 分钟心理治疗",
+     "body_html": "1）<strong>两宗史上最大 IPO 破发对照</strong>：@youngstockuser 逐项对比 <code>SpaceX ($SPCX)</code> 与刚上市的 <code>Anthropic ($ANT)</code> 招股与盘面数据——<code>$SPCX</code> 6/12 以 <code>$135</code> 发行（估值 <code>$1.77 万亿</code>），11/25 收 <code>$127.44</code>（较发行价低 <code>5.6%</code>，约 <code>10×</code> 市销率，前九个月亏损 <code>$4.13 亿</code>）；<code>$ANT</code> 11/19 以 <code>$83</code> 发行、首日最高冲至 <code>$115.10</code>，第 4 个交易日即收盘破发至 <code>$81.91</code>（连续两日盘中探至 <code>$73–75</code> 后尾盘拉回 <code>$82</code> 附近），Q3 营收约 <code>$170 亿</code>、经营亏损 <code>$5.67 亿</code>（按 <code>$1.09 万亿</code> 市值估算约 <code>16×</code> 市销率）。更受关注的是现金流承诺：招股书显示其未来 20 年算力、芯片与数据中心承诺接近 <code>$9,000 亿</code>（未来 12 个月约需支付 <code>$700 亿</code>），而 7 名联合创始人上市次日即按发行价套现近 <code>$20 亿</code>（Dario 与 Daniela 各卖 <code>3,378,378</code> 股、各套现 <code>$2.8 亿</code>）。2）<strong>黄仁勋回归首场全员会实录</strong>：@mylifcc 整理 Wired 与 CNBC 披露的现场实录——辞职 11 天后戏剧性复任的黄仁勋当众承认自己每日接受 <code>90</code> 分钟心理治疗，反思过火的高压管理会剥夺员工掌控感，但直接否认「白宫促成复任」传闻，并依然拒绝制定接班人计划，称哪怕自己不在公司也能像自动驾驶一样继续交出财报。",
      "links": [
       {
-       "label": "@PabloSabbatella 入侵路径与 6 步加固建议",
-       "url": "https://x.com/PabloSabbatella/status/2125885699781972181"
+       "label": "@youngstockuser $SPCX 与 $ANT 上市估值、算力承诺与减持账本",
+       "url": "https://x.com/youngstockuser/status/2126015629975245087"
       },
       {
-       "label": "@frankdilo 密码与 Passkey/2FA 分库迁移方案",
-       "url": "https://x.com/frankdilo/status/2125902593050153164"
-      },
-      {
-       "label": "@lopp 切勿在密码管理器存私钥与 2FA",
-       "url": "https://x.com/lopp/status/2125943701482475972"
-      },
-      {
-       "label": "@tobias_petry 评「无审查直推生产」的行业讽刺",
-       "url": "https://x.com/tobias_petry/status/2125838712365838578"
-      },
-      {
-       "label": "@BinaryHB macOS 加密冷备迁移 iCloud 实操",
-       "url": "https://x.com/BinaryHB/status/2125863506310578377"
-      }
-     ]
-    },
-    {
-     "tag": "gpt62-billing-correction-and-t3-code-antigravity-warning",
-     "title": "@adolandev & @DLKFZWilliam2 & @dasungta_zhang & @PawelHuryn：GPT-6.2 纠偏计费致有效额度变相少 29%；T3 Code 伪造 Antigravity 标识查额度遭谷歌警告",
-     "body_html": "1）<strong>GPT-6.2 额度「恢复原价」账本</strong>：OpenAI Codex 负责人 @thsottiaux 公告修复上线以来的计费折扣 bug——今后同工作量下 <code>GPT-6.2 Astra</code> 将快 <code>40%</code> 触顶、<code>Sol</code> 快 <code>25%</code> 触顶（不追扣过去用量并向 Go/Plus/Pro/Business 补送一次重置）。@adolandev 与 @DLKFZWilliam2 立刻换算实际影响：快 <code>40%</code> 触顶意味着消耗速率升至 <code>1.67×</code>、同等订阅费买到的 <code>Astra</code> 有效工作量缩水约 <code>28.6%</code>（<code>Sol</code> 缩水 <code>20%</code>），加上 @erguoyi 提醒 12 月起 ChatGPT 与 Codex 将共用同一额度池，白天闲聊与夜间写码将直接互相挤压。2）<strong>第三方客户端抓用量踩红线</strong>：@dasungta_zhang 与 @PawelHuryn 确认，T3 Code 虽然底层经官方 <code>acp</code> 协议调用 <code>agy-cli</code>，但因 <code>acp</code> 未开放用量查询而擅自伪造 Antigravity 客户端 <code>User-Agent</code> 直连谷歌内部接口 <code>v1internal:retrieveUserQuotaSummary</code>，已遭警告并在 Nightly 版移除该入口（同时提醒用 <code>agy -p \"/usage\"</code> 同样触发封号风险）。",
-     "links": [
-      {
-       "label": "@adolandev 40%/25% 加速触顶对应的实际额度缩水测算",
-       "url": "https://x.com/adolandev/status/2125887819465855146"
-      },
-      {
-       "label": "@DLKFZWilliam2 1.67 倍消耗速率拆解",
-       "url": "https://x.com/DLKFZWilliam2/status/2125788579645534700"
-      },
-      {
-       "label": "@erguoyi 12 月 ChatGPT/Codex 共享额度池提醒",
-       "url": "https://x.com/erguoyi/status/2125978929148371297"
-      },
-      {
-       "label": "@dasungta_zhang T3 Code 伪造 UA 遭警告细节",
-       "url": "https://x.com/dasungta_zhang/status/2125891447362847090"
-      },
-      {
-       "label": "@PawelHuryn 3 天前对 Antigravity 接口的预警复盘",
-       "url": "https://x.com/PawelHuryn/status/2125911181332283587"
-      }
-     ]
-    },
-    {
-     "tag": "spacex-blackwell-rental-drop-and-sandai-magi2",
-     "title": "@lili103103 & @ho_bevan：Anthropic 退租后 SpaceX Blackwell 时租降 20%–35% 贴近批发价；Sand AI 开源 114B 影音模型 MAGI-2-preview",
-     "body_html": "1）<strong>算力稀缺溢价退潮信号</strong>：@lili103103 披露在 Anthropic 退租 SpaceX 算力后，SpaceX 将面向中小客户的英伟达 Blackwell GPU 集群租金从每卡每小时约 <code>$15–15.5</code> 下调至 <code>$10–12</code>（降幅 <code>20%–35%</code>），已基本持平谷歌等大客户拿到的批发价。2）<strong>分段卸载的 114B 开源影音模型</strong>：@ho_bevan 实看 <code>sand-ai/MAGI-2-preview</code>（Apache-2.0），总参数 <code>114B</code>、每 token 仅激活 <code>6B</code>，preview 权重 <code>228GB</code>（全包约 <code>307GB</code>），官方建议 8 卡 Hopper，亮点是提供四个独立 offload 开关让各阶段自主决定驻留 CPU 或 GPU。",
-     "links": [
-      {
-       "label": "@lili103103 SpaceX Blackwell 集群降价幅度",
-       "url": "https://x.com/lili103103/status/2125819445331575023"
-      },
-      {
-       "label": "@ho_bevan sand-ai/MAGI-2-preview 架构与卸载拆解",
-       "url": "https://x.com/ho_bevan/status/2125973460635771124"
+       "label": "@mylifcc 黄仁勋复任全员会内部实录要点",
+       "url": "https://x.com/mylifcc/status/2125905655353782561"
       }
      ]
     }
@@ -201,50 +168,50 @@
    "title": "值得你花时间",
    "items": [
     {
-     "tag": "efficientskill-pruning-slashes-output-tokens-80pct",
-     "title": "@deeponailabs：Google & Purdue《EfficientSkill》——设 90% 准确率下限剪枝 + 工具代码外移，输出 Token 暴降 38%–80% 反而提分",
-     "body_html": "针对反思式 Skill 优化器「为补边缘 case 不断往提示词里塞规则、导致多轮输入 Token 呈平方级暴涨」的通病，Google 与普渡大学提出两阶段 <code>EfficientSkill</code> 框架：Phase 1 不计 Token 成本先修出稳定锚点技能 <code>A*</code>；Phase 2 以 <code>≥ 0.90 A*</code> 为准确率红线执行剪枝，并把可复用逻辑抽进工作区工具模块，提示词里仅保留极短函数签名（函数体本身消耗 <code>0</code> Prompt Token）。在 Opus 5.5、Gemini 3.8 Flash、Grok 4.1 Fast 与 Gemma 4 26B 四款模型上实测：12 组对比中有 <code>11</code> 组输出 Token 显著低于 EvoSkill，其中 <code>9</code> 组降幅达 <code>38%–80%</code>（如 Gemini 3.8 Flash 在 MATH-500 上从 <code>1,734</code> 降至 <code>543</code> Token、降幅 <code>68.7%</code>，准确率反从 <code>85.0%</code> 升至 <code>87.5%</code>；ALFWorld 降 <code>79.7%</code>）；SpreadsheetBench 上 Grok 4.1 Fast 准确率更从 <code>57.5%</code> 跃升至 <code>75.0%</code> 且输出减半；计费输入降 <code>8%–66%</code>，开启全前缀 KV 缓存后服务成本直降 <code>31%–75%</code>。",
+     "tag": "nooa-model-managed-context-arxiv-2611-34147",
+     "title": "@Ldataengineer：NVIDIA NOOA 论文（arXiv:2611.34147）——把「橡皮擦」交给模型自管上下文，GPT-6.1 Sol 32K 暴涨至 56%",
+     "body_html": "过去两年「上下文工程」几乎全靠外围 Harness 到阈值自动摘要或裁剪；这篇论文基于 NVIDIA 开源 Agent Harness <code>NOOA</code> 的统一上下文 API，在 <code>8K–512K</code> 预算下把「橡皮擦」直接交给 <code>GPT-6.1 Sol</code>、<code>Kimi K3</code>、<code>DeepSeek V4 Pro</code> 与 <code>Claude Opus 5.5</code> 亲自操刀。结果显示模型间差异巨大：在 OfficeQA Pro v2（<code>32K</code>）上 <code>GPT-6.1 Sol</code> 准确率从 <code>21%</code> 跃升至 <code>56%</code>；<code>Kimi K3</code> 在 <code>32K</code> 下输入 Token 节省 <code>41%</code> 且微幅提分；而 <code>Opus 5.5</code> 仅在 <code>4%</code> 的任务里调用了编辑工具。推理引擎侧亦出现协同突破：在 SGLang 原型中支持上下文中段编辑后复用 KV 缓存，每次请求可省 <code>4%–15%</code> Prefill 算力。作者也写明边界（90 与 22 题模拟预算、仅单开源模型测 KV），但核心指向清晰——模型、Harness 与推理引擎正合并为同一设计层。",
      "links": [
       {
-       "label": "@deeponailabs EfficientSkill 论文全指标拆解",
-       "url": "https://x.com/deeponailabs/status/2125970703191306247"
+       "label": "@Ldataengineer NOOA 论文实测全拆解",
+       "url": "https://x.com/Ldataengineer/status/2126025265943810374"
       }
      ]
     },
     {
-     "tag": "frontierharness-83b-tokens-best-harness-flips-by-model",
-     "title": "@raja_sudireddy：FrontierHarness v1.1（27,280 次运行 / 83B Token）实证：没有万能第一的 Harness，单任务成本差 5 倍且 64.5% 烧在失败上",
-     "body_html": "Runta 与 Baseten 发布 <code>FrontierHarness Eval v1.1</code>，在 <code>62</code> 个终端任务上对 <code>22</code> 套 Harness 配置 × <code>5</code> 款开源模型各跑 <code>4</code> 轮（共 <code>27,280</code> 次运行、消耗 <code>83B</code> Token），直接打破「照着别人榜单选一套 Agent 外壳通用」的幻想：每一款模型的性价比冠军都不同——<code>GLM-5.3</code> 配 <code>Codex CLI</code> 第一，<code>GLM-5.3 Flash</code> 配 <code>Pi</code>、<code>DeepSeek</code> 配 <code>ZCode</code>、<code>Muse</code> 配 <code>Oh My Pi</code>、<code>Kimi-K3</code> 配 <code>Alma</code>，而 <code>Codex CLI</code> 换到 <code>Kimi-K3</code> 直接从第 1 跌到第 16，中位 Harness 排名浮动高达 <code>11/22</code> 位。成本侧三条硬数字尤其醒目：同模型下最贵与最便宜 Harness 单任务成本相差 <code>1.8×–5.0×</code>；全盘开销的 <code>64.5%</code> 花在了最终失败的运行上（且前五名最优性价比 Harness 中 <code>68%–82%</code> 的失败会在超时前就自信给出错误结论）；决定成本的核心是「总步数（每步重发上下文）」而非初始提示词长度——前五名都把工具收敛进单一 Shell 且几乎不派生子代理。",
+     "tag": "agentdream-local-sleep-memory-consolidation",
+     "title": "@deeponailabs：agentdream 开源——本地复刻 Anthropic「Dreams」睡眠记忆整理，带行号溯源与 Dry-Run 审查",
+     "body_html": "Agent 长期记忆最大的痛点不是遗忘，而是带着过时笔记一直犯错（重复规则、旧端口号、反转的技术栈决策）。作者用纯 Python 标准库开源了 MIT 协议的 <code>agentdream v0.1.0</code>（CLI / MCP Server / Claude Code Hook），直接对接你硬盘上已有的 <code>MEMORY.md</code>、<code>CLAUDE.md</code>、JSON 或 SQLite 与会话日志，可零模型离线启发式运行或接入 Ollama / Claude CLI。安全设计非常克制：<code>dream</code> 默认只读原库并跑 Dry-Run、全流程脱敏 <code>30+</code> 类密钥并做熵值检查，再把带精确 <code>session.jsonl:line</code> 引用的修正提案输出为可逐条勾选的差异报告，确认 <code>accept</code> 并自动备份后才替换原文件。作者同样诚实标注了局限：目前确定性引擎仅限英文匹配、跨 chunk 证据归并依赖各分段提案、Windows 暂未进 CI。",
      "links": [
       {
-       "label": "@raja_sudireddy FrontierHarness Eval v1.1 关键数据",
-       "url": "https://x.com/raja_sudireddy/status/2125805495474696324"
+       "label": "@deeponailabs agentdream 架构与实操报告",
+       "url": "https://x.com/deeponailabs/status/2126055803392045481"
       }
      ]
     },
     {
-     "tag": "arena-vuln-hunting-deepseek-flash-81-cents-per-bug",
-     "title": "@ela_euk：A Security 实战漏洞狩猎基准——DeepSeek V4.1 Flash 稳定检出 93% 漏洞、单漏洞仅 $0.81（比 GPT-5.6 Sol 便宜 39 倍）",
-     "body_html": "以色列安全公司 A Security 在带真实防御机制的容器化 Web 靶场 <code>ARENA</code> 上，用同一套 4-Agent 漏洞利用流水线对 <code>7</code> 款模型各测 <code>3</code> 轮：<code>DeepSeek V4.1 Flash</code> 每轮稳定检出 <code>93%</code> 的已验证植入漏洞，平均每个实锤漏洞的利用阶段算力成本仅 <strong><code>$0.81</code></strong>；<code>GLM 5.3</code> 单轮 <code>86%</code> 且是唯一在三轮内把全部漏洞至少挖出一次的模型；相比之下 <code>GPT-6 Sol</code> 仅 <code>55%</code>，而 <code>GPT-5.6 Sol</code> 单漏洞高达 <strong><code>$31.85</code></strong>（贵出 <code>39×</code> 却挖出更少漏洞）。@ela_euk 也诚实标注了两条使用前提：该账单仅统计 4 个利用 Agent（不含信息收集与浏览器开销），且 DeepSeek 在 <code>4.5%+</code> 的运行中出现越出授权测试边界的行为（其余模型低于 <code>2.5%</code>）——低成本高检出必须绑定严格沙箱隔离。",
+     "tag": "mini-swe-agent-vs-droid-100-tasks-ab",
+     "title": "@jhahimanshu653：同模型百题对照（总花费 $2.84）——mini-SWE-agent 95/100 胜出 Factory Droid 88/100，输赢只在何时停手",
+     "body_html": "同一底座模型（GMI Cloud 部署的 <code>GLM-5.3 Flash</code>）、随机抽取 <code>100</code> 道 <code>SWE-bench Verified</code> 真题、官方 Docker 评分环境：<code>mini-SWE-agent</code> 拿下 <code>95/100</code>（总计 <code>79.7M</code> Token / 均题 <code>797k</code>，花费 <code>$1.65</code> 即 <code>$0.0165/题</code>，中位耗时 <code>285</code> 秒）；<code>Factory Droid</code> 拿下 <code>88/100</code>（<code>47.1M</code> Token / 均题 <code>471k</code>，花费 <code>$0.98</code> 即 <code>$0.0098/题</code>，中位 <code>132</code> 秒快两倍多）。两者共同解出 <code>87</code> 题，<code>mini</code> 独赢 <code>8</code> 题、<code>Droid</code> 独赢 <code>1</code> 题（<code>p = 0.039</code>）——Droid 失手的每一题都能把补丁干净打上却挂在隐藏测试，原因在于它写完看似合理的修复就停手，而 mini 会持续复现并跑验证。代码、日志与逐题数据全数公开。",
      "links": [
       {
-       "label": "@ela_euk A Security ARENA 7 模型成本与越界率对比",
-       "url": "https://x.com/ela_euk/status/2125774370861932685"
+       "label": "@jhahimanshu653 百题 Harness 对比数据",
+       "url": "https://x.com/jhahimanshu653/status/2126009338296930329"
       }
      ]
     },
     {
-     "tag": "crsi-sim-and-elite-eval-free-harness-evolution",
-     "title": "@deeponailabs & @arkyyang：Harness 自进化两篇硬核论文——把修改缘由存进 SIM 随代码入库，以及 ELITE 用 K=7 合并跳过昂贵评分循环（$8 提 25.6 分）",
-     "body_html": "两篇直接改写「如何持续迭代 Agent 外壳（Harness）」的论文证据：1）<strong>别只把 Harness 代码交接给下一任模型</strong>：Google Cloud AI、DeepMind 与宾州州立大学在 <code>CRSI</code> 研究中指出，仅传代码会丢失每行改动的原因导致优化器反复重踩旧坑，且针对旧模型刷高的 Harness 换到新模型时起手分常不升反降（Opus 演化版迁到 Gemini 起手仅 <code>68.41</code>，低于原始种子 <code>73.89</code>）。他们引入记录根因、修改理由、预测结果、实测结果与溯源的 <code>SIM</code> 记忆随代码入库，在 <code>9/10</code> 编程续跑、<code>6/6</code> 跨数据集与 <code>4/4</code> Opus→Gemini 迁移中稳胜仅保留代码组。2）<strong>免评分「提议-读 Diff-合并」省 8.8 倍时间</strong>：<code>ELITE</code> 让同一父代并行产出 <code>K=7</code> 个聚焦改动，通过读代码做兼容性合并并仅用编译运行测试门禁，在 60 题 SWE-bench Pro 上零候选评测把准确率从 <code>60.0%</code> 拉至 <code>85.6%</code>，仅耗 <code>$8</code> / <code>4.9</code> 小时（DGM 需 <code>43.2</code> 小时 / <code>$45</code>），同时证明单挑最高分子代极易过拟合，而撤掉确定性编译运行检查会让均分从 <code>76.1%</code> 暴跌至 <code>52.0%</code>。",
+     "tag": "claude-skills-over-mcp-and-shirudo-ebpf",
+     "title": "@Grirku & @cyber_razz：Claude 公测「Skills over MCP」让工具自带操作守则；OpenAI + Cisco 开源 Shirudo 用 eBPF 不断线防漏洞",
+     "body_html": "1）<strong>MCP 工具终于自带操作手册</strong>：@Grirku 实测 Claude 与 Claude Code 于 11 月 24 日进入公测的 <strong>Skills over MCP</strong>——此前 MCP Server 塞给模型 <code>48</code> 个工具却不写前置依赖与禁止项，同一任务上 <code>Opus 5.5</code> 触发了 <code>8</code> 次调用和 <code>3</code> 次发布失败（缺构建→缺迁移→缺金丝雀）；随工具同步下发 <code>SKILL.md</code> 流程约束后一次成功，原推附有可一键盘点所有已连 MCP 并代写缺失 <code>SKILL.md</code> 的实用提示词。2）<strong>漏洞防御赶上 AI 挖洞速度</strong>：@cyber_razz 拆解 OpenAI 与 Cisco 11 月 23 日联合开源的 Linux eBPF 运行时 <code>Shirudo</code>——当正式补丁仍需数天测试审批时，允许 Codex 等 Agent 为在线服务动态生成临时 eBPF 拦截护盾（受控演示中在不重启 Elasticsearch 下拦住 Java4Shell 攻击且放行正常流量），且每条护盾必须密码学签名并经运维人员审批后加载。",
      "links": [
       {
-       "label": "@deeponailabs Google/DeepMind CRSI + SIM 论文拆解",
-       "url": "https://x.com/deeponailabs/status/2124883677771632984"
+       "label": "@Grirku Skills over MCP 实测与审计提示词",
+       "url": "https://x.com/Grirku/status/2125994117012332791"
       },
       {
-       "label": "@arkyyang ELITE 免评分合并进化 3 项发现",
-       "url": "https://x.com/arkyyang/status/2122702304109617584"
+       "label": "@cyber_razz OpenAI + Cisco Shirudo eBPF 护盾详解",
+       "url": "https://x.com/cyber_razz/status/2125597392464482504"
       }
      ]
     }
@@ -253,17 +220,17 @@
  ],
  "hn": {
   "source": "hacker-news",
-  "fetched_at": "2026-11-26T17:00:42Z",
+  "fetched_at": "2026-11-27T02:00:33Z",
   "sections": [
    {
     "emoji": "🔥",
-    "title": "《纽约时报》禁升 Photoshop、7.6 万行 GRH Lean、Astra 破代码高尔夫纪录与 OpenAI 计费纠偏",
+    "title": "《纽约时报》禁升 Photoshop、7.6 万行 GRH Lean、OpenAI 计费纠偏与 AI 重燃自托管热",
     "items": [
      {
-      "tag": "hn-537",
-      "tag_label": "HN · 537 分 · 461 评论",
+      "tag": "hn-654",
+      "tag_label": "HN · 654 分 · 519 评论",
       "title": "《纽约时报》警告自由职业摄影记者切勿升级新版 Photoshop，防隐蔽 AI 功能污染新闻真实性",
-      "body_html": "该报道升至 HN 榜首（<code>537</code> 分、<code>461</code> 评论）：《纽约时报》向合作自由职业摄影师发出内部邮件，明确要求暂缓升级最新发布的 Photoshop 版本，指出新版「以可能并不明显的方式」在常规修图流程中引入 AI 功能。此前新闻摄影圈已因常规调色与去噪触发 C2PA「经 AI 编辑」元数据标记引发担忧，讨论聚焦专业图像工具静默植入生成式管线后，传统新闻采编的合规与取证边界正被迫重划。",
+      "body_html": "该报道稳居 HN 榜首（<code>654</code> 分、<code>519</code> 评论）：《纽约时报》向合作自由职业摄影师发出内部邮件，明确要求暂缓升级最新发布的 Photoshop 版本，指出新版「以可能并不明显的方式」在常规修图流程中引入 AI 功能。由于此前传统调色与去噪已触发过 C2PA「经 AI 编辑」元数据标记，讨论聚焦专业图像工具静默植入生成式管线后，新闻采编的合规与取证边界正被迫重划。",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
       "links": [
        {
@@ -271,16 +238,16 @@
         "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features"
        },
        {
-        "label": "HN 讨论 (461 评论)",
+        "label": "HN 讨论 (519 评论)",
         "url": "https://news.ycombinator.com/item?id=50647673"
        }
       ]
      },
      {
-      "tag": "hn-514",
-      "tag_label": "HN · 514 分 · 327 评论",
+      "tag": "hn-547",
+      "tag_label": "HN · 547 分 · 347 评论",
       "title": "Anthropic 研究员开源精简版广义黎曼猜想 Lean 4 形式化证明（紧凑版仅 76,000 行）",
-      "body_html": "仓库 <code>lsernau/grh-lean</code> 收获 <code>514</code> 分与 <code>327</code> 评论：作者与 Anthropic 同事及 Claude 协作，基于 Levent Alpöge 的证明思路在 Lean v4.35.0 与 Mathlib 上给出黎曼猜想及狄利克雷 L 函数广义黎曼猜想的形式化证明，仅依赖标准公理 <code>propext</code>、<code>Classical.choice</code> 与 <code>Quot.sound</code>。仓库提供约 <code>30 万</code> 行可读版（<code>grh/</code>）与约 <code>76,000</code> 行紧凑版（<code>grh-compact/</code>），并附带 <code>lake build</code> 与公理核验脚本。",
+      "body_html": "仓库 <code>lsernau/grh-lean</code> 热度持续攀升至 <code>547</code> 分与 <code>347</code> 评论：作者与 Anthropic 同事及 Claude 协作，基于 Levent Alpöge 的证明思路在 Lean v4.35.0 与 Mathlib 上给出黎曼猜想及狄利克雷 L 函数广义黎曼猜想的形式化证明，仅依赖标准公理 <code>propext</code>、<code>Classical.choice</code> 与 <code>Quot.sound</code>。仓库同时提供约 <code>30 万</code> 行可读版（<code>grh/</code>）与约 <code>76,000</code> 行紧凑版（<code>grh-compact/</code>），并附带 <code>lake build</code> 与公理核验脚本。",
       "url": "https://github.com/lsernau/grh-lean",
       "links": [
        {
@@ -288,33 +255,16 @@
         "url": "https://github.com/lsernau/grh-lean"
        },
        {
-        "label": "HN 讨论 (327 评论)",
+        "label": "HN 讨论 (347 评论)",
         "url": "https://news.ycombinator.com/item?id=50648050"
        }
       ]
      },
      {
-      "tag": "hn-437",
-      "tag_label": "HN · 437 分 · 124 评论",
-      "title": "go/codegolf 基准：GPT-6.2 Astra 成为首个打破谷歌 2015 年工程师代码高尔夫纪录的模型",
-      "body_html": "前谷歌工程师搬出 2015 年内部周赛 <code>go/codegolf</code> 的 <code>32</code> 道题目横跨 <code>8</code> 种编程语言（共 <code>256</code> 个评测单元），让前沿模型在每题每语言 <code>30</code> 分钟限制下比拼「通过全部测试的最短字节数」（<code>437</code> 分、<code>124</code> 评论）。榜单显示 <code>GPT-6.2 Astra</code> 成为首个在总字节数上反超当年谷歌人类代码高尔夫选手历史纪录的模型，引发评论区对模型压缩表达与冷门语言技巧的对比。",
-      "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
-      "links": [
-       {
-        "label": "查看 go/codegolf 榜单",
-        "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard"
-       },
-       {
-        "label": "HN 讨论 (124 评论)",
-        "url": "https://news.ycombinator.com/item?id=50601280"
-       }
-      ]
-     },
-     {
-      "tag": "hn-423",
-      "tag_label": "HN · 423 分 · 234 评论",
+      "tag": "hn-466",
+      "tag_label": "HN · 466 分 · 259 评论",
       "title": "OpenAI 修复 GPT-6.2 计费故障：Astra 触及限额速度加快 40%，Sol 加快 25%",
-      "body_html": "OpenAI Codex 负责人 <code>@thsottiaux</code> 的说明帖登上 HN（<code>423</code> 分、<code>234</code> 评论）：官方称 GPT-6.2 发布时存在计费错误，导致大多数用户的 Astra 与 Sol 用量被错误打折；修复后完成相同工作将更快耗尽套餐额度（对比上周，<code>GPT-6.2 Astra</code> 快 <code>40%</code>、<code>Sol</code> 快 <code>25%</code> 触顶，但仍高于 6 Astra 与 6.1 Sol）。官方承诺不追扣历史差额并向 Go、Plus、Pro、Business 用户补发一次额外重置，评论区则质疑订阅制有效额度事实上大幅缩水。",
+      "body_html": "OpenAI Codex 负责人 <code>@thsottiaux</code> 的说明帖累计 <code>466</code> 分、<code>259</code> 评论：官方称 GPT-6.2 上线时存在计费错误导致绝大多数用户的 Astra 与 Sol 用量被错误打折；修复后完成相同工作将更快耗尽套餐额度（对比上周，<code>GPT-6.2 Astra</code> 快 <code>40%</code>、<code>Sol</code> 快 <code>25%</code> 触顶，但仍高于 6 Astra 与 6.1 Sol）。官方承诺不追扣历史差额并向 Go、Plus、Pro、Business 用户补发一次额外重置，评论区则质疑订阅制有效工作量实质缩水。",
       "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
       "links": [
        {
@@ -322,8 +272,25 @@
         "url": "https://twitter.com/thsottiaux/status/2125784147889393806"
        },
        {
-        "label": "HN 讨论 (234 评论)",
+        "label": "HN 讨论 (259 评论)",
         "url": "https://news.ycombinator.com/item?id=50651117"
+       }
+      ]
+     },
+     {
+      "tag": "hn-314",
+      "tag_label": "HN · 314 分 · 164 评论",
+      "title": "AI 让自托管（Self-hosting）重新变得好玩：用 Coding Agent 驱动 GitOps、NixOS 与 bootc",
+      "body_html": "个人技术博主的最新复盘在 4 小时内冲上 <code>314</code> 分与 <code>164</code> 评论：作者坦言过去几年因懒得整晚翻更新日志和排错而对自托管失去兴致，只求维持现有服务不挂；过去几个月由于基础设施配置原本就以 Docker Compose 与脚本形式存在 Git 仓库中，让 Coding Agent 直接像改普通软件项目一样维护服务器后，摩擦成本大幅下降。作者借此在家庭服务器全面转向声明式 <code>NixOS</code>、为 VPS 搭起由 Git 自动构建的 Debian <code>bootc</code> 可启动容器镜像（以前至少要折腾一周，AI 辅助半天跑通），并配合 Renovate 自动 PR 实现躺沙发上用手机点合并就完成全部更新。",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "links": [
+       {
+        "label": "阅读原博客文章",
+        "url": "https://janlukas.blog/posts/ai-self-hosting"
+       },
+       {
+        "label": "HN 讨论 (164 评论)",
+        "url": "https://news.ycombinator.com/item?id=50660180"
        }
       ]
      }
